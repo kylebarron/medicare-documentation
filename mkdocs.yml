@@ -1,0 +1,35 @@
+# Project Information
+site_name: Medicare Documentation
+site_description: 'Extra Medicare Documentation'
+site_author: 'Kyle Barron'
+
+docs_dir: 'docs'
+site_dir: 'site'
+
+# Repository
+# repo_name: 'cms-age-discont'
+# repo_url: 'ssh://barronk@age2.nber.org/disk/agedisk1/medicare.work/doyle-DUA18266/barronk/cms-age-discont/data'
+
+# Theme
+theme:
+    name: 'material'
+    language: 'en'
+    palette:
+        primary: 'orange'
+        accent:  'light blue'
+    font:
+        text: 'Nunito Sans'
+        # code: 'Roboto Mono'
+        code: 'Fira Code'
+
+markdown_extensions:
+    - admonition
+    - codehilite
+    - footnotes
+    - meta
+    - pymdownx.arithmatex
+    - pymdownx.smartsymbols
+    - pymdownx.tasklist(custom_checkbox=true)
+    - pymdownx.tilde
+    - toc:
+        permalink: true
