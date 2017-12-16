@@ -1,0 +1,43 @@
+# Project Information
+site_name: Age Discontinuities in Medicare
+site_description: 'Explore Medicare data to see if there are perceptible differences in procedures like Mammograms around specific ages.'
+site_author: 'Kyle Barron'
+
+docs_dir: 'docs'
+site_dir: 'site'
+
+# Project structure:
+pages:
+    - Home: index.md
+    - Admin:
+        - 'Project log': 'admin/project_log.md'
+        - 'Project directory': 'admin/etc/META.md'
+        # - 'Emails': 'admin/emails/*.md'
+    - 'To do': 'todo.md'
+
+# Repository
+repo_name: 'cms-age-discont'
+repo_url: 'ssh://barronk@age2.nber.org/disk/agedisk1/medicare.work/doyle-DUA18266/barronk/cms-age-discont/data'
+
+# Theme
+theme: 'material'
+
+# Options
+extra:
+    palette:
+        primary: 'orange'
+        accent:  'light blue'
+
+extra_javascript:
+    # - 'js/mathjax_config.js'
+    - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML'
+
+markdown_extensions:
+    - admonition
+    - codehilite
+    - footnotes
+    - meta
+    - pymdownx.arithmatex
+    - pymdownx.smartsymbols
+    - pymdownx.tasklist(custom_checkbox=true)
+    - pymdownx.tilde
