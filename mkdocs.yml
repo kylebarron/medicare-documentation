@@ -7,8 +7,8 @@ docs_dir: 'docs'
 site_dir: 'site'
 
 # Repository
-# repo_name: 'cms-age-discont'
-# repo_url: 'ssh://barronk@age2.nber.org/disk/agedisk1/medicare.work/doyle-DUA18266/barronk/cms-age-discont/data'
+repo_name: 'medicare-documentation'
+repo_url: 'https://github.com/kylebarron/medicare-documentation'
 
 # Theme
 theme:
