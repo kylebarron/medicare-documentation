@@ -22,6 +22,10 @@ theme:
         # code: 'Roboto Mono'
         code: 'Fira Code'
 
+extra_javascript:
+    - helpers.js
+    - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+
 markdown_extensions:
     - admonition
     - codehilite
