@@ -327,21 +327,21 @@ Supplies	Critical care	Distinct parts of hospitals that are excluded under inpat
 
 Table 6.6 Services covered by OPPS
 
-For a list of services which are covered by OPPS, including a brief overview of the services please refer to AHIMA's Coding and Reimbursement for Hospital Outpatient Services . The regulation can also be referenced at the following link 42 CFR 419.22 - Hospital outpatient services excluded from payment under the hospital outpatient prospective payment system.
+For a list of services which are covered by OPPS, including a brief overview of the services please refer to AHIMA's Coding and Reimbursement for Hospital Outpatient Services. The regulation can also be referenced at the following link 42 CFR 419.22 - Hospital outpatient services excluded from payment under the hospital outpatient prospective payment system.
 
 #### Overview of OPPS reimbursement policy
 
-The OPPS calculates reimbursements by applying a conversion factor to the associated APC weights found in a HCPCS to APC crosswalk (Addendum B) [^53] The following equation describes the OPPS reimbursement policy where an $APC_{hpcr}$ occur at the hththe hospital treating the $p$th patient corresponding to the with the $c$th claim and $r$th revenue center.
+The OPPS calculates reimbursements by applying a conversion factor to the associated APC weights found in a HCPCS to APC crosswalk (Addendum B) [^53] The following equation describes the OPPS reimbursement policy where an $APC_{hpcr}$ occur at the $h$th hospital treating the $p$th patient corresponding to the $c$th claim and $r$th revenue center.
 
-[^53]:  The APCs were created by 3M-Health Information Systems using a sample of Medicare outpatient claims. Using these claims, 3M aggregated codes into clinically related groupings which are also similar in cost intensiveness. For a more in-depth review of the particulars of how the APCs are constructed and the specific criteria used to create APC groups refer to AHIMA's Coding and Reimbursement for Hospital Outpatient Services .
-Each APC is assigned a relative weight which represents the intensity of a specif treatment. The relative weights use a mid-level clinic visit (APC 601) as the denominator because it is one of the most frequently preformed services.
+[^53]:  The APCs were created by 3M-Health Information Systems using a sample of Medicare outpatient claims. Using these claims, 3M aggregated codes into clinically related groupings which are also similar in cost intensiveness. For a more in-depth review of the particulars of how the APCs are constructed and the specific criteria used to create APC groups refer to AHIMA's Coding and Reimbursement for Hospital Outpatient Services.
+Each APC is assigned a relative weight which represents the intensity of a specified treatment. The relative weights use a mid-level clinic visit (APC 601) as the denominator because it is one of the most frequently preformed services.
 
 $$
 \left( .60 \cdot C^{OPPS} \cdot W_h^L + .40 \cdot C^{OPPS} \right)
 \cdot APCh_{hpcr} + Policy_{h}
 $$
 
-CMS assumes that 60% of the OPPS conversion factor, COPPS is associated with the labor portion of expenses. They apply a wage index associated with where the hospital is located,W Lh , to the labor portion of the conversion factor which depends on the specific hospital's geography. Next the adjusted conversion factor is multiplied by the APC weight. The conversion factor transforms the APC weight into a dollar amount. The last step is to add in any additional policy adjustments related to hospital specific characteristic, Policyh. For more information see MedPAC's OPPS payment basics documentation and CMS Internet Only Manuals (IOM).
+CMS assumes that 60% of the OPPS conversion factor, COPPS is associated with the labor portion of expenses. They apply a wage index associated with where the hospital is located,W Lh , to the labor portion of the conversion factor which depends on the specific hospital's geography. Next the adjusted conversion factor is multiplied by the APC weight. The conversion factor transforms the APC weight into a dollar amount. The last step is to add in any additional policy adjustments related to hospital specific characteristic, $Policy_h$. For more information see MedPAC's OPPS payment basics documentation and CMS Internet Only Manuals (IOM).
 
 Note that the COPPS is updated on an annual basis in the OPPS Final Rule. The annual uprate is based on the inpatients market basket percentage increase applicable to hospital discharges and further adjusted to ensure budget neutrality.
 
