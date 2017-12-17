@@ -27,6 +27,7 @@ we want to get inpatient charges 30 days before this event and
 We already have a complication: How do we count spending during the
 admission? We can't count all of it because some of it occurred after
 the event and some after. In this case we count
+
 - For lag, take the charges during the admission and multiply by the
   portion of the admission that occurred from the admission until the event.
 - For the post, take the charges during the admission and multiply by the
@@ -46,13 +47,14 @@ We apply a similar rule admissions pre and post:
                                B
 ```
 
-We could all charges in A, as they occurred completely within the 30-day
-window before the event. However, we only cound the charges in B times
-the proportion of days from the first date of B until x + 30 that are in
+We could count all charges in A, as they occurred completely within the 30-day
+window before the event. However, we only count the charges in B times
+the proportion of days from the first date of B until `x + 30` that are in
 B. This is easy to visualize but a bit difficult to write down precisely.
 You can see Maurice's code for guidance in
-- `2SecondaryManipPrgms/completecostmetric/CumulativeCostsPrePost.sas`
-
+```
+2SecondaryManipPrgms/completecostmetric/CumulativeCostsPrePost.sas
+```
 In particular, see macro `CreateCostVariables`.
 
 Code Example

@@ -1,13 +1,13 @@
 Enrollment Restrictions
 =======================
 
-The denominator file is named so because it can give you, for a given
+The denominator file is so named because it can give you, for a given
 point in time, the denominator for your query. That is, it can tell you
 all the patients that could plausibly be included in your query (at least
 that is my understanding of it).
 
 Hence the denominator file is comprehensive and contains records for all
-patients eligible for Medicare until the time of their death. Naturally,
+patients eligible for Medicare until the date of their death. Naturally,
 not every patient in the denominator file will be enrolled in all parts
 of Medicare every month they are present. The denominator file contains
 variables that help determine enrollment and continuous enrollment in
@@ -19,64 +19,60 @@ File Layout
 The file layout is wide. Each row is a beneficiary and most of the
 columns are categorical variables for each month of the denominator
 file. They are named
+
 - `hmoind[Year]m[Month]`
 - `buyin[Year]m[Month]`
 
-For exampe, `hmoind2008m8` or `buyin1999m12`. These variables take on
+For example, `hmoind2008m8` or `buyin1999m12`. These variables take on
 the values:
 
-    | Indicator | Value | Description                                                          |
-    | --------- | ----- | -------------------------------------------------------------------- |
-    | HMO       | 0     | Not a member of HMO                                                  |
-    |           | 1     | Non lock-in, HCFA to process provider claims                         |
-    |           | 2     | Non lock-in, GHO to process in-plan Part A and in-area Part B claims |
-    |           | 4     | FFS for disease management demonstration project (2005 forward)      |
-    |           | A     | Lock-in, HCFA to process provider claims                             |
-    |           | B     | Lock-in, GHO to process in Plan part A and in-area Part B claims     |
-    |           | C     | Lock-in, GHO to process all provider claims                          |
-    | --------- | ----- | -------------------------------------------------------------------- |
-    | Buy-in    | 0     | Not entitled                                                         |
-    |           | 1     | Part A only                                                          |
-    |           | 2     | Part B only                                                          |
-    |           | 3     | Part A and Part B                                                    |
-    |           | A     | Part A, state buy-in                                                 |
-    |           | B     | Part B, state buy-in                                                 |
-    |           | C     | Part A and Part B, state buy-in                                      |
+| HMO Value | Description                                                          |
+| ----- | -------------------------------------------------------------------- |
+| 0 | Not a member of HMO                                                  |
+| 1 | Non lock-in, HCFA to process provider claims                         |
+| 2 | Non lock-in, GHO to process in-plan Part A and in-area Part B claims |
+| 4 | FFS for disease management demonstration project (2005 forward)      |
+| A | Lock-in, HCFA to process provider claims                             |
+| B | Lock-in, GHO to process in Plan part A and in-area Part B claims     |
+| C | Lock-in, GHO to process all provider claims                          |
+
+| Buy-in Value | Description |
+| ----- | - |
+| 0 | Not entitled                            |
+| 1 | Part A only                             |
+| 2 | Part B only                             |
+| 3 | Part A and Part B                       |
+| A | Part A, state buy-in                    |
+| B | Part B, state buy-in                    |
+| C | Part A and Part B, state buy-in         |
 
 Typically, we are looking for _continuously enrolled_ patients. That is,
 patients who were enrolled every month pre/post a particular event for a
 certain window of time. We usually say a patient is enrolled if
-- HMO is "0" or "4"
-- Buy-in is "3" or "C"
+
+- HMO is `0` or `4`
+- Buy-in is `3` or `C`
 
 The code to run this can be adapted from Maurice's SAS code in
 `SASMacros/generateEnrollRest.sas`. The idea is as follows:
-- Select the start and end dates for the enrollment restrictions check
-  (e.g. check restrictions from Jan 1999 to Dec 2008).
-- Index the first month to 1 and the last month to [month range]
-  (e.g. Jan 1999 is 1, Dec 2008 is 120).
-- Find the relative month of the index event
-  (e.g. if the event happened January 2004, the month would be 73).
-- Determine the date of death of the beneficiary. If missing,
-  we assume the person is alive.
+
+- Select the start and end dates for the enrollment restrictions check (e.g. check restrictions from Jan 1999 to Dec 2008).
+- Index the first month to 1 and the last month to `[month range]` (e.g. Jan 1999 is 1, Dec 2008 is 120).
+- Find the relative month of the index event (e.g. if the event happened January 2004, the month would be 73).
+- Determine the date of death of the beneficiary. If missing, we assume the person is alive.
 - Determine the number of months pre/post the event to check (e.g. 12).
 
 Now that the program is set up, we aim to generate an HMO indicator
 and a buy-in indicator based on the values specified in the table above.
-- If the index event occurred before the start date or after the end date,
-  set both HMO and buy-in indicators to 0.
-- If the index event occurred within the window of time to check, then
-  loop from [relative event month - months before] through
-  [relative event month + months after] and check whether the HMO and
-  buy-in indicators for those months.
-- For diseased individuals, stop the search at
 
-    min(relative event month + months after, relative death month)
+- If the index event occurred before the start date or after the end date, set both HMO and buy-in indicators to `0`.
+- If the index event occurred within the window of time to check, then loop from `[relative event month - months before]` through `[relative event month + months after]` and check whether the HMO and buy-in indicators for those months.
+- For diseased individuals, stop the search at `min(relative event month + months after, relative death month)`
 
-- Set HMO for that month to 1 if "0" or "4"; 0 otherwise.
-- Set buy-in for that month to 1 if "3" or "C"; 0 otherwise.
-- Set HMO to 1 if HMO for each month was 1; 0 otherwise.
-- Set buy-in to 1 if buy-in for each month was 1; 0 otherwise.
+- Set HMO for that month to `1` if `0` or `4`; `0` otherwise.
+- Set buy-in for that month to `1` if `3` or `C`; `0` otherwise.
+- Set HMO to `1` if HMO for each month was `1`; `0` otherwise.
+- Set buy-in to `1` if buy-in for each month was `1`; `0` otherwise.
 
 Code Example
 ------------
