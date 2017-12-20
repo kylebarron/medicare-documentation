@@ -82,8 +82,10 @@ Next I want to import demographic data, so that I can match birth dates to `bene
 ```python
 # First get list of all bene_id date of birth combos for women
 # Import demographic data
-# This doesn't need to be iterated, because the 100% datasets are only ~2.5GB in size
-demo_bene = pd.read_stata(idcharvar_path, columns = ['sdod', 'sdob', 'sex', 'bene_id'])
+# Doesn't need to be iterated; the 100% datasets are only ~2.5GB in size
+demo_bene = pd.read_stata(
+    idcharvar_path, columns = ['sdod', 'sdob', 'sex', 'bene_id']
+)
 
 # Drop males
 demo_bene.drop(demo_bene[demo_bene['sex'] == '1'].index, inplace = True)
@@ -110,7 +112,7 @@ The following generates the list of columns I want to keep from the outpatient c
     For loops and if statements in Python rely on indentation to determine when the clause finishes. If a statement is meant to run after a loop, it must be placed at the same indentation level as the initial for loop statement.
 
 ```python
-# Find all op encounters by these people within 30 days of their birthday (ages 66-80)
+# Find all op encounters within 30 days of their birthday (ages 66-80)
 ## First, import outpatient data
 # Create list of columns to retrieve from stata file
 columns = list(pd.read_stata(op_path, iterator = True).variable_labels().keys())
@@ -131,10 +133,9 @@ This is the main part of the code.
 - `df['diff'] = df.apply(lambda row: relativedelta(row['from_dt'], row['sdob']), axis = 1)` adds a new variable to `df` named `diff`. `df.apply(function, axis = 1)` means to apply a function to every row of the dataset. The function here is `lambda row: relativedelta(row['from_dt'], row['sdob'])`, which just means, for each row of the dataset, use the values of `from_dt` and `sdob` in the function `relativedelta`. This outputs a special type of object that is the difference in time between the two dates. In Stata, subtracting two dates gives you a constant: the number of days between them. But this special type in Python understands the calendar better. Doing something like `relativedelta('2011-05-25', '2005-01-13')` will give output that understands that was 6 years, 4 months, and 12 days, and means you don't have to rely on there being 365.25 days in a year.
 - The next part keeps only the rows that meet specified criteria. This restricts the entire dataset `df` to those for whom the value of the `diff` column is at least 66 years and less than 80 years, and for whom the number of months is equal to zero. This means I'm restricting currently to those people whose encounter is no more than _a month_ after their birthday, instead of _30 days_ after. I can change this if you want.
 ```python
-df = df[
-    (df['diff'].apply(lambda x: x.years) >= 66) &
-    (df['diff'].apply(lambda x: x.years) <= 80) &
-    (df['diff'].apply(lambda x: x.months) == 0)]
+df = df[(df['diff'].apply(lambda x: x.years) >= 66) &
+        (df['diff'].apply(lambda x: x.years) <= 80) &
+        (df['diff'].apply(lambda x: x.months) == 0)]
 ```
 - Next I create an indicator variable for if the encounter contained a mammogram diagnosis. I create a variable `has_mammogram` that's `False` by default. I loop over all columns in the dataset that start with `icd_dgns_cd`. If a the value of `icd_dgns_cd*` in a row is either `V7612`, `V7611`, or `79380`, it makes the value of `has_mammogram` `True` for that row. It then drops each column as it goes, since those columns are no longer needed.
 - We now have a clean dataset in `df`. But since this is in a for loop, we have to save `df` somehow, otherwise it'll be overwritten in the next iteration of the loop. `df_extracted.append(df)` adds `df` to the empty list `df_extracted` we created at the beginning of this section.
@@ -145,26 +146,31 @@ df_extracted = []
 itr = pd.read_stata(op_path, columns = tokeep, chunksize = 10000)
 for df in itr:
     # I now have outpatient data; merge birthdays on `bene_id`
-    # This does a *left join* by default
+    # This does a *left join* by default,
+    #  so it keeps everything from `df` and only keeps the matched obs
+    #  from `bene_id`
     df = df.merge(demo_bene, on = 'bene_id')
 
     # Keep if the appointment is within 30 days after their birthday.
-    df['diff'] = df.apply(lambda row: relativedelta(row['from_dt'], row['sdob']), axis = 1)
+    df['diff'] = df.apply(
+        lambda row: relativedelta(row['from_dt'], row['sdob']), axis = 1
+    )
 
-    df = df[
-        (df['diff'].apply(lambda x: x.years) >= 66) &
-        (df['diff'].apply(lambda x: x.years) <= 80) &
-        (df['diff'].apply(lambda x: x.months) == 0)]
+    df = df[(df['diff'].apply(lambda x: x.years) >= 66) &
+            (df['diff'].apply(lambda x: x.years) <= 80) &
+            (df['diff'].apply(lambda x: x.months) == 0)]
 
     df['has_mammogram'] = False
     cols = [col for col in df if col.startswith('icd_dgns_cd')]
-    # Test all columns in cols, and if text matches regex, makes 'has_mammogram' = True
+    # This tests all columns in cols,
+    #  and if text matches the regex, makes 'has_mammogram' = True
     ## Mammogram values:
     ## V76.12 'Other Screening mammogram'
     ## 793.80 'Abnormal mammogram, unspecified'
     ## V76.11 'Screening mammogram for high-risk patient'
     for col in cols:
-        df.loc[df[col].str.contains(r'V761(?:2|1)|79380'), 'has_mammogram'] = True
+        df.loc[df[col].str.contains(r'V761(?:2|1)|79380'), 'has_mammogram'
+              ] = True
         df.drop(col, axis = 1, inplace = True)
 
     df_extracted.append(df)
@@ -232,28 +238,24 @@ year = '2011'
 
 # File paths:
 idcharvar_path = path.join(
-    datadir,
-    'raw_harm',
-    pct + 'pct',
-    'denom_bene',
+    datadir, 'raw_harm', pct + 'pct', 'denom_bene',
     'pop' + pct + '_demo_bene_idcharvar' + year + '.dta'
 )
 op_path = path.join(
-    datadir,
-    'raw_harm',
-    pct + 'pct',
-    'op',
+    datadir, 'raw_harm', pct + 'pct', 'op',
     'op' + pct + '_clms_raw_' + year + '.dta'
 )
 
 # 1) Unbalanced panel:
-# I want anybody who had outpatient visit within 30 days of when they turn 66 - 80
+# I want anybody who had op visit within 30 days of when they turn 66 - 80
 # What fraction of those had mammograms?
 
 # First get list of all bene_id date of birth combos for women
 # Import demographic data
-# This doesn't need to be iterated, because the 100% datasets are only 2.5 - 3 GB ish in size
-demo_bene = pd.read_stata(idcharvar_path, columns = ['sdod', 'sdob', 'sex', 'bene_id'])
+# Doesn't need to be iterated; the 100% datasets are only ~2.5GB in size
+demo_bene = pd.read_stata(
+    idcharvar_path, columns = ['sdod', 'sdob', 'sex', 'bene_id']
+)
 
 # Drop males
 demo_bene.drop(demo_bene[demo_bene['sex'] == '1'].index, inplace = True)
@@ -265,7 +267,7 @@ demo_bene.drop(
 )
 demo_bene.drop(['sex', 'sdod'], axis = 1, inplace = True)
 
-# Find all op encounters by these people within 30 days of their birthday (ages 66-80)
+# Find all op encounters within 30 days of their birthday (ages 66-80)
 ## First, import outpatient data
 # Create list of columns to retrieve from stata file
 columns = list(pd.read_stata(op_path, iterator = True).variable_labels().keys())
@@ -278,43 +280,48 @@ df_extracted = []
 itr = pd.read_stata(op_path, columns = tokeep, chunksize = 10000)
 for df in itr:
     # I now have outpatient data; merge birthdays on `bene_id`
-    # This does a *left join* by default
+    # This does a *left join* by default,
+    #  so it keeps everything from `df` and only keeps the matched obs
+    #  from `bene_id`
     df = df.merge(demo_bene, on = 'bene_id')
 
     # Keep if the appointment is within 30 days after their birthday.
-    df['diff'] = df.apply(lambda row: relativedelta(row['from_dt'], row['sdob']), axis = 1)
+    df['diff'] = df.apply(
+        lambda row: relativedelta(row['from_dt'], row['sdob']), axis = 1
+    )
 
-    df = df[
-        (df['diff'].apply(lambda x: x.years) >= 66) &
-        (df['diff'].apply(lambda x: x.years) <= 80) &
-        (df['diff'].apply(lambda x: x.months) == 0)]
+    df = df[(df['diff'].apply(lambda x: x.years) >= 66) &
+            (df['diff'].apply(lambda x: x.years) <= 80) &
+            (df['diff'].apply(lambda x: x.months) == 0)]
 
     df['has_mammogram'] = False
     cols = [col for col in df if col.startswith('icd_dgns_cd')]
-    # Test all columns in cols, and if text matches regex, makes 'has_mammogram' = True
+    # This tests all columns in cols,
+    #  and if text matches the regex, makes 'has_mammogram' = True
     ## Mammogram values:
     ## V76.12 'Other Screening mammogram'
     ## 793.80 'Abnormal mammogram, unspecified'
     ## V76.11 'Screening mammogram for high-risk patient'
     for col in cols:
-        df.loc[df[col].str.contains(r'V761(?:2|1)|79380'), 'has_mammogram'] = True
+        df.loc[df[col].str.contains(r'V761(?:2|1)|79380'), 'has_mammogram'
+              ] = True
         df.drop(col, axis = 1, inplace = True)
 
     df_extracted.append(df)
     # break
 
 df_extracted = pd.concat(df_extracted, axis = 0)
+# With the 2011 1% sample, this took 500 seconds
 
 df_extracted.drop('diff', axis = 1, inplace = True)
 df_extracted.has_mammogram = df_extracted.has_mammogram.astype(int)
 
 df_extracted.to_stata(
     path.join(datadir, 'base', 'appts_30d_dob_mamm_2011.dta'),
-    convert_dates = {
-        'from_dt': 'td',
-        'sdob': 'td'
-    },
-    write_index = False)
+    convert_dates = {'from_dt': 'td',
+                     'sdob': 'td'},
+    write_index = False
+)
 
 t1 = time.time()
 print(t1 - t0)
