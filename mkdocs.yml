@@ -7,11 +7,41 @@ docs_dir: 'docs'
 site_dir: 'site'
 
 # Repository
-repo_name: 'medicare-documentation'
-repo_url: 'https://github.com/kylebarron/medicare-documentation'
+# repo_name: 'medicare-documentation'
+# repo_url: 'https://github.com/kylebarron/medicare-documentation'
+
+# Layout
+pages:
+    - Home: 'index.md'
+    - NBER Website:
+        - Overview: 'NBER_website/1_Overview.md'
+        - Description of Claims Files: 'NBER_website/2_Background.md'
+        - Getting Started with SAS: 'NBER_website/3_Getting_started_with_SAS.md'
+        - Constructing Extracts with SAS: 'NBER_website/4_constructing_extracts.md'
+        - Manipulating Extracts with SAS: 'NBER_website/5_manipulating_medicare_extracts.md'
+        - Generating Costs Measures: 'NBER_website/6_costs.md'
+        - References: 'NBER_website/7_references.md'
+        - Appendix: 'NBER_website/8_appendix.md'
+    - Working with the Data:
+        - Standard Readme: 'kyle/01medicare_readme.md'
+        - Data Extraction Overview: 'kyle/extract_data.md'
+        - Data Locations: 'kyle/data_locations.md'
+        - Python Extraction: 'kyle/python_extract.md'
+    - Important Details:
+        - Enrollment Restrictions: 'mauricio/enrollment-restrictions.md'
+        - Calculating Costs for Inpatient Visits: 'mauricio/lag-post-event-spending.md'
+    - Codebooks:
+        - Beneficiary Files: 'codebooks/demo_bene.md'
+        - MedPAR Files: 'codebooks/medpar.md'
+        - Outpatient Files: 'codebooks/op.md'
+        - Jean Roth's Codebook Files: 'emails/jean_roth_harm_code.md'
 
 # Theme
 theme:
+    feature:
+        tabs: true
+    logo:
+        icon: 'local_library'
     name: 'material'
     language: 'en'
     palette:
@@ -23,7 +53,7 @@ theme:
         code: 'Fira Code'
 
 extra_javascript:
-    - helpers.js
+    - js/helpers.js
     - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 
 markdown_extensions:
