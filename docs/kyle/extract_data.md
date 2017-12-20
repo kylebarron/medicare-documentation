@@ -9,13 +9,10 @@ Stata is what I use most, and I'm really comfortable with it, but its big limita
 
 ```stata
 . local filename "/disk/aging/medicare/data/limited_variables/raw_harmonized/100pct/op/op100_clms_raw_2010.dta"
-
 . set rmsg on
 r; t=0.00 16:38:28
-
 . use "`filename'" in 1, clear
 r; t=1106.30 16:57:09
-
 . di 1100/60
 18.333333
 ```
@@ -45,6 +42,7 @@ df = pd.read_stata('filename.dta', columns = ['var1', 'var2', 'var3'])
 
 To read in a number of rows at a time, you create an _iterator_, and then make a for loop with commands to do to each chunk of a given number of rows. For example, the following imports 10,000 rows at a time, and will do all the commands in `do_something(chunk)`
 ```python
+import pandas as pd
 itr = pandas.read_stata('filename.dta', chunksize = 10000)
 for chunk in itr:
     do_something(chunk)
@@ -52,12 +50,13 @@ for chunk in itr:
 
 When prototyping, it helps to code interactively, so you can run
 ```python
+import pandas as pd
 itr = pd.read_stata(file, chunksize = 1000)
 for chunk in itr:
     df = chunk
     break
 ```
-This puts the first 1,000 rows in `df`. Then you can work interactively with `df`, and just move the code inside the loop once you're ready to run it on the entire dataset iteratively.
+This puts the first 1,000 rows in `df`. **Don't forget `break`!** If you forget `break`, Python will import your whole dataset, and not return control to you until it's completely finished. You don't want to remove `break` until you want to run your code on the full dataset. Then you can work interactively with `df`, and just move the code inside the loop once you're ready to run it on the entire dataset iteratively.
 
 ### Official Documentation
 Pandas' documentation on reading files from Stata is [here](https://pandas.pydata.org/pandas-docs/stable/io.html#io-stata-reader) and [here](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_stata.html).
@@ -77,5 +76,18 @@ SAS is meant for
 ## Other file formats
 
 
+## Benchmarking
+
+### Stata
+
+```stata
+use bene_id clm_id icd_dgns_cd* using "/disk/aging/medicare/data/limited_variables/raw_harmonized/100pct/op/op100_clms_raw_2012.dta", clear
+r; t=6942.52 3:19:32
+```
+```
+> ls -lh op100_clms_raw_2012.dta
+-rw-rw---- 1 daltonm dua16702 88G Jan 13  2016 op100_clms_raw_2012.dta
+```
+Therefore Stata imported the data at around 12.8 MB/s (88GB * 1024 MB/GB / 6942s).
 
 
