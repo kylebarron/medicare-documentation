@@ -238,9 +238,9 @@ The conversion factors which translate RVU weights into dollar amounts are publi
 
 In 2010, the conversion factor and the physician fee schedule were updated halfway through the year. On May 10, 2010 CMS released revised physician payment files to Medicare Contractors necessary to reflect changes to payments as a result of the CY 2010 correction notice published in the Federal Register on May 11, 2010 and changes resulting from the Patient Protection and Affordable Health Care Act. This fee schedule also reflects the Department of Defense Appropriations Act of 2010, the Temporary Extension Act of 2010, and the Continuing Extension Act of 2010 which have provided for a zero percent update to the 2010 Medicare Physician Fee Schedule and is effective for claims with dates of service from January 1, 2010 through May 31, 2010. These fees reflect a change in the conversion factor as a result of the Preservation of Access to Care for Medicare Beneficiaries and Pension Relief Act of 2010, which President Obama signed into law on June 25, 2010. This legislation provides for a 2.2 percent update to the 2010 Medicare Physician Fee Schedule (MPFS), effective for dates of service June 1, 2010, through November 30, 2010. Revised payment files were posted by CMS on July 1, 2010 [^51].
 
-[^51]: This paragraph was taken from the following websitehttp://www.ahcancal.org/facility_operations/medicare/Pages/2010MedicarePartBFeeSchedule.aspx. The statements were verified. The following document also http://www.gpo.gov/fdsys/pkg/PLAW-111publ192/pdf/PLAW-111publ192.pdf explains the 2.2% uprate.
+[^51]: This paragraph was taken from the following [website](http://www.ahcancal.org/facility_operations/medicare/Pages/2010MedicarePartBFeeSchedule.aspx). The statements were verified. [This document](http://www.gpo.gov/fdsys/pkg/PLAW-111publ192/pdf/PLAW-111publ192.pdf) also explains the 2.2% uprate.
 
-Note that the conversion factors are available from the AMA at http://www.ama-assn.org/resources/doc/rbrvs/cf-history.pdf. Chapter 12 of the internet only manuals (IOM) published by CMS also have historical conversion factors.
+Note that the conversion factors are available from the AMA [here](http://www.ama-assn.org/resources/doc/rbrvs/cf-history.pdf). Chapter 12 of the internet only manuals (IOM) published by CMS also have historical conversion factors.
 
 | source | Calendar Year | $C^{CAR}$ ($) |
 |-|-|-|
@@ -421,7 +421,7 @@ Some HCPCS codes are "unadjusted" and cover prescription drugs and some pass-thr
 
 Initially prescription drugs were assigned there own relative weights in Addendum A and Addendum B, however in 2004 the PDMI was passed which changed the way in which reimbursement were calculated. Drugs which crossed a cost threshold were reimbursed according to the average sales price.
 
-Prescription drugs do not receive a wage index adjustment but their administration does because they are coded and reimbursed separately. In addition prescription drugs do not receive an adjustment for a rural location. Note that the administration of a drug does not fall in this category. The following paper provides a good overview of recent changes http://www.nejm.org/doi/pdf/10.1056/NEJMp1110117. Note that the payment for drugs are not adjusted
+Prescription drugs do not receive a wage index adjustment but their administration does because they are coded and reimbursed separately. In addition prescription drugs do not receive an adjustment for a rural location. Note that the administration of a drug does not fall in this category. [This paper](http://www.nejm.org/doi/pdf/10.1056/NEJMp1110117) provides a good overview of recent changes. Note that the payment for drugs are not adjusted
 $$
 cost_{util} = fullreimb_{reported}^{OPPS}
 $$

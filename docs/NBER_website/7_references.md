@@ -13,7 +13,7 @@ Deyo RA, Cherkin DC, Ciol MA. Adapting a clinical comorbidity index for use with
 
 Finlayson, Emily V. A., John D. Birkmeyer, Therese A. Stukel, Andrea E. Siewers, F. Lee Lucas, and David E. Wennberg. “Adjusting Surgical Mortality Rates for Patient Comorbidities: More Harm Than Good?” Surgery. November 2002.
 
-Gottlieb DJ, Zhou W, Song Y, Andrews KG, Skinner JS, Sutherland JM. Technical report: A standardized method for adjusting Medicare expenditures for regional differences in prices. January 2010.http://www.dartmouthatlas.org/downloads/papers/std_prc_tech_report.pdf
+Gottlieb DJ, Zhou W, Song Y, Andrews KG, Skinner JS, Sutherland JM. Technical report: A standardized method for adjusting Medicare expenditures for regional differences in prices. January 2010. http://www.dartmouthatlas.org/downloads/papers/std_prc_tech_report.pdf
 
 Iezzoni, Lisa. 2003. Risk Adjustment for Measuring Health Care Outcomes. Third Edition.
 
