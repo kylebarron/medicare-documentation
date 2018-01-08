@@ -1,5 +1,8 @@
 # Durable Medical Equipment RIF
 
+??? note "Source"
+    [https://www.resdac.org/cms-data/files/dme-rif](https://www.resdac.org/cms-data/files/dme-rif)
+
 ## Overview
 
 The Durable Medical Equipment (DME) file contains final action, fee-for-service claims submitted by Durable Medical Equipment suppliers. This file includes:

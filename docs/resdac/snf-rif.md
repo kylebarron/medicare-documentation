@@ -1,5 +1,8 @@
 # Skilled Nursing Facility RIF
 
+??? note "Source"
+    [https://www.resdac.org/cms-data/files/snf-rif](https://www.resdac.org/cms-data/files/snf-rif)
+
 ## Overview
 
 The Skilled Nursing Facility (SNF) file contains final action, fee-for-service, claims data submitted by SNF providers.

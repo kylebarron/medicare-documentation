@@ -1,5 +1,8 @@
 # Outpatient RIF
 
+??? note "Source"
+    [https://www.resdac.org/cms-data/files/op-rif](https://www.resdac.org/cms-data/files/op-rif)
+
 ## Overview
 
 The Outpatient file contains final action, fee-for-service claims data submitted by institutional outpatient providers. Examples of institutional outpatient providers include hospital outpatient departments, rural health clinics, renal dialysis facilities, outpatient rehabilitation facilities, comprehensive outpatient rehabilitation facilities, and community mental health centers.

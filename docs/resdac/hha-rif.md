@@ -1,5 +1,8 @@
 # Home Health Agency RIF
 
+??? note "Source"
+    [https://www.resdac.org/cms-data/files/hha-rif](https://www.resdac.org/cms-data/files/hha-rif)
+
 ## Overview
 
 The Home Health Agency (HHA) file contains final action, fee-for-service claims submitted by HHA providers. This file includes:

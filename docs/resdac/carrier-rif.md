@@ -1,5 +1,8 @@
 # Carrier RIF
 
+??? note "Source"
+    [https://www.resdac.org/cms-data/files/carrier-rif](https://www.resdac.org/cms-data/files/carrier-rif)
+
 ## Overview
 
 The Carrier file (also known as the Physician/Supplier Part B claims file) contains final action fee-for-service claims submitted on a CMS-1500 claim form. Most of the claims are from non-institutional providers, such as physicians, physician assistants, clinical social workers, nurse practitioners. Claims for other providers, such as free-standing facilities are also found in the Carrier file.  Examples include independent clinical laboratories, ambulance providers, and free-standing ambulatory surgical centers. This file includes:

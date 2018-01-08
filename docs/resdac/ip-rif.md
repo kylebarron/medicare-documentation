@@ -1,6 +1,7 @@
 # Inpatient RIF
 
-Last updated: 2018/1/7
+??? note "Source"
+    [https://www.resdac.org/cms-data/files/ip-rif](https://www.resdac.org/cms-data/files/ip-rif)
 
 ## Overview
 

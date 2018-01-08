@@ -13,7 +13,7 @@ site_dir: 'site'
 # Layout
 pages:
     - Home: 'index.md'
-    - NBER Website:
+    - NBER Documentation:
         - Overview: 'NBER_website/1_Overview.md'
         - Description of Claims Files: 'NBER_website/2_Background.md'
         - Getting Started with SAS: 'NBER_website/3_Getting_started_with_SAS.md'
@@ -70,6 +70,7 @@ markdown_extensions:
     - footnotes
     - meta
     - pymdownx.arithmatex
+    - pymdownx.details
     - pymdownx.smartsymbols
     - pymdownx.tasklist(custom_checkbox=true)
     - pymdownx.tilde
