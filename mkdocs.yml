@@ -22,6 +22,14 @@ pages:
         - Generating Costs Measures: 'NBER_website/6_costs.md'
         - References: 'NBER_website/7_references.md'
         - Appendix: 'NBER_website/8_appendix.md'
+    - ResDAC Documentation:
+        - Carrier RIF: 'resdac/carrier-rif.md'
+        - Durable Medical Equipment RIF: 'resdac/dme-rif.md'
+        - Home Health Agency RIF: 'resdac/hha-rif.md'
+        - Hospice RIF: 'resdac/hospice-rif.md'
+        - Inpatient RIF: 'resdac/ip-rif.md'
+        - Outpatient RIF: 'resdac/op-rif.md'
+        - Skilled Nursing Facility RIF: 'resdac/snf-rif.md'
     - Working with the Data:
         - Standard Readme: 'kyle/01medicare_readme.md'
         - Data Extraction Overview: 'kyle/extract_data.md'
@@ -30,8 +38,6 @@ pages:
     - Important Details:
         - Enrollment Restrictions: 'mauricio/enrollment-restrictions.md'
         - Calculating Costs for Inpatient Visits: 'mauricio/lag-post-event-spending.md'
-    - ResDAC Documentation:
-        - Outpatient RIF: 'resdac/outpatient_rif.md'
     - Codebooks:
         - Beneficiary Files: 'codebooks/demo_bene.md'
         - MedPAR Files: 'codebooks/medpar.md'

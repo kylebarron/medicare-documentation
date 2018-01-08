@@ -6,6 +6,15 @@ import lxml.html as LH
 from tabulate import tabulate
 import re
 
+urls_dict = {
+    'Carrier RIF': 'https://www.resdac.org/cms-data/files/carrier-rif/data-documentation',
+    'Durable Medical Equipment RIF': 'https://www.resdac.org/cms-data/files/dme-rif/data-documentation',
+    'Home Health Agency RIF': 'https://www.resdac.org/cms-data/files/hha-rif/data-documentation',
+    'Hospice RIF': 'https://www.resdac.org/cms-data/files/hospice-rif/data-documentation',
+    'Inpatient RIF': 'https://www.resdac.org/cms-data/files/ip-rif/data-documentation',
+    'Outpatient RIF': 'https://www.resdac.org/cms-data/files/op-rif/data-documentation',
+    'Skilled Nursing Facility RIF': 'https://www.resdac.org/cms-data/files/snf-rif/data-documentation'}
+
 url = 'https://www.resdac.org/cms-data/files/op-rif/data-documentation'
 page = requests.get(url)
 links = LH.fromstring(page.content).xpath('//tr/td/a/@href')
