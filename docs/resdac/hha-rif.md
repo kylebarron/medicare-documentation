@@ -20,6 +20,7 @@ Availability: CY 1999 - 2015
 The 12-month run-off final action claims for 2016 will be available in the beginning of 2018.
 
 ## Data Documentation
+
 ### Home Health Agency RIF
 
 |   Index | SAS Name                 | Variable Name                                                                                                                                                                    | Limitation   | Code Table   |

@@ -15,9 +15,11 @@ urls_dict = {
     'Outpatient RIF': 'https://www.resdac.org/cms-data/files/op-rif/data-documentation',
     'Skilled Nursing Facility RIF': 'https://www.resdac.org/cms-data/files/snf-rif/data-documentation'}
 
+all_links = []
 for page_title, url in urls_dict.items():
     page = requests.get(url)
     links = LH.fromstring(page.content).xpath('//tr/td/a/@href')
+    all_links.extend(links)
     dfs = pd.read_html(page.content)
 
     soup = BeautifulSoup(page.content, 'html.parser')
@@ -73,6 +75,58 @@ for page_title, url in urls_dict.items():
     mdfile = open(os.path.join('docs', 'resdac', fname + '.md'), 'w')
     mdfile.writelines(lines)
     mdfile.close()
+
+
+all_links = sorted(list(set(all_links)))
+all_links = ['http://www.resdac.org' + x for x in all_links]
+
+url = 'http://www.resdac.org' + '/cms-data/variables/Beneficiary-LRD-Used-Count'
+url = 'https://www.resdac.org/cms-data/variables/Claim-Query-Code'
+url = 'https://www.resdac.org/cms-data/variables/Claim-Payment-Amount-0'
+all_text = []
+all_text.append('# Variable Definitions\n\n')
+
+for url in all_links[:25]:
+    page = requests.get(url)
+    soup = BeautifulSoup(page.content, 'html.parser')
+    
+    
+    main_text = soup.find_all(id = ['block-system-main', 'region-content'])
+    p_text = main_text[0].find_all('p')
+    len(p_text)
+    text_list = []
+    for i in range(len(p_text) - 1):
+        text_list.append(p_text[i].get_text())
+    
+    text = '\n\n'.join(text_list)
+    
+    # Format as inline code any text within '' that has at least one digit
+    text = re.sub(r"'(\w*\d\w*)'", r"`\1`", text)
+    
+    try:
+        values = pd.read_html(page.content)
+    except:
+        pass
+    
+    section = soup.find(id = 'page-title').get_text()
+    # NOTE! If I use the actual page title, I can't assume the header anchors will use the text in the tables in the documentation. I.e. in the first step, I'd need to get the links that each variable links to, grab the title off of that page, and then generate what the anchor would be.
+
+    # section = re.search(r'/([^/]+)$', url)[1]
+    # section = section.replace('-', ' ')
+    # if not True in [x.isupper() for x in section]:
+    #     section = section.title()
+    
+    section = '\n\n#### [' + section + '](' + url + ')\n\n'
+    
+    all_text.append(section)
+    all_text.append(text)
+
+mdfile = open(os.path.join('docs', 'resdac', 'variables.md'), 'w')
+mdfile.writelines(all_text)
+mdfile.close()
+
+all_text
+
 
 
 
