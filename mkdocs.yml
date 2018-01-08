@@ -30,6 +30,8 @@ pages:
     - Important Details:
         - Enrollment Restrictions: 'mauricio/enrollment-restrictions.md'
         - Calculating Costs for Inpatient Visits: 'mauricio/lag-post-event-spending.md'
+    - ResDAC Documentation:
+        - Outpatient RIF: 'resdac/outpatient_rif.md'
     - Codebooks:
         - Beneficiary Files: 'codebooks/demo_bene.md'
         - MedPAR Files: 'codebooks/medpar.md'
