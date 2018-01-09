@@ -30,8 +30,9 @@ pages:
         - Inpatient RIF: 'resdac/ip-rif.md'
         - Outpatient RIF: 'resdac/op-rif.md'
         - Skilled Nursing Facility RIF: 'resdac/snf-rif.md'
-        - Variable Definitions: 'resdac/variables.md' 
+        - Variable Definitions: 'resdac/variables.md'
     - Working with the Data:
+        - Goals for New Data Format: 'kyle/goals-for-modern-data-format.md'
         - Standard Readme: 'kyle/01medicare_readme.md'
         - Data Extraction Overview: 'kyle/extract_data.md'
         - Data Locations: 'kyle/data_locations.md'
