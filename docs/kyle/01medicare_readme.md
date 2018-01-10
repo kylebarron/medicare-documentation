@@ -4,7 +4,7 @@ date: Thursday, Dec 14, 2017
 ---
 
 !!! note
-    The below is slightly edited from the `README` file written by Jean Roth and located at `/disk/aging/medicare/data/README`. My edits solely add formatting and organization and attempt to correct typos.
+    This page is a slightly edited version of the `README` file written by Jean Roth and located at `/disk/aging/medicare/data/README`.
 
 
 Filenames are of the form `TYPEpercent_YEAR_divisionFILE`. However, Jean Roth is moving these to filenames that include version, like `TYPEpercentVersion_YEAR_divisionFILE`. The old names will still work because they should by symbolic links pointing to the new filenames when they are added.

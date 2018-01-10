@@ -25,6 +25,7 @@ pages:
     - ResDAC Documentation:
         - Beneficiary Summary File: 'resdac/mbsf.md'
         - Carrier RIF: 'resdac/carrier-rif.md'
+        - Denominator RIF: 'resdac/denominator-rif.md'
         - Durable Medical Equipment RIF: 'resdac/dme-rif.md'
         - Home Health Agency RIF: 'resdac/hha-rif.md'
         - Hospice RIF: 'resdac/hospice-rif.md'
