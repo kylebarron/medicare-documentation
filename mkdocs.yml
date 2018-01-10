@@ -47,6 +47,7 @@ pages:
         - MedPAR Files: 'codebooks/medpar.md'
         - Outpatient Files: 'codebooks/op.md'
         - Jean Roth's Codebook Files: 'emails/jean_roth_harm_code.md'
+    - Glossary: 'glossary.md'
 
 # Theme
 theme:
