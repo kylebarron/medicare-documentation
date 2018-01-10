@@ -23,11 +23,13 @@ pages:
         - References: 'NBER_website/7_references.md'
         - Appendix: 'NBER_website/8_appendix.md'
     - ResDAC Documentation:
+        - Beneficiary Summary File: 'resdac/mbsf.md'
         - Carrier RIF: 'resdac/carrier-rif.md'
         - Durable Medical Equipment RIF: 'resdac/dme-rif.md'
         - Home Health Agency RIF: 'resdac/hha-rif.md'
         - Hospice RIF: 'resdac/hospice-rif.md'
         - Inpatient RIF: 'resdac/ip-rif.md'
+        - MedPAR RIF: 'resdac/medpar-rif.md'
         - Outpatient RIF: 'resdac/op-rif.md'
         - Skilled Nursing Facility RIF: 'resdac/snf-rif.md'
         - Variable Definitions: 'resdac/variables.md'

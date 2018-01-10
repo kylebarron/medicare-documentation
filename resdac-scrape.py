@@ -13,7 +13,9 @@ urls_dict = {
     'Hospice RIF': 'https://www.resdac.org/cms-data/files/hospice-rif/data-documentation',
     'Inpatient RIF': 'https://www.resdac.org/cms-data/files/ip-rif/data-documentation',
     'Outpatient RIF': 'https://www.resdac.org/cms-data/files/op-rif/data-documentation',
-    'Skilled Nursing Facility RIF': 'https://www.resdac.org/cms-data/files/snf-rif/data-documentation'}
+    'Skilled Nursing Facility RIF': 'https://www.resdac.org/cms-data/files/snf-rif/data-documentation',
+    'Beneficiary Summary File': 'https://www.resdac.org/cms-data/files/mbsf/data-documentation',
+    'MedPAR RIF': 'https://www.resdac.org/cms-data/files/medpar-rif/data-documentation'}
 
 all_links = []
 for page_title, url in urls_dict.items():
@@ -23,8 +25,11 @@ for page_title, url in urls_dict.items():
     dfs = pd.read_html(page.content)
 
     soup = BeautifulSoup(page.content, 'html.parser')
-    table_titles = [x.get_text() for x in soup.find_all('h3')[:-1]]
-    table_titles.insert(0, page_title)
+    if page_title != 'Master Beneficiary Summary File':
+        table_titles = [x.get_text() for x in soup.find_all('h3')[:-1]]
+        table_titles.insert(0, page_title)
+    else:
+        table_titles = [x.get_text() for x in soup.find_all('h3')]
 
     all_tables = []
     for i in range(len(dfs)):
