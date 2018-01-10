@@ -95,6 +95,10 @@ for url in all_links[:25]:
     page = requests.get(url)
     soup = BeautifulSoup(page.content, 'html.parser')
     
+    short_name = soup.find(class_='field-name-field-short-sas-name').find(class_='field-item').get_text()
+    long_name = soup.find(class_='field-name-field-long-sas-name').find(class_='field-item').get_text()
+    
+    found_in_files = soup.find(class_='view-content').get_text()
     
     main_text = soup.find_all(id = ['block-system-main', 'region-content'])
     p_text = main_text[0].find_all('p')
