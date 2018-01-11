@@ -32,11 +32,23 @@ local_paths_dict = {
 all_links = []
 for page_title, url in urls_dict.items():
     page = requests.get(url)
+    soup = BeautifulSoup(page.content, 'html.parser')
     links = LH.fromstring(page.content).xpath('//tr/td/a/@href')
     all_links.extend(links)
     dfs = pd.read_html(page.content)
+    
+    # Create local urls from title of pages
+    hrefs = []
+    for i in range(len(links)):
+        def_page = requests.get('http://www.resdac.org' + links[i])
+        def_soup = BeautifulSoup(def_page.content, 'html.parser')
+        href = def_soup.find(id = 'page-title').get_text()
+        href = re.sub(r'[.,/#!$%\^&\*;:{}=\-_`~()]', '', href)
+        href = href.strip()
+        href = href.lower()
+        href = href.replace(' ', '-')
+        hrefs.append(href)
 
-    soup = BeautifulSoup(page.content, 'html.parser')
     if page_title != 'Master Beneficiary Summary File':
         table_titles = [x.get_text() for x in soup.find_all('h3')[:-1]]
         table_titles.insert(0, page_title)
@@ -51,14 +63,14 @@ for page_title, url in urls_dict.items():
         df = df.iloc[:,:5]
         
         # Add links
-        df['refname'] = links[:len(df)]
-        links = links[len(df):]
+        df['refname'] = hrefs[:len(df)]
+        hrefs = hrefs[len(df):]
         
         # Replace NaN with blank string
         df = df.fillna('')
         
         # Make Variable Name column a Markdown link
-        df.iloc[:, 2] = '[' + df.iloc[:, 2] + '](https://www.resdac.org' + df['refname'] + ')'
+        df.iloc[:, 2] = '[' + df.iloc[:, 2] + '](variables.md#' + df['refname'] + ')'
         df = df.drop(columns=['refname'])
         
         # Make Short SAS Name code style
@@ -97,13 +109,6 @@ for page_title, url in urls_dict.items():
 all_links = sorted(list(set(all_links)))
 all_links = ['http://www.resdac.org' + x for x in all_links]
 
-url = 'https://www.resdac.org/cms-data/variables/Claim-Query-Code'
-url = 'https://www.resdac.org/cms-data/variables/113-ICD-10-Recodes'
-url = 'https://www.resdac.org/cms-data/variables/NCH-Near-Line-Record-Identification-Code'
-url = 'https://www.resdac.org/cms-data/variables/Claim-Service-classification-Type-Code'
-url = 'https://www.resdac.org/cms-data/variables/nch-claim-type-code'
-url = 'https://www.resdac.org/cms-data/variables/FI-Claim-Action-Code'
-url = 'https://www.resdac.org/cms-data/variables/1st-Occrrnce-Alzheimers-Dsease-and-Rltd-Disorders-or-Senile-Dementia'
 
 all_text = []
 all_text.append('# Variable Definitions\n\n')
@@ -112,7 +117,7 @@ source += 'These definitions are scraped from ResDAC. Click on '
 source += 'the header of a variable description to see the ResDAC page.\n\n'
 all_text.append(source)
 
-for url in all_links[:25]:
+for url in all_links:
     page = requests.get(url)
     soup = BeautifulSoup(page.content, 'html.parser')
 
@@ -201,7 +206,7 @@ for url in all_links[:25]:
     all_text.append(text)
     all_text.append(values_text)
 
-mdfile = open(os.path.join('docs', 'resdac', 'variables_test.md'), 'w')
+mdfile = open(os.path.join('docs', 'resdac', 'variables.md'), 'w')
 mdfile.writelines(all_text)
 mdfile.close()
 
