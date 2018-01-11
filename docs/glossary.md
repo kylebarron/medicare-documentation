@@ -17,6 +17,7 @@
 - SNF: Skilled Nursing Facility
 - DME: Durable Medical Equipment
 - HISKEW: Health Insurance Skeleton Eligibility Writeoff
-
-
+- NCH: National Claims History
+- MAX: Medicaid Analytic Extract
+- MDS: Minimum Data Set
 
