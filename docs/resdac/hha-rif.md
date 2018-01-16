@@ -134,7 +134,7 @@ The 12-month run-off final action claims for 2016 will be available in the begin
 |      16 | `REV_RATE`                 | [Revenue Center Rate Amount](variables.md#revenue-center-rate-amount)                                                     |              |              |
 |      17 | `REVPMT`                   | [Revenue Center Payment Amount](variables.md#revenue-center-payment-amount)                                               |              |              |
 |      18 | `REV_CHRG`                 | [Revenue Center Total Charge Amount](variables.md#revenue-center-total-charge-amount)                                     | *            | *            |
-|      19 | `REV_NCVR`                 | [Revenue Center Non-Covered Charge Amount](variables.md#revenue-center-noncovered-charge-amount)                          |              | *            |
+|      19 | `REV_NCVR`                 | [Revenue Center Non-Covered Charge Amount](variables.md#revenue-center-non-covered-charge-amount)                         |              | *            |
 |      20 | `REVDEDCD`                 | [Revenue Center Deductible Coinsurance Code](variables.md#revenue-center-deductible-coinsurance-code)                     |              | *            |
 |      21 | `REVSTIND`                 | [Revenue Center Status Indicator Code](variables.md#revenue-center-status-indicator-code)                                 |              | *            |
 |      22 | `REV_CNTR_NDC_QTY`         | [Revenue Center NDC Quantity](variables.md#revenue-center-ndc-quantity)                                                   |              |              |
