@@ -59,6 +59,7 @@ for page_title, url in urls_dict.items():
         href = href.strip()
         href = href.lower()
         href = href.replace(' ', '-')
+        href = re.sub(r'[-]+', '-', href)
         hrefs.append(href)
 
     if page_title != 'Master Beneficiary Summary File':
