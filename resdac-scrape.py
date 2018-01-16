@@ -5,6 +5,7 @@ import pandas as pd
 import lxml.html as LH
 from tabulate import tabulate
 import re
+from time import sleep
 
 urls_dict = {
     'Beneficiary Summary File': 'https://www.resdac.org/cms-data/files/mbsf/data-documentation',
@@ -31,6 +32,7 @@ local_paths_dict = {
 
 all_links = []
 for page_title, url in urls_dict.items():
+    sleep(10)
     page = requests.get(url)
     soup = BeautifulSoup(page.content, 'html.parser')
     links = LH.fromstring(page.content).xpath('//tr/td/a/@href')
@@ -118,6 +120,7 @@ source += 'the header of a variable description to see the ResDAC page.\n\n'
 all_text.append(source)
 
 for url in all_links:
+    sleep(10)
     page = requests.get(url)
     soup = BeautifulSoup(page.content, 'html.parser')
 
