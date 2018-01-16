@@ -43,7 +43,7 @@ for page_title, url in urls_dict.items():
         def_page = requests.get('http://www.resdac.org' + links[i])
         def_soup = BeautifulSoup(def_page.content, 'html.parser')
         href = def_soup.find(id = 'page-title').get_text()
-        href = re.sub(r'[.,/#!$%\^&\*;:{}=\-_`~()]', '', href)
+        href = re.sub(r'[.,/#!$%\^&\*;:{}=_`~()]', '', href)
         href = href.strip()
         href = href.lower()
         href = href.replace(' ', '-')
