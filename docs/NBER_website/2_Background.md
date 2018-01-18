@@ -33,18 +33,18 @@ Another unique file offered by CMS is the **denominator** file, which switched o
 
 
 
-| Claims File   | File Contents |
-| ------------- |:-------------------------------------------------|
-| Denominator   | Demographic and enrollment data on enrollees, the enrollment file is derived from the Denominators files. |
-| HHA           | Home health agency claims |
-| Inpatient     | Inpatient claims cover all inpatient claims ONLY. These claims overlap with the inpatient claims found in the MedPAR file. In general the Inpatient holds a slightly more detailed accounting of claims then the MedPAR file. |
-| SNF           | Skilled nursing facility (SNF) claims |
-| MedPAR        | Stay-based (rather than claim based) file with information on all inpatient and SNF stays; generally easier to work with than the Inpatient and SNF claims files. Constructed from SNF and Inpatient files. |
-| Inst Files     | These files track the condition code, occurrence code, span code, and value code files from the CMS Chronic Condition Warehouse (CCW) data files from the institutional files, see [here](http://www.ccwdata.org/variables/var_claim_files.php) |
-| Carrier       | Claims for services performed by non-institutional providers, notably physicians |
-| Outpatient    | Claims for outpatient services performed by institutional providers in an outpatient setting. Examples of institutional outpatient providers include hospital outpatient departments, rural health clinics, renal dialysis facilities, outpatient rehabilitation facilities, comprehensive outpatient rehabilitation facilities, and community mental health centers	|
-| Hospice       | Hospice claims |
-| DME           | Durable medical equipment claims (excepting the small number that appear in the Carrier file) |
+| Claims File | File Contents                                                                      |
+|:------------|:-----------------------------------------------------------------------------------|
+| Denominator | Demographic and enrollment data on enrollees, the enrollment file is derived from the Denominators files. |
+| HHA         | Home health agency claims                                                          |
+| Inpatient   | Inpatient claims cover all inpatient claims ONLY. These claims overlap with the inpatient claims found in the MedPAR file. In general the Inpatient holds a slightly more detailed accounting of claims then the MedPAR file. |
+| SNF         | Skilled nursing facility (SNF) claims                                              |
+| MedPAR      | Stay-based (rather than claim based) file with information on all inpatient and SNF stays; generally easier to work with than the Inpatient and SNF claims files. Constructed from SNF and Inpatient files. |
+| Inst Files  | These files track the condition code, occurrence code, span code, and value code files from the CMS Chronic Condition Warehouse (CCW) data files from the institutional files, see [here](http://www.ccwdata.org/variables/var_claim_files.php) |
+| Carrier     | Claims for services performed by non-institutional providers, notably physicians   |
+| Outpatient  | Claims for outpatient services performed by institutional providers in an outpatient setting. Examples of institutional outpatient providers include hospital outpatient departments, rural health clinics, renal dialysis facilities, outpatient rehabilitation facilities, comprehensive outpatient rehabilitation facilities, and community mental health centers |
+| Hospice     | Hospice claims                                                                     |
+| DME         | Durable medical equipment claims (excepting the small number that appear in the Carrier file) |
 
 ### Determining enrollment of the target population
 
@@ -149,7 +149,7 @@ To reiterate the point an identifier in the claims data can change in two relate
 
 As noted in the previous section, CMS transitioned from using HICs to `bene_id`s starting in 2006. In a very small percent of cases, individual HICs have changed over time. The new `bene_id`s look to fix this issue by creating a truly unique ID for each beneficiary, for which CMS has provided a HIC to `bene_id` crosswalk. This means that when merging old EHICs to the crosswalk, in a very small amount of cases, several EHICs can be mapped to a single `bene_id`. When dealing with the 5% and 20% extracts, not all EHICs associated with a single `bene_id` will necessarily be in these random samples.
 
-CMS has made available a crosswalk which maps EHICs to `bene_id`s over time. The current program first creates a 5,20 or 100% sample of the crosswalk. Sub-setting the crosswalk file saves space and also avoids merging in individuals whose EHIC changed and as a result is no longer in the strict 5% sample. Next the crosswalk is applied annually to the EHICs for data before 2006. The crosswalk is incomplete in the sense that about 10% of all EHICs do not have a corresponding `bene_id`, in these cases the EHIC is used in place of the missing `bene_id`.
+CMS has made available a crosswalk which maps EHICs to `bene_id`s over time. The current program first creates a 5, 20, or 100% sample of the crosswalk. Sub-setting the crosswalk file saves space and also avoids merging in individuals whose EHIC changed and as a result is no longer in the strict 5% sample. Next the crosswalk is applied annually to the EHICs for data before 2006. The crosswalk is incomplete in the sense that about 10% of all EHICs do not have a corresponding `bene_id`, in these cases the EHIC is used in place of the missing `bene_id`.
 
 ## Diagnosis and procedure codes
 
@@ -249,12 +249,12 @@ On the other hand when a provider submits a bill headed for the institutional cl
 
 Lastly it is useful to note that the first letter in the UPIN designated the doctor type:
 
-| Initial Letter | Type of Practitioner|
-|----------------|---------------------|
-| A-M   | Medical doctors (medical doctors and doctors of osteopathy) |
-| T-V   | Other doctors (such as chiropractors, dentists, podiatrists and optometrists)  |
-| R-S   | Non-physician practitioners  |
-| W-Z   | Group UPINs  |
+| Initial Letter | Type of Practitioner                                                          |
+|:---------------|:------------------------------------------------------------------------------|
+| A-M            | Medical doctors (medical doctors and doctors of osteopathy)                   |
+| T-V            | Other doctors (such as chiropractors, dentists, podiatrists and optometrists) |
+| R-S            | Non-physician practitioners                                                   |
+| W-Z            | Group UPINs                                                                   |
 
 ## Hospital transfers
 
