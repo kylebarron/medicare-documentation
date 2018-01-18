@@ -1,10 +1,10 @@
+import re
 import os
 import requests
-from bs4 import BeautifulSoup
 import pandas as pd
 import lxml.html as LH
 from tabulate import tabulate
-import re
+from bs4 import BeautifulSoup
 from time import sleep
 
 urls_dict = {
@@ -40,28 +40,37 @@ local_paths_dict = {
     'Skilled Nursing Facility RIF': 'snf-rif.md'
 }
 
-all_links = []
+all_short_sas_names = []
+all_var_titles = []
+all_md_anchors = []
+all_resdac_links = []
+all_page_titles = []
+
 for page_title, url in urls_dict.items():
     sleep(10)
     page = requests.get(url)
     soup = BeautifulSoup(page.content, 'html.parser')
     links = LH.fromstring(page.content).xpath('//tr/td/a/@href')
-    all_links.extend(links)
+    all_resdac_links.extend(links)
+    all_page_titles.extend([page_title] * len(links))
     dfs = pd.read_html(page.content)
 
     # Create local urls from title of pages
-    hrefs = []
+    md_anchors = []
     for i in range(len(links)):
         sleep(10)
         def_page = requests.get('http://www.resdac.org' + links[i])
         def_soup = BeautifulSoup(def_page.content, 'html.parser')
-        href = def_soup.find(id='page-title').get_text()
-        href = re.sub(r'[.,/#!$%\^&\*;:{}=_`~()]', '', href)
-        href = href.strip()
-        href = href.lower()
-        href = href.replace(' ', '-')
-        href = re.sub(r'[-]+', '-', href)
-        hrefs.append(href)
+        md_anchor = def_soup.find(id='page-title').get_text()
+        all_var_titles.append(md_anchor)
+        md_anchor = re.sub(r'[.,/#!$%\^&\*;:{}=_`~()]', '', md_anchor)
+        md_anchor = md_anchor.strip()
+        md_anchor = md_anchor.lower()
+        md_anchor = md_anchor.replace(' ', '-')
+        md_anchor = re.sub(r'[-]+', '-', md_anchor)
+        md_anchors.append(md_anchor)
+    
+    all_md_anchors.extend(md_anchors)
 
     if page_title != 'Master Beneficiary Summary File':
         table_titles = [x.get_text() for x in soup.find_all('h3')[:-1]]
@@ -77,16 +86,19 @@ for page_title, url in urls_dict.items():
         df = df.iloc[:, :5]
 
         # Add links
-        df['refname'] = hrefs[:len(df)]
-        hrefs = hrefs[len(df):]
+        df['md_anchor'] = md_anchors[:len(df)]
+        md_anchors = md_anchors[len(df):]
 
         # Replace NaN with blank string
         df = df.fillna('')
 
         # Make Variable Name column a Markdown link
         df.iloc[:, 2] = (
-            '[' + df.iloc[:, 2] + '](variables.md#' + df['refname'] + ')')
-        df = df.drop(columns=['refname'])
+            '[' + df.iloc[:, 2] + '](variables.md#' + df['md_anchor'] + ')')
+        df = df.drop(columns=['md_anchor'])
+
+        # Save short SAS names
+        all_short_sas_names.extend(list(df.iloc[:, 1]))
 
         # Make Short SAS Name code style
         df.iloc[:, 1] = '`' + df.iloc[:, 1] + '`'
@@ -125,8 +137,20 @@ for page_title, url in urls_dict.items():
     mdfile.writelines(lines)
     mdfile.close()
 
-all_links = sorted(list(set(all_links)))
-all_links = ['http://www.resdac.org' + x for x in all_links]
+all_resdac_links = sorted(list(set(all_resdac_links)))
+all_resdac_links = ['http://www.resdac.org' + x for x in all_resdac_links]
+
+## Save a copy of data
+df = pd.DataFrame({
+    'short_sas_name': all_short_sas_names,
+    'var_titles': all_var_titles,
+    'md_anchors': all_md_anchors,
+    'resdac_links': all_resdac_links,
+    'dataset': all_page_titles})
+path = os.path.join('..', 'data', 'resdac', 'varlist.csv')
+df.to_csv()
+
+## Create Variable Definitions page
 
 all_text = []
 all_text.append('# Variable Definitions\n\n')
