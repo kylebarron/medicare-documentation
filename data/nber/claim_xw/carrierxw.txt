@@ -1,0 +1,73 @@
+finalvar	key	LABEL	1999	2000	2001	2002	2003	2004	2005	2006	2007	2008	2009	2010	2011	2012	lengthvar	character	filevarind	generated	junk
+betos	betos	Service BETOS code	betos	betos	betos	betos	betos	betos	betos	betos	betos	betos	betos	betos	betos	betos	3	1	line	0
+clm_id	clm_id	Claim identifier  unique with fileyear	bccn	carrcntl	carrcntl	claimindex	claimindex	claimindex	claimindex	clm_id	clm_id	clm_id	clm_id	clm_id	clm_id	clm_id	15	1	line	0
+clm_type	clm_type	Claim type code	clm_type	clm_type	clm_type	clm_type	clm_type	clm_type	clm_type	clm_type	clm_type	clm_type	clm_type	clm_type	clm_type	clm_type	2	1	clm	0
+pmtdnlcd	clmstatus	Flag used to determine whether claims was denied	NULL	pmtdnlcd	pmtdnlcd	pmtdnlcd	pmtdnlcd	pmtdnlcd	pmtdnlcd	pmtdnlcd	pmtdnlcd	pmtdnlcd	pmtdnlcd	pmtdnlcd	pmtdnlcd	pmtdnlcd	2	1	clm	0
+coinamt	coinamt	Patient coinsurance amount	COINAMT	coinamt	coinamt	coinamt	coinamt	coinamt	coinamt	coinamt	coinamt	coinamt	coinamt	coinamt	coinamt	coinamt	8	0	line	0
+cnty_cd	county_car	Patient county of residence at time of claim	bcounty	cnty_cd	cnty_cd	county	county	county	county	cnty_cd	cnty_cd	cnty_cd	cnty_cd	cnty_cd	cnty_cd	cnty_cd	3	1	clm	0
+carrawindx	carrawindx	Car raw obs: unique with fileyear  part and diag_id	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	8	0	line	1
+part	part	Car file part: unique with fileyear carrawindx	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	8	0	line	1
+dgn_date 	dgn_date 	Admision date of the index episode	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	8	0	line	1
+icd_dgns_cd1	dgns_cd1	diagnosis code #1	bdx1	dgns_cd1	dgns_cd1	dgns_cd1	dgns_cd1	dgns_cd1	dgns_cd1	dgns_cd1	dgns_cd1	dgns_cd1	dgns_cd1	icd_dgns_cd1	icd_dgns_cd1	icd_dgns_cd1	7	1	clm	0
+icd_dgns_cd2	dgns_cd2	diagnosis code #2	bdx2	dgns_cd2	dgns_cd2	dgns_cd2	dgns_cd2	dgns_cd2	dgns_cd2	dgns_cd2	dgns_cd2	dgns_cd2	dgns_cd2	icd_dgns_cd2	icd_dgns_cd2	icd_dgns_cd2	7	1	clm	0
+icd_dgns_cd3	dgns_cd3	diagnosis code #3	bdx3	dgns_cd3	dgns_cd3	dgns_cd3	dgns_cd3	dgns_cd3	dgns_cd3	dgns_cd3	dgns_cd3	dgns_cd3	dgns_cd3	icd_dgns_cd3	icd_dgns_cd3	icd_dgns_cd3	7	1	clm	0
+icd_dgns_cd4	dgns_cd4	diagnosis code #4	bdx4	dgns_cd4	dgns_cd4	dgns_cd4	dgns_cd4	dgns_cd4	dgns_cd4	dgns_cd4	dgns_cd4	dgns_cd4	dgns_cd4	icd_dgns_cd4	icd_dgns_cd4	icd_dgns_cd4	7	1	clm	0
+icd_dgns_cd5	dgns_cd5	diagnosis code #5	NULL	NULL	NULL	NULL	NULL	NULL	NULL	dgns_cd5	dgns_cd5	dgns_cd5	dgns_cd5	icd_dgns_cd5	icd_dgns_cd5	icd_dgns_cd5	7	1	clm	0
+icd_dgns_cd6	dgns_cd6	diagnosis code #6	NULL	NULL	NULL	NULL	NULL	NULL	NULL	dgns_cd6	dgns_cd6	dgns_cd6	dgns_cd6	icd_dgns_cd6	icd_dgns_cd6	icd_dgns_cd6	7	1	clm	0
+icd_dgns_cd7	dgns_cd7	diagnosis code #7	NULL	NULL	NULL	NULL	NULL	NULL	NULL	dgns_cd7	dgns_cd7	dgns_cd7	dgns_cd7	icd_dgns_cd7	icd_dgns_cd7	icd_dgns_cd7	7	1	clm	0
+icd_dgns_cd8	dgns_cd8	diagnosis code #8	NULL	NULL	NULL	NULL	NULL	NULL	NULL	dgns_cd8	dgns_cd8	dgns_cd8	dgns_cd8	icd_dgns_cd8	icd_dgns_cd8	icd_dgns_cd8	7	1	clm	0
+icd_dgns_cd9	dgns_cd9	diagnosis code #9	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	icd_dgns_cd9	icd_dgns_cd9	icd_dgns_cd9	7	1	clm	0
+icd_dgns_cd10	dgns_cd10	diagnosis code #10	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	icd_dgns_cd10	icd_dgns_cd10	icd_dgns_cd10	7	1	clm	0
+icd_dgns_cd11	dgns_cd11	diagnosis code #11	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	icd_dgns_cd11	icd_dgns_cd11	icd_dgns_cd11	7	1	clm	0
+icd_dgns_cd12	dgns_cd12	diagnosis code #12	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	icd_dgns_cd12	icd_dgns_cd12	icd_dgns_cd12	7	1	clm	0
+icd_dgns_vrsn_cd1	icd_dgns_vrsn_cd1	icd9 or icd10 flag	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	icd_dgns_vrsn_cd1	icd_dgns_vrsn_cd1	1	1	clm	0
+icd_dgns_vrsn_cd2	icd_dgns_vrsn_cd2	icd9 or icd10 flag	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	icd_dgns_vrsn_cd2	icd_dgns_vrsn_cd2	1	1	clm	0
+icd_dgns_vrsn_cd3	icd_dgns_vrsn_cd3	icd9 or icd10 flag	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	icd_dgns_vrsn_cd3	icd_dgns_vrsn_cd3	1	1	clm	0
+icd_dgns_vrsn_cd4	icd_dgns_vrsn_cd4	icd9 or icd10 flag	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	icd_dgns_vrsn_cd4	icd_dgns_vrsn_cd4	1	1	clm	0
+icd_dgns_vrsn_cd5	icd_dgns_vrsn_cd5	icd9 or icd10 flag	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	icd_dgns_vrsn_cd5	icd_dgns_vrsn_cd5	1	1	clm	0
+icd_dgns_vrsn_cd6	icd_dgns_vrsn_cd6	icd9 or icd10 flag	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	icd_dgns_vrsn_cd6	icd_dgns_vrsn_cd6	1	1	clm	0
+icd_dgns_vrsn_cd7	icd_dgns_vrsn_cd7	icd9 or icd10 flag	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	icd_dgns_vrsn_cd7	icd_dgns_vrsn_cd7	1	1	clm	0
+icd_dgns_vrsn_cd8	icd_dgns_vrsn_cd8	icd9 or icd10 flag	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	icd_dgns_vrsn_cd8	icd_dgns_vrsn_cd8	1	1	clm	0
+icd_dgns_vrsn_cd9	icd_dgns_vrsn_cd9	icd9 or icd10 flag	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	icd_dgns_vrsn_cd9	icd_dgns_vrsn_cd9	1	1	clm	0
+icd_dgns_vrsn_cd10	icd_dgns_vrsn_cd10	icd9 or icd10 flag	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	icd_dgns_vrsn_cd10	icd_dgns_vrsn_cd10	1	1	clm	0
+icd_dgns_vrsn_cd11	icd_dgns_vrsn_cd11	icd9 or icd10 flag	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	icd_dgns_vrsn_cd11	icd_dgns_vrsn_cd11	1	1	clm	0
+icd_dgns_vrsn_cd12	icd_dgns_vrsn_cd12	icd9 or icd10 flag	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	icd_dgns_vrsn_cd12	icd_dgns_vrsn_cd12	1	1	clm	0
+diag_id  	diag_id  	Unique ID of for disease index episode	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	8	0	line	1
+ehic	ehic	Encrypted health insurance claim number ( identifier OLD)	ehic	ehic	ehic	ehic	ehic	ehic	ehic	NULL	NULL	NULL	NULL	NULL	NULL	NULL	15	1	line	0
+bene_id	bene_id	Beneficiary unique identifier	NULL	NULL	NULL	NULL	NULL	NULL	NULL	bene_id	bene_id	bene_id	bene_id	bene_id	bene_id	bene_id	15	1	line	0
+fileyear	fileyear	Year of Carrier file containing claim: unique	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	8	0	line	1
+hcfaspcl	hcfaspcl	CMS specialty code	bspec	hcfaspcl	hcfaspcl	hcfaspcl	hcfaspcl	hcfaspcl	hcfaspcl	hcfaspcl	hcfaspcl	hcfaspcl	hcfaspcl	hcfaspcl	hcfaspcl	hcfaspcl	3	1	line	0
+hcpcs_cd	hcpcs_cd	Service HCPCS code	bhcpcs	hcpcs_cd	hcpcs_cd	hcpcs_cd	hcpcs_cd	hcpcs_cd	hcpcs_cd	hcpcs_cd	hcpcs_cd	hcpcs_cd	hcpcs_cd	hcpcs_cd	hcpcs_cd	hcpcs_cd	5	1	line	0
+hcpcs_yr	hcpcs_yr	Year of HCPCS coding system used	hcpcs_yr	hcpcs_yr	hcpcs_yr	hcpcs_yr	hcpcs_yr	hcpcs_yr	hcpcs_yr	hcpcs_yr	hcpcs_yr	hcpcs_yr	hcpcs_yr	hcpcs_yr	hcpcs_yr	hcpcs_yr	4	1	clm	0
+lalowchg	lalowchg	Total all-payer payment amount	ballow	lalowchg	lalowchg	lalowchg	lalowchg	lalowchg	lalowchg	lalowchg	lalowchg	lalowchg	lalowchg	lalowchg	lalowchg	lalowchg	8	0	line	0
+ldedamt	ldedamt	Line item deductible amount	blnbded	ldedamt	ldedamt	ldedamt	ldedamt	ldedamt	ldedamt	ldedamt	ldedamt	ldedamt	ldedamt	ldedamt	ldedamt	ldedamt	8	0	line	0
+line_icd_dgns_cd	linedgns	Line diagnosis code	blndx	linedgns	linedgns	linedgns	linedgns	linedgns	linedgns	linedgns	linedgns	linedgns	linedgns	line_icd_dgns_cd	line_icd_dgns_cd	line_icd_dgns_cd	7	1	line	0
+linepmt	linepmt	Medicare payment amount	bpaymt	linepmt	linepmt	linepmt	linepmt	linepmt	linepmt	linepmt	linepmt	linepmt	linepmt	linepmt	linepmt	linepmt	8	0	line	0
+pmtindcd	linestatus	Flag used to determine whether line item was denied	pmtindcd	pmtindcd	pmtindcd	pmtindcd	pmtindcd	pmtindcd	pmtindcd	NULL	NULL	NULL	NULL	NULL	NULL	NULL	1	1	line	0
+lprpdamt	lprpdamt	Line Beneficiary Primary Payer Paid Amount	PRPAYAMT	lprpdamt	lprpdamt	lprpdamt	lprpdamt	lprpdamt	lprpdamt	lprpdamt	lprpdamt	lprpdamt	lprpdamt	lprpdamt	lprpdamt	lprpdamt	8	0	line	0
+mdfr_cd1	mdfr_cd1	Service HCPCS code modifier #1	bhmod1	mdfr_cd1	mdfr_cd1	mdfr_cd1	mdfr_cd1	mdfr_cd1	mdfr_cd1	mdfr_cd1	mdfr_cd1	mdfr_cd1	mdfr_cd1	mdfr_cd1	mdfr_cd1	mdfr_cd1	5	1	line	0
+mdfr_cd2	mdfr_cd2	Service HCPCS code modifier #2	bhmod2	mdfr_cd2	mdfr_cd2	mdfr_cd2	mdfr_cd2	mdfr_cd2	mdfr_cd2	mdfr_cd2	mdfr_cd2	mdfr_cd2	mdfr_cd2	mdfr_cd2	mdfr_cd2	mdfr_cd2	5	1	line	0
+prncpal_dgns_cd	pdgns_cd	Principal diagnosis	pdgns_cd	pdgns_cd	pdgns_cd	pdgns_cd	pdgns_cd	pdgns_cd	pdgns_cd	dgns_cd1	dgns_cd1	dgns_cd1	dgns_cd1	prncpal_dgns_cd	prncpal_dgns_cd	prncpal_dgns_cd	7	1	clm	1
+plcsrvc	plcsrvc	Place of service code	bplacsv	plcsrvc	plcsrvc	plcsrvc	plcsrvc	plcsrvc	plcsrvc	plcsrvc	plcsrvc	plcsrvc	plcsrvc	plcsrvc	plcsrvc	plcsrvc	2	1	line	0
+prf_prfl	prf_prfl	Performing physician identification number (PIN)	bcpppn	prf_prfl	prf_prfl	prf_prfl	prf_prfl	prf_prfl	prf_prfl	prf_prfl	prf_prfl	prf_prfl	prf_prfl	prf_prfl	prf_prfl	prf_prfl	15	1	line	0
+prf_upin	prf_upin	Performing unique physician identification number (UPIN)	blnppun	prf_upin	prf_upin	prf_upin	prf_upin	prf_upin	prf_upin	prf_upin	prf_upin	prf_upin	prf_upin	prf_upin	prf_upin	prf_upin	6	1	line	0
+prf_npi	prf_npi	Performing physician NPI 	NULL	prfnpi	prfnpi	prfnpi	prfnpi	prfnpi	prfnpi	prf_npi	prf_npi	prf_npi	prf_npi	prf_npi	prf_npi	prf_npi	10	1	line	0
+prfgrp_npi	prfgrp_npi	Performing unique physician group NPI 	NULL	prgrpnpi	prgrpnpi	prgrpnpi	prgrpnpi	prgrpnpi	prgrpnpi	prgrpnpi	prgrpnpi	prgrpnpi	prgrpnpi	prgrpnpi	prgrpnpi	prgrpnpi	10	1	line	0
+rfr_upin	rfr_upin	Referring unique physician identification number (UPIN)	brfrupin	rfr_upin	rfr_upin	rfr_upin	rfr_upin	rfr_upin	rfr_upin	rfr_upin	rfr_upin	rfr_upin	rfr_upin	rfr_upin	rfr_upin	rfr_upin	6	1	clm	0
+rfr_npi	rfr_npi	Referring physician NPI 	NULL	rfr_npi	rfr_npi	rfr_npi	rfr_npi	rfr_npi	rfr_npi	rfr_npi	rfr_npi	rfr_npi	rfr_npi	rfr_npi	rfr_npi	rfr_npi	10	1	clm	0
+provzip	provzip	Provider zipcode	bppzip	provzip	provzip	provzip	provzip	provzip	provzip	provzip	provzip	provzip	provzip	provzip	provzip	provzip	10	1	line	0
+prv_type	prv_type	Carrier provider type code	bprvtyp	prv_type	prv_type	prv_type	prv_type	prv_type	prv_type	prv_type	prv_type	prv_type	prv_type	prv_type	prv_type	prv_type	1	1	line	0
+prvstate	prvstate	Provider state	prvstate	prvstate	prvstate	prvstate	prvstate	prvstate	prvstate	prvstate	prvstate	prvstate	prvstate	prvstate	prvstate	prvstate	2	1	line	0
+expnsdt1	sexpndt1	Service expenditure start date	bexpdt1	expnsdt1	expnsdt1	sexpndt1	sexpndt1	sexpndt1	sexpndt1	expnsdt1	expnsdt1	expnsdt1	expnsdt1	expnsdt1	expnsdt1	expnsdt1	5	0	line	0
+expnsdt2	sexpndt2	Service expenditure end date	bexpdt2	expnsdt2	expnsdt2	sexpndt2	sexpndt2	sexpndt2	sexpndt2	expnsdt2	expnsdt2	expnsdt2	expnsdt2	expnsdt2	expnsdt2	expnsdt2	5	0	line	0
+state_cd	state_car	Patient state of residence at time of claim	bstate	state_cd	state_cd	state	state	state	state	state_cd	state_cd	state_cd	state_cd	state_cd	state_cd	state_cd	2	1	clm	0
+tax_num	tax_num	Provider tax identification number	bprovid	tax_num	tax_num	tax_num	tax_num	tax_num	tax_num	tax_num	tax_num	tax_num	tax_num	tax_num	tax_num	tax_num	10	1	line	0
+typsrvcb	typsrvcb	CMS type of service code	btos	typsrvcb	typsrvcb	typsrvcb	typsrvcb	typsrvcb	typsrvcb	typsrvcb	typsrvcb	typsrvcb	typsrvcb	typsrvcb	typsrvcb	typsrvcb	1	1	line	0
+zip_car	zip_car	Patient zip code of residence at time of claim	bzip	bene_zip	bene_zip	zipcode	zipcode	zipcode	zipcode	zip_cd	zip_cd	zip_cd	zip_cd	zip_cd	zip_cd	zip_cd	9	1	clm	0
+from_dt	from_dt	Claim expenditure start date	bfromdt	from_dt	from_dt	sfromdt	sfromdt	sfromdt	sfromdt	from_dt	from_dt	from_dt	from_dt	from_dt	from_dt	from_dt	5	0	clm	0
+thru_dt	thru_dt	Claim expenditure end date	bthrudt	thru_dt	thru_dt	sthrudt	sthrudt	sthrudt	sthrudt	thru_dt	thru_dt	thru_dt	thru_dt	thru_dt	thru_dt	thru_dt	5	0	clm	0
+lsbmtchg	lsbmtchg	Total submitted charges	bsubchg	lsbmtchg	lsbmtchg	lsbmtchg	lsbmtchg	lsbmtchg	lsbmtchg	lsbmtchg	lsbmtchg	lsbmtchg	lsbmtchg	lsbmtchg	lsbmtchg	lsbmtchg	8	0	line	0
+mtus_cnt	mtus_cnt	carrier line miles/time/units/service counts	bmturei	mtus_cnt	mtus_cnt	mtus_cnt	mtus_cnt	mtus_cnt	mtus_cnt	mtus_cnt	mtus_cnt	mtus_cnt	mtus_cnt	mtus_cnt	mtus_cnt	mtus_cnt	8	0	line	0
+mtus_ind	mtus_ind	carrier line miles/time/units/service indicator	bmtuind	mtus_ind	mtus_ind	mtus_ind	mtus_ind	mtus_ind	mtus_ind	mtus_ind	mtus_ind	mtus_ind	mtus_ind	mtus_ind	mtus_ind	mtus_ind	1	1	line	0
+srvc_cnt	srvc_cnt	line service count	bsrvct	srvc_cnt	srvc_cnt	srvc_cnt	srvc_cnt	srvc_cnt	srvc_cnt	srvc_cnt	srvc_cnt	srvc_cnt	srvc_cnt	srvc_cnt	srvc_cnt	srvc_cnt	8	0	line	0
+alowchrg	alowchrg	alowchrg	alowchrg	alowchrg	alowchrg	alowchrg	alowchrg	alowchrg	alowchrg	alowchrg	alowchrg	alowchrg	alowchrg	alowchrg	alowchrg	alowchrg	8	0	clm	0	
