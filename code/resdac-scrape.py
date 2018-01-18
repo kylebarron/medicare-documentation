@@ -106,7 +106,7 @@ for page_title, url in urls_dict.items():
 
     # Read in Markdown file
     fname = re.search(r'/([\w-]+)/data-documentation', url)[1]
-    mdfile = open(os.path.join('docs', 'resdac', fname + '.md'), 'r')
+    mdfile = open(os.path.join('..', 'docs', 'resdac', fname + '.md'), 'r')
     lines = mdfile.readlines()
     mdfile.close()
 
@@ -121,7 +121,7 @@ for page_title, url in urls_dict.items():
     lines = lines[:line_num + 1]
     lines.extend(all_tables)
 
-    mdfile = open(os.path.join('docs', 'resdac', fname + '.md'), 'w')
+    mdfile = open(os.path.join('..', 'docs', 'resdac', fname + '.md'), 'w')
     mdfile.writelines(lines)
     mdfile.close()
 
@@ -236,6 +236,6 @@ for url in all_links:
     all_text.append(text)
     all_text.append(values_text)
 
-mdfile = open(os.path.join('docs', 'resdac', 'variables.md'), 'w')
+mdfile = open(os.path.join('..', 'docs', 'resdac', 'variables.md'), 'w')
 mdfile.writelines(all_text)
 mdfile.close()
