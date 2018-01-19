@@ -162,8 +162,8 @@ for f in files:
     main_text = soup.find_all(id=['block-system-main', 'region-content'])
     main_text = main_text[0].find_all('p')
     text_list = []
-    for i in range(len(p_text) - 1):
-        text_list.append(p_text[i].get_text())
+    for i in range(len(main_text) - 1):
+        text_list.append(main_text[i].get_text())
     main_text = '\n\n'.join(text_list)
 
     try:
