@@ -174,7 +174,7 @@ for f in files:
         derivation = ''
 
     try:
-        limitation = soup.select('.field-label-hidden .even')
+        limitation = soup.select('.field-name-field-limitation .even')
         limitation = [x.get_text() for x in limitation]
         limitation = '\n\n'.join(limitation)
     except:
