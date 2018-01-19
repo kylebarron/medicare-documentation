@@ -1,6 +1,8 @@
 import re
 import os
+import math
 import requests
+import numpy as np
 import pandas as pd
 import lxml.html as LH
 from tabulate import tabulate
@@ -232,6 +234,25 @@ df = df.sort_values(by = ['var_title'])
 path = os.path.join('..', 'data', 'variable_info.pkl')
 df.to_pickle(path)
 
+## Import xw files:
+xws = {
+    'Carrier': 'carrier',
+    'Inpatient': 'ip',
+    'MedPAR': 'medpar',
+    'Outpatient': 'op',}
+
+all_dfs = pd.DataFrame()
+for name, xw in xws.items():
+    path = os.path.join('..', 'data', 'nber', 'claim_xw', xw + 'xw.txt')
+    df = pd.read_table(path)
+    df = df.filter(regex=(r'\d{4}'), axis = 1)
+    df['Dataset'] = name
+    all_dfs = all_dfs.append(df)
+
+xw = all_dfs
+xw = xw[xw['2012'].notnull()]
+
+path = os.path.join('..', 'data', 'variable_info.pkl')
 df = pd.read_pickle(path)
 
 ## Create Variable Definitions page
@@ -272,10 +293,48 @@ for i in range(len(df)):
         hidden_text.append(limitation)
     hidden_text = '\n\n'.join(hidden_text)
     
+    # Show consistent names over time in a table:
+    # for debugging:
+    #     row = df[df['short_sas_name'].str.lower() == 'at_npi'].iloc[0]
+    xw_names = xw[xw['2012'].str.lower() == row['short_sas_name'].lower()]
+    xw_names = xw_names.dropna(axis=1, how='all')
+    xw_names = xw_names.fillna('')
     
-    
+    cols = list(xw_names.columns)
+    if cols != []:
+        cols.remove('Dataset')
+        cols.reverse()
+        nyears = len(cols)
+        ncols_to_print = 5
+        ntables = math.ceil(nyears / ncols_to_print)
+        
+        for col in cols:
+            xw_names[col] = xw_names[col].str.replace(r'(\w+)', lambda m: '`' + m.group(1) + '`')
+
+        print_tables = ['<h3>Variable Names</h3>']
+        j = 0
+        for j in range(ntables):
+            # Take first five:
+            thiscols = cols[:ncols_to_print]
+            thiscols.insert(0, 'Dataset')
+            cols = cols[ncols_to_print:]
+            
+            tab = tabulate(
+                xw_names[thiscols],
+                headers='keys',
+                tablefmt='pipe',
+                numalign='left',
+                showindex=False)
+            print_tables.append(tab)
+        
+        print_tables = '\n\n'.join(print_tables)
+        print_tables += '\n\n'
+    else:
+        print_tables = ''
+
     all_text.append(var_title)
     all_text.append(varnames)
+    all_text.append(print_tables)
     all_text.append(contained_in)
     all_text.append(text)
     all_text.append(hidden_text)
