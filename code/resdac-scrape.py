@@ -40,37 +40,33 @@ local_paths_dict = {
     'Skilled Nursing Facility RIF': 'snf-rif.md'
 }
 
-all_short_sas_names = []
-all_var_titles = []
-all_md_anchors = []
-all_resdac_links = []
-all_page_titles = []
-
 for page_title, url in urls_dict.items():
-    sleep(10)
-    page = requests.get(url)
-    soup = BeautifulSoup(page.content, 'html.parser')
-    links = LH.fromstring(page.content).xpath('//tr/td/a/@href')
-    all_resdac_links.extend(links)
-    all_page_titles.extend([page_title] * len(links))
-    dfs = pd.read_html(page.content)
+    stub = re.search(r'([\w-]+)/data-documentation', url)[1]
+    path = os.path.join('..', 'data', 'resdac', 'html', 'rif', stub + '.html')
+    
+    with open(path, 'r') as text_file:
+        html = text_file.read()
+    
+    soup = BeautifulSoup(html, 'html.parser')
+    links = LH.fromstring(html).xpath('//tr/td/a/@href')
+    dfs = pd.read_html(html)
 
-    # Create local urls from title of pages
+    # Create local urls to markdown anchors from title of pages
     md_anchors = []
-    for i in range(len(links)):
-        sleep(10)
-        def_page = requests.get('http://www.resdac.org' + links[i])
-        def_soup = BeautifulSoup(def_page.content, 'html.parser')
-        md_anchor = def_soup.find(id='page-title').get_text()
-        all_var_titles.append(md_anchor)
+    for link in links:
+        path = os.path.join('..', 'data', 'resdac', 'html', 'variables', link[1:] + '.html')
+        
+        with open(path, 'r') as text_file:
+            var_page = text_file.read()
+        var_soup = BeautifulSoup(var_page, 'html.parser')
+        
+        md_anchor = var_soup.find(id='page-title').get_text()
         md_anchor = re.sub(r'[.,/#!$%\^&\*;:{}=_`~()]', '', md_anchor)
         md_anchor = md_anchor.strip()
         md_anchor = md_anchor.lower()
         md_anchor = md_anchor.replace(' ', '-')
         md_anchor = re.sub(r'[-]+', '-', md_anchor)
         md_anchors.append(md_anchor)
-    
-    all_md_anchors.extend(md_anchors)
 
     if page_title != 'Master Beneficiary Summary File':
         table_titles = [x.get_text() for x in soup.find_all('h3')[:-1]]
@@ -97,9 +93,6 @@ for page_title, url in urls_dict.items():
             '[' + df.iloc[:, 2] + '](variables.md#' + df['md_anchor'] + ')')
         df = df.drop(columns=['md_anchor'])
 
-        # Save short SAS names
-        all_short_sas_names.extend(list(df.iloc[:, 1]))
-
         # Make Short SAS Name code style
         df.iloc[:, 1] = '`' + df.iloc[:, 1] + '`'
 
@@ -118,10 +111,9 @@ for page_title, url in urls_dict.items():
 
     # Read in Markdown file
     fname = re.search(r'/([\w-]+)/data-documentation', url)[1]
-    mdfile = open(os.path.join('..', 'docs', 'resdac', fname + '.md'), 'r')
-    lines = mdfile.readlines()
-    mdfile.close()
-
+    with open(os.path.join('..', 'docs', 'resdac', fname + '.md'), 'r') as mdfile:
+        lines = mdfile.readlines()
+    
     # Find the line that says "Data Documentation"
     re_text = r'(?i)\#+\s*data\s+documentation'
     line_num = [ind for ind, x in enumerate(lines) if re.search(re_text, x)]
@@ -133,12 +125,9 @@ for page_title, url in urls_dict.items():
     lines = lines[:line_num + 1]
     lines.extend(all_tables)
 
-    mdfile = open(os.path.join('..', 'docs', 'resdac', fname + '.md'), 'w')
-    mdfile.writelines(lines)
-    mdfile.close()
+    with open(os.path.join('..', 'docs', 'resdac', fname + '.md'), 'w') as mdfile:
+        mdfile.writelines(lines)
 
-all_resdac_links = sorted(list(set(all_resdac_links)))
-all_resdac_links = ['http://www.resdac.org' + x for x in all_resdac_links]
 
 ## Save a copy of data
 df = pd.DataFrame({
