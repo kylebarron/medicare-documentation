@@ -186,12 +186,11 @@ for f in files:
     values_text = ''
     values_box = soup.find(class_='field-collection-view-final')
     if values_box is not None:
+        values_text = '\n\n### Values\n\n'
         if not values_box.find('tr'):
             # I.e. No table of values
             values_text += values_box.get_text()
-            has_tables = False
         else:
-            has_tables = True
             table_headers = [
                 x.get_text()
                 for x in soup.find_all(class_='field-name-field-note')
