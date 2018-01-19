@@ -6,6 +6,7 @@ import lxml.html as LH
 from tabulate import tabulate
 from bs4 import BeautifulSoup
 from time import sleep
+from glob import glob
 
 urls_dict = {
     'Beneficiary Summary File':
@@ -129,18 +130,103 @@ for page_title, url in urls_dict.items():
         mdfile.writelines(lines)
 
 
-## Save a copy of data
-df = pd.DataFrame({
-    'short_sas_name': all_short_sas_names,
-    'var_titles': all_var_titles,
-    'md_anchors': all_md_anchors,
-    'resdac_links': all_resdac_links,
-    'dataset': all_page_titles})
-path = os.path.join('..', 'data', 'resdac', 'varlist.csv')
-df.to_csv()
+## Extract data from variables html pages and put into df
+glob_path = os.path.join('..', 'data', 'resdac', 'html', 'variables', '**/*.html')
+files = sorted(glob(glob_path, recursive=True))
+
+# resdac_link = 'cms-data/variables/nch-claim-type-code'
+# f = os.path.join('..', 'data', 'resdac', 'html', 'variables', resdac_link + '.html')
+
+df = pd.DataFrame()
+for f in files:
+    with open(f, 'r') as text_file:
+        html = text_file.read()
+
+    soup = BeautifulSoup(html, 'html.parser')
+    var_title = soup.find(id='page-title').get_text()
+    short_sas_name = soup.find(class_='field-name-field-short-sas-name').find(
+        class_='field-item').get_text()
+    try:
+        long_sas_name = soup.find(class_='field-name-field-long-sas-name').find(
+            class_='field-item').get_text()
+    except AttributeError:
+        long_sas_name = ''
+
+    in_files = soup.find(class_='view-content').find_all('a')
+    in_files = [x.get_text() for x in in_files]
+    in_files = [x for x in in_files if x in local_paths_dict.keys()]
+
+    main_text = soup.find_all(id=['block-system-main', 'region-content'])
+    main_text = main_text[0].find_all('p')
+    text_list = []
+    for i in range(len(p_text) - 1):
+        text_list.append(p_text[i].get_text())
+    main_text = '\n\n'.join(text_list)
+
+    try:
+        derivation = soup.select('.field-name-field-derivation .even')
+        derivation = [x.get_text() for x in derivation]
+        derivation = '\n\n'.join(derivation)
+    except:
+        derivation = ''
+
+    try:
+        limitation = soup.select('.field-label-hidden .even')
+        limitation = [x.get_text() for x in limitation]
+        limitation = '\n\n'.join(limitation)
+    except:
+        limitation = ''
+
+    # Values
+    values_text = ''
+    values_box = soup.find(class_='field-collection-view-final')
+    if values_box is not None:
+        if not values_box.find('tr'):
+            # I.e. No table of values
+            values_text += values_box.get_text()
+            has_tables = False
+        else:
+            has_tables = True
+            table_headers = [
+                x.get_text()
+                for x in soup.find_all(class_='field-name-field-note')
+            ]
+            tables = pd.read_html(html)
+
+            all_text_tables = []
+            for i in range(len(tables)):
+                try:
+                    all_text_tables.append(table_headers[i])
+                except:
+                    pass
+                text_table = tabulate(
+                    tables[i],
+                    headers=['Code', 'Code Value'],
+                    tablefmt='pipe',
+                    numalign='left',
+                    showindex=False)
+                all_text_tables.append(text_table)
+
+            all_text_tables = '\n\n'.join(all_text_tables)
+            values_text += all_text_tables
+    
+    
+    row = pd.DataFrame.from_dict([{
+        'var_title': var_title,
+        'short_sas_name': short_sas_name,
+        'long_sas_name': long_sas_name,
+        'in_files': in_files,
+        'main_text': main_text,
+        'derivation': derivation,
+        'limitation': limitation,
+        'values_text': values_text,
+        }])
+    df = df.append(row)
+
+path = os.path.join('..', 'data', 'variable_info.pkl')
+df.to_pickle(path)
 
 ## Create Variable Definitions page
-
 all_text = []
 all_text.append('# Variable Definitions\n\n')
 source = '!!! note\n    '
