@@ -170,6 +170,7 @@ for f in files:
         derivation = soup.select('.field-name-field-derivation .even')
         derivation = [x.get_text() for x in derivation]
         derivation = '\n\n'.join(derivation)
+        derivation = re.sub(r'\n', '\n\t', derivation)
     except:
         derivation = ''
 
@@ -177,6 +178,7 @@ for f in files:
         limitation = soup.select('.field-name-field-limitation .even')
         limitation = [x.get_text() for x in limitation]
         limitation = '\n\n'.join(limitation)
+        limitation = re.sub(r'\n', '\n\t', limitation)
     except:
         limitation = ''
 
