@@ -141,6 +141,9 @@ df = pd.DataFrame()
 for f in files:
     with open(f, 'r') as text_file:
         html = text_file.read()
+    
+    resdac_url = re.search(r'/data/resdac/html/variables/(.+)\.html$', f)[1]
+    resdac_url = 'https://www.resdac.org/' + resdac_url
 
     soup = BeautifulSoup(html, 'html.parser')
     var_title = soup.find(id='page-title').get_text()
@@ -220,6 +223,7 @@ for f in files:
         'derivation': derivation,
         'limitation': limitation,
         'values_text': values_text,
+        'resdac_url': resdac_url,
         }])
     df = df.append(row)
 
