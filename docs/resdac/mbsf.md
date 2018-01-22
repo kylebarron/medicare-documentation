@@ -1,5 +1,8 @@
 # Beneficiary Summary File
 
+??? note "Source"
+    [https://www.resdac.org/cms-data/files/mbsf](https://www.resdac.org/cms-data/files/mbsf)
+
 ## Overview
 
 The Master Beneficiary Summary File includes several segments.

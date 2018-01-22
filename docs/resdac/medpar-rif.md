@@ -1,5 +1,8 @@
 # MedPAR RIF
 
+??? note "Source"
+    [https://www.resdac.org/cms-data/files/medpar-rif](https://www.resdac.org/cms-data/files/medpar-rif)
+
 ## Overview
 
 The MedPAR File contains inpatient hospital and skilled nursing facility (SNF) final action stay records. Each MedPAR record represents a stay in an inpatient hospital or SNF. Each MedPAR record may represent one claim or multiple claims, depending on the length of a beneficiary's stay and the amount of services used throughout the stay.

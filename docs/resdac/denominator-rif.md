@@ -1,5 +1,8 @@
 # Denominator RIF
 
+??? note "Source"
+    [https://www.resdac.org/cms-data/files/denominator-rif](https://www.resdac.org/cms-data/files/denominator-rif)
+
 ## Overview
 
 The Denominator File contains demographic and enrollment information about each Medicare beneficiary during a calendar year. The information in the Denominator File is 'frozen' in March of the following calendar year. This file is not available after March of 2010. This file was incorporated into the Master Beneficiary Summary File, Beneficiary file segment.
