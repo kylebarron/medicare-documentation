@@ -111,13 +111,13 @@ In ResDAC's parlance, NBER holds "Research Identifiable Files," that is, files t
 
 #### ResDAC data dictionaries
 
-- [Inpatient](https://www.resdac.org/cms-data/files/ip-rif/data-documentation)
-- [Outpatient](https://www.resdac.org/cms-data/files/op-rif/data-documentation)
-- [Skilled Nursing Facility (SNF)](https://www.resdac.org/cms-data/files/snf-rif/data-documentation)
-- [Carrier](https://www.resdac.org/cms-data/files/carrier-rif/data-documentation)
-- [Durable Medical Equipment (DME)](https://www.resdac.org/cms-data/files/dme-rif/data-documentation)
-- [Home Health Agency (HHA)](https://www.resdac.org/cms-data/files/hha-rif/data-documentation)
-- [Hospice](https://www.resdac.org/cms-data/files/hospice-rif/data-documentation)
+- [Inpatient](../resdac/ip-rif.md)
+- [Outpatient](../resdac/op-rif.md)
+- [Skilled Nursing Facility (SNF)](../resdac/snf-rif.md)
+- [Carrier](../resdac/carrier-rif.md)
+- [Durable Medical Equipment (DME)](../resdac/dme-rif.md)
+- [Home Health Agency (HHA)](../resdac/hha-rif.md)
+- [Hospice](../resdac/hospice-rif.md)
 
 ## MedPAR construction notes from ResDAC
 
