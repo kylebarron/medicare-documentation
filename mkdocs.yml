@@ -46,11 +46,6 @@ pages:
     - Important Details:
         - Enrollment Restrictions: 'mauricio/enrollment-restrictions.md'
         - Calculating Costs for Inpatient Visits: 'mauricio/lag-post-event-spending.md'
-    - Codebooks:
-        - Beneficiary Files: 'codebooks/demo_bene.md'
-        - MedPAR Files: 'codebooks/medpar.md'
-        - Outpatient Files: 'codebooks/op.md'
-        - Jean Roth's Codebook Files: 'emails/jean_roth_harm_code.md'
     - Glossary: 'glossary.md'
 
 # Theme
