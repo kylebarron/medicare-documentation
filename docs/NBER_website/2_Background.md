@@ -1,5 +1,8 @@
 # Description of the Claims Files
 
+!!! note
+    This documentation is ported from NBER documentation [here](https://www.nber.org/medicare/public/Public-2.html), written by Maurice Dalton.
+
 ## Overview
 
 Medicare is a program in the United States that provides health insurance to individuals with disabilities, end-stage renal disease and for the majority of individuals aged 65 and over. The services which Medicare purchases are covered by three basic parts:

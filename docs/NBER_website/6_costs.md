@@ -1,5 +1,8 @@
 # Generating costs measures from the claims files
 
+!!! note
+    This documentation is ported from NBER documentation [here](https://www.nber.org/medicare/public/Public-6.html), written by Maurice Dalton.
+
 ## Overview
 
 Once the initial cohort is extracted, the claims files have been harmonized but are left in a fairly raw form. The next step involves aggregating the raw data into some measures which can be used in the analysis. This section reviews how to use the extracted claims to generate cost of care metrics. There are many important issues which need to be considered before adopting a specific cost measure. For one, provider costs are not reported in the claims data, what are reported are the amount charged and the total amount a provider receives for any given procedure/treatment. Although somewhat imprecise, the amount Medicare reimburses a provider is some time referred to as costs because it is thought to be a fairly good proxy for the actual costs a provider incurs.

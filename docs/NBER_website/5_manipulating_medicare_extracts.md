@@ -1,5 +1,8 @@
 # Manipulating the Medicare extracts in SAS
 
+!!! note
+    This documentation is ported from NBER documentation [here](https://www.nber.org/medicare/public/Public-5.html), written by Maurice Dalton.
+
 ## Overview
 
 Once the claims associated with the index events have been extracted for a given window, there is still some processing of the data which needs to occur before it is ready for analysis. The following sections describes SAS programs which

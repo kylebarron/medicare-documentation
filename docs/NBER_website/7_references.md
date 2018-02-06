@@ -1,5 +1,8 @@
 # References
 
+!!! note
+    This documentation is ported from NBER documentation [here](https://www.nber.org/medicare/public/Public-7.html), written by Maurice Dalton.
+
 
 Arday SL, Arday DR, Monroe S, Zhang J. HCFA’s racial and ethnic data: current accuracy and recent improvements. Health Care Finance Rev
 

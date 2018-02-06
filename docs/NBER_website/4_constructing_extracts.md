@@ -1,5 +1,8 @@
 # Constructing the Extracts in SAS
 
+!!! note
+    This documentation is ported from NBER documentation [here](https://www.nber.org/medicare/public/Public-4.html), written by Maurice Dalton.
+
 ## Overview
 
 The goal of the project is to create a series of SAS programs which extract a Medicare cohort which are scalable to the 100 percent Medicare claims files. The initial cohorts are extracted from the files in SAS. Next a series of SAS programs process the original extracts until information has been sufficiently aggregated to the index level, resulting in substantially reduced file sizes. Finally the data is transferred to Stata using Stat/Transfer. Note that SAS is the recommended program for extracting the cohorts and manipulating the data. Using SAS has the benefit of allowing your code to be easily extensible to a larger extract because SAS does not have the same memory constraints as Stata.

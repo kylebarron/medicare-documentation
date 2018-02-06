@@ -1,5 +1,8 @@
 # Getting started with the SAS extraction programs
 
+!!! note
+    This documentation is ported from NBER documentation [here](https://www.nber.org/medicare/public/Public-3.html), written by Maurice Dalton.
+
 ## Overview
 
 The goal of this project is to create a centralized repository of Medicare extraction programs. Centralizing the code makes it easier for bugs to be found and fixed. It also has the added impact of flattening the learning curve for new researchers to the Medicare claim files by leveraging the work done by researchers who have come before them. Many of the programs are nearly ready to be run "out of the box". The following section briefly describes an overview of the SAS code, outlines important restrictions which the program places on the extracts and details the process of setting up the programs to run in SAS.
@@ -140,15 +143,15 @@ The next step is to go through and define all of the parameters which are passed
     2. Parameters `FFSmonthpost` and `FFSmonthpre`: The individual is continuously enrolled in Parts A and B of traditional Medicare (rather than a Medicare private plan) during the twelve months before AMI and until twelve months after AMI, or until death. (months can be changed by the variables `FFSmonthpost`/`FFSmonthpre`)
     3. Parameters `HMOmonthpost` and `HMOmonthpre`: The individual is continuously not in HMO during the twelve months before AMI and until twelve months after AMI, or until death. (months can be changed by the variables `HMOmonthpost`/`HMOmonthpre`)
     4. The individual is at least 66 years of age at the time of the AMI
-        
+
         !!!note
             This is hard coded and would need to be changed in the 1B program.
-    
+
     5. No bad date of death or birthday
 
         !!!note
             This is hard coded and would need to be changed in the 1B program.
-    
+
 3. Pull claims around the index event dates, using the index date (first treatment date for disease/procedure of interest) which have been harmonized
 4. Run secondary programs to define comorbidities and cost statistics
     1. Raw cost statistics: `DAY1` - `DAY7` variable denote the `X` day cost you want to be calculated. For example setting `DAY1=30`, `DAY2=90` and `DAY3=365` would create 30-day, 90-day, and 365-day costs where the day references the number of days occurring after the index event date.

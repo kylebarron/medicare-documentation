@@ -1,6 +1,9 @@
 Lag and Post Event Spending
 ===========================
 
+!!! note
+    This document was originally written by [Mauricio Cáceres](https://mcaceresb.github.io/).
+
 Lagged and post utilization $l$-days before and since day $t$ is
 complicated because of overlaps in time periods. Consider
 

@@ -1,6 +1,9 @@
 Enrollment Restrictions
 =======================
 
+!!! note
+    This document was originally written by [Mauricio Cáceres](https://mcaceresb.github.io/).
+
 The denominator file is so named because it can give you, for a given
 point in time, the denominator for your query. That is, it can tell you
 all the patients that could plausibly be included in your query (at least
@@ -27,24 +30,24 @@ For example, `hmoind2008m8` or `buyin1999m12`. These variables take on
 the values:
 
 | HMO Value | Description                                                          |
-| ----- | -------------------------------------------------------------------- |
-| 0 | Not a member of HMO                                                  |
-| 1 | Non lock-in, HCFA to process provider claims                         |
-| 2 | Non lock-in, GHO to process in-plan Part A and in-area Part B claims |
-| 4 | FFS for disease management demonstration project (2005 forward)      |
-| A | Lock-in, HCFA to process provider claims                             |
-| B | Lock-in, GHO to process in Plan part A and in-area Part B claims     |
-| C | Lock-in, GHO to process all provider claims                          |
+|:----------|:---------------------------------------------------------------------|
+| 0         | Not a member of HMO                                                  |
+| 1         | Non lock-in, HCFA to process provider claims                         |
+| 2         | Non lock-in, GHO to process in-plan Part A and in-area Part B claims |
+| 4         | FFS for disease management demonstration project (2005 forward)      |
+| A         | Lock-in, HCFA to process provider claims                             |
+| B         | Lock-in, GHO to process in Plan part A and in-area Part B claims     |
+| C         | Lock-in, GHO to process all provider claims                          |
 
-| Buy-in Value | Description |
-| ----- | - |
-| 0 | Not entitled                            |
-| 1 | Part A only                             |
-| 2 | Part B only                             |
-| 3 | Part A and Part B                       |
-| A | Part A, state buy-in                    |
-| B | Part B, state buy-in                    |
-| C | Part A and Part B, state buy-in         |
+| Buy-in Value | Description                     |
+|:-------------|:--------------------------------|
+| 0            | Not entitled                    |
+| 1            | Part A only                     |
+| 2            | Part B only                     |
+| 3            | Part A and Part B               |
+| A            | Part A, state buy-in            |
+| B            | Part B, state buy-in            |
+| C            | Part A and Part B, state buy-in |
 
 Typically, we are looking for _continuously enrolled_ patients. That is,
 patients who were enrolled every month pre/post a particular event for a
