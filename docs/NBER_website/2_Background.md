@@ -164,6 +164,17 @@ The two major coding systems found in the Medicare claims files are the HCPCS an
 
 ICD-9-CM codes and coding behavior are constantly evolving to keep track with advances in medicine. Changes in coding behavior create potential issues with constructing a longitudinal cohort. Caution should be taken to ensure that all the codes of interest are used to create cohorts and any changes in coding behavior understood. The official coding guidelines are determined by the Central Office on ICD-9-CM after being approved by the ICD-9-CM Coordination-Maintenance Committee at NCHS, CMS, American Health Information Management Association and American Hospital Association. The official coding guidelines are published in the AHA Coding Clinic for ICD-9-CM, a quarterly publication ([Iezzoni, 2003,pg 96](7_references.md)).
 
+Datasets with ICD-9-CM diagnosis and procedure codes can be downloaded from CMS at the links in the following table:
+
+| ICD Version | Year      | Link                                                                   |
+|:------------|:----------|:-----------------------------------------------------------------------|
+| ICD-9-CM    | 2005-2014 | [link](https://www.cms.gov/Medicare/Coding/ICD9ProviderDiagnosticCodes/codes.html) |
+| ICD-10-CM   | 2014      | [link](https://www.cms.gov/Medicare/Coding/ICD10/2014-ICD-10-CM-and-GEMs.html) |
+| ICD-10-CM   | 2015      | [link](https://www.cms.gov/Medicare/Coding/ICD10/2015-ICD-10-CM-and-GEMs.html) |
+| ICD-10-CM   | 2016      | [link](https://www.cms.gov/Medicare/Coding/ICD10/2016-ICD-10-CM-and-GEMs.html) |
+| ICD-10-CM   | 2017      | [link](https://www.cms.gov/Medicare/Coding/ICD10/2017-ICD-10-CM-and-GEMs.html) |
+| ICD-10-CM   | 2018      | [link](https://www.cms.gov/Medicare/Coding/ICD10/2018-ICD-10-CM-and-GEMs.html) |
+
 From the late 1990s through the present, ICD-9-CM code books are available from the National Center for Health Statistics (NCHS) [here](http://www.cdc.gov/nchs/icd9.htm).
 
 When written formally, ICD-9-CM diagnosis codes have the format `XXX.XX` and ICD-9-CM procedure codes have the format `XX.XX`, where the `X`s represent digits 0-9. The codes are often referred to in the literature by listing all codes explicitly or by referring to an entire hierarchy by allowing an `X` to signify any digit. For example, `410.X1` refers to `410.71` but not `410.72`.
@@ -189,9 +200,14 @@ CMS' Health care Common Procedure Coding System (HCPCS) combines two sets of cod
 
 [^7]: Level II codes (or National Codes) are alphanumeric codes in the A0000–V9999 code range that the CMS created to classify services or supplies not found in CPT. Before 1983, there was no uniform way for health care providers to code materials and supplies for reimbursement. Although the majority of codes needed to report services or procedures- are in the CPT coding system, CPT does not include codes for most materials or supplies; thus, many codes for materials and supplies can be found in CMS's HCPCS Level II coding system
 
+!!! note
+    Datasets with HCPCS codes and short descriptions from 2003 to the present are freely available on the CMS website in their [Relative Value Files](https://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/PhysicianFeeSched/PFS-Relative-Value-Files.html). In the `RVU15A.zip` file, for example, the `PPRRVU15_V1223c.csv`, `PPRRVU15_V1223c.txt`, and `PPRRVU15_V1223c.xlsx` files contain an `HCPCS` variable with the code and a `DESCRIPTION` variable with the short description. These CMS files are released under the [End User Point and Click Agreement](https://www.cms.gov/apps/aha/license.asp?file=/Medicare/Medicare-). [^8]
+
+[^8]: [https://github.com/jackwasey/icd/issues/81#issuecomment-217017528](https://github.com/jackwasey/icd/issues/81#issuecomment-217017528)
+
 Most procedures of interest are covered by core CPT codes, rather than the "Level II" codes. Note that a researcher looking to study a procedure using a set of CPT, CPT-II or HCPCS codes can find the codes in the data under the HCPCS variable since HCPCS codes include the CPT, CPT-II and additional CMS codes.
 
-Unfortunately, because the American Medical Association (AMA) retains copyright over the CPT portion of the HCPCS, there are no comprehensive electronic HCPCS references. [^11] Similar manuals also exist for the Level II HCPCS codes, although NBER currently has no plans to acquire them. In recent years, detailed descriptions of the Level II codes are available for download from CMS [here](http://www.cms.hhs.gov/HCPCSReleaseCodeSets/ANHCPCS/list.asp).
+Unfortunately, because the American Medical Association (AMA) retains copyright over the CPT portion of the HCPCS, there are essentially no comprehensive electronic HCPCS references. [^11] However CMS freely distributes CPT short descriptions along with their [Relative Value Files](https://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/PhysicianFeeSched/PFS-Relative-Value-Files.html), with an [End User Point and Click Agreement](https://www.cms.gov/apps/aha/license.asp?file=/Medicare/Medicare-) stating that the documents are for organizations' internal use and not for commercial use. Similar manuals also exist for the Level II HCPCS codes, although NBER currently has no plans to acquire them. In recent years, detailed descriptions of the Level II codes are available for download from CMS [here](http://www.cms.hhs.gov/HCPCSReleaseCodeSets/ANHCPCS/list.asp).
 
 [^11]: These manuals are also available in "snippet view" on Google Books.
 
