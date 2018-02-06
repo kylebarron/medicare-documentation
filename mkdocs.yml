@@ -2,6 +2,7 @@
 site_name: Medicare Documentation
 site_description: 'Extra Medicare Documentation'
 site_author: 'Kyle Barron'
+site_url: 'https://kylebarron.github.io/medicare-documentation/'
 
 docs_dir: 'docs'
 site_dir: 'site'
@@ -9,6 +10,7 @@ site_dir: 'site'
 # Repository
 repo_name: 'medicare-documentation'
 repo_url: 'https://github.com/kylebarron/medicare-documentation'
+edit_uri: 'blob/master/docs/'
 
 # Layout
 pages:
