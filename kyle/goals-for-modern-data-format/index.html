@@ -1,0 +1,1497 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Extra Medicare Documentation">
+      
+      
+        <link rel="canonical" href="https://kylebarron.github.io/medicare-documentation/kyle/goals-for-modern-data-format/">
+      
+      
+        <meta name="author" content="Kyle Barron">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.2, mkdocs-material-2.2.6">
+    
+    
+      
+        <title>Goals for New Data Format - Medicare Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.6525f7f6.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.792431c1.css">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,400i,700|Fira+Code">
+        <style>body,input{font-family:"Nunito Sans","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Fira Code","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+    
+    
+    
+      <body data-md-color-primary="orange" data-md-color-accent="light-blue">
+    
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://kylebarron.github.io/medicare-documentation/" title="Medicare Documentation" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">local_library</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Medicare Documentation
+              </span>
+              <span class="md-header-nav__topic">
+                Goals for New Data Format
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">&#xE5CD;</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/kylebarron/medicare-documentation/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      medicare-documentation
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../.." title="Home" class="md-tabs__link">
+        Home
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../NBER_website/1_Overview/" title="NBER Documentation" class="md-tabs__link">
+          NBER Documentation
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../resdac/mbsf/" title="ResDAC Documentation" class="md-tabs__link">
+          ResDAC Documentation
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="./" title="Working with the Data" class="md-tabs__link md-tabs__link--active">
+          Working with the Data
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../mauricio/enrollment-restrictions/" title="Important Details" class="md-tabs__link">
+          Important Details
+        </a>
+      
+    </li>
+  
+
+      
+        
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <i class="md-icon">local_library</i>
+      
+    </span>
+    Medicare Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/kylebarron/medicare-documentation/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      medicare-documentation
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      NBER Documentation
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        NBER Documentation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../NBER_website/1_Overview/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../NBER_website/2_Background/" title="Description of Claims Files" class="md-nav__link">
+      Description of Claims Files
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../NBER_website/3_Getting_started_with_SAS/" title="Getting Started with SAS" class="md-nav__link">
+      Getting Started with SAS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../NBER_website/4_constructing_extracts/" title="Constructing Extracts with SAS" class="md-nav__link">
+      Constructing Extracts with SAS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../NBER_website/5_manipulating_medicare_extracts/" title="Manipulating Extracts with SAS" class="md-nav__link">
+      Manipulating Extracts with SAS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../NBER_website/6_costs/" title="Generating Costs Measures" class="md-nav__link">
+      Generating Costs Measures
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../NBER_website/7_references/" title="References" class="md-nav__link">
+      References
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../NBER_website/8_appendix/" title="Appendix" class="md-nav__link">
+      Appendix
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-9" type="checkbox" id="nav-2-9">
+    
+    <label class="md-nav__link" for="nav-2-9">
+      Variable Names Crosswalk
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-9">
+        Variable Names Crosswalk
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../NBER_website/opxw/" title="Outpatient" class="md-nav__link">
+      Outpatient
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      ResDAC Documentation
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        ResDAC Documentation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../resdac/mbsf/" title="Beneficiary Summary File" class="md-nav__link">
+      Beneficiary Summary File
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../resdac/carrier-rif/" title="Carrier RIF" class="md-nav__link">
+      Carrier RIF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../resdac/denominator-rif/" title="Denominator RIF" class="md-nav__link">
+      Denominator RIF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../resdac/dme-rif/" title="Durable Medical Equipment RIF" class="md-nav__link">
+      Durable Medical Equipment RIF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../resdac/hha-rif/" title="Home Health Agency RIF" class="md-nav__link">
+      Home Health Agency RIF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../resdac/hospice-rif/" title="Hospice RIF" class="md-nav__link">
+      Hospice RIF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../resdac/ip-rif/" title="Inpatient RIF" class="md-nav__link">
+      Inpatient RIF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../resdac/medpar-rif/" title="MedPAR RIF" class="md-nav__link">
+      MedPAR RIF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../resdac/op-rif/" title="Outpatient RIF" class="md-nav__link">
+      Outpatient RIF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../resdac/snf-rif/" title="Skilled Nursing Facility RIF" class="md-nav__link">
+      Skilled Nursing Facility RIF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../resdac/variables/" title="Variable Definitions" class="md-nav__link">
+      Variable Definitions
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      Working with the Data
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Working with the Data
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Goals for New Data Format
+      </label>
+    
+    <a href="./" title="Goals for New Data Format" class="md-nav__link md-nav__link--active">
+      Goals for New Data Format
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#file-format" title="File Format" class="md-nav__link">
+    File Format
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stata-dta" title="Stata (.dta)" class="md-nav__link">
+    Stata (.dta)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csv-csv" title="CSV (.csv)" class="md-nav__link">
+    CSV (.csv)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-json" title="JSON (.json)" class="md-nav__link">
+    JSON (.json)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feather-format-feather" title="Feather format (.feather)" class="md-nav__link">
+    Feather format (.feather)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parquet-format-parquet" title="Parquet format (.parquet)" class="md-nav__link">
+    Parquet format (.parquet)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pickle-pkl" title="Pickle (.pkl)" class="md-nav__link">
+    Pickle (.pkl)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hdf5-hdf" title="HDF5 (.hdf)" class="md-nav__link">
+    HDF5 (.hdf)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql" title="SQL" class="md-nav__link">
+    SQL
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-decisions" title="Data Decisions" class="md-nav__link">
+    Data Decisions
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#categorical-variables" title="Categorical Variables" class="md-nav__link">
+    Categorical Variables
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-python-io-benchmark" title="Full Python I/O Benchmark" class="md-nav__link">
+    Full Python I/O Benchmark
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../01medicare_readme/" title="Standard Readme" class="md-nav__link">
+      Standard Readme
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../extract_data/" title="Data Extraction Overview" class="md-nav__link">
+      Data Extraction Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../data_locations/" title="Data Locations" class="md-nav__link">
+      Data Locations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python_extract/" title="Python Extraction" class="md-nav__link">
+      Python Extraction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../using-tmux-aging-servers/" title="Using tmux for long-running jobs" class="md-nav__link">
+      Using tmux for long-running jobs
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Important Details
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Important Details
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mauricio/enrollment-restrictions/" title="Enrollment Restrictions" class="md-nav__link">
+      Enrollment Restrictions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mauricio/lag-post-event-spending/" title="Calculating Costs for Inpatient Visits" class="md-nav__link">
+      Calculating Costs for Inpatient Visits
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../glossary/" title="Glossary" class="md-nav__link">
+      Glossary
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#file-format" title="File Format" class="md-nav__link">
+    File Format
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stata-dta" title="Stata (.dta)" class="md-nav__link">
+    Stata (.dta)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csv-csv" title="CSV (.csv)" class="md-nav__link">
+    CSV (.csv)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-json" title="JSON (.json)" class="md-nav__link">
+    JSON (.json)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feather-format-feather" title="Feather format (.feather)" class="md-nav__link">
+    Feather format (.feather)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parquet-format-parquet" title="Parquet format (.parquet)" class="md-nav__link">
+    Parquet format (.parquet)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pickle-pkl" title="Pickle (.pkl)" class="md-nav__link">
+    Pickle (.pkl)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hdf5-hdf" title="HDF5 (.hdf)" class="md-nav__link">
+    HDF5 (.hdf)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql" title="SQL" class="md-nav__link">
+    SQL
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-decisions" title="Data Decisions" class="md-nav__link">
+    Data Decisions
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#categorical-variables" title="Categorical Variables" class="md-nav__link">
+    Categorical Variables
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-python-io-benchmark" title="Full Python I/O Benchmark" class="md-nav__link">
+    Full Python I/O Benchmark
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/kylebarron/medicare-documentation/blob/master/docs/kyle/goals-for-modern-data-format.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="goals-for-modern-data-format-for-medicare-data">Goals for Modern Data Format for Medicare data<a class="headerlink" href="#goals-for-modern-data-format-for-medicare-data" title="Permanent link">&para;</a></h1>
+<h2 id="file-format">File Format<a class="headerlink" href="#file-format" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Must be fast</li>
+<li>Must be able to read a subset of columns fast</li>
+<li>Should be divisible into row chunks, so that you can import only a slice of the file (by rows) when file is too large for all rows -- even of a subset of columns -- to be loaded into memory.</li>
+</ul>
+<p>I'll try to look through all the data formats that Pandas can read and write from. <a href="https://pandas.pydata.org/pandas-docs/stable/">Pandas documentation</a> contains a benchmarking <a href="https://pandas.pydata.org/pandas-docs/stable/io.html#io-perf">script</a> that I modified and ran on the NBER servers (on <code>/agebulk1</code>). My modified script used generated data as well as real Medicare data. The Medicare data it used was the first 10% of the rows of the 2011 1% outpatient claims dataset. I.e. <code>/disk/aging/medicare/data/01pct/op/2011/opc2011.dta</code>. The entire script is shown at the <a href="#full-python-io-benchmark">bottom</a> of this page.</p>
+<h3 id="stata-dta">Stata (<code>.dta</code>)<a class="headerlink" href="#stata-dta" title="Permanent link">&para;</a></h3>
+<p>Decently fast for Stata to read by column but very slow to read by row for big files, since the Stata reader must scan the entire file before importing the first row.</p>
+<p>Python can also read Stata files, but it's not the fastest file format to read. The following python code reads the first 10% of the rows of the 2011 1% outpatient claims dataset. This is the data sample that the rest of the benchmarks use.</p>
+<div class="codehilite"><pre><span></span><span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;/disk/aging/medicare/data/01pct/op/2011/opc2011.dta&#39;</span>
+<span class="n">itr</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_stata</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">iterator</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+<span class="o">%</span><span class="k">time</span> df = itr.get_chunk(int(itr.nobs / 10))
+<span class="c1"># CPU times: user 17 s, sys: 7.5 s, total: 24.5 s</span>
+<span class="c1"># Wall time: 27 s</span>
+</pre></div>
+
+
+<h3 id="csv-csv">CSV (<code>.csv</code>)<a class="headerlink" href="#csv-csv" title="Permanent link">&para;</a></h3>
+<p>Stored as text; Doesn't hold metadata about columns, therefore rather costly CPU-wise to import the data (though still better than reading <code>.dta</code> files). Python can read in a subset of the columns of a <code>.csv</code> and can loop over rows without reading in all rows at a time.</p>
+<div class="codehilite"><pre><span></span><span class="o">%</span><span class="k">timeit</span> test_csv_read()
+<span class="c1"># 2.54 s ± 50.6 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</span>
+</pre></div>
+
+
+<h3 id="json-json">JSON (<code>.json</code>)<a class="headerlink" href="#json-json" title="Permanent link">&para;</a></h3>
+<p>Also stored as text; meant for hierarchical data. Overkill for a rectangular data frame.</p>
+<h3 id="feather-format-feather">Feather format (<code>.feather</code>)<a class="headerlink" href="#feather-format-feather" title="Permanent link">&para;</a></h3>
+<p>Very fast file format to read and write. It's possible to import a subset of columns, but <strong>not</strong> a subset of rows. You must read in all rows of a column at once. It's possible to read <code>.feather</code> files from R, Python, and Julia.</p>
+<div class="codehilite"><pre><span></span><span class="o">%</span><span class="k">timeit</span> test_feather_read()
+<span class="c1"># 583 ms ± 10.1 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</span>
+</pre></div>
+
+
+<h3 id="parquet-format-parquet">Parquet format (<code>.parquet</code>)<a class="headerlink" href="#parquet-format-parquet" title="Permanent link">&para;</a></h3>
+<p>Parquet is similar to the feather format with a few differences. It's a columnar format, like Feather, which means that the data in a matrix/DataFrame is stored in each column, not in each row. That means that a column's data must be kept together. Importantly, however, Parquet files can be split into <em>row groups</em>. That means that you can write a certain number of rows in each column at a time. Say the size of your row group is 1,000,000 rows. Then you write the first 1,000,000 rows of all columns, then the next 1,000,000, and so on. This makes it fast to read 1,000,000 at a time of whatever subset (or all) of the columns you want. But you can't read the first 10 rows or the first 100; it must be the size of the row group.</p>
+<div class="codehilite"><pre><span></span><span class="o">%</span><span class="k">timeit</span> test_parquet_read_compress()
+<span class="c1"># 1.48 s ± 20.2 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</span>
+
+<span class="o">%</span><span class="k">timeit</span> test_parquet_read()
+<span class="c1"># 1.47 s ± 22.2 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span>ls -lh
+-rw-r--r-- <span class="m">1</span> barronk dua18266  12M Jan  <span class="m">9</span> <span class="m">16</span>:31 test_compress.parquet
+-rw-r--r-- <span class="m">1</span> barronk dua18266  17M Jan  <span class="m">9</span> <span class="m">16</span>:32 test.parquet
+-rw-rw-r-- <span class="m">1</span> barronk dua18266  63M Jan  <span class="m">9</span> <span class="m">16</span>:27 test.csv
+</pre></div>
+
+
+<h3 id="pickle-pkl">Pickle (<code>.pkl</code>)<a class="headerlink" href="#pickle-pkl" title="Permanent link">&para;</a></h3>
+<p>Pickle is a Python specific format. To my knowledge, it saves objects in disk the same way they're stored in memory by Python. This makes it very fast. However you must read in the entire object; it's impossible to choose a subset of rows or columns.</p>
+<div class="codehilite"><pre><span></span><span class="o">%</span><span class="k">timeit</span> test_pickle_read()
+<span class="c1"># 1.25 s ± 47.2 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</span>
+
+<span class="o">%</span><span class="k">timeit</span> test_pickle_read_compress()
+<span class="c1"># 2.58 s ± 669 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</span>
+</pre></div>
+
+
+<h3 id="hdf5-hdf">HDF5 (<code>.hdf</code>)<a class="headerlink" href="#hdf5-hdf" title="Permanent link">&para;</a></h3>
+<p>HDF5 is a high performance format that could work for this use case, but I don't really understand it well. From the Pandas API documentation, it's possible to read in HDF5 files by columns as well as by rows.</p>
+<div class="codehilite"><pre><span></span><span class="o">%</span><span class="k">timeit</span> test_hdf_fixed_read()
+<span class="c1"># 11.2 s ± 1.51 s per loop (mean ± std. dev. of 7 runs, 1 loop each)</span>
+
+<span class="o">%</span><span class="k">timeit</span> test_hdf_fixed_read_compress()
+<span class="c1"># 11.1 s ± 1.83 s per loop (mean ± std. dev. of 7 runs, 1 loop each)</span>
+
+<span class="o">%</span><span class="k">timeit</span> test_hdf_table_read()
+<span class="c1"># 24.4 s ± 7.19 s per loop (mean ± std. dev. of 7 runs, 1 loop each)</span>
+
+<span class="o">%</span><span class="k">timeit</span> test_hdf_table_read_compress()
+<span class="c1"># 25.1 s ± 7.81 s per loop (mean ± std. dev. of 7 runs, 1 loop each)</span>
+</pre></div>
+
+
+<h3 id="sql">SQL<a class="headerlink" href="#sql" title="Permanent link">&para;</a></h3>
+<p>I've talked to Mohan and Dan and they've said that SQL isn't optimal for this kind of data processing, since we're often extracting most values of a column, rather than finding one specific row, which is helped by the index.</p>
+<div class="codehilite"><pre><span></span><span class="o">%</span><span class="k">timeit</span> test_sql_read()
+<span class="c1"># 12.8 s ± 1.86 s per loop (mean ± std. dev. of 7 runs, 1 loop each)</span>
+</pre></div>
+
+
+<h2 id="data-decisions">Data Decisions<a class="headerlink" href="#data-decisions" title="Permanent link">&para;</a></h2>
+<h3 id="categorical-variables">Categorical Variables<a class="headerlink" href="#categorical-variables" title="Permanent link">&para;</a></h3>
+<p>How should categorical variables be coded?</p>
+<ul>
+<li>Leave them as strings. Currently they're usually stored as strings, because any digit with a leading zero upon import isn't considered an integer. Then you have to reference them as strings and you have to look up the lookup table in ResDAC every time you want to do something with them.</li>
+<li>
+<p>Convert them to categoricals. Could improve memory usage and performance by being able to represent these columns as integers, rather than strings.</p>
+<p>However then you wouldn't be able to reference categoricals by the numbers listed in ResDAC.</p>
+<p>Consider <a href="https://www.resdac.org/cms-data/variables/nch-claim-type-code"><code>clm_type</code></a>. The codes are small values like <code>10</code> and <code>20</code>, while the code values are <code>HHA claim</code> and <code>Non swing bed SNF claim</code>. The codes are much easier to type, and existing code could be more easily adapted to use these datasets. Having to refer to <code>clm_type</code> with
+<code>df['clm_type'] == 'Non swing bed SNF claim'</code>
+instead of with
+<code>df['clm_type'] == 20</code>
+would probably get annoying.</p>
+<p>I can't keep the integer representation of the categorical the number that ResDAC uses because Python requires that there be no spaces among integers. I.e. if Male is represented with <code>1</code>, Female would have to be represented with <code>2</code>, it couldn't be represented with <code>3</code>, because there would be a gap there. Many columns have gaps, and so Python would have to re-index those keys.
+- Convert columns to categoricals but leave the current string values in the data as the keys. Then you'd still refer to the data with ResDAC's code, but there would be enhanced performance by virtue of using integers instead of strings.</p>
+</li>
+</ul>
+<h2 id="full-python-io-benchmark">Full Python I/O Benchmark<a class="headerlink" href="#full-python-io-benchmark" title="Permanent link">&para;</a></h2>
+<p>First using generated data, then using real Medicare data. All computations are taking place on the Aging servers.</p>
+<p>(Done in the ipython kernel.)</p>
+<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">sqlite3</span>
+<span class="kn">from</span> <span class="nn">numpy.random</span> <span class="kn">import</span> <span class="n">randn</span>
+<span class="kn">from</span> <span class="nn">pandas.io</span> <span class="kn">import</span> <span class="n">sql</span>
+<span class="kn">import</span> <span class="nn">pyarrow</span> <span class="kn">as</span> <span class="nn">pa</span>
+<span class="kn">import</span> <span class="nn">pyarrow.parquet</span> <span class="kn">as</span> <span class="nn">pq</span>
+
+<span class="n">cd</span> <span class="o">~/</span><span class="n">agebulk1</span><span class="o">/</span><span class="n">pytest</span>
+
+<span class="n">real_data</span> <span class="o">=</span> <span class="bp">True</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">real_data</span><span class="p">:</span>
+    <span class="n">sz</span> <span class="o">=</span> <span class="mi">10000000</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;A&#39;</span><span class="p">:</span> <span class="n">randn</span><span class="p">(</span><span class="n">sz</span><span class="p">),</span> <span class="s1">&#39;B&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">sz</span><span class="p">})</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;/disk/aging/medicare/data/01pct/op/2011/opc2011.dta&#39;</span>
+    <span class="n">itr</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_stata</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">iterator</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+    <span class="o">%</span><span class="k">time</span> df = itr.get_chunk(int(itr.nobs / 10))
+
+<span class="n">memuse</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">memory_usage</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">/</span> <span class="mi">1024</span> <span class="o">**</span> <span class="mi">2</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;Data in memory is {:.0f} MB&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">memuse</span><span class="p">))</span>
+<span class="c1"># Data in memory is 153 MB / 242 MB</span>
+
+<span class="k">if</span> <span class="n">real_data</span><span class="p">:</span>
+    <span class="n">cd</span> <span class="n">medicare</span>
+
+<span class="k">def</span> <span class="nf">test_sql_write</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s1">&#39;test.sql&#39;</span><span class="p">):</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;test.sql&#39;</span><span class="p">)</span>
+    <span class="n">sql_db</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;test.sql&#39;</span><span class="p">)</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">to_sql</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;test_table&#39;</span><span class="p">,</span> <span class="n">con</span><span class="o">=</span><span class="n">sql_db</span><span class="p">)</span>
+    <span class="n">sql_db</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">test_sql_read</span><span class="p">():</span>
+    <span class="n">sql_db</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;test.sql&#39;</span><span class="p">)</span>
+    <span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span><span class="s2">&quot;select * from test_table&quot;</span><span class="p">,</span> <span class="n">sql_db</span><span class="p">)</span>
+    <span class="n">sql_db</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">test_hdf_fixed_write</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">to_hdf</span><span class="p">(</span><span class="s1">&#39;test_fixed.hdf&#39;</span><span class="p">,</span><span class="s1">&#39;test&#39;</span><span class="p">,</span><span class="n">mode</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">test_hdf_fixed_read</span><span class="p">():</span>
+    <span class="n">pd</span><span class="o">.</span><span class="n">read_hdf</span><span class="p">(</span><span class="s1">&#39;test_fixed.hdf&#39;</span><span class="p">,</span><span class="s1">&#39;test&#39;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">test_hdf_fixed_write_compress</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">to_hdf</span><span class="p">(</span><span class="s1">&#39;test_fixed_compress.hdf&#39;</span><span class="p">,</span><span class="s1">&#39;test&#39;</span><span class="p">,</span><span class="n">mode</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">,</span><span class="n">complib</span><span class="o">=</span><span class="s1">&#39;blosc&#39;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">test_hdf_fixed_read_compress</span><span class="p">():</span>
+    <span class="n">pd</span><span class="o">.</span><span class="n">read_hdf</span><span class="p">(</span><span class="s1">&#39;test_fixed_compress.hdf&#39;</span><span class="p">,</span><span class="s1">&#39;test&#39;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">test_hdf_table_write</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">to_hdf</span><span class="p">(</span><span class="s1">&#39;test_table.hdf&#39;</span><span class="p">,</span><span class="s1">&#39;test&#39;</span><span class="p">,</span><span class="n">mode</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">,</span><span class="n">format</span><span class="o">=</span><span class="s1">&#39;table&#39;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">test_hdf_table_read</span><span class="p">():</span>
+    <span class="n">pd</span><span class="o">.</span><span class="n">read_hdf</span><span class="p">(</span><span class="s1">&#39;test_table.hdf&#39;</span><span class="p">,</span><span class="s1">&#39;test&#39;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">test_hdf_table_write_compress</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">to_hdf</span><span class="p">(</span><span class="s1">&#39;test_table_compress.hdf&#39;</span><span class="p">,</span><span class="s1">&#39;test&#39;</span><span class="p">,</span><span class="n">mode</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">,</span><span class="n">complib</span><span class="o">=</span><span class="s1">&#39;blosc&#39;</span><span class="p">,</span><span class="n">format</span><span class="o">=</span><span class="s1">&#39;table&#39;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">test_hdf_table_read_compress</span><span class="p">():</span>
+    <span class="n">pd</span><span class="o">.</span><span class="n">read_hdf</span><span class="p">(</span><span class="s1">&#39;test_table_compress.hdf&#39;</span><span class="p">,</span><span class="s1">&#39;test&#39;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">test_csv_write</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;test.csv&#39;</span><span class="p">,</span><span class="n">mode</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">test_csv_read</span><span class="p">():</span>
+    <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;test.csv&#39;</span><span class="p">,</span><span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">test_feather_write</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">to_feather</span><span class="p">(</span><span class="s1">&#39;test.feather&#39;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">test_feather_read</span><span class="p">():</span>
+    <span class="n">pd</span><span class="o">.</span><span class="n">read_feather</span><span class="p">(</span><span class="s1">&#39;test.feather&#39;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">test_parquet_write</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+    <span class="n">table</span> <span class="o">=</span> <span class="n">pa</span><span class="o">.</span><span class="n">Table</span><span class="o">.</span><span class="n">from_pandas</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+    <span class="n">pq</span><span class="o">.</span><span class="n">write_table</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="s1">&#39;test.parquet&#39;</span><span class="p">,</span> <span class="n">compression</span> <span class="o">=</span> <span class="s1">&#39;none&#39;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">test_parquet_read</span><span class="p">():</span>
+    <span class="n">pq</span><span class="o">.</span><span class="n">read_table</span><span class="p">(</span><span class="s1">&#39;test.parquet&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">to_pandas</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">test_parquet_write_compress</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">to_parquet</span><span class="p">(</span><span class="s1">&#39;test_compress.parquet&#39;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">test_parquet_read_compress</span><span class="p">():</span>
+    <span class="n">pd</span><span class="o">.</span><span class="n">read_parquet</span><span class="p">(</span><span class="s1">&#39;test_compress.parquet&#39;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">test_stata_write</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">to_stata</span><span class="p">(</span><span class="s1">&#39;test.dta&#39;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">test_stata_read</span><span class="p">():</span>
+    <span class="n">pd</span><span class="o">.</span><span class="n">read_stata</span><span class="p">(</span><span class="s1">&#39;test.dta&#39;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">test_pickle_write</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">to_pickle</span><span class="p">(</span><span class="s1">&#39;test.pkl&#39;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">test_pickle_read</span><span class="p">():</span>
+    <span class="n">pd</span><span class="o">.</span><span class="n">read_pickle</span><span class="p">(</span><span class="s1">&#39;test.pkl&#39;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">test_pickle_write_compress</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">to_pickle</span><span class="p">(</span><span class="s1">&#39;test.pkl.compress&#39;</span><span class="p">,</span> <span class="n">compression</span><span class="o">=</span><span class="s1">&#39;xz&#39;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">test_pickle_read_compress</span><span class="p">():</span>
+    <span class="n">pd</span><span class="o">.</span><span class="n">read_pickle</span><span class="p">(</span><span class="s1">&#39;test.pkl.compress&#39;</span><span class="p">,</span> <span class="n">compression</span><span class="o">=</span><span class="s1">&#39;xz&#39;</span><span class="p">)</span>
+
+<span class="c1">#### Writes -- Fake Data</span>
+
+<span class="o">%</span><span class="k">timeit</span> test_sql_write(df)
+<span class="c1"># 22.1 s ± 1.68 s per loop (mean ± std. dev. of 7 runs, 1 loop each)</span>
+
+<span class="o">%</span><span class="k">timeit</span> test_hdf_fixed_write(df)
+<span class="c1"># 1.06 s ± 25.8 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</span>
+
+<span class="o">%</span><span class="k">timeit</span> test_hdf_fixed_write_compress(df)
+<span class="c1"># 1.05 s ± 7.8 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</span>
+
+<span class="o">%</span><span class="k">timeit</span> test_hdf_table_write(df)
+<span class="c1"># 5.47 s ± 52.7 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</span>
+
+<span class="o">%</span><span class="k">timeit</span> test_hdf_table_write_compress(df)
+<span class="c1"># 5.45 s ± 87.2 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</span>
+
+<span class="o">%</span><span class="k">timeit</span> test_csv_write(df)
+<span class="c1"># 28.6 s ± 2.53 s per loop (mean ± std. dev. of 7 runs, 1 loop each)</span>
+
+<span class="o">%</span><span class="k">timeit</span> test_feather_write(df)
+<span class="c1"># 715 ms ± 10.1 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</span>
+
+<span class="o">%</span><span class="k">timeit</span> test_pickle_write(df)
+<span class="c1"># 1.04 s ± 30 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</span>
+
+<span class="o">%</span><span class="k">timeit</span> test_pickle_write_compress(df)
+<span class="c1"># 42.3 s ± 1.34 s per loop (mean ± std. dev. of 7 runs, 1 loop each)</span>
+
+<span class="o">%</span><span class="k">timeit</span> test_parquet_write_compress(df)
+<span class="c1"># 1.14 s ± 7.01 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</span>
+
+<span class="o">%</span><span class="k">timeit</span> test_parquet_write(df)
+<span class="c1"># The slowest run took 5.13 times longer than the fastest. This could mean that an intermediate result is being cached.</span>
+<span class="c1"># 1.78 s ± 1.56 s per loop (mean ± std. dev. of 7 runs, 1 loop each)</span>
+
+<span class="o">%</span><span class="k">timeit</span> test_stata_write(df)
+<span class="c1"># 1.74 s ± 47.7 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</span>
+
+<span class="c1">#### Reads -- Fake Data</span>
+
+<span class="o">%</span><span class="k">timeit</span> test_parquet_read_compress()
+<span class="c1"># 493 ms ± 17.5 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</span>
+
+<span class="o">%</span><span class="k">timeit</span> test_parquet_read()
+<span class="c1"># 429 ms ± 11.3 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</span>
+
+<span class="o">%</span><span class="k">timeit</span> test_stata_read()
+<span class="c1"># 796 ms ± 26.3 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</span>
+
+<span class="o">%</span><span class="k">timeit</span> test_sql_read()
+<span class="c1"># 14.1 s ± 48 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</span>
+
+<span class="o">%</span><span class="k">timeit</span> test_hdf_fixed_read()
+<span class="c1"># 159 ms ± 1e+03 µs per loop (mean ± std. dev. of 7 runs, 10 loops each)</span>
+
+<span class="o">%</span><span class="k">timeit</span> test_hdf_fixed_read_compress()
+<span class="c1"># 159 ms ± 6.04 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</span>
+
+<span class="o">%</span><span class="k">timeit</span> test_hdf_table_read()
+<span class="c1"># 390 ms ± 41.8 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</span>
+
+<span class="o">%</span><span class="k">timeit</span> test_hdf_table_read_compress()
+<span class="c1"># 411 ms ± 6.97 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</span>
+
+<span class="o">%</span><span class="k">timeit</span> test_csv_read()
+<span class="c1"># 4.2 s ± 45 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</span>
+
+<span class="o">%</span><span class="k">timeit</span> test_feather_read()
+<span class="c1"># 206 ms ± 7.98 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</span>
+
+<span class="o">%</span><span class="k">timeit</span> test_pickle_read()
+<span class="c1"># 237 ms ± 15.9 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</span>
+
+<span class="o">%</span><span class="k">timeit</span> test_pickle_read_compress()
+<span class="c1"># 5.77 s ± 63.7 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</span>
+
+<span class="o">!</span> ls -lhSr
+<span class="c1"># -rw-rw-r-- 1 barronk dua18266  72M Jan  9 15:19 test.pkl.compress</span>
+<span class="c1"># -rw-r--r-- 1 barronk dua18266 116M Jan  9 15:19 test_compress.parquet</span>
+<span class="c1"># -rw-r--r-- 1 barronk dua18266 153M Jan  9 15:13 test.feather</span>
+<span class="c1"># -rw-rw-r-- 1 barronk dua18266 153M Jan  9 15:20 test.dta</span>
+<span class="c1"># -rw-rw-r-- 1 barronk dua18266 153M Jan  9 15:13 test.pkl</span>
+<span class="c1"># -rw-r--r-- 1 barronk dua18266 154M Jan  9 15:19 test.parquet</span>
+<span class="c1"># -rw-rw-r-- 1 barronk dua18266 229M Jan  9 15:08 test_fixed.hdf</span>
+<span class="c1"># -rw-rw-r-- 1 barronk dua18266 229M Jan  9 15:08 test_fixed_compress.hdf</span>
+<span class="c1"># -rw-rw-r-- 1 barronk dua18266 231M Jan  9 15:09 test_table.hdf</span>
+<span class="c1"># -rw-rw-r-- 1 barronk dua18266 231M Jan  9 15:09 test_table_compress.hdf</span>
+<span class="c1"># -rw-rw-r-- 1 barronk dua18266 282M Jan  9 15:13 test.csv</span>
+<span class="c1"># -rw-r--r-- 1 barronk dua18266 346M Jan  9 15:08 test.sql</span>
+
+
+
+<span class="c1">#### Writes -- Real Data</span>
+
+<span class="o">%</span><span class="k">timeit</span> test_sql_write(df)
+<span class="c1"># 15.3 s ± 52.8 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</span>
+
+<span class="o">%</span><span class="k">timeit</span> test_hdf_fixed_write(df)
+<span class="c1"># 5.19 s ± 553 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</span>
+
+<span class="o">%</span><span class="k">timeit</span> test_hdf_fixed_write_compress(df)
+<span class="c1"># 5.63 s ± 764 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</span>
+
+<span class="o">%</span><span class="k">timeit</span> test_hdf_table_write(df)
+<span class="c1"># 17.3 s ± 1.41 s per loop (mean ± std. dev. of 7 runs, 1 loop each)</span>
+
+<span class="o">%</span><span class="k">timeit</span> test_hdf_table_write_compress(df)
+<span class="c1"># 16 s ± 182 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</span>
+
+<span class="o">%</span><span class="k">timeit</span> test_csv_write(df)
+<span class="c1"># 8.83 s ± 57.3 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</span>
+
+<span class="o">%</span><span class="k">timeit</span> test_feather_write(df)
+<span class="c1"># 2.34 s ± 14.6 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</span>
+
+<span class="o">%</span><span class="k">timeit</span> test_pickle_write(df)
+<span class="c1"># 2.65 s ± 111 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</span>
+
+<span class="o">%</span><span class="k">timeit</span> test_pickle_write_compress(df)
+<span class="c1"># 23 s ± 329 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</span>
+
+<span class="o">%</span><span class="k">timeit</span> test_parquet_write_compress(df)
+<span class="c1"># 2.71 s ± 183 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</span>
+
+<span class="o">%</span><span class="k">timeit</span> test_parquet_write(df)
+<span class="c1"># 2.59 s ± 16.1 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</span>
+
+<span class="c1">#### Reads -- Real Data</span>
+
+<span class="o">%</span><span class="k">timeit</span> test_parquet_read_compress()
+<span class="c1"># 1.48 s ± 20.2 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</span>
+
+<span class="o">%</span><span class="k">timeit</span> test_parquet_read()
+<span class="c1"># 1.47 s ± 22.2 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</span>
+
+<span class="o">%</span><span class="k">timeit</span> test_sql_read()
+<span class="c1"># 12.8 s ± 1.86 s per loop (mean ± std. dev. of 7 runs, 1 loop each)</span>
+
+<span class="o">%</span><span class="k">timeit</span> test_hdf_fixed_read()
+<span class="c1"># 11.2 s ± 1.51 s per loop (mean ± std. dev. of 7 runs, 1 loop each)</span>
+
+<span class="o">%</span><span class="k">timeit</span> test_hdf_fixed_read_compress()
+<span class="c1"># 11.1 s ± 1.83 s per loop (mean ± std. dev. of 7 runs, 1 loop each)</span>
+
+<span class="o">%</span><span class="k">timeit</span> test_hdf_table_read()
+<span class="c1"># 24.4 s ± 7.19 s per loop (mean ± std. dev. of 7 runs, 1 loop each)</span>
+
+<span class="o">%</span><span class="k">timeit</span> test_hdf_table_read_compress()
+<span class="c1"># 25.1 s ± 7.81 s per loop (mean ± std. dev. of 7 runs, 1 loop each)</span>
+
+<span class="o">%</span><span class="k">timeit</span> test_csv_read()
+<span class="c1"># 2.54 s ± 50.6 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</span>
+
+<span class="o">%</span><span class="k">timeit</span> test_feather_read()
+<span class="c1"># 583 ms ± 10.1 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</span>
+
+<span class="o">%</span><span class="k">timeit</span> test_pickle_read()
+<span class="c1"># 1.25 s ± 47.2 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</span>
+
+<span class="o">%</span><span class="k">timeit</span> test_pickle_read_compress()
+<span class="c1"># 2.58 s ± 669 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</span>
+
+<span class="o">!</span>ls -lhSr
+<span class="c1"># -rw-rw-r-- 1 barronk dua18266 5.6M Jan  9 16:31 test.pkl.compress</span>
+<span class="c1"># -rw-r--r-- 1 barronk dua18266  12M Jan  9 16:31 test_compress.parquet</span>
+<span class="c1"># -rw-r--r-- 1 barronk dua18266  17M Jan  9 16:32 test.parquet</span>
+<span class="c1"># -rw-rw-r-- 1 barronk dua18266  63M Jan  9 16:27 test.csv</span>
+<span class="c1"># -rw-r--r-- 1 barronk dua18266  76M Jan  9 16:20 test.sql</span>
+<span class="c1"># -rw-rw-r-- 1 barronk dua18266 116M Jan  9 16:21 test_fixed.hdf</span>
+<span class="c1"># -rw-rw-r-- 1 barronk dua18266 116M Jan  9 16:22 test_fixed_compress.hdf</span>
+<span class="c1"># -rw-r--r-- 1 barronk dua18266 161M Jan  9 16:28 test.feather</span>
+<span class="c1"># -rw-rw-r-- 1 barronk dua18266 178M Jan  9 16:28 test.pkl</span>
+<span class="c1"># -rw-rw-r-- 1 barronk dua18266 452M Jan  9 16:24 test_table.hdf</span>
+<span class="c1"># -rw-rw-r-- 1 barronk dua18266 452M Jan  9 16:26 test_table_compress.hdf</span>
+</pre></div>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../resdac/variables/" title="Variable Definitions" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Variable Definitions
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../01medicare_readme/" title="Standard Readme" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Standard Readme
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.cae2244d.js"></script>
+      
+      <script>app.initialize({version:"0.17.2",url:{base:"../.."}})</script>
+      
+        <script src="../../js/helpers.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      
+    
+    
+      
+    
+  </body>
+</html>

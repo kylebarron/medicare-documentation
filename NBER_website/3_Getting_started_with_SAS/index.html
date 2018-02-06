@@ -1,0 +1,1611 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Extra Medicare Documentation">
+      
+      
+        <link rel="canonical" href="https://kylebarron.github.io/medicare-documentation/NBER_website/3_Getting_started_with_SAS/">
+      
+      
+        <meta name="author" content="Kyle Barron">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.2, mkdocs-material-2.2.6">
+    
+    
+      
+        <title>Getting Started with SAS - Medicare Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.6525f7f6.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.792431c1.css">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,400i,700|Fira+Code">
+        <style>body,input{font-family:"Nunito Sans","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Fira Code","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+    
+    
+    
+      <body data-md-color-primary="orange" data-md-color-accent="light-blue">
+    
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://kylebarron.github.io/medicare-documentation/" title="Medicare Documentation" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">local_library</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Medicare Documentation
+              </span>
+              <span class="md-header-nav__topic">
+                Getting Started with SAS
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">&#xE5CD;</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/kylebarron/medicare-documentation/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      medicare-documentation
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../.." title="Home" class="md-tabs__link">
+        Home
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../1_Overview/" title="NBER Documentation" class="md-tabs__link md-tabs__link--active">
+          NBER Documentation
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../resdac/mbsf/" title="ResDAC Documentation" class="md-tabs__link">
+          ResDAC Documentation
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../kyle/goals-for-modern-data-format/" title="Working with the Data" class="md-tabs__link">
+          Working with the Data
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../mauricio/enrollment-restrictions/" title="Important Details" class="md-tabs__link">
+          Important Details
+        </a>
+      
+    </li>
+  
+
+      
+        
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <i class="md-icon">local_library</i>
+      
+    </span>
+    Medicare Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/kylebarron/medicare-documentation/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      medicare-documentation
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      NBER Documentation
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        NBER Documentation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1_Overview/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2_Background/" title="Description of Claims Files" class="md-nav__link">
+      Description of Claims Files
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Getting Started with SAS
+      </label>
+    
+    <a href="./" title="Getting Started with SAS" class="md-nav__link md-nav__link--active">
+      Getting Started with SAS
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" title="Overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-comfortable-with-the-nber-unix-systems-and-sas" title="Getting comfortable with the NBER Unix systems and SAS" class="md-nav__link">
+    Getting comfortable with the NBER Unix systems and SAS
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#choosing-a-text-editor" title="Choosing a text editor" class="md-nav__link">
+    Choosing a text editor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#working-with-the-unix-terminal" title="Working with the Unix terminal" class="md-nav__link">
+    Working with the Unix terminal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#learning-sas-and-how-to-use-sas-macros" title="Learning SAS and how to use SAS macros" class="md-nav__link">
+    Learning SAS and how to use SAS macros
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-sas-programs" title="Setting up SAS programs" class="md-nav__link">
+    Setting up SAS programs
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#download-programs" title="Download programs" class="md-nav__link">
+    Download programs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#define-target-and-input-directories" title="Define target and input directories" class="md-nav__link">
+    Define target and input directories
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#define-icd-9-cmhcpcs-cohort-of-interest" title="Define ICD-9-CM/HCPCS cohort of interest" class="md-nav__link">
+    Define ICD-9-CM/HCPCS cohort of interest
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#define-sas-parameters-in-the-runallprgmssh-file" title="Define SAS parameters in the runAllprgms.sh file" class="md-nav__link">
+    Define SAS parameters in the runAllprgms.sh file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#program-sequencing" title="Program sequencing" class="md-nav__link">
+    Program sequencing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-the-sas-program-on-the-linux-servers" title="Running the SAS program on the Linux servers" class="md-nav__link">
+    Running the SAS program on the Linux servers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#factors-impacting-run-times" title="Factors impacting run times" class="md-nav__link">
+    Factors impacting run times
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#minor-data-extraction-inconsistencies" title="Minor data extraction inconsistencies" class="md-nav__link">
+    Minor data extraction inconsistencies
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#possible-claim-duplication" title="Possible claim duplication" class="md-nav__link">
+    Possible claim duplication
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ehic-switchers-enrollment-information" title="EHIC switchers enrollment information" class="md-nav__link">
+    EHIC switchers enrollment information
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estimating-run-times" title="Estimating run times" class="md-nav__link">
+    Estimating run times
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-new-variables-to-the-extract" title="Adding new variables to the extract" class="md-nav__link">
+    Adding new variables to the extract
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-git" title="Using Git" class="md-nav__link">
+    Using Git
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../4_constructing_extracts/" title="Constructing Extracts with SAS" class="md-nav__link">
+      Constructing Extracts with SAS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../5_manipulating_medicare_extracts/" title="Manipulating Extracts with SAS" class="md-nav__link">
+      Manipulating Extracts with SAS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../6_costs/" title="Generating Costs Measures" class="md-nav__link">
+      Generating Costs Measures
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../7_references/" title="References" class="md-nav__link">
+      References
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../8_appendix/" title="Appendix" class="md-nav__link">
+      Appendix
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-9" type="checkbox" id="nav-2-9">
+    
+    <label class="md-nav__link" for="nav-2-9">
+      Variable Names Crosswalk
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-9">
+        Variable Names Crosswalk
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../opxw/" title="Outpatient" class="md-nav__link">
+      Outpatient
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      ResDAC Documentation
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        ResDAC Documentation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../resdac/mbsf/" title="Beneficiary Summary File" class="md-nav__link">
+      Beneficiary Summary File
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../resdac/carrier-rif/" title="Carrier RIF" class="md-nav__link">
+      Carrier RIF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../resdac/denominator-rif/" title="Denominator RIF" class="md-nav__link">
+      Denominator RIF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../resdac/dme-rif/" title="Durable Medical Equipment RIF" class="md-nav__link">
+      Durable Medical Equipment RIF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../resdac/hha-rif/" title="Home Health Agency RIF" class="md-nav__link">
+      Home Health Agency RIF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../resdac/hospice-rif/" title="Hospice RIF" class="md-nav__link">
+      Hospice RIF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../resdac/ip-rif/" title="Inpatient RIF" class="md-nav__link">
+      Inpatient RIF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../resdac/medpar-rif/" title="MedPAR RIF" class="md-nav__link">
+      MedPAR RIF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../resdac/op-rif/" title="Outpatient RIF" class="md-nav__link">
+      Outpatient RIF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../resdac/snf-rif/" title="Skilled Nursing Facility RIF" class="md-nav__link">
+      Skilled Nursing Facility RIF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../resdac/variables/" title="Variable Definitions" class="md-nav__link">
+      Variable Definitions
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Working with the Data
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Working with the Data
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../kyle/goals-for-modern-data-format/" title="Goals for New Data Format" class="md-nav__link">
+      Goals for New Data Format
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../kyle/01medicare_readme/" title="Standard Readme" class="md-nav__link">
+      Standard Readme
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../kyle/extract_data/" title="Data Extraction Overview" class="md-nav__link">
+      Data Extraction Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../kyle/data_locations/" title="Data Locations" class="md-nav__link">
+      Data Locations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../kyle/python_extract/" title="Python Extraction" class="md-nav__link">
+      Python Extraction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../kyle/using-tmux-aging-servers/" title="Using tmux for long-running jobs" class="md-nav__link">
+      Using tmux for long-running jobs
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Important Details
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Important Details
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mauricio/enrollment-restrictions/" title="Enrollment Restrictions" class="md-nav__link">
+      Enrollment Restrictions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mauricio/lag-post-event-spending/" title="Calculating Costs for Inpatient Visits" class="md-nav__link">
+      Calculating Costs for Inpatient Visits
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../glossary/" title="Glossary" class="md-nav__link">
+      Glossary
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" title="Overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-comfortable-with-the-nber-unix-systems-and-sas" title="Getting comfortable with the NBER Unix systems and SAS" class="md-nav__link">
+    Getting comfortable with the NBER Unix systems and SAS
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#choosing-a-text-editor" title="Choosing a text editor" class="md-nav__link">
+    Choosing a text editor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#working-with-the-unix-terminal" title="Working with the Unix terminal" class="md-nav__link">
+    Working with the Unix terminal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#learning-sas-and-how-to-use-sas-macros" title="Learning SAS and how to use SAS macros" class="md-nav__link">
+    Learning SAS and how to use SAS macros
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-sas-programs" title="Setting up SAS programs" class="md-nav__link">
+    Setting up SAS programs
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#download-programs" title="Download programs" class="md-nav__link">
+    Download programs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#define-target-and-input-directories" title="Define target and input directories" class="md-nav__link">
+    Define target and input directories
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#define-icd-9-cmhcpcs-cohort-of-interest" title="Define ICD-9-CM/HCPCS cohort of interest" class="md-nav__link">
+    Define ICD-9-CM/HCPCS cohort of interest
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#define-sas-parameters-in-the-runallprgmssh-file" title="Define SAS parameters in the runAllprgms.sh file" class="md-nav__link">
+    Define SAS parameters in the runAllprgms.sh file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#program-sequencing" title="Program sequencing" class="md-nav__link">
+    Program sequencing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-the-sas-program-on-the-linux-servers" title="Running the SAS program on the Linux servers" class="md-nav__link">
+    Running the SAS program on the Linux servers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#factors-impacting-run-times" title="Factors impacting run times" class="md-nav__link">
+    Factors impacting run times
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#minor-data-extraction-inconsistencies" title="Minor data extraction inconsistencies" class="md-nav__link">
+    Minor data extraction inconsistencies
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#possible-claim-duplication" title="Possible claim duplication" class="md-nav__link">
+    Possible claim duplication
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ehic-switchers-enrollment-information" title="EHIC switchers enrollment information" class="md-nav__link">
+    EHIC switchers enrollment information
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estimating-run-times" title="Estimating run times" class="md-nav__link">
+    Estimating run times
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-new-variables-to-the-extract" title="Adding new variables to the extract" class="md-nav__link">
+    Adding new variables to the extract
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-git" title="Using Git" class="md-nav__link">
+    Using Git
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/kylebarron/medicare-documentation/blob/master/docs/NBER_website/3_Getting_started_with_SAS.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="getting-started-with-the-sas-extraction-programs">Getting started with the SAS extraction programs<a class="headerlink" href="#getting-started-with-the-sas-extraction-programs" title="Permanent link">&para;</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This documentation is ported from NBER documentation <a href="https://www.nber.org/medicare/public/Public-3.html">here</a>, written by Maurice Dalton.</p>
+</div>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>The goal of this project is to create a centralized repository of Medicare extraction programs. Centralizing the code makes it easier for bugs to be found and fixed. It also has the added impact of flattening the learning curve for new researchers to the Medicare claim files by leveraging the work done by researchers who have come before them. Many of the programs are nearly ready to be run "out of the box". The following section briefly describes an overview of the SAS code, outlines important restrictions which the program places on the extracts and details the process of setting up the programs to run in SAS.</p>
+<p>The extraction occurs in four general steps, with each of the folders being labeled in the order in which they should be run. For example the <code>0PreProcess</code> folder programs should be run before the <code>1PrimaryExtractionPrgms</code>. Furthermore programs which are either labeled <code>1A</code>, <code>1B</code>, or <code>1C</code> should be run in the order designated by the associated letter.</p>
+<p>The <code>/tmp</code> drives, previously referred to as space drive, referenced in this section are NBER specific drives which are local to the server processing the code and helps avoid I/O constraints on the system, in effect speeding up how fast your code is processed. Note this has recently changed due to system upgrade and now the network drives are actually faster - depending on system traffic.</p>
+<p>Also for a general overview to thinking about scientific computing, <a href="http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1001745">this article</a> provides a nice overview.</p>
+<p>The following steps outline how to get started with the programs:</p>
+<ol>
+<li>Choose a text editor to use on the Linux servers - lots of choices</li>
+<li>Get comfortable with running code on the Linux servers</li>
+<li>Download code or use the git clone feature if you're working on the NBER servers</li>
+<li>Check to make sure that a proper DUA and user name folder has been set up for you on the space, disk and bulk drives. The following step will use these folders to create a directory structure for you.</li>
+<li>Define directories in the <a href="https://www.nber.org/medicare/public/unzipped/set_up_directory.sas"><code>set_up_directory.sas</code></a> and <a href="https://www.nber.org/medicare/public/unzipped/set_up_directory.do"><code>set_up_directory.do</code></a>. This file will create the directory structure for you</li>
+<li>Decide on the group of ICD-9-CM and/or HCPCS codes which will define your cohort and which claims files will be used to flag candidate index events. Put these codes in the <a href="https://www.nber.org/medicare/public/unzipped/1cohort_extraction/1A_flag_candidate_evnt/icd9_chrt_definition.sas"><code>icd9_chrt_definition.sas</code></a> and/or <a href="https://www.nber.org/medicare/public/unzipped/1cohort_extraction/1A_flag_candidate_evnt/hcpcs_chrt_defintion.sas"><code>hcpcs_chrt_defintion.sas</code></a>. If you are not using the carrier or outpatient files to define your cohort or are not using the HCPCS codes, then you can ignore the <code>hcpcs_chrt_defintion.sas</code> files</li>
+<li>Fill out the parameters in the shell <a href="https://www.nber.org/medicare/public/unzipped/runAllprgms.sh"><code>programrunAllprgms.sh</code></a> found under the <code>TODO#</code> tags. The program has been modified (April 2014) to allow users to simply define variables in this files which are then passed to SAS programs. Saves the hassle of opening and closing SAS files. Note users will still be able to run a single sas program but you will need to update the parameters. As you fill out the different variables it will be important to make sure you understand the different restrictions it passes onto the creation of the extract.</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Only run programs in <code>runAllprgms.sh</code> that your DUA covers. Comment out those files you wish not to run.</strong></p>
+</div>
+<h2 id="getting-comfortable-with-the-nber-unix-systems-and-sas">Getting comfortable with the NBER Unix systems and SAS<a class="headerlink" href="#getting-comfortable-with-the-nber-unix-systems-and-sas" title="Permanent link">&para;</a></h2>
+<h3 id="choosing-a-text-editor">Choosing a text editor<a class="headerlink" href="#choosing-a-text-editor" title="Permanent link">&para;</a></h3>
+<p>Choosing a text editor is important and is worth taking some time to choose one that fits your needs the best. Some text editors currently available on the servers are EMACS, pico, and vi, and there are many others available for use on your local machine. It is recommended that you use a text editor on the server or at least a text editor which is able to read files over ssh, in order to avoid the hassle of having to copy programs from your local machine to the server. Remember that results are often sensitive and should not be held on your local machine.</p>
+<p>Although Emacs has a steep learning curve, I chose it because it is extensible and you can trust that the large user community has implemented most any feature you may want. Beside general coding ease, I have found it quite useful for writing tex files to display results and for keeping to do lists via the <a href="http://orgmode.org/">org-mode extension</a>.</p>
+<p>Emacs is customized through an initialization file read from the home directory. The <code>.emacs</code> file needs to be created and placed in your home directory. A sample <code>.emacs</code> file is provided at <a href="https://www.nber.org/medicare/public/unzipped/Auxiliary/EMACSDOC/.emacs"><code>Auxiliary/EMACSDOC</code></a>. Note that an old copy of ESS is supplied in the same directory. In order for Emacs to successfully read your initialization file, the location of the actual lisp programs (<code>*.el</code>) needs to be included in the <a href="https://www.nber.org/medicare/public/unzipped/Auxiliary/EMACSDOC/.emacs"><code>.emacs</code></a> file. Yet another useful Emacs module is the M-X-cua-mode which binds the key short cuts for copy, paste, and undo to those found in the Windows environment.</p>
+<h3 id="working-with-the-unix-terminal">Working with the Unix terminal<a class="headerlink" href="#working-with-the-unix-terminal" title="Permanent link">&para;</a></h3>
+<p>The terminal is an extremely powerful tool. It is accessible within Stata or SAS, but you can also place a series of commands into a bash script to automate parts your program. At a minimum, new users should get comfortable with <em>aliases</em> and checking the system load with the <code>top</code> or <code>uptime</code> command. <a href="http://linuxcommand.org/learning_the_shell.php">This website</a> provides a nice overview of learning to use the terminal/shell.</p>
+<p>For example, the SAS pack contains a bash script created to run the SAS and Stata programs in the correct sequence and email the user in the case of a crash. The program called <a href="https://www.nber.org/medicare/public/unzipped/runAllprgms.sh"><code>runAllprgms.sh</code></a> is a simple but useful example of what you can do with the terminal. To run bash programs simply type <code>bash runAllprgms.sh</code> into the terminal, and assuming you have assigned the right permissions it should run.</p>
+<h3 id="learning-sas-and-how-to-use-sas-macros">Learning SAS and how to use SAS macros<a class="headerlink" href="#learning-sas-and-how-to-use-sas-macros" title="Permanent link">&para;</a></h3>
+<p>The programs developed to pull and harmonize the raw Medicare claims rely heavily on the SAS macro facility. SAS macros allow users to create code which takes on a series of parameters which replace keywords (<code>&amp;macro_parameter.</code>) in the code prior to execution. In this way a SAS macro can be though of as a do file where a series of local variables at the top of the program are used to change the code in meaningful ways.</p>
+<p>Included in the SAS pack are SAS code snippets I have used to test different feature of SAS code. The programs are available at <a href="https://www.nber.org/medicare/public/unzipped/Auxiliary/codeTest"><code>Auxiliary/codeTest</code></a>, and may be useful to someone getting started.</p>
+<h2 id="setting-up-sas-programs">Setting up SAS programs<a class="headerlink" href="#setting-up-sas-programs" title="Permanent link">&para;</a></h2>
+<p>Assuming an individual has entered into a DUA with CMS, users need to gain access to the code, setup the directories correctly and define the type of episode interested in being studied. Each of these is reviewed in the following sub-sections.</p>
+<h3 id="download-programs">Download programs<a class="headerlink" href="#download-programs" title="Permanent link">&para;</a></h3>
+<p>Download the zipped file and decompress it preserving the directory structure in a target location of your choosing.</p>
+<h3 id="define-target-and-input-directories">Define target and input directories<a class="headerlink" href="#define-target-and-input-directories" title="Permanent link">&para;</a></h3>
+<p>Once the programs have been downloaded, the directory structure the programs use needs to be configured. All directories which the programs use can be found in the following two files <a href="https://www.nber.org/medicare/public/unzipped/set_up_directory.sas"><code>set_up_directory.sas</code></a> and <a href="https://www.nber.org/medicare/public/unzipped/set_up_directory.do"><code>set_up_directory.do</code></a>, which define the same locations for the SAS and Stata files. The two files need to be populated with the correct directories prior to running the program - many of the directories should be the same.</p>
+<p>There are generally two types of directories found in these files. Input directories, which correspond to places where the programs will read data in from. In these cases, the location of these raw files simply needs to be defined. The other case, are output directories which the programs will write to. The <code>set_up_directory.sas</code> file will generate the directories for you as long as you define a base directory correctly.</p>
+<p>Once the <a href="https://www.nber.org/medicare/public/unzipped/set_up_directory.sas"><code>set_up_directory.sas</code></a> and <a href="https://www.nber.org/medicare/public/unzipped/set_up_directory.do"><code>set_up_directory.do</code></a> files are populated, run the SAS and/or Stata programs on the 0001% extracts just to make sure that SAS/Stata has correctly read the directories which you have defined. At the very beginning of the log file, SAS will check to make sure that the directories defined exist. Check these notes which SAS outputs to make sure that you directories are properly defined. The following code snippet provides an example of the SAS WARNING LOG that occurs with incorrectly defined directories.</p>
+<div class="codehilite"><pre><span></span>libname tempDir &quot;&amp;medtmp.&quot;;
+WARNING: Apparent symbolic reference MEDTMP not resolved.
+NOTE: Library TEMPDIR does not exist.
+</pre></div>
+
+
+<h3 id="define-icd-9-cmhcpcs-cohort-of-interest">Define ICD-9-CM/HCPCS cohort of interest<a class="headerlink" href="#define-icd-9-cmhcpcs-cohort-of-interest" title="Permanent link">&para;</a></h3>
+<p>After defining the directory structure, the next order of business involves correctly specifying your cohort. Studies using administrative claims use ICD-9-CM or HCPCS codes to define a group of individuals with a similar disease. ICD-9-CM codes come in both diagnostic and procedure types, whereas the HCPCS codes are used to define a specific procedure. The code currently has several examples embedded directly into the code. Note that folder <a href="https://www.nber.org/medicare/public/unzipped/1cohort_extraction/1A_flag_candidate_evnt"><code>1AFlagcandidateEvents</code></a> holds a series of different programs corresponding to each claim file of interest. Each program calls in <a href="https://www.nber.org/medicare/public/unzipped/1cohort_extraction/1A_flag_candidate_evnt/icd9_chrt_definition.sas"><code>icd9_chrt_definition.sas</code></a> and/or <a href="https://www.nber.org/medicare/public/unzipped/1cohort_extraction/1A_flag_candidate_evnt/hcpcs_chrt_defintion.sas"><code>hcpcs_chrt_defintion.sas</code></a> depending on what is reported in the claim. The programs use these two files to look for a cohort definition.</p>
+<p>Once a series of ICD-9-CM/HCPCS codes of interest have been selected, a short bit of code needs to be placed in the relevant file. Note that in addition to choosing the ICD-9-CM code, a name stub (<code>ami</code> in the example below) also needs to be referenced which all of the following programs will use reference the cohort. For example, the heart attack example uses <code>ami</code>. All programs will use this stub as a parameter in the macro to correctly identify the index of interest. Future programs (e.g. <code>carrier_clm_window.sas</code>) will also need to use the same exact stub name to load in the correct data sets.</p>
+<p>As the following code snippet demonstrates, the new <a href="https://www.nber.org/medicare/public/unzipped/1cohort_extraction/1A_flag_candidate_evnt/icd9_chrt_definition.sas"><code>icd9_chrt_definition.sas</code></a> SAS code now allows for users to define an index event through the use of a procedure code. Users for the most part should only need to change the if condition with the diagnostic code and the <code>is_snf</code> condition when changing to another cohort of interest.</p>
+<div class="codehilite"><pre><span></span><span class="c">************************************************************;</span>
+<span class="c">***  DEFINES AMI ICD9-CM CODE SEQUENCE;</span>
+<span class="c">************************************************************;</span>
+<span class="nb">%if</span> <span class="nv">&amp;cohrt.</span> = ami  <span class="nb">%then</span> <span class="nb">%do</span>;
+<span class="c">***!!!!!! DEAL WITH DIAGNOSTIC CODE- ONLY IF NUMDGN CODES &gt;0;</span>
+            <span class="nb">%if</span> <span class="nv">&amp;numDgnCodes.</span>&gt;<span class="m">0</span> <span class="nb">%then</span> <span class="nb">%do</span>;
+            <span class="k">do</span> i=<span class="m">1</span> to <span class="nv">&amp;numDgnCodes.</span>;
+<span class="c">                **LOOP THROUGH DIAGNOSTIC CODES;</span>
+                <span class="k">if</span> <span class="nb">substr(</span>dgns_cd_arr(i),<span class="m">1</span>,<span class="m">3</span>) = <span class="s">&quot;410&quot;</span> <span class="k">and</span>
+                    ((<span class="k">length</span>(dgns_cd_arr(i)) = <span class="m">5</span> <span class="k">and</span>
+                      <span class="nb">substr(</span>dgns_cd_arr(i),<span class="m">5</span>,<span class="m">1</span>) ne <span class="s">&quot;2&quot;</span>) <span class="k">or</span>
+                   (<span class="k">length</span>(dgns_cd_arr(i)) &lt; <span class="m">5</span>) )
+                    <span class="k">then</span>    <span class="k">do</span>    ;
+                    dgns_cnt_arr(i)=<span class="m">1</span>;
+                    dgnIndxNum=i;
+                    dICD9_indx=dgns_cd_arr(i);
+                    <span class="k">end</span>;
+            <span class="nb">%end</span>;
+<span class="c">       ***!!!INSERT PROCEDURE CODE OG INTEREST IF ANY- ONLY IF PRCDGN CODES &gt;0;</span>
+       <span class="nb">%if</span> <span class="nv">&amp;numProcCodes.</span>&gt;<span class="m">0</span> <span class="nb">%then</span> <span class="nb">%do</span>;
+<span class="c">            **LOOP THROUGH PROCEDURE CODES;</span>
+            <span class="k">do</span> i=<span class="m">1</span> to <span class="nv">&amp;numProcCodes.</span>;
+<span class="cm">            ** LOOP THROUGH PROCEDURE CODE</span>
+<span class="cm">            /* EXAMPLE PROCEDURE CODE ONLY</span>
+<span class="cm">             if (length(prcdr_cd_arr(i)) =4 ) and</span>
+<span class="cm">                (</span>
+<span class="cm">                 substr(prcdr_cd_arr(i),1,4) = &quot;3606&quot; or</span>
+<span class="cm">                 substr(prcdr_cd_arr(i),1,4) = &quot;3607&quot; or</span>
+<span class="cm">                 substr(prcdr_cd_arr(i),1,3) = &quot;360&quot;  or</span>
+<span class="cm">                substr(prcdr_cd_arr(i),1,3) = &quot;361&quot; or</span>
+<span class="cm">                 substr(prcdr_cd_arr(i),1,4) = &quot;3722&quot; or</span>
+<span class="cm">                substr(prcdr_cd_arr(i),1,4) = &quot;3723&quot; or</span>
+<span class="cm">                 substr(prcdr_cd_arr(i),1,4) = &quot;8855&quot; or</span>
+<span class="cm">                 substr(prcdr_cd_arr(i),1,4) = &quot;8856&quot; or</span>
+<span class="cm">                 substr(prcdr_cd_arr(i),1,4) = &quot;8857&quot;</span>
+<span class="cm">                )</span>
+<span class="cm">                then do;</span>
+                    prcdr_cnt_arr(i)=<span class="m">1</span>;
+                    pICD9_indx=prcdr_cd_arr(i);
+                    prcIndxNum=i;
+                <span class="k">end</span>;
+<span class="cm">            */</span>
+<span class="cm">            end;</span>
+            <span class="nb">%end</span>;
+<span class="c">        **Other options specific to claims file here;</span>
+        <span class="nb">%if</span> <span class="nv">&amp;file.</span> = medpar <span class="nb">%then</span> <span class="nb">%do</span>;
+<span class="c">            **Drop if index event occurs at SNF;</span>
+            <span class="k">if</span> is_snf=<span class="m">1</span> <span class="k">then</span> <span class="k">delete</span>;
+            <span class="nb">%end</span>;
+        <span class="nb">%end</span>;
+</pre></div>
+
+
+<h3 id="define-sas-parameters-in-the-runallprgmssh-file">Define SAS parameters in the <code>runAllprgms.sh</code> file<a class="headerlink" href="#define-sas-parameters-in-the-runallprgmssh-file" title="Permanent link">&para;</a></h3>
+<p>The next step is to go through and define all of the parameters which are passed onto SAS programs found in the <code>runAllprgms.sh</code> file. In doing so it is important to understand the different restrictions used in building the cohort. Note that an index event is defined as the first episode care for a cohort, it denotes the beginning of an episode of care. The following list provides and overview of the steps in building the cohorts and the relevant restrictions.</p>
+<ol>
+<li>Flag potential (candidate) index event using the procedure/diagnostic codes defined in <a href="https://www.nber.org/medicare/public/unzipped/1cohort_extraction/1A_flag_candidate_evnt/icd9_chrt_definition.sas"><code>icd9_chrt_definition.sas</code></a> and/or <a href="https://www.nber.org/medicare/public/unzipped/1cohort_extraction/1A_flag_candidate_evnt/hcpcs_chrt_defintion.sas"><code>hcpcs_chrt_defintion.sas</code></a>. The subset of patients are selected by the 1A programs<ol>
+<li>Parameter <code>COHRT</code>: The <code>cohrt</code> variable should match the code block found in those files.</li>
+<li>Parameters <code>IP</code>, <code>OP</code>, <code>MEDPAR</code>, <code>CAR</code>: These binary flags denote which files were used to define the index event. In the example AMI covered in this documentation only the <code>MEDPAR</code> parameter would be set to 1 and the others to 0.</li>
+<li>Paramters <code>IP_DXN</code>, <code>IP_PROC</code>, ...: The parameters denote how many diagnostic or procedure codes to look through when defining an index event. For example, in our AMI cohort, as in with many cohorts, the cohort is built only of the principal diagnostic code in the MedPAR file which coincides with the first diagnostic code. In that example only the <code>MED_DXN</code> parameter is set to 1 with the rest of the parameters set to 0.</li>
+</ol>
+</li>
+<li>
+<p>Merge in enrollment information and impose enrollment restrictions (<a href="https://www.nber.org/medicare/public/unzipped/1cohort_extraction/1B_impose_restrictions.sas"><code>1B_impose_restrictions.sas</code></a> program)</p>
+<ol>
+<li>Parameter <code>DAYS_BETWEEN_INDEX_EVENT</code>: Number of days which must pass before an individuals can have another index event assigned. The assumption is very important because in a sense it defines how much time must pass before we want to treat a new candidate episode as a new event. It also takes care of transfers since the first index event will be assigned.</li>
+<li>Parameters <code>FFSmonthpost</code> and <code>FFSmonthpre</code>: The individual is continuously enrolled in Parts A and B of traditional Medicare (rather than a Medicare private plan) during the twelve months before AMI and until twelve months after AMI, or until death. (months can be changed by the variables <code>FFSmonthpost</code>/<code>FFSmonthpre</code>)</li>
+<li>Parameters <code>HMOmonthpost</code> and <code>HMOmonthpre</code>: The individual is continuously not in HMO during the twelve months before AMI and until twelve months after AMI, or until death. (months can be changed by the variables <code>HMOmonthpost</code>/<code>HMOmonthpre</code>)</li>
+<li>
+<p>The individual is at least 66 years of age at the time of the AMI</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is hard coded and would need to be changed in the 1B program.</p>
+</div>
+</li>
+<li>
+<p>No bad date of death or birthday</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is hard coded and would need to be changed in the 1B program.</p>
+</div>
+</li>
+</ol>
+</li>
+<li>
+<p>Pull claims around the index event dates, using the index date (first treatment date for disease/procedure of interest) which have been harmonized</p>
+</li>
+<li>Run secondary programs to define comorbidities and cost statistics<ol>
+<li>Raw cost statistics: <code>DAY1</code> - <code>DAY7</code> variable denote the <code>X</code> day cost you want to be calculated. For example setting <code>DAY1=30</code>, <code>DAY2=90</code> and <code>DAY3=365</code> would create 30-day, 90-day, and 365-day costs where the day references the number of days occurring after the index event date.</li>
+<li>Parameter <code>YEARIN</code>: Since cost statistics combine information across claims, you need to define the earliest year of the claim you are using, it's usually the MedPAR data.</li>
+</ol>
+</li>
+</ol>
+<p>In order to run a specific SAS program, the wrapper macro needs to be invoked with the correct set of parameters. Most of the time the parameters are very similar across the programs and is why the <code>runAllprgm.sh</code> bash file was created to feed each SAS program its parameters. Note that the parameters are documented at the end of each program, with some of the most common parameters defined in the following table. The programs are generally saved with a sample wrapper program call at the end. The parameters in many cases will also define the name of the data set created or loaded up depending on the program. Therefore, it is important to use the same cohort stub in the different programs, so that the correct files are loaded.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>cohort1</code></td>
+<td>These reference the ICD-9-CM codes in the code</td>
+</tr>
+<tr>
+<td><code>cohort2</code></td>
+<td>You can add as many of these as you would like, however if you start running several (4 plus) the efficiently of the program maybe impacted</td>
+</tr>
+<tr>
+<td><code>cohortN</code></td>
+<td>Define the total number of cohorts you are creating</td>
+</tr>
+<tr>
+<td><code>yearin</code></td>
+<td>Start year for the run</td>
+</tr>
+<tr>
+<td><code>yearout</code></td>
+<td>End year for the run</td>
+</tr>
+<tr>
+<td><code>pct</code></td>
+<td>Define the percent extract you are interested in using</td>
+</tr>
+<tr>
+<td><code>dflag</code></td>
+<td>Set equal to one if you want to delete raw files as you run the program</td>
+</tr>
+<tr>
+<td><code>clmDTA</code></td>
+<td>Set equal to one if you want to convert the all files into a Stata format (DTA), as long as stat transfer is on the server you are running</td>
+</tr>
+<tr>
+<td><code>crashStart</code></td>
+<td>If program crashed, set equal to the year program crashed and it will restart from that year and aggregate the program once finished processing from the yearin to yearout dates. (Carrier and Outpatient extract files only)</td>
+</tr>
+<tr>
+<td><code>win</code> (year)</td>
+<td>Define the window around the index event the program is to extract (in years). Note when changing this you may also be interested in changing the window which determines how consecutive index events get dropped. For example currently the program drops AMIs from the index events which occur within the past year. Search variable name <code>last_dgn_date</code> in the <a href="https://www.nber.org/medicare/public/unzipped/1cohort_extraction/1B_impose_restrictions.sas"><code>1B_impose_restrictions.sas</code></a> program for more info.</td>
+</tr>
+<tr>
+<td><code>subsquentDgnDayRest</code> (days)</td>
+<td>Defines the minimum amount of time allowed to pass before a beneficiaries with more then one candidate index event can be treated as a index event. The restriction drops all candidate index events which are within <code>XX</code> days of each other and it keeps the first one. The restriction is important because it helps ensure that no two index events in the final data set are directly related, through a transfer or something similar.</td>
+</tr>
+<tr>
+<td><code>HMOmonth[pre/post]</code> (months)</td>
+<td>Defines the number of months of continuous HMO enrollment need before and after the index event month, including the month of the index event, used to restrict the sample;</td>
+</tr>
+<tr>
+<td><code>FFSmonth[pre/post]</code> (months)</td>
+<td>Defines the number of months of continuous FFS enrollment need before and after the index event month, including the month of the index event, used to restrict the sample;</td>
+</tr>
+</tbody>
+</table>
+<p>In the case that either the carrier or outpatient extraction programs are run and they crash, it is easy to restart the programs from the most recent year which they were running. Refer to the <code>crashStart</code> parameters. For example if you are running a carrier extract between 2000 and 2008 and the program crashes on 2002. First you would create a copy of your log file and save it some where else. Next simply run the following wrapper call from within the Carrier extraction program found at the end of the program.</p>
+<div class="codehilite"><pre><span></span><span class="nf">%RunCarExtraction</span>(pct=<span class="m">05</span>,
+                  cohrt1=ami,
+                  cohrtN=<span class="m">1</span>,
+                  yearin=<span class="m">2000</span>,yearout=<span class="m">2008</span>,crashStart=<span class="m">2002</span>,
+                  win=<span class="m">1</span>,
+                  clmDTA=<span class="m">1</span>
+                  );
+</pre></div>
+
+
+<h3 id="program-sequencing">Program sequencing<a class="headerlink" href="#program-sequencing" title="Permanent link">&para;</a></h3>
+<p>As noted above, some programs are dependent on the data created by other programs. In particular, the files in the <a href="https://www.nber.org/medicare/public/unzipped/1cohort_extraction"><code>1cohort_extraction</code></a> folder should be run first. The exact sequencing is given in the following outline. Any of the programs found in the folder <code>1A_flag_candidate_evnt</code> (bullet point 2a below) should be run before the programs found in <code>1C_pull_claims</code> (bullet point 2b below). <code>1B_impose_restrictions.sas</code> should be run before 2b <code>op_clm_window.sas</code> and any of the programs in <code>2create_index_level_measures</code> should be run before any of the programs found in <code>3merge_cohort_level_data</code>.</p>
+<p>All programs rely on the <code>set_up_directory.sas</code> and <code>set_up_directory.do</code> files to define the directory structure used throughout the project. In addition the sequencing of programs is important and follows the hierarchy found below. Conversely, the <code>runAllprgms.sh</code> bash script can be used to call all programs in the correct order after the macros in each program have been correctly been populated.</p>
+<ol>
+<li><code>0pre_process</code><ol>
+<li>Individuals working on the NBER servers do not need to worry about running these programs. They have been run and the preprocessed datasets are held on the servers.</li>
+</ol>
+</li>
+<li>Harmonization of the raw data (three sub steps)(folder:<code>1cohort_extraction</code>)<ol>
+<li><code>1A_flag_candidate_evnt</code>: the programs found here loop through the raw data and pull beneficiaries which match the criteria defined in the <code>icd9_chrt_definition.sas</code> and/or <code>hcpcs_chrt_defintion.sas</code>.</li>
+<li><code>1B_impose_restrictions.sas</code>: The single file is run after all the candidates have been flagged and saved in a separate folder. Beside the initial flagging of beneficiaries, all of the restrictions used to define the final index events are imposed in this file. The program merges all candidates, imposes restriction and defines index events with relevant demographic variables generated.</li>
+<li><code>1C_pull_claims</code>: The programs found in this files pull a relevant window around the index claims. This final dataset contains all the harmonized claims for each of the different claims files.</li>
+</ol>
+</li>
+<li>Using the harmonized raw files, programs in this folder build index event level measures like 30-day costs or comorbidity profiles. (folder:<code>2create_index_level_measures</code>) These programs use output from the previous step to create variables which aggregate measures to the index event level.</li>
+<li>The final program attempts to build a final analysis file for you which is a the index event level. It merges in datasets onto the index event level. (folder:<code>3merge_cohort_level_data</code>). This is a good folder-file to get comfortable with.</li>
+</ol>
+<h3 id="running-the-sas-program-on-the-linux-servers">Running the SAS program on the Linux servers<a class="headerlink" href="#running-the-sas-program-on-the-linux-servers" title="Permanent link">&para;</a></h3>
+<p>Running the SAS extraction programs on the Linux servers are fairly straightforward, however there are some additional options which should be used due to the length of time it take to run the programs.</p>
+<p>Many of the extraction programs can run for several days due to the size of the extracts. Using the <code>nohup</code> command on the UNIX servers is important when running these programs because it will continue running the program even if you log off or are disconnected from the server. For example, running the following from the terminal</p>
+<div class="codehilite"><pre><span></span>nohup sas carrier_clm_window.sas &amp;
+</pre></div>
+
+
+<p>would run the <code>carrier_clm_window.sas</code> program in the background until it crashes or finishes running, even if you log off the servers. The ampersand informs the servers to run the program in the background. The program will only stop if it finishes or reaches an error which forces it to crash.</p>
+<p>In order to avoid running out of space in the work directory, SAS allows you to set the work directory. Generally the SAS work directory is used when any data set in the code is referred to without a directory or explicitly with the directory work.data set. The work directory is written by default to the <code>/tmp</code> directory of the current server. However users can easily overrun the <code>/tmp</code> directory and cause all programs using the <code>/tmp</code> to crash on the current server (not just their program).</p>
+<p>This problem is easily avoided by by invoking SAS with the additional options from the terminal as follows. As a rule of thumb, you only need to worry about setting the work directory if you are encountering problems with space in the <code>/tmp</code> drives. Note that most users need not do this unless their programs are crashing due to <code>/tmp</code> space.</p>
+<p>Note that all the programs have been sequenced for you already and you could just run the <code>runAllprgms.sh</code> script after setting up by typing <code>bash runAllprgms.sh</code> from the terminal.</p>
+<p>Invoke SAS from terminal with separate user defined work directory - <strong>Not Suggested</strong>:</p>
+<div class="codehilite"><pre><span></span>nohup sas -work INSERT/DIRECTORY/HERE carrier_clm_window.sas &amp;
+</pre></div>
+
+
+<h3 id="factors-impacting-run-times">Factors impacting run times<a class="headerlink" href="#factors-impacting-run-times" title="Permanent link">&para;</a></h3>
+<p>There are two main factors a user has control over that directly impact the run times. A user can determine which server to run their program on; making sure a server is not overloaded will increase the speed of your (and everyone else's!) programs. Being aware of which disks you are writing to can have drastic improvements to speed. The programs optimize this for NBER users.</p>
+<p>It is important to check the system load before starting a SAS program, as overloading a machine will slow the processing of all the jobs to a crawl. Therefore it is best to check back later and submit the jobs once the server load is reduced. Checking the server load can be done from the terminal by using the <code>uptime</code> command, which prints out several pieces of information. The last three numbers give system load average for the last minute, 5 minutes and 15 minutes. A number over 3 represents a machine that is loaded. For example:</p>
+<div class="codehilite"><pre><span></span>&gt; uptime
+ 16:28:45 up 75 days,  1:51,  2 users,  load average: 0.15, 0.05, 0.14
+</pre></div>
+
+
+<p>Server load is something which most users will not directly have control over as it depends what other people are running. By contrast, deciding which disks to write to is something which a new user will have direct control over and which also will greatly impact the speed of the program. For example, when decompressing files it is best to write the decompressed file to a local directory (i.e. space drive). Note that writing to a local directory can cut processing times in half.</p>
+<h2 id="minor-data-extraction-inconsistencies">Minor data extraction inconsistencies<a class="headerlink" href="#minor-data-extraction-inconsistencies" title="Permanent link">&para;</a></h2>
+<p>There is the possibility that some inconsistencies occur in the extracted data due to the restrictions placed on the code. The percent of claims impacted are very small, but in the event that an individual attempts to benchmark a specific measure, like number of unique claims, some inconsistencies may occur. For these reasons the following section describes when we may expect claims to be duplicated in the extraction process.</p>
+<h3 id="possible-claim-duplication">Possible claim duplication<a class="headerlink" href="#possible-claim-duplication" title="Permanent link">&para;</a></h3>
+<p>The possibility for claims to be duplicated in the extracted data exists because of the way in which claims are pulled. The extraction program goes through and identifies an index event and then pulls a one-year window of claims around the index event. Due to the procedure, the possibility for a claim to be duplicated exists in the event that an individual has more than one potential index event which occurred more than a year apart but not greater than two years.</p>
+<p>Index events within a year of each other for a specific individual are dropped from the sample, leaving the first index event occurrence in the final data set. This leaves individuals with an index event occurring more than 1 year apart in the sample. However since the procedure take a 1-year window, around each index event, some duplication of claims maybe introduced. The same is true for individuals pulling claims greater then a 1-year window.</p>
+<p>Note that this occurs for an extremely small part of the sample, something on the order of 0.001%.</p>
+<h3 id="ehic-switchers-enrollment-information">EHIC switchers enrollment information<a class="headerlink" href="#ehic-switchers-enrollment-information" title="Permanent link">&para;</a></h3>
+<p>In some cases a <code>bene_id</code> associated with more than one EHIC may have two separate EHIC entries in the denominator files. A subset of these <code>bene_id</code>s may report different enrollment information on the separate EHICs associated with a single <code>bene_id</code>, although they should be the same. The most recent enrollment observation from the file is kept since it is unclear how to treat these cases.</p>
+<h2 id="estimating-run-times">Estimating run times<a class="headerlink" href="#estimating-run-times" title="Permanent link">&para;</a></h2>
+<p>In order to help aid researchers in planning for projects and optimizing their run times, the following tables provide approximate run times for each program. Note that the <code>op_clm_window.sas</code> and <code>carrier_clm_window.sas</code> program can be run at the same time as long as they are started about 15 minutes or so apart. The first macro they both call uses the <code>indx</code> dataset output from the 1B program. If you are experiencing much different run times and the servers are not over loaded, then there is likely an issue with how you have set up the directories. A first good check is to make sure you are utilizing the local <code>agesasscratch#</code> disks for as much of the writing as possible. This can speed processing times by a factor of two easily. Note that the times given here cover all Medicare data years for each file type.</p>
+<table>
+<thead>
+<tr>
+<th>Program</th>
+<th>5%</th>
+<th>20%</th>
+<th>100%</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Programs found in the <code>1A_flag_candidate_evnt</code> folder  (some are optional)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>ip_candidates.sas</code></td>
+<td>14</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>medpar_candidates.sas</code></td>
+<td>5</td>
+<td></td>
+<td>240</td>
+</tr>
+<tr>
+<td><code>opcandidatest.sas</code></td>
+<td>38</td>
+<td></td>
+<td>&lt;1700</td>
+</tr>
+<tr>
+<td><code>carrier_candidates.sas</code></td>
+<td>78</td>
+<td>370</td>
+<td></td>
+</tr>
+<tr>
+<td>Program found in <code>1cohort_extraction</code></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>1B_impose_restrictions.sas</code></td>
+<td>30</td>
+<td>45</td>
+<td>60</td>
+</tr>
+<tr>
+<td>Programs found in the <code>1C_pull_claims</code> folder</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>ip_clm_window.sas</code></td>
+<td>1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>medpar_clm_window.sas</code></td>
+<td>5</td>
+<td>&lt;50</td>
+<td>&lt;190</td>
+</tr>
+<tr>
+<td><code>op_clm_window.sas</code></td>
+<td>28</td>
+<td>&lt;1000</td>
+<td>&lt;1700</td>
+</tr>
+<tr>
+<td><code>carrier_clm_window.sas</code></td>
+<td>28</td>
+<td>&lt;350</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Table 3.2 Program run times (estimates) in minutes for an AMI cohort running all available years</p>
+<h2 id="adding-new-variables-to-the-extract">Adding new variables to the extract<a class="headerlink" href="#adding-new-variables-to-the-extract" title="Permanent link">&para;</a></h2>
+<p>The current version of the code uses a series of tab delimited text files which have crosswalks between the final harmonized variable of interest and the raw variable name in the medicare claims files for each year. In addition, the crosswalk notes the max length of the variable, whether the variable is defined as a number or character and whether or not the variable was generated. A series of SAS macros take the information held within these crosswalks and generate a harmonized data set.</p>
+<p>Looking at the <code>.lst</code> file for any extraction program prints out the crosswalk which has the convenience of providing the exact crosswalk used for the current program.</p>
+<p>Using text file crosswalk has the added convenience that adding a new file to the extracts is extremely easy as long as the variable is not changing from numeric to character or vice versa during the time period. Even in this latter case the process is simple although a bit more involved. Assuming that the variable stays the same type throughout the time period of interest simply add a row to the crosswalk file and the program will generate the new file for you. The cross walks can be found in the <code>claim_xw</code> folder.</p>
+<p>The latest version no longer uses views and the files are harmonized and saved on the servers - this save considerable run times.</p>
+<table>
+<thead>
+<tr>
+<th>Program</th>
+<th>Crosswalk Files</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Medpar*.sas</code></td>
+<td><a href="https://www.nber.org/medicare/public/unzipped/claim_xw/medparxw.txt">medparxw.txt</a></td>
+</tr>
+<tr>
+<td><code>Ip*.sas</code></td>
+<td><a href="https://www.nber.org/medicare/public/unzipped/claim_xw/ipxw.txt">ipxw.txt</a></td>
+</tr>
+<tr>
+<td><code>Op*.sas</code></td>
+<td><a href="https://www.nber.org/medicare/public/unzipped/claim_xw/opxw.txt">opxw.txt</a></td>
+</tr>
+<tr>
+<td><code>Carrier*.sas</code></td>
+<td><a href="https://www.nber.org/medicare/public/unzipped/claim_xw/carrierxw.txt">carrierxw.txt</a></td>
+</tr>
+</tbody>
+</table>
+<p>Table 3.4 Crosswalk text files used by the claims files</p>
+<h2 id="using-git">Using Git<a class="headerlink" href="#using-git" title="Permanent link">&para;</a></h2>
+<p>For NBER users working on the NBER servers who have pulled the code using the <code>git clone</code> command, there are several other useful features which Git affords you. To begin with Git is a distributed revision control system which is similar to SVN with the exception that it is distributed. This basically means that each instance of Git pulls the entire code history which allows users to easily look at the entire history of change made to a file by typing in <code>git log -p direc/filename.here</code>. The power of Git is in the fact that it allows you to easily share/compare code with other users and easily created branches to your code to test certain features and avoid messing with working code. To begin with you can always type <code>git log</code> to see the most recent commit and version of the code you are using.</p>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../2_Background/" title="Description of Claims Files" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Description of Claims Files
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../4_constructing_extracts/" title="Constructing Extracts with SAS" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Constructing Extracts with SAS
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.cae2244d.js"></script>
+      
+      <script>app.initialize({version:"0.17.2",url:{base:"../.."}})</script>
+      
+        <script src="../../js/helpers.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      
+    
+    
+      
+    
+  </body>
+</html>

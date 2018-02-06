@@ -1,0 +1,1228 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Extra Medicare Documentation">
+      
+      
+        <link rel="canonical" href="https://kylebarron.github.io/medicare-documentation/NBER_website/4_constructing_extracts/">
+      
+      
+        <meta name="author" content="Kyle Barron">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.2, mkdocs-material-2.2.6">
+    
+    
+      
+        <title>Constructing Extracts with SAS - Medicare Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.6525f7f6.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.792431c1.css">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,400i,700|Fira+Code">
+        <style>body,input{font-family:"Nunito Sans","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Fira Code","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+    
+    
+    
+      <body data-md-color-primary="orange" data-md-color-accent="light-blue">
+    
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://kylebarron.github.io/medicare-documentation/" title="Medicare Documentation" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">local_library</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Medicare Documentation
+              </span>
+              <span class="md-header-nav__topic">
+                Constructing Extracts with SAS
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">&#xE5CD;</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/kylebarron/medicare-documentation/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      medicare-documentation
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../.." title="Home" class="md-tabs__link">
+        Home
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../1_Overview/" title="NBER Documentation" class="md-tabs__link md-tabs__link--active">
+          NBER Documentation
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../resdac/mbsf/" title="ResDAC Documentation" class="md-tabs__link">
+          ResDAC Documentation
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../kyle/goals-for-modern-data-format/" title="Working with the Data" class="md-tabs__link">
+          Working with the Data
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../mauricio/enrollment-restrictions/" title="Important Details" class="md-tabs__link">
+          Important Details
+        </a>
+      
+    </li>
+  
+
+      
+        
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <i class="md-icon">local_library</i>
+      
+    </span>
+    Medicare Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/kylebarron/medicare-documentation/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      medicare-documentation
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      NBER Documentation
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        NBER Documentation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1_Overview/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2_Background/" title="Description of Claims Files" class="md-nav__link">
+      Description of Claims Files
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../3_Getting_started_with_SAS/" title="Getting Started with SAS" class="md-nav__link">
+      Getting Started with SAS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Constructing Extracts with SAS
+      </label>
+    
+    <a href="./" title="Constructing Extracts with SAS" class="md-nav__link md-nav__link--active">
+      Constructing Extracts with SAS
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" title="Overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flagging-candidate-index-events" title="Flagging candidate index events" class="md-nav__link">
+    Flagging candidate index events
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#defining-the-final-set-of-candidate-index-events" title="Defining the final set of candidate index events" class="md-nav__link">
+    Defining the final set of candidate index events
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pulling-harmonized-claims-around-the-index-events-1c_pull_claims" title="Pulling harmonized claims around the index events 1C_pull_claims" class="md-nav__link">
+    Pulling harmonized claims around the index events 1C_pull_claims
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extracting-harmonized-medpar-claims" title="Extracting harmonized MedPAR claims" class="md-nav__link">
+    Extracting harmonized MedPAR claims
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extracting-harmonized-carrierphysician-line-items" title="Extracting harmonized Carrier/Physician line items" class="md-nav__link">
+    Extracting harmonized Carrier/Physician line items
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extracting-harmonized-outpatient-claims-and-revenue-centers" title="Extracting harmonized outpatient claims and revenue centers" class="md-nav__link">
+    Extracting harmonized outpatient claims and revenue centers
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../5_manipulating_medicare_extracts/" title="Manipulating Extracts with SAS" class="md-nav__link">
+      Manipulating Extracts with SAS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../6_costs/" title="Generating Costs Measures" class="md-nav__link">
+      Generating Costs Measures
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../7_references/" title="References" class="md-nav__link">
+      References
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../8_appendix/" title="Appendix" class="md-nav__link">
+      Appendix
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-9" type="checkbox" id="nav-2-9">
+    
+    <label class="md-nav__link" for="nav-2-9">
+      Variable Names Crosswalk
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-9">
+        Variable Names Crosswalk
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../opxw/" title="Outpatient" class="md-nav__link">
+      Outpatient
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      ResDAC Documentation
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        ResDAC Documentation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../resdac/mbsf/" title="Beneficiary Summary File" class="md-nav__link">
+      Beneficiary Summary File
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../resdac/carrier-rif/" title="Carrier RIF" class="md-nav__link">
+      Carrier RIF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../resdac/denominator-rif/" title="Denominator RIF" class="md-nav__link">
+      Denominator RIF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../resdac/dme-rif/" title="Durable Medical Equipment RIF" class="md-nav__link">
+      Durable Medical Equipment RIF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../resdac/hha-rif/" title="Home Health Agency RIF" class="md-nav__link">
+      Home Health Agency RIF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../resdac/hospice-rif/" title="Hospice RIF" class="md-nav__link">
+      Hospice RIF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../resdac/ip-rif/" title="Inpatient RIF" class="md-nav__link">
+      Inpatient RIF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../resdac/medpar-rif/" title="MedPAR RIF" class="md-nav__link">
+      MedPAR RIF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../resdac/op-rif/" title="Outpatient RIF" class="md-nav__link">
+      Outpatient RIF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../resdac/snf-rif/" title="Skilled Nursing Facility RIF" class="md-nav__link">
+      Skilled Nursing Facility RIF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../resdac/variables/" title="Variable Definitions" class="md-nav__link">
+      Variable Definitions
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Working with the Data
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Working with the Data
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../kyle/goals-for-modern-data-format/" title="Goals for New Data Format" class="md-nav__link">
+      Goals for New Data Format
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../kyle/01medicare_readme/" title="Standard Readme" class="md-nav__link">
+      Standard Readme
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../kyle/extract_data/" title="Data Extraction Overview" class="md-nav__link">
+      Data Extraction Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../kyle/data_locations/" title="Data Locations" class="md-nav__link">
+      Data Locations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../kyle/python_extract/" title="Python Extraction" class="md-nav__link">
+      Python Extraction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../kyle/using-tmux-aging-servers/" title="Using tmux for long-running jobs" class="md-nav__link">
+      Using tmux for long-running jobs
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Important Details
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Important Details
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mauricio/enrollment-restrictions/" title="Enrollment Restrictions" class="md-nav__link">
+      Enrollment Restrictions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mauricio/lag-post-event-spending/" title="Calculating Costs for Inpatient Visits" class="md-nav__link">
+      Calculating Costs for Inpatient Visits
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../glossary/" title="Glossary" class="md-nav__link">
+      Glossary
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" title="Overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flagging-candidate-index-events" title="Flagging candidate index events" class="md-nav__link">
+    Flagging candidate index events
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#defining-the-final-set-of-candidate-index-events" title="Defining the final set of candidate index events" class="md-nav__link">
+    Defining the final set of candidate index events
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pulling-harmonized-claims-around-the-index-events-1c_pull_claims" title="Pulling harmonized claims around the index events 1C_pull_claims" class="md-nav__link">
+    Pulling harmonized claims around the index events 1C_pull_claims
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extracting-harmonized-medpar-claims" title="Extracting harmonized MedPAR claims" class="md-nav__link">
+    Extracting harmonized MedPAR claims
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extracting-harmonized-carrierphysician-line-items" title="Extracting harmonized Carrier/Physician line items" class="md-nav__link">
+    Extracting harmonized Carrier/Physician line items
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extracting-harmonized-outpatient-claims-and-revenue-centers" title="Extracting harmonized outpatient claims and revenue centers" class="md-nav__link">
+    Extracting harmonized outpatient claims and revenue centers
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/kylebarron/medicare-documentation/blob/master/docs/NBER_website/4_constructing_extracts.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="constructing-the-extracts-in-sas">Constructing the Extracts in SAS<a class="headerlink" href="#constructing-the-extracts-in-sas" title="Permanent link">&para;</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This documentation is ported from NBER documentation <a href="https://www.nber.org/medicare/public/Public-4.html">here</a>, written by Maurice Dalton.</p>
+</div>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>The goal of the project is to create a series of SAS programs which extract a Medicare cohort which are scalable to the 100 percent Medicare claims files. The initial cohorts are extracted from the files in SAS. Next a series of SAS programs process the original extracts until information has been sufficiently aggregated to the index level, resulting in substantially reduced file sizes. Finally the data is transferred to Stata using Stat/Transfer. Note that SAS is the recommended program for extracting the cohorts and manipulating the data. Using SAS has the benefit of allowing your code to be easily extensible to a larger extract because SAS does not have the same memory constraints as Stata.</p>
+<p>The extraction programs use SAS scripts, corresponding to the MedPAR files (based on the Inpatient/SNF claims) and the Carrier, Outpatient, and denominator claims. First the onset of a disease is identified using the programs found in the folder <a href="https://www.nber.org/medicare/public/unzipped/1cohort_extraction/1A_flag_candidate_evnt/"><code>1A_flag_candidate_evnt</code></a> . Users have the option of using claims from Inpatient, Medpar, Outpatient and/or carrier files to define candidate index events. These disease events are indexed and used to pull claims from the MedPAR, Carrier and Outpatient files after a series of enrollment restrictions are place on the beneficiaries using the denominator file. Next a series of scripts provide information on (1) comorbidities, (2) costs, (3) procedures and (4) cost utilization measures .</p>
+<p>In order to preserve the integrity of the SAS data files, the NBER has split the claims data into smaller compressed file parts per year. The SAS programs decompress one part at a time, manipulates it, saves the relevant observations and then deletes the original. While this type of iterative procedure saves on system resources, it can make the code difficult to follow because the program consists of a series of iterative macros defined to process one part at a time and finally combine them in a final step. Note that pre-2006 MedPAR files have not been chunked because of their relative size, where as the rest of the claims have been. Beginning in 2006 the MedPAR files will also be chunked.</p>
+<p>In the case of a program crash or a partial run, the program will need to be run again. Rerunning the program in turn will cause SAS to automatically overwrite the log file, which has important information about how the data set was constructed. Care should be taken when debugging the program to make sure log files of interest are not overwritten.</p>
+<p>Even if you successfully run the program, and then decide to run a separate extraction program SAS will overwrite the log file in the directory you are working in. For this reason, the programs automatically create a new folder and copies the log and lst file to the folder at the end of each run after tagging them with the date, years run and cohort of interest. Note that if you are running several cohorts the log file is simply copied at the end of the cohort loop and in some cases the full log file information - including total time run - will only be present on the log file of the last cohort.</p>
+<h2 id="flagging-candidate-index-events">Flagging candidate index events<a class="headerlink" href="#flagging-candidate-index-events" title="Permanent link">&para;</a></h2>
+<p>Folder: <a href="https://www.nber.org/medicare/public/unzipped/1cohort_extraction/1A_flag_candidate_evnt/"><code>1A_flag_candidate_evnt</code></a></p>
+<p>Before running any programs a cohort needs to be defined. This means defining the combination of HCPCS and ICD9-CM codes used to define a specific variable. At the same time the choice of HCPCS or ICD9-CM codes will depend on which claims files are used to pull potential candidate index events from. In many cases individuals choose to uses the primary diagnostic code from an inpatient stay, which can be found either on the Inpatient claims or the MedPAR file.</p>
+<p>For example, limiting the sample to AMIs hospitalized will ensure that the AMIs being studied demark a clean start to a new episode of care, since nearly all AMIs are hospitalized soon after onset (unless the victim dies).</p>
+<p>The first step in the AMI example is to generate a sample of candidate index events, after which denominator information can be merged in with to enforce enrollment restriction of interest. Therefore for this example only the the <a href="https://www.nber.org/medicare/public/unzipped/1cohort_extraction/1A_flag_candidate_evnt/medpar_candidates.sas"><code>medpar_candidates.sas</code></a> will be run. Since this program only calls the <a href="https://www.nber.org/medicare/public/unzipped/1cohort_extraction/1A_flag_candidate_evnt/icd9_chrt_definition.sas"><code>icd9_chrt_definition.sas</code></a> codes, code has been included there which flags a potential AMI admission if it meets two criteria. The restriction to the principal diagnosis (first ICD9-CM code) is done in the <a href="https://www.nber.org/medicare/public/unzipped/1cohort_extraction/1A_flag_candidate_evnt/medpar_candidates.sas"><code>medpar_candidates.sas</code></a> program.</p>
+<ol>
+<li><strong>The first ICD-9-CM diagnosis code on the MedPAR record corresponds to an initial episode of care for an AMI.</strong> The first diagnosis code on the record reports the primary reason for hospitalization. Since an AMI will almost always be the primary reason for hospitalization when present, AMI admissions can be readily identified using this field. ICD-9-CM diagnosis codes for the initial episode of AMI care are those with the first three digits 410 and fifth digit (if present) equal to 0 or 1. However it is important to note that the code allows you to define an encounter on principal plus any number of secondary diagnoses for exploratory purposes. If secondary diagnosis codes are used to identify the index event, in addition to the principal diagnosis the parameter <code>&amp;dgnPos.</code> in the wrapper macro call simply needs to be changed.</li>
+<li><strong>The admission occurred at a hospital, not a skilled nursing facility.</strong> This restriction is imposed because it is unlikely that an AMI would result in an initial admission to a skilled nursing facility, rather than an acute care hospital. These AMIs are flagged and dropped.</li>
+</ol>
+<p>Note that the following figure describes the role of the <code>dgnPos</code> and <code>prcPos</code> parameters in the wrapper programs. Note that carrier candidate file only allows users to define <code>drgPos</code> because the HCPCS codes happen at the line items level and there is no meaningful ranking to procedures performed on the same day.</p>
+<div class="codehilite"><pre><span></span><span class="cm">/* dgnPos=1 — informs the programs to only flag diagnostic</span>
+<span class="cm">             codes in the first diagnostic position</span>
+<span class="cm">             (most important). A 2 would have the program look</span>
+<span class="cm">             into the first 2 procedure diagnostic codes */</span>
+<span class="cm">/* prcPos=0 — informs the programs that no procedure code are</span>
+<span class="cm">             being used to define cohort. Turns off the use</span>
+<span class="cm">             of procedure codes. */</span>
+<span class="nf">%TagcandidateIndexEvents</span>(
+    cohrt1 =ami,
+    cohrtN =<span class="m">1</span>,
+    dgnPos =<span class="m">1</span>,
+    prcPos =<span class="m">0</span>,
+    pct    =<span class="m">05</span>,
+    yearin =<span class="m">1999</span>,
+    yearout=<span class="m">2009</span>,
+    dflag  =<span class="m">1</span>,
+    clmDTA =<span class="m">0</span>);
+</pre></div>
+
+
+<p>Figure 4.1 <code>medpar_candidates.sas</code> wrapper to only flag the principal diagnosis</p>
+<p>Each candidate program generates a data set at the stay, claim or line item depending on which files you are working with.</p>
+<ol>
+<li><code>ami05_d1p0_medparcandidate</code>: stay level candidates.</li>
+<li><code>ami05_d1p0_opcandidate</code>: claims level candidates.</li>
+<li><code>ami05_d1_carcandidate</code>: line item level candidates.</li>
+<li><code>ami05_d1p0_ipcandidate</code>: claims level candidates.</li>
+</ol>
+<h2 id="defining-the-final-set-of-candidate-index-events">Defining the final set of candidate index events<a class="headerlink" href="#defining-the-final-set-of-candidate-index-events" title="Permanent link">&para;</a></h2>
+<p>Program: <a href="https://www.nber.org/medicare/public/unzipped/1cohort_extraction/1B_impose_restrictions.sas"><code>1B_impose_restrictions.sas</code></a></p>
+<p>The first section describes the basic steps involved in flagging candidate index events for an AMI. However not all candidates are usable especially if our interest is in tracking costs over time. The issue is that since, Medicare Advantage costs are not included in the claims files, patients switching in and out of FFS will have inaccurate costs. For that reason the following step performed by the <a href="https://www.nber.org/medicare/public/unzipped/1cohort_extraction/1B_impose_restrictions.sas"><code>1B_impose_restrictions.sas</code></a> programs merges in denominator information and restricts the sample the final set of index events.</p>
+<p>Three data files are used to construct this part of the extract:</p>
+<ol>
+<li>Denominator file: This is an annual file that includes a record for each individual enrolled in Medicare Part A or Medicare Part B during the year. It provides demographic information, including sex, race, date of birth, and date of death (if any) and monthly data on the individual's enrollment status, including whether the individuals' benefits were provided through a private plan.</li>
+<li>Candidate index event file: This file is generated from the previous step. This step merges the data together and enforces a priority ranking so that index events happening on the same day are assigned to the claims file of interest.</li>
+</ol>
+<p>Before any restrictions are place on the data, the program first merges all of the candidate index events, since it is now possible to use several files. The wrapper program for defining this has many parameters. The AMA example is given in the following figure. Note that first off since only the MedPAR file is used the the med= parameter is set to <code>1</code> with the rest set to <code>0</code>. Also the <code>med_dgnPos=</code> and <code>med_prcPos=</code> parameters need to match that found in the <code>medpar_candidates.sas</code> program.</p>
+<div class="codehilite"><pre><span></span><span class="nf">%CombinecandidateIndxEvents</span>(
+    cohrt      = ami,
+    pct        = <span class="m">05</span>,
+    <span class="k">end</span>        = <span class="m">2009</span>,
+    ip         = <span class="m">0</span>,
+    ip_dgnPos  = <span class="m">0</span>,
+    ip_prcPos  = <span class="m">0</span>,
+    med        = <span class="m">1</span>,
+    med_dgnPos = <span class="m">1</span>,
+    med_prcPos = <span class="m">0</span>,
+    car        = <span class="m">0</span>,
+    car_dgnPos = <span class="m">0</span>,
+    op         = <span class="m">0</span>,
+    op_dgnPos  = <span class="m">0</span>,
+    op_prcPos  = <span class="m">0</span>);
+</pre></div>
+
+
+<p>Figure 4.2 <code>medpar_candidates.sas</code> wrapper to only flag the principal diagnosis</p>
+<p>The approach used to defining the sample roughly follows Udvarhelyi et al. (1992), McClellan (1993), McClellan et al. (1994), and McClellan and Newhouse (1997)<sup id="fnref:24"><a class="footnote-ref" href="#fn:24" rel="footnote">1</a></sup>. A major restriction is based on enforcing continuous non-HMO enrollment which accounts for a large percent of candidate index events dropping form the sample. The second most important restriction involves allowing the same individual to have more then one index event in the final index set, as long as the candidate events happened at least one year apart. Correspondingly, the procedure includes an AMI in the final sample if the following criteria are met <sup id="fnref:25"><a class="footnote-ref" href="#fn:25" rel="footnote">2</a></sup>:</p>
+<ol>
+<li>There is no evidence of another AMI admission in the last year. The assumption very important because it defines the amount of time which needs pass between events in order for them to be classified as separate or related. In addition, it also deals with the issue of transfers to some effect. <strong>Control via the <code>subsquentDgnDayRest</code> in <code>X</code> days.</strong></li>
+<li>The individual is continuously enrolled in Parts A and B of traditional Medicare (rather than a Medicare private plan) during the twelve months before AMI and until twelve months after AMI, or until death, whichever comes first. Requiring continuous enrollment before AMI ensures that any AMI occurring during the prior year would indeed appear in the MedPAR file. Requiring continuous enrollment after AMI ensures that the claims files cover all post-AMI service utilization. This continuous enrollment requirement also implies that the earliest AMI included in the data set will be plus 1 year from the first year of the analysis. The last point will correspond to minus 1 year from the last year of data used in the analysis. Finally, note that excluding individuals who were enrolled in a Medicare private plan before or after AMI may not be innocuous. As noted above, the share of Medicare enrollees enrolled in traditional Medicare changes meaningfully over time and selection into private plans is thought to be non-random. While there is probably not a good alternative to excluding these individuals, this feature of the extract should be kept in mind during analysis. <strong>Control via the <code>contHMOmonth</code> and <code>contFFSmonth</code> parameters. Note that it enforces a <code>X</code> month window on each side of the index event.</strong></li>
+<li>The individual is at least 66 years of age at the time of the AMI. This restriction excludes individuals who are either: 1) currently eligible for Medicare on the basis of disability; or 2) meet the continuous Medicare enrollment requirement only because they were eligible for Medicare on the basis of disability before turning 65. This ensures that the resulting sample is basically representative of the old-age Medicare population (except for 65 year olds). <strong>Hard coded.</strong></li>
+</ol>
+<p>The following code shows that in addition to defining the cohort with some combination of procedure or diagnostic codes, years of interest and percent of sample, the code also allows for users to tweak the first continuous enrollment restrictions and the days which need to pass before index events before a new index event for a patient can be defined.</p>
+<div class="codehilite"><pre><span></span><span class="nf">%ImposeSampleRest</span>(cohrt=ami,pct=<span class="m">05</span>,start=<span class="m">1999</span>,<span class="k">end</span>=<span class="m">2009</span>,
+<span class="m">2</span>                  subsquentDgnDayRest=<span class="m">365</span>,
+<span class="m">3</span>                  contHMOmonthpre=<span class="m">12</span>,contHMOmonthpost=<span class="m">12</span>,
+<span class="m">4</span>                  contFFSmonthpre=<span class="m">12</span>,contFFSmonthpost=<span class="m">12</span>);
+</pre></div>
+
+
+<p>Figure 4.3 <code>medpar_candidates.sas</code> wrapper to only flag the principal diagnosis</p>
+<p>The only complication in obtaining this demographic and enrollment data is that the names and formats of variables in the denominator file change somewhat over time and differ from those in the enrollment file. The file <a href="https://www.nber.org/medicare/public/unzipped/SASmacros/ConformDenom.sas"><code>ConformDenom.sas</code></a> contains the macro used to convert the denominator files into a common format. The differences between the format of the denominator files are handled directly in <a href="https://www.nber.org/medicare/public/unzipped/0pre_process/enroll_denomFiles/CreatePopDenominatorFile.sas"><code>CreatePopDenominatorFile.sas</code></a>. Running this program once for the entire population is recommended for users constructing a Medicare repository.</p>
+<p>The exact portion of the code which enforces these restrictions in the code can be found in the following figure. Note that the data set with these flags created but without dropping any variables is available in the data set created by the <code>1B_ImposeDenominatorRestrictions.sas</code> program. The data set is stored in the index extract folder and is labeled <code>&amp;cohrt.&amp;pct._candidateflag</code> (i.e. <code>ami05_candidateflag</code>).</p>
+<div class="codehilite"><pre><span></span><span class="cm">* Implement criteria for including diags like those in</span>
+<span class="cm">* McClellan and Newhouse and Udvarhelyi, et al.;</span>
+<span class="cm">    * 1) Must be no other diag admission in the last year</span>
+<span class="cm">    * 2) Must have traditional Medicare enrollment for a</span>
+<span class="cm">         X-month (X+1+X) window around index event;</span>
+<span class="c">    * 3) Must be 66 at the time of the diag;</span>
+<span class="c">    * 4) Has a date of death on or after the diag date;</span>
+<span class="c">    * 5) Has a valid date of birth;</span>
+        <span class="k">if</span>  (<span class="k">not</span> diagLastYear <span class="k">and</span>
+             contEnrol_post <span class="k">and</span>
+             contEnrol_pre <span class="k">and</span>
+             ageAtdiag &gt;= <span class="m">66</span> <span class="k">and</span>
+             <span class="k">not</span> dob<span class="kc">Missing</span> <span class="k">and</span>
+             <span class="k">not</span> badDOD)
+        <span class="k">then</span> <span class="k">do</span>;
+            <span class="k">output</span> <span class="k">out</span>.<span class="nv">&amp;diag.&amp;pct.</span>_indx;
+        <span class="k">end</span>;
+</pre></div>
+
+
+<p>Figure 4.4 Sample <code>LongitudinalExtract</code> code: Defining the AMI cohort</p>
+<p>The <a href="https://www.nber.org/medicare/public/unzipped/1cohort_extraction/1B_impose_restrictions.sas"><code>1B_impose_restrictions.sas</code></a> program creates the following files, assuming a 5 percent AMI was run using <code>bene_id</code>s and the principal diagnosis only:</p>
+<ol>
+<li><code>ami05_candidateflag</code>: Data set is unique at the index event level (<code>diag_id</code>) and includes relevant information for the stay associated with the defining index event. The file is created by imposing all of the restrictions on the on the data (unlike the <code>coref</code> file which simply flags the restrictions).</li>
+<li><code>ami05_indx</code>:Data set is unique at the index event level (<code>diag_id</code>). A file containing all of the potential index event candidates observations in addition to the relevant variables used to further restrict the data set. The data set is useful for better understanding how different restrictions impact the final sample. Note the observations in this data set are the same as if all MedPAR (non SNF) observations with a principal AMI ICD9-CM codes are pulled from the data set.</li>
+<li><code>ami05_demo</code>: Data set is unique at the individual level (<code>bene_id</code>). Contains information on enrollment and demographic information. Note includes information on all individuals in the final index event data set plus all individuals qualifying as an index event (observations in the <code>coref</code> data set).</li>
+<li><code>ami05_indxdemo</code>: Data set is unique at the index event level (<code>diag_id</code>). The data set merges relevant demographic information to the index even data set and formats that data further.</li>
+</ol>
+<p>The macros have been arranged in a "wrapper" program, called <code>%RunPrgram</code>, which provides the correct sequencing and allows the macro to run several different types cohorts within a single run.</p>
+<p>After running the <code>%RunPrgram</code> macro, a report writing program contained in a separate SAS file, <code>%CreateReports</code> can be run which provides several reports, see table below. Just make sure to specify the location where the Excel reports should be written to.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Filename</th>
+<th align="left">Description of Report</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>&amp;cohrt._flagcount..xls</code></td>
+<td align="left">Tabulates number of encounters by year for each restriction flag defined (i.e. number of individuals under 65)</td>
+</tr>
+</tbody>
+</table>
+<p>Table 4.1 Description of report created by <code>%CreateReports</code> macro</p>
+<h2 id="pulling-harmonized-claims-around-the-index-events-1c_pull_claims">Pulling harmonized claims around the index events 1C_pull_claims<a class="headerlink" href="#pulling-harmonized-claims-around-the-index-events-1c_pull_claims" title="Permanent link">&para;</a></h2>
+<p>The programs found in the <a href="https://www.nber.org/medicare/public/unzipped/1cohort_extraction/1C_pull_claims"><code>1C_pull_claims</code></a> folder each use the final set of index events defined previously to pull a window of claims around the index event. The is basically the second pass over the claims, the first being used to define the index events. The length of the window can be set by the researcher.</p>
+<h3 id="extracting-harmonized-medpar-claims">Extracting harmonized MedPAR claims<a class="headerlink" href="#extracting-harmonized-medpar-claims" title="Permanent link">&para;</a></h3>
+<p>After the AMI index events are defined, the code makes another pass over the MedPAR files in order to obtain records for all hospital and skilled-nursing facility visits in the period around each AMI. In general, the code selects all visits that start at most one year before AMI and have discharge dates at most one year after AMI<sup id="fnref:26"><a class="footnote-ref" href="#fn:26" rel="footnote">3</a></sup>. However, note that the user can control this via the parameter found in the wrapper macro.</p>
+<p>Some SNF claims indicate that the individual was still a patient at the time the claim was finalized and, correspondingly, have missing discharge dates. For these records, the record is included if the admission date and the length of stay field indicate that the services on the claim occurred within one year of AMI<sup id="fnref:27"><a class="footnote-ref" href="#fn:27" rel="footnote">4</a></sup>.</p>
+<p>Finally, the extract includes any record with an admission date falling on the date of AMI. As part of this selection process, each claims record is tagged with the <code>diag_id</code> for the "AMI episode" of which it is a part.</p>
+<p>Note that, as with files containing enrollment information, the MedPAR variable names and formats change significantly from year to year. The file <a href="https://www.nber.org/medicare/public/unzipped/SASmacros/ConformMedPAR.sas"><code>ConformMedPAR.sas</code></a> contains the macro used to convert the MedPAR files to a common format.</p>
+<p>After all of the raw claims files have been processed, the MedPAR records are put "in order" according to admission and discharge dates. When dates do not permit an unambiguous ordering of the records (e.g. when an individual is admitted to and discharged from multiple hospitals on the same day), the script uses other information on the record, notably admission and discharge status codes, to determine the order in which the various hospital admissions occurred.</p>
+<p>The script uses Stat/Transfer to export the files to Stata, however the additional code is included in the Auxiliary folder which uses SAS XPT files. The preferred method is StatTransfer as it makes use of less disk space and avoids an extra Stata import step. See Step 6 in Appendix B.</p>
+<ol>
+<li><code>ami05_medparclms</code>: Data set us unique at the MedPAR claim/stay level. The data set pulls claims associated with the index events in the file <code>ami05_1_indx_mn_bene_id</code>. Claims one year after and one year before the admission date of the index event are found in this file.</li>
+</ol>
+<h3 id="extracting-harmonized-carrierphysician-line-items">Extracting harmonized Carrier/Physician line items<a class="headerlink" href="#extracting-harmonized-carrierphysician-line-items" title="Permanent link">&para;</a></h3>
+<p>For many projects, including the current one, it is useful to also obtain claims records for services performed by physicians and other non-institutional providers like ambulance operators and laboratories.</p>
+<p>Each year's Carrier file provides detailed information on each service provided, including the type of service (indicated by HCPCS codes), the date of provision, the amount of payment, and the identity of the provider. Different years' Carrier files structure this information in different ways.</p>
+<p>For years 1999 and later, however, the Carrier file begins grouping individual services, or "line items," together into "claims." Typically, a claim consists of a group of services provided by the same physician (or other provider) during a single episode of care. How the files present claim and line item information differs by year.</p>
+<p>For 1999-2001, each Carrier record continues to correspond to a single line item, but each record also contains all claim-level information for the claim of which it is a part. Most fields on the Carrier record appear only at the claim level (e.g. patient's zip code) or only at the line item level (e.g. procedure codes). But some fields appear at both the claim level and the line item level, which can make these years' files treacherous to work with. Most importantly, each record typically includes a field containing the amount paid for the current line item and another field containing the amount paid for all line items in the current claim. Extracting the claim-level payment field rather than the line item-level payment field would lead to dramatic errors.</p>
+<p>Starting with the 2002 Carrier file, CMS splits the Carrier file into two sub files: a "claims" file, which contains one record for each claim and contains all claim-level information; and a "line items" file, which contains one record for each line item and contains the line-item level information as well as unique identifiers that facilitate matching to the claims file. While the split means that processing for these years typically requires a merge, it does make it much clearer which fields are claim-level fields and which are line item fields.</p>
+<p>The script used to process the Carrier file is called <a href="https://www.nber.org/medicare/public/unzipped/1cohort_extraction/carrier_clm_window.sas"><code>carrier_clm_window.sas</code></a>. It first loads the index events ( individual identifiers and diagnosis dates) created and saved by the <a href="https://www.nber.org/medicare/public/unzipped/1cohort_extraction/1B_impose_restrictions.sas"><code>1B_impose_restrictions.sas</code></a>. Next, it uses that information to extract all carrier line items (i.e. individual services) with a start date at most one year before the date of AMI and an end date less than one year after AMI<sup id="fnref:28"><a class="footnote-ref" href="#fn:28" rel="footnote">5</a></sup>. The code excludes all line items with a missing start or end date, which appears to affect only about one in every million claims. In the process of extracting the line items, it tags each one with the <code>diag_id</code> for the "AMI episode" of which it is a part. Finally, the script writes all records to a SAS and Stata file.</p>
+<p><a href="https://www.nber.org/medicare/public/unzipped/1cohort_extraction/carrier_clm_window.sas"><code>carrier_clm_window.sas</code></a> must handle significant differences in variable names and formats across Carrier file years. The SAS macro that handles these differences is contained in the file <a href="https://www.nber.org/medicare/public/unzipped/SASmacros/ConformCarrier.sas"><code>ConformCarrier.sas</code></a>.</p>
+<p>As a final note, keep in mind that, because the Carrier files are extremely large, the code described above can take more than a day to run. There are significant gains to running a program which extracts several diagnosis at once because the file only needs to be unzipped once. The program allows individuals to run several cohorts by adding in different parameters. Furthermore extending the code to other diagnosis cohorts, is straightforward and needs to be coordinated with the <a href="https://www.nber.org/medicare/public/unzipped/1cohort_extraction"><code>1cohort_extraction</code></a> family of scripts. Note that if you do run a multi-disease cohort run, the Carrier program needs a lot of space dedicated to it. Of course these files are temporary and could be deleted afterwards, however one must be careful before firing of the runs. Additionally, due to amount of time the script takes to run and amount of system resources needed it is possible for the program to crash. Hence the code allows the user to start from any date so that, if the code stops unexpectedly, it need not be re-run from the beginning. See the <code>crashStart</code> parameter.</p>
+<p>The <a href="https://www.nber.org/medicare/public/unzipped/1cohort_extraction/carrier_clm_window.sas"><code>carrier_clm_window.sas</code></a> program creates the following files, assuming a 5 percent AMI extract was run using <code>bene_id</code>s and the principal diagnosis only</p>
+<ol>
+<li><code>ami05_carlnits</code>: Data set us unique at the carrier line item level - each index event can have several associated claims, a single claim can have several associated line items. The data set pulls line items associated with the index events in the file <code>ami05_indx</code>. Line items one year after and one year before the admission date of the index event are found in this file. Note that collapsing to the claim level requires collapsing by <code>fileyear</code> and <code>clm_id</code>.</li>
+</ol>
+<h3 id="extracting-harmonized-outpatient-claims-and-revenue-centers">Extracting harmonized outpatient claims and revenue centers<a class="headerlink" href="#extracting-harmonized-outpatient-claims-and-revenue-centers" title="Permanent link">&para;</a></h3>
+<p>Outpatient claim records provide summary information, including the beneficiary's EHIC or beneficiary ID (<code>bene_id</code>), the total amount of reimbursement, relevant ICD-9-CM diagnosis codes, and the start and end dates of the claim. Each claim also includes a series of "revenue center" records, which provide detailed information on each service provided as part of the claim, including the revenue center (i.e. division) of the institution that provided the service, the amount reimbursed for the service.</p>
+<p>For years prior to 2002, revenue center data resided directly on the main claim record. In order that each claim could report dozens of services, each claims record contains dozens of copies of each revenue center field, with the result that some years' files contain upwards of a thousand fields. Since most outpatient claims contain only a handful of individual services, the bulk of these revenue center fields are typically empty. Starting in 2002, CMS began splitting the outpatient file into a "claims" file, which contains the summary information for each claim, and a "revenue center" file, which contains one record for each revenue center. Records in the revenue center file contain a unique identifier that facilitates matching the revenue center record to the corresponding claims record. In many instances a revenue center code of <code>0000</code> is output which corresponds to an empty record. As the code currently exists, these are kept for consistency, however at a later time we may simply choose to get rid of these empty, observations.</p>
+<p>The script <a href="https://www.nber.org/medicare/public/unzipped/1cohort_extraction/1C_pull_claims/op_clm_window.sas"><code>op_clm_window.sas</code></a> processes the outpatient files. The script first loads the list of individual identifiers and AMI dates from the file saved by the 1B sas program. Like the other files, it then selects all claims with start dates at most one year before the AMI date and end dates at most one year after the AMI date. The code drops all claims with a missing start or end date, but this restriction appears to affect virtually no outpatient records. At this point, the script tags all selected claims with the <code>diag_id</code> for the "AMI episode" of which the claim is a part.</p>
+<p>Next, for those years where the revenue center information resides directly on the claims records (i.e. years before 2002), the code takes the revenue center information off of the claims record and instead saves it in a separate revenue center file where each revenue center has its own record. That is, the code reshapes all years' data so that they match the basic format of the post-2002 files. These two files can be merged using the <code>fileyear</code> and <code>claimindex</code> fields as a (compound) unique identifier. The amount the provider charged is taken from the revenue centers and saved in the extract created. In cases where a revenue center code for the total charge exists(<code>0001</code>), the associated charge is simply added to those found on the claims files. In the case where a <code>0001</code> code does not exist, the charge for each revenue center code are summed together. On the other hand, the total amount which Medicare paid for each service is located in a variable which includes the amount reimbursed for all services on a claim (including any revenue center ). These total charge and payment amounts are kept on the extract created.</p>
+<p>The extracts do not create costs/reimbursement variables from the revenue center levels despite the fact that this more granular level costs are available. Again, the costs found in the claims files due however account for all costs found in the revenue center level.</p>
+<p>There are several year-specific complications that arise in generating these files. First, for 1999-2001, a single claim can stretch across multiple records if the total number of revenue center records in the claim exceeds the number of available revenue center fields in a single record. Thus, throughout, the code makes special provision for handling these records<sup id="fnref:32"><a class="footnote-ref" href="#fn:32" rel="footnote">6</a></sup>. Finally, as with the other files, variable names and formats change from year to year. The SAS macro contained in <a href="https://www.nber.org/medicare/public/unzipped/SASmacros/ConformOp.sas"><code>ConformOp.sas</code></a> handles these differences.</p>
+<p>As with the Carrier file, processing the outpatient files takes a significant amount of time. For this reason, the outpatient code, like the Carrier code, saves data at various intermediate stages. These intermediate save points often allow the script to be started mid-way through after a crash. The code is able to start at any midyear crash point, by simply adding the year to restart the run to the parameter <code>crashStart</code>. That will cause the program to restart the year you indicate in <code>crashStart</code> and then merge all of the results together from the original start and end years ( identified by the yearin and yearout parameters).</p>
+<p>The op_clm_window.sas program creates the following files, assuming a 5 percent AMI extract was run using <code>bene_id</code>s and the principal diagnosis only:</p>
+<ol>
+<li><code>ami05_opclms</code>: Data set is unique at the outpatient claim level. The data set pulls OP claims associated with the index events in the file <code>ami05_indx</code>. Claims one year after and one year before the admission date of the index event are found in this file.</li>
+<li><code>ami05_oprevcntrs</code>: Data set us unique at revenue center level — each index event can have several claims, a single claim can have several different revenue centers related to it. The data set pulls revenue centers associated outpatient claims from the above data set (<code>opcmls</code>).</li>
+</ol>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:24">
+<p>The code also includes an approach based upon Skinner, Staiger, and Fisher (2005), which aims to construct a data set of individuals having first AMIs.&#160;<a class="footnote-backref" href="#fnref:24" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:25">
+<p>Two additional data-quality requirements are also imposed: 1) The individual's death date (if listed) must be after the date of the AMI admission; and 2) The individual must have a valid date of birth. These restrictions affect a very small number of individuals.&#160;<a class="footnote-backref" href="#fnref:25" rev="footnote" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:26">
+<p>The date of discharge rather than date of admission is used to define the post-AMI period in order to ensure that AMIs that occur in the file year of the data are treated symmetrically to those in earlier years. In particular, suppose that the end of the post-AMI period was instead determined by the date of admission and consider an individual who experiences an AMI in late 2004 who is re-admitted to the hospital in late 2005. If this hospitalization were to last into 2006, it would reported in the 2006 claims file and, thus, fall outside of the set of hospitalizations observed here.&#160;<a class="footnote-backref" href="#fnref:26" rev="footnote" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:27">
+<p>In addition, for these records, the final extract sets the discharge date field equal to the admission date plus the length of stay (minus 1 day) since it is useful to be able to treat the discharge date as a "claim end" date rather than a true discharge date.&#160;<a class="footnote-backref" href="#fnref:27" rev="footnote" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:28">
+<p>The start and end dates of carrier line items are often equal or within just a couple of days of each other. Thus, it makes relatively little difference precisely which date is used.&#160;<a class="footnote-backref" href="#fnref:28" rev="footnote" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:32">
+<p>Keeping together claims that stretch across multiple records requires a unique claim identifier. The ResDAC website suggests that the fields <code>daily_dt</code> and <code>link_num</code> together form a unique claim identifier in the 1999-2001 outpatient records. Examining the data file suggests, however, that this is not actually the case. In place of these fields, the code uses the “claim control number” as a unique identifier. This field uniquely identifies claims, but also takes on a common value for all segments of the same claim.&#160;<a class="footnote-backref" href="#fnref:32" rev="footnote" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../3_Getting_started_with_SAS/" title="Getting Started with SAS" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Getting Started with SAS
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../5_manipulating_medicare_extracts/" title="Manipulating Extracts with SAS" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Manipulating Extracts with SAS
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.cae2244d.js"></script>
+      
+      <script>app.initialize({version:"0.17.2",url:{base:"../.."}})</script>
+      
+        <script src="../../js/helpers.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      
+    
+    
+      
+    
+  </body>
+</html>
