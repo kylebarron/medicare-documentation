@@ -7,8 +7,8 @@ docs_dir: 'docs'
 site_dir: 'site'
 
 # Repository
-# repo_name: 'medicare-documentation'
-# repo_url: 'https://github.com/kylebarron/medicare-documentation'
+repo_name: 'medicare-documentation'
+repo_url: 'https://github.com/kylebarron/medicare-documentation'
 
 # Layout
 pages:
