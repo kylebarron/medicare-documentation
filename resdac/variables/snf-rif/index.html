@@ -15027,7 +15027,7 @@ The CWFMQA front-end was fixed. The Nearline was patched during the quarterly me
 <li><a href="../../hospice-rif/#data-documentation">Hospice RIF</a></li>
 <li><a href="../../hha-rif/#data-documentation">Home Health Agency RIF</a></li>
 </ul>
-<p>The amount related to the condition identified in the CLM_VAL_CD which was used by the intermediary to process the institutional claim.</p>
+<p>The amount related to the condition identified in the <code>CLM_VAL_CD</code> which was used by the intermediary to process the institutional claim.</p>
 <h3>Values</h3>
 
 <table>
@@ -15535,7 +15535,7 @@ Demo ID = 38 (Physician Encounter Claims) -- text field will contain the MCO pla
 <li><a href="../../dme-rif/#data-documentation">Durable Medical Equipment RIF</a></li>
 <li><a href="../../carrier-rif/#data-documentation">Carrier RIF</a></li>
 </ul>
-<p>The unique CCW indentifier for a beneficiary. The CCW assigns a unique beneficiary identification number to each individual who receives Medicare and/or Medicaid, and uses that number to identify an individual’s records in all CCW data files (e.g., Medicare claims, MAX claims, MDS assessment data). This number does not change during a beneficiary’s lifetime and each number is used only once. The BENE_ID is specific to the CCW and is not applicable to any other identification system or data source.</p>
+<p>The unique CCW indentifier for a beneficiary. The CCW assigns a unique beneficiary identification number to each individual who receives Medicare and/or Medicaid, and uses that number to identify an individual’s records in all CCW data files (e.g., Medicare claims, MAX claims, MDS assessment data). This number does not change during a beneficiary’s lifetime and each number is used only once. The <code>BENE_ID</code> is specific to the CCW and is not applicable to any other identification system or data source.</p>
 <h2 id="fi-claim-process-date"><a href="https://www.resdac.org/cms-data/variables/FI-Claim-Process-Date">FI Claim Process Date</a><a class="headerlink" href="#fi-claim-process-date" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Short SAS Name: <code>FI_CLM_PROC_DT</code></li>
@@ -15563,7 +15563,7 @@ Demo ID = 38 (Physician Encounter Claims) -- text field will contain the MCO pla
 <li><a href="../../hospice-rif/#data-documentation">Hospice RIF</a></li>
 <li><a href="../../hha-rif/#data-documentation">Home Health Agency RIF</a></li>
 </ul>
-<p>The identification number assigned by CMS to a fiscal intermediary authorized to process institutional claim records. Effective October 2006, the Medicare Administrative Contractors (MACs) began replacing the existing fiscal intermediaries and started processing institu- tional claim records for states assigned to its jurisdiction. NOTE: The 5-position MAC number will be housed in the existing FI_NUM field. During the transition from an FI to a MAC the FI_NUM field could contain either a FI number or a MAC number. See the FI_NUM table of codes to identify the new MAC numbers and their effective dates.</p>
+<p>The identification number assigned by CMS to a fiscal intermediary authorized to process institutional claim records. Effective October 2006, the Medicare Administrative Contractors (MACs) began replacing the existing fiscal intermediaries and started processing institu- tional claim records for states assigned to its jurisdiction. NOTE: The 5-position MAC number will be housed in the existing <code>FI_NUM</code> field. During the transition from an FI to a MAC the <code>FI_NUM</code> field could contain either a FI number or a MAC number. See the <code>FI_NUM</code> table of codes to identify the new MAC numbers and their effective dates.</p>
 <h3>Values</h3>
 
 <p>JURISDICTION 3 - Part A MACs</p>
@@ -16485,7 +16485,7 @@ Based on the presence of value code equal to '06' move the corresponding value a
 <li><a href="../../hospice-rif/#data-documentation">Hospice RIF</a></li>
 </ul>
 <p>On an inpatient or Home Health claim, the date the beneficiary was discharged from the facility, or died.</p>
-<p>Date matches the "thru" date on the claim (CLM_THRU_DT). When there is a discharge date, the discharge status code (PTNT_DSCHRG_STUS_CD) indicates the final disposition of the patient after discharge.</p>
+<p>Date matches the "thru" date on the claim (<code>CLM_THRU_DT</code>). When there is a discharge date, the discharge status code (<code>PTNT_DSCHRG_STUS_CD</code>) indicates the final disposition of the patient after discharge.</p>
 <details class="derivation"><summary>Derivation</summary><p>DERIVED FROM:
 NCH_PTNT_STUS_IND_CD
 CLM_THRU_DT</p><p>DERIVATION RULES:
@@ -18143,7 +18143,7 @@ Based on the presence of occurrence code 74, 76, 77 or 79 move the related occur
 <li><a href="../../hospice-rif/#data-documentation">Hospice RIF</a></li>
 <li><a href="../../hha-rif/#data-documentation">Home Health Agency RIF</a></li>
 </ul>
-<p>The code used to identify the status of the patient as of the CLM_THRU_DT.</p>
+<p>The code used to identify the status of the patient as of the <code>CLM_THRU_DT</code>.</p>
 <h3>Values</h3>
 
 <p>EXPLANATION OF CLAIM ADJUSTMENT GROUP CODES
@@ -20486,7 +20486,7 @@ T = Terminated procedure discount (currently 0.5)</p>
 <li><a href="../../hha-rif/#data-documentation">Home Health Agency RIF</a></li>
 </ul>
 <p>The field used to identify whether the claim line is subject to a therapy cap.</p>
-<p>Details regarding the therapy cap can be found on the CMS website, under the Medicare therapy services web page (see, for example: https://www.cms.gov/Medicare/Billing/TherapyServices/index.html).</p>
+<p>Details regarding the therapy cap can be found on the CMS website, under the Medicare therapy services web page (see, for example: <a href="https://www.cms.gov/Medicare/Billing/TherapyServices/index.html">here</a>.)</p>
 <h3>Values</h3>
 
 <table>
@@ -20529,7 +20529,7 @@ T = Terminated procedure discount (currently 0.5)</p>
 <li><a href="../../hha-rif/#data-documentation">Home Health Agency RIF</a></li>
 </ul>
 <p>The field used to identify whether the claim line is subject to a therapy cap.</p>
-<p>Details regarding the therapy cap can be found on the CMS website, under the Medicare therapy services web page (see, for example: https://www.cms.gov/Medicare/Billing/TherapyServices/index.html).</p>
+<p>Details regarding the therapy cap can be found on the CMS website, under the Medicare therapy services web page (see, for example: <a href="https://www.cms.gov/Medicare/Billing/TherapyServices/index.html">here</a>.)</p>
 <h3>Values</h3>
 
 <table>
@@ -20770,7 +20770,7 @@ The NCH_PATCH_CD field will reflect a value '10'.</p></details><h3>Values</h3>
 <p>A quantitative measure (unit) of the number of times the service or procedure being reported was performed according to the revenue center/HCPCS code definition as described on an institutional claim.</p>
 <p>Depending on type of service, units are measured by number of covered days in a particular accommodation, pints of blood, emergency room visits, clinic visits, dialysis treatments (sessions or days), outpatient therapy visits, and outpatient clinical diagnostic laboratory tests.</p>
 <p>NOTE1: When revenue center code = <code>0022</code> (SNF PPS) the unit count will reflect the number of covered days for each HIPPS code and, if applicable, the number of visits for each rehab therapy code.</p>
-<p>Description of the different unit of service measures by revenue center code beginning on page 18: http://cms.gov/Regulations-and-Guidance/Guidance/Manuals/Downloads/clm104c25.pdf</p>
+<p>Description of the different unit of service measures by revenue center code beginning on page 18: <a href="http://cms.gov/Regulations-and-Guidance/Guidance/Manuals/Downloads/clm104c25.pdf">here</a></p>
 <h2 id="state-code-from-claim-ssa"><a href="https://www.resdac.org/cms-data/variables/state-code-claim-ssa">State Code from Claim (SSA)</a><a class="headerlink" href="#state-code-from-claim-ssa" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Short SAS Name: <code>STATE_CD</code></li>

@@ -5592,7 +5592,7 @@
 <li><a href="../../ip-rif/#data-documentation">Inpatient RIF</a></li>
 </ul>
 <p>This field represents the amount the claim was reduced for those hospitals participating in Model 1 of the Bundled Payments for Care Improvement initiative (BPCI, Model 1).</p>
-<p>The hospital must be participating in the Model 1 of the Bundled Payments for Care Improvement initiative (refer to CLM_CARE_IMPRVMT_MODEL_CD1). The percentage of the discount that this amount represents is in the field called CLM_BNDLD_MODEL_1_DSCNT_PCT.   This field was new in 2013, and is null/missing for all previous years.</p>
+<p>The hospital must be participating in the Model 1 of the Bundled Payments for Care Improvement initiative (refer to <code>CLM_CARE_IMPRVMT_MODEL_CD1</code>). The percentage of the discount that this amount represents is in the field called <code>CLM_BNDLD_MODEL_1_DSCNT_PCT</code>.   This field was new in 2013, and is null/missing for all previous years.</p>
 <h3>Values</h3>
 
 <table>
@@ -5617,8 +5617,8 @@
 <li><a href="../../ip-rif/#data-documentation">Inpatient RIF</a></li>
 </ul>
 <p>This field identifies the discount percentage which will be applied to payment for all participating hospitals' DRG over the lifetime of the Bundled Payments for Care Improvement initiative (BPCI, Model 1).</p>
-<p>The hospital must be participating in the Model 1 of the BPCI (refer to CLM_CARE_IMPRVMT_MODEL_CD1).
-The dollar amount of the payment reduction for the service is in the field called CLM_BNDLD_ADJSTMT_PMT_AMT.
+<p>The hospital must be participating in the Model 1 of the BPCI (refer to <code>CLM_CARE_IMPRVMT_MODEL_CD1</code>).
+The dollar amount of the payment reduction for the service is in the field called <code>CLM_BNDLD_ADJSTMT_PMT_AMT</code>.
 This field was new in 2013, and is null/missing for all previous years.</p>
 <h3>Values</h3>
 
@@ -5644,7 +5644,7 @@ This field was new in 2013, and is null/missing for all previous years.</p>
 <li><a href="../../ip-rif/#data-documentation">Inpatient RIF</a></li>
 </ul>
 <p>This code is used to identify that the care improvement model 1 is being used for bundling payments. The initiative if referred to as the Bundled Payments for Care Improvement initiative (BPCI, Model 1).</p>
-<p>There are 4 of these Care Improvement Model fields (CLM_CARE_IMPRVMT_MODEL_CD1-CLM_CARE_IMPRVMT_MODEL_CD4).
+<p>There are 4 of these Care Improvement Model fields (<code>CLM_CARE_IMPRVMT_MODEL_CD1</code>-<code>CLM_CARE_IMPRVMT_MODEL_CD4</code>).
 This field was new in 2013, and is null/missing for all previous years.</p>
 <h3>Values</h3>
 
@@ -5676,7 +5676,7 @@ This field was new in 2013, and is null/missing for all previous years.</p>
 <li><a href="../../ip-rif/#data-documentation">Inpatient RIF</a></li>
 </ul>
 <p>This code is used to identify that the care improvement model 2 is being used for payments.</p>
-<p>There are 4 of these Care Improvement Model fields (CLM_CARE_IMPRVMT_MODEL_CD1-CLM_CARE_IMPRVMT_MODEL_CD4).
+<p>There are 4 of these Care Improvement Model fields (<code>CLM_CARE_IMPRVMT_MODEL_CD1</code>-<code>CLM_CARE_IMPRVMT_MODEL_CD4</code>).
 This field was new in 2013, and is null/missing for all previous years.</p>
 <h3>Values</h3>
 
@@ -5708,7 +5708,7 @@ This field was new in 2013, and is null/missing for all previous years.</p>
 <li><a href="../../ip-rif/#data-documentation">Inpatient RIF</a></li>
 </ul>
 <p>This code is used to identify that the care improvement model 3 is being used for payments. </p>
-<p>There are 4 of these Care Improvement Model fields (CLM_CARE_IMPRVMT_MODEL_CD1-CLM_CARE_IMPRVMT_MODEL_CD4).
+<p>There are 4 of these Care Improvement Model fields (<code>CLM_CARE_IMPRVMT_MODEL_CD1</code>-<code>CLM_CARE_IMPRVMT_MODEL_CD4</code>).
 This field was new in 2013, and is null/missing for all previous years.</p>
 <h3>Values</h3>
 
@@ -5740,7 +5740,7 @@ This field was new in 2013, and is null/missing for all previous years.</p>
 <li><a href="../../ip-rif/#data-documentation">Inpatient RIF</a></li>
 </ul>
 <p>This code is used to identify that the care improvement model 4 is being used for payments.</p>
-<p>There are 4 of these Care Improvement Model fields (CLM_CARE_IMPRVMT_MODEL_CD1-CLM_CARE_IMPRVMT_MODEL_CD4).
+<p>There are 4 of these Care Improvement Model fields (<code>CLM_CARE_IMPRVMT_MODEL_CD1</code>-<code>CLM_CARE_IMPRVMT_MODEL_CD4</code>).
 This field was new in 2013, and is null/missing for all previous years.</p>
 <h3>Values</h3>
 
@@ -10218,7 +10218,7 @@ claims missing the POA indicator.CLM_POA_IND_CD_LIM</p></details><h3>Values</h3>
 <ul>
 <li><a href="../../ip-rif/#data-documentation">Inpatient RIF</a></li>
 </ul>
-<p>This amount further adjusts the standard Medicare Payment amount (field called PPS_STD_VAL_PYMT_AMT) by applying additional standardization requirements (e.g. sequestration).</p>
+<p>This amount further adjusts the standard Medicare Payment amount (field called <code>PPS_STD_VAL_PYMT_AMT</code>) by applying additional standardization requirements (e.g. sequestration).</p>
 <p>This amount is never used for payments. It is used for comparisons across different regions of the country for the value-based purchasing initiatives and for research.  It is a standard Medicare payment amount, without the geographical payment adjustments and some of the other add-on payments that actually go to the hospitals.    </p>
 <p>This field is new in October 2014. This field only applies to Inpatient claims.</p>
 <h3>Values</h3>
@@ -10505,7 +10505,7 @@ claims missing the POA indicator.CLM_POA_IND_CD_LIM</p></details><h3>Values</h3>
 </ul>
 <p>This variable is the standard payment amount for long-term care hospitals (LTCH) under the Medicare prospective payment system (PPS), which is based on the MS-LTC-DRG.    </p>
 <p>This amount does not include any applicable outlier payment amount.</p>
-<p>Applies only to Inpatient (LTCH) claims.  This field is new in October 2015. For a LTCH PPS claim, only one of four fields will be populated (CLM_SITE_NTRL_PYMT_CST_AMT, CLM_SITE_NTRL_PYMT_IPPS_AMT, CLM_FULL_STD_PYMT_AMT, or CLM_SS_OUTLIER_STD_PYMT_AMT) as they are mutually exclusive (i.e., only one of the 4 fields will have a non-zero value). The field with the non-zero value is included in the Claim Payment Amount field.</p>
+<p>Applies only to Inpatient (LTCH) claims.  This field is new in October 2015. For a LTCH PPS claim, only one of four fields will be populated (<code>CLM_SITE_NTRL_PYMT_CST_AMT</code>, <code>CLM_SITE_NTRL_PYMT_IPPS_AMT</code>, <code>CLM_FULL_STD_PYMT_AMT</code>, or <code>CLM_SS_OUTLIER_STD_PYMT_AMT</code>) as they are mutually exclusive (i.e., only one of the 4 fields will have a non-zero value). The field with the non-zero value is included in the Claim Payment Amount field.</p>
 <h3>Values</h3>
 
 <table>
@@ -10530,9 +10530,9 @@ claims missing the POA indicator.CLM_POA_IND_CD_LIM</p></details><h3>Values</h3>
 <li><a href="../../ip-rif/#data-documentation">Inpatient RIF</a></li>
 </ul>
 <p>Under the Hospital Readmissions Reduction (HRR) Program, the amount used to identify the readmission adjustment factor that will be applied.</p>
-<p>The ACA (Section 3025) requires CMS to reduce payments to subsection (d) Inpatient Prospective Payment System (IPPS) hospitals with excess readmissions. There is a variable that indicates whether the hospital was excluded from the HRR program (see CLM_HRR_PRTCPNT_IND_CD). This percentage reduction is applied to the base operating DRG amount(defined as the wage-adjusted DRG payment plus new technology add-on payments). </p>
+<p>The ACA (Section 3025) requires CMS to reduce payments to subsection (d) Inpatient Prospective Payment System (IPPS) hospitals with excess readmissions. There is a variable that indicates whether the hospital was excluded from the HRR program (see <code>CLM_HRR_PRTCPNT_IND_CD</code>). This percentage reduction is applied to the base operating DRG amount(defined as the wage-adjusted DRG payment plus new technology add-on payments). </p>
 <p>Additional information is available on the CMS "Hospital Value-Based Purchasing" website. </p>
-<p>The actual dollar amount of the adjustment that applied to the claim is found in the variable called CLM_HRR_ADJSTMT_PMT_AMT.    </p>
+<p>The actual dollar amount of the adjustment that applied to the claim is found in the variable called <code>CLM_HRR_ADJSTMT_PMT_AMT</code>.    </p>
 <p>This initiative began in 4<sup>th</sup> Quarter of 2012 (i.e., beginning of Federal fiscal year 13).   </p>
 <p>This field was new in 2012, and is null/missing for all previous years.</p>
 <h3>Values</h3>
@@ -10560,7 +10560,7 @@ claims missing the POA indicator.CLM_POA_IND_CD_LIM</p></details><h3>Values</h3>
 </ul>
 <p>This field is a switch that identifies hospitals subject to a Hospital Acquired Conditions (HAC) reduction of what they would otherwise be paid under the inpatient prospective payment system (IPPS).</p>
 <p>This field is new in October 2014. This field only applies to Inpatient claims.  </p>
-<p>For details on the CMS hospital readmission reduction program see the CMS website: http://www.cms.gov/Medicare/Medicare-Fee-For-ServicePayment/AcuteInpatie...</p>
+<p>For details on the CMS hospital readmission reduction program see the CMS website: <a href="http://www.cms.gov/Medicare/Medicare-Fee-For-ServicePayment/AcuteInpatie...">here</a></p>
 <h3>Values</h3>
 
 <table>
@@ -10592,7 +10592,7 @@ claims missing the POA indicator.CLM_POA_IND_CD_LIM</p></details><h3>Values</h3>
 </ul>
 <p>This field represents the Hospital Readmission Reduction (HRR) Program Payment Amount. The amount is the reduction to the claim for a readmission. SHORT</p>
 <p>The ACA (Section 3025) requires CMS to reduce payments to subsection (d) Inpatient Prospective Payment System (IPPS) hospitals with excess readmissions. </p>
-<p>There is a variable that indicates whether the hospital was excluded from the HRR program (see CLM_HRR_PRTCPNT_IND_CD). This percentage reduction is applied to the base operating DRG amount(defined as the wage-adjusted DRG payment plus new technology add-on payments). Additional information is available on the CMS "Hospital Value-Based Purchasing" website.   This amount is based on a percent (CLM_HRR_ADJSTMT_PCT).    </p>
+<p>There is a variable that indicates whether the hospital was excluded from the HRR program (see <code>CLM_HRR_PRTCPNT_IND_CD</code>). This percentage reduction is applied to the base operating DRG amount(defined as the wage-adjusted DRG payment plus new technology add-on payments). Additional information is available on the CMS "Hospital Value-Based Purchasing" website.   This amount is based on a percent (<code>CLM_HRR_ADJSTMT_PCT</code>).    </p>
 <p>This initiative began in 4<sup>th</sup> Quarter of 2012 (i.e., beginning of Federal fiscal year 13).   </p>
 <p>This field was new in 2012, and is null/missing for all previous years.</p>
 <h3>Values</h3>
@@ -11416,7 +11416,7 @@ With the inception of the Version 'I' processing (7/00), if all the criteria for
 <li><a href="../../carrier-rif/#data-documentation">Carrier RIF</a></li>
 </ul>
 <p>The field identifies the claims that qualify for specific claims processing edits related to benefit enhancement through the Next Generation (NG) Accountable Care Organization (ACO).</p>
-<p>There are 5 of these ACO fields (CLM_NEXT_GNRTN_ACO_IND_CD1 -CLM_NEXT_GNRTN_ACO_IND_CD5).</p>
+<p>There are 5 of these ACO fields (<code>CLM_NEXT_GNRTN_ACO_IND_CD1</code> -<code>CLM_NEXT_GNRTN_ACO_IND_CD5</code>).</p>
 <h3>Values</h3>
 
 <table>
@@ -11466,7 +11466,7 @@ With the inception of the Version 'I' processing (7/00), if all the criteria for
 <li><a href="../../carrier-rif/#data-documentation">Carrier RIF</a></li>
 </ul>
 <p>The field identifies the claims that qualify for specific claims processing edits related to benefit enhancement through the Next Generation (NG) Accountable Care Organization (ACO).</p>
-<p>There are 5 of these ACO fields (CLM_NEXT_GNRTN_ACO_IND_CD1 -CLM_NEXT_GNRTN_ACO_IND_CD5).</p>
+<p>There are 5 of these ACO fields (<code>CLM_NEXT_GNRTN_ACO_IND_CD1</code> -<code>CLM_NEXT_GNRTN_ACO_IND_CD5</code>).</p>
 <h3>Values</h3>
 
 <table>
@@ -11516,7 +11516,7 @@ With the inception of the Version 'I' processing (7/00), if all the criteria for
 <li><a href="../../carrier-rif/#data-documentation">Carrier RIF</a></li>
 </ul>
 <p>The field identifies the claims that qualify for specific claims processing edits related to benefit enhancement through the Next Generation (NG) Accountable Care Organization (ACO).</p>
-<p>There are 5 of these ACO fields (CLM_NEXT_GNRTN_ACO_IND_CD1 -CLM_NEXT_GNRTN_ACO_IND_CD5).</p>
+<p>There are 5 of these ACO fields (<code>CLM_NEXT_GNRTN_ACO_IND_CD1</code> -<code>CLM_NEXT_GNRTN_ACO_IND_CD5</code>).</p>
 <h3>Values</h3>
 
 <table>
@@ -11566,7 +11566,7 @@ With the inception of the Version 'I' processing (7/00), if all the criteria for
 <li><a href="../../carrier-rif/#data-documentation">Carrier RIF</a></li>
 </ul>
 <p>The field identifies the claims that qualify for specific claims processing edits related to benefit enhancement through the Next Generation (NG) Accountable Care Organization (ACO).</p>
-<p>There are 5 of these ACO fields (CLM_NEXT_GNRTN_ACO_IND_CD1 -CLM_NEXT_GNRTN_ACO_IND_CD5).</p>
+<p>There are 5 of these ACO fields (<code>CLM_NEXT_GNRTN_ACO_IND_CD1</code> -<code>CLM_NEXT_GNRTN_ACO_IND_CD5</code>).</p>
 <h3>Values</h3>
 
 <table>
@@ -11616,7 +11616,7 @@ With the inception of the Version 'I' processing (7/00), if all the criteria for
 <li><a href="../../carrier-rif/#data-documentation">Carrier RIF</a></li>
 </ul>
 <p>The field identifies the claims that qualify for specific claims processing edits related to benefit enhancement through the Next Generation (NG) Accountable Care Organization (ACO).</p>
-<p>There are 5 of these ACO fields (CLM_NEXT_GNRTN_ACO_IND_CD1 -CLM_NEXT_GNRTN_ACO_IND_CD5).</p>
+<p>There are 5 of these ACO fields (<code>CLM_NEXT_GNRTN_ACO_IND_CD1</code> -<code>CLM_NEXT_GNRTN_ACO_IND_CD5</code>).</p>
 <h3>Values</h3>
 
 <table>
@@ -19124,7 +19124,7 @@ Inpatient Hospital Payment return codes: </p>
 <p>This variable is the standard payment amount for long-term care hospitals (LTCH) under the Medicare prospective payment system (PPS), which is based on the MS-LTC-DRG with the short stay outlier (SSO) adjustment.   </p>
 <p>This amount does not include any other applicable outlier payment amount.</p>
 <p>Applies only to Inpatient (LTCH) claims.  This field is new in October 2015. </p>
-<p>For a LTCH PPS claim, only one of four fields will be populated (CLM_SITE_NTRL_PYMT_CST_AMT, CLM_SITE_NTRL_PYMT_IPPS_AMT, CLM_FULL_STD_PYMT_AMT, or CLM_SS_OUTLIER_STD_PYMT_AMT) as they are mutually exclusive (i.e., only one of the 4 fields will have a non-zero value). The field with the non-zero value is included in the Claim Payment Amount field.</p>
+<p>For a LTCH PPS claim, only one of four fields will be populated (<code>CLM_SITE_NTRL_PYMT_CST_AMT</code>, <code>CLM_SITE_NTRL_PYMT_IPPS_AMT</code>, <code>CLM_FULL_STD_PYMT_AMT</code>, or <code>CLM_SS_OUTLIER_STD_PYMT_AMT</code>) as they are mutually exclusive (i.e., only one of the 4 fields will have a non-zero value). The field with the non-zero value is included in the Claim Payment Amount field.</p>
 <h3>Values</h3>
 
 <table>
@@ -19150,7 +19150,7 @@ Inpatient Hospital Payment return codes: </p>
 </ul>
 <p>Under the Long Term Care Hospital (LTCH) prospective payment system (PPS), the payment amount based on estimated cost of the case.</p>
 <p>Applies only to Inpatient (LTCH) claims. This field is new in October 2015.
-For a LTCH PPS claim, only one of four fields will be populated (CLM_SITE_NTRL_PYMT_CST_AMT, CLM_SITE_NTRL_PYMT_IPPS_AMT, CLM_FULL_STD_PYMT_AMT, or CLM_SS_OUTLIER_STD_PYMT_AMT) as they are mutually exclusive (i.e., only one of the 4 fields will have a non-zero value). The field with the non-zero value is included in the Claim Payment Amount field.</p>
+For a LTCH PPS claim, only one of four fields will be populated (<code>CLM_SITE_NTRL_PYMT_CST_AMT</code>, <code>CLM_SITE_NTRL_PYMT_IPPS_AMT</code>, <code>CLM_FULL_STD_PYMT_AMT</code>, or <code>CLM_SS_OUTLIER_STD_PYMT_AMT</code>) as they are mutually exclusive (i.e., only one of the 4 fields will have a non-zero value). The field with the non-zero value is included in the Claim Payment Amount field.</p>
 <h3>Values</h3>
 
 <table>
@@ -19176,7 +19176,7 @@ For a LTCH PPS claim, only one of four fields will be populated (CLM_SITE_NTRL_P
 </ul>
 <p>Under the Long Term Care Hospital (LTCH) prospective payment system (PPS), the payment amount based on the inpatient prospective payment system (IPPS) comparable amount. This amount does not include any applicable outlier payment amount.</p>
 <p>Applies only to Inpatient (LTCH) claims. This field is new in October 2015.
-For a LTCH PPS claim, only one of four fields will be populated (CLM_SITE_NTRL_PYMT_CST_AMT, CLM_SITE_NTRL_PYMT_IPPS_AMT, CLM_FULL_STD_PYMT_AMT, or CLM_SS_OUTLIER_STD_PYMT_AMT) as they are mutually exclusive (i.e., only one of the 4 fields will have a non-zero value). The field with the non-zero value is included in the Claim Payment Amount field.</p>
+For a LTCH PPS claim, only one of four fields will be populated (<code>CLM_SITE_NTRL_PYMT_CST_AMT</code>, <code>CLM_SITE_NTRL_PYMT_IPPS_AMT</code>, <code>CLM_FULL_STD_PYMT_AMT</code>, or <code>CLM_SS_OUTLIER_STD_PYMT_AMT</code>) as they are mutually exclusive (i.e., only one of the 4 fields will have a non-zero value). The field with the non-zero value is included in the Claim Payment Amount field.</p>
 <h3>Values</h3>
 
 <table>
@@ -19911,9 +19911,9 @@ The CWFMQA front-end was fixed. The Nearline was patched during the quarterly me
 </ul>
 <p>Under the Hospital Value Based Purchasing (HVBP) program, an adjustment is made to the base operating DRG amount for certain Inpatient Prospective Payment System (IPPS) hospitals - based on their Total Performance Score (TPS).</p>
 <p>This initiative began in 4<sup>th</sup> Quarter of 2013 (i.e., beginning of Federal fiscal year 14 [FY14]).   </p>
-<p>This field was new in 2013, and is null/missing for all previous years. The HVBP applies only to subsection (d) IPPS hospitals. There is a variable that indicates whether the hospital was excluded from HVBP (see CLM_VBP_PRTCPNT_IND_CD). This percentage reduction is applied  to the base operating DRG amount, depending on their TPS (which is the Value Based Purchasing Score), as required by the Affordable Care Act (ACA). The percentages change each FY.  </p>
+<p>This field was new in 2013, and is null/missing for all previous years. The HVBP applies only to subsection (d) IPPS hospitals. There is a variable that indicates whether the hospital was excluded from HVBP (see <code>CLM_VBP_PRTCPNT_IND_CD</code>). This percentage reduction is applied  to the base operating DRG amount, depending on their TPS (which is the Value Based Purchasing Score), as required by the Affordable Care Act (ACA). The percentages change each FY.  </p>
 <p>Additional information is available on the CMS "Hospital Value-Based Purchasing" website. </p>
-<p>The actual dollar amount of the adjustment that applied to the claim is found in the variable called CLM_VBP_ADJSTMT_PMT_AMT.</p>
+<p>The actual dollar amount of the adjustment that applied to the claim is found in the variable called <code>CLM_VBP_ADJSTMT_PMT_AMT</code>.</p>
 <h3>Values</h3>
 
 <table>
@@ -19941,7 +19941,7 @@ The CWFMQA front-end was fixed. The Nearline was patched during the quarterly me
 <li><a href="../../hospice-rif/#data-documentation">Hospice RIF</a></li>
 <li><a href="../../hha-rif/#data-documentation">Home Health Agency RIF</a></li>
 </ul>
-<p>The amount related to the condition identified in the CLM_VAL_CD which was used by the intermediary to process the institutional claim.</p>
+<p>The amount related to the condition identified in the <code>CLM_VAL_CD</code> which was used by the intermediary to process the institutional claim.</p>
 <h3>Values</h3>
 
 <table>
@@ -19967,9 +19967,9 @@ The CWFMQA front-end was fixed. The Nearline was patched during the quarterly me
 </ul>
 <p>Under the Hospital Value Based Purchasing (HVBP) program, an adjustment is made to the base operating DRG amount for certain Inpatient Prospective Payment System (IPPS) hospitals - based on their Total Performance Score (TPS).</p>
 <p>This initiative began in 4<sup>th</sup> Quarter of 2013 (i.e., beginning of Federal fiscal year 14 [FY14]).   </p>
-<p>This field was new in 2013, and is null/missing for all previous years. The HVBP applies only to subsection (d) IPPS hospitals. There is a variable that indicates whether the hospital was excluded from HVBP (see CLM_VBP_PRTCPNT_IND_CD). This percentage reduction is applied  to the base operating DRG amount, depending on their TPS (which is the Value Based Purchasing Score), as required by the Affordable Care Act (ACA). The percentages change each FY.  </p>
+<p>This field was new in 2013, and is null/missing for all previous years. The HVBP applies only to subsection (d) IPPS hospitals. There is a variable that indicates whether the hospital was excluded from HVBP (see <code>CLM_VBP_PRTCPNT_IND_CD</code>). This percentage reduction is applied  to the base operating DRG amount, depending on their TPS (which is the Value Based Purchasing Score), as required by the Affordable Care Act (ACA). The percentages change each FY.  </p>
 <p>Additional information is available on the CMS "Hospital Value-Based Purchasing" website. </p>
-<p>The actual dollar amount of the adjustment that applied to the claim is found in the variable called CLM_VBP_ADJSTMT_PMT_AMT.</p>
+<p>The actual dollar amount of the adjustment that applied to the claim is found in the variable called <code>CLM_VBP_ADJSTMT_PMT_AMT</code>.</p>
 <h3>Values</h3>
 
 <table>
@@ -20541,7 +20541,7 @@ Demo ID = 38 (Physician Encounter Claims) -- text field will contain the MCO pla
 <li><a href="../../dme-rif/#data-documentation">Durable Medical Equipment RIF</a></li>
 <li><a href="../../carrier-rif/#data-documentation">Carrier RIF</a></li>
 </ul>
-<p>The unique CCW indentifier for a beneficiary. The CCW assigns a unique beneficiary identification number to each individual who receives Medicare and/or Medicaid, and uses that number to identify an individual’s records in all CCW data files (e.g., Medicare claims, MAX claims, MDS assessment data). This number does not change during a beneficiary’s lifetime and each number is used only once. The BENE_ID is specific to the CCW and is not applicable to any other identification system or data source.</p>
+<p>The unique CCW indentifier for a beneficiary. The CCW assigns a unique beneficiary identification number to each individual who receives Medicare and/or Medicaid, and uses that number to identify an individual’s records in all CCW data files (e.g., Medicare claims, MAX claims, MDS assessment data). This number does not change during a beneficiary’s lifetime and each number is used only once. The <code>BENE_ID</code> is specific to the CCW and is not applicable to any other identification system or data source.</p>
 <h2 id="fi-claim-process-date"><a href="https://www.resdac.org/cms-data/variables/FI-Claim-Process-Date">FI Claim Process Date</a><a class="headerlink" href="#fi-claim-process-date" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Short SAS Name: <code>FI_CLM_PROC_DT</code></li>
@@ -20569,7 +20569,7 @@ Demo ID = 38 (Physician Encounter Claims) -- text field will contain the MCO pla
 <li><a href="../../hospice-rif/#data-documentation">Hospice RIF</a></li>
 <li><a href="../../hha-rif/#data-documentation">Home Health Agency RIF</a></li>
 </ul>
-<p>The identification number assigned by CMS to a fiscal intermediary authorized to process institutional claim records. Effective October 2006, the Medicare Administrative Contractors (MACs) began replacing the existing fiscal intermediaries and started processing institu- tional claim records for states assigned to its jurisdiction. NOTE: The 5-position MAC number will be housed in the existing FI_NUM field. During the transition from an FI to a MAC the FI_NUM field could contain either a FI number or a MAC number. See the FI_NUM table of codes to identify the new MAC numbers and their effective dates.</p>
+<p>The identification number assigned by CMS to a fiscal intermediary authorized to process institutional claim records. Effective October 2006, the Medicare Administrative Contractors (MACs) began replacing the existing fiscal intermediaries and started processing institu- tional claim records for states assigned to its jurisdiction. NOTE: The 5-position MAC number will be housed in the existing <code>FI_NUM</code> field. During the transition from an FI to a MAC the <code>FI_NUM</code> field could contain either a FI number or a MAC number. See the <code>FI_NUM</code> table of codes to identify the new MAC numbers and their effective dates.</p>
 <h3>Values</h3>
 
 <p>JURISDICTION 3 - Part A MACs</p>
@@ -21289,7 +21289,7 @@ Based on the presence of value code equal to '06' move the corresponding value a
 <li><a href="../../hospice-rif/#data-documentation">Hospice RIF</a></li>
 </ul>
 <p>On an inpatient or Home Health claim, the date the beneficiary was discharged from the facility, or died.</p>
-<p>Date matches the "thru" date on the claim (CLM_THRU_DT). When there is a discharge date, the discharge status code (PTNT_DSCHRG_STUS_CD) indicates the final disposition of the patient after discharge.</p>
+<p>Date matches the "thru" date on the claim (<code>CLM_THRU_DT</code>). When there is a discharge date, the discharge status code (<code>PTNT_DSCHRG_STUS_CD</code>) indicates the final disposition of the patient after discharge.</p>
 <details class="derivation"><summary>Derivation</summary><p>DERIVED FROM:
 NCH_PTNT_STUS_IND_CD
 CLM_THRU_DT</p><p>DERIVATION RULES:
@@ -22322,7 +22322,7 @@ set code to 'J') WHERE THE CLM_VAL_CD = '47'</p></details><h3>Values</h3>
 <li><a href="../../ip-rif/#data-documentation">Inpatient RIF</a></li>
 </ul>
 <p>This field is the amount of physician and other professional charges covered under Medicare Part B.</p>
-<p>This variable is not populated for Home Health or Hospice claims. This field is used for CMS editing purposes and other internal processes (e.g. if computing interim payments, then these charges are deducted). The source of information for this field for institutional claims is the CLM_VAL_AMT (when the code = 04 or 05, it indicates a professional component charge amount). For Outpatient claims, this information is from the revenue center codes (when the code=096<em>, 097</em> or 098*, then the REV_CNTR_TOT_CHRG_AMT indicates a professional component charge amount).</p>
+<p>This variable is not populated for Home Health or Hospice claims. This field is used for CMS editing purposes and other internal processes (e.g. if computing interim payments, then these charges are deducted). The source of information for this field for institutional claims is the <code>CLM_VAL_AMT</code> (when the code = 04 or 05, it indicates a professional component charge amount). For Outpatient claims, this information is from the revenue center codes (when the code=096<em>, 097</em> or 098*, then the <code>REV_CNTR_TOT_CHRG_AMT</code> indicates a professional component charge amount).</p>
 <h3>Values</h3>
 
 <table>
@@ -22994,7 +22994,7 @@ Based on the presence of occurrence code 74, 76, 77 or 79 move the related occur
 <li><a href="../../hospice-rif/#data-documentation">Hospice RIF</a></li>
 <li><a href="../../hha-rif/#data-documentation">Home Health Agency RIF</a></li>
 </ul>
-<p>The code used to identify the status of the patient as of the CLM_THRU_DT.</p>
+<p>The code used to identify the status of the patient as of the <code>CLM_THRU_DT</code>.</p>
 <h3>Values</h3>
 
 <p>EXPLANATION OF CLAIM ADJUSTMENT GROUP CODES
@@ -25547,7 +25547,7 @@ T = Terminated procedure discount (currently 0.5)</p>
 <li><a href="../../hha-rif/#data-documentation">Home Health Agency RIF</a></li>
 </ul>
 <p>The field used to identify whether the claim line is subject to a therapy cap.</p>
-<p>Details regarding the therapy cap can be found on the CMS website, under the Medicare therapy services web page (see, for example: https://www.cms.gov/Medicare/Billing/TherapyServices/index.html).</p>
+<p>Details regarding the therapy cap can be found on the CMS website, under the Medicare therapy services web page (see, for example: <a href="https://www.cms.gov/Medicare/Billing/TherapyServices/index.html">here</a>.)</p>
 <h3>Values</h3>
 
 <table>
@@ -25590,7 +25590,7 @@ T = Terminated procedure discount (currently 0.5)</p>
 <li><a href="../../hha-rif/#data-documentation">Home Health Agency RIF</a></li>
 </ul>
 <p>The field used to identify whether the claim line is subject to a therapy cap.</p>
-<p>Details regarding the therapy cap can be found on the CMS website, under the Medicare therapy services web page (see, for example: https://www.cms.gov/Medicare/Billing/TherapyServices/index.html).</p>
+<p>Details regarding the therapy cap can be found on the CMS website, under the Medicare therapy services web page (see, for example: <a href="https://www.cms.gov/Medicare/Billing/TherapyServices/index.html">here</a>.)</p>
 <h3>Values</h3>
 
 <table>
@@ -25831,7 +25831,7 @@ The NCH_PATCH_CD field will reflect a value '10'.</p></details><h3>Values</h3>
 <p>A quantitative measure (unit) of the number of times the service or procedure being reported was performed according to the revenue center/HCPCS code definition as described on an institutional claim.</p>
 <p>Depending on type of service, units are measured by number of covered days in a particular accommodation, pints of blood, emergency room visits, clinic visits, dialysis treatments (sessions or days), outpatient therapy visits, and outpatient clinical diagnostic laboratory tests.</p>
 <p>NOTE1: When revenue center code = <code>0022</code> (SNF PPS) the unit count will reflect the number of covered days for each HIPPS code and, if applicable, the number of visits for each rehab therapy code.</p>
-<p>Description of the different unit of service measures by revenue center code beginning on page 18: http://cms.gov/Regulations-and-Guidance/Guidance/Manuals/Downloads/clm104c25.pdf</p>
+<p>Description of the different unit of service measures by revenue center code beginning on page 18: <a href="http://cms.gov/Regulations-and-Guidance/Guidance/Manuals/Downloads/clm104c25.pdf">here</a></p>
 <h2 id="standard-payment-amount"><a href="https://www.resdac.org/cms-data/variables/standard-payment-amount">Standard Payment Amount</a><a class="headerlink" href="#standard-payment-amount" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Short SAS Name: <code>PPS_STD_VAL_PYMT_AMT</code></li>
@@ -25844,7 +25844,7 @@ The NCH_PATCH_CD field will reflect a value '10'.</p></details><h3>Values</h3>
 <p>This amount identifies the standardized Medicare payment amount.</p>
 <p>This is the standardized amount as determined by PRICER software output.  This amount is never used for payments. It is used for comparisons across different regions of the country for the value-based purchasing initiatives and for research. It is a standard amount, without the geographical payment adjustments and some of the other add-on payments that actually go to the hospitals.    </p>
 <p>This field is new in October 2014. This field only applies to Inpatient claims. Note that an additional field is available that further adjusts the standard Medicare Payment amount by applying additional standardization requirements (e.g. sequestration).   </p>
-<p>Refer to variable called the final standardized amount (FINL_STD_AMT).</p>
+<p>Refer to variable called the final standardized amount (<code>FINL_STD_AMT</code>).</p>
 <h3>Values</h3>
 
 <table>
