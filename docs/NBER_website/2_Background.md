@@ -126,10 +126,10 @@ In ResDAC's parlance, NBER holds "Research Identifiable Files," that is, files t
 
 Effective with the 9/96 update the 1995 MedPAR was created as follows:
 
-1. EACH MONTH INPATIENT AND SNF CLAIMS ARE ACCUMULATED FROM THE NCH NEARLINE REPOSITORY.
-2. AT THE END OF EACH QUARTER, THE MONTHLY FILES ARE MERGED INTO A DATABASE CONTAINING ALL CLAIMS FOR THE CURRENT YEAR AND PRIOR TWO YEARS. THE DATABASE IS PROCESSED THROUGH THE FINAL ACTION ALGORITHMS.
-3. THE FINAL-ACTIONED DATABASE IS SPLIT INTO TWO SEGMENTS FOR EACH YEAR. INPATIENT CLAIMS WITH DISCHARGE DATES AND SNF CLAIMS WITH ADMISSION DATES IN JANUARY THROUGH SEPTEMBER ARE IN THE FIRST SEGMENT; CLAIMS WITH DATES IN OCTOBER THROUGH DECEMBER ARE IN THE SECOND SEGMENT. THIS ALLOWS FOR THE CREATION OF FISCAL YEAR OR CALENDAR YEAR FILES AS NEEDED.
-4. THE CLAIMS REMAINING FROM THE FINAL ACTION PROCESSING ARE COLLAPSED BY CLAIM NUMBER, ADMISSION DATE, AND PROVIDER NUMBER (ALL IN ASCENDING ORDER) TO CREATE A STAY RECORD. THE RECORDS ARE FURTHER SORTED BY CLAIM FROM DATE, CLAIM THRU DATE, (BOTH IN ASCENDING ORDER), HCFA PROCESS DATE (DESCENDING), AND QUERY CODE (DESCENDING); AND THE RESULTS ARE USED TO CREATE MEDPAR.
+1. Each month Inpatient and SNF claims are accumulated from the NCH Nearline repository.
+2. At the end of each quarter, the monthly files are merged into a database containing all claims for the current year and prior two years. The database is processed through the final action algorithms.
+3. The final actioned database is split into two segments for each year. Inpatient claims with discharge dates and SNF claims with admission dates in January through September are in the first segment; claims with dates in October through December are in the second segment. This allows for the creation of fiscal year or calendar year files as needed.
+4. The claims remaining from the final action processing are collapsed by claim number, admission date, and provider number (all in ascending order) to create a stay record. The records are further sorted by claim from date, claim thru date (both in ascending order), HCFA process date (descending), and query code (descending) and the results are used to create MedPAR.
 
 ## Changing identifiers in the raw data (HIC switchers)
 
