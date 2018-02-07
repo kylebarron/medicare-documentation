@@ -935,18 +935,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../../kyle/python_extract/" title="Python Extraction" class="md-nav__link">
-      Python Extraction
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../../kyle/using-tmux-aging-servers/" title="Using tmux for long-running jobs" class="md-nav__link">
       Using tmux for long-running jobs
     </a>
@@ -1376,10 +1364,10 @@
 <h2 id="medpar-construction-notes-from-resdac">MedPAR construction notes from ResDAC<a class="headerlink" href="#medpar-construction-notes-from-resdac" title="Permanent link">&para;</a></h2>
 <p>Effective with the 9/96 update the 1995 MedPAR was created as follows:</p>
 <ol>
-<li>EACH MONTH INPATIENT AND SNF CLAIMS ARE ACCUMULATED FROM THE NCH NEARLINE REPOSITORY.</li>
-<li>AT THE END OF EACH QUARTER, THE MONTHLY FILES ARE MERGED INTO A DATABASE CONTAINING ALL CLAIMS FOR THE CURRENT YEAR AND PRIOR TWO YEARS. THE DATABASE IS PROCESSED THROUGH THE FINAL ACTION ALGORITHMS.</li>
-<li>THE FINAL-ACTIONED DATABASE IS SPLIT INTO TWO SEGMENTS FOR EACH YEAR. INPATIENT CLAIMS WITH DISCHARGE DATES AND SNF CLAIMS WITH ADMISSION DATES IN JANUARY THROUGH SEPTEMBER ARE IN THE FIRST SEGMENT; CLAIMS WITH DATES IN OCTOBER THROUGH DECEMBER ARE IN THE SECOND SEGMENT. THIS ALLOWS FOR THE CREATION OF FISCAL YEAR OR CALENDAR YEAR FILES AS NEEDED.</li>
-<li>THE CLAIMS REMAINING FROM THE FINAL ACTION PROCESSING ARE COLLAPSED BY CLAIM NUMBER, ADMISSION DATE, AND PROVIDER NUMBER (ALL IN ASCENDING ORDER) TO CREATE A STAY RECORD. THE RECORDS ARE FURTHER SORTED BY CLAIM FROM DATE, CLAIM THRU DATE, (BOTH IN ASCENDING ORDER), HCFA PROCESS DATE (DESCENDING), AND QUERY CODE (DESCENDING); AND THE RESULTS ARE USED TO CREATE MEDPAR.</li>
+<li>Each month Inpatient and SNF claims are accumulated from the NCH Nearline repository.</li>
+<li>At the end of each quarter, the monthly files are merged into a database containing all claims for the current year and prior two years. The database is processed through the final action algorithms.</li>
+<li>The final actioned database is split into two segments for each year. Inpatient claims with discharge dates and SNF claims with admission dates in January through September are in the first segment; claims with dates in October through December are in the second segment. This allows for the creation of fiscal year or calendar year files as needed.</li>
+<li>The claims remaining from the final action processing are collapsed by claim number, admission date, and provider number (all in ascending order) to create a stay record. The records are further sorted by claim from date, claim thru date (both in ascending order), HCFA process date (descending), and query code (descending) and the results are used to create MedPAR.</li>
 </ol>
 <h2 id="changing-identifiers-in-the-raw-data-hic-switchers">Changing identifiers in the raw data (HIC switchers)<a class="headerlink" href="#changing-identifiers-in-the-raw-data-hic-switchers" title="Permanent link">&para;</a></h2>
 <p>In general there are two related instances where an individual's identifier may change and cause the individual to exit the sample. A beneficiary's identifier can change if the social security number (SSN) granting entitlement changes (see below for discussion), causing the individual to appear in the claims as two separate patients. As a result of a change in an SSN, the individual may disappear from the 5 or 20% samples due to sample method reliance on SSNs.</p>
