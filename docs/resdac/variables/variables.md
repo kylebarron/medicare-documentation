@@ -17,10 +17,6 @@ This field groups (or recodes) the NDI ICD-10 code cause of death into 113 categ
 
 
 
-<h3>Values</h3>
-
-
-
 Addtional information regarding these categories can be found on the CDC website (see [here](http://www.cdc.gov/nchs/ndi.htm) and [here](http://www.cdc.gov/nchs/data/dvs/im9_2002.pdf.pdf).)
 
 Available for 1999-2008. Researchers wishing to obtain this NDI segment of the MBSF must obtain an additional approval beyond the CMS DUA.  
@@ -50,10 +46,6 @@ Contained in
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
 This field groups (or recodes) the NDI ICD-10 code cause of death into 358 categories.
-
-
-
-<h3>Values</h3>
 
 
 
@@ -142,10 +134,6 @@ This variable shows the date when the beneficiary first met the criteria for the
 
 
 
-<h3>Values</h3>
-
-
-
 The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the `COVSTART` variable in the Beneficiary File). 
 
 
@@ -183,10 +171,6 @@ Contained in
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
 This variable shows the date when the beneficiary first met the criteria for the chronic condition data warehouse (CCW) acquired hypothyroidism indicator.  The variable will be blank for beneficiaries that have never had the condition.
-
-
-
-<h3>Values</h3>
 
 
 
@@ -230,10 +214,6 @@ This variable is the sum of Medicare coinsurance and deductible payments in the 
 
 
 
-<h3>Values</h3>
-
-
-
 Acute inpatient claims are a subset of the claims in the IP data file consisting of data from both acute hospitals and critical access hospitals (CAH). These facilities are those where either the 3rd digit of the provider number (SAS variable `PRVDR_NUM`) = 0 or the 3rd and 4th digits of `PRVDR_NUM` = 13. 
 
 There are 2 cost/use categories from the IP data files: Acute and OIP.
@@ -256,10 +236,6 @@ Contained in
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
 This variable is the count of Medicare covered days in the acute inpatient hospital setting for the year.  This variable equals the sum of the `CLM_UTLZTN_DAY_CNT` variables on the source claims.
-
-
-
-<h3>Values</h3>
 
 
 
@@ -287,10 +263,6 @@ This variable is the sum of the Medicare claim payment amounts (`CLM_PMT_AMT` fr
 
 
 
-<h3>Values</h3>
-
-
-
 Acute inpatient hospital claims are a subset of the claims in the IP data file consisting of data from both acute hospitals and critical access hospitals (CAH). These facilities are those where either the 3rd digit of the provider number (SAS variable `PRVDR_NUM`) = 0 or the 3rd and 4th digits of `PRVDR_NUM` = 13.   
 		
 ACUTE_PERDIEM_PMT must be added to this field to obtain the total acute hospital Medicare payments for the year.  The annual per diem variable was new in 2010; it will always be null/missing in earlier files.
@@ -313,10 +285,6 @@ Contained in
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
 This variable is the count of acute inpatient hospital stays (unique admissions, which may span more than one facility) for the year. An acute inpatient stay is defined as a set of one or more consecutive acute inpatient hospital claims where the beneficiary is only discharged on the most recent claim in the set.  If a beneficiary is transferred to a different provider, the acute stay is continued even if there is a discharge date on the claim from which the beneficiary was transferred.
-
-
-
-<h3>Values</h3>
 
 
 
@@ -492,10 +460,6 @@ Contained in
 
 
 
-<h3>Values</h3>
-
-
-
 There are 11 cost/use categories from the Carrier Part B and DME data files – the ASC, Part B Drug, Physician, E &M, anesthesia, dialysis, imaging, tests, other procedures, DME and other carrier claims.
  
 
@@ -513,10 +477,6 @@ This variable is the count of events in the part B ambulatory surgery center (AS
 
 
 
-<h3>Values</h3>
-
-
-
 There are 11 cost/use categories from the Carrier Part B and DME data files – the ASC, Anesthesia, Part B Drug, Physician, E & M, dialysis, imaging, tests, other procedures, DME and other carrier claims. 
 
 
@@ -530,10 +490,6 @@ Contained in
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
 This variable is the total Medicare payments in the part B ambulatory surgery center (ASC) setting for a given year.   ASC claims are a subset of the claims in the Part B Carrier data file.  The ASC claims are identified by the claim lines where the `LINE_CMS_TYPE_SRVC_CD` ='F'.  The total ASC Medicare Payments are calculated as the sum of `LINE_NCH_PMT_AMT` where the `LINE_PRCSG_IND_CD` was ('A','R', or 'S').
-
-
-
-<h3>Values</h3>
 
 
 
@@ -578,10 +534,6 @@ This variable shows the date when the beneficiary first met the criteria for the
 
 
 
-<h3>Values</h3>
-
-
-
 The earliest possible date for anyone in the CCW is January 1, 1999.  If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the `COVSTART` variable in the Beneficiary File). 
 
 
@@ -618,11 +570,7 @@ Contained in
 
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
-This variable is the sum of coinsurance and deductible payments for part B anesthesia services (ANES) for a given year.  The total Beneficiary payments are calculated as the sum of `LINE_COINSRNC_AMT` + `LINE_BENE_PTB_DDCTBL_AMT` for the relevant lines. ANES claims are a subset of the claims, and a subset of procedures in the Part B Carrier data file.   ANES claims are defined as those with a line `BETOS` code (`BETOS`_CD) where the first 2 digits = “P0” and the `CARR_LINE_MTUS_CD`=`2`.
-
-
-
-<h3>Values</h3>
+This variable is the sum of coinsurance and deductible payments for part B anesthesia services (ANES) for a given year.  The total Beneficiary payments are calculated as the sum of `LINE_COINSRNC_AMT` + `LINE_BENE_PTB_DDCTBL_AMT` for the relevant lines. ANES claims are a subset of the claims, and a subset of procedures in the Part B Carrier data file.   ANES claims are defined as those with a line `BETOS` code (``BETOS`_CD`) where the first 2 digits = “P0” and the `CARR_LINE_MTUS_CD`=`2`.
 
 
 
@@ -645,10 +593,6 @@ An event is defined as each line item that contains the relevant service."
 
 
 
-<h3>Values</h3>
-
-
-
 There are 11 cost/use categories from the Carrier Part B and DME data files – the ASC, Anesthesia, Part B Drug, Physician, E &M, dialysis, imaging, tests, other procedures, DME and other carrier claims.
  
 
@@ -662,13 +606,9 @@ Contained in
 
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
-"This variable is the total Medicare payments for part B anesthesia services (ANES) for a given year.  ANES claims are a subset of the claims, and a subset of procedures in the Part B Carrier data file.   ANES claims are defined as those with a line `BETOS` code (`BETOS`_CD) where the first 2 digits = “P0” and the `CARR_LINE_MTUS_CD`=`2`.
+"This variable is the total Medicare payments for part B anesthesia services (ANES) for a given year.  ANES claims are a subset of the claims, and a subset of procedures in the Part B Carrier data file.   ANES claims are defined as those with a line `BETOS` code (``BETOS`_CD`) where the first 2 digits = “P0” and the `CARR_LINE_MTUS_CD`=`2`.
 
 The total Medicare payments are calculated as the sum of `LINE_NCH_PMT_AMT` where the `LINE_PRCSG_IND_CD` was ('A','R', or 'S') - for all relevant lines."
-
-
-
-<h3>Values</h3>
 
 
 
@@ -714,10 +654,6 @@ This variable shows the date when the beneficiary first met the criteria for the
 
 
 
-<h3>Values</h3>
-
-
-
 The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the `COVSTART` variable in the Beneficiary File). 
 
 
@@ -755,10 +691,6 @@ Contained in
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
 This variable shows the date when the beneficiary first met the criteria for the chronic condition data warehouse (CCW) asthma indicator.  The variable will be blank for beneficiaries that have never had the condition.
-
-
-
-<h3>Values</h3>
 
 
 
@@ -866,10 +798,6 @@ Contained in
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
 This variable shows the date when the beneficiary first met the criteria for the autism spectrum disorders indicator. The variable will be blank for beneficiaries that have never had the condition.
-
-
-
-<h3>Values</h3>
 
 
 
@@ -1035,10 +963,6 @@ This variable shows the date when the beneficiary first met the criteria for the
 
 
 
-<h3>Values</h3>
-
-
-
 The earliest possible date for anyone in the CCW is January 1, 1999.  If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the `COVSTART` variable in the Beneficiary File). 
 
 
@@ -1101,10 +1025,6 @@ Contained in
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
 This variable shows the date when the beneficiary first met the criteria for the bipolar disorders indicator. The variable will be blank for beneficiaries that have never had the condition.
-
-
-
-<h3>Values</h3>
 
 
 
@@ -1321,7 +1241,7 @@ NOTE2: Effective 4/1/02, this field was expanded to two bytes to accommodate new
 
 
 
- Carrier Claim Payment Denial Table.txt 
+ [Carrier Claim Payment Denial Table.txt](https://www.resdac.org/sites/resdac.umn.edu/files/Carrier%20Claim%20Payment%20Denial%20Table_0.txt) 
 
 
 
@@ -1829,7 +1749,7 @@ NOTE: The 5-position MAC number will be housed in the existing `CARR_NUM` field.
 
 
 
- Carrier Number-MAC Table.txt 
+ [Carrier Number-MAC Table.txt](https://www.resdac.org/sites/resdac.umn.edu/files/Carrier%20Number-MAC%20Table.txt) 
 
 
 
@@ -8326,7 +8246,7 @@ The code used to identify the CMS specialty code of the referring physician/prac
 
 
 
- CMS_PRVDR_SPCLTY_TB.txt 
+ [CMS_PRVDR_SPCLTY_TB.txt](https://www.resdac.org/sites/resdac.umn.edu/files/CMS_PRVDR_SPCLTY_TB.txt) 
 
 
 
@@ -9362,7 +9282,7 @@ The code indicating the value of a monetary condition which was used by the inte
 
 
 
- Claim Value Table.txt 
+ [Claim Value Table.txt](https://www.resdac.org/sites/resdac.umn.edu/files/Claim%20Value%20Table.txt) 
 
 
 
@@ -9522,10 +9442,6 @@ This code specifies the Social Security Administration (SSA) code fopuyypr the c
 
 
 
-<h3>Values</h3>
-
-
-
 Each state has a series of codes beginning with '000' for each county within that state. Certain cities within that state have their own code. County codes must be combined with state codes in order to locate the specific county. The coding system is the SSA system, not the Federal Information Processing Standard (FIPS).
 
  In some cases, the code may not be the actual county where the beneficairy resides.  CMS obtains the mailing address used for cash benefits or the mailing address used for other purposes (for example, premium billing) from Social Security Administration (SSA) and Railroad Retirement Board (RRB) Beneficiary Record Systems.  
@@ -9591,7 +9507,7 @@ The current beneficiary identification code (`BIC`) specifies the basis of the b
 
 
 
- Beneficiary Identification Code (`BIC`) Table.txt 
+ [Beneficiary Identification Code (`BIC`) Table.txt](https://www.resdac.org/sites/resdac.umn.edu/files/Beneficiary%20Identification%20Code%20%28`BIC`%29%20Table.txt) 
 
 
 
@@ -9811,7 +9727,7 @@ Prior to Version H this field was named: CWFB_DME_PRCNG_STATE_CD.
 
 
 
- State Table.txt 
+ [State Table.txt](https://www.resdac.org/sites/resdac.umn.edu/files/State%20Table_0.txt) 
 
 
 
@@ -9848,7 +9764,7 @@ NOTE: During the Version H conversion this field was populated with data through
 
 
 
- State Table.txt 
+ [State Table.txt](https://www.resdac.org/sites/resdac.umn.edu/files/State%20Table_1.txt) 
 
 
 
@@ -9941,10 +9857,6 @@ Contained in
 
 
 This field indicates the date of death of the enrollee according to the MAX PS, or if the person was dually enrolled in Medicare, the date of death from Medicare administrative data.
-
-
-
-<h3>Values</h3>
 
 
 
@@ -10154,10 +10066,6 @@ This variable is the total Medicare payments for Part B dialysis services (prima
 
 
 
-<h3>Values</h3>
-
-
-
 There are 11 cost/use categories from the Carrier Part B and DME data files – the ASC, Anesthesia, Part B Drug, Physician, E & M, dialysis, imaging, tests, other procedures, DME and other carrier claims.
  
 
@@ -10175,10 +10083,6 @@ This variable is the total Medicare payments for Part B dialysis services (prima
 
 
 
-<h3>Values</h3>
-
-
-
 There are 11 cost/use categories from the Carrier Part B and DME data files – the ASC, Anesthesia, Part B Drug, Physician, E & M, dialysis, imaging, tests, other procedures, DME and other carrier claims. 
 
 
@@ -10191,13 +10095,9 @@ Contained in
 
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
-"This variable is the total Medicare payments for Part B dialysis services (primarily the professional component since treatments are covered in hospital outpatient) for a given year.  Dialysis claims are a subset of the claims, and a subset of procedures in the Part B Carrier data file. Dialysis claims are defined as those with a line `BETOS` code (`BETOS`_CD) where the first 2 digits =`P9`.   
+"This variable is the total Medicare payments for Part B dialysis services (primarily the professional component since treatments are covered in hospital outpatient) for a given year.  Dialysis claims are a subset of the claims, and a subset of procedures in the Part B Carrier data file. Dialysis claims are defined as those with a line `BETOS` code (``BETOS`_CD`) where the first 2 digits =`P9`.   
 
 The total Medicare payments are calculated as the sum of `LINE_NCH_PMT_AMT` where the `LINE_PRCSG_IND_CD` was ('A','R', or 'S') - for all relevant lines."
-
-
-
-<h3>Values</h3>
 
 
 
@@ -10216,11 +10116,7 @@ Contained in
 
 This variable is the total Medicare payments for part B durable medical equipment (DME) for a given year.  The total Beneficiary payments are calculated as the sum of `LINE_COINSRNC_AMT` + `LINE_BENE_PTB_DDCTBL_AMT` for the relevant lines.  
 
-Claims for DME are a subset of the claims in the Part B Carrier and DME data files. These claims are defined as those with a line `BETOS` code (`BETOS`_CD) where the first three digits are (`D1A`,`D1B`,`D1C`,`D1D`,`D1E`, or `D1F`.
-
-
-
-<h3>Values</h3>
+Claims for DME are a subset of the claims in the Part B Carrier and DME data files. These claims are defined as those with a line `BETOS` code (``BETOS`_CD`) where the first three digits are (`D1A`,`D1B`,`D1C`,`D1D`,`D1E`, or `D1F`.
 
 
 
@@ -10243,10 +10139,6 @@ Claims for DME are a subset of the claims in the Part B Carrier and DME data fil
 
 
 
-<h3>Values</h3>
-
-
-
 There are 11 cost/use categories from the Carrier Part B and DME data files – the ASC, Anesthesia, Part B Drug, Physician, E & M, dialysis, imaging, tests, other procedures, DME and other carrier claims. 
 
 
@@ -10261,11 +10153,7 @@ Contained in
 
 This variable is the total Medicare payments for part B durable medical equipment (DME) for a given year.  Claims for DME are a subset of the claims in the Part B Carrier and DME data files. 
 
-These claims are defined as those with a line `BETOS` code (`BETOS`_CD) where the first three digits are (`D1A`,`D1B`,`D1C`,`D1D`,`D1E`, or `D1F`). The total Medicare payments are calculated as the sum of `LINE_NCH_PMT_AMT` where the `LINE_PRCSG_IND_CD` was ('A','R', or 'S') - for all relevant lines.
-
-
-
-<h3>Values</h3>
+These claims are defined as those with a line `BETOS` code (``BETOS`_CD`) where the first three digits are (`D1A`,`D1B`,`D1C`,`D1D`,`D1E`, or `D1F`). The total Medicare payments are calculated as the sum of `LINE_NCH_PMT_AMT` where the `LINE_PRCSG_IND_CD` was ('A','R', or 'S') - for all relevant lines.
 
 
 
@@ -10509,11 +10397,7 @@ Contained in
 
 This variable is the sum of coinsurance and deductible payments for the part B evaluation and management (E&M) services for a given year. The total Beneficiary payments are calculated as the sum of `LINE_COINSRNC_AMT` + `LINE_BENE_PTB_DDCTBL_AMT` for the relevant lines.
 
-E & M claims are a subset of the claims in the Part B Carrier and DME data files, and a subset of physician claims.   The E & M claims are defined as those with a line `BETOS` code (`BETOS`_CD) where the first digit ='M' (but is not M1A or M1B – which are categorized as physician office care in this file – see `PHYS_MDCR_PMT`).
-
-
-
-<h3>Values</h3>
+E & M claims are a subset of the claims in the Part B Carrier and DME data files, and a subset of physician claims.   The E & M claims are defined as those with a line `BETOS` code (``BETOS`_CD`) where the first digit ='M' (but is not M1A or M1B – which are categorized as physician office care in this file – see `PHYS_MDCR_PMT`).
 
 
 
@@ -10536,10 +10420,6 @@ E & M claims are a subset of the claims in the Part B Carrier and DME data files
 
 
 
-<h3>Values</h3>
-
-
-
 There are 11 cost/use categories from the Carrier Part B and DME data files – the ASC, Anesthesia, Part B Drug, Physician, E & M, dialysis, imaging, tests, other procedures, DME and other carrier claims. 
 
 
@@ -10552,13 +10432,9 @@ Contained in
 
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
-"This variable is the total Medicare payments for the part B evaluation and management (E&M) services for a given year. E & M claims are a subset of the claims in the Part B Carrier and DME data files, and a subset of physician claims.   The E & M claims are defined as those with a line `BETOS` code (`BETOS`_CD) where the first digit ='M' (but is not M1A or M1B – which are categorized as physician office care in this file – see `PHYS_MDCR_PMT`).
+"This variable is the total Medicare payments for the part B evaluation and management (E&M) services for a given year. E & M claims are a subset of the claims in the Part B Carrier and DME data files, and a subset of physician claims.   The E & M claims are defined as those with a line `BETOS` code (``BETOS`_CD`) where the first digit ='M' (but is not M1A or M1B – which are categorized as physician office care in this file – see `PHYS_MDCR_PMT`).
 
 The total Medicare payments are calculated as the sum of `LINE_NCH_PMT_AMT` where the `LINE_PRCSG_IND_CD` was ('A','R', or 'S') - for all relevant lines."
-
-
-
-<h3>Values</h3>
 
 
 
@@ -10835,10 +10711,6 @@ This code specifies the first calendar year, month, and day in which the benefic
 
 
 
-<h3>Values</h3>
-
-
-
 The earliest possible date for anyone in the CCW is January 1, 1999.  If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the `COVSTART` variable in the Beneficiary File). 
 
 
@@ -10891,10 +10763,6 @@ This code specifies the first calendar year, month, and day in which the benefic
 
 
 
-<h3>Values</h3>
-
-
-
 The earliest possible date for anyone in the CCW is January 1, 1999.  If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the `COVSTART` variable in the Beneficiary File). 
 
 
@@ -10932,10 +10800,6 @@ Contained in
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
 This variable shows the date when the beneficiary first met the criteria for the chronic condition data warehouse (CCW) endometrial cancer indicator.  The variable will be blank for beneficiaries that have never had the condition.
-
-
-
-<h3>Values</h3>
 
 
 
@@ -11003,10 +10867,6 @@ This variable shows the date when the beneficiary first met the criteria for the
 
 
 
-<h3>Values</h3>
-
-
-
 The earliest possible date for anyone in the CCW is January 1, 1999.  If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the `COVSTART` variable in the Beneficiary File).
  
 
@@ -11048,10 +10908,6 @@ This variable shows the date when the beneficiary first met the criteria for the
 
 
 
-<h3>Values</h3>
-
-
-
 The earliest possible date for anyone in the CCW is January 1, 1999.  If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the `COVSTART` variable in the Beneficiary File). 
 
 
@@ -11065,10 +10921,6 @@ Contained in
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
 This code specifies the first calendar year, month, and day in which the beneficiary met the chronic condition algorithm criteria.  The earliest possible value is 1999MMDD.
-
-
-
-<h3>Values</h3>
 
 
 
@@ -11245,10 +11097,6 @@ Contained in
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
 Total number of months of HMO coverage.
-
-
-
-<h3>Values</h3>
 
 
 
@@ -11618,7 +11466,7 @@ Codes and descriptors developed by Medicare carriers (currently known as Medicar
 
 **** Note 2: ****
 
-This field may contain information regarding case-mix grouping that Medicare used to pay for SNF, home health, or IRF services. These groupings are sometimes known as Health Insurance Prospective Payment System (HIPPS) codes. This field will contain a HIPPS code if the revenue center code (`REV_CNTR`) equals 0022 for SNF care, 0023 for home health, or 0024 for IRF care. For home health claims, please also see the revenue center APC/HIPPS code variable (`REV_CNTR`_APC_HIPPS_CD).
+This field may contain information regarding case-mix grouping that Medicare used to pay for SNF, home health, or IRF services. These groupings are sometimes known as Health Insurance Prospective Payment System (HIPPS) codes. This field will contain a HIPPS code if the revenue center code (`REV_CNTR`) equals 0022 for SNF care, 0023 for home health, or 0024 for IRF care. For home health claims, please also see the revenue center APC/HIPPS code variable (``REV_CNTR`_APC_HIPPS_CD`).
 
 
 
@@ -11755,10 +11603,6 @@ This variable is the total Medicare payments in the home health (HH) setting for
 
 
 
-<h3>Values</h3>
-
-
-
 Medicare payments are described in detail in a series of Medicare Payment Advisory Commission (MedPAC) documents called “Payment Basics” (see: [here](http://www.medpac.gov/-documents-/payment-basics).)
 
 Also in the Medicare Learning Network (MLN) “Payment System Fact Sheet Series” (see the list of MLN publications at: [here](http://www.cms.gov/Outreach-and-Education/Medicare-Learning-Network-MLN/MLNProducts/MLN-Publications.html))
@@ -11778,10 +11622,6 @@ This variable is the count of home health (HH) visits for a given year.  The CC
 
 
 
-<h3>Values</h3>
-
-
-
 The `CLM_FROM_DT` for the first claim associated with the stay must have been in the year of the data file, however it was permissible for the `CLM_THRU_DT` to have occurred in January of the following year.
  
 
@@ -11796,10 +11636,6 @@ Contained in
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
 This variable is the count of Medicare covered days in the hospice setting for a given year.   This variable equals the sum of the `CLM_UTLZTN_DAY_CNT` variables on the source claims.
-
-
-
-<h3>Values</h3>
 
 
 
@@ -11824,10 +11660,6 @@ This variable is the total Medicare payments in the hospice setting for a given 
 
 
 
-<h3>Values</h3>
-
-
-
 Medicare payments are described in detail in a series of Medicare Payment Advisory Commission (MedPAC) documents called “Payment Basics” (see: [here](http://www.medpac.gov/-documents-/payment-basics).)
 
 Also in the Medicare Learning Network (MLN) “Payment System Fact Sheet Series” (see the list of MLN publications at: [here](http://www.cms.gov/Outreach-and-Education/Medicare-Learning-Network-MLN/MLNProducts/MLN-Publications.html))
@@ -11847,10 +11679,6 @@ This variable is the count of stays (unique admissions, which may span more than
 
 
 
-<h3>Values</h3>
-
-
-
 The `CLM_FROM_DT` for the first claim associated with the stay must have been in the year of the data file, however it was permissible for the `CLM_THRU_DT` to have occurred in January of the following year. 
 
 
@@ -11864,10 +11692,6 @@ Contained in
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
 This variable is the sum of Medicare coinsurance and deductible payments in the hospital outpatient setting for a given year. Calculated as the sum of `DED_AMT` and `COIN_AMT` for all HOP claims where the `CLM_PMT_AMT` >= 0.
-
-
-
-<h3>Values</h3>
 
 
 
@@ -11892,10 +11716,6 @@ This variable is the count of unique emergency department revenue center dates (
 
 
 
-<h3>Values</h3>
-
-
-
 Note that additional ED  revenue centers are found in the inpatient data files – if the ED visit resulted in an IP admission at the same facility.
   
 There are 2 variables that contain counts of  ER visits in different settings: this variable and the Inpatient ER (`IP_ER_VISITS`)
@@ -11912,10 +11732,6 @@ Contained in
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
 This variable is the total Medicare payments in the hospital outpatient setting for a given year.  Calculated as the sum of `CLM_PMT_AMT` for all HOP claims where the `CLM_PMT_AMT` >= 0.
-
-
-
-<h3>Values</h3>
 
 
 
@@ -11938,10 +11754,6 @@ This variable is the count of unique revenue center dates (as a proxy for visits
 
 
 
-<h3>Values</h3>
-
-
-
 The `CLM_FROM_DT` for the first claim associated with the stay must have been in the year of the data file, however it was permissible for the `CLM_THRU_DT` to have occurred in January of the following year.
 
 ER visits in the HOP setting are counted in this variable (also see `HOP_ER_VISITS`).
@@ -11958,10 +11770,6 @@ Contained in
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
 This variable is the count of hospital readmissions in the acute inpatient setting for a given year.  The `CLM_FROM_DT` for the original admission must have been in the year of the data file, however it was permissible for the readmission claim to have occurred in January of the following year.  A beneficiary is considered to be readmitted when they have an acute inpatient stay with a discharge status that is not expired (DSCHRG_STUS≠20) or left against medical advice (DSCHRG_STUS≠07) within 30 days of a previous acute inpatient stay with a discharge status that is also not expired or left against medical advice.
-
-
-
-<h3>Values</h3>
 
 
 
@@ -12105,10 +11913,6 @@ This variable shows the date when the beneficiary first met the criteria for the
 
 
 
-<h3>Values</h3>
-
-
-
 The earliest possible date for anyone in the CCW is January 1, 1999.  If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the `COVSTART` variable in the Beneficiary File). 
 
 
@@ -12149,10 +11953,6 @@ This field identifies only those codes associated with cause of death.
 
 
 
-<h3>Values</h3>
-
-
-
 All ICD-10 codes begin with an alpha character followed by two or three digits. NDI results do not include decimals in the cause of death codes. The decimal is implied between the second and third digits for ICD-10 codes.
 
 Available for 1999-2008. Researchers whishing to obtain this NDI segment of the MBSF must obtain an additional approval beyond the CMS DUA. 
@@ -12171,10 +11971,6 @@ This field is the narrative description of the ICD-10 code value.
 
 
 
-<h3>Values</h3>
-
-
-
 Available for 1999-2008. Researchers wishing to obtain this NDI segment of the MBSF must obtain an additional approval beyond the CMS DUA. 
 
 
@@ -12189,11 +11985,7 @@ Contained in
 
 This variable is the sum of coinsurance and deductible payments for imaging services (IMG) for a given year.  The total beneficiary payments are calculated as the sum of `LINE_COINSRNC_AMT` + `LINE_BENE_PTB_DDCTBL_AMT` for the relevant lines.  
 
-Claims for imaging procedures are a subset of the claims, and a subset of procedures in the Part B Carrier and DME data files. These imaging claims are defined as those with a line `BETOS` code (`BETOS`_CD) where the first digit =I (except for `I1E`, or `I1F` – which are considered Part B drugs).
-
-
-
-<h3>Values</h3>
+Claims for imaging procedures are a subset of the claims, and a subset of procedures in the Part B Carrier and DME data files. These imaging claims are defined as those with a line `BETOS` code (``BETOS`_CD`) where the first digit =I (except for `I1E`, or `I1F` – which are considered Part B drugs).
 
 
 
@@ -12215,10 +12007,6 @@ These imaging claims are defined as those with a line `BETOS` code (`BETOS`_CD) 
 
 
 
-<h3>Values</h3>
-
-
-
 There are 11 cost/use categories from the Carrier Part B and DME data files – the ASC, Anesthesia, Part B Drug, Physician, E & M, dialysis, imaging, tests, other procedures, DME and other carrier claims. 
 
 
@@ -12231,13 +12019,9 @@ Contained in
 
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
-"This variable is the total Medicare payments for imaging services (IMG) for a given year.  Claims for imaging procedures are a subset of the claims, and a subset of procedures in the Part B Carrier and DME data files. These imaging claims are defined as those with a line `BETOS` code (`BETOS`_CD) where the first digit =I (except for `I1E`, or `I1F` – which are considered Part B drugs).
+"This variable is the total Medicare payments for imaging services (IMG) for a given year.  Claims for imaging procedures are a subset of the claims, and a subset of procedures in the Part B Carrier and DME data files. These imaging claims are defined as those with a line `BETOS` code (``BETOS`_CD`) where the first digit =I (except for `I1E`, or `I1F` – which are considered Part B drugs).
 
 The total Medicare payments are calculated as the sum of `LINE_NCH_PMT_AMT` where the `LINE_PRCSG_IND_CD` was ('A','R', or 'S') - for all relevant lines."
-
-
-
-<h3>Values</h3>
 
 
 
@@ -12255,10 +12039,6 @@ Contained in
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
 This variable is the count of emergency department claims in the inpatient setting for a given year.  The revenue centers indicating Emergency Room use were (0450, 0451, 0452, 0456, 0459).
-
-
-
-<h3>Values</h3>
 
 
 
@@ -12733,7 +12513,7 @@ CMS specialty code used for pricing the line item service on the noninstitutiona
 
 
 
- HCFA Provider Specialty Table.txt 
+ [HCFA Provider Specialty Table.txt](https://www.resdac.org/sites/resdac.umn.edu/files/HCFA%20Provider%20Specialty%20Table.txt) 
 
 
 
@@ -12769,7 +12549,7 @@ Code indicating the type of service, as defined in the CMS Medicare Carrier Manu
 
 
 
- CMS Type of Service Table.txt 
+ [CMS Type of Service Table.txt](https://www.resdac.org/sites/resdac.umn.edu/files/CMS%20Type%20of%20Service%20Table.txt) 
 
 
 
@@ -12899,7 +12679,7 @@ NOTE: During the Version H conversion this field was populated with data through
 
 
 
- `BETOS` Table.txt 
+ [`BETOS` Table.txt](https://www.resdac.org/sites/resdac.umn.edu/files/`BETOS`%20Table.txt) 
 
 
 
@@ -12967,7 +12747,7 @@ NOTE: During the Version H conversion this field was populated with data through
 
 
 
- State Table.txt 
+ [State Table.txt](https://www.resdac.org/sites/resdac.umn.edu/files/State%20Table.txt) 
 
 
 
@@ -13167,7 +12947,7 @@ There are up to 7 of these line applied indicator fields (`LINE_OTHR_APLD_IND_CD
 
 
 
- LINE_OTHR_APLD_IND_CD_TB.txt 
+ [LINE_OTHR_APLD_IND_CD_TB.txt](https://www.resdac.org/sites/resdac.umn.edu/files/LINE_OTHR_APLD_IND_CD_TB_1.txt) 
 
 
 
@@ -13192,7 +12972,7 @@ There are up to 7 of these line applied indicator fields (`LINE_OTHR_APLD_IND_CD
 
 
 
- LINE_OTHR_APLD_IND_CD_TB.txt 
+ [LINE_OTHR_APLD_IND_CD_TB.txt](https://www.resdac.org/sites/resdac.umn.edu/files/LINE_OTHR_APLD_IND_CD_TB_0.txt) 
 
 
 
@@ -13217,7 +12997,7 @@ There are up to 7 of these line applied indicator fields (`LINE_OTHR_APLD_IND_CD
 
 
 
- LINE_OTHR_APLD_IND_CD_TB.txt 
+ [LINE_OTHR_APLD_IND_CD_TB.txt](https://www.resdac.org/sites/resdac.umn.edu/files/LINE_OTHR_APLD_IND_CD_TB.txt) 
 
 
 
@@ -13242,7 +13022,7 @@ There are up to 7 of these line applied indicator fields (`LINE_OTHR_APLD_IND_CD
 
 
 
- LINE_OTHR_APLD_IND_CD_TB.txt 
+ [LINE_OTHR_APLD_IND_CD_TB.txt](https://www.resdac.org/sites/resdac.umn.edu/files/LINE_OTHR_APLD_IND_CD_TB_2.txt) 
 
 
 
@@ -13267,7 +13047,7 @@ There are up to 7 of these line applied indicator fields (`LINE_OTHR_APLD_IND_CD
 
 
 
- LINE_OTHR_APLD_IND_CD_TB.txt 
+ [LINE_OTHR_APLD_IND_CD_TB.txt](https://www.resdac.org/sites/resdac.umn.edu/files/LINE_OTHR_APLD_IND_CD_TB_3.txt) 
 
 
 
@@ -13292,7 +13072,7 @@ There are up to 7 of these line applied indicator fields (`LINE_OTHR_APLD_IND_CD
 
 
 
- LINE_OTHR_APLD_IND_CD_TB.txt 
+ [LINE_OTHR_APLD_IND_CD_TB.txt](https://www.resdac.org/sites/resdac.umn.edu/files/LINE_OTHR_APLD_IND_CD_TB_4.txt) 
 
 
 
@@ -13317,7 +13097,7 @@ There are up to 7 of these line applied indicator fields (`LINE_OTHR_APLD_IND_CD
 
 
 
- LINE_OTHR_APLD_IND_CD_TB.txt 
+ [LINE_OTHR_APLD_IND_CD_TB.txt](https://www.resdac.org/sites/resdac.umn.edu/files/LINE_OTHR_APLD_IND_CD_TB_5.txt) 
 
 
 
@@ -13367,7 +13147,7 @@ The code indicating the place of service, as defined in the Medicare Carrier Man
 
 
 
-List obtained from [here](https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set.html) Place of Service Table.txt 
+ [List obtained from [here](https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set.html) Place of Service Table.txt](https://www.resdac.org/sites/resdac.umn.edu/files/Place%20of%20Service%20Table.txt) 
 
 
 
@@ -13423,7 +13203,7 @@ NOTE2: Effective 4/1/02, this field was expanded to two bytes to accommodate new
 
 
 
- Line Processing Indicator Table.txt 
+ [Line Processing Indicator Table.txt](https://www.resdac.org/sites/resdac.umn.edu/files/Line%20Processing%20Indicator%20Table.txt) 
 
 
 
@@ -15203,7 +14983,7 @@ The code indicating the type of dialysis received by the beneficiary during the 
 
 
 
- Medpar_ESRD_SETG_IND_TB.txt 
+ [Medpar_ESRD_SETG_IND_TB.txt](https://www.resdac.org/sites/resdac.umn.edu/files/Medpar_ESRD_SETG_IND_TB.txt) 
 
 
 
@@ -16405,7 +16185,7 @@ MEDPAR provider number.
 
 
 
- Provider Number Table.txt 
+ [Provider Number Table.txt](https://www.resdac.org/sites/resdac.umn.edu/files/Provider%20Number%20Table_0.txt) 
 
 
 
@@ -17179,7 +16959,7 @@ The codes (commonly called warning indicators) specifying detailed billing infor
 
 
 
- MEDPAR Warning Indicators Code Table.txt 
+ [MEDPAR Warning Indicators Code Table.txt](https://www.resdac.org/sites/resdac.umn.edu/files/MEDPAR%20Warning%20Indicators%20Code%20Table.txt) 
 
 
 
@@ -17258,10 +17038,6 @@ Contained in
 This variable is the date when the beneficiary first became eligible for Medicare coverage (Part A or Part B).
 
 Historic date of 1st Medicare coverage (may be prior to 1999, which is the earliest claim files available through CCW)
-
-
-
-<h3>Values</h3>
 
 
 
@@ -19662,10 +19438,6 @@ This field indicates that an enrollee's date of death has been verified as the e
 
 
 
-<h3>Values</h3>
-
-
-
 Formatted as YYYYMMDD 
 
 
@@ -19679,10 +19451,6 @@ Contained in
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
 This field represents the death certificate number of the beneficiary.
-
-
-
-<h3>Values</h3>
 
 
 
@@ -20062,10 +19830,6 @@ These OIP claims are a subset of the claims in the IP data file consisting of da
 
 
 
-<h3>Values</h3>
-
-
-
 There are 2 cost/use categories from the IP data files: Acute and the OIP.
 
 Costs to that beneficiaries are liable for are described in detail on the Medicare.gov website. There is a CMS publication called "Your Medicare Benefits", which explains the deductibles and coinsurance amounts.
@@ -20086,10 +19850,6 @@ Contained in
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
 This variable is the count of covered days in the non-acute inpatient setting for a given year.  The CCW variable `CLM_UTLZTN_DAY_CNT` is used to obtain this variable.   These “other” inpatient (OIP) claims are a subset of the claims in the IP data file consisting of data from IP settings such as long-term care hospitals, inpatient psychiatric facilities, inpatient rehabilitation facilities, and other types of IP facilities such as children’s hospitals or cancer centers.
-
-
-
-<h3>Values</h3>
 
 
 
@@ -20118,10 +19878,6 @@ These OIP claims are a subset of the claims in the IP data file consisting of da
 
 
 
-<h3>Values</h3>
-
-
-
 There are 2 cost/use categories from the IP data files: Acute and the OIP.
 
 OIP_PERDIEM_PMT must be added to this field to obtain the total Medicare payments. The annual per diem variable was new in 2010; it will always be null/missing in earlier files.
@@ -20147,10 +19903,6 @@ This variable is the count of hospital stays (unique admissions, which may span 
 
 
 
-<h3>Values</h3>
-
-
-
 There are 2 cost/use categories from the IP data files: Acute and the OIP
  
 
@@ -20167,10 +19919,6 @@ Contained in
 This variable is the sum of coinsurance and deductible payments from Part B Carrier and DME claims which appear in settings other than the 10 specific categories which are part of this file for a given year. The total Beneficiary payments are calculated as the sum of `LINE_COINSRNC_AMT` + `LINE_BENE_PTB_DDCTBL_AMT` for the relevant lines.  
 
 Claims for other carrier/DME claims are a subset of the claims in the Part B Carrier and DME data files.  Types of services which may have been summarized in this other carrier category (OTHC) include ambulance, chiropractor, chemotherapy, vision, hearing and speech services, etc.
-
-
-
-<h3>Values</h3>
 
 
 
@@ -20193,10 +19941,6 @@ An event is defined as each line item that contains the relevant service."
 
 
 
-<h3>Values</h3>
-
-
-
 There are 11 cost/use categories from the Carrier Part B and DME data files – the ASC, Anesthesia, Part B Drug, Physician, E & M, dialysis, imaging, tests, other procedures, DME and other carrier claims. 
 
 
@@ -20215,10 +19959,6 @@ The total Medicare payments are calculated as the sum of `LINE_NCH_PMT_AMT` wher
 
 
 
-<h3>Values</h3>
-
-
-
 There are 11 cost/use categories from the Carrier Part B and DME data files – the ASC, Part B Drug, Physician, E &M, anesthesia, dialysis, imaging, tests, other procedures, DME and other carrier claims.
  
 
@@ -20234,11 +19974,7 @@ Contained in
 
 This variable is the sum of coinsurance and deductible payments for services considered part B other procedures (i.e., not anesthesia or dialysis) for a given year. The total Beneficiary payments are calculated as the sum of `LINE_COINSRNC_AMT` + `LINE_BENE_PTB_DDCTBL_AMT` for the relevant lines.  
 
-Claims for other procedures are a subset of the claims in the Part B Carrier data file. These other procedure claims are defined as those with a line `BETOS` code (`BETOS`_CD) where the first 2 digits are (`P1`,`P2`,`P3`,`P4`,`P5`,`P6`,`P7`, or `P8`).
-
-
-
-<h3>Values</h3>
+Claims for other procedures are a subset of the claims in the Part B Carrier data file. These other procedure claims are defined as those with a line `BETOS` code (``BETOS`_CD`) where the first 2 digits are (`P1`,`P2`,`P3`,`P4`,`P5`,`P6`,`P7`, or `P8`).
 
 
 
@@ -20261,10 +19997,6 @@ An event is defined as each line item that contains the relevant service."
 
 
 
-<h3>Values</h3>
-
-
-
 There are 11 cost/use categories from the Carrier Part B and DME data files – the ASC, Anesthesia, Part B Drug, Physician, E & M, dialysis, imaging, tests, other procedures, DME and other carrier claims.
  
 
@@ -20278,11 +20010,7 @@ Contained in
 
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
-This variable is the total Medicare payments for services considered part B other procedures (i.e., not anesthesia or dialysis) for a given year.  Claims for other procedures are a subset of the claims, and a subset of procedures in the Part B Carrier data file. These other procedure claims are defined as those with a line `BETOS` code (`BETOS`_CD) where the first 2 digits are (`P1`,`P2`,`P3`,`P4`,`P5`,`P6`,`P7`, or `P8`). The total Medicare payments are calculated as the sum of `LINE_NCH_PMT_AMT` where the `LINE_PRCSG_IND_CD` was ('A','R', or 'S') - for all relevant lines.
-
-
-
-<h3>Values</h3>
+This variable is the total Medicare payments for services considered part B other procedures (i.e., not anesthesia or dialysis) for a given year.  Claims for other procedures are a subset of the claims, and a subset of procedures in the Part B Carrier data file. These other procedure claims are defined as those with a line `BETOS` code (``BETOS`_CD`) where the first 2 digits are (`P1`,`P2`,`P3`,`P4`,`P5`,`P6`,`P7`, or `P8`). The total Medicare payments are calculated as the sum of `LINE_NCH_PMT_AMT` where the `LINE_PRCSG_IND_CD` was ('A','R', or 'S') - for all relevant lines.
 
 
 
@@ -20344,13 +20072,9 @@ Contained in
 
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
-"This variable is the sum of coinsurance and deductible payments for part B drugs for a given year. Part B drug claims are a subset of the claims in the Part B Carrier and DME data files. The Part B drug claims are identified by `BETOS` codes (CCW variable `BETOS`_CD with values of `D1G`,`O1D`,`O1E`,`O1G`,`I1E`, or `I1F`). 
+"This variable is the sum of coinsurance and deductible payments for part B drugs for a given year. Part B drug claims are a subset of the claims in the Part B Carrier and DME data files. The Part B drug claims are identified by `BETOS` codes (CCW variable ``BETOS`_CD` with values of `D1G`,`O1D`,`O1E`,`O1G`,`I1E`, or `I1F`). 
 
 The total Beneficiary payments are calculated as the sum of `LINE_COINSRNC_AMT` + `LINE_BENE_PTB_DDCTBL_AMT` for the relevant lines.  "
-
-
-
-<h3>Values</h3>
 
 
 
@@ -20371,10 +20095,6 @@ This variable is the count of events in the part B drug setting for a given year
 
 
 
-<h3>Values</h3>
-
-
-
 There are 11 cost/use categories from the Carrier Part B and DME data files – the ASC, Part B Drug, Physician, E &M, anesthesia, dialysis, imaging, tests, other procedures, DME and other carrier claims.
  
 
@@ -20388,13 +20108,9 @@ Contained in
 
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
-"This variable is the total Medicare payments for Part B drugs for a given year. Part B drug claims are a subset of the claims in the Part B Carrier and DME data files.  The Part B drug claims are identified by `BETOS` codes (CCW variable `BETOS`_CD with values of `D1G`,`O1D`,`O1E`,`O1G`,`I1E`, or `I1F`).  
+"This variable is the total Medicare payments for Part B drugs for a given year. Part B drug claims are a subset of the claims in the Part B Carrier and DME data files.  The Part B drug claims are identified by `BETOS` codes (CCW variable ``BETOS`_CD` with values of `D1G`,`O1D`,`O1E`,`O1G`,`I1E`, or `I1F`).  
 
 Total Part B drug payments are calculated as sum of `LINE_NCH_PMT_AMT` where the `LINE_PRCSG_IND_CD` was ('A','R', or 'S')."
-
-
-
-<h3>Values</h3>
 
 
 
@@ -20434,11 +20150,7 @@ Contained in
 
 This variable is the sum of coinsurance and deductible payments for the part B physician office services (PHYS) for a given year. The total Beneficiary payments are calculated as the sum of `LINE_COINSRNC_AMT` + `LINE_BENE_PTB_DDCTBL_AMT` for the relevant lines. 
 
-Physician office claims are a subset of the claims in the Part B Carrier and DME data files, and a subset of physician evaluation and management claims (note that E&M are tabulated separately in this data file).  The PHYS claims are defined as those with a line `BETOS` code (`BETOS`_CD) where the first three digits =M1A or M1B (the remainder of physician services which occur in different settings appear in  `EM_MDCR_PMT`).
-
-
-
-<h3>Values</h3>
+Physician office claims are a subset of the claims in the Part B Carrier and DME data files, and a subset of physician evaluation and management claims (note that E&M are tabulated separately in this data file).  The PHYS claims are defined as those with a line `BETOS` code (``BETOS`_CD`) where the first three digits =M1A or M1B (the remainder of physician services which occur in different settings appear in  `EM_MDCR_PMT`).
 
 
 
@@ -20461,10 +20173,6 @@ An event is defined as each line item that contains the relevant service."
 
 
 
-<h3>Values</h3>
-
-
-
 There are 11 cost/use categories from the Carrier Part B and DME data files – the ASC, Anesthesia, Part B Drug, Physician, E & M, dialysis, imaging, tests, other procedures, DME and other carrier claims.
  
 
@@ -20480,11 +20188,7 @@ Contained in
 
 This variable is the total Medicare payments for the part B physician office services (PHYS) for a given year. Physician office claims are a subset of the claims in the Part B Carrier and DME data files, and a subset of physician evaluation and management claims (note that E&M are tabulated separately in this data file).
 
-The physician claims are defined as those with a line `BETOS` code (`BETOS`_CD) where the first 3 digits = M1A or M1B (note that all other `BETOS`_CD that begin with "M" are categorized as other evluation & managment services in this file – see `EM_MDCR_PMT`). The total Medicare payments are calculated as the sum of `LINE_NCH_PMT_AMT` where the `LINE_PRCSG_IND_CD` was ('A','R', or 'S') - for all relevant lines.
-
-
-
-<h3>Values</h3>
+The physician claims are defined as those with a line `BETOS` code (``BETOS`_CD`) where the first 3 digits = M1A or M1B (note that all other ``BETOS`_CD` that begin with "M" are categorized as other evluation & managment services in this file – see `EM_MDCR_PMT`). The total Medicare payments are calculated as the sum of `LINE_NCH_PMT_AMT` where the `LINE_PRCSG_IND_CD` was ('A','R', or 'S') - for all relevant lines.
 
 
 
@@ -21016,7 +20720,7 @@ If the beneficiary was not enrolled in a managed care plan for a given month, th
 
 
 
- Part C Plan Type Code.txt 
+ [Part C Plan Type Code.txt](https://www.resdac.org/sites/resdac.umn.edu/files/Part%20C%20Plan%20Type%20Code.txt) 
 
 
 
@@ -21039,7 +20743,7 @@ If the beneficiary was not enrolled in a managed care plan for a given month, th
 
 
 
- Part C Plan Type Code.txt 
+ [Part C Plan Type Code.txt](https://www.resdac.org/sites/resdac.umn.edu/files/Part%20C%20Plan%20Type%20Code.txt) 
 
 
 
@@ -21062,7 +20766,7 @@ If the beneficiary was not enrolled in a managed care plan for a given month, th
 
 
 
- Part C Plan Type Code.txt 
+ [Part C Plan Type Code.txt](https://www.resdac.org/sites/resdac.umn.edu/files/Part%20C%20Plan%20Type%20Code.txt) 
 
 
 
@@ -21085,7 +20789,7 @@ If the beneficiary was not enrolled in a managed care plan for a given month, th
 
 
 
- Part C Plan Type Code.txt 
+ [Part C Plan Type Code.txt](https://www.resdac.org/sites/resdac.umn.edu/files/Part%20C%20Plan%20Type%20Code.txt) 
 
 
 
@@ -21108,7 +20812,7 @@ If the beneficiary was not enrolled in a managed care plan for a given month, th
 
 
 
- Part C Plan Type Code.txt 
+ [Part C Plan Type Code.txt](https://www.resdac.org/sites/resdac.umn.edu/files/Part%20C%20Plan%20Type%20Code.txt) 
 
 
 
@@ -21131,7 +20835,7 @@ If the beneficiary was not enrolled in a managed care plan for a given month, th
 
 
 
- Part C Plan Type Code.txt 
+ [Part C Plan Type Code.txt](https://www.resdac.org/sites/resdac.umn.edu/files/Part%20C%20Plan%20Type%20Code.txt) 
 
 
 
@@ -21154,7 +20858,7 @@ If the beneficiary was not enrolled in a managed care plan for a given month, th
 
 
 
- Part C Plan Type Code.txt 
+ [Part C Plan Type Code.txt](https://www.resdac.org/sites/resdac.umn.edu/files/Part%20C%20Plan%20Type%20Code.txt) 
 
 
 
@@ -21177,7 +20881,7 @@ If the beneficiary was not enrolled in a managed care plan for a given month, th
 
 
 
- Part C Plan Type Code.txt 
+ [Part C Plan Type Code.txt](https://www.resdac.org/sites/resdac.umn.edu/files/Part%20C%20Plan%20Type%20Code.txt) 
 
 
 
@@ -21200,7 +20904,7 @@ If the beneficiary was not enrolled in a managed care plan for a given month, th
 
 
 
- Part C Plan Type Code.txt 
+ [Part C Plan Type Code.txt](https://www.resdac.org/sites/resdac.umn.edu/files/Part%20C%20Plan%20Type%20Code.txt) 
 
 
 
@@ -21223,7 +20927,7 @@ If the beneficiary was not enrolled in a managed care plan for a given month, th
 
 
 
- Part C Plan Type Code.txt 
+ [Part C Plan Type Code.txt](https://www.resdac.org/sites/resdac.umn.edu/files/Part%20C%20Plan%20Type%20Code.txt) 
 
 
 
@@ -21246,7 +20950,7 @@ If the beneficiary was not enrolled in a managed care plan for a given month, th
 
 
 
- Part C Plan Type Code.txt 
+ [Part C Plan Type Code.txt](https://www.resdac.org/sites/resdac.umn.edu/files/Part%20C%20Plan%20Type%20Code.txt) 
 
 
 
@@ -21269,7 +20973,7 @@ If the beneficiary was not enrolled in a managed care plan for a given month, th
 
 
 
- Part C Plan Type Code.txt 
+ [Part C Plan Type Code.txt](https://www.resdac.org/sites/resdac.umn.edu/files/Part%20C%20Plan%20Type%20Code.txt) 
 
 
 
@@ -21284,10 +20988,6 @@ Contained in
 This variable is the dollar amount that the beneficiary paid for all PDEs for a given year, without being reimbursed by a third party.  The amount includes all copayments, coinsurance, deductible, or other patient payment amounts, and comes directly from the source Prescription Drug Events (PDEs).  
 
 The total beneficiary payments are calculated as the sum of three CCW variables: patient pay amount (PTNT_PAY_AMT), other troop amount (OTHER_TROOP_AMT), and patient liability reduction due to other payer amount (PLRO_AMT) for Part D drugs for the relevant PDEs.
-
-
-
-<h3>Values</h3>
 
 
 
@@ -21763,10 +21463,6 @@ This variable is the count of events for Part D drugs for a given year (i.e., a 
 
 
 
-<h3>Values</h3>
-
-
-
 The value will be null if the beneficiary was not enrolled in Part D or did not use any Part D drugs during the year.
 
 PDEs consist of highly variable days supply of the medication.  We also create a derived variable that counts a standard 30 day supply of a filled Part D prescription (see `PTD_FILL_CNT`). 
@@ -21782,10 +21478,6 @@ Contained in
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
 Part D prescribing events consist of highly variable days supply of the medication.  This derived variable creates a standard 30 days supply of a filled Part D prescription, and counts this as a “fill”.   The Part D fill count does not indicate the number of different drugs the person is using, only the total months covered by a medication (e.g., if a patient is receiving a full year supply of a medication, whether this occurs in one transaction or 12 monthly transactions, the fill count = 12; if the patient is taking three such medications, the fill count=36).  
-
-
-
-<h3>Values</h3>
 
 
 
@@ -21805,10 +21497,6 @@ Contained in
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
 This variable is the dollar amount that the Part D plan covered for all covered drugs for a given year. The variable is calculated as the sum of the plan payments for covered PDEs (CVRD_D_PLAN_PD_AMT) and the low income cost sharing subsidy amount (LICS_AMT) during the year.
-
-
-
-<h3>Values</h3>
 
 
 
@@ -22696,10 +22384,6 @@ This variable is the gross drug cost (TOT_RX_CST_AMT) of all Part D drugs for a 
 
 
 
-<h3>Values</h3>
-
-
-
 This is the price paid for the drug at the point of sale (i.e., the pharmacy counter), and it does not include any rebates or discounts that the drug manufacturer provides directly to the Part D plan sponsor. 
 
 The value will be null if the beneficiary was not enrolled in Part D or did not use any Part D drugs during the year. 
@@ -22725,7 +22409,7 @@ CMS identifies beneficiaries with fully-subsidized Part D coverage by looking fo
 
 
 
- Part D low-income cost share group code .txt 
+ [Part D low-income cost share group code .txt](https://www.resdac.org/sites/resdac.umn.edu/files/Part%20D%20low-income%20cost%20share%20group%20code%20.txt) 
 
 
 
@@ -22748,7 +22432,7 @@ CMS identifies beneficiaries with fully-subsidized Part D coverage by looking fo
 
 
 
- Part D low-income cost share group code .txt 
+ [Part D low-income cost share group code .txt](https://www.resdac.org/sites/resdac.umn.edu/files/Part%20D%20low-income%20cost%20share%20group%20code%20.txt) 
 
 
 
@@ -22771,7 +22455,7 @@ CMS identifies beneficiaries with fully-subsidized Part D coverage by looking fo
 
 
 
- Part D low-income cost share group code .txt 
+ [Part D low-income cost share group code .txt](https://www.resdac.org/sites/resdac.umn.edu/files/Part%20D%20low-income%20cost%20share%20group%20code%20.txt) 
 
 
 
@@ -22794,7 +22478,7 @@ CMS identifies beneficiaries with fully-subsidized Part D coverage by looking fo
 
 
 
- Part D low-income cost share group code .txt 
+ [Part D low-income cost share group code .txt](https://www.resdac.org/sites/resdac.umn.edu/files/Part%20D%20low-income%20cost%20share%20group%20code%20.txt) 
 
 
 
@@ -22817,7 +22501,7 @@ CMS identifies beneficiaries with fully-subsidized Part D coverage by looking fo
 
 
 
- Part D low-income cost share group code .txt 
+ [Part D low-income cost share group code .txt](https://www.resdac.org/sites/resdac.umn.edu/files/Part%20D%20low-income%20cost%20share%20group%20code%20.txt) 
 
 
 
@@ -22840,7 +22524,7 @@ CMS identifies beneficiaries with fully-subsidized Part D coverage by looking fo
 
 
 
- Part D low-income cost share group code .txt 
+ [Part D low-income cost share group code .txt](https://www.resdac.org/sites/resdac.umn.edu/files/Part%20D%20low-income%20cost%20share%20group%20code%20.txt) 
 
 
 
@@ -22863,7 +22547,7 @@ CMS identifies beneficiaries with fully-subsidized Part D coverage by looking fo
 
 
 
- Part D low-income cost share group code .txt 
+ [Part D low-income cost share group code .txt](https://www.resdac.org/sites/resdac.umn.edu/files/Part%20D%20low-income%20cost%20share%20group%20code%20.txt) 
 
 
 
@@ -22886,7 +22570,7 @@ CMS identifies beneficiaries with fully-subsidized Part D coverage by looking fo
 
 
 
- Part D low-income cost share group code .txt 
+ [Part D low-income cost share group code .txt](https://www.resdac.org/sites/resdac.umn.edu/files/Part%20D%20low-income%20cost%20share%20group%20code%20.txt) 
 
 
 
@@ -22909,7 +22593,7 @@ CMS identifies beneficiaries with fully-subsidized Part D coverage by looking fo
 
 
 
- Part D low-income cost share group code .txt 
+ [Part D low-income cost share group code .txt](https://www.resdac.org/sites/resdac.umn.edu/files/Part%20D%20low-income%20cost%20share%20group%20code%20.txt) 
 
 
 
@@ -22932,7 +22616,7 @@ CMS identifies beneficiaries with fully-subsidized Part D coverage by looking fo
 
 
 
- Part D low-income cost share group code .txt 
+ [Part D low-income cost share group code .txt](https://www.resdac.org/sites/resdac.umn.edu/files/Part%20D%20low-income%20cost%20share%20group%20code%20.txt) 
 
 
 
@@ -22955,7 +22639,7 @@ CMS identifies beneficiaries with fully-subsidized Part D coverage by looking fo
 
 
 
- Part D low-income cost share group code .txt 
+ [Part D low-income cost share group code .txt](https://www.resdac.org/sites/resdac.umn.edu/files/Part%20D%20low-income%20cost%20share%20group%20code%20.txt) 
 
 
 
@@ -22978,7 +22662,7 @@ CMS identifies beneficiaries with fully-subsidized Part D coverage by looking fo
 
 
 
- Part D low-income cost share group code .txt 
+ [Part D low-income cost share group code .txt](https://www.resdac.org/sites/resdac.umn.edu/files/Part%20D%20low-income%20cost%20share%20group%20code%20.txt) 
 
 
 
@@ -23502,7 +23186,7 @@ The identification number of the institutional provider certified by Medicare to
 
 
 
- Provider Number Table.txt 
+ [Provider Number Table.txt](https://www.resdac.org/sites/resdac.umn.edu/files/Provider%20Number%20Table.txt) 
 
 
 
@@ -24134,7 +23818,7 @@ NOTE3: Beginning with NCH weekly process date 8/18/00, this field will be popula
 
 
 
- REV_CNTR_APC_TB.txt 
+ [REV_CNTR_APC_TB.txt](https://www.resdac.org/sites/resdac.umn.edu/files/REV_CNTR_APC_TB.txt) 
 
 
 
@@ -24261,7 +23945,7 @@ The provider-assigned revenue code for each cost center for which a separate cha
 
 
 
- Revenue Center Table.txt 
+ [Revenue Center Table.txt](https://www.resdac.org/sites/resdac.umn.edu/files/Revenue%20Center%20Table.txt) 
 
 
 
@@ -25568,10 +25252,6 @@ This variable is the sum of Medicare coinsurance and deductible payments in the 
 
 
 
-<h3>Values</h3>
-
-
-
 Costs to that beneficiaries are liable for are described in detail on the Medicare.gov website. There is a CMS publication called "Your Medicare Benefits", which explains the deductibles and coinsurance amounts.
 
 Medicare payments are described in detail in a series of Medicare Payment Advisory Commission (MedPAC) documents called “Payment Basics” (see: [here](http://www.medpac.gov/-documents-/payment-basics).)
@@ -25590,10 +25270,6 @@ Contained in
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
 This variable is the count of Medicare covered days in the skilled nursing facility (SNF) setting for the year.  This variable equals the sum of the `CLM_UTLZTN_DAY_CNT` variables on the source claims.
-
-
-
-<h3>Values</h3>
 
 
 
@@ -25617,10 +25293,6 @@ This variable is the total Medicare payments in the skilled nursing facility (SN
 
 
 
-<h3>Values</h3>
-
-
-
 Medicare payments are described in detail in a series of Medicare Payment Advisory Commission (MedPAC) documents called “Payment Basics” (see: [here](http://www.medpac.gov/-documents-/payment-basics).)
 
 Also in the Medicare Learning Network (MLN) “Payment System Fact Sheet Series” (see the list of MLN publications at: [here](http://www.cms.gov/Outreach-and-Education/Medicare-Learning-Network-MLN/MLNProducts/MLN-Publications.html))
@@ -25637,10 +25309,6 @@ Contained in
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
 This variable is the count of skilled nursing facility setting (SNF) stays (unique admissions, which may span more than one facility) for a given year.  A SNF stay is defined as a set of one or more consecutive skilled nursing facility claims where the beneficiary is only discharged on the most recent claim in the set.
-
-
-
-<h3>Values</h3>
 
 
 
@@ -25783,10 +25451,6 @@ Contained in
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
 Total number of months of state buy-in.
-
-
-
-<h3>Values</h3>
 
 
 
@@ -26226,7 +25890,7 @@ The social security administration (SSA) standard 2-digit state code of a benefi
 
 
 
- State SSA codes_GDIT_05182017.txt 
+ [State SSA codes_GDIT_05182017.txt](https://www.resdac.org/sites/resdac.umn.edu/files/State%20SSA%20codes_GDIT_05182017.txt) 
 
 
 
@@ -26287,11 +25951,7 @@ Contained in
 
 This variable is the sum of coinsurance and deductible payments for part B tests for a given year. The total Beneficiary payments are calculated as the sum of `LINE_COINSRNC_AMT` + `LINE_BENE_PTB_DDCTBL_AMT` for the relevant lines.   
 
-Claims for tests are a subset of the claims in the Part B Carrier data file. These claims are defined as those with a line `BETOS` code (`BETOS`_CD) where the first digit =T.
-
-
-
-<h3>Values</h3>
+Claims for tests are a subset of the claims in the Part B Carrier data file. These claims are defined as those with a line `BETOS` code (``BETOS`_CD`) where the first digit =T.
 
 
 
@@ -26314,10 +25974,6 @@ An event is defined as each line item that contains the relevant service."
 
 
 
-<h3>Values</h3>
-
-
-
 There are 11 cost/use categories from the Carrier Part B and DME data files – the ASC, Anesthesia, Part B Drug, Physician, E & M, dialysis, imaging, tests, other procedures, DME and other carrier claims.
  
 
@@ -26331,13 +25987,9 @@ Contained in
 
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
-"This variable is the total Medicare payments for part B tests for a given year.  Claims for tests are a subset of the claims in the Part B Carrier data file. These claims are defined as those with a line `BETOS` code (`BETOS`_CD) where the first digit =T.
+"This variable is the total Medicare payments for part B tests for a given year.  Claims for tests are a subset of the claims in the Part B Carrier data file. These claims are defined as those with a line `BETOS` code (``BETOS`_CD`) where the first digit =T.
 
 The total Medicare payments are calculated as the sum of `LINE_NCH_PMT_AMT` where the `LINE_PRCSG_IND_CD` was ('A','R', or 'S') - for all relevant lines."
-
-
-
-<h3>Values</h3>
 
 
 
@@ -26419,10 +26071,6 @@ Contained in
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
 This variable shows the date when the beneficiary first met the criteria for the traumatic brain injury and nonpsychotic mental disorders indicator. The variable will be blank for beneficiaries that have never had the condition.
-
-
-
-<h3>Values</h3>
 
 
 

@@ -4667,7 +4667,7 @@ The code indicating the value of a monetary condition which was used by the inte
 
 
 
- Claim Value Table.txt 
+ [Claim Value Table.txt](https://www.resdac.org/sites/resdac.umn.edu/files/Claim%20Value%20Table.txt) 
 
 
 
@@ -6375,7 +6375,7 @@ The identification number of the institutional provider certified by Medicare to
 
 
 
- Provider Number Table.txt 
+ [Provider Number Table.txt](https://www.resdac.org/sites/resdac.umn.edu/files/Provider%20Number%20Table.txt) 
 
 
 
@@ -6591,7 +6591,7 @@ The provider-assigned revenue code for each cost center for which a separate cha
 
 
 
- Revenue Center Table.txt 
+ [Revenue Center Table.txt](https://www.resdac.org/sites/resdac.umn.edu/files/Revenue%20Center%20Table.txt) 
 
 
 

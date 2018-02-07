@@ -182,7 +182,12 @@ for f in files:
         values_text = '\n\n<h3>Values</h3>\n\n'
         if not values_box.find('tr'):
             # I.e. No table of values
-            values_text += values_box.get_text()
+            try:
+                href = values_box.find('a')['href']
+                values_text += '\n\n ['
+                values_text += f'{values_box.get_text().strip()}]({href}) \n\n'
+            except TypeError:
+                values_text = values_box.get_text()
         else:
             table_headers = [
                 x.get_text()
@@ -329,7 +334,7 @@ for i in range(len(df)):
     # Replace link text in Main text and Values text with a hyperlink
     # https://stackoverflow.com/questions/161738/what-is-the-best-regular-expression-to-check-if-a-string-is-a-valid-url
     values_text = row['values_text']
-    regex = r'(http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+)'
+    regex = r'((?<!\]\()http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+)'
     values_text = re.sub(regex, r'[here](\1)', values_text)
     text = re.sub(regex, r'[here](\1)', text)
 

@@ -121,7 +121,7 @@ NOTE2: Effective 4/1/02, this field was expanded to two bytes to accommodate new
 
 
 
- Carrier Claim Payment Denial Table.txt 
+ [Carrier Claim Payment Denial Table.txt](https://www.resdac.org/sites/resdac.umn.edu/files/Carrier%20Claim%20Payment%20Denial%20Table_0.txt) 
 
 
 
@@ -202,7 +202,7 @@ NOTE: The 5-position MAC number will be housed in the existing `CARR_NUM` field.
 
 
 
- Carrier Number-MAC Table.txt 
+ [Carrier Number-MAC Table.txt](https://www.resdac.org/sites/resdac.umn.edu/files/Carrier%20Number-MAC%20Table.txt) 
 
 
 
@@ -1452,7 +1452,7 @@ Prior to Version H this field was named: CWFB_DME_PRCNG_STATE_CD.
 
 
 
- State Table.txt 
+ [State Table.txt](https://www.resdac.org/sites/resdac.umn.edu/files/State%20Table_0.txt) 
 
 
 
@@ -1489,7 +1489,7 @@ NOTE: During the Version H conversion this field was populated with data through
 
 
 
- State Table.txt 
+ [State Table.txt](https://www.resdac.org/sites/resdac.umn.edu/files/State%20Table_1.txt) 
 
 
 
@@ -1792,7 +1792,7 @@ Codes and descriptors developed by Medicare carriers (currently known as Medicar
 
 **** Note 2: ****
 
-This field may contain information regarding case-mix grouping that Medicare used to pay for SNF, home health, or IRF services. These groupings are sometimes known as Health Insurance Prospective Payment System (HIPPS) codes. This field will contain a HIPPS code if the revenue center code (`REV_CNTR`) equals 0022 for SNF care, 0023 for home health, or 0024 for IRF care. For home health claims, please also see the revenue center APC/HIPPS code variable (`REV_CNTR`_APC_HIPPS_CD).
+This field may contain information regarding case-mix grouping that Medicare used to pay for SNF, home health, or IRF services. These groupings are sometimes known as Health Insurance Prospective Payment System (HIPPS) codes. This field will contain a HIPPS code if the revenue center code (`REV_CNTR`) equals 0022 for SNF care, 0023 for home health, or 0024 for IRF care. For home health claims, please also see the revenue center APC/HIPPS code variable (``REV_CNTR`_APC_HIPPS_CD`).
 
 
 
@@ -2139,7 +2139,7 @@ CMS specialty code used for pricing the line item service on the noninstitutiona
 
 
 
- HCFA Provider Specialty Table.txt 
+ [HCFA Provider Specialty Table.txt](https://www.resdac.org/sites/resdac.umn.edu/files/HCFA%20Provider%20Specialty%20Table.txt) 
 
 
 
@@ -2175,7 +2175,7 @@ Code indicating the type of service, as defined in the CMS Medicare Carrier Manu
 
 
 
- CMS Type of Service Table.txt 
+ [CMS Type of Service Table.txt](https://www.resdac.org/sites/resdac.umn.edu/files/CMS%20Type%20of%20Service%20Table.txt) 
 
 
 
@@ -2305,7 +2305,7 @@ NOTE: During the Version H conversion this field was populated with data through
 
 
 
- `BETOS` Table.txt 
+ [`BETOS` Table.txt](https://www.resdac.org/sites/resdac.umn.edu/files/`BETOS`%20Table.txt) 
 
 
 
@@ -2505,7 +2505,7 @@ There are up to 7 of these line applied indicator fields (`LINE_OTHR_APLD_IND_CD
 
 
 
- LINE_OTHR_APLD_IND_CD_TB.txt 
+ [LINE_OTHR_APLD_IND_CD_TB.txt](https://www.resdac.org/sites/resdac.umn.edu/files/LINE_OTHR_APLD_IND_CD_TB_1.txt) 
 
 
 
@@ -2530,7 +2530,7 @@ There are up to 7 of these line applied indicator fields (`LINE_OTHR_APLD_IND_CD
 
 
 
- LINE_OTHR_APLD_IND_CD_TB.txt 
+ [LINE_OTHR_APLD_IND_CD_TB.txt](https://www.resdac.org/sites/resdac.umn.edu/files/LINE_OTHR_APLD_IND_CD_TB_0.txt) 
 
 
 
@@ -2555,7 +2555,7 @@ There are up to 7 of these line applied indicator fields (`LINE_OTHR_APLD_IND_CD
 
 
 
- LINE_OTHR_APLD_IND_CD_TB.txt 
+ [LINE_OTHR_APLD_IND_CD_TB.txt](https://www.resdac.org/sites/resdac.umn.edu/files/LINE_OTHR_APLD_IND_CD_TB.txt) 
 
 
 
@@ -2580,7 +2580,7 @@ There are up to 7 of these line applied indicator fields (`LINE_OTHR_APLD_IND_CD
 
 
 
- LINE_OTHR_APLD_IND_CD_TB.txt 
+ [LINE_OTHR_APLD_IND_CD_TB.txt](https://www.resdac.org/sites/resdac.umn.edu/files/LINE_OTHR_APLD_IND_CD_TB_2.txt) 
 
 
 
@@ -2605,7 +2605,7 @@ There are up to 7 of these line applied indicator fields (`LINE_OTHR_APLD_IND_CD
 
 
 
- LINE_OTHR_APLD_IND_CD_TB.txt 
+ [LINE_OTHR_APLD_IND_CD_TB.txt](https://www.resdac.org/sites/resdac.umn.edu/files/LINE_OTHR_APLD_IND_CD_TB_3.txt) 
 
 
 
@@ -2630,7 +2630,7 @@ There are up to 7 of these line applied indicator fields (`LINE_OTHR_APLD_IND_CD
 
 
 
- LINE_OTHR_APLD_IND_CD_TB.txt 
+ [LINE_OTHR_APLD_IND_CD_TB.txt](https://www.resdac.org/sites/resdac.umn.edu/files/LINE_OTHR_APLD_IND_CD_TB_4.txt) 
 
 
 
@@ -2655,7 +2655,7 @@ There are up to 7 of these line applied indicator fields (`LINE_OTHR_APLD_IND_CD
 
 
 
- LINE_OTHR_APLD_IND_CD_TB.txt 
+ [LINE_OTHR_APLD_IND_CD_TB.txt](https://www.resdac.org/sites/resdac.umn.edu/files/LINE_OTHR_APLD_IND_CD_TB_5.txt) 
 
 
 
@@ -2705,7 +2705,7 @@ The code indicating the place of service, as defined in the Medicare Carrier Man
 
 
 
-List obtained from [here](https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set.html) Place of Service Table.txt 
+ [List obtained from [here](https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set.html) Place of Service Table.txt](https://www.resdac.org/sites/resdac.umn.edu/files/Place%20of%20Service%20Table.txt) 
 
 
 
@@ -2748,7 +2748,7 @@ NOTE2: Effective 4/1/02, this field was expanded to two bytes to accommodate new
 
 
 
- Line Processing Indicator Table.txt 
+ [Line Processing Indicator Table.txt](https://www.resdac.org/sites/resdac.umn.edu/files/Line%20Processing%20Indicator%20Table.txt) 
 
 
 

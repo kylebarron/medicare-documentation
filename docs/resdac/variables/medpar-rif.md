@@ -1518,7 +1518,7 @@ The code indicating the type of dialysis received by the beneficiary during the 
 
 
 
- Medpar_ESRD_SETG_IND_TB.txt 
+ [Medpar_ESRD_SETG_IND_TB.txt](https://www.resdac.org/sites/resdac.umn.edu/files/Medpar_ESRD_SETG_IND_TB.txt) 
 
 
 
@@ -2720,7 +2720,7 @@ MEDPAR provider number.
 
 
 
- Provider Number Table.txt 
+ [Provider Number Table.txt](https://www.resdac.org/sites/resdac.umn.edu/files/Provider%20Number%20Table_0.txt) 
 
 
 
@@ -3494,7 +3494,7 @@ The codes (commonly called warning indicators) specifying detailed billing infor
 
 
 
- MEDPAR Warning Indicators Code Table.txt 
+ [MEDPAR Warning Indicators Code Table.txt](https://www.resdac.org/sites/resdac.umn.edu/files/MEDPAR%20Warning%20Indicators%20Code%20Table.txt) 
 
 
 
