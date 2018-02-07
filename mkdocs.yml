@@ -37,7 +37,17 @@ pages:
         - MedPAR RIF: 'resdac/medpar-rif.md'
         - Outpatient RIF: 'resdac/op-rif.md'
         - Skilled Nursing Facility RIF: 'resdac/snf-rif.md'
-        - Variable Definitions: 'resdac/variables.md'
+        - Variable Definitions:
+            - All Files: 'resdac/variables/variables.md'
+            - Beneficiary Summary File: 'resdac/variables/mbsf.md'
+            - Carrier RIF: 'resdac/variables/carrier-rif.md'
+            - Durable Medical Equipment RIF: 'resdac/variables/dme-rif.md'
+            - Home Health Agency RIF: 'resdac/variables/hha-rif.md'
+            - Hospice RIF: 'resdac/variables/hospice-rif.md'
+            - Inpatient RIF: 'resdac/variables/ip-rif.md'
+            - MedPAR RIF: 'resdac/variables/medpar-rif.md'
+            - Outpatient RIF: 'resdac/variables/op-rif.md'
+            - Skilled Nursing Facility RIF: 'resdac/variables/snf-rif.md'
     - Working with the Data:
         - Goals for New Data Format: 'kyle/goals-for-modern-data-format.md'
         - Standard Readme: 'kyle/01medicare_readme.md'

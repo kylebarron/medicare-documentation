@@ -1,13 +1,10 @@
 import re
-import os
 import math
-import requests
-import numpy as np
 import pandas as pd
 import lxml.html as LH
+from os.path import join
 from tabulate import tabulate
 from bs4 import BeautifulSoup
-from time import sleep
 from glob import glob
 
 urls_dict = {
@@ -45,11 +42,11 @@ local_paths_dict = {
 
 for page_title, url in urls_dict.items():
     stub = re.search(r'([\w-]+)/data-documentation', url)[1]
-    path = os.path.join('..', 'data', 'resdac', 'html', 'rif', stub + '.html')
-    
+    path = join('..', 'data', 'resdac', 'html', 'rif', stub + '.html')
+
     with open(path, 'r') as text_file:
         html = text_file.read()
-    
+
     soup = BeautifulSoup(html, 'html.parser')
     links = LH.fromstring(html).xpath('//tr/td/a/@href')
     dfs = pd.read_html(html)
@@ -57,8 +54,9 @@ for page_title, url in urls_dict.items():
     # Create local urls to markdown anchors from title of pages
     md_anchors = []
     for link in links:
-        path = os.path.join('..', 'data', 'resdac', 'html', 'variables', link[1:] + '.html')
-        
+        path = join(
+            '..', 'data', 'resdac', 'html', 'variables', link[1:] + '.html')
+
         with open(path, 'r') as text_file:
             var_html = text_file.read()
         var_soup = BeautifulSoup(var_html, 'html.parser')
@@ -93,7 +91,8 @@ for page_title, url in urls_dict.items():
 
         # Make Variable Name column a Markdown link
         df.iloc[:, 2] = (
-            '[' + df.iloc[:, 2] + '](variables.md#' + df['md_anchor'] + ')')
+            '[' + df.iloc[:, 2] + f'](variables/{stub}.md#' + df['md_anchor'] +
+            ')')
         df = df.drop(columns=['md_anchor'])
 
         # Make Short SAS Name code style
@@ -108,15 +107,15 @@ for page_title, url in urls_dict.items():
             tablefmt='pipe',
             showindex=False)
 
-        all_tables.append('\n### {}\n\n'.format(table_titles[i]))
+        all_tables.append(f'\n### {table_titles[i]}\n\n')
         all_tables.append(text)
         all_tables.append('\n')
 
     # Read in Markdown file
     fname = re.search(r'/([\w-]+)/data-documentation', url)[1]
-    with open(os.path.join('..', 'docs', 'resdac', fname + '.md'), 'r') as mdfile:
+    with open(join('..', 'docs', 'resdac', fname + '.md'), 'r') as mdfile:
         lines = mdfile.readlines()
-    
+
     # Find the line that says "Data Documentation"
     re_text = r'(?i)\#+\s*data\s+documentation'
     line_num = [ind for ind, x in enumerate(lines) if re.search(re_text, x)]
@@ -128,22 +127,19 @@ for page_title, url in urls_dict.items():
     lines = lines[:line_num + 1]
     lines.extend(all_tables)
 
-    with open(os.path.join('..', 'docs', 'resdac', fname + '.md'), 'w') as mdfile:
+    with open(join('..', 'docs', 'resdac', fname + '.md'), 'w') as mdfile:
         mdfile.writelines(lines)
 
 
-## Extract data from variables html pages and put into df
-glob_path = os.path.join('..', 'data', 'resdac', 'html', 'variables', '**/*.html')
+# Extract data from variables html pages and put into df
+glob_path = join('..', 'data', 'resdac', 'html', 'variables', '**/*.html')
 files = sorted(glob(glob_path, recursive=True))
-
-# resdac_link = 'cms-data/variables/nch-claim-type-code'
-# f = os.path.join('..', 'data', 'resdac', 'html', 'variables', resdac_link + '.html')
 
 df = pd.DataFrame()
 for f in files:
     with open(f, 'r') as text_file:
         html = text_file.read()
-    
+
     resdac_url = re.search(r'/data/resdac/html/variables/(.+)\.html$', f)[1]
     resdac_url = 'https://www.resdac.org/' + resdac_url
 
@@ -210,8 +206,7 @@ for f in files:
 
             all_text_tables = '\n\n'.join(all_text_tables)
             values_text += all_text_tables
-    
-    
+
     row = pd.DataFrame.from_dict([{
         'var_title': var_title,
         'short_sas_name': short_sas_name,
@@ -222,35 +217,36 @@ for f in files:
         'limitation': limitation,
         'values_text': values_text,
         'resdac_url': resdac_url,
-        }])
+    }])
     df = df.append(row)
 
-df = df.sort_values(by = ['var_title'])
-path = os.path.join('..', 'data', 'variable_info.pkl')
+df = df.sort_values(by=['var_title'])
+path = join('..', 'data', 'variable_info.pkl')
 df.to_pickle(path)
 
-## Import xw files:
+# Import xw files:
 xws = {
     'Carrier': 'carrier',
     'Inpatient': 'ip',
     'MedPAR': 'medpar',
-    'Outpatient': 'op',}
+    'Outpatient': 'op',
+}
 
 all_dfs = pd.DataFrame()
 for name, xw in xws.items():
-    path = os.path.join('..', 'data', 'nber', 'claim_xw', xw + 'xw.txt')
+    path = join('..', 'data', 'nber', 'claim_xw', xw + 'xw.txt')
     df = pd.read_table(path)
-    df = df.filter(regex=(r'\d{4}'), axis = 1)
+    df = df.filter(regex=(r'1999|20\d{2}'), axis=1)
     df['Dataset'] = name
     all_dfs = all_dfs.append(df)
 
 xw = all_dfs
 xw = xw[xw['2012'].notnull()]
 
-path = os.path.join('..', 'data', 'variable_info.pkl')
+path = join('..', 'data', 'variable_info.pkl')
 df = pd.read_pickle(path)
 
-## Create Variable Definitions page
+# Create Variable Definitions pages
 all_text = []
 all_text.append('# Variable Definitions\n\n')
 source = '!!! note\n    '
@@ -258,23 +254,27 @@ source += 'These definitions are scraped from ResDAC. Click on '
 source += 'the header of a variable description to see the ResDAC page.\n\n'
 all_text.append(source)
 
-i = 0
+all_text_dict = {'All Variables': all_text.copy()}
+for title in local_paths_dict.keys():
+    all_text_dict[title] = all_text.copy()
+
 for i in range(len(df)):
     row = df.iloc[i]
 
-    var_title = '\n\n## [{}]({})\n\n'.format(row['var_title'], row['resdac_url'])
-    varnames = '- Short SAS Name: `{}`\n'.format(row['short_sas_name'])
+    var_title = f"\n\n## [{row['var_title']}]({row['resdac_url']})\n\n"
+    varnames = f"- Short SAS Name: `{row['short_sas_name']}`\n"
     if row['long_sas_name'] != '':
-        varnames += '- Long SAS Name: `{}`\n'.format(row['long_sas_name'])
+        varnames += f"- Long SAS Name: `{row['long_sas_name']}`\n"
     varnames += '\n'
 
     contained_in = 'Contained in\n\n'
     for fname in row['in_files']:
         lpath = local_paths_dict[fname]
-        contained_in += '- [{}]({}#data-documentation)\n'.format(fname, lpath)
+        contained_in += f'- [{fname}](../{lpath}#data-documentation)\n'
     contained_in += '\n'
 
     text = row['main_text']
+
     # Format as inline code any text within '' that has at least one digit
     text = re.sub(r"'(\w*\d\w*)'", r'`\1`', text)
     text += '\n\n'
@@ -287,14 +287,12 @@ for i in range(len(df)):
         limitation = '??? limitation\n\t' + row['limitation']
         hidden_text.append(limitation)
     hidden_text = '\n\n'.join(hidden_text)
-    
+
     # Show consistent names over time in a table:
-    # for debugging:
-    #     row = df[df['short_sas_name'].str.lower() == 'at_npi'].iloc[0]
     xw_names = xw[xw['2012'].str.lower() == row['short_sas_name'].lower()]
     xw_names = xw_names.dropna(axis=1, how='all')
     xw_names = xw_names.fillna('')
-    
+
     cols = list(xw_names.columns)
     if cols != []:
         cols.remove('Dataset')
@@ -302,9 +300,10 @@ for i in range(len(df)):
         nyears = len(cols)
         ncols_to_print = 5
         ntables = math.ceil(nyears / ncols_to_print)
-        
+
         for col in cols:
-            xw_names[col] = xw_names[col].str.replace(r'(\w+)', lambda m: '`' + m.group(1) + '`')
+            xw_names[col] = xw_names[col].str.replace(
+                r'(\w+)', lambda m: '`' + m.group(1) + '`')
 
         print_tables = ['<h3>Variable Names</h3>']
         j = 0
@@ -313,7 +312,7 @@ for i in range(len(df)):
             thiscols = cols[:ncols_to_print]
             thiscols.insert(0, 'Dataset')
             cols = cols[ncols_to_print:]
-            
+
             tab = tabulate(
                 xw_names[thiscols],
                 headers='keys',
@@ -321,19 +320,33 @@ for i in range(len(df)):
                 numalign='left',
                 showindex=False)
             print_tables.append(tab)
-        
+
         print_tables = '\n\n'.join(print_tables)
         print_tables += '\n\n'
     else:
         print_tables = ''
 
-    all_text.append(var_title)
-    all_text.append(varnames)
-    all_text.append(print_tables)
-    all_text.append(contained_in)
-    all_text.append(text)
-    all_text.append(hidden_text)
-    all_text.append(row['values_text'])
+    for title in row['in_files']:
+        all_text_dict[title].append(var_title)
+        all_text_dict[title].append(varnames)
+        all_text_dict[title].append(print_tables)
+        all_text_dict[title].append(contained_in)
+        all_text_dict[title].append(text)
+        all_text_dict[title].append(hidden_text)
+        all_text_dict[title].append(row['values_text'])
+        local_paths_dict[title]
 
-with open(os.path.join('..', 'docs', 'resdac', 'variables.md'), 'w') as mdfile:
-    mdfile.writelines(all_text)
+    all_text_dict['All Variables'].append(var_title)
+    all_text_dict['All Variables'].append(varnames)
+    all_text_dict['All Variables'].append(print_tables)
+    all_text_dict['All Variables'].append(contained_in)
+    all_text_dict['All Variables'].append(text)
+    all_text_dict['All Variables'].append(hidden_text)
+    all_text_dict['All Variables'].append(row['values_text'])
+
+for title, path in local_paths_dict.items():
+    with open(join('..', 'docs', 'resdac', 'variables', path), 'w') as f:
+        f.writelines(all_text_dict[title])
+
+with open(join('..', 'docs', 'resdac', 'variables', 'variables.md'), 'w') as f:
+    f.writelines(all_text)
