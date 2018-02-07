@@ -6567,8 +6567,6 @@
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
 <p>This field groups (or recodes) the NDI ICD-10 code cause of death into 113 categories.</p>
-<h3>Values</h3>
-
 <p>Addtional information regarding these categories can be found on the CDC website (see <a href="http://www.cdc.gov/nchs/ndi.htm">here</a> and <a href="http://www.cdc.gov/nchs/data/dvs/im9_2002.pdf.pdf">here</a>.)</p>
 <p>Available for 1999-2008. Researchers wishing to obtain this NDI segment of the MBSF must obtain an additional approval beyond the CMS DUA.  </p>
 <h2 id="1st-occrrnce-of-alzheimers-dsease-and-rltd-disorders-or-senile-dementia"><a href="https://www.resdac.org/cms-data/variables/1st-Occrrnce-Alzheimers-Dsease-and-Rltd-Disorders-or-Senile-Dementia">1<sup>st</sup> Occrrnce of Alzheimer's Dsease and Rltd Disorders or Senile Dementia</a><a class="headerlink" href="#1st-occrrnce-of-alzheimers-dsease-and-rltd-disorders-or-senile-dementia" title="Permanent link">&para;</a></h2>
@@ -6589,8 +6587,6 @@
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
 <p>This field groups (or recodes) the NDI ICD-10 code cause of death into 358 categories.</p>
-<h3>Values</h3>
-
 <p>Additional information regarding these categories can be found on the CDC website (see <a href="http://www.cdc.gov/nchs/ndi.htm">here</a> and <a href="http://www.cdc.gov/nchs/data/dvs/im9_2002.pdf.pdf">here</a>.)</p>
 <p>Available for 1999-2008. Researchers wishing to obtain this NDI segment of the MBSF must obtain an additional approval beyond the CMS DUA. </p>
 <h2 id="5-digit-zip-code-for-beneficiary"><a href="https://www.resdac.org/cms-data/variables/Zip-Code-Residence">5-digit ZIP code for beneficiary</a><a class="headerlink" href="#5-digit-zip-code-for-beneficiary" title="Permanent link">&para;</a></h2>
@@ -6781,8 +6777,6 @@
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
 <p>This variable shows the date when the beneficiary first met the criteria for the attention deficit hyperactivity disorder (ADHD) or other conduct disorders indicator. The variable will be blank for beneficiaries that have never had the condition.</p>
-<h3>Values</h3>
-
 <p>The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the <code>COVSTART</code> variable in the Beneficiary File). </p>
 <h2 id="acquired-hypothyroidism-end-year-flag"><a href="https://www.resdac.org/cms-data/variables/Acquired-Hypothyroidism-End-Year-Flag">Acquired Hypothyroidism End Year Flag</a><a class="headerlink" href="#acquired-hypothyroidism-end-year-flag" title="Permanent link">&para;</a></h2>
 <ul>
@@ -6831,8 +6825,6 @@
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
 <p>This variable shows the date when the beneficiary first met the criteria for the chronic condition data warehouse (CCW) acquired hypothyroidism indicator.  The variable will be blank for beneficiaries that have never had the condition.</p>
-<h3>Values</h3>
-
 <p>The earliest possible date for anyone in the CCW is January 1, 1999.  If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the <code>COVSTART</code> variable in the Beneficiary File). </p>
 <h2 id="acquired-hypothyroidism-mid-year-flag"><a href="https://www.resdac.org/cms-data/variables/Acquired-Hypothyroidism-Mid-Year-Flag">Acquired Hypothyroidism Mid Year Flag</a><a class="headerlink" href="#acquired-hypothyroidism-mid-year-flag" title="Permanent link">&para;</a></h2>
 <ul>
@@ -6881,8 +6873,6 @@
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
 <p>This variable is the sum of Medicare coinsurance and deductible payments in the acute inpatient hospital setting for the year.  The total acute hospitalization beneficiary payments are calculated as the sum of the beneficiary deductible amount and coinsurance amount (variables called <code>NCH_BENE_IP_DDCTBL_AMT</code> and <code>NCH_BENE_PTA_COINSRNC_LBLTY_AM</code>) for all acute inpatient claims where the <code>CLM_PMT_AMT</code> &gt;= 0.</p>
-<h3>Values</h3>
-
 <p>Acute inpatient claims are a subset of the claims in the IP data file consisting of data from both acute hospitals and critical access hospitals (CAH). These facilities are those where either the 3<sup>rd</sup> digit of the provider number (SAS variable <code>PRVDR_NUM</code>) = 0 or the 3<sup>rd</sup> and 4<sup>th</sup> digits of <code>PRVDR_NUM</code> = 13. </p>
 <p>There are 2 cost/use categories from the IP data files: Acute and OIP.</p>
 <p>Costs to that beneficiaries are liable for are described in detail on the Medicare.gov website. There is a CMS publication called "Your Medicare Benefits", which explains the deductibles and coinsurance amounts.</p>
@@ -6897,8 +6887,6 @@
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
 <p>This variable is the count of Medicare covered days in the acute inpatient hospital setting for the year.  This variable equals the sum of the <code>CLM_UTLZTN_DAY_CNT</code> variables on the source claims.</p>
-<h3>Values</h3>
-
 <p>Acute inpatient hospital claims are a subset of the claims in the IP data file consisting of data from both acute hospitals and critical access hospitals (CAH).  These facilities are those where either the 3<sup>rd</sup> digit of the provider number (SAS variable <code>PRVDR_NUM</code>) = 0 or the 3<sup>rd</sup> and 4<sup>th</sup> digits of <code>PRVDR_NUM</code> = 13.  </p>
 <p>We consider fully-covered days, days where the beneficiary was liable for coinsurance, and lifetime reserve days to all be Medicare-covered days.  Non-covered days, leave of absence days, and the day of discharge or death are not included.</p>
 <p>There are 2 cost/use categories from the IP data files: Acute and the OIP.</p>
@@ -6913,8 +6901,6 @@
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
 <p>This variable is the sum of the Medicare claim payment amounts (<code>CLM_PMT_AMT</code> from each claim) in the acute inpatient hospital setting for a given year. To obtain the total acute hospital Medicare payments, take this variable and add in the annual per diem payment amount (<code>ACUTE_MDCR_PMT</code> +  ACUTE_PERDIEM_AMT).</p>
-<h3>Values</h3>
-
 <p>Acute inpatient hospital claims are a subset of the claims in the IP data file consisting of data from both acute hospitals and critical access hospitals (CAH). These facilities are those where either the 3<sup>rd</sup> digit of the provider number (SAS variable <code>PRVDR_NUM</code>) = 0 or the 3<sup>rd</sup> and 4<sup>th</sup> digits of <code>PRVDR_NUM</code> = 13.   </p>
 <p>ACUTE_PERDIEM_PMT must be added to this field to obtain the total acute hospital Medicare payments for the year.  The annual per diem variable was new in 2010; it will always be null/missing in earlier files.</p>
 <p>There are 2 cost/use categories from the IP data files: Acute and the OIP.</p>
@@ -6929,8 +6915,6 @@
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
 <p>This variable is the count of acute inpatient hospital stays (unique admissions, which may span more than one facility) for the year. An acute inpatient stay is defined as a set of one or more consecutive acute inpatient hospital claims where the beneficiary is only discharged on the most recent claim in the set.  If a beneficiary is transferred to a different provider, the acute stay is continued even if there is a discharge date on the claim from which the beneficiary was transferred.</p>
-<h3>Values</h3>
-
 <p>The <code>CLM_FROM_DT</code> for the first claim associated with the stay must have been in the year of the data file, however it was permissible for the <code>CLM_THRU_DT</code> to have occurred in January of the following year. </p>
 <p>Acute inpatient hospital claims are a subset of the claims in the IP data file consisting of data from both acute hospitals and critical access hospitals (CAH). These facilities are those where either the 3<sup>rd</sup> digit of the provider number (SAS variable <code>PRVDR_NUM</code>) = 0 or the 3<sup>rd</sup> and 4<sup>th</sup> digits of <code>PRVDR_NUM</code> = 13.</p>
 <p>There are 2 cost/use categories from the IP data files: Acute and the OIP.</p>
@@ -7192,8 +7176,6 @@
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
 <p>"This variable is the sum of coinsurance and deductible payments in the part B ambulatory surgery center (ASC) setting for a given year.  The total beneficiary payment is calculated as the sum of <code>LINE_COINSRNC_AMT</code> + <code>LINE_BENE_PTB_DDCTBL_AMT</code> for all relevant lines. ASC claims are a subset of the claims in the Part B Carrier data file.  The ASC claims are identified by the claim lines where the <code>LINE_CMS_TYPE_SRVC_CD</code> ='F'.   "</p>
-<h3>Values</h3>
-
 <p>There are 11 cost/use categories from the Carrier Part B and DME data files – the ASC, Part B Drug, Physician, E &amp;M, anesthesia, dialysis, imaging, tests, other procedures, DME and other carrier claims.</p>
 <h2 id="ambulatory-surgery-center-events"><a href="https://www.resdac.org/cms-data/variables/Ambulatory-Surgery-Center-Events">Ambulatory Surgery Center Events</a><a class="headerlink" href="#ambulatory-surgery-center-events" title="Permanent link">&para;</a></h2>
 <ul>
@@ -7204,8 +7186,6 @@
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
 <p>This variable is the count of events in the part B ambulatory surgery center (ASC) setting for a given year.  An event is defined as each line item that contains an ASC service.ASC claims are a subset of the claims in the Part B Carrier data file.  The ASC claims are identified by the claim lines where the <code>LINE_CMS_TYPE_SRVC_CD</code> ='F'.</p>
-<h3>Values</h3>
-
 <p>There are 11 cost/use categories from the Carrier Part B and DME data files – the ASC, Anesthesia, Part B Drug, Physician, E &amp; M, dialysis, imaging, tests, other procedures, DME and other carrier claims. </p>
 <h2 id="ambulatory-surgery-center-medicare-payments"><a href="https://www.resdac.org/cms-data/variables/Ambulatory-Surgery-Center-Medicare-Payments">Ambulatory Surgery Center Medicare Payments</a><a class="headerlink" href="#ambulatory-surgery-center-medicare-payments" title="Permanent link">&para;</a></h2>
 <ul>
@@ -7216,8 +7196,6 @@
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
 <p>This variable is the total Medicare payments in the part B ambulatory surgery center (ASC) setting for a given year.   ASC claims are a subset of the claims in the Part B Carrier data file.  The ASC claims are identified by the claim lines where the <code>LINE_CMS_TYPE_SRVC_CD</code> ='F'.  The total ASC Medicare Payments are calculated as the sum of <code>LINE_NCH_PMT_AMT</code> where the <code>LINE_PRCSG_IND_CD</code> was ('A','R', or 'S').</p>
-<h3>Values</h3>
-
 <p>There are 11 cost/use categories from the Carrier Part B and DME data files – the ASC, Part B Drug, Physician, E &amp;M, anesthesia, dialysis, imaging, tests, other procedures, DME and other carrier claims.</p>
 <h2 id="anemia-end-year-flag"><a href="https://www.resdac.org/cms-data/variables/Anemia-End-Year-Flag">Anemia End Year Flag</a><a class="headerlink" href="#anemia-end-year-flag" title="Permanent link">&para;</a></h2>
 <ul>
@@ -7266,8 +7244,6 @@
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
 <p>This variable shows the date when the beneficiary first met the criteria for the chronic condition data warehouse (CCW) anemia indicator.  The variable will be blank for beneficiaries that have never had the condition.</p>
-<h3>Values</h3>
-
 <p>The earliest possible date for anyone in the CCW is January 1, 1999.  If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the <code>COVSTART</code> variable in the Beneficiary File). </p>
 <h2 id="anemia-mid-year-flag"><a href="https://www.resdac.org/cms-data/variables/Anemia-Mid-Year-Flag">Anemia Mid Year Flag</a><a class="headerlink" href="#anemia-mid-year-flag" title="Permanent link">&para;</a></h2>
 <ul>
@@ -7315,9 +7291,7 @@
 <ul>
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
-<p>This variable is the sum of coinsurance and deductible payments for part B anesthesia services (ANES) for a given year.  The total Beneficiary payments are calculated as the sum of <code>LINE_COINSRNC_AMT</code> + <code>LINE_BENE_PTB_DDCTBL_AMT</code> for the relevant lines. ANES claims are a subset of the claims, and a subset of procedures in the Part B Carrier data file.   ANES claims are defined as those with a line <code>BETOS</code> code (<code>BETOS</code>_CD) where the first 2 digits = “P0” and the <code>CARR_LINE_MTUS_CD</code>=<code>2</code>.</p>
-<h3>Values</h3>
-
+<p>This variable is the sum of coinsurance and deductible payments for part B anesthesia services (ANES) for a given year.  The total Beneficiary payments are calculated as the sum of <code>LINE_COINSRNC_AMT</code> + <code>LINE_BENE_PTB_DDCTBL_AMT</code> for the relevant lines. ANES claims are a subset of the claims, and a subset of procedures in the Part B Carrier data file.   ANES claims are defined as those with a line <code>BETOS</code> code (<code>`BETOS</code>_CD<code>) where the first 2 digits = “P0” and the</code>CARR_LINE_MTUS_CD<code>=</code>2`.</p>
 <p>There are 11 cost/use categories from the Carrier Part B and DME data files – the ASC, Part B Drug, Physician, E &amp;M, anesthesia, dialysis, imaging, tests, other procedures, DME and other carrier claims.</p>
 <h2 id="anesthesia-events"><a href="https://www.resdac.org/cms-data/variables/Anesthesia-Events">Anesthesia Events</a><a class="headerlink" href="#anesthesia-events" title="Permanent link">&para;</a></h2>
 <ul>
@@ -7329,8 +7303,6 @@
 </ul>
 <p>"This variable is the count of events for part B anesthesia services (ANES) for a given year. ANES claims are a subset of the claims, and a subset of procedures in the Part B Carrier data file.   ANES claims are defined as those with a line <code>BETOS</code> code (<code>BETOS</code>_CD) where the first 2 digits = “P0” and the <code>CARR_LINE_MTUS_CD</code>=<code>2</code>. </p>
 <p>An event is defined as each line item that contains the relevant service."</p>
-<h3>Values</h3>
-
 <p>There are 11 cost/use categories from the Carrier Part B and DME data files – the ASC, Anesthesia, Part B Drug, Physician, E &amp;M, dialysis, imaging, tests, other procedures, DME and other carrier claims.</p>
 <h2 id="anesthesia-medicare-payments"><a href="https://www.resdac.org/cms-data/variables/Anesthesia-Medicare-Payments">Anesthesia Medicare Payments</a><a class="headerlink" href="#anesthesia-medicare-payments" title="Permanent link">&para;</a></h2>
 <ul>
@@ -7340,10 +7312,8 @@
 <ul>
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
-<p>"This variable is the total Medicare payments for part B anesthesia services (ANES) for a given year.  ANES claims are a subset of the claims, and a subset of procedures in the Part B Carrier data file.   ANES claims are defined as those with a line <code>BETOS</code> code (<code>BETOS</code>_CD) where the first 2 digits = “P0” and the <code>CARR_LINE_MTUS_CD</code>=<code>2</code>.</p>
+<p>"This variable is the total Medicare payments for part B anesthesia services (ANES) for a given year.  ANES claims are a subset of the claims, and a subset of procedures in the Part B Carrier data file.   ANES claims are defined as those with a line <code>BETOS</code> code (<code>`BETOS</code>_CD<code>) where the first 2 digits = “P0” and the</code>CARR_LINE_MTUS_CD<code>=</code>2`.</p>
 <p>The total Medicare payments are calculated as the sum of <code>LINE_NCH_PMT_AMT</code> where the <code>LINE_PRCSG_IND_CD</code> was ('A','R', or 'S') - for all relevant lines."</p>
-<h3>Values</h3>
-
 <p>There are 11 cost/use categories from the Carrier Part B and DME data files – the ASC, Part B Drug, Physician, E &amp;M, anesthesia, dialysis, imaging, tests, other procedures, DME and other carrier claims.</p>
 <h2 id="anxiety-disorders-medicare-only-claims"><a href="https://www.resdac.org/cms-data/variables/anxiety-disorders-medicare-only-claims">Anxiety Disorders - Medicare Only Claims</a><a class="headerlink" href="#anxiety-disorders-medicare-only-claims" title="Permanent link">&para;</a></h2>
 <ul>
@@ -7392,8 +7362,6 @@
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
 <p>This variable shows the date when the beneficiary first met the criteria for the anxiety disorders indicator. The variable will be blank for beneficiaries that have never had the condition.</p>
-<h3>Values</h3>
-
 <p>The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the <code>COVSTART</code> variable in the Beneficiary File). </p>
 <h2 id="asthma-end-year-flag"><a href="https://www.resdac.org/cms-data/variables/Asthma-End-Year-Flag">Asthma End Year Flag</a><a class="headerlink" href="#asthma-end-year-flag" title="Permanent link">&para;</a></h2>
 <ul>
@@ -7442,8 +7410,6 @@
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
 <p>This variable shows the date when the beneficiary first met the criteria for the chronic condition data warehouse (CCW) asthma indicator.  The variable will be blank for beneficiaries that have never had the condition.</p>
-<h3>Values</h3>
-
 <p>The earliest possible date for anyone in the CCW is January 1, 1999.  If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the <code>COVSTART</code> variable in the Beneficiary File). </p>
 <h2 id="asthma-mid-year-flag"><a href="https://www.resdac.org/cms-data/variables/Asthma-Mid-Year-Flag">Asthma Mid Year Flag</a><a class="headerlink" href="#asthma-mid-year-flag" title="Permanent link">&para;</a></h2>
 <ul>
@@ -7604,8 +7570,6 @@
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
 <p>This variable shows the date when the beneficiary first met the criteria for the autism spectrum disorders indicator. The variable will be blank for beneficiaries that have never had the condition.</p>
-<h3>Values</h3>
-
 <p>The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the <code>COVSTART</code> variable in the Beneficiary File). </p>
 <h2 id="beneficiary-race-code"><a href="https://www.resdac.org/cms-data/variables/Beneficiary-Race-Code">Beneficiary Race Code</a><a class="headerlink" href="#beneficiary-race-code" title="Permanent link">&para;</a></h2>
 <ul>
@@ -7728,8 +7692,6 @@
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
 <p>This variable shows the date when the beneficiary first met the criteria for the chronic condition data warehouse (CCW) hyperlipidemia indicator.  The variable will be blank for beneficiaries that have never had the condition.</p>
-<h3>Values</h3>
-
 <p>The earliest possible date for anyone in the CCW is January 1, 1999.  If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the <code>COVSTART</code> variable in the Beneficiary File). </p>
 <h2 id="benign-prostatic-hyperplasia-mid-year-flag"><a href="https://www.resdac.org/cms-data/variables/Benign-Prostatic-Hyperplasia-Mid-Year-Flag">Benign Prostatic Hyperplasia Mid Year Flag</a><a class="headerlink" href="#benign-prostatic-hyperplasia-mid-year-flag" title="Permanent link">&para;</a></h2>
 <ul>
@@ -7816,8 +7778,6 @@
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
 <p>This variable shows the date when the beneficiary first met the criteria for the bipolar disorders indicator. The variable will be blank for beneficiaries that have never had the condition.</p>
-<h3>Values</h3>
-
 <p>The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the <code>COVSTART</code> variable in the Beneficiary File). </p>
 <h2 id="breast-cancer-end-of-year-flag"><a href="https://www.resdac.org/cms-data/variables/Breast-Cancer-End-Year-Flag">Breast Cancer End-of-Year Flag</a><a class="headerlink" href="#breast-cancer-end-of-year-flag" title="Permanent link">&para;</a></h2>
 <ul>
@@ -8393,8 +8353,6 @@
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
 <p>This code specifies the Social Security Administration (SSA) code fopuyypr the county of identified through the benficiary mailing address.</p>
-<h3>Values</h3>
-
 <p>Each state has a series of codes beginning with '000' for each county within that state. Certain cities within that state have their own code. County codes must be combined with state codes in order to locate the specific county. The coding system is the SSA system, not the Federal Information Processing Standard (FIPS).</p>
 <p>In some cases, the code may not be the actual county where the beneficairy resides.  CMS obtains the mailing address used for cash benefits or the mailing address used for other purposes (for example, premium billing) from Social Security Administration (SSA) and Railroad Retirement Board (RRB) Beneficiary Record Systems.  </p>
 <h2 id="current-beneficiary-identification-code"><a href="https://www.resdac.org/cms-data/variables/current-beneficiary-identification-code">Current Beneficiary Identification Code</a><a class="headerlink" href="#current-beneficiary-identification-code" title="Permanent link">&para;</a></h2>
@@ -8409,7 +8367,7 @@
 <p>The current beneficiary identification code (<code>BIC</code>) specifies the basis of the beneficiary's elgibility for cash payment programs, mainly Social Security. When the individual qualifies under another person's account (for example, as a spouse or child), the code identifies the type of relationship between the individual and primary beneficiary.</p>
 <h3>Values</h3>
 
-<p>Beneficiary Identification Code (<code>BIC</code>) Table.txt </p>
+<p><a href="https://www.resdac.org/sites/resdac.umn.edu/files/Beneficiary%20Identification%20Code%20%28BIC%29%20Table.txt">Beneficiary Identification Code (<code>BIC</code>) Table.txt</a> </p>
 <h2 id="current-reason-for-entitlement-code"><a href="https://www.resdac.org/cms-data/variables/Current-Reason-Entitlement-Code">Current Reason for Entitlement Code</a><a class="headerlink" href="#current-reason-for-entitlement-code" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Short SAS Name: <code>CREC</code></li>
@@ -8657,8 +8615,6 @@
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
 <p>This variable is the total Medicare payments for Part B dialysis services (primarily the professional component since treatments are covered in hospital outpatient) for a given year.  The total Beneficiary payments are calculated as the sum of <code>LINE_COINSRNC_AMT</code> + <code>LINE_BENE_PTB_DDCTBL_AMT</code> for the relevant lines.</p>
-<h3>Values</h3>
-
 <p>There are 11 cost/use categories from the Carrier Part B and DME data files – the ASC, Anesthesia, Part B Drug, Physician, E &amp; M, dialysis, imaging, tests, other procedures, DME and other carrier claims.</p>
 <h2 id="dialysis-events"><a href="https://www.resdac.org/cms-data/variables/Dialysis-Events">Dialysis Events</a><a class="headerlink" href="#dialysis-events" title="Permanent link">&para;</a></h2>
 <ul>
@@ -8669,8 +8625,6 @@
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
 <p>This variable is the total Medicare payments for Part B dialysis services (primarily the professional component since treatments are covered in hospital outpatient) for a given year. An event is defined as each line item that contains the relevant service.  Dialysis claims are a subset of the claims, and a subset of procedures in the Part B Carrier data file. Dialysis claims are defined as those with a line <code>BETOS</code> code (<code>BETOS</code>_CD) where the first 2 digits =<code>P9</code>.</p>
-<h3>Values</h3>
-
 <p>There are 11 cost/use categories from the Carrier Part B and DME data files – the ASC, Anesthesia, Part B Drug, Physician, E &amp; M, dialysis, imaging, tests, other procedures, DME and other carrier claims. </p>
 <h2 id="dialysis-medicare-payments"><a href="https://www.resdac.org/cms-data/variables/Dialysis-Medicare-Payments">Dialysis Medicare Payments</a><a class="headerlink" href="#dialysis-medicare-payments" title="Permanent link">&para;</a></h2>
 <ul>
@@ -8680,10 +8634,8 @@
 <ul>
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
-<p>"This variable is the total Medicare payments for Part B dialysis services (primarily the professional component since treatments are covered in hospital outpatient) for a given year.  Dialysis claims are a subset of the claims, and a subset of procedures in the Part B Carrier data file. Dialysis claims are defined as those with a line <code>BETOS</code> code (<code>BETOS</code>_CD) where the first 2 digits =<code>P9</code>.   </p>
+<p>"This variable is the total Medicare payments for Part B dialysis services (primarily the professional component since treatments are covered in hospital outpatient) for a given year.  Dialysis claims are a subset of the claims, and a subset of procedures in the Part B Carrier data file. Dialysis claims are defined as those with a line <code>BETOS</code> code (<code>`BETOS</code>_CD<code>) where the first 2 digits =</code>P9`.   </p>
 <p>The total Medicare payments are calculated as the sum of <code>LINE_NCH_PMT_AMT</code> where the <code>LINE_PRCSG_IND_CD</code> was ('A','R', or 'S') - for all relevant lines."</p>
-<h3>Values</h3>
-
 <p>There are 11 cost/use categories from the Carrier Part B and DME data files – the ASC, Part B Drug, Physician, E &amp;M, anesthesia, dialysis, imaging, tests, other procedures, DME and other carrier claims.</p>
 <h2 id="durable-medical-equipment-beneficiary-payments"><a href="https://www.resdac.org/cms-data/variables/Durable-Medical-Equipment-Beneficiary-Payments">Durable Medical Equipment Beneficiary Payments</a><a class="headerlink" href="#durable-medical-equipment-beneficiary-payments" title="Permanent link">&para;</a></h2>
 <ul>
@@ -8694,9 +8646,7 @@
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
 <p>This variable is the total Medicare payments for part B durable medical equipment (DME) for a given year.  The total Beneficiary payments are calculated as the sum of <code>LINE_COINSRNC_AMT</code> + <code>LINE_BENE_PTB_DDCTBL_AMT</code> for the relevant lines.  </p>
-<p>Claims for DME are a subset of the claims in the Part B Carrier and DME data files. These claims are defined as those with a line <code>BETOS</code> code (<code>BETOS</code>_CD) where the first three digits are (<code>D1A</code>,<code>D1B</code>,<code>D1C</code>,<code>D1D</code>,<code>D1E</code>, or <code>D1F</code>.</p>
-<h3>Values</h3>
-
+<p>Claims for DME are a subset of the claims in the Part B Carrier and DME data files. These claims are defined as those with a line <code>BETOS</code> code (<code>`BETOS</code>_CD<code>) where the first three digits are (</code>D1A<code>,</code>D1B<code>,</code>D1C<code>,</code>D1D<code>,</code>D1E<code>, or</code>D1F`.</p>
 <p>There are 11 cost/use categories from the Carrier Part B and DME data files – the ASC, Part B Drug, Physician, E &amp;M, anesthesia, dialysis, imaging, tests, other procedures, DME and other carrier claims.</p>
 <h2 id="durable-medical-equipment-events"><a href="https://www.resdac.org/cms-data/variables/Durable-Medical-Equipment-Events">Durable Medical Equipment Events</a><a class="headerlink" href="#durable-medical-equipment-events" title="Permanent link">&para;</a></h2>
 <ul>
@@ -8708,8 +8658,6 @@
 </ul>
 <p>This variable is the count of events in the part B durable medical equipment (DME) for a given year. An event is defined as each line item that contains the relevant service.  </p>
 <p>Claims for DME are a subset of the claims in the Part B Carrier and DME data files.  These claims are defined as those with a line <code>BETOS</code> code (<code>BETOS</code>_CD) where the first three digits are (<code>D1A</code>,<code>D1B</code>,<code>D1C</code>,<code>D1D</code>,<code>D1E</code>, or <code>D1F</code>).</p>
-<h3>Values</h3>
-
 <p>There are 11 cost/use categories from the Carrier Part B and DME data files – the ASC, Anesthesia, Part B Drug, Physician, E &amp; M, dialysis, imaging, tests, other procedures, DME and other carrier claims. </p>
 <h2 id="durable-medical-equipment-medicare-payments"><a href="https://www.resdac.org/cms-data/variables/Durable-Medical-Equipment-Medicare-Payments">Durable Medical Equipment Medicare Payments</a><a class="headerlink" href="#durable-medical-equipment-medicare-payments" title="Permanent link">&para;</a></h2>
 <ul>
@@ -8720,9 +8668,7 @@
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
 <p>This variable is the total Medicare payments for part B durable medical equipment (DME) for a given year.  Claims for DME are a subset of the claims in the Part B Carrier and DME data files. </p>
-<p>These claims are defined as those with a line <code>BETOS</code> code (<code>BETOS</code>_CD) where the first three digits are (<code>D1A</code>,<code>D1B</code>,<code>D1C</code>,<code>D1D</code>,<code>D1E</code>, or <code>D1F</code>). The total Medicare payments are calculated as the sum of <code>LINE_NCH_PMT_AMT</code> where the <code>LINE_PRCSG_IND_CD</code> was ('A','R', or 'S') - for all relevant lines.</p>
-<h3>Values</h3>
-
+<p>These claims are defined as those with a line <code>BETOS</code> code (<code>`BETOS</code>_CD<code>) where the first three digits are (</code>D1A<code>,</code>D1B<code>,</code>D1C<code>,</code>D1D<code>,</code>D1E<code>, or</code>D1F<code>). The total Medicare payments are calculated as the sum of</code>LINE_NCH_PMT_AMT<code>where the</code>LINE_PRCSG_IND_CD` was ('A','R', or 'S') - for all relevant lines.</p>
 <p>There are 11 cost/use categories from the Carrier Part B and DME data files – the ASC, Part B Drug, Physician, E &amp;M, anesthesia, dialysis, imaging, tests, other procedures, DME and other carrier claims.</p>
 <h2 id="encrypted-ccw-beneficiary-id"><a href="https://www.resdac.org/cms-data/variables/encrypted-ccw-beneficiary-id">Encrypted CCW Beneficiary ID</a><a class="headerlink" href="#encrypted-ccw-beneficiary-id" title="Permanent link">&para;</a></h2>
 <ul>
@@ -9022,9 +8968,7 @@ CCW creates the 5% sample using standard CMS processes. The 5% random sample con
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
 <p>This variable is the sum of coinsurance and deductible payments for the part B evaluation and management (E&amp;M) services for a given year. The total Beneficiary payments are calculated as the sum of <code>LINE_COINSRNC_AMT</code> + <code>LINE_BENE_PTB_DDCTBL_AMT</code> for the relevant lines.</p>
-<p>E &amp; M claims are a subset of the claims in the Part B Carrier and DME data files, and a subset of physician claims.   The E &amp; M claims are defined as those with a line <code>BETOS</code> code (<code>BETOS</code>_CD) where the first digit ='M' (but is not M1A or M1B – which are categorized as physician office care in this file – see <code>PHYS_MDCR_PMT</code>).</p>
-<h3>Values</h3>
-
+<p>E &amp; M claims are a subset of the claims in the Part B Carrier and DME data files, and a subset of physician claims.   The E &amp; M claims are defined as those with a line <code>BETOS</code> code (<code>`BETOS</code>_CD<code>) where the first digit ='M' (but is not M1A or M1B – which are categorized as physician office care in this file – see</code>PHYS_MDCR_PMT`).</p>
 <p>There are 11 cost/use categories from the Carrier Part B and DME data files – the ASC, Part B Drug, Physician, E &amp;M, anesthesia, dialysis, imaging, tests, other procedures, DME and other carrier claims.</p>
 <h2 id="evaluation-and-management-events"><a href="https://www.resdac.org/cms-data/variables/Evaluation-and-Management-Events">Evaluation and Management Events</a><a class="headerlink" href="#evaluation-and-management-events" title="Permanent link">&para;</a></h2>
 <ul>
@@ -9036,8 +8980,6 @@ CCW creates the 5% sample using standard CMS processes. The 5% random sample con
 </ul>
 <p>This variable is the count of events for the part B evaluation and management (E&amp;M) services for a given year.  An event is defined as each line item that contains the relevant service.</p>
 <p>E &amp; M claims are a subset of the claims in the Part B Carrier and DME data files, and a subset of physician claims.   The E &amp; M claims are defined as those with a line <code>BETOS</code> code (<code>BETOS</code>_CD) where the first digit ='M' (but is not M1A or M1B – which are categorized as physician office care in this file – see <code>PHYS_MDCR_PMT</code>).</p>
-<h3>Values</h3>
-
 <p>There are 11 cost/use categories from the Carrier Part B and DME data files – the ASC, Anesthesia, Part B Drug, Physician, E &amp; M, dialysis, imaging, tests, other procedures, DME and other carrier claims. </p>
 <h2 id="evaluation-and-management-medicare-payments"><a href="https://www.resdac.org/cms-data/variables/Evaluation-and-Management-Medicare-Payments">Evaluation and Management Medicare Payments</a><a class="headerlink" href="#evaluation-and-management-medicare-payments" title="Permanent link">&para;</a></h2>
 <ul>
@@ -9047,10 +8989,8 @@ CCW creates the 5% sample using standard CMS processes. The 5% random sample con
 <ul>
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
-<p>"This variable is the total Medicare payments for the part B evaluation and management (E&amp;M) services for a given year. E &amp; M claims are a subset of the claims in the Part B Carrier and DME data files, and a subset of physician claims.   The E &amp; M claims are defined as those with a line <code>BETOS</code> code (<code>BETOS</code>_CD) where the first digit ='M' (but is not M1A or M1B – which are categorized as physician office care in this file – see <code>PHYS_MDCR_PMT</code>).</p>
+<p>"This variable is the total Medicare payments for the part B evaluation and management (E&amp;M) services for a given year. E &amp; M claims are a subset of the claims in the Part B Carrier and DME data files, and a subset of physician claims.   The E &amp; M claims are defined as those with a line <code>BETOS</code> code (<code>`BETOS</code>_CD<code>) where the first digit ='M' (but is not M1A or M1B – which are categorized as physician office care in this file – see</code>PHYS_MDCR_PMT`).</p>
 <p>The total Medicare payments are calculated as the sum of <code>LINE_NCH_PMT_AMT</code> where the <code>LINE_PRCSG_IND_CD</code> was ('A','R', or 'S') - for all relevant lines."</p>
-<h3>Values</h3>
-
 <p>There are 11 cost/use categories from the Carrier Part B and DME data files – the ASC, Part B Drug, Physician, E &amp;M, anesthesia, dialysis, imaging, tests, other procedures, DME and other carrier claims.</p>
 <h2 id="fibromyalgia-chronic-pain-and-fatigue-end-of-year-indicator-medicare-only-claims"><a href="https://www.resdac.org/cms-data/variables/fibromyalgia-chronic-pain-and-fatigue-end-year-indicator-medicare-only-claims-0">Fibromyalgia, Chronic Pain and Fatigue End-of-Year Indicator - Medicare Only Claims</a><a class="headerlink" href="#fibromyalgia-chronic-pain-and-fatigue-end-of-year-indicator-medicare-only-claims" title="Permanent link">&para;</a></h2>
 <ul>
@@ -9137,8 +9077,6 @@ CCW creates the 5% sample using standard CMS processes. The 5% random sample con
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
 <p>This code specifies the first calendar year, month, and day in which the beneficiary met the chronic condition algorithm criteria.  The earliest possible value is 1999MMDD.</p>
-<h3>Values</h3>
-
 <p>The earliest possible date for anyone in the CCW is January 1, 1999.  If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the <code>COVSTART</code> variable in the Beneficiary File). </p>
 <h2 id="first-occurrence-of-cataract"><a href="https://www.resdac.org/cms-data/variables/First-Occurrence-Cataract">First Occurrence of Cataract</a><a class="headerlink" href="#first-occurrence-of-cataract" title="Permanent link">&para;</a></h2>
 <ul>
@@ -9176,8 +9114,6 @@ CCW creates the 5% sample using standard CMS processes. The 5% random sample con
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
 <p>This code specifies the first calendar year, month, and day in which the beneficiary met the chronic condition algorithm criteria.  The earliest possible value is 1999MMDD.</p>
-<h3>Values</h3>
-
 <p>The earliest possible date for anyone in the CCW is January 1, 1999.  If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the <code>COVSTART</code> variable in the Beneficiary File). </p>
 <h2 id="first-occurrence-of-depression"><a href="https://www.resdac.org/cms-data/variables/First-Occurrence-Depression">First Occurrence of Depression</a><a class="headerlink" href="#first-occurrence-of-depression" title="Permanent link">&para;</a></h2>
 <ul>
@@ -9206,8 +9142,6 @@ CCW creates the 5% sample using standard CMS processes. The 5% random sample con
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
 <p>This variable shows the date when the beneficiary first met the criteria for the chronic condition data warehouse (CCW) endometrial cancer indicator.  The variable will be blank for beneficiaries that have never had the condition.</p>
-<h3>Values</h3>
-
 <p>The earliest possible date for anyone in the CCW is January 1, 1999.  If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the <code>COVSTART</code> variable in the Beneficiary File). </p>
 <h2 id="first-occurrence-of-glaucoma"><a href="https://www.resdac.org/cms-data/variables/First-Occurrence-Glaucoma">First Occurrence of Glaucoma</a><a class="headerlink" href="#first-occurrence-of-glaucoma" title="Permanent link">&para;</a></h2>
 <ul>
@@ -9254,8 +9188,6 @@ CCW creates the 5% sample using standard CMS processes. The 5% random sample con
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
 <p>This variable shows the date when the beneficiary first met the criteria for the chronic condition data warehouse (CCW) lung cancer indicator.  The variable will be blank for beneficiaries that have never had the condition.</p>
-<h3>Values</h3>
-
 <p>The earliest possible date for anyone in the CCW is January 1, 1999.  If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the <code>COVSTART</code> variable in the Beneficiary File).</p>
 <h2 id="first-occurrence-of-osteoporosis"><a href="https://www.resdac.org/cms-data/variables/First-Occurrence-Osteoporosis">First Occurrence of Osteoporosis</a><a class="headerlink" href="#first-occurrence-of-osteoporosis" title="Permanent link">&para;</a></h2>
 <ul>
@@ -9284,8 +9216,6 @@ CCW creates the 5% sample using standard CMS processes. The 5% random sample con
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
 <p>This variable shows the date when the beneficiary first met the criteria for the chronic condition data warehouse (CCW)rheumatoid arthritis/osteoarthritis indicator.  The variable will be blank for beneficiaries that have never had the condition.</p>
-<h3>Values</h3>
-
 <p>The earliest possible date for anyone in the CCW is January 1, 1999.  If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the <code>COVSTART</code> variable in the Beneficiary File). </p>
 <h2 id="first-occurrence-of-stroke-transient-ischemic-attack"><a href="https://www.resdac.org/cms-data/variables/First-Occurrence-Stroke-Transient-Ischemic-Attack">First Occurrence of Stroke / Transient Ischemic Attack</a><a class="headerlink" href="#first-occurrence-of-stroke-transient-ischemic-attack" title="Permanent link">&para;</a></h2>
 <ul>
@@ -9296,8 +9226,6 @@ CCW creates the 5% sample using standard CMS processes. The 5% random sample con
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
 <p>This code specifies the first calendar year, month, and day in which the beneficiary met the chronic condition algorithm criteria.  The earliest possible value is 1999MMDD.</p>
-<h3>Values</h3>
-
 <p>The earliest possible date for anyone in the CCW is January 1, 1999.  If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the <code>COVSTART</code> variable in the Beneficiary File). </p>
 <h2 id="glaucoma-end-of-year-flag"><a href="https://www.resdac.org/cms-data/variables/Glaucoma-End-Year-Flag">Glaucoma End-of-Year Flag</a><a class="headerlink" href="#glaucoma-end-of-year-flag" title="Permanent link">&para;</a></h2>
 <ul>
@@ -9383,8 +9311,6 @@ CCW creates the 5% sample using standard CMS processes. The 5% random sample con
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
 <p>Total number of months of HMO coverage.</p>
-<h3>Values</h3>
-
 <p>This variable counts the number of months during the year that the beneficiary received their Part A and Part B benefits through a managed care plan (i.e., a Medicare Advantage [MA] plan) instead of the traditional fee-for-service (FFS) program. Any month where the HMO indicator variable (HMOINDXX) was anything other than a 0 (not a member of an HMO) or a 4 (FFS particpant in a case or disease management demonstration project) is counted as a MA month. </p>
 <h2 id="hmo-indicator-april"><a href="https://www.resdac.org/cms-data/variables/hmo-indicator-april">HMO Indicator - April</a><a class="headerlink" href="#hmo-indicator-april" title="Permanent link">&para;</a></h2>
 <ul>
@@ -10191,8 +10117,6 @@ CCW creates the 5% sample using standard CMS processes. The 5% random sample con
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
 <p>This variable is the total Medicare payments in the home health (HH) setting for a given year.  Calculated as the sum of <code>CLM_PMT_AMT</code> for all HH claims where the <code>CLM_PMT_AMT</code> &gt;= 0.</p>
-<h3>Values</h3>
-
 <p>Medicare payments are described in detail in a series of Medicare Payment Advisory Commission (MedPAC) documents called “Payment Basics” (see: <a href="http://www.medpac.gov/-documents-/payment-basics">here</a>.)</p>
 <p>Also in the Medicare Learning Network (MLN) “Payment System Fact Sheet Series” (see the list of MLN publications at: <a href="http://www.cms.gov/Outreach-and-Education/Medicare-Learning-Network-MLN/MLNProducts/MLN-Publications.html">here</a>)</p>
 <h2 id="home-health-visits"><a href="https://www.resdac.org/cms-data/variables/Home-Health-Visits">Home Health Visits</a><a class="headerlink" href="#home-health-visits" title="Permanent link">&para;</a></h2>
@@ -10204,8 +10128,6 @@ CCW creates the 5% sample using standard CMS processes. The 5% random sample con
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
 <p>This variable is the count of home health (HH) visits for a given year.  The CCW variable <code>CLM_HHA_TOT_VISIT_CNT</code> is used to obtain this variable. </p>
-<h3>Values</h3>
-
 <p>The <code>CLM_FROM_DT</code> for the first claim associated with the stay must have been in the year of the data file, however it was permissible for the <code>CLM_THRU_DT</code> to have occurred in January of the following year.</p>
 <h2 id="hospice-covered-days"><a href="https://www.resdac.org/cms-data/variables/Hospice-Covered-Days">Hospice Covered Days</a><a class="headerlink" href="#hospice-covered-days" title="Permanent link">&para;</a></h2>
 <ul>
@@ -10216,8 +10138,6 @@ CCW creates the 5% sample using standard CMS processes. The 5% random sample con
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
 <p>This variable is the count of Medicare covered days in the hospice setting for a given year.   This variable equals the sum of the <code>CLM_UTLZTN_DAY_CNT</code> variables on the source claims.</p>
-<h3>Values</h3>
-
 <p>We consider fully-covered days, days where the beneficiary was liable for coinsurance, and lifetime reserve days to all be Medicare-covered days.  Non-covered days, leave of absence days, and the day of discharge or death are not included.</p>
 <p>Medicare payments are described in detail in a series of Medicare Payment Advisory Commission (MedPAC) documents called “Payment Basics” (see: <a href="http://www.medpac.gov/-documents-/payment-basics">here</a>.)</p>
 <p>Also in the Medicare Learning Network (MLN) “Payment System Fact Sheet Series” (see the list of MLN publications at: <a href="http://www.cms.gov/Outreach-and-Education/Medicare-Learning-Network-MLN/MLNProducts/MLN-Publications.html">here</a>)</p>
@@ -10230,8 +10150,6 @@ CCW creates the 5% sample using standard CMS processes. The 5% random sample con
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
 <p>This variable is the total Medicare payments in the hospice setting for a given year.  The total Medicare payments is calculated as the sum of <code>CLM_PMT_AMT</code> for all hospice claims where the <code>CLM_PMT_AMT</code> &gt;= 0.</p>
-<h3>Values</h3>
-
 <p>Medicare payments are described in detail in a series of Medicare Payment Advisory Commission (MedPAC) documents called “Payment Basics” (see: <a href="http://www.medpac.gov/-documents-/payment-basics">here</a>.)</p>
 <p>Also in the Medicare Learning Network (MLN) “Payment System Fact Sheet Series” (see the list of MLN publications at: <a href="http://www.cms.gov/Outreach-and-Education/Medicare-Learning-Network-MLN/MLNProducts/MLN-Publications.html">here</a>)</p>
 <h2 id="hospice-stays"><a href="https://www.resdac.org/cms-data/variables/Hospice-Stays">Hospice Stays</a><a class="headerlink" href="#hospice-stays" title="Permanent link">&para;</a></h2>
@@ -10243,8 +10161,6 @@ CCW creates the 5% sample using standard CMS processes. The 5% random sample con
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
 <p>This variable is the count of stays (unique admissions, which may span more than one facility) in the hospice setting for a given year.  A hospice stay is defined as a set of one or more consecutive hospice claims where the beneficiary is only discharged on the most recent claim in the set.</p>
-<h3>Values</h3>
-
 <p>The <code>CLM_FROM_DT</code> for the first claim associated with the stay must have been in the year of the data file, however it was permissible for the <code>CLM_THRU_DT</code> to have occurred in January of the following year. </p>
 <h2 id="hospital-outpatient-beneficiary-payments"><a href="https://www.resdac.org/cms-data/variables/Hospital-Outpatient-Beneficiary-Payments">Hospital Outpatient Beneficiary Payments</a><a class="headerlink" href="#hospital-outpatient-beneficiary-payments" title="Permanent link">&para;</a></h2>
 <ul>
@@ -10255,8 +10171,6 @@ CCW creates the 5% sample using standard CMS processes. The 5% random sample con
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
 <p>This variable is the sum of Medicare coinsurance and deductible payments in the hospital outpatient setting for a given year. Calculated as the sum of <code>DED_AMT</code> and <code>COIN_AMT</code> for all HOP claims where the <code>CLM_PMT_AMT</code> &gt;= 0.</p>
-<h3>Values</h3>
-
 <p>Costs to that beneficiaries are liable for are described in detail on the Medicare.gov website.  There is a CMS publication called "Your Medicare Benefits", which explains the deductibles and coinsurance amounts.</p>
 <p>Medicare payments are described in detail in a series of Medicare Payment Advisory Commission (MedPAC) documents called “Payment Basics” (see: <a href="http://www.medpac.gov/-documents-/payment-basics">here</a>.)</p>
 <p>Also in the Medicare Learning Network (MLN) “Payment System Fact Sheet Series” (see the list of MLN publications at: <a href="http://www.cms.gov/Outreach-and-Education/Medicare-Learning-Network-MLN/MLNProducts/MLN-Publications.html">here</a>)</p>
@@ -10269,8 +10183,6 @@ CCW creates the 5% sample using standard CMS processes. The 5% random sample con
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
 <p>This variable is the count of unique emergency department revenue center dates (as a proxy for an ED visit) in the hospital outpatient data file for a given year.  Revenue centers indicating Emergency Room use were (0450, 0451, 0452, 0456, or 0459). </p>
-<h3>Values</h3>
-
 <p>Note that additional ED  revenue centers are found in the inpatient data files – if the ED visit resulted in an IP admission at the same facility.</p>
 <p>There are 2 variables that contain counts of  ER visits in different settings: this variable and the Inpatient ER (<code>IP_ER_VISITS</code>)</p>
 <h2 id="hospital-outpatient-medicare-payments"><a href="https://www.resdac.org/cms-data/variables/Hospital-Outpatient-Medicare-Payments">Hospital Outpatient Medicare Payments</a><a class="headerlink" href="#hospital-outpatient-medicare-payments" title="Permanent link">&para;</a></h2>
@@ -10282,8 +10194,6 @@ CCW creates the 5% sample using standard CMS processes. The 5% random sample con
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
 <p>This variable is the total Medicare payments in the hospital outpatient setting for a given year.  Calculated as the sum of <code>CLM_PMT_AMT</code> for all HOP claims where the <code>CLM_PMT_AMT</code> &gt;= 0.</p>
-<h3>Values</h3>
-
 <p>Medicare payments are described in detail in a series of Medicare Payment Advisory Commission (MedPAC) documents called “Payment Basics” (see: <a href="http://www.medpac.gov/-documents-/payment-basics">here</a>.)</p>
 <p>Also in the Medicare Learning Network (MLN) “Payment System Fact Sheet Series” (see the list of MLN publications at: <a href="http://www.cms.gov/Outreach-and-Education/Medicare-Learning-Network-MLN/MLNProducts/MLN-Publications.html">here</a>)</p>
 <h2 id="hospital-outpatient-visits"><a href="https://www.resdac.org/cms-data/variables/Hospital-Outpatient-Visits">Hospital Outpatient Visits</a><a class="headerlink" href="#hospital-outpatient-visits" title="Permanent link">&para;</a></h2>
@@ -10295,8 +10205,6 @@ CCW creates the 5% sample using standard CMS processes. The 5% random sample con
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
 <p>This variable is the count of unique revenue center dates (as a proxy for visits) in the hospital outpatient setting for a given year. </p>
-<h3>Values</h3>
-
 <p>The <code>CLM_FROM_DT</code> for the first claim associated with the stay must have been in the year of the data file, however it was permissible for the <code>CLM_THRU_DT</code> to have occurred in January of the following year.</p>
 <p>ER visits in the HOP setting are counted in this variable (also see <code>HOP_ER_VISITS</code>).</p>
 <h2 id="hospital-readmissions"><a href="https://www.resdac.org/cms-data/variables/Hospital-Readmissions">Hospital Readmissions</a><a class="headerlink" href="#hospital-readmissions" title="Permanent link">&para;</a></h2>
@@ -10308,8 +10216,6 @@ CCW creates the 5% sample using standard CMS processes. The 5% random sample con
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
 <p>This variable is the count of hospital readmissions in the acute inpatient setting for a given year.  The <code>CLM_FROM_DT</code> for the original admission must have been in the year of the data file, however it was permissible for the readmission claim to have occurred in January of the following year.  A beneficiary is considered to be readmitted when they have an acute inpatient stay with a discharge status that is not expired (DSCHRG_STUS≠20) or left against medical advice (DSCHRG_STUS≠07) within 30 days of a previous acute inpatient stay with a discharge status that is also not expired or left against medical advice.</p>
-<h3>Values</h3>
-
 <p>All hospital stays during the year, including readmissions, are counted in the <code>ACUTE_STAYS</code> variable.  Similarly, all acute hospital inpatient payments including payments for readmissions are included in the ACUTE_* payment variables. </p>
 <h2 id="human-immunodeficiency-virus-andor-acquired-immunodeficiency-syndrome-hivaids-end-of-year-indicator-medicare-only-claims"><a href="https://www.resdac.org/cms-data/variables/human-immunodeficiency-virus-andor-acquired-immunodeficiency-syndrome-hivaids-e-0">Human Immunodeficiency Virus and/or Acquired Immunodeficiency Syndrome (HIV/AIDS) End-of-Year Indicator - Medicare Only Claims</a><a class="headerlink" href="#human-immunodeficiency-virus-andor-acquired-immunodeficiency-syndrome-hivaids-end-of-year-indicator-medicare-only-claims" title="Permanent link">&para;</a></h2>
 <ul>
@@ -10492,8 +10398,6 @@ CCW creates the 5% sample using standard CMS processes. The 5% random sample con
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
 <p>This variable shows the date when the beneficiary first met the criteria for the chronic condition data warehouse (CCW) hypertension (high blood pressure) indicator.  The variable will be blank for beneficiaries that have never had the condition</p>
-<h3>Values</h3>
-
 <p>The earliest possible date for anyone in the CCW is January 1, 1999.  If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the <code>COVSTART</code> variable in the Beneficiary File). </p>
 <h2 id="hypertension-mid-year-flag"><a href="https://www.resdac.org/cms-data/variables/Hypertension-Mid-Year-Flag">Hypertension Mid Year Flag</a><a class="headerlink" href="#hypertension-mid-year-flag" title="Permanent link">&para;</a></h2>
 <ul>
@@ -10542,8 +10446,6 @@ CCW creates the 5% sample using standard CMS processes. The 5% random sample con
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
 <p>This field identifies only those codes associated with cause of death.</p>
-<h3>Values</h3>
-
 <p>All ICD-10 codes begin with an alpha character followed by two or three digits. NDI results do not include decimals in the cause of death codes. The decimal is implied between the second and third digits for ICD-10 codes.</p>
 <p>Available for 1999-2008. Researchers whishing to obtain this NDI segment of the MBSF must obtain an additional approval beyond the CMS DUA. </p>
 <h2 id="icd-10-title"><a href="https://www.resdac.org/cms-data/variables/ICD-10-Title">ICD-10 Title</a><a class="headerlink" href="#icd-10-title" title="Permanent link">&para;</a></h2>
@@ -10555,8 +10457,6 @@ CCW creates the 5% sample using standard CMS processes. The 5% random sample con
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
 <p>This field is the narrative description of the ICD-10 code value.</p>
-<h3>Values</h3>
-
 <p>Available for 1999-2008. Researchers wishing to obtain this NDI segment of the MBSF must obtain an additional approval beyond the CMS DUA. </p>
 <h2 id="imaging-beneficiary-payments"><a href="https://www.resdac.org/cms-data/variables/Imaging-Beneficiary-Payments">Imaging Beneficiary Payments</a><a class="headerlink" href="#imaging-beneficiary-payments" title="Permanent link">&para;</a></h2>
 <ul>
@@ -10567,9 +10467,7 @@ CCW creates the 5% sample using standard CMS processes. The 5% random sample con
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
 <p>This variable is the sum of coinsurance and deductible payments for imaging services (IMG) for a given year.  The total beneficiary payments are calculated as the sum of <code>LINE_COINSRNC_AMT</code> + <code>LINE_BENE_PTB_DDCTBL_AMT</code> for the relevant lines.  </p>
-<p>Claims for imaging procedures are a subset of the claims, and a subset of procedures in the Part B Carrier and DME data files. These imaging claims are defined as those with a line <code>BETOS</code> code (<code>BETOS</code>_CD) where the first digit =I (except for <code>I1E</code>, or <code>I1F</code> – which are considered Part B drugs).</p>
-<h3>Values</h3>
-
+<p>Claims for imaging procedures are a subset of the claims, and a subset of procedures in the Part B Carrier and DME data files. These imaging claims are defined as those with a line <code>BETOS</code> code (<code>`BETOS</code>_CD<code>) where the first digit =I (except for</code>I1E<code>, or</code>I1F` – which are considered Part B drugs).</p>
 <p>There are 11 cost/use categories from the Carrier Part B and DME data files – the ASC, Anesthesia, Part B Drug, Physician, E &amp; M, dialysis, imaging, tests, other procedures, DME and other carrier claims. </p>
 <h2 id="imaging-events"><a href="https://www.resdac.org/cms-data/variables/Imaging-Events">Imaging Events</a><a class="headerlink" href="#imaging-events" title="Permanent link">&para;</a></h2>
 <ul>
@@ -10581,8 +10479,6 @@ CCW creates the 5% sample using standard CMS processes. The 5% random sample con
 </ul>
 <p>This variable is the count of events for imaging services (IMG) for a given year.  An event is defined as each line item that contains the relevant service. Claims for imaging procedures are a subset of the claims, and a subset of procedures in the Part B Carrier and DME data files. </p>
 <p>These imaging claims are defined as those with a line <code>BETOS</code> code (<code>BETOS</code>_CD) where the first digit =I (except for <code>I1E</code>, or <code>I1F</code> – which are considered Part B drugs).</p>
-<h3>Values</h3>
-
 <p>There are 11 cost/use categories from the Carrier Part B and DME data files – the ASC, Anesthesia, Part B Drug, Physician, E &amp; M, dialysis, imaging, tests, other procedures, DME and other carrier claims. </p>
 <h2 id="imaging-medicare-payments"><a href="https://www.resdac.org/cms-data/variables/Imaging-Medicare-Payments">Imaging Medicare Payments</a><a class="headerlink" href="#imaging-medicare-payments" title="Permanent link">&para;</a></h2>
 <ul>
@@ -10592,10 +10488,8 @@ CCW creates the 5% sample using standard CMS processes. The 5% random sample con
 <ul>
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
-<p>"This variable is the total Medicare payments for imaging services (IMG) for a given year.  Claims for imaging procedures are a subset of the claims, and a subset of procedures in the Part B Carrier and DME data files. These imaging claims are defined as those with a line <code>BETOS</code> code (<code>BETOS</code>_CD) where the first digit =I (except for <code>I1E</code>, or <code>I1F</code> – which are considered Part B drugs).</p>
+<p>"This variable is the total Medicare payments for imaging services (IMG) for a given year.  Claims for imaging procedures are a subset of the claims, and a subset of procedures in the Part B Carrier and DME data files. These imaging claims are defined as those with a line <code>BETOS</code> code (<code>`BETOS</code>_CD<code>) where the first digit =I (except for</code>I1E<code>, or</code>I1F` – which are considered Part B drugs).</p>
 <p>The total Medicare payments are calculated as the sum of <code>LINE_NCH_PMT_AMT</code> where the <code>LINE_PRCSG_IND_CD</code> was ('A','R', or 'S') - for all relevant lines."</p>
-<h3>Values</h3>
-
 <p>There are 11 cost/use categories from the Carrier Part B and DME data files – the ASC, Part B Drug, Physician, E &amp;M, anesthesia, dialysis, imaging, tests, other procedures, DME and other carrier claims.</p>
 <h2 id="inpatient-emergency-room-visits"><a href="https://www.resdac.org/cms-data/variables/Inpatient-Emergency-Room-Visits">Inpatient Emergency Room Visits</a><a class="headerlink" href="#inpatient-emergency-room-visits" title="Permanent link">&para;</a></h2>
 <ul>
@@ -10606,8 +10500,6 @@ CCW creates the 5% sample using standard CMS processes. The 5% random sample con
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
 <p>This variable is the count of emergency department claims in the inpatient setting for a given year.  The revenue centers indicating Emergency Room use were (0450, 0451, 0452, 0456, 0459).</p>
-<h3>Values</h3>
-
 <p>Note that additional ED  revenue centers are found in the HOP data files – if the ED visit did not result in an IP admission at the same facility.  See the variable <code>HOP_ER_VISITS</code>  within this data file).</p>
 <p>There are 2 variables that contain counts of  ER visits in different settings: this variable and the Hospital Outpatient ER (<code>HOP_ER_VISITS</code>) </p>
 <h2 id="intellectual-disabilities-and-related-conditions-end-of-year-indicator-medicare-only-claims"><a href="https://www.resdac.org/cms-data/variables/intellectual-disabilities-and-related-conditions-end-year-indicator-medicare-on-0">Intellectual Disabilities and Related Conditions End-of-Year Indicator - Medicare Only Claims</a><a class="headerlink" href="#intellectual-disabilities-and-related-conditions-end-of-year-indicator-medicare-only-claims" title="Permanent link">&para;</a></h2>
@@ -11014,8 +10906,6 @@ CCW creates the 5% sample using standard CMS processes. The 5% random sample con
 </ul>
 <p>This variable is the date when the beneficiary first became eligible for Medicare coverage (Part A or Part B).</p>
 <p>Historic date of 1<sup>st</sup> Medicare coverage (may be prior to 1999, which is the earliest claim files available through CCW)</p>
-<h3>Values</h3>
-
 <p>Historic date of 1<sup>st</sup> Medicare coverage (may be prior to 1999, which is the earliest claim files available through CCW) </p>
 <h2 id="medicare-entitlementbuy-in-indicator-april"><a href="https://www.resdac.org/cms-data/variables/medicare-entitlementbuy-indicator-april">Medicare Entitlement/Buy-In Indicator - April</a><a class="headerlink" href="#medicare-entitlementbuy-in-indicator-april" title="Permanent link">&para;</a></h2>
 <ul>
@@ -13297,8 +13187,6 @@ CMS does not collect PDEs for beneficiaries that are enrolled in RDS-eligible pl
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
 <p>This field indicates that an enrollee's date of death has been verified as the exact date of becoming deceased, according to a death certificate.</p>
-<h3>Values</h3>
-
 <p>Formatted as YYYYMMDD </p>
 <h2 id="ndi-death-certificate-number"><a href="https://www.resdac.org/cms-data/variables/NDI-Death-Certificate-Number">NDI Death Certificate Number</a><a class="headerlink" href="#ndi-death-certificate-number" title="Permanent link">&para;</a></h2>
 <ul>
@@ -13309,8 +13197,6 @@ CMS does not collect PDEs for beneficiaries that are enrolled in RDS-eligible pl
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
 <p>This field represents the death certificate number of the beneficiary.</p>
-<h3>Values</h3>
-
 <p>Numbers are not unique across years.</p>
 <p>Available for 1999-2008/ Rsearchers wishing to obtain this NDI segment of the MBSF must obtain an additional approval beyond the CMS DUA. </p>
 <h2 id="ndi-entity-axis-cause-of-death-condition"><a href="https://www.resdac.org/cms-data/variables/NDI-Entity-Axis-Cause-Death-Condition">NDI Entity Axis Cause of Death - Condition</a><a class="headerlink" href="#ndi-entity-axis-cause-of-death-condition" title="Permanent link">&para;</a></h2>
@@ -13873,8 +13759,6 @@ Note: Whenever there is a 4-position code, there is always an implied decimal af
 </ul>
 <p>This variable is the sum of Medicare coinsurance and deductible payments in the non-acute inpatient hospital setting for the year.  The total “other” inpatient (OIP) beneficiary payments are calculated as the sum of <code>NCH_BENE_IP_DDCTBL_AMT</code> and <code>NCH_BENE_PTA_COINSRNC_LBLTY_AM</code> for all relevant claims where the <code>CLM_PMT_AMT</code> &gt;= 0.  </p>
 <p>These OIP claims are a subset of the claims in the IP data file consisting of data from IP settings such as long-term care hospitals, inpatient psychiatric facilities, inpatient rehabilitation facilities, and other types of IP facilities such as children’s hospitals or cancer centers.</p>
-<h3>Values</h3>
-
 <p>There are 2 cost/use categories from the IP data files: Acute and the OIP.</p>
 <p>Costs to that beneficiaries are liable for are described in detail on the Medicare.gov website. There is a CMS publication called "Your Medicare Benefits", which explains the deductibles and coinsurance amounts.</p>
 <p>Medicare payments are described in detail in a series of Medicare Payment Advisory Commission (MedPAC) documents called “Payment Basics” (see: <a href="http://www.medpac.gov/-documents-/payment-basics">here</a>.)</p>
@@ -13888,8 +13772,6 @@ Note: Whenever there is a 4-position code, there is always an implied decimal af
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
 <p>This variable is the count of covered days in the non-acute inpatient setting for a given year.  The CCW variable <code>CLM_UTLZTN_DAY_CNT</code> is used to obtain this variable.   These “other” inpatient (OIP) claims are a subset of the claims in the IP data file consisting of data from IP settings such as long-term care hospitals, inpatient psychiatric facilities, inpatient rehabilitation facilities, and other types of IP facilities such as children’s hospitals or cancer centers.</p>
-<h3>Values</h3>
-
 <p>We consider fully-covered days, days where the beneficiary was liable for coinsurance, and lifetime reserve days to all be Medicare-covered days.  Non-covered days, leave of absence days, and the day of discharge or death are not included.</p>
 <p>There are 2 cost/use categories from the IP data files: Acute and the OIP.</p>
 <p>Medicare payments are described in detail in a series of Medicare Payment Advisory Commission (MedPAC) documents called “Payment Basics” (see: <a href="http://www.medpac.gov/-documents-/payment-basics">here</a>.)</p>
@@ -13905,8 +13787,6 @@ Note: Whenever there is a 4-position code, there is always an implied decimal af
 <p>This variable is the sum of the Medicare claim payment amounts (<code>CLM_PMT_AMT</code> from each claim) in the other inpatient (OIP) settings for a given year.  To obtain the total OIP Medicare payments, take this variable and add in the annual per diem payment amount (<code>OIP_MDCR_PMT</code> +  OIP_PERDIEM_AMT).
 .</p>
 <p>These OIP claims are a subset of the claims in the IP data file consisting of data from IP settings such as long-term care hospitals, inpatient psychiatric facilities, inpatient rehabilitation facilities, and other types of IP facilities such as children’s hospitals or cancer centers.</p>
-<h3>Values</h3>
-
 <p>There are 2 cost/use categories from the IP data files: Acute and the OIP.</p>
 <p>OIP_PERDIEM_PMT must be added to this field to obtain the total Medicare payments. The annual per diem variable was new in 2010; it will always be null/missing in earlier files.</p>
 <p>Costs to that beneficiaries are liable for are described in detail on the Medicare.gov website. There is a CMS publication called "Your Medicare Benefits", which explains the deductibles and coinsurance amounts.</p>
@@ -13921,8 +13801,6 @@ Note: Whenever there is a 4-position code, there is always an implied decimal af
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
 <p>This variable is the count of hospital stays (unique admissions, which may span more than one facility) in the non-acute inpatient setting for a given year.  A non-acute inpatient stay is defined as a set of one or more consecutive non-acute inpatient claims where the beneficiary is only discharged on the most recent claim in the set.  The <code>CLM_FROM_DT</code> for the first claim associated with the stay must have been in the year of the data file, however it was permissible for the <code>CLM_THRU_DT</code> to have occurred in January of the following year. These “other” inpatient (OIP) claims are a subset of the claims in the IP data file consisting of data from IP settings such as long-term care hospitals, inpatient psychiatric facilities, inpatient rehabilitation facilities, and other types of IP facilities such as children’s hospitals or cancer centers.</p>
-<h3>Values</h3>
-
 <p>There are 2 cost/use categories from the IP data files: Acute and the OIP</p>
 <h2 id="other-part-b-carrier-beneficiary-payments"><a href="https://www.resdac.org/cms-data/variables/Other-Part-B-Carrier-Beneficiary-Payments">Other Part B Carrier Beneficiary Payments</a><a class="headerlink" href="#other-part-b-carrier-beneficiary-payments" title="Permanent link">&para;</a></h2>
 <ul>
@@ -13934,8 +13812,6 @@ Note: Whenever there is a 4-position code, there is always an implied decimal af
 </ul>
 <p>This variable is the sum of coinsurance and deductible payments from Part B Carrier and DME claims which appear in settings other than the 10 specific categories which are part of this file for a given year. The total Beneficiary payments are calculated as the sum of <code>LINE_COINSRNC_AMT</code> + <code>LINE_BENE_PTB_DDCTBL_AMT</code> for the relevant lines.  </p>
 <p>Claims for other carrier/DME claims are a subset of the claims in the Part B Carrier and DME data files.  Types of services which may have been summarized in this other carrier category (OTHC) include ambulance, chiropractor, chemotherapy, vision, hearing and speech services, etc.</p>
-<h3>Values</h3>
-
 <p>There are 11 cost/use categories from the Carrier Part B and DME data files – the ASC, Part B Drug, Physician, E &amp;M, anesthesia, dialysis, imaging, tests, other procedures, DME and other carrier claims.</p>
 <h2 id="other-part-b-carrier-events"><a href="https://www.resdac.org/cms-data/variables/Other-Part-B-Carrier-Events">Other Part B Carrier Events</a><a class="headerlink" href="#other-part-b-carrier-events" title="Permanent link">&para;</a></h2>
 <ul>
@@ -13947,8 +13823,6 @@ Note: Whenever there is a 4-position code, there is always an implied decimal af
 </ul>
 <p>"This variable is the count of events in the part B other setting for a given year, which includes Part B Carrier and DME claims which appear in settings other than the 10 specific categories which are part of this file for a given year.  Claims for other carrier/DME claims are a subset of the claims in the Part B Carrier and DME data files.  Types of services which may have been summarized in this other carrier category (OTHC) include ambulance, chiropractor, chemotherapy, vision, hearing and speech services, etc.</p>
 <p>An event is defined as each line item that contains the relevant service."</p>
-<h3>Values</h3>
-
 <p>There are 11 cost/use categories from the Carrier Part B and DME data files – the ASC, Anesthesia, Part B Drug, Physician, E &amp; M, dialysis, imaging, tests, other procedures, DME and other carrier claims. </p>
 <h2 id="other-part-b-carrier-medicare-payments"><a href="https://www.resdac.org/cms-data/variables/Other-Part-B-Carrier-Medicare-Payments">Other Part B Carrier Medicare Payments</a><a class="headerlink" href="#other-part-b-carrier-medicare-payments" title="Permanent link">&para;</a></h2>
 <ul>
@@ -13960,8 +13834,6 @@ Note: Whenever there is a 4-position code, there is always an implied decimal af
 </ul>
 <p>"This variable is the total Medicare payments from Part B Carrier and DME claims which appear in settings other than the 10 specific categories which are part of this file for a given year.  Claims for other carrier/DME claims are a subset of the claims in the Part B Carrier and DME data files.  Types of services which may have been summarized in this other carrier category (OTHC) include ambulance, chiropractor, chemotherapy, vision, hearing and speech services, etc.</p>
 <p>The total Medicare payments are calculated as the sum of <code>LINE_NCH_PMT_AMT</code> where the <code>LINE_PRCSG_IND_CD</code> was ('A','R', or 'S') - for all relevant lines."</p>
-<h3>Values</h3>
-
 <p>There are 11 cost/use categories from the Carrier Part B and DME data files – the ASC, Part B Drug, Physician, E &amp;M, anesthesia, dialysis, imaging, tests, other procedures, DME and other carrier claims.</p>
 <h2 id="other-procedures-beneficiary-payments"><a href="https://www.resdac.org/cms-data/variables/Other-Procedures-Beneficiary-Payments">Other Procedures Beneficiary Payments</a><a class="headerlink" href="#other-procedures-beneficiary-payments" title="Permanent link">&para;</a></h2>
 <ul>
@@ -13972,9 +13844,7 @@ Note: Whenever there is a 4-position code, there is always an implied decimal af
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
 <p>This variable is the sum of coinsurance and deductible payments for services considered part B other procedures (i.e., not anesthesia or dialysis) for a given year. The total Beneficiary payments are calculated as the sum of <code>LINE_COINSRNC_AMT</code> + <code>LINE_BENE_PTB_DDCTBL_AMT</code> for the relevant lines.  </p>
-<p>Claims for other procedures are a subset of the claims in the Part B Carrier data file. These other procedure claims are defined as those with a line <code>BETOS</code> code (<code>BETOS</code>_CD) where the first 2 digits are (<code>P1</code>,<code>P2</code>,<code>P3</code>,<code>P4</code>,<code>P5</code>,<code>P6</code>,<code>P7</code>, or <code>P8</code>).</p>
-<h3>Values</h3>
-
+<p>Claims for other procedures are a subset of the claims in the Part B Carrier data file. These other procedure claims are defined as those with a line <code>BETOS</code> code (<code>`BETOS</code>_CD<code>) where the first 2 digits are (</code>P1<code>,</code>P2<code>,</code>P3<code>,</code>P4<code>,</code>P5<code>,</code>P6<code>,</code>P7<code>, or</code>P8`).</p>
 <p>There are 11 cost/use categories from the Carrier Part B and DME data files – the ASC, Anesthesia, Part B Drug, Physician, E &amp; M, dialysis, imaging, tests, other procedures, DME and other carrier claims.</p>
 <h2 id="other-procedures-events"><a href="https://www.resdac.org/cms-data/variables/Other-Procedures-Events">Other Procedures Events</a><a class="headerlink" href="#other-procedures-events" title="Permanent link">&para;</a></h2>
 <ul>
@@ -13986,8 +13856,6 @@ Note: Whenever there is a 4-position code, there is always an implied decimal af
 </ul>
 <p>"This variable is the count of events for part B other procedures for a given year. Claims for other procedures are a subset of the claims in the Part B Carrier data file. These other procedure claims are defined as those with a line <code>BETOS</code> code (<code>BETOS</code>_CD) where the first 2 digits are (<code>P1</code>,<code>P2</code>,<code>P3</code>,<code>P4</code>,<code>P5</code>,<code>P6</code>,<code>P7</code>, or <code>P8</code>). </p>
 <p>An event is defined as each line item that contains the relevant service."</p>
-<h3>Values</h3>
-
 <p>There are 11 cost/use categories from the Carrier Part B and DME data files – the ASC, Anesthesia, Part B Drug, Physician, E &amp; M, dialysis, imaging, tests, other procedures, DME and other carrier claims.</p>
 <h2 id="other-procedures-medicare-payments"><a href="https://www.resdac.org/cms-data/variables/Other-Procedures-Medicare-Payments">Other Procedures Medicare Payments</a><a class="headerlink" href="#other-procedures-medicare-payments" title="Permanent link">&para;</a></h2>
 <ul>
@@ -13997,9 +13865,7 @@ Note: Whenever there is a 4-position code, there is always an implied decimal af
 <ul>
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
-<p>This variable is the total Medicare payments for services considered part B other procedures (i.e., not anesthesia or dialysis) for a given year.  Claims for other procedures are a subset of the claims, and a subset of procedures in the Part B Carrier data file. These other procedure claims are defined as those with a line <code>BETOS</code> code (<code>BETOS</code>_CD) where the first 2 digits are (<code>P1</code>,<code>P2</code>,<code>P3</code>,<code>P4</code>,<code>P5</code>,<code>P6</code>,<code>P7</code>, or <code>P8</code>). The total Medicare payments are calculated as the sum of <code>LINE_NCH_PMT_AMT</code> where the <code>LINE_PRCSG_IND_CD</code> was ('A','R', or 'S') - for all relevant lines.</p>
-<h3>Values</h3>
-
+<p>This variable is the total Medicare payments for services considered part B other procedures (i.e., not anesthesia or dialysis) for a given year.  Claims for other procedures are a subset of the claims, and a subset of procedures in the Part B Carrier data file. These other procedure claims are defined as those with a line <code>BETOS</code> code (<code>`BETOS</code>_CD<code>) where the first 2 digits are (</code>P1<code>,</code>P2<code>,</code>P3<code>,</code>P4<code>,</code>P5<code>,</code>P6<code>,</code>P7<code>, or</code>P8<code>). The total Medicare payments are calculated as the sum of</code>LINE_NCH_PMT_AMT<code>where the</code>LINE_PRCSG_IND_CD` was ('A','R', or 'S') - for all relevant lines.</p>
 <p>There are 11 cost/use categories from the Carrier Part B and DME data files – the ASC, Part B Drug, Physician, E &amp;M, anesthesia, dialysis, imaging, tests, other procedures, DME and other carrier claims.</p>
 <h2 id="part-a-months-count"><a href="https://www.resdac.org/cms-data/variables/part-months-count">Part A Months Count</a><a class="headerlink" href="#part-a-months-count" title="Permanent link">&para;</a></h2>
 <ul>
@@ -14076,10 +13942,8 @@ Note: Whenever there is a 4-position code, there is always an implied decimal af
 <ul>
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
-<p>"This variable is the sum of coinsurance and deductible payments for part B drugs for a given year. Part B drug claims are a subset of the claims in the Part B Carrier and DME data files. The Part B drug claims are identified by <code>BETOS</code> codes (CCW variable <code>BETOS</code>_CD with values of <code>D1G</code>,<code>O1D</code>,<code>O1E</code>,<code>O1G</code>,<code>I1E</code>, or <code>I1F</code>). </p>
+<p>"This variable is the sum of coinsurance and deductible payments for part B drugs for a given year. Part B drug claims are a subset of the claims in the Part B Carrier and DME data files. The Part B drug claims are identified by <code>BETOS</code> codes (CCW variable <code>`BETOS</code>_CD<code>with values of</code>D1G<code>,</code>O1D<code>,</code>O1E<code>,</code>O1G<code>,</code>I1E<code>, or</code>I1F`). </p>
 <p>The total Beneficiary payments are calculated as the sum of <code>LINE_COINSRNC_AMT</code> + <code>LINE_BENE_PTB_DDCTBL_AMT</code> for the relevant lines.  "</p>
-<h3>Values</h3>
-
 <p>There are 11 cost/use categories from the Carrier Part B and DME data files – the ASC, Part B Drug, Physician, E &amp;M, anesthesia, dialysis, imaging, tests, other procedures, DME and other carrier claims.</p>
 <h2 id="part-b-drug-events"><a href="https://www.resdac.org/cms-data/variables/Part-B-Drug-Events">Part B Drug Events</a><a class="headerlink" href="#part-b-drug-events" title="Permanent link">&para;</a></h2>
 <ul>
@@ -14090,8 +13954,6 @@ Note: Whenever there is a 4-position code, there is always an implied decimal af
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
 <p>This variable is the count of events in the part B drug setting for a given year.  Part B drug claims are a subset of the claims in the Part B Carrier and DME data files. The Part B drug claims are identified by <code>BETOS</code> codes (CCW variable <code>BETOS</code>_CD with values of <code>D1G</code>,<code>O1D</code>,<code>O1E</code>,<code>O1G</code>,<code>I1E</code>, or <code>I1F</code>).  An event is defined as each line item that contains the relevant service.</p>
-<h3>Values</h3>
-
 <p>There are 11 cost/use categories from the Carrier Part B and DME data files – the ASC, Part B Drug, Physician, E &amp;M, anesthesia, dialysis, imaging, tests, other procedures, DME and other carrier claims.</p>
 <h2 id="part-b-drug-medicare-payments"><a href="https://www.resdac.org/cms-data/variables/Part-B-Drug-Medicare-Payments">Part B Drug Medicare Payments</a><a class="headerlink" href="#part-b-drug-medicare-payments" title="Permanent link">&para;</a></h2>
 <ul>
@@ -14101,10 +13963,8 @@ Note: Whenever there is a 4-position code, there is always an implied decimal af
 <ul>
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
-<p>"This variable is the total Medicare payments for Part B drugs for a given year. Part B drug claims are a subset of the claims in the Part B Carrier and DME data files.  The Part B drug claims are identified by <code>BETOS</code> codes (CCW variable <code>BETOS</code>_CD with values of <code>D1G</code>,<code>O1D</code>,<code>O1E</code>,<code>O1G</code>,<code>I1E</code>, or <code>I1F</code>).  </p>
+<p>"This variable is the total Medicare payments for Part B drugs for a given year. Part B drug claims are a subset of the claims in the Part B Carrier and DME data files.  The Part B drug claims are identified by <code>BETOS</code> codes (CCW variable <code>`BETOS</code>_CD<code>with values of</code>D1G<code>,</code>O1D<code>,</code>O1E<code>,</code>O1G<code>,</code>I1E<code>, or</code>I1F`).  </p>
 <p>Total Part B drug payments are calculated as sum of <code>LINE_NCH_PMT_AMT</code> where the <code>LINE_PRCSG_IND_CD</code> was ('A','R', or 'S')."</p>
-<h3>Values</h3>
-
 <p>There are 11 cost/use categories from the Carrier Part B and DME data files – the ASC, Part B Drug, Physician, E &amp;M, anesthesia, dialysis, imaging, tests, other procedures, DME and other carrier claims.</p>
 <h2 id="part-b-months-count"><a href="https://www.resdac.org/cms-data/variables/part-b-months-count">Part B Months Count</a><a class="headerlink" href="#part-b-months-count" title="Permanent link">&para;</a></h2>
 <ul>
@@ -14140,9 +14000,7 @@ Note: Whenever there is a 4-position code, there is always an implied decimal af
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
 <p>This variable is the sum of coinsurance and deductible payments for the part B physician office services (PHYS) for a given year. The total Beneficiary payments are calculated as the sum of <code>LINE_COINSRNC_AMT</code> + <code>LINE_BENE_PTB_DDCTBL_AMT</code> for the relevant lines. </p>
-<p>Physician office claims are a subset of the claims in the Part B Carrier and DME data files, and a subset of physician evaluation and management claims (note that E&amp;M are tabulated separately in this data file).  The PHYS claims are defined as those with a line <code>BETOS</code> code (<code>BETOS</code>_CD) where the first three digits =M1A or M1B (the remainder of physician services which occur in different settings appear in  <code>EM_MDCR_PMT</code>).</p>
-<h3>Values</h3>
-
+<p>Physician office claims are a subset of the claims in the Part B Carrier and DME data files, and a subset of physician evaluation and management claims (note that E&amp;M are tabulated separately in this data file).  The PHYS claims are defined as those with a line <code>BETOS</code> code (<code>`BETOS</code>_CD<code>) where the first three digits =M1A or M1B (the remainder of physician services which occur in different settings appear in</code>EM_MDCR_PMT`).</p>
 <p>There are 11 cost/use categories from the Carrier Part B and DME data files – the ASC, Part B Drug, Physician, E &amp;M, anesthesia, dialysis, imaging, tests, other procedures, DME and other carrier claims.</p>
 <h2 id="part-b-physician-events"><a href="https://www.resdac.org/cms-data/variables/Part-B-Physician-Events">Part B Physician Events</a><a class="headerlink" href="#part-b-physician-events" title="Permanent link">&para;</a></h2>
 <ul>
@@ -14154,8 +14012,6 @@ Note: Whenever there is a 4-position code, there is always an implied decimal af
 </ul>
 <p>"This variable is the count of events in the part B physician office services (PHYS) for a given year. Physician office claims are a subset of the claims in the Part B Carrier and DME data files, and a subset of physician evaluation and management claims (note that E&amp;M are tabulated separately in this data file).   The PHYS claims are defined as those with a line <code>BETOS</code> code (<code>BETOS</code>_CD) where the first three digits =M1A or M1B (the remainder of physician services which occur in different settings appear in  <code>EM_MDCR_PMT</code>).</p>
 <p>An event is defined as each line item that contains the relevant service."</p>
-<h3>Values</h3>
-
 <p>There are 11 cost/use categories from the Carrier Part B and DME data files – the ASC, Anesthesia, Part B Drug, Physician, E &amp; M, dialysis, imaging, tests, other procedures, DME and other carrier claims.</p>
 <h2 id="part-b-physician-medicare-payments"><a href="https://www.resdac.org/cms-data/variables/Part-B-Physician-Medicare-Payments">Part B Physician Medicare Payments</a><a class="headerlink" href="#part-b-physician-medicare-payments" title="Permanent link">&para;</a></h2>
 <ul>
@@ -14166,9 +14022,7 @@ Note: Whenever there is a 4-position code, there is always an implied decimal af
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
 <p>This variable is the total Medicare payments for the part B physician office services (PHYS) for a given year. Physician office claims are a subset of the claims in the Part B Carrier and DME data files, and a subset of physician evaluation and management claims (note that E&amp;M are tabulated separately in this data file).</p>
-<p>The physician claims are defined as those with a line <code>BETOS</code> code (<code>BETOS</code>_CD) where the first 3 digits = M1A or M1B (note that all other <code>BETOS</code>_CD that begin with "M" are categorized as other evluation &amp; managment services in this file – see <code>EM_MDCR_PMT</code>). The total Medicare payments are calculated as the sum of <code>LINE_NCH_PMT_AMT</code> where the <code>LINE_PRCSG_IND_CD</code> was ('A','R', or 'S') - for all relevant lines.</p>
-<h3>Values</h3>
-
+<p>The physician claims are defined as those with a line <code>BETOS</code> code (<code>BETOS`_CD`) where the first 3 digits = M1A or M1B (note that all other</code>BETOS<code>_CD</code> that begin with "M" are categorized as other evluation &amp; managment services in this file – see <code>EM_MDCR_PMT</code>). The total Medicare payments are calculated as the sum of <code>LINE_NCH_PMT_AMT</code> where the <code>LINE_PRCSG_IND_CD</code> was ('A','R', or 'S') - for all relevant lines.</p>
 <p>There are 11 cost/use categories from the Carrier Part B and DME data files – the ASC, Part B Drug, Physician, E &amp;M, anesthesia, dialysis, imaging, tests, other procedures, DME and other carrier claims.</p>
 <h2 id="part-b-termination-code"><a href="https://www.resdac.org/cms-data/variables/Part-B-Termination-Code">Part B Termination Code</a><a class="headerlink" href="#part-b-termination-code" title="Permanent link">&para;</a></h2>
 <ul>
@@ -14705,7 +14559,7 @@ There are 12 monthly variables - where the 01 through 12 at the end of the varia
 <p>If the beneficiary was not enrolled in a managed care plan for a given month, this variable will be null/missing for that month. There are 12 monthly variables - where the 01 through 12 at the end of the variable name correspond with the month (e.g., 01 is January and 12 is December).</p>
 <h3>Values</h3>
 
-<p>Part C Plan Type Code.txt </p>
+<p><a href="https://www.resdac.org/sites/resdac.umn.edu/files/Part%20C%20Plan%20Type%20Code.txt">Part C Plan Type Code.txt</a> </p>
 <h2 id="part-c-plan-type-code-august"><a href="https://www.resdac.org/cms-data/variables/part-c-plan-type-code-august">Part C Plan Type Code - August</a><a class="headerlink" href="#part-c-plan-type-code-august" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Short SAS Name: <code>PTC_PLAN_TYPE_CD_08</code></li>
@@ -14719,7 +14573,7 @@ There are 12 monthly variables - where the 01 through 12 at the end of the varia
 <p>If the beneficiary was not enrolled in a managed care plan for a given month, this variable will be null/missing for that month. There are 12 monthly variables - where the 01 through 12 at the end of the variable name correspond with the month (e.g., 01 is January and 12 is December).</p>
 <h3>Values</h3>
 
-<p>Part C Plan Type Code.txt </p>
+<p><a href="https://www.resdac.org/sites/resdac.umn.edu/files/Part%20C%20Plan%20Type%20Code.txt">Part C Plan Type Code.txt</a> </p>
 <h2 id="part-c-plan-type-code-december"><a href="https://www.resdac.org/cms-data/variables/part-c-plan-type-code-december">Part C Plan Type Code - December</a><a class="headerlink" href="#part-c-plan-type-code-december" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Short SAS Name: <code>PTC_PLAN_TYPE_CD_12</code></li>
@@ -14733,7 +14587,7 @@ There are 12 monthly variables - where the 01 through 12 at the end of the varia
 <p>If the beneficiary was not enrolled in a managed care plan for a given month, this variable will be null/missing for that month. There are 12 monthly variables - where the 01 through 12 at the end of the variable name correspond with the month (e.g., 01 is January and 12 is December).</p>
 <h3>Values</h3>
 
-<p>Part C Plan Type Code.txt </p>
+<p><a href="https://www.resdac.org/sites/resdac.umn.edu/files/Part%20C%20Plan%20Type%20Code.txt">Part C Plan Type Code.txt</a> </p>
 <h2 id="part-c-plan-type-code-february"><a href="https://www.resdac.org/cms-data/variables/part-c-plan-type-code-february">Part C Plan Type Code - February</a><a class="headerlink" href="#part-c-plan-type-code-february" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Short SAS Name: <code>PTC_PLAN_TYPE_CD_02</code></li>
@@ -14747,7 +14601,7 @@ There are 12 monthly variables - where the 01 through 12 at the end of the varia
 <p>If the beneficiary was not enrolled in a managed care plan for a given month, this variable will be null/missing for that month. There are 12 monthly variables - where the 01 through 12 at the end of the variable name correspond with the month (e.g., 01 is January and 12 is December).</p>
 <h3>Values</h3>
 
-<p>Part C Plan Type Code.txt </p>
+<p><a href="https://www.resdac.org/sites/resdac.umn.edu/files/Part%20C%20Plan%20Type%20Code.txt">Part C Plan Type Code.txt</a> </p>
 <h2 id="part-c-plan-type-code-january"><a href="https://www.resdac.org/cms-data/variables/part-c-plan-type-code-january">Part C Plan Type Code - January</a><a class="headerlink" href="#part-c-plan-type-code-january" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Short SAS Name: <code>PTC_PLAN_TYPE_CD_01</code></li>
@@ -14761,7 +14615,7 @@ There are 12 monthly variables - where the 01 through 12 at the end of the varia
 <p>If the beneficiary was not enrolled in a managed care plan for a given month, this variable will be null/missing for that month. There are 12 monthly variables - where the 01 through 12 at the end of the variable name correspond with the month (e.g., 01 is January and 12 is December).</p>
 <h3>Values</h3>
 
-<p>Part C Plan Type Code.txt </p>
+<p><a href="https://www.resdac.org/sites/resdac.umn.edu/files/Part%20C%20Plan%20Type%20Code.txt">Part C Plan Type Code.txt</a> </p>
 <h2 id="part-c-plan-type-code-july"><a href="https://www.resdac.org/cms-data/variables/part-c-plan-type-code-july">Part C Plan Type Code - July</a><a class="headerlink" href="#part-c-plan-type-code-july" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Short SAS Name: <code>PTC_PLAN_TYPE_CD_07</code></li>
@@ -14775,7 +14629,7 @@ There are 12 monthly variables - where the 01 through 12 at the end of the varia
 <p>If the beneficiary was not enrolled in a managed care plan for a given month, this variable will be null/missing for that month. There are 12 monthly variables - where the 01 through 12 at the end of the variable name correspond with the month (e.g., 01 is January and 12 is December).</p>
 <h3>Values</h3>
 
-<p>Part C Plan Type Code.txt </p>
+<p><a href="https://www.resdac.org/sites/resdac.umn.edu/files/Part%20C%20Plan%20Type%20Code.txt">Part C Plan Type Code.txt</a> </p>
 <h2 id="part-c-plan-type-code-june"><a href="https://www.resdac.org/cms-data/variables/part-c-plan-type-code-june">Part C Plan Type Code - June</a><a class="headerlink" href="#part-c-plan-type-code-june" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Short SAS Name: <code>PTC_PLAN_TYPE_CD_06</code></li>
@@ -14789,7 +14643,7 @@ There are 12 monthly variables - where the 01 through 12 at the end of the varia
 <p>If the beneficiary was not enrolled in a managed care plan for a given month, this variable will be null/missing for that month. There are 12 monthly variables - where the 01 through 12 at the end of the variable name correspond with the month (e.g., 01 is January and 12 is December).</p>
 <h3>Values</h3>
 
-<p>Part C Plan Type Code.txt </p>
+<p><a href="https://www.resdac.org/sites/resdac.umn.edu/files/Part%20C%20Plan%20Type%20Code.txt">Part C Plan Type Code.txt</a> </p>
 <h2 id="part-c-plan-type-code-march"><a href="https://www.resdac.org/cms-data/variables/part-c-plan-type-code-march">Part C Plan Type Code - March</a><a class="headerlink" href="#part-c-plan-type-code-march" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Short SAS Name: <code>PTC_PLAN_TYPE_CD_03</code></li>
@@ -14803,7 +14657,7 @@ There are 12 monthly variables - where the 01 through 12 at the end of the varia
 <p>If the beneficiary was not enrolled in a managed care plan for a given month, this variable will be null/missing for that month. There are 12 monthly variables - where the 01 through 12 at the end of the variable name correspond with the month (e.g., 01 is January and 12 is December).</p>
 <h3>Values</h3>
 
-<p>Part C Plan Type Code.txt </p>
+<p><a href="https://www.resdac.org/sites/resdac.umn.edu/files/Part%20C%20Plan%20Type%20Code.txt">Part C Plan Type Code.txt</a> </p>
 <h2 id="part-c-plan-type-code-may"><a href="https://www.resdac.org/cms-data/variables/part-c-plan-type-code-may">Part C Plan Type Code - May</a><a class="headerlink" href="#part-c-plan-type-code-may" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Short SAS Name: <code>PTC_PLAN_TYPE_CD_05</code></li>
@@ -14817,7 +14671,7 @@ There are 12 monthly variables - where the 01 through 12 at the end of the varia
 <p>If the beneficiary was not enrolled in a managed care plan for a given month, this variable will be null/missing for that month. There are 12 monthly variables - where the 01 through 12 at the end of the variable name correspond with the month (e.g., 01 is January and 12 is December).</p>
 <h3>Values</h3>
 
-<p>Part C Plan Type Code.txt </p>
+<p><a href="https://www.resdac.org/sites/resdac.umn.edu/files/Part%20C%20Plan%20Type%20Code.txt">Part C Plan Type Code.txt</a> </p>
 <h2 id="part-c-plan-type-code-november"><a href="https://www.resdac.org/cms-data/variables/part-c-plan-type-code-november">Part C Plan Type Code - November</a><a class="headerlink" href="#part-c-plan-type-code-november" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Short SAS Name: <code>PTC_PLAN_TYPE_CD_11</code></li>
@@ -14831,7 +14685,7 @@ There are 12 monthly variables - where the 01 through 12 at the end of the varia
 <p>If the beneficiary was not enrolled in a managed care plan for a given month, this variable will be null/missing for that month. There are 12 monthly variables - where the 01 through 12 at the end of the variable name correspond with the month (e.g., 01 is January and 12 is December).</p>
 <h3>Values</h3>
 
-<p>Part C Plan Type Code.txt </p>
+<p><a href="https://www.resdac.org/sites/resdac.umn.edu/files/Part%20C%20Plan%20Type%20Code.txt">Part C Plan Type Code.txt</a> </p>
 <h2 id="part-c-plan-type-code-october"><a href="https://www.resdac.org/cms-data/variables/part-c-plan-type-code-october">Part C Plan Type Code - October</a><a class="headerlink" href="#part-c-plan-type-code-october" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Short SAS Name: <code>PTC_PLAN_TYPE_CD_10</code></li>
@@ -14845,7 +14699,7 @@ There are 12 monthly variables - where the 01 through 12 at the end of the varia
 <p>If the beneficiary was not enrolled in a managed care plan for a given month, this variable will be null/missing for that month. There are 12 monthly variables - where the 01 through 12 at the end of the variable name correspond with the month (e.g., 01 is January and 12 is December).</p>
 <h3>Values</h3>
 
-<p>Part C Plan Type Code.txt </p>
+<p><a href="https://www.resdac.org/sites/resdac.umn.edu/files/Part%20C%20Plan%20Type%20Code.txt">Part C Plan Type Code.txt</a> </p>
 <h2 id="part-c-plan-type-code-september"><a href="https://www.resdac.org/cms-data/variables/part-c-plan-type-code-september">Part C Plan Type Code - September</a><a class="headerlink" href="#part-c-plan-type-code-september" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Short SAS Name: <code>PTC_PLAN_TYPE_CD_09</code></li>
@@ -14859,7 +14713,7 @@ There are 12 monthly variables - where the 01 through 12 at the end of the varia
 <p>If the beneficiary was not enrolled in a managed care plan for a given month, this variable will be null/missing for that month. There are 12 monthly variables - where the 01 through 12 at the end of the variable name correspond with the month (e.g., 01 is January and 12 is December).</p>
 <h3>Values</h3>
 
-<p>Part C Plan Type Code.txt </p>
+<p><a href="https://www.resdac.org/sites/resdac.umn.edu/files/Part%20C%20Plan%20Type%20Code.txt">Part C Plan Type Code.txt</a> </p>
 <h2 id="part-d-beneficiary-payments"><a href="https://www.resdac.org/cms-data/variables/Part-D-Beneficiary-Payments">Part D Beneficiary Payments</a><a class="headerlink" href="#part-d-beneficiary-payments" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Short SAS Name: <code>PTD_BENE_PMT</code></li>
@@ -14870,8 +14724,6 @@ There are 12 monthly variables - where the 01 through 12 at the end of the varia
 </ul>
 <p>This variable is the dollar amount that the beneficiary paid for all PDEs for a given year, without being reimbursed by a third party.  The amount includes all copayments, coinsurance, deductible, or other patient payment amounts, and comes directly from the source Prescription Drug Events (PDEs).  </p>
 <p>The total beneficiary payments are calculated as the sum of three CCW variables: patient pay amount (PTNT_PAY_AMT), other troop amount (OTHER_TROOP_AMT), and patient liability reduction due to other payer amount (PLRO_AMT) for Part D drugs for the relevant PDEs.</p>
-<h3>Values</h3>
-
 <p>This amount contributes to a beneficiary's true out-of-pocket (TrOOP) costs, but only if it is for a Part D-covered drug (i.e., spending on non-covered drugs does not count toward the TrOOP amount).</p>
 <p>Note that another PDE variable called the low-income cost sharing (LIS) amount (variable name LICS_AMT), indicates the amount paid by Part D low-income subsidy for the PDE. Although this is sometimes considered a beneficiary payment (since it is made on behalf of a beneficiary), we have included the LIS payments in the Part D Medicare Payment amount (see variable called <code>PTD_MDCR_PMT</code>).</p>
 <p>The value will be null if the beneficiary was not enrolled in Part D or did not use any Part D drugs during the year.</p>
@@ -15577,8 +15429,6 @@ You need to know both the Part D contract number and plan benefit package (PTD_P
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
 <p>This variable is the count of events for Part D drugs for a given year (i.e., a unique count of the PDE_IDs). An event is a dispensed (filled) drug prescription that appears in the Prescription Drug Event (PDE) file.</p>
-<h3>Values</h3>
-
 <p>The value will be null if the beneficiary was not enrolled in Part D or did not use any Part D drugs during the year.</p>
 <p>PDEs consist of highly variable days supply of the medication.  We also create a derived variable that counts a standard 30 day supply of a filled Part D prescription (see <code>PTD_FILL_CNT</code>). </p>
 <h2 id="part-d-fill-count"><a href="https://www.resdac.org/cms-data/variables/Part-D-Fill-Count">Part D Fill Count</a><a class="headerlink" href="#part-d-fill-count" title="Permanent link">&para;</a></h2>
@@ -15590,8 +15440,6 @@ You need to know both the Part D contract number and plan benefit package (PTD_P
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
 <p>Part D prescribing events consist of highly variable days supply of the medication.  This derived variable creates a standard 30 days supply of a filled Part D prescription, and counts this as a “fill”.   The Part D fill count does not indicate the number of different drugs the person is using, only the total months covered by a medication (e.g., if a patient is receiving a full year supply of a medication, whether this occurs in one transaction or 12 monthly transactions, the fill count = 12; if the patient is taking three such medications, the fill count=36).  </p>
-<h3>Values</h3>
-
 <p>The value will be null if the beneficiary was not enrolled in Part D or did not use any Part D drugs during the year.</p>
 <p>We also calaculate the acutal number of prescription drug fill events for Part D drugs for a given year (i.e., a unique count of the PDE_IDs); see variable <code>PTD_EVENTS</code>.</p>
 <h2 id="part-d-medicare-payments"><a href="https://www.resdac.org/cms-data/variables/Part-D-Medicare-Payments">Part D Medicare Payments</a><a class="headerlink" href="#part-d-medicare-payments" title="Permanent link">&para;</a></h2>
@@ -15603,8 +15451,6 @@ You need to know both the Part D contract number and plan benefit package (PTD_P
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
 <p>This variable is the dollar amount that the Part D plan covered for all covered drugs for a given year. The variable is calculated as the sum of the plan payments for covered PDEs (CVRD_D_PLAN_PD_AMT) and the low income cost sharing subsidy amount (LICS_AMT) during the year.</p>
-<h3>Values</h3>
-
 <p>This variable does not include all costs to Medicare for the Part D benefit; it does not include non-covered drugs (PDE variable called NCVRD_PLAN_PD_AMT) also does not consider include any applicable rebate amounts or other discounts).</p>
 <p>Plans may choose to provide enhanced benefits that pay for some non-covered drugs.</p>
 <p>The value will be null if the beneficiary was not enrolled in Part D or did not use any Part D drugs during the year. </p>
@@ -16757,8 +16603,6 @@ You need to know the Part D contract number (PTD_CNTRCT_ID_XX) and plan benefit 
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
 <p>This variable is the gross drug cost (TOT_RX_CST_AMT) of all Part D drugs for a given year. This value includes the ingredient cost, dispensing fee, sales tax (if applicable), and vaccine administration fee (if any, 2010+ only).</p>
-<h3>Values</h3>
-
 <p>This is the price paid for the drug at the point of sale (i.e., the pharmacy counter), and it does not include any rebates or discounts that the drug manufacturer provides directly to the Part D plan sponsor. </p>
 <p>The value will be null if the beneficiary was not enrolled in Part D or did not use any Part D drugs during the year. </p>
 <h2 id="part-d-low-income-cost-share-group-code-april"><a href="https://www.resdac.org/taxonomy/term/5691">Part D low-income cost share group code - April</a><a class="headerlink" href="#part-d-low-income-cost-share-group-code-april" title="Permanent link">&para;</a></h2>
@@ -16774,7 +16618,7 @@ You need to know the Part D contract number (PTD_CNTRCT_ID_XX) and plan benefit 
 <p>CMS identifies beneficiaries with fully-subsidized Part D coverage by looking for individuals that have a 01, 02, or 03 for the month. Other beneficiaries who are eligible for the LIS but do not receive a full subsidy have a 04, 05, 06, 07, or 08. The remaining values indicate that the individual is not eligible for subsidized Part D coverage. There are 12 monthly variables - where the 01 through 12 at the end of the variable name correspond with the month (e.g., 01 is January and 12 is December)</p>
 <h3>Values</h3>
 
-<p>Part D low-income cost share group code .txt </p>
+<p><a href="https://www.resdac.org/sites/resdac.umn.edu/files/Part%20D%20low-income%20cost%20share%20group%20code%20.txt">Part D low-income cost share group code .txt</a> </p>
 <h2 id="part-d-low-income-cost-share-group-code-august"><a href="https://www.resdac.org/taxonomy/term/5711">Part D low-income cost share group code - August</a><a class="headerlink" href="#part-d-low-income-cost-share-group-code-august" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Short SAS Name: <code>CSTSHR08</code></li>
@@ -16788,7 +16632,7 @@ You need to know the Part D contract number (PTD_CNTRCT_ID_XX) and plan benefit 
 <p>CMS identifies beneficiaries with fully-subsidized Part D coverage by looking for individuals that have a 01, 02, or 03 for the month. Other beneficiaries who are eligible for the LIS but do not receive a full subsidy have a 04, 05, 06, 07, or 08. The remaining values indicate that the individual is not eligible for subsidized Part D coverage. There are 12 monthly variables - where the 01 through 12 at the end of the variable name correspond with the month (e.g., 01 is January and 12 is December)</p>
 <h3>Values</h3>
 
-<p>Part D low-income cost share group code .txt </p>
+<p><a href="https://www.resdac.org/sites/resdac.umn.edu/files/Part%20D%20low-income%20cost%20share%20group%20code%20.txt">Part D low-income cost share group code .txt</a> </p>
 <h2 id="part-d-low-income-cost-share-group-code-december"><a href="https://www.resdac.org/taxonomy/term/5731">Part D low-income cost share group code - December</a><a class="headerlink" href="#part-d-low-income-cost-share-group-code-december" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Short SAS Name: <code>CSTSHR12</code></li>
@@ -16802,7 +16646,7 @@ You need to know the Part D contract number (PTD_CNTRCT_ID_XX) and plan benefit 
 <p>CMS identifies beneficiaries with fully-subsidized Part D coverage by looking for individuals that have a 01, 02, or 03 for the month. Other beneficiaries who are eligible for the LIS but do not receive a full subsidy have a 04, 05, 06, 07, or 08. The remaining values indicate that the individual is not eligible for subsidized Part D coverage. There are 12 monthly variables - where the 01 through 12 at the end of the variable name correspond with the month (e.g., 01 is January and 12 is December)</p>
 <h3>Values</h3>
 
-<p>Part D low-income cost share group code .txt </p>
+<p><a href="https://www.resdac.org/sites/resdac.umn.edu/files/Part%20D%20low-income%20cost%20share%20group%20code%20.txt">Part D low-income cost share group code .txt</a> </p>
 <h2 id="part-d-low-income-cost-share-group-code-february"><a href="https://www.resdac.org/taxonomy/term/5681">Part D low-income cost share group code - February</a><a class="headerlink" href="#part-d-low-income-cost-share-group-code-february" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Short SAS Name: <code>CSTSHR02</code></li>
@@ -16816,7 +16660,7 @@ You need to know the Part D contract number (PTD_CNTRCT_ID_XX) and plan benefit 
 <p>CMS identifies beneficiaries with fully-subsidized Part D coverage by looking for individuals that have a 01, 02, or 03 for the month. Other beneficiaries who are eligible for the LIS but do not receive a full subsidy have a 04, 05, 06, 07, or 08. The remaining values indicate that the individual is not eligible for subsidized Part D coverage. There are 12 monthly variables - where the 01 through 12 at the end of the variable name correspond with the month (e.g., 01 is January and 12 is December)</p>
 <h3>Values</h3>
 
-<p>Part D low-income cost share group code .txt </p>
+<p><a href="https://www.resdac.org/sites/resdac.umn.edu/files/Part%20D%20low-income%20cost%20share%20group%20code%20.txt">Part D low-income cost share group code .txt</a> </p>
 <h2 id="part-d-low-income-cost-share-group-code-january"><a href="https://www.resdac.org/cms-data/variables/Cost-Share-Group-Code-occurs-12-times">Part D low-income cost share group code - January</a><a class="headerlink" href="#part-d-low-income-cost-share-group-code-january" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Short SAS Name: <code>CSTSHR01</code></li>
@@ -16830,7 +16674,7 @@ You need to know the Part D contract number (PTD_CNTRCT_ID_XX) and plan benefit 
 <p>CMS identifies beneficiaries with fully-subsidized Part D coverage by looking for individuals that have a 01, 02, or 03 for the month. Other beneficiaries who are eligible for the LIS but do not receive a full subsidy have a 04, 05, 06, 07, or 08. The remaining values indicate that the individual is not eligible for subsidized Part D coverage. There are 12 monthly variables - where the 01 through 12 at the end of the variable name correspond with the month (e.g., 01 is January and 12 is December)</p>
 <h3>Values</h3>
 
-<p>Part D low-income cost share group code .txt </p>
+<p><a href="https://www.resdac.org/sites/resdac.umn.edu/files/Part%20D%20low-income%20cost%20share%20group%20code%20.txt">Part D low-income cost share group code .txt</a> </p>
 <h2 id="part-d-low-income-cost-share-group-code-july"><a href="https://www.resdac.org/taxonomy/term/5706">Part D low-income cost share group code - July</a><a class="headerlink" href="#part-d-low-income-cost-share-group-code-july" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Short SAS Name: <code>CSTSHR07</code></li>
@@ -16844,7 +16688,7 @@ You need to know the Part D contract number (PTD_CNTRCT_ID_XX) and plan benefit 
 <p>CMS identifies beneficiaries with fully-subsidized Part D coverage by looking for individuals that have a 01, 02, or 03 for the month. Other beneficiaries who are eligible for the LIS but do not receive a full subsidy have a 04, 05, 06, 07, or 08. The remaining values indicate that the individual is not eligible for subsidized Part D coverage. There are 12 monthly variables - where the 01 through 12 at the end of the variable name correspond with the month (e.g., 01 is January and 12 is December)</p>
 <h3>Values</h3>
 
-<p>Part D low-income cost share group code .txt </p>
+<p><a href="https://www.resdac.org/sites/resdac.umn.edu/files/Part%20D%20low-income%20cost%20share%20group%20code%20.txt">Part D low-income cost share group code .txt</a> </p>
 <h2 id="part-d-low-income-cost-share-group-code-june"><a href="https://www.resdac.org/taxonomy/term/5701">Part D low-income cost share group code - June</a><a class="headerlink" href="#part-d-low-income-cost-share-group-code-june" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Short SAS Name: <code>CSTSHR06</code></li>
@@ -16858,7 +16702,7 @@ You need to know the Part D contract number (PTD_CNTRCT_ID_XX) and plan benefit 
 <p>CMS identifies beneficiaries with fully-subsidized Part D coverage by looking for individuals that have a 01, 02, or 03 for the month. Other beneficiaries who are eligible for the LIS but do not receive a full subsidy have a 04, 05, 06, 07, or 08. The remaining values indicate that the individual is not eligible for subsidized Part D coverage. There are 12 monthly variables - where the 01 through 12 at the end of the variable name correspond with the month (e.g., 01 is January and 12 is December)</p>
 <h3>Values</h3>
 
-<p>Part D low-income cost share group code .txt </p>
+<p><a href="https://www.resdac.org/sites/resdac.umn.edu/files/Part%20D%20low-income%20cost%20share%20group%20code%20.txt">Part D low-income cost share group code .txt</a> </p>
 <h2 id="part-d-low-income-cost-share-group-code-march"><a href="https://www.resdac.org/taxonomy/term/5686">Part D low-income cost share group code - March</a><a class="headerlink" href="#part-d-low-income-cost-share-group-code-march" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Short SAS Name: <code>CSTSHR03</code></li>
@@ -16872,7 +16716,7 @@ You need to know the Part D contract number (PTD_CNTRCT_ID_XX) and plan benefit 
 <p>CMS identifies beneficiaries with fully-subsidized Part D coverage by looking for individuals that have a 01, 02, or 03 for the month. Other beneficiaries who are eligible for the LIS but do not receive a full subsidy have a 04, 05, 06, 07, or 08. The remaining values indicate that the individual is not eligible for subsidized Part D coverage. There are 12 monthly variables - where the 01 through 12 at the end of the variable name correspond with the month (e.g., 01 is January and 12 is December)</p>
 <h3>Values</h3>
 
-<p>Part D low-income cost share group code .txt </p>
+<p><a href="https://www.resdac.org/sites/resdac.umn.edu/files/Part%20D%20low-income%20cost%20share%20group%20code%20.txt">Part D low-income cost share group code .txt</a> </p>
 <h2 id="part-d-low-income-cost-share-group-code-may"><a href="https://www.resdac.org/taxonomy/term/5696">Part D low-income cost share group code - May</a><a class="headerlink" href="#part-d-low-income-cost-share-group-code-may" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Short SAS Name: <code>CSTSHR05</code></li>
@@ -16886,7 +16730,7 @@ You need to know the Part D contract number (PTD_CNTRCT_ID_XX) and plan benefit 
 <p>CMS identifies beneficiaries with fully-subsidized Part D coverage by looking for individuals that have a 01, 02, or 03 for the month. Other beneficiaries who are eligible for the LIS but do not receive a full subsidy have a 04, 05, 06, 07, or 08. The remaining values indicate that the individual is not eligible for subsidized Part D coverage. There are 12 monthly variables - where the 01 through 12 at the end of the variable name correspond with the month (e.g., 01 is January and 12 is December)</p>
 <h3>Values</h3>
 
-<p>Part D low-income cost share group code .txt </p>
+<p><a href="https://www.resdac.org/sites/resdac.umn.edu/files/Part%20D%20low-income%20cost%20share%20group%20code%20.txt">Part D low-income cost share group code .txt</a> </p>
 <h2 id="part-d-low-income-cost-share-group-code-november"><a href="https://www.resdac.org/taxonomy/term/5726">Part D low-income cost share group code - November</a><a class="headerlink" href="#part-d-low-income-cost-share-group-code-november" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Short SAS Name: <code>CSTSHR11</code></li>
@@ -16900,7 +16744,7 @@ You need to know the Part D contract number (PTD_CNTRCT_ID_XX) and plan benefit 
 <p>CMS identifies beneficiaries with fully-subsidized Part D coverage by looking for individuals that have a 01, 02, or 03 for the month. Other beneficiaries who are eligible for the LIS but do not receive a full subsidy have a 04, 05, 06, 07, or 08. The remaining values indicate that the individual is not eligible for subsidized Part D coverage. There are 12 monthly variables - where the 01 through 12 at the end of the variable name correspond with the month (e.g., 01 is January and 12 is December)</p>
 <h3>Values</h3>
 
-<p>Part D low-income cost share group code .txt </p>
+<p><a href="https://www.resdac.org/sites/resdac.umn.edu/files/Part%20D%20low-income%20cost%20share%20group%20code%20.txt">Part D low-income cost share group code .txt</a> </p>
 <h2 id="part-d-low-income-cost-share-group-code-october"><a href="https://www.resdac.org/taxonomy/term/5721">Part D low-income cost share group code - October</a><a class="headerlink" href="#part-d-low-income-cost-share-group-code-october" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Short SAS Name: <code>CSTSHR10</code></li>
@@ -16914,7 +16758,7 @@ You need to know the Part D contract number (PTD_CNTRCT_ID_XX) and plan benefit 
 <p>CMS identifies beneficiaries with fully-subsidized Part D coverage by looking for individuals that have a 01, 02, or 03 for the month. Other beneficiaries who are eligible for the LIS but do not receive a full subsidy have a 04, 05, 06, 07, or 08. The remaining values indicate that the individual is not eligible for subsidized Part D coverage. There are 12 monthly variables - where the 01 through 12 at the end of the variable name correspond with the month (e.g., 01 is January and 12 is December)</p>
 <h3>Values</h3>
 
-<p>Part D low-income cost share group code .txt </p>
+<p><a href="https://www.resdac.org/sites/resdac.umn.edu/files/Part%20D%20low-income%20cost%20share%20group%20code%20.txt">Part D low-income cost share group code .txt</a> </p>
 <h2 id="part-d-low-income-cost-share-group-code-september"><a href="https://www.resdac.org/taxonomy/term/5716">Part D low-income cost share group code - September</a><a class="headerlink" href="#part-d-low-income-cost-share-group-code-september" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Short SAS Name: <code>CSTSHR09</code></li>
@@ -16928,7 +16772,7 @@ You need to know the Part D contract number (PTD_CNTRCT_ID_XX) and plan benefit 
 <p>CMS identifies beneficiaries with fully-subsidized Part D coverage by looking for individuals that have a 01, 02, or 03 for the month. Other beneficiaries who are eligible for the LIS but do not receive a full subsidy have a 04, 05, 06, 07, or 08. The remaining values indicate that the individual is not eligible for subsidized Part D coverage. There are 12 monthly variables - where the 01 through 12 at the end of the variable name correspond with the month (e.g., 01 is January and 12 is December)</p>
 <h3>Values</h3>
 
-<p>Part D low-income cost share group code .txt </p>
+<p><a href="https://www.resdac.org/sites/resdac.umn.edu/files/Part%20D%20low-income%20cost%20share%20group%20code%20.txt">Part D low-income cost share group code .txt</a> </p>
 <h2 id="peripheral-vascular-disease-end-of-year-indicator-medicare-only-claims"><a href="https://www.resdac.org/cms-data/variables/peripheral-vascular-disease-end-year-indicator-medicare-only-claims">Peripheral Vascular Disease End-of-Year Indicator - Medicare Only Claims</a><a class="headerlink" href="#peripheral-vascular-disease-end-of-year-indicator-medicare-only-claims" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Short SAS Name: <code>PVD_MEDICARE</code></li>
@@ -17579,8 +17423,6 @@ You need to know the Part D contract number (PTD_CNTRCT_ID_XX) and plan benefit 
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
 <p>This variable is the sum of Medicare coinsurance and deductible payments in the skilled nursing facility (SNF) setting for a given year.  The total beneficiary payment is calculated as the sum of <code>DED_AMT</code> and <code>COIN_AMT</code> for all SNF claims where the <code>CLM_PMT_AMT</code> &gt;= 0.</p>
-<h3>Values</h3>
-
 <p>Costs to that beneficiaries are liable for are described in detail on the Medicare.gov website. There is a CMS publication called "Your Medicare Benefits", which explains the deductibles and coinsurance amounts.</p>
 <p>Medicare payments are described in detail in a series of Medicare Payment Advisory Commission (MedPAC) documents called “Payment Basics” (see: <a href="http://www.medpac.gov/-documents-/payment-basics">here</a>.)</p>
 <p>Also in the Medicare Learning Network (MLN) “Payment System Fact Sheet Series” (see the list of MLN publications at: <a href="http://www.cms.gov/Outreach-and-Education/Medicare-Learning-Network-MLN/MLNProducts/MLN-Publications.html">here</a>)</p>
@@ -17593,8 +17435,6 @@ You need to know the Part D contract number (PTD_CNTRCT_ID_XX) and plan benefit 
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
 <p>This variable is the count of Medicare covered days in the skilled nursing facility (SNF) setting for the year.  This variable equals the sum of the <code>CLM_UTLZTN_DAY_CNT</code> variables on the source claims.</p>
-<h3>Values</h3>
-
 <p>We consider fully-covered days, days where the beneficiary was liable for coinsurance, and lifetime reserve days to all be Medicare-covered days.  Non-covered days, leave of absence days, and the day of discharge or death are not included.</p>
 <p>Medicare payments are described in detail in a series of Medicare Payment Advisory Commission (MedPAC) documents called “Payment Basics” (see: <a href="http://www.medpac.gov/-documents-/payment-basics">here</a>.)</p>
 <p>Also in the Medicare Learning Network (MLN) “Payment System Fact Sheet Series” (see the list of MLN publications at: <a href="http://www.cms.gov/Outreach-and-Education/Medicare-Learning-Network-MLN/MLNProducts/MLN-Publications.html">here</a>) </p>
@@ -17607,8 +17447,6 @@ You need to know the Part D contract number (PTD_CNTRCT_ID_XX) and plan benefit 
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
 <p>This variable is the total Medicare payments in the skilled nursing facility (SNF) setting for a given year.  The total Medicare payments for SNF are calculated as the sum of <code>CLM_PMT_AMT</code> for all SNF claims where the <code>CLM_PMT_AMT</code> &gt;= 0.</p>
-<h3>Values</h3>
-
 <p>Medicare payments are described in detail in a series of Medicare Payment Advisory Commission (MedPAC) documents called “Payment Basics” (see: <a href="http://www.medpac.gov/-documents-/payment-basics">here</a>.)</p>
 <p>Also in the Medicare Learning Network (MLN) “Payment System Fact Sheet Series” (see the list of MLN publications at: <a href="http://www.cms.gov/Outreach-and-Education/Medicare-Learning-Network-MLN/MLNProducts/MLN-Publications.html">here</a>)</p>
 <h2 id="skilled-nursing-facility-stays"><a href="https://www.resdac.org/cms-data/variables/Skilled-Nursing-Facility-Stays">Skilled Nursing Facility Stays</a><a class="headerlink" href="#skilled-nursing-facility-stays" title="Permanent link">&para;</a></h2>
@@ -17620,8 +17458,6 @@ You need to know the Part D contract number (PTD_CNTRCT_ID_XX) and plan benefit 
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
 <p>This variable is the count of skilled nursing facility setting (SNF) stays (unique admissions, which may span more than one facility) for a given year.  A SNF stay is defined as a set of one or more consecutive skilled nursing facility claims where the beneficiary is only discharged on the most recent claim in the set.</p>
-<h3>Values</h3>
-
 <p>The <code>CLM_FROM_DT</code> for the first claim associated with the stay must have been in the year of the data file, however it was permissible for the <code>CLM_THRU_DT</code> to have occurred in January of the following year. </p>
 <h2 id="source-of-enrollment-data"><a href="https://www.resdac.org/cms-data/variables/source-enrollment-data">Source of enrollment data</a><a class="headerlink" href="#source-of-enrollment-data" title="Permanent link">&para;</a></h2>
 <ul>
@@ -17762,8 +17598,6 @@ You need to know the Part D contract number (PTD_CNTRCT_ID_XX) and plan benefit 
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
 <p>Total number of months of state buy-in.</p>
-<h3>Values</h3>
-
 <p>This variable counts the total number of months during the year when the beneficiary premium was paid by the state. State Medicaid programs can pay Medicare premiums for certain dual eligibles (i.e., for beneficiaries also enrolled in a state Medicaid program); this action is called “buying in” and so this variable is the “buy-in code.”  Any month where the BUYINXX variable was: A (Part A state buy-in), B (Part B state buy-in), or C(Part A and Part B state buy-in) is counted.</p>
 <h2 id="state-and-county-fips-code-april"><a href="https://www.resdac.org/cms-data/variables/state-and-county-fips-code-april">State and county FIPS code - April</a><a class="headerlink" href="#state-and-county-fips-code-april" title="Permanent link">&para;</a></h2>
 <ul>
@@ -18242,7 +18076,7 @@ There are 12 monthly variables - where the 01 through 12 at the end of the varia
 <p>ResDAC data variable alert:Invalid beneficiary resident state codes are being sent to CMS from SSA.    -SSA has not identified a timeframe for resolution but the two agencies are addressing the issue.    -CMS notes the invalid codes as: 67, 68, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 96 and 97.    - ResDAC is aware that redundant code values exist in the table:        -64, 99 resolve to American Samoa;        -65, 98 resolve to Guam;        -66, 97 resolve to Northern Marianas. As noted above, 97 is an invalid code.</p>
 <h3>Values</h3>
 
-<p>State SSA codes_GDIT_05182017.txt </p>
+<p><a href="https://www.resdac.org/sites/resdac.umn.edu/files/State%20SSA%20codes_GDIT_05182017.txt">State SSA codes_GDIT_05182017.txt</a> </p>
 <h2 id="stroke-transient-ischemic-attack-end-of-year-flag"><a href="https://www.resdac.org/cms-data/variables/Stroke-Transient-Ischemic-Attack-End-Year-Flag">Stroke / Transient Ischemic Attack End-of-Year Flag</a><a class="headerlink" href="#stroke-transient-ischemic-attack-end-of-year-flag" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Short SAS Name: <code>STRKETIA</code></li>
@@ -18328,9 +18162,7 @@ There are 12 monthly variables - where the 01 through 12 at the end of the varia
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
 <p>This variable is the sum of coinsurance and deductible payments for part B tests for a given year. The total Beneficiary payments are calculated as the sum of <code>LINE_COINSRNC_AMT</code> + <code>LINE_BENE_PTB_DDCTBL_AMT</code> for the relevant lines.   </p>
-<p>Claims for tests are a subset of the claims in the Part B Carrier data file. These claims are defined as those with a line <code>BETOS</code> code (<code>BETOS</code>_CD) where the first digit =T.</p>
-<h3>Values</h3>
-
+<p>Claims for tests are a subset of the claims in the Part B Carrier data file. These claims are defined as those with a line <code>BETOS</code> code (<code>`BETOS</code>_CD`) where the first digit =T.</p>
 <p>There are 11 cost/use categories from the Carrier Part B and DME data files – the ASC, Part B Drug, Physician, E &amp;M, anesthesia, dialysis, imaging, tests, other procedures, DME and other carrier claims.</p>
 <h2 id="tests-events"><a href="https://www.resdac.org/cms-data/variables/Tests-Events">Tests Events</a><a class="headerlink" href="#tests-events" title="Permanent link">&para;</a></h2>
 <ul>
@@ -18342,8 +18174,6 @@ There are 12 monthly variables - where the 01 through 12 at the end of the varia
 </ul>
 <p>"This variable is the count of events in for part B tests for a given year.  Claims for tests are a subset of the claims in the Part B Carrier data file. These claims are defined as those with a line <code>BETOS</code> code (<code>BETOS</code>_CD) where the first digit =T.</p>
 <p>An event is defined as each line item that contains the relevant service."</p>
-<h3>Values</h3>
-
 <p>There are 11 cost/use categories from the Carrier Part B and DME data files – the ASC, Anesthesia, Part B Drug, Physician, E &amp; M, dialysis, imaging, tests, other procedures, DME and other carrier claims.</p>
 <h2 id="tests-medicare-payments"><a href="https://www.resdac.org/cms-data/variables/Tests-Medicare-Payments">Tests Medicare Payments</a><a class="headerlink" href="#tests-medicare-payments" title="Permanent link">&para;</a></h2>
 <ul>
@@ -18353,10 +18183,8 @@ There are 12 monthly variables - where the 01 through 12 at the end of the varia
 <ul>
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
-<p>"This variable is the total Medicare payments for part B tests for a given year.  Claims for tests are a subset of the claims in the Part B Carrier data file. These claims are defined as those with a line <code>BETOS</code> code (<code>BETOS</code>_CD) where the first digit =T.</p>
+<p>"This variable is the total Medicare payments for part B tests for a given year.  Claims for tests are a subset of the claims in the Part B Carrier data file. These claims are defined as those with a line <code>BETOS</code> code (<code>`BETOS</code>_CD`) where the first digit =T.</p>
 <p>The total Medicare payments are calculated as the sum of <code>LINE_NCH_PMT_AMT</code> where the <code>LINE_PRCSG_IND_CD</code> was ('A','R', or 'S') - for all relevant lines."</p>
-<h3>Values</h3>
-
 <p>There are 11 cost/use categories from the Carrier Part B and DME data files – the ASC, Part B Drug, Physician, E &amp;M, anesthesia, dialysis, imaging, tests, other procedures, DME and other carrier claims.</p>
 <h2 id="tobacco-use-disorders-end-of-year-indicator-medicare-only-claims"><a href="https://www.resdac.org/cms-data/variables/tobacco-use-disorders-end-year-indicator-medicare-only-claims">Tobacco Use Disorders End-of-Year Indicator - Medicare Only Claims</a><a class="headerlink" href="#tobacco-use-disorders-end-of-year-indicator-medicare-only-claims" title="Permanent link">&para;</a></h2>
 <ul>
@@ -18455,8 +18283,6 @@ There are 12 monthly variables - where the 01 through 12 at the end of the varia
 <li><a href="../../mbsf/#data-documentation">Master Beneficiary Summary File</a></li>
 </ul>
 <p>This variable shows the date when the beneficiary first met the criteria for the traumatic brain injury and nonpsychotic mental disorders indicator. The variable will be blank for beneficiaries that have never had the condition.</p>
-<h3>Values</h3>
-
 <p>The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the <code>COVSTART</code> variable in the Beneficiary File). </p>
 <h2 id="viral-hepatitis-general-end-of-year-indicator-medicare-only-claims"><a href="https://www.resdac.org/cms-data/variables/viral-hepatitis-general-end-year-indicator-medicare-only-claims-0">Viral Hepatitis (General) End-of-Year Indicator - Medicare Only Claims</a><a class="headerlink" href="#viral-hepatitis-general-end-of-year-indicator-medicare-only-claims" title="Permanent link">&para;</a></h2>
 <ul>
