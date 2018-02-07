@@ -168,21 +168,16 @@ for f in files:
         text_list.append(main_text[i].get_text())
     main_text = '\n\n'.join(text_list)
 
-    try:
-        derivation = soup.select('.field-name-field-derivation .even')
-        derivation = [x.get_text() for x in derivation]
-        derivation = '\n\n'.join(derivation)
-        derivation = re.sub(r'\n', '\n\t', derivation)
-    except:
-        derivation = ''
+    # Derivation and Limitation will be '' if doesn't exist
+    derivation = soup.select('.field-name-field-derivation .even')
+    derivation = [x.get_text() for x in derivation]
+    derivation = '\n\n'.join(derivation)
+    derivation = re.sub(r'\n', '\n\t', derivation)
 
-    try:
-        limitation = soup.select('.field-name-field-limitation .even')
-        limitation = [x.get_text() for x in limitation]
-        limitation = '\n\n'.join(limitation)
-        limitation = re.sub(r'\n', '\n\t', limitation)
-    except:
-        limitation = ''
+    limitation = soup.select('.field-name-field-limitation .even')
+    limitation = [x.get_text() for x in limitation]
+    limitation = '\n\n'.join(limitation)
+    limitation = re.sub(r'\n', '\n\t', limitation)
 
     # Values
     values_text = ''
