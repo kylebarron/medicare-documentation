@@ -21,7 +21,7 @@ This field groups (or recodes) the NDI ICD-10 code cause of death into 113 categ
 
 
 
-Addtional information regarding these categories can be found on the CDC website (see http://www.cdc.gov/nchs/ndi.htm and http://www.cdc.gov/nchs/data/dvs/im9_2002.pdf.pdf).
+Addtional information regarding these categories can be found on the CDC website (see [here](http://www.cdc.gov/nchs/ndi.htm) and [here](http://www.cdc.gov/nchs/data/dvs/im9_2002.pdf.pdf).)
 
 Available for 1999-2008. Researchers wishing to obtain this NDI segment of the MBSF must obtain an additional approval beyond the CMS DUA.  
 
@@ -57,7 +57,7 @@ This field groups (or recodes) the NDI ICD-10 code cause of death into 358 categ
 
 
 
-Additional information regarding these categories can be found on the CDC website (see http://www.cdc.gov/nchs/ndi.htm and http://www.cdc.gov/nchs/data/dvs/im9_2002.pdf.pdf).
+Additional information regarding these categories can be found on the CDC website (see [here](http://www.cdc.gov/nchs/ndi.htm) and [here](http://www.cdc.gov/nchs/data/dvs/im9_2002.pdf.pdf).)
 
 Available for 1999-2008. Researchers wishing to obtain this NDI segment of the MBSF must obtain an additional approval beyond the CMS DUA. 
 
@@ -120,7 +120,7 @@ Contained in
 
 The condition variable requires beneficiaries to satisfy both claims criteria (a minimum number/type of Medicare claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (Medicare FFS Part A and Part B coverage during the entire specified time period). 
 		
-For ADHD and other conduct disorders, beneficiaries must have at least one Medicare inpatient claim or two other non-drug claims of any service type with a related code in any position during the 2-year reference period. You can find more detailed information on the criteria on the CCW website: https://www.ccwdata.org/web/guest/condition-categories
+For ADHD and other conduct disorders, beneficiaries must have at least one Medicare inpatient claim or two other non-drug claims of any service type with a related code in any position during the 2-year reference period. You can find more detailed information on the criteria on the CCW website: [here](https://www.ccwdata.org/web/guest/condition-categories)
 
 
 | Code   | Code Value                                                               |
@@ -146,7 +146,7 @@ This variable shows the date when the beneficiary first met the criteria for the
 
 
 
-The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the COVSTART variable in the Beneficiary File). 
+The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the `COVSTART` variable in the Beneficiary File). 
 
 
 
@@ -164,7 +164,7 @@ This variable indicates whether a beneficiary met the chronic condition data war
 
 <h3>Values</h3>
 
-The CCW’s chronic condition flags require beneficiaries to satisfy both claims criteria (a minimum number/type of claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (FFS Part A and Part B coverage during the entire specified time period). For acquired hypothyroidism, beneficiaries must have at least one inpatient, SNF, or home health claim, or two Part B (institutional or non-institutional) claims with an acquired hypothyroidism code in any position during the 1-year reference period. The CCW’s criteria were developed after reviewing validated algorithms from the research literature and criteria used by other federal data sources.  You can find more detailed information on the criteria on the CCW website: https://www.ccwdata.org/web/guest/condition-categories
+The CCW’s chronic condition flags require beneficiaries to satisfy both claims criteria (a minimum number/type of claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (FFS Part A and Part B coverage during the entire specified time period). For acquired hypothyroidism, beneficiaries must have at least one inpatient, SNF, or home health claim, or two Part B (institutional or non-institutional) claims with an acquired hypothyroidism code in any position during the 1-year reference period. The CCW’s criteria were developed after reviewing validated algorithms from the research literature and criteria used by other federal data sources.  You can find more detailed information on the criteria on the CCW website: [here](https://www.ccwdata.org/web/guest/condition-categories)
 
 
 | Code   | Code Value                      |
@@ -190,7 +190,7 @@ This variable shows the date when the beneficiary first met the criteria for the
 
 
 
-The earliest possible date for anyone in the CCW is January 1, 1999.  If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the COVSTART variable in the Beneficiary File). 
+The earliest possible date for anyone in the CCW is January 1, 1999.  If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the `COVSTART` variable in the Beneficiary File). 
 
 
 
@@ -208,7 +208,7 @@ This variable indicates whether a beneficiary met the chronic condition data war
 
 <h3>Values</h3>
 
-The CCW’s chronic condition flags require beneficiaries to satisfy both claims criteria (a minimum number/type of claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (FFS Part A and Part B coverage during the entire specified time period). For acquired hypothyroidism, beneficiaries must have at least one inpatient, SNF, or home health claim, or two Part B (institutional or non-institutional) claims with an acquired hypothyroidism code in any position during the 1-year reference period. The CCW’s criteria were developed after reviewing validated algorithms from the research literature and criteria used by other federal data sources.  You can find more detailed information on the criteria on the CCW website: https://www.ccwdata.org/web/guest/condition-categories
+The CCW’s chronic condition flags require beneficiaries to satisfy both claims criteria (a minimum number/type of claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (FFS Part A and Part B coverage during the entire specified time period). For acquired hypothyroidism, beneficiaries must have at least one inpatient, SNF, or home health claim, or two Part B (institutional or non-institutional) claims with an acquired hypothyroidism code in any position during the 1-year reference period. The CCW’s criteria were developed after reviewing validated algorithms from the research literature and criteria used by other federal data sources.  You can find more detailed information on the criteria on the CCW website: [here](https://www.ccwdata.org/web/guest/condition-categories)
 
 
 | Code   | Code Value                      |
@@ -226,7 +226,7 @@ Contained in
 
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
-This variable is the sum of Medicare coinsurance and deductible payments in the acute inpatient hospital setting for the year.  The total acute hospitalization beneficiary payments are calculated as the sum of the beneficiary deductible amount and coinsurance amount (variables called NCH_BENE_IP_DDCTBL_AMT and NCH_BENE_PTA_COINSRNC_LBLTY_AM) for all acute inpatient claims where the CLM_PMT_AMT >= 0.
+This variable is the sum of Medicare coinsurance and deductible payments in the acute inpatient hospital setting for the year.  The total acute hospitalization beneficiary payments are calculated as the sum of the beneficiary deductible amount and coinsurance amount (variables called `NCH_BENE_IP_DDCTBL_AMT` and `NCH_BENE_PTA_COINSRNC_LBLTY_AM`) for all acute inpatient claims where the `CLM_PMT_AMT` >= 0.
 
 
 
@@ -234,15 +234,15 @@ This variable is the sum of Medicare coinsurance and deductible payments in the 
 
 
 
-Acute inpatient claims are a subset of the claims in the IP data file consisting of data from both acute hospitals and critical access hospitals (CAH). These facilities are those where either the 3rd digit of the provider number (SAS variable PRVDR_NUM) = 0 or the 3rd and 4th digits of PRVDR_NUM = 13. 
+Acute inpatient claims are a subset of the claims in the IP data file consisting of data from both acute hospitals and critical access hospitals (CAH). These facilities are those where either the 3rd digit of the provider number (SAS variable `PRVDR_NUM`) = 0 or the 3rd and 4th digits of `PRVDR_NUM` = 13. 
 
 There are 2 cost/use categories from the IP data files: Acute and OIP.
 
 Costs to that beneficiaries are liable for are described in detail on the Medicare.gov website. There is a CMS publication called "Your Medicare Benefits", which explains the deductibles and coinsurance amounts.
 
-Medicare payments are described in detail in a series of Medicare Payment Advisory Commission (MedPAC) documents called “Payment Basics” (see: http://www.medpac.gov/-documents-/payment-basics).
+Medicare payments are described in detail in a series of Medicare Payment Advisory Commission (MedPAC) documents called “Payment Basics” (see: [here](http://www.medpac.gov/-documents-/payment-basics).)
 
-Also in the Medicare Learning Network (MLN) “Payment System Fact Sheet Series” (see the list of MLN publications at: http://www.cms.gov/Outreach-and-Education/Medicare-Learning-Network-MLN/MLNProducts/MLN-Publications.html)
+Also in the Medicare Learning Network (MLN) “Payment System Fact Sheet Series” (see the list of MLN publications at: [here](http://www.cms.gov/Outreach-and-Education/Medicare-Learning-Network-MLN/MLNProducts/MLN-Publications.html))
  
 
 
@@ -255,7 +255,7 @@ Contained in
 
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
-This variable is the count of Medicare covered days in the acute inpatient hospital setting for the year.  This variable equals the sum of the CLM_UTLZTN_DAY_CNT variables on the source claims.
+This variable is the count of Medicare covered days in the acute inpatient hospital setting for the year.  This variable equals the sum of the `CLM_UTLZTN_DAY_CNT` variables on the source claims.
 
 
 
@@ -263,15 +263,15 @@ This variable is the count of Medicare covered days in the acute inpatient hospi
 
 
 
-Acute inpatient hospital claims are a subset of the claims in the IP data file consisting of data from both acute hospitals and critical access hospitals (CAH).  These facilities are those where either the 3rd digit of the provider number (SAS variable PRVDR_NUM) = 0 or the 3rd and 4th digits of PRVDR_NUM = 13.  
+Acute inpatient hospital claims are a subset of the claims in the IP data file consisting of data from both acute hospitals and critical access hospitals (CAH).  These facilities are those where either the 3rd digit of the provider number (SAS variable `PRVDR_NUM`) = 0 or the 3rd and 4th digits of `PRVDR_NUM` = 13.  
   
 We consider fully-covered days, days where the beneficiary was liable for coinsurance, and lifetime reserve days to all be Medicare-covered days.  Non-covered days, leave of absence days, and the day of discharge or death are not included.
 
 There are 2 cost/use categories from the IP data files: Acute and the OIP.
 
-Medicare payments are described in detail in a series of Medicare Payment Advisory Commission (MedPAC) documents called “Payment Basics” (see: http://www.medpac.gov/-documents-/payment-basics).
+Medicare payments are described in detail in a series of Medicare Payment Advisory Commission (MedPAC) documents called “Payment Basics” (see: [here](http://www.medpac.gov/-documents-/payment-basics).)
 
-Also in the Medicare Learning Network (MLN) “Payment System Fact Sheet Series” (see the list of MLN publications at: http://www.cms.gov/Outreach-and-Education/Medicare-Learning-Network-MLN/MLNProducts/MLN-Publications.html) 
+Also in the Medicare Learning Network (MLN) “Payment System Fact Sheet Series” (see the list of MLN publications at: [here](http://www.cms.gov/Outreach-and-Education/Medicare-Learning-Network-MLN/MLNProducts/MLN-Publications.html)) 
 
 
 
@@ -283,7 +283,7 @@ Contained in
 
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
-This variable is the sum of the Medicare claim payment amounts (CLM_PMT_AMT from each claim) in the acute inpatient hospital setting for a given year. To obtain the total acute hospital Medicare payments, take this variable and add in the annual per diem payment amount (ACUTE_MDCR_PMT +  ACUTE_PERDIEM_AMT).
+This variable is the sum of the Medicare claim payment amounts (`CLM_PMT_AMT` from each claim) in the acute inpatient hospital setting for a given year. To obtain the total acute hospital Medicare payments, take this variable and add in the annual per diem payment amount (`ACUTE_MDCR_PMT` +  ACUTE_PERDIEM_AMT).
 
 
 
@@ -291,15 +291,15 @@ This variable is the sum of the Medicare claim payment amounts (CLM_PMT_AMT from
 
 
 
-Acute inpatient hospital claims are a subset of the claims in the IP data file consisting of data from both acute hospitals and critical access hospitals (CAH). These facilities are those where either the 3rd digit of the provider number (SAS variable PRVDR_NUM) = 0 or the 3rd and 4th digits of PRVDR_NUM = 13.   
+Acute inpatient hospital claims are a subset of the claims in the IP data file consisting of data from both acute hospitals and critical access hospitals (CAH). These facilities are those where either the 3rd digit of the provider number (SAS variable `PRVDR_NUM`) = 0 or the 3rd and 4th digits of `PRVDR_NUM` = 13.   
 		
 ACUTE_PERDIEM_PMT must be added to this field to obtain the total acute hospital Medicare payments for the year.  The annual per diem variable was new in 2010; it will always be null/missing in earlier files.
 
 There are 2 cost/use categories from the IP data files: Acute and the OIP.
 
-Medicare payments are described in detail in a series of Medicare Payment Advisory Commission (MedPAC) documents called “Payment Basics” (see: http://www.medpac.gov/-documents-/payment-basics).
+Medicare payments are described in detail in a series of Medicare Payment Advisory Commission (MedPAC) documents called “Payment Basics” (see: [here](http://www.medpac.gov/-documents-/payment-basics).)
 
-Also in the Medicare Learning Network (MLN) “Payment System Fact Sheet Series” (see the list of MLN publications at: http://www.cms.gov/Outreach-and-Education/Medicare-Learning-Network-MLN/MLNProducts/MLN-Publications.html)
+Also in the Medicare Learning Network (MLN) “Payment System Fact Sheet Series” (see the list of MLN publications at: [here](http://www.cms.gov/Outreach-and-Education/Medicare-Learning-Network-MLN/MLNProducts/MLN-Publications.html))
  
 
 
@@ -320,9 +320,9 @@ This variable is the count of acute inpatient hospital stays (unique admissions,
 
 
 
-The CLM_FROM_DT for the first claim associated with the stay must have been in the year of the data file, however it was permissible for the CLM_THRU_DT to have occurred in January of the following year. 
+The `CLM_FROM_DT` for the first claim associated with the stay must have been in the year of the data file, however it was permissible for the `CLM_THRU_DT` to have occurred in January of the following year. 
 
-Acute inpatient hospital claims are a subset of the claims in the IP data file consisting of data from both acute hospitals and critical access hospitals (CAH). These facilities are those where either the 3rd digit of the provider number (SAS variable PRVDR_NUM) = 0 or the 3rd and 4th digits of PRVDR_NUM = 13.
+Acute inpatient hospital claims are a subset of the claims in the IP data file consisting of data from both acute hospitals and critical access hospitals (CAH). These facilities are those where either the 3rd digit of the provider number (SAS variable `PRVDR_NUM`) = 0 or the 3rd and 4th digits of `PRVDR_NUM` = 13.
   
 There are 2 cost/use categories from the IP data files: Acute and the OIP.
  
@@ -388,7 +388,7 @@ CCW calculates this variable.
 
 <h3>Values</h3>
 
-MAXIMUM AGE IS 115
+MAXIMUM `AGE` IS 115
 
 CCW calculates this variable.
 
@@ -488,7 +488,7 @@ Contained in
 
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
-"This variable is the sum of coinsurance and deductible payments in the part B ambulatory surgery center (ASC) setting for a given year.  The total beneficiary payment is calculated as the sum of LINE_COINSRNC_AMT + LINE_BENE_PTB_DDCTBL_AMT for all relevant lines. ASC claims are a subset of the claims in the Part B Carrier data file.  The ASC claims are identified by the claim lines where the LINE_CMS_TYPE_SRVC_CD ='F'.   "
+"This variable is the sum of coinsurance and deductible payments in the part B ambulatory surgery center (ASC) setting for a given year.  The total beneficiary payment is calculated as the sum of `LINE_COINSRNC_AMT` + `LINE_BENE_PTB_DDCTBL_AMT` for all relevant lines. ASC claims are a subset of the claims in the Part B Carrier data file.  The ASC claims are identified by the claim lines where the `LINE_CMS_TYPE_SRVC_CD` ='F'.   "
 
 
 
@@ -509,7 +509,7 @@ Contained in
 
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
-This variable is the count of events in the part B ambulatory surgery center (ASC) setting for a given year.  An event is defined as each line item that contains an ASC service.ASC claims are a subset of the claims in the Part B Carrier data file.  The ASC claims are identified by the claim lines where the LINE_CMS_TYPE_SRVC_CD ='F'.
+This variable is the count of events in the part B ambulatory surgery center (ASC) setting for a given year.  An event is defined as each line item that contains an ASC service.ASC claims are a subset of the claims in the Part B Carrier data file.  The ASC claims are identified by the claim lines where the `LINE_CMS_TYPE_SRVC_CD` ='F'.
 
 
 
@@ -529,7 +529,7 @@ Contained in
 
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
-This variable is the total Medicare payments in the part B ambulatory surgery center (ASC) setting for a given year.   ASC claims are a subset of the claims in the Part B Carrier data file.  The ASC claims are identified by the claim lines where the LINE_CMS_TYPE_SRVC_CD ='F'.  The total ASC Medicare Payments are calculated as the sum of LINE_NCH_PMT_AMT where the LINE_PRCSG_IND_CD was ('A','R', or 'S').
+This variable is the total Medicare payments in the part B ambulatory surgery center (ASC) setting for a given year.   ASC claims are a subset of the claims in the Part B Carrier data file.  The ASC claims are identified by the claim lines where the `LINE_CMS_TYPE_SRVC_CD` ='F'.  The total ASC Medicare Payments are calculated as the sum of `LINE_NCH_PMT_AMT` where the `LINE_PRCSG_IND_CD` was ('A','R', or 'S').
 
 
 
@@ -556,7 +556,7 @@ This variable indicates whether a beneficiary met the chronic condition data war
 
 <h3>Values</h3>
 
-The CCW’s chronic condition flags require beneficiaries to satisfy both claims criteria (a minimum number/type of claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (FFS Part A and Part B coverage during the entire specified time period). For anemia, beneficiaries must have at least one inpatient, SNF, home health, Part B institutional, or Part B non-institutional (carrier) claim with an anemia code in any position during the 1-year reference period. The CCW’s criteria were developed after reviewing validated algorithms from the research literature and criteria used by other federal data sources.  You can find more detailed information on the criteria on the CCW website: https://www.ccwdata.org/web/guest/condition-categories
+The CCW’s chronic condition flags require beneficiaries to satisfy both claims criteria (a minimum number/type of claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (FFS Part A and Part B coverage during the entire specified time period). For anemia, beneficiaries must have at least one inpatient, SNF, home health, Part B institutional, or Part B non-institutional (carrier) claim with an anemia code in any position during the 1-year reference period. The CCW’s criteria were developed after reviewing validated algorithms from the research literature and criteria used by other federal data sources.  You can find more detailed information on the criteria on the CCW website: [here](https://www.ccwdata.org/web/guest/condition-categories)
 
 
 | Code   | Code Value                      |
@@ -582,7 +582,7 @@ This variable shows the date when the beneficiary first met the criteria for the
 
 
 
-The earliest possible date for anyone in the CCW is January 1, 1999.  If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the COVSTART variable in the Beneficiary File). 
+The earliest possible date for anyone in the CCW is January 1, 1999.  If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the `COVSTART` variable in the Beneficiary File). 
 
 
 
@@ -600,7 +600,7 @@ This variable indicates whether a beneficiary met the chronic condition data war
 
 <h3>Values</h3>
 
-The CCW’s chronic condition flags require beneficiaries to satisfy both claims criteria (a minimum number/type of claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (FFS Part A and Part B coverage during the entire specified time period). For anemia, beneficiaries must have at least one inpatient, SNF, home health, Part B institutional, or Part B non-institutional (carrier) claim with an anemia code in any position during the 1-year reference period. The CCW’s criteria were developed after reviewing validated algorithms from the research literature and criteria used by other federal data sources.  You can find more detailed information on the criteria on the CCW website: https://www.ccwdata.org/web/guest/condition-categories
+The CCW’s chronic condition flags require beneficiaries to satisfy both claims criteria (a minimum number/type of claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (FFS Part A and Part B coverage during the entire specified time period). For anemia, beneficiaries must have at least one inpatient, SNF, home health, Part B institutional, or Part B non-institutional (carrier) claim with an anemia code in any position during the 1-year reference period. The CCW’s criteria were developed after reviewing validated algorithms from the research literature and criteria used by other federal data sources.  You can find more detailed information on the criteria on the CCW website: [here](https://www.ccwdata.org/web/guest/condition-categories)
 
 
 | Code   | Code Value                      |
@@ -618,7 +618,7 @@ Contained in
 
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
-This variable is the sum of coinsurance and deductible payments for part B anesthesia services (ANES) for a given year.  The total Beneficiary payments are calculated as the sum of LINE_COINSRNC_AMT + LINE_BENE_PTB_DDCTBL_AMT for the relevant lines. ANES claims are a subset of the claims, and a subset of procedures in the Part B Carrier data file.   ANES claims are defined as those with a line BETOS code (BETOS_CD) where the first 2 digits = “P0” and the CARR_LINE_MTUS_CD=`2`.
+This variable is the sum of coinsurance and deductible payments for part B anesthesia services (ANES) for a given year.  The total Beneficiary payments are calculated as the sum of `LINE_COINSRNC_AMT` + `LINE_BENE_PTB_DDCTBL_AMT` for the relevant lines. ANES claims are a subset of the claims, and a subset of procedures in the Part B Carrier data file.   ANES claims are defined as those with a line `BETOS` code (`BETOS`_CD) where the first 2 digits = “P0” and the `CARR_LINE_MTUS_CD`=`2`.
 
 
 
@@ -639,7 +639,7 @@ Contained in
 
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
-"This variable is the count of events for part B anesthesia services (ANES) for a given year. ANES claims are a subset of the claims, and a subset of procedures in the Part B Carrier data file.   ANES claims are defined as those with a line BETOS code (BETOS_CD) where the first 2 digits = “P0” and the CARR_LINE_MTUS_CD=`2`. 
+"This variable is the count of events for part B anesthesia services (ANES) for a given year. ANES claims are a subset of the claims, and a subset of procedures in the Part B Carrier data file.   ANES claims are defined as those with a line `BETOS` code (`BETOS`_CD) where the first 2 digits = “P0” and the `CARR_LINE_MTUS_CD`=`2`. 
 
 An event is defined as each line item that contains the relevant service."
 
@@ -662,9 +662,9 @@ Contained in
 
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
-"This variable is the total Medicare payments for part B anesthesia services (ANES) for a given year.  ANES claims are a subset of the claims, and a subset of procedures in the Part B Carrier data file.   ANES claims are defined as those with a line BETOS code (BETOS_CD) where the first 2 digits = “P0” and the CARR_LINE_MTUS_CD=`2`.
+"This variable is the total Medicare payments for part B anesthesia services (ANES) for a given year.  ANES claims are a subset of the claims, and a subset of procedures in the Part B Carrier data file.   ANES claims are defined as those with a line `BETOS` code (`BETOS`_CD) where the first 2 digits = “P0” and the `CARR_LINE_MTUS_CD`=`2`.
 
-The total Medicare payments are calculated as the sum of LINE_NCH_PMT_AMT where the LINE_PRCSG_IND_CD was ('A','R', or 'S') - for all relevant lines."
+The total Medicare payments are calculated as the sum of `LINE_NCH_PMT_AMT` where the `LINE_PRCSG_IND_CD` was ('A','R', or 'S') - for all relevant lines."
 
 
 
@@ -693,7 +693,7 @@ Contained in
 
 The condition variable requires beneficiaries to satisfy both claims criteria (a minimum number/type of Medicare claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (Medicare FFS Part A and Part B coverage during the entire specified time period). 
 		
-For anxiety disorders, beneficiaries must have at least one Medicare inpatient claim or two other non-drug claims of any service type with a related code in any position during the 2-year reference period. You can find more detailed information on the criteria on the CCW website: https://www.ccwdata.org/web/guest/condition-categories
+For anxiety disorders, beneficiaries must have at least one Medicare inpatient claim or two other non-drug claims of any service type with a related code in any position during the 2-year reference period. You can find more detailed information on the criteria on the CCW website: [here](https://www.ccwdata.org/web/guest/condition-categories)
 
 | Code   | Code Value                                                               |
 |:-------|:-------------------------------------------------------------------------|
@@ -718,7 +718,7 @@ This variable shows the date when the beneficiary first met the criteria for the
 
 
 
-The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the COVSTART variable in the Beneficiary File). 
+The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the `COVSTART` variable in the Beneficiary File). 
 
 
 
@@ -736,7 +736,7 @@ This variable indicates whether a beneficiary met the chronic condition data war
 
 <h3>Values</h3>
 
-The CCW’s chronic condition flags require beneficiaries to satisfy both claims criteria (a minimum number/type of claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (FFS Part A and Part B coverage during the entire specified time period). For asthma, beneficiaries must have at least one inpatient, SNF, or home health claim, or two Part B (institutional or non-institutional) claims with an asthma code in any position during the 1-year reference period. The CCW’s criteria were developed after reviewing validated algorithms from the research literature and criteria used by other federal data sources.  You can find more detailed information on the criteria on the CCW website: https://www.ccwdata.org/web/guest/condition-categories
+The CCW’s chronic condition flags require beneficiaries to satisfy both claims criteria (a minimum number/type of claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (FFS Part A and Part B coverage during the entire specified time period). For asthma, beneficiaries must have at least one inpatient, SNF, or home health claim, or two Part B (institutional or non-institutional) claims with an asthma code in any position during the 1-year reference period. The CCW’s criteria were developed after reviewing validated algorithms from the research literature and criteria used by other federal data sources.  You can find more detailed information on the criteria on the CCW website: [here](https://www.ccwdata.org/web/guest/condition-categories)
 
 
 | Code   | Code Value                      |
@@ -762,7 +762,7 @@ This variable shows the date when the beneficiary first met the criteria for the
 
 
 
-The earliest possible date for anyone in the CCW is January 1, 1999.  If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the COVSTART variable in the Beneficiary File). 
+The earliest possible date for anyone in the CCW is January 1, 1999.  If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the `COVSTART` variable in the Beneficiary File). 
 
 
 
@@ -780,7 +780,7 @@ This variable indicates whether a beneficiary met the chronic condition data war
 
 <h3>Values</h3>
 
-The CCW’s chronic condition flags require beneficiaries to satisfy both claims criteria (a minimum number/type of claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (FFS Part A and Part B coverage during the entire specified time period). For asthma, beneficiaries must have at least one inpatient, SNF, or home health claim, or two Part B (institutional or non-institutional) claims with an asthma code in any position during the 1-year reference period. The CCW’s criteria were developed after reviewing validated algorithms from the research literature and criteria used by other federal data sources.  You can find more detailed information on the criteria on the CCW website: https://www.ccwdata.org/web/guest/condition-categories
+The CCW’s chronic condition flags require beneficiaries to satisfy both claims criteria (a minimum number/type of claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (FFS Part A and Part B coverage during the entire specified time period). For asthma, beneficiaries must have at least one inpatient, SNF, or home health claim, or two Part B (institutional or non-institutional) claims with an asthma code in any position during the 1-year reference period. The CCW’s criteria were developed after reviewing validated algorithms from the research literature and criteria used by other federal data sources.  You can find more detailed information on the criteria on the CCW website: [here](https://www.ccwdata.org/web/guest/condition-categories)
 
 
 | Code   | Code Value                      |
@@ -848,7 +848,7 @@ Contained in
 
 The condition variable requires beneficiaries to satisfy both claims criteria (a minimum number/type of Medicare claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (Medicare FFS Part A and Part B coverage during the entire specified time period). 
 		
-For autism spectrum disorders, beneficiaries must have at least one Medicare inpatient claim or two other non-drug claims of any service type with a related code in any position during the 2-year reference period. You can find more detailed information on the criteria on the CCW website: https://www.ccwdata.org/web/guest/condition-categories
+For autism spectrum disorders, beneficiaries must have at least one Medicare inpatient claim or two other non-drug claims of any service type with a related code in any position during the 2-year reference period. You can find more detailed information on the criteria on the CCW website: [here](https://www.ccwdata.org/web/guest/condition-categories)
 
 | Code   | Code Value                                                               |
 |:-------|:-------------------------------------------------------------------------|
@@ -873,7 +873,7 @@ This variable shows the date when the beneficiary first met the criteria for the
 
 
 
-The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the COVSTART variable in the Beneficiary File). 
+The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the `COVSTART` variable in the Beneficiary File). 
 
 
 
@@ -1013,7 +1013,7 @@ This variable indicates whether a beneficiary met the chronic condition data war
 
 <h3>Values</h3>
 
-The CCW’s chronic condition flags require beneficiaries to satisfy both claims criteria (a minimum number/type of claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (FFS Part A and Part B coverage during the entire specified time period). For benign prostatic hyperplasia, beneficiaries must have at least one inpatient, SNF, or home health claim, or two Part B (institutional or non-institutional) claims, with a benign prostatic hyperplasia code in any position during the 1-year reference period. The CCW’s criteria were developed after reviewing validated algorithms from the research literature and criteria used by other federal data sources.  You can find more detailed information on the criteria on the CCW website: https://www.ccwdata.org/web/guest/condition-categories
+The CCW’s chronic condition flags require beneficiaries to satisfy both claims criteria (a minimum number/type of claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (FFS Part A and Part B coverage during the entire specified time period). For benign prostatic hyperplasia, beneficiaries must have at least one inpatient, SNF, or home health claim, or two Part B (institutional or non-institutional) claims, with a benign prostatic hyperplasia code in any position during the 1-year reference period. The CCW’s criteria were developed after reviewing validated algorithms from the research literature and criteria used by other federal data sources.  You can find more detailed information on the criteria on the CCW website: [here](https://www.ccwdata.org/web/guest/condition-categories)
 
 
 | Code   | Code Value                      |
@@ -1039,7 +1039,7 @@ This variable shows the date when the beneficiary first met the criteria for the
 
 
 
-The earliest possible date for anyone in the CCW is January 1, 1999.  If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the COVSTART variable in the Beneficiary File). 
+The earliest possible date for anyone in the CCW is January 1, 1999.  If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the `COVSTART` variable in the Beneficiary File). 
 
 
 
@@ -1057,7 +1057,7 @@ This variable indicates whether a beneficiary met the chronic condition data war
 
 <h3>Values</h3>
 
-The CCW’s chronic condition flags require beneficiaries to satisfy both claims criteria (a minimum number/type of claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (FFS Part A and Part B coverage during the entire specified time period). For benign prostatic hyperplasia, beneficiaries must have at least one inpatient, SNF, or home health claim, or two Part B (institutional or non-institutional) claims, with a benign prostatic hyperplasia code in any position during the 1-year reference period. The CCW’s criteria were developed after reviewing validated algorithms from the research literature and criteria used by other federal data sources.  You can find more detailed information on the criteria on the CCW website: https://www.ccwdata.org/web/guest/condition-categories
+The CCW’s chronic condition flags require beneficiaries to satisfy both claims criteria (a minimum number/type of claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (FFS Part A and Part B coverage during the entire specified time period). For benign prostatic hyperplasia, beneficiaries must have at least one inpatient, SNF, or home health claim, or two Part B (institutional or non-institutional) claims, with a benign prostatic hyperplasia code in any position during the 1-year reference period. The CCW’s criteria were developed after reviewing validated algorithms from the research literature and criteria used by other federal data sources.  You can find more detailed information on the criteria on the CCW website: [here](https://www.ccwdata.org/web/guest/condition-categories)
 
 
 | Code   | Code Value                      |
@@ -1083,7 +1083,7 @@ Contained in
 
 The condition variable requires beneficiaries to satisfy both claims criteria (a minimum number/type of Medicare claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (Medicare FFS Part A and Part B coverage during the entire specified time period). 
 		
-For bipolar disorders, beneficiaries must have at least one Medicare inpatient claim or two other non-drug claims of any service type with a related code in any position during the 2-year reference period. You can find more detailed information on the criteria on the CCW website: https://www.ccwdata.org/web/guest/condition-categories
+For bipolar disorders, beneficiaries must have at least one Medicare inpatient claim or two other non-drug claims of any service type with a related code in any position during the 2-year reference period. You can find more detailed information on the criteria on the CCW website: [here](https://www.ccwdata.org/web/guest/condition-categories)
 
 | Code   | Code Value                                                               |
 |:-------|:-------------------------------------------------------------------------|
@@ -1108,7 +1108,7 @@ This variable shows the date when the beneficiary first met the criteria for the
 
 
 
-The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the COVSTART variable in the Beneficiary File). 
+The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the `COVSTART` variable in the Beneficiary File). 
 
 
 
@@ -1127,7 +1127,7 @@ This code specifies whether the beneficiary met the chronic condition algorithm 
 <h3>Values</h3>
 
 The CCW’s chronic condition flags require beneficiaries to satisfy both claims criteria (a minimum number/type of claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (FFS Part A and Part B coverage during the entire specified time period). For breast cancer, beneficiaries must have at least one inpatient or SNF claim, or two Part B (institutional or non-institutional) claims that are at least one day apart with a breast cancer code in any position during the 1-year reference period. The CCW’s criteria were developed after reviewing validated algorithms from the research literature and criteria used by other federal data sources.  You can find more detailed information on the criteria on the CCW website:
-https://www.ccwdata.org/web/guest/condition-categories
+[here](https://www.ccwdata.org/web/guest/condition-categories)
 
 
 | Code   | Code Value                      |
@@ -1152,7 +1152,7 @@ This code specifies whether the beneficiary met the chronic condition algorithm 
 <h3>Values</h3>
 
 The CCW’s chronic condition flags require beneficiaries to satisfy both claims criteria (a minimum number/type of claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (FFS Part A and Part B coverage during the entire specified time period). For breast cancer, beneficiaries must have at least one inpatient or SNF claim, or two Part B (institutional or non-institutional) claims that are at least one day apart with a breast cancer code in any position during the 1-year reference period. The CCW’s criteria were developed after reviewing validated algorithms from the research literature and criteria used by other federal data sources.  You can find more detailed information on the criteria on the CCW website:
-https://www.ccwdata.org/web/guest/condition-categories
+[here](https://www.ccwdata.org/web/guest/condition-categories)
 
 
 | Code   | Code Value                      |
@@ -1803,7 +1803,7 @@ Effective 1/92, the code on the carrier (non-DMERC) line item that identifies cl
 
 | Code   | Code Value                                                                                                                                                                                                               |
 |:-------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| BLANK  | Adjustment situation (where CLM_DISP_CD equal 3)                                                                                                                                                                         |
+| BLANK  | Adjustment situation (where `CLM_DISP_CD` equal 3)                                                                                                                                                                         |
 | 0      | nan                                                                                                                                                                                                                      |
 | 1      | 65% A) Physician assistants assisting in surgery B) Nurse midwives                                                                                                                                                       |
 | 2      | 75% A) Physician assistants performing services in a hospital (other than assisting surgery) B) Nurse practitioners and clinical nurse specialists performing services in rural areas C) Clinical social worker services |
@@ -1821,7 +1821,7 @@ Contained in
 
 The identification number assigned by CMS to a carrier authorized to process claims from a physician or supplier. Effective July 2006, the Medicare Administrative Contractors (MACs) began replacing the existing carriers and started processing physician or supplier claim records for states assigned to its jurisdiction.
 
-NOTE: The 5-position MAC number will be housed in the existing CARR_NUM field. During the transi- tion from a carrier to a MAC the CARR_NUM field could contain either a Carrier number or a MAC number. See the CARR_NUM table of codes to identify the new MAC numbers and their effective dates.
+NOTE: The 5-position MAC number will be housed in the existing `CARR_NUM` field. During the transi- tion from a carrier to a MAC the `CARR_NUM` field could contain either a Carrier number or a MAC number. See the `CARR_NUM` table of codes to identify the new MAC numbers and their effective dates.
 
 
 
@@ -1891,7 +1891,7 @@ This variable indicates whether a beneficiary met the condition criteria for cer
 
 The condition variable requires beneficiaries to satisfy both claims criteria (a minimum number/type of Medicare claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (Medicare FFS Part A and Part B coverage during the entire specified time period).
 
-For cerebral palsy, beneficiaries must have at least one Medicare inpatient claim or two other non-drug claims of any service type with a related code in any position during the 2-year reference period. You can find more detailed information on the criteria on the CCW website: https://www.ccwdata.org/web/guest/condition-categories
+For cerebral palsy, beneficiaries must have at least one Medicare inpatient claim or two other non-drug claims of any service type with a related code in any position during the 2-year reference period. You can find more detailed information on the criteria on the CCW website: [here](https://www.ccwdata.org/web/guest/condition-categories)
 
 | Code   | Code Value                                                               |
 |:-------|:-------------------------------------------------------------------------|
@@ -1910,7 +1910,7 @@ Contained in
 
 This variable shows the date when the beneficiary first met the criteria for the cerebral palsy indicator. The variable will be blank for beneficiaries that have never had the condition.
 
-NOTE: The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the COVSTART variable in the Beneficiary File).
+NOTE: The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the `COVSTART` variable in the Beneficiary File).
 
 
 
@@ -2289,7 +2289,7 @@ Contained in
 
 This field represents the amount the claim was reduced for those hospitals participating in Model 1 of the Bundled Payments for Care Improvement initiative (BPCI, Model 1).
 
-The hospital must be participating in the Model 1 of the Bundled Payments for Care Improvement initiative (refer to CLM_CARE_IMPRVMT_MODEL_CD1). The percentage of the discount that this amount represents is in the field called CLM_BNDLD_MODEL_1_DSCNT_PCT.   This field was new in 2013, and is null/missing for all previous years.
+The hospital must be participating in the Model 1 of the Bundled Payments for Care Improvement initiative (refer to `CLM_CARE_IMPRVMT_MODEL_CD1`). The percentage of the discount that this amount represents is in the field called `CLM_BNDLD_MODEL_1_DSCNT_PCT`.   This field was new in 2013, and is null/missing for all previous years.
 
 
 
@@ -2310,8 +2310,8 @@ Contained in
 
 This field identifies the discount percentage which will be applied to payment for all participating hospitals' DRG over the lifetime of the Bundled Payments for Care Improvement initiative (BPCI, Model 1).
 
-The hospital must be participating in the Model 1 of the BPCI (refer to CLM_CARE_IMPRVMT_MODEL_CD1).
-The dollar amount of the payment reduction for the service is in the field called CLM_BNDLD_ADJSTMT_PMT_AMT.
+The hospital must be participating in the Model 1 of the BPCI (refer to `CLM_CARE_IMPRVMT_MODEL_CD1`).
+The dollar amount of the payment reduction for the service is in the field called `CLM_BNDLD_ADJSTMT_PMT_AMT`.
 This field was new in 2013, and is null/missing for all previous years.
 
 
@@ -2333,7 +2333,7 @@ Contained in
 
 This code is used to identify that the care improvement model 1 is being used for bundling payments. The initiative if referred to as the Bundled Payments for Care Improvement initiative (BPCI, Model 1).
 
-There are 4 of these Care Improvement Model fields (CLM_CARE_IMPRVMT_MODEL_CD1-CLM_CARE_IMPRVMT_MODEL_CD4).
+There are 4 of these Care Improvement Model fields (`CLM_CARE_IMPRVMT_MODEL_CD1`-`CLM_CARE_IMPRVMT_MODEL_CD4`).
 This field was new in 2013, and is null/missing for all previous years.
 
 
@@ -2356,7 +2356,7 @@ Contained in
 
 This code is used to identify that the care improvement model 2 is being used for payments.
 
-There are 4 of these Care Improvement Model fields (CLM_CARE_IMPRVMT_MODEL_CD1-CLM_CARE_IMPRVMT_MODEL_CD4).
+There are 4 of these Care Improvement Model fields (`CLM_CARE_IMPRVMT_MODEL_CD1`-`CLM_CARE_IMPRVMT_MODEL_CD4`).
 This field was new in 2013, and is null/missing for all previous years.
 
 
@@ -2379,7 +2379,7 @@ Contained in
 
 This code is used to identify that the care improvement model 3 is being used for payments. 
 
-There are 4 of these Care Improvement Model fields (CLM_CARE_IMPRVMT_MODEL_CD1-CLM_CARE_IMPRVMT_MODEL_CD4).
+There are 4 of these Care Improvement Model fields (`CLM_CARE_IMPRVMT_MODEL_CD1`-`CLM_CARE_IMPRVMT_MODEL_CD4`).
 This field was new in 2013, and is null/missing for all previous years.
 
 
@@ -2402,7 +2402,7 @@ Contained in
 
 This code is used to identify that the care improvement model 4 is being used for payments.
 
-There are 4 of these Care Improvement Model fields (CLM_CARE_IMPRVMT_MODEL_CD1-CLM_CARE_IMPRVMT_MODEL_CD4).
+There are 4 of these Care Improvement Model fields (`CLM_CARE_IMPRVMT_MODEL_CD1`-`CLM_CARE_IMPRVMT_MODEL_CD4`).
 This field was new in 2013, and is null/missing for all previous years.
 
 
@@ -5013,7 +5013,7 @@ Contained in
 
 - [Inpatient RIF](../ip-rif.md#data-documentation)
 
-This amount further adjusts the standard Medicare Payment amount (field called PPS_STD_VAL_PYMT_AMT) by applying additional standardization requirements (e.g. sequestration).
+This amount further adjusts the standard Medicare Payment amount (field called `PPS_STD_VAL_PYMT_AMT`) by applying additional standardization requirements (e.g. sequestration).
 
 This amount is never used for payments. It is used for comparisons across different regions of the country for the value-based purchasing initiatives and for research.  It is a standard Medicare payment amount, without the geographical payment adjustments and some of the other add-on payments that actually go to the hospitals.    
 
@@ -5128,7 +5128,7 @@ This variable is the standard payment amount for long-term care hospitals (LTCH)
 
 This amount does not include any applicable outlier payment amount.
 
-Applies only to Inpatient (LTCH) claims.  This field is new in October 2015. For a LTCH PPS claim, only one of four fields will be populated (CLM_SITE_NTRL_PYMT_CST_AMT, CLM_SITE_NTRL_PYMT_IPPS_AMT, CLM_FULL_STD_PYMT_AMT, or CLM_SS_OUTLIER_STD_PYMT_AMT) as they are mutually exclusive (i.e., only one of the 4 fields will have a non-zero value). The field with the non-zero value is included in the Claim Payment Amount field.
+Applies only to Inpatient (LTCH) claims.  This field is new in October 2015. For a LTCH PPS claim, only one of four fields will be populated (`CLM_SITE_NTRL_PYMT_CST_AMT`, `CLM_SITE_NTRL_PYMT_IPPS_AMT`, `CLM_FULL_STD_PYMT_AMT`, or `CLM_SS_OUTLIER_STD_PYMT_AMT`) as they are mutually exclusive (i.e., only one of the 4 fields will have a non-zero value). The field with the non-zero value is included in the Claim Payment Amount field.
 
 
 
@@ -5153,7 +5153,7 @@ NOTE1: Beginning with NCH weekly process date 4/3/98, this field was populated w
 
 NOTE2: Effective with Version 'I', the start of care date will be moved from the 1st eight positions of the Claim Treatment Authorization Number. Prior to Version 'I' this date was moved from Occurrence Code 27 date field.
 
-Data Variable Alert: The Claim HHA Care Start Date variable (CLM_ADMSN_DT) is often missing in the 2011-2012 claims. CMS has since corrected the issue for 2013 onward. However, CMS has no plans to fix the 2011-2012 claims.
+Data Variable Alert: The Claim HHA Care Start Date variable (`CLM_ADMSN_DT`) is often missing in the 2011-2012 claims. CMS has since corrected the issue for 2013 onward. However, CMS has no plans to fix the 2011-2012 claims.
 
  
 
@@ -5249,11 +5249,11 @@ Contained in
 
  Under the Hospital Readmissions Reduction (HRR) Program, the amount used to identify the readmission adjustment factor that will be applied.
 
-The ACA (Section 3025) requires CMS to reduce payments to subsection (d) Inpatient Prospective Payment System (IPPS) hospitals with excess readmissions. There is a variable that indicates whether the hospital was excluded from the HRR program (see CLM_HRR_PRTCPNT_IND_CD). This percentage reduction is applied to the base operating DRG amount(defined as the wage-adjusted DRG payment plus new technology add-on payments). 
+The ACA (Section 3025) requires CMS to reduce payments to subsection (d) Inpatient Prospective Payment System (IPPS) hospitals with excess readmissions. There is a variable that indicates whether the hospital was excluded from the HRR program (see `CLM_HRR_PRTCPNT_IND_CD`). This percentage reduction is applied to the base operating DRG amount(defined as the wage-adjusted DRG payment plus new technology add-on payments). 
 
 Additional information is available on the CMS "Hospital Value-Based Purchasing" website. 
 
-The actual dollar amount of the adjustment that applied to the claim is found in the variable called CLM_HRR_ADJSTMT_PMT_AMT.    
+The actual dollar amount of the adjustment that applied to the claim is found in the variable called `CLM_HRR_ADJSTMT_PMT_AMT`.    
 
 This initiative began in 4th Quarter of 2012 (i.e., beginning of Federal fiscal year 13).   
 
@@ -5293,7 +5293,7 @@ This field is a switch that identifies hospitals subject to a Hospital Acquired 
 
 This field is new in October 2014. This field only applies to Inpatient claims.  
 
-For details on the CMS hospital readmission reduction program see the CMS website: http://www.cms.gov/Medicare/Medicare-Fee-For-ServicePayment/AcuteInpatie...
+For details on the CMS hospital readmission reduction program see the CMS website: [here](http://www.cms.gov/Medicare/Medicare-Fee-For-ServicePayment/AcuteInpatie...)
 
 
 
@@ -5317,7 +5317,7 @@ This field represents the Hospital Readmission Reduction (HRR) Program Payment A
 
 The ACA (Section 3025) requires CMS to reduce payments to subsection (d) Inpatient Prospective Payment System (IPPS) hospitals with excess readmissions. 
 
-There is a variable that indicates whether the hospital was excluded from the HRR program (see CLM_HRR_PRTCPNT_IND_CD). This percentage reduction is applied to the base operating DRG amount(defined as the wage-adjusted DRG payment plus new technology add-on payments). Additional information is available on the CMS "Hospital Value-Based Purchasing" website.   This amount is based on a percent (CLM_HRR_ADJSTMT_PCT).    
+There is a variable that indicates whether the hospital was excluded from the HRR program (see `CLM_HRR_PRTCPNT_IND_CD`). This percentage reduction is applied to the base operating DRG amount(defined as the wage-adjusted DRG payment plus new technology add-on payments). Additional information is available on the CMS "Hospital Value-Based Purchasing" website.   This amount is based on a percent (`CLM_HRR_ADJSTMT_PCT`).    
 
 This initiative began in 4th Quarter of 2012 (i.e., beginning of Federal fiscal year 13).   
 
@@ -5684,7 +5684,7 @@ Contained in
 
 The field identifies the claims that qualify for specific claims processing edits related to benefit enhancement through the Next Generation (NG) Accountable Care Organization (ACO).
 
-There are 5 of these ACO fields (CLM_NEXT_GNRTN_ACO_IND_CD1 -CLM_NEXT_GNRTN_ACO_IND_CD5).
+There are 5 of these ACO fields (`CLM_NEXT_GNRTN_ACO_IND_CD1` -`CLM_NEXT_GNRTN_ACO_IND_CD5`).
 
 
 
@@ -5713,7 +5713,7 @@ Contained in
 
 The field identifies the claims that qualify for specific claims processing edits related to benefit enhancement through the Next Generation (NG) Accountable Care Organization (ACO).
 
-There are 5 of these ACO fields (CLM_NEXT_GNRTN_ACO_IND_CD1 -CLM_NEXT_GNRTN_ACO_IND_CD5).
+There are 5 of these ACO fields (`CLM_NEXT_GNRTN_ACO_IND_CD1` -`CLM_NEXT_GNRTN_ACO_IND_CD5`).
 
 
 
@@ -5742,7 +5742,7 @@ Contained in
 
 The field identifies the claims that qualify for specific claims processing edits related to benefit enhancement through the Next Generation (NG) Accountable Care Organization (ACO).
 
-There are 5 of these ACO fields (CLM_NEXT_GNRTN_ACO_IND_CD1 -CLM_NEXT_GNRTN_ACO_IND_CD5).
+There are 5 of these ACO fields (`CLM_NEXT_GNRTN_ACO_IND_CD1` -`CLM_NEXT_GNRTN_ACO_IND_CD5`).
 
 
 
@@ -5771,7 +5771,7 @@ Contained in
 
 The field identifies the claims that qualify for specific claims processing edits related to benefit enhancement through the Next Generation (NG) Accountable Care Organization (ACO).
 
-There are 5 of these ACO fields (CLM_NEXT_GNRTN_ACO_IND_CD1 -CLM_NEXT_GNRTN_ACO_IND_CD5).
+There are 5 of these ACO fields (`CLM_NEXT_GNRTN_ACO_IND_CD1` -`CLM_NEXT_GNRTN_ACO_IND_CD5`).
 
 
 
@@ -5800,7 +5800,7 @@ Contained in
 
 The field identifies the claims that qualify for specific claims processing edits related to benefit enhancement through the Next Generation (NG) Accountable Care Organization (ACO).
 
-There are 5 of these ACO fields (CLM_NEXT_GNRTN_ACO_IND_CD1 -CLM_NEXT_GNRTN_ACO_IND_CD5).
+There are 5 of these ACO fields (`CLM_NEXT_GNRTN_ACO_IND_CD1` -`CLM_NEXT_GNRTN_ACO_IND_CD5`).
 
 
 
@@ -8942,7 +8942,7 @@ This amount does not include any other applicable outlier payment amount.
 
 Applies only to Inpatient (LTCH) claims.  This field is new in October 2015. 
 
-For a LTCH PPS claim, only one of four fields will be populated (CLM_SITE_NTRL_PYMT_CST_AMT, CLM_SITE_NTRL_PYMT_IPPS_AMT, CLM_FULL_STD_PYMT_AMT, or CLM_SS_OUTLIER_STD_PYMT_AMT) as they are mutually exclusive (i.e., only one of the 4 fields will have a non-zero value). The field with the non-zero value is included in the Claim Payment Amount field.
+For a LTCH PPS claim, only one of four fields will be populated (`CLM_SITE_NTRL_PYMT_CST_AMT`, `CLM_SITE_NTRL_PYMT_IPPS_AMT`, `CLM_FULL_STD_PYMT_AMT`, or `CLM_SS_OUTLIER_STD_PYMT_AMT`) as they are mutually exclusive (i.e., only one of the 4 fields will have a non-zero value). The field with the non-zero value is included in the Claim Payment Amount field.
 
 
 
@@ -8964,7 +8964,7 @@ Contained in
 Under the Long Term Care Hospital (LTCH) prospective payment system (PPS), the payment amount based on estimated cost of the case.
 
 Applies only to Inpatient (LTCH) claims. This field is new in October 2015.
-For a LTCH PPS claim, only one of four fields will be populated (CLM_SITE_NTRL_PYMT_CST_AMT, CLM_SITE_NTRL_PYMT_IPPS_AMT, CLM_FULL_STD_PYMT_AMT, or CLM_SS_OUTLIER_STD_PYMT_AMT) as they are mutually exclusive (i.e., only one of the 4 fields will have a non-zero value). The field with the non-zero value is included in the Claim Payment Amount field.
+For a LTCH PPS claim, only one of four fields will be populated (`CLM_SITE_NTRL_PYMT_CST_AMT`, `CLM_SITE_NTRL_PYMT_IPPS_AMT`, `CLM_FULL_STD_PYMT_AMT`, or `CLM_SS_OUTLIER_STD_PYMT_AMT`) as they are mutually exclusive (i.e., only one of the 4 fields will have a non-zero value). The field with the non-zero value is included in the Claim Payment Amount field.
 
 
 
@@ -8986,7 +8986,7 @@ Contained in
 Under the Long Term Care Hospital (LTCH) prospective payment system (PPS), the payment amount based on the inpatient prospective payment system (IPPS) comparable amount. This amount does not include any applicable outlier payment amount.
 
 Applies only to Inpatient (LTCH) claims. This field is new in October 2015.
-For a LTCH PPS claim, only one of four fields will be populated (CLM_SITE_NTRL_PYMT_CST_AMT, CLM_SITE_NTRL_PYMT_IPPS_AMT, CLM_FULL_STD_PYMT_AMT, or CLM_SS_OUTLIER_STD_PYMT_AMT) as they are mutually exclusive (i.e., only one of the 4 fields will have a non-zero value). The field with the non-zero value is included in the Claim Payment Amount field.
+For a LTCH PPS claim, only one of four fields will be populated (`CLM_SITE_NTRL_PYMT_CST_AMT`, `CLM_SITE_NTRL_PYMT_IPPS_AMT`, `CLM_FULL_STD_PYMT_AMT`, or `CLM_SS_OUTLIER_STD_PYMT_AMT`) as they are mutually exclusive (i.e., only one of the 4 fields will have a non-zero value). The field with the non-zero value is included in the Claim Payment Amount field.
 
 
 
@@ -9277,11 +9277,11 @@ Under the Hospital Value Based Purchasing (HVBP) program, an adjustment is made 
 
 This initiative began in 4th Quarter of 2013 (i.e., beginning of Federal fiscal year 14 [FY14]).   
 
-This field was new in 2013, and is null/missing for all previous years. The HVBP applies only to subsection (d) IPPS hospitals. There is a variable that indicates whether the hospital was excluded from HVBP (see CLM_VBP_PRTCPNT_IND_CD). This percentage reduction is applied  to the base operating DRG amount, depending on their TPS (which is the Value Based Purchasing Score), as required by the Affordable Care Act (ACA). The percentages change each FY.  
+This field was new in 2013, and is null/missing for all previous years. The HVBP applies only to subsection (d) IPPS hospitals. There is a variable that indicates whether the hospital was excluded from HVBP (see `CLM_VBP_PRTCPNT_IND_CD`). This percentage reduction is applied  to the base operating DRG amount, depending on their TPS (which is the Value Based Purchasing Score), as required by the Affordable Care Act (ACA). The percentages change each FY.  
 
 Additional information is available on the CMS "Hospital Value-Based Purchasing" website. 
 
-The actual dollar amount of the adjustment that applied to the claim is found in the variable called CLM_VBP_ADJSTMT_PMT_AMT.
+The actual dollar amount of the adjustment that applied to the claim is found in the variable called `CLM_VBP_ADJSTMT_PMT_AMT`.
 
 
 
@@ -9304,7 +9304,7 @@ Contained in
 - [Hospice RIF](../hospice-rif.md#data-documentation)
 - [Home Health Agency RIF](../hha-rif.md#data-documentation)
 
-The amount related to the condition identified in the CLM_VAL_CD which was used by the intermediary to process the institutional claim.
+The amount related to the condition identified in the `CLM_VAL_CD` which was used by the intermediary to process the institutional claim.
 
 
 
@@ -9327,11 +9327,11 @@ Under the Hospital Value Based Purchasing (HVBP) program, an adjustment is made 
 
 This initiative began in 4th Quarter of 2013 (i.e., beginning of Federal fiscal year 14 [FY14]).   
 
-This field was new in 2013, and is null/missing for all previous years. The HVBP applies only to subsection (d) IPPS hospitals. There is a variable that indicates whether the hospital was excluded from HVBP (see CLM_VBP_PRTCPNT_IND_CD). This percentage reduction is applied  to the base operating DRG amount, depending on their TPS (which is the Value Based Purchasing Score), as required by the Affordable Care Act (ACA). The percentages change each FY.  
+This field was new in 2013, and is null/missing for all previous years. The HVBP applies only to subsection (d) IPPS hospitals. There is a variable that indicates whether the hospital was excluded from HVBP (see `CLM_VBP_PRTCPNT_IND_CD`). This percentage reduction is applied  to the base operating DRG amount, depending on their TPS (which is the Value Based Purchasing Score), as required by the Affordable Care Act (ACA). The percentages change each FY.  
 
 Additional information is available on the CMS "Hospital Value-Based Purchasing" website. 
 
-The actual dollar amount of the adjustment that applied to the claim is found in the variable called CLM_VBP_ADJSTMT_PMT_AMT.
+The actual dollar amount of the adjustment that applied to the claim is found in the variable called `CLM_VBP_ADJSTMT_PMT_AMT`.
 
 
 
@@ -9456,7 +9456,7 @@ This variable indicates whether a beneficiary met the chronic condition data war
 
 <h3>Values</h3>
 
-The CCW’s chronic condition flags require beneficiaries to satisfy both claims criteria (a minimum number/type of claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (FFS Part A and Part B coverage during the entire specified time period). For colorectal cancer, beneficiaries must have at least one inpatient or SNF claim, or two Part B (institutional or non-institutional) claims at least one day apart, with a colorectal cancer code in any position during the 1-year reference period. The CCW’s criteria were developed after reviewing validated algorithms from the research literature and criteria used by other federal data sources.  You can find more detailed information on the criteria on the CCW website: https://www.ccwdata.org/web/guest/condition-categories
+The CCW’s chronic condition flags require beneficiaries to satisfy both claims criteria (a minimum number/type of claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (FFS Part A and Part B coverage during the entire specified time period). For colorectal cancer, beneficiaries must have at least one inpatient or SNF claim, or two Part B (institutional or non-institutional) claims at least one day apart, with a colorectal cancer code in any position during the 1-year reference period. The CCW’s criteria were developed after reviewing validated algorithms from the research literature and criteria used by other federal data sources.  You can find more detailed information on the criteria on the CCW website: [here](https://www.ccwdata.org/web/guest/condition-categories)
 
 | Code   | Code Value                      |
 |:-------|:--------------------------------|
@@ -9583,7 +9583,7 @@ Contained in
 
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
-The current beneficiary identification code (BIC) specifies the basis of the beneficiary's elgibility for cash payment programs, mainly Social Security. When the individual qualifies under another person's account (for example, as a spouse or child), the code identifies the type of relationship between the individual and primary beneficiary.
+The current beneficiary identification code (`BIC`) specifies the basis of the beneficiary's elgibility for cash payment programs, mainly Social Security. When the individual qualifies under another person's account (for example, as a spouse or child), the code identifies the type of relationship between the individual and primary beneficiary.
 
 
 
@@ -9591,7 +9591,7 @@ The current beneficiary identification code (BIC) specifies the basis of the ben
 
 
 
- Beneficiary Identification Code (BIC) Table.txt 
+ Beneficiary Identification Code (`BIC`) Table.txt 
 
 
 
@@ -9612,7 +9612,7 @@ Current reason for Medicare entitlement.
 
 This variable indicates how the beneficiary currently qualifies for Medicare.
 
-The current reason for entitlement can differ from the original reason that a beneficiary qualified for Medicare (see the OREC variable).
+The current reason for entitlement can differ from the original reason that a beneficiary qualified for Medicare (see the `OREC` variable).
 
 CMS obtains this information from the Social Security Administration (SSA) and Railroad Retirement Board (RRB) record systems.
 
@@ -9635,7 +9635,7 @@ This variable indicates whether a beneficiary met the condition criteria for cys
 
 NOTE: The condition variable requires beneficiaries to satisfy both claims criteria (a minimum number/type of Medicare claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (Medicare FFS Part A and Part B coverage during the entire specified time period).
 
-NOTE1: For cystic fibrosis and other metabolic developmental disorders, beneficiaries must have at least one Medicare inpatient claim or two other non-drug claims of any service type with a related code in any position during the 2-year reference period. You can find more detailed information on the criteria on the CCW website: https://www.ccwdata.org/web/guest/condition-categories
+NOTE1: For cystic fibrosis and other metabolic developmental disorders, beneficiaries must have at least one Medicare inpatient claim or two other non-drug claims of any service type with a related code in any position during the 2-year reference period. You can find more detailed information on the criteria on the CCW website: [here](https://www.ccwdata.org/web/guest/condition-categories)
 
 
 
@@ -9658,7 +9658,7 @@ Contained in
 
 This variable shows the date when the beneficiary first met the criteria for the cystic fibrosis and other metabolic developmental disorders indicator. The variable will be blank for beneficiaries that have never had the condition.
 
-NOTE: The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the COVSTART variable in the Beneficiary File).
+NOTE: The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the `COVSTART` variable in the Beneficiary File).
 
 
 
@@ -9725,7 +9725,7 @@ Contained in
 
 - [Durable Medical Equipment RIF](../dme-rif.md#data-documentation)
 
-Prior to Version H this field was named: HCPCS_4TH_MDFR_CD.
+Prior to Version H this field was named: `HCPCS_4TH_MDFR_CD`.
 
 
 
@@ -9738,7 +9738,7 @@ Contained in
 
 - [Durable Medical Equipment RIF](../dme-rif.md#data-documentation)
 
-Prior to Version H this field was named: HCPCS_3RD_MDFR_CD.
+Prior to Version H this field was named: `HCPCS_3RD_MDFR_CD`.
 
 
 
@@ -9882,7 +9882,7 @@ Contained in
 
 Effective with Version 'G', billing number assigned to the supplier of the Part B service/DMEPOS by the National Supplier Clearinghouse, as reported on the line item for the DMERC claim.
 
-Different types of identifiers may be used.Refer to the variable called DMERC_LINE_SUPPLR_TYPE_CD to determine the type used for each line.
+Different types of identifiers may be used.Refer to the variable called `DMERC_LINE_SUPPLR_TYPE_CD` to determine the type used for each line.
 
 
 
@@ -10150,7 +10150,7 @@ Contained in
 
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
-This variable is the total Medicare payments for Part B dialysis services (primarily the professional component since treatments are covered in hospital outpatient) for a given year.  The total Beneficiary payments are calculated as the sum of LINE_COINSRNC_AMT + LINE_BENE_PTB_DDCTBL_AMT for the relevant lines.
+This variable is the total Medicare payments for Part B dialysis services (primarily the professional component since treatments are covered in hospital outpatient) for a given year.  The total Beneficiary payments are calculated as the sum of `LINE_COINSRNC_AMT` + `LINE_BENE_PTB_DDCTBL_AMT` for the relevant lines.
 
 
 
@@ -10171,7 +10171,7 @@ Contained in
 
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
-This variable is the total Medicare payments for Part B dialysis services (primarily the professional component since treatments are covered in hospital outpatient) for a given year. An event is defined as each line item that contains the relevant service.  Dialysis claims are a subset of the claims, and a subset of procedures in the Part B Carrier data file. Dialysis claims are defined as those with a line BETOS code (BETOS_CD) where the first 2 digits =`P9`.
+This variable is the total Medicare payments for Part B dialysis services (primarily the professional component since treatments are covered in hospital outpatient) for a given year. An event is defined as each line item that contains the relevant service.  Dialysis claims are a subset of the claims, and a subset of procedures in the Part B Carrier data file. Dialysis claims are defined as those with a line `BETOS` code (`BETOS`_CD) where the first 2 digits =`P9`.
 
 
 
@@ -10191,9 +10191,9 @@ Contained in
 
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
-"This variable is the total Medicare payments for Part B dialysis services (primarily the professional component since treatments are covered in hospital outpatient) for a given year.  Dialysis claims are a subset of the claims, and a subset of procedures in the Part B Carrier data file. Dialysis claims are defined as those with a line BETOS code (BETOS_CD) where the first 2 digits =`P9`.   
+"This variable is the total Medicare payments for Part B dialysis services (primarily the professional component since treatments are covered in hospital outpatient) for a given year.  Dialysis claims are a subset of the claims, and a subset of procedures in the Part B Carrier data file. Dialysis claims are defined as those with a line `BETOS` code (`BETOS`_CD) where the first 2 digits =`P9`.   
 
-The total Medicare payments are calculated as the sum of LINE_NCH_PMT_AMT where the LINE_PRCSG_IND_CD was ('A','R', or 'S') - for all relevant lines."
+The total Medicare payments are calculated as the sum of `LINE_NCH_PMT_AMT` where the `LINE_PRCSG_IND_CD` was ('A','R', or 'S') - for all relevant lines."
 
 
 
@@ -10214,9 +10214,9 @@ Contained in
 
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
-This variable is the total Medicare payments for part B durable medical equipment (DME) for a given year.  The total Beneficiary payments are calculated as the sum of LINE_COINSRNC_AMT + LINE_BENE_PTB_DDCTBL_AMT for the relevant lines.  
+This variable is the total Medicare payments for part B durable medical equipment (DME) for a given year.  The total Beneficiary payments are calculated as the sum of `LINE_COINSRNC_AMT` + `LINE_BENE_PTB_DDCTBL_AMT` for the relevant lines.  
 
-Claims for DME are a subset of the claims in the Part B Carrier and DME data files. These claims are defined as those with a line BETOS code (BETOS_CD) where the first three digits are (`D1A`,`D1B`,`D1C`,`D1D`,`D1E`, or `D1F`.
+Claims for DME are a subset of the claims in the Part B Carrier and DME data files. These claims are defined as those with a line `BETOS` code (`BETOS`_CD) where the first three digits are (`D1A`,`D1B`,`D1C`,`D1D`,`D1E`, or `D1F`.
 
 
 
@@ -10239,7 +10239,7 @@ Contained in
 
 This variable is the count of events in the part B durable medical equipment (DME) for a given year. An event is defined as each line item that contains the relevant service.  
 
-Claims for DME are a subset of the claims in the Part B Carrier and DME data files.  These claims are defined as those with a line BETOS code (BETOS_CD) where the first three digits are (`D1A`,`D1B`,`D1C`,`D1D`,`D1E`, or `D1F`).
+Claims for DME are a subset of the claims in the Part B Carrier and DME data files.  These claims are defined as those with a line `BETOS` code (`BETOS`_CD) where the first three digits are (`D1A`,`D1B`,`D1C`,`D1D`,`D1E`, or `D1F`).
 
 
 
@@ -10261,7 +10261,7 @@ Contained in
 
 This variable is the total Medicare payments for part B durable medical equipment (DME) for a given year.  Claims for DME are a subset of the claims in the Part B Carrier and DME data files. 
 
-These claims are defined as those with a line BETOS code (BETOS_CD) where the first three digits are (`D1A`,`D1B`,`D1C`,`D1D`,`D1E`, or `D1F`). The total Medicare payments are calculated as the sum of LINE_NCH_PMT_AMT where the LINE_PRCSG_IND_CD was ('A','R', or 'S') - for all relevant lines.
+These claims are defined as those with a line `BETOS` code (`BETOS`_CD) where the first three digits are (`D1A`,`D1B`,`D1C`,`D1D`,`D1E`, or `D1F`). The total Medicare payments are calculated as the sum of `LINE_NCH_PMT_AMT` where the `LINE_PRCSG_IND_CD` was ('A','R', or 'S') - for all relevant lines.
 
 
 
@@ -10306,7 +10306,7 @@ Contained in
 - [Durable Medical Equipment RIF](../dme-rif.md#data-documentation)
 - [Carrier RIF](../carrier-rif.md#data-documentation)
 
-The unique CCW indentifier for a beneficiary. The CCW assigns a unique beneficiary identification number to each individual who receives Medicare and/or Medicaid, and uses that number to identify an individual’s records in all CCW data files (e.g., Medicare claims, MAX claims, MDS assessment data). This number does not change during a beneficiary’s lifetime and each number is used only once. The BENE_ID is specific to the CCW and is not applicable to any other identification system or data source.
+The unique CCW indentifier for a beneficiary. The CCW assigns a unique beneficiary identification number to each individual who receives Medicare and/or Medicaid, and uses that number to identify an individual’s records in all CCW data files (e.g., Medicare claims, MAX claims, MDS assessment data). This number does not change during a beneficiary’s lifetime and each number is used only once. The `BENE_ID` is specific to the CCW and is not applicable to any other identification system or data source.
 
 
 
@@ -10346,7 +10346,7 @@ This variable indicates whether a beneficiary met the chronic condition data war
 
 <h3>Values</h3>
 
-The CCW’s chronic condition flags require beneficiaries to satisfy both claims criteria (a minimum number/type of claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (FFS Part A and Part B coverage during the entire specified time period). For endometrial cancer, beneficiaries must have at least one inpatient or SNF claim, or two Part B (institutional or non-institutional) claims that are at least one day apart, with an endometrial cancer code in any position during the 1-year reference period. The CCW’s criteria were developed after reviewing validated algorithms from the research literature and criteria used by other federal data sources.  You can find more detailed information on the criteria on the CCW website: https://www.ccwdata.org/web/guest/condition-categories
+The CCW’s chronic condition flags require beneficiaries to satisfy both claims criteria (a minimum number/type of claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (FFS Part A and Part B coverage during the entire specified time period). For endometrial cancer, beneficiaries must have at least one inpatient or SNF claim, or two Part B (institutional or non-institutional) claims that are at least one day apart, with an endometrial cancer code in any position during the 1-year reference period. The CCW’s criteria were developed after reviewing validated algorithms from the research literature and criteria used by other federal data sources.  You can find more detailed information on the criteria on the CCW website: [here](https://www.ccwdata.org/web/guest/condition-categories)
 
 
 | Code   | Code Value                      |
@@ -10370,7 +10370,7 @@ This variable indicates whether a beneficiary met the chronic condition data war
 
 <h3>Values</h3>
 
-The CCW’s chronic condition flags require beneficiaries to satisfy both claims criteria (a minimum number/type of claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (FFS Part A and Part B coverage during the entire specified time period). For endometrial cancer, beneficiaries must have at least one inpatient or SNF claim, or two Part B (institutional or non-institutional) claims that are at least one day apart, with an endometrial cancer code in any position during the 1-year reference period. The CCW’s criteria were developed after reviewing validated algorithms from the research literature and criteria used by other federal data sources.  You can find more detailed information on the criteria on the CCW website: https://www.ccwdata.org/web/guest/condition-categories
+The CCW’s chronic condition flags require beneficiaries to satisfy both claims criteria (a minimum number/type of claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (FFS Part A and Part B coverage during the entire specified time period). For endometrial cancer, beneficiaries must have at least one inpatient or SNF claim, or two Part B (institutional or non-institutional) claims that are at least one day apart, with an endometrial cancer code in any position during the 1-year reference period. The CCW’s criteria were developed after reviewing validated algorithms from the research literature and criteria used by other federal data sources.  You can find more detailed information on the criteria on the CCW website: [here](https://www.ccwdata.org/web/guest/condition-categories)
 
 
 | Code   | Code Value                      |
@@ -10391,8 +10391,8 @@ Contained in
 
 This variable indicates whether the beneficiary was ever included in the CCW 5% sample for any year (1999+).
 
-This enhanced 5% sample is broader than the annual 5% sample (variable that was previously called FIVE_PERCENT_FLAG; currently called SAMPLE_GROUP - when value =`01` or `04`) because it includes all beneficiaries who were ever part of the 5% sample but had a HIC change that was not part of the sample. The "enhanced" indicator variable allows for longitudinal study of the 5% sample (i.e., once in, always in).
-CCW creates the 5% sample using standard CMS processes. The 5% random sample consists of people who had a Medicare beneficiary Health Insurance Claim number (HIC) equal to the Claim Account Number (CAN) plus Beneficiary Identity Code (BIC) (HIC=CAN+BIC) where the last two digits of the CAN are in the set {05, 20, 45, 70, 95}.
+This enhanced 5% sample is broader than the annual 5% sample (variable that was previously called FIVE_PERCENT_FLAG; currently called `SAMPLE_GROUP` - when value =`01` or `04`) because it includes all beneficiaries who were ever part of the 5% sample but had a HIC change that was not part of the sample. The "enhanced" indicator variable allows for longitudinal study of the 5% sample (i.e., once in, always in).
+CCW creates the 5% sample using standard CMS processes. The 5% random sample consists of people who had a Medicare beneficiary Health Insurance Claim number (HIC) equal to the Claim Account Number (CAN) plus Beneficiary Identity Code (`BIC`) (HIC=CAN+`BIC`) where the last two digits of the CAN are in the set {05, 20, 45, 70, 95}.
 
 
 
@@ -10415,7 +10415,7 @@ This variable indicates whether a beneficiary met the condition criteria for epi
 
 NOTE: The condition variable requires beneficiaries to satisfy both claims criteria (a minimum number/type of Medicare claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (Medicare FFS Part A and Part B coverage during the entire specified time period).
 
-NOTE1: For epilepsy, beneficiaries must have at least one Medicare inpatient claim or two other non-drug claims of any service type with a related code in any position during the 2-year reference period. You can find more detailed information on the criteria on the CCW website: https://www.ccwdata.org/web/guest/condition-categories
+NOTE1: For epilepsy, beneficiaries must have at least one Medicare inpatient claim or two other non-drug claims of any service type with a related code in any position during the 2-year reference period. You can find more detailed information on the criteria on the CCW website: [here](https://www.ccwdata.org/web/guest/condition-categories)
 
 
 
@@ -10438,7 +10438,7 @@ Contained in
 
 This variable shows the date when the beneficiary first met the criteria for the epilepsy indicator. The variable will be blank for beneficiaries that have never had the condition.
 
-NOTE: The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the COVSTART variable in the Beneficiary File).
+NOTE: The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the `COVSTART` variable in the Beneficiary File).
 
 
 
@@ -10450,9 +10450,9 @@ Contained in
 
 - [MedPAR RIF](../medpar-rif.md#data-documentation)
 
-The code categorizing groups of BICs representing similar relationships between the beneficiary and primary wage earner.
+The code categorizing groups of `BIC`s representing similar relationships between the beneficiary and primary wage earner.
 
-NOTE: The equatable BIC module electronically matches two records that contain different BICs where it is apparent both are records for the same beneficiary. It validates the BIC and returns a base BIC under which to house the record in the National Claims History (NCH) databases. (All records for a beneficiary are stored under a single BIC).
+NOTE: The equatable `BIC` module electronically matches two records that contain different `BIC`s where it is apparent both are records for the same beneficiary. It validates the `BIC` and returns a base `BIC` under which to house the record in the National Claims History (NCH) databases. (All records for a beneficiary are stored under a single `BIC`).
 
 
 
@@ -10507,9 +10507,9 @@ Contained in
 
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
-This variable is the sum of coinsurance and deductible payments for the part B evaluation and management (E&M) services for a given year. The total Beneficiary payments are calculated as the sum of LINE_COINSRNC_AMT + LINE_BENE_PTB_DDCTBL_AMT for the relevant lines.
+This variable is the sum of coinsurance and deductible payments for the part B evaluation and management (E&M) services for a given year. The total Beneficiary payments are calculated as the sum of `LINE_COINSRNC_AMT` + `LINE_BENE_PTB_DDCTBL_AMT` for the relevant lines.
 
-E & M claims are a subset of the claims in the Part B Carrier and DME data files, and a subset of physician claims.   The E & M claims are defined as those with a line BETOS code (BETOS_CD) where the first digit ='M' (but is not M1A or M1B – which are categorized as physician office care in this file – see PHYS_MDCR_PMT).
+E & M claims are a subset of the claims in the Part B Carrier and DME data files, and a subset of physician claims.   The E & M claims are defined as those with a line `BETOS` code (`BETOS`_CD) where the first digit ='M' (but is not M1A or M1B – which are categorized as physician office care in this file – see `PHYS_MDCR_PMT`).
 
 
 
@@ -10532,7 +10532,7 @@ Contained in
 
 This variable is the count of events for the part B evaluation and management (E&M) services for a given year.  An event is defined as each line item that contains the relevant service.
 
-E & M claims are a subset of the claims in the Part B Carrier and DME data files, and a subset of physician claims.   The E & M claims are defined as those with a line BETOS code (BETOS_CD) where the first digit ='M' (but is not M1A or M1B – which are categorized as physician office care in this file – see PHYS_MDCR_PMT).
+E & M claims are a subset of the claims in the Part B Carrier and DME data files, and a subset of physician claims.   The E & M claims are defined as those with a line `BETOS` code (`BETOS`_CD) where the first digit ='M' (but is not M1A or M1B – which are categorized as physician office care in this file – see `PHYS_MDCR_PMT`).
 
 
 
@@ -10552,9 +10552,9 @@ Contained in
 
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
-"This variable is the total Medicare payments for the part B evaluation and management (E&M) services for a given year. E & M claims are a subset of the claims in the Part B Carrier and DME data files, and a subset of physician claims.   The E & M claims are defined as those with a line BETOS code (BETOS_CD) where the first digit ='M' (but is not M1A or M1B – which are categorized as physician office care in this file – see PHYS_MDCR_PMT).
+"This variable is the total Medicare payments for the part B evaluation and management (E&M) services for a given year. E & M claims are a subset of the claims in the Part B Carrier and DME data files, and a subset of physician claims.   The E & M claims are defined as those with a line `BETOS` code (`BETOS`_CD) where the first digit ='M' (but is not M1A or M1B – which are categorized as physician office care in this file – see `PHYS_MDCR_PMT`).
 
-The total Medicare payments are calculated as the sum of LINE_NCH_PMT_AMT where the LINE_PRCSG_IND_CD was ('A','R', or 'S') - for all relevant lines."
+The total Medicare payments are calculated as the sum of `LINE_NCH_PMT_AMT` where the `LINE_PRCSG_IND_CD` was ('A','R', or 'S') - for all relevant lines."
 
 
 
@@ -10597,7 +10597,7 @@ Contained in
 - [Hospice RIF](../hospice-rif.md#data-documentation)
 - [Home Health Agency RIF](../hha-rif.md#data-documentation)
 
-The identification number assigned by CMS to a fiscal intermediary authorized to process institutional claim records. Effective October 2006, the Medicare Administrative Contractors (MACs) began replacing the existing fiscal intermediaries and started processing institu- tional claim records for states assigned to its jurisdiction. NOTE: The 5-position MAC number will be housed in the existing FI_NUM field. During the transition from an FI to a MAC the FI_NUM field could contain either a FI number or a MAC number. See the FI_NUM table of codes to identify the new MAC numbers and their effective dates.
+The identification number assigned by CMS to a fiscal intermediary authorized to process institutional claim records. Effective October 2006, the Medicare Administrative Contractors (MACs) began replacing the existing fiscal intermediaries and started processing institu- tional claim records for states assigned to its jurisdiction. NOTE: The 5-position MAC number will be housed in the existing `FI_NUM` field. During the transition from an FI to a MAC the `FI_NUM` field could contain either a FI number or a MAC number. See the `FI_NUM` table of codes to identify the new MAC numbers and their effective dates.
 
 
 
@@ -10741,7 +10741,7 @@ This variable indicates whether a beneficiary met the condition criteria for fib
 
 NOTE: The condition variable requires beneficiaries to satisfy both claims criteria (a minimum number/type of Medicare claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (Medicare FFS Part A and Part B coverage during the entire specified time period).
 
-NOTE1: For fibromyalgia, chronic pain and fatigue, beneficiaries must have at least one Medicare inpatient claim or two other non-drug claims of any service type with a related code in any position during the 2-year reference period. You can find more detailed information on the criteria on the CCW website: https://www.ccwdata.org/web/guest/condition-categories
+NOTE1: For fibromyalgia, chronic pain and fatigue, beneficiaries must have at least one Medicare inpatient claim or two other non-drug claims of any service type with a related code in any position during the 2-year reference period. You can find more detailed information on the criteria on the CCW website: [here](https://www.ccwdata.org/web/guest/condition-categories)
 
 
 
@@ -10764,7 +10764,7 @@ Contained in
 
 This variable shows the date when the beneficiary first met the criteria for the fibromyalgia, chronic pain and fatigue indicator. The variable will be blank for beneficiaries that have never had the condition.
 
-NOTE: The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the COVSTART variable in the Beneficiary File).
+NOTE: The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the `COVSTART` variable in the Beneficiary File).
 
 
 
@@ -10839,7 +10839,7 @@ This code specifies the first calendar year, month, and day in which the benefic
 
 
 
-The earliest possible date for anyone in the CCW is January 1, 1999.  If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the COVSTART variable in the Beneficiary File). 
+The earliest possible date for anyone in the CCW is January 1, 1999.  If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the `COVSTART` variable in the Beneficiary File). 
 
 
 
@@ -10895,7 +10895,7 @@ This code specifies the first calendar year, month, and day in which the benefic
 
 
 
-The earliest possible date for anyone in the CCW is January 1, 1999.  If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the COVSTART variable in the Beneficiary File). 
+The earliest possible date for anyone in the CCW is January 1, 1999.  If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the `COVSTART` variable in the Beneficiary File). 
 
 
 
@@ -10939,7 +10939,7 @@ This variable shows the date when the beneficiary first met the criteria for the
 
 
 
-The earliest possible date for anyone in the CCW is January 1, 1999.  If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the COVSTART variable in the Beneficiary File). 
+The earliest possible date for anyone in the CCW is January 1, 1999.  If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the `COVSTART` variable in the Beneficiary File). 
 
 
 
@@ -11007,7 +11007,7 @@ This variable shows the date when the beneficiary first met the criteria for the
 
 
 
-The earliest possible date for anyone in the CCW is January 1, 1999.  If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the COVSTART variable in the Beneficiary File).
+The earliest possible date for anyone in the CCW is January 1, 1999.  If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the `COVSTART` variable in the Beneficiary File).
  
 
 
@@ -11052,7 +11052,7 @@ This variable shows the date when the beneficiary first met the criteria for the
 
 
 
-The earliest possible date for anyone in the CCW is January 1, 1999.  If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the COVSTART variable in the Beneficiary File). 
+The earliest possible date for anyone in the CCW is January 1, 1999.  If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the `COVSTART` variable in the Beneficiary File). 
 
 
 
@@ -11072,7 +11072,7 @@ This code specifies the first calendar year, month, and day in which the benefic
 
 
 
-The earliest possible date for anyone in the CCW is January 1, 1999.  If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the COVSTART variable in the Beneficiary File). 
+The earliest possible date for anyone in the CCW is January 1, 1999.  If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the `COVSTART` variable in the Beneficiary File). 
 
 
 
@@ -11618,7 +11618,7 @@ Codes and descriptors developed by Medicare carriers (currently known as Medicar
 
 **** Note 2: ****
 
-This field may contain information regarding case-mix grouping that Medicare used to pay for SNF, home health, or IRF services. These groupings are sometimes known as Health Insurance Prospective Payment System (HIPPS) codes. This field will contain a HIPPS code if the revenue center code (REV_CNTR) equals 0022 for SNF care, 0023 for home health, or 0024 for IRF care. For home health claims, please also see the revenue center APC/HIPPS code variable (REV_CNTR_APC_HIPPS_CD).
+This field may contain information regarding case-mix grouping that Medicare used to pay for SNF, home health, or IRF services. These groupings are sometimes known as Health Insurance Prospective Payment System (HIPPS) codes. This field will contain a HIPPS code if the revenue center code (`REV_CNTR`) equals 0022 for SNF care, 0023 for home health, or 0024 for IRF care. For home health claims, please also see the revenue center APC/HIPPS code variable (`REV_CNTR`_APC_HIPPS_CD).
 
 
 
@@ -11751,7 +11751,7 @@ Contained in
 
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
-This variable is the total Medicare payments in the home health (HH) setting for a given year.  Calculated as the sum of CLM_PMT_AMT for all HH claims where the CLM_PMT_AMT >= 0.
+This variable is the total Medicare payments in the home health (HH) setting for a given year.  Calculated as the sum of `CLM_PMT_AMT` for all HH claims where the `CLM_PMT_AMT` >= 0.
 
 
 
@@ -11759,9 +11759,9 @@ This variable is the total Medicare payments in the home health (HH) setting for
 
 
 
-Medicare payments are described in detail in a series of Medicare Payment Advisory Commission (MedPAC) documents called “Payment Basics” (see: http://www.medpac.gov/-documents-/payment-basics).
+Medicare payments are described in detail in a series of Medicare Payment Advisory Commission (MedPAC) documents called “Payment Basics” (see: [here](http://www.medpac.gov/-documents-/payment-basics).)
 
-Also in the Medicare Learning Network (MLN) “Payment System Fact Sheet Series” (see the list of MLN publications at: http://www.cms.gov/Outreach-and-Education/Medicare-Learning-Network-MLN/MLNProducts/MLN-Publications.html)
+Also in the Medicare Learning Network (MLN) “Payment System Fact Sheet Series” (see the list of MLN publications at: [here](http://www.cms.gov/Outreach-and-Education/Medicare-Learning-Network-MLN/MLNProducts/MLN-Publications.html))
  
 
 
@@ -11774,7 +11774,7 @@ Contained in
 
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
-This variable is the count of home health (HH) visits for a given year.  The CCW variable CLM_HHA_TOT_VISIT_CNT is used to obtain this variable. 
+This variable is the count of home health (HH) visits for a given year.  The CCW variable `CLM_HHA_TOT_VISIT_CNT` is used to obtain this variable. 
 
 
 
@@ -11782,7 +11782,7 @@ This variable is the count of home health (HH) visits for a given year.  The CC
 
 
 
-The CLM_FROM_DT for the first claim associated with the stay must have been in the year of the data file, however it was permissible for the CLM_THRU_DT to have occurred in January of the following year.
+The `CLM_FROM_DT` for the first claim associated with the stay must have been in the year of the data file, however it was permissible for the `CLM_THRU_DT` to have occurred in January of the following year.
  
 
 
@@ -11795,7 +11795,7 @@ Contained in
 
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
-This variable is the count of Medicare covered days in the hospice setting for a given year.   This variable equals the sum of the CLM_UTLZTN_DAY_CNT variables on the source claims.
+This variable is the count of Medicare covered days in the hospice setting for a given year.   This variable equals the sum of the `CLM_UTLZTN_DAY_CNT` variables on the source claims.
 
 
 
@@ -11805,9 +11805,9 @@ This variable is the count of Medicare covered days in the hospice setting for a
 
 We consider fully-covered days, days where the beneficiary was liable for coinsurance, and lifetime reserve days to all be Medicare-covered days.  Non-covered days, leave of absence days, and the day of discharge or death are not included.
 
-Medicare payments are described in detail in a series of Medicare Payment Advisory Commission (MedPAC) documents called “Payment Basics” (see: http://www.medpac.gov/-documents-/payment-basics).
+Medicare payments are described in detail in a series of Medicare Payment Advisory Commission (MedPAC) documents called “Payment Basics” (see: [here](http://www.medpac.gov/-documents-/payment-basics).)
 
-Also in the Medicare Learning Network (MLN) “Payment System Fact Sheet Series” (see the list of MLN publications at: http://www.cms.gov/Outreach-and-Education/Medicare-Learning-Network-MLN/MLNProducts/MLN-Publications.html)
+Also in the Medicare Learning Network (MLN) “Payment System Fact Sheet Series” (see the list of MLN publications at: [here](http://www.cms.gov/Outreach-and-Education/Medicare-Learning-Network-MLN/MLNProducts/MLN-Publications.html))
  
 
 
@@ -11820,7 +11820,7 @@ Contained in
 
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
-This variable is the total Medicare payments in the hospice setting for a given year.  The total Medicare payments is calculated as the sum of CLM_PMT_AMT for all hospice claims where the CLM_PMT_AMT >= 0.
+This variable is the total Medicare payments in the hospice setting for a given year.  The total Medicare payments is calculated as the sum of `CLM_PMT_AMT` for all hospice claims where the `CLM_PMT_AMT` >= 0.
 
 
 
@@ -11828,9 +11828,9 @@ This variable is the total Medicare payments in the hospice setting for a given 
 
 
 
-Medicare payments are described in detail in a series of Medicare Payment Advisory Commission (MedPAC) documents called “Payment Basics” (see: http://www.medpac.gov/-documents-/payment-basics).
+Medicare payments are described in detail in a series of Medicare Payment Advisory Commission (MedPAC) documents called “Payment Basics” (see: [here](http://www.medpac.gov/-documents-/payment-basics).)
 
-Also in the Medicare Learning Network (MLN) “Payment System Fact Sheet Series” (see the list of MLN publications at: http://www.cms.gov/Outreach-and-Education/Medicare-Learning-Network-MLN/MLNProducts/MLN-Publications.html)
+Also in the Medicare Learning Network (MLN) “Payment System Fact Sheet Series” (see the list of MLN publications at: [here](http://www.cms.gov/Outreach-and-Education/Medicare-Learning-Network-MLN/MLNProducts/MLN-Publications.html))
  
 
 
@@ -11851,7 +11851,7 @@ This variable is the count of stays (unique admissions, which may span more than
 
 
 
-The CLM_FROM_DT for the first claim associated with the stay must have been in the year of the data file, however it was permissible for the CLM_THRU_DT to have occurred in January of the following year. 
+The `CLM_FROM_DT` for the first claim associated with the stay must have been in the year of the data file, however it was permissible for the `CLM_THRU_DT` to have occurred in January of the following year. 
 
 
 
@@ -11863,7 +11863,7 @@ Contained in
 
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
-This variable is the sum of Medicare coinsurance and deductible payments in the hospital outpatient setting for a given year. Calculated as the sum of DED_AMT and COIN_AMT for all HOP claims where the CLM_PMT_AMT >= 0.
+This variable is the sum of Medicare coinsurance and deductible payments in the hospital outpatient setting for a given year. Calculated as the sum of `DED_AMT` and `COIN_AMT` for all HOP claims where the `CLM_PMT_AMT` >= 0.
 
 
 
@@ -11873,9 +11873,9 @@ This variable is the sum of Medicare coinsurance and deductible payments in the 
 
 Costs to that beneficiaries are liable for are described in detail on the Medicare.gov website.  There is a CMS publication called "Your Medicare Benefits", which explains the deductibles and coinsurance amounts.
 
-Medicare payments are described in detail in a series of Medicare Payment Advisory Commission (MedPAC) documents called “Payment Basics” (see: http://www.medpac.gov/-documents-/payment-basics).
+Medicare payments are described in detail in a series of Medicare Payment Advisory Commission (MedPAC) documents called “Payment Basics” (see: [here](http://www.medpac.gov/-documents-/payment-basics).)
 
-Also in the Medicare Learning Network (MLN) “Payment System Fact Sheet Series” (see the list of MLN publications at: http://www.cms.gov/Outreach-and-Education/Medicare-Learning-Network-MLN/MLNProducts/MLN-Publications.html)
+Also in the Medicare Learning Network (MLN) “Payment System Fact Sheet Series” (see the list of MLN publications at: [here](http://www.cms.gov/Outreach-and-Education/Medicare-Learning-Network-MLN/MLNProducts/MLN-Publications.html))
  
 
 
@@ -11898,7 +11898,7 @@ This variable is the count of unique emergency department revenue center dates (
 
 Note that additional ED  revenue centers are found in the inpatient data files – if the ED visit resulted in an IP admission at the same facility.
   
-There are 2 variables that contain counts of  ER visits in different settings: this variable and the Inpatient ER (IP_ER_VISITS)
+There are 2 variables that contain counts of  ER visits in different settings: this variable and the Inpatient ER (`IP_ER_VISITS`)
  
 
 
@@ -11911,7 +11911,7 @@ Contained in
 
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
-This variable is the total Medicare payments in the hospital outpatient setting for a given year.  Calculated as the sum of CLM_PMT_AMT for all HOP claims where the CLM_PMT_AMT >= 0.
+This variable is the total Medicare payments in the hospital outpatient setting for a given year.  Calculated as the sum of `CLM_PMT_AMT` for all HOP claims where the `CLM_PMT_AMT` >= 0.
 
 
 
@@ -11919,9 +11919,9 @@ This variable is the total Medicare payments in the hospital outpatient setting 
 
 
 
-Medicare payments are described in detail in a series of Medicare Payment Advisory Commission (MedPAC) documents called “Payment Basics” (see: http://www.medpac.gov/-documents-/payment-basics).
+Medicare payments are described in detail in a series of Medicare Payment Advisory Commission (MedPAC) documents called “Payment Basics” (see: [here](http://www.medpac.gov/-documents-/payment-basics).)
 
-Also in the Medicare Learning Network (MLN) “Payment System Fact Sheet Series” (see the list of MLN publications at: http://www.cms.gov/Outreach-and-Education/Medicare-Learning-Network-MLN/MLNProducts/MLN-Publications.html)
+Also in the Medicare Learning Network (MLN) “Payment System Fact Sheet Series” (see the list of MLN publications at: [here](http://www.cms.gov/Outreach-and-Education/Medicare-Learning-Network-MLN/MLNProducts/MLN-Publications.html))
  
 
 
@@ -11942,9 +11942,9 @@ This variable is the count of unique revenue center dates (as a proxy for visits
 
 
 
-The CLM_FROM_DT for the first claim associated with the stay must have been in the year of the data file, however it was permissible for the CLM_THRU_DT to have occurred in January of the following year.
+The `CLM_FROM_DT` for the first claim associated with the stay must have been in the year of the data file, however it was permissible for the `CLM_THRU_DT` to have occurred in January of the following year.
 
-ER visits in the HOP setting are counted in this variable (also see HOP_ER_VISITS).
+ER visits in the HOP setting are counted in this variable (also see `HOP_ER_VISITS`).
  
 
 
@@ -11957,7 +11957,7 @@ Contained in
 
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
-This variable is the count of hospital readmissions in the acute inpatient setting for a given year.  The CLM_FROM_DT for the original admission must have been in the year of the data file, however it was permissible for the readmission claim to have occurred in January of the following year.  A beneficiary is considered to be readmitted when they have an acute inpatient stay with a discharge status that is not expired (DSCHRG_STUS≠20) or left against medical advice (DSCHRG_STUS≠07) within 30 days of a previous acute inpatient stay with a discharge status that is also not expired or left against medical advice.
+This variable is the count of hospital readmissions in the acute inpatient setting for a given year.  The `CLM_FROM_DT` for the original admission must have been in the year of the data file, however it was permissible for the readmission claim to have occurred in January of the following year.  A beneficiary is considered to be readmitted when they have an acute inpatient stay with a discharge status that is not expired (DSCHRG_STUS≠20) or left against medical advice (DSCHRG_STUS≠07) within 30 days of a previous acute inpatient stay with a discharge status that is also not expired or left against medical advice.
 
 
 
@@ -11965,7 +11965,7 @@ This variable is the count of hospital readmissions in the acute inpatient setti
 
 
 
-All hospital stays during the year, including readmissions, are counted in the ACUTE_STAYS variable.  Similarly, all acute hospital inpatient payments including payments for readmissions are included in the ACUTE_* payment variables. 
+All hospital stays during the year, including readmissions, are counted in the `ACUTE_STAYS` variable.  Similarly, all acute hospital inpatient payments including payments for readmissions are included in the ACUTE_* payment variables. 
  
 
 
@@ -11982,7 +11982,7 @@ This variable indicates whether a beneficiary met the condition criteria for hum
 
 NOTE: The condition variable requires beneficiaries to satisfy both claims criteria (a minimum number/type of Medicare claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (Medicare FFS Part A and Part B coverage during the entire specified time period).
 
-NOTE1: For human immunodeficiency virus and/or acquired immunodeficiency syndrom (HIV/AIDS), beneficiaries must have at least one Medicare inpatient claim or two other non-drug claims of any service type with a related code in any position during the 2-year reference period. You can find more detailed information on the criteria on the CCW website: https://www.ccwdata.org/web/guest/condition-categories
+NOTE1: For human immunodeficiency virus and/or acquired immunodeficiency syndrom (HIV/AIDS), beneficiaries must have at least one Medicare inpatient claim or two other non-drug claims of any service type with a related code in any position during the 2-year reference period. You can find more detailed information on the criteria on the CCW website: [here](https://www.ccwdata.org/web/guest/condition-categories)
 
 
 
@@ -12005,7 +12005,7 @@ Contained in
 
 This variable shows the date when the beneficiary first met the criteria for the human immunodeficiency virus and/or acquired immunodeficiency syndrom (HIV/AIDS) indicator. The variable will be blank for beneficiaries that have never had the condition.
 
-NOTE: The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the COVSTART variable in the Beneficiary File).
+NOTE: The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the `COVSTART` variable in the Beneficiary File).
 
 
 
@@ -12023,7 +12023,7 @@ This variable indicates whether a beneficiary met the chronic condition data war
 
 <h3>Values</h3>
 
-The CCW’s chronic condition flags require beneficiaries to satisfy both claims criteria (a minimum number/type of claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (FFS Part A and Part B coverage during the entire specified time period). For hyperlipidemia, beneficiaries must have at least one inpatient, SNF, or home health claim, or two Part B (institutional or non-institutional) claims, with a hyperlipidemia code in any position during the 1-year reference period. The CCW’s criteria were developed after reviewing validated algorithms from the research literature and criteria used by other federal data sources.  You can find more detailed information on the criteria on the CCW website: https://www.ccwdata.org/web/guest/condition-categories
+The CCW’s chronic condition flags require beneficiaries to satisfy both claims criteria (a minimum number/type of claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (FFS Part A and Part B coverage during the entire specified time period). For hyperlipidemia, beneficiaries must have at least one inpatient, SNF, or home health claim, or two Part B (institutional or non-institutional) claims, with a hyperlipidemia code in any position during the 1-year reference period. The CCW’s criteria were developed after reviewing validated algorithms from the research literature and criteria used by other federal data sources.  You can find more detailed information on the criteria on the CCW website: [here](https://www.ccwdata.org/web/guest/condition-categories)
 
 
 | Code   | Code Value                      |
@@ -12059,7 +12059,7 @@ This variable indicates whether a beneficiary met the chronic condition data war
 
 <h3>Values</h3>
 
-The CCW’s chronic condition flags require beneficiaries to satisfy both claims criteria (a minimum number/type of claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (FFS Part A and Part B coverage during the entire specified time period). For hyperlipidemia, beneficiaries must have at least one inpatient, SNF, or home health claim, or two Part B (institutional or non-institutional) claims, with a hyperlipidemia code in any position during the 1-year reference period. The CCW’s criteria were developed after reviewing validated algorithms from the research literature and criteria used by other federal data sources.  You can find more detailed information on the criteria on the CCW website: https://www.ccwdata.org/web/guest/condition-categories
+The CCW’s chronic condition flags require beneficiaries to satisfy both claims criteria (a minimum number/type of claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (FFS Part A and Part B coverage during the entire specified time period). For hyperlipidemia, beneficiaries must have at least one inpatient, SNF, or home health claim, or two Part B (institutional or non-institutional) claims, with a hyperlipidemia code in any position during the 1-year reference period. The CCW’s criteria were developed after reviewing validated algorithms from the research literature and criteria used by other federal data sources.  You can find more detailed information on the criteria on the CCW website: [here](https://www.ccwdata.org/web/guest/condition-categories)
 
 
 | Code   | Code Value                      |
@@ -12083,7 +12083,7 @@ This variable indicates whether a beneficiary met the chronic condition data war
 
 <h3>Values</h3>
 
-The CCW’s chronic condition flags require beneficiaries to satisfy both claims criteria (a minimum number/type of claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (FFS Part A and Part B coverage during the entire specified time period). For hypertension, beneficiaries must have at least one inpatient, SNF, or home health claim, or two Part B (institutional or non-institutional) claims, with a hypertension code in any position during the 1-year reference period. The CCW’s criteria were developed after reviewing validated algorithms from the research literature and criteria used by other federal data sources.  You can find more detailed information on the criteria on the CCW website: https://www.ccwdata.org/web/guest/condition-categories
+The CCW’s chronic condition flags require beneficiaries to satisfy both claims criteria (a minimum number/type of claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (FFS Part A and Part B coverage during the entire specified time period). For hypertension, beneficiaries must have at least one inpatient, SNF, or home health claim, or two Part B (institutional or non-institutional) claims, with a hypertension code in any position during the 1-year reference period. The CCW’s criteria were developed after reviewing validated algorithms from the research literature and criteria used by other federal data sources.  You can find more detailed information on the criteria on the CCW website: [here](https://www.ccwdata.org/web/guest/condition-categories)
 
 
 | Code   | Code Value                      |
@@ -12109,7 +12109,7 @@ This variable shows the date when the beneficiary first met the criteria for the
 
 
 
-The earliest possible date for anyone in the CCW is January 1, 1999.  If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the COVSTART variable in the Beneficiary File). 
+The earliest possible date for anyone in the CCW is January 1, 1999.  If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the `COVSTART` variable in the Beneficiary File). 
 
 
 
@@ -12127,7 +12127,7 @@ This variable indicates whether a beneficiary met the chronic condition data war
 
 <h3>Values</h3>
 
-The CCW’s chronic condition flags require beneficiaries to satisfy both claims criteria (a minimum number/type of claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (FFS Part A and Part B coverage during the entire specified time period). For hypertension, beneficiaries must have at least one inpatient, SNF, or home health claim, or two Part B (institutional or non-institutional) claims, with a hypertension code in any position during the 1-year reference period. The CCW’s criteria were developed after reviewing validated algorithms from the research literature and criteria used by other federal data sources.  You can find more detailed information on the criteria on the CCW website: https://www.ccwdata.org/web/guest/condition-categories
+The CCW’s chronic condition flags require beneficiaries to satisfy both claims criteria (a minimum number/type of claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (FFS Part A and Part B coverage during the entire specified time period). For hypertension, beneficiaries must have at least one inpatient, SNF, or home health claim, or two Part B (institutional or non-institutional) claims, with a hypertension code in any position during the 1-year reference period. The CCW’s criteria were developed after reviewing validated algorithms from the research literature and criteria used by other federal data sources.  You can find more detailed information on the criteria on the CCW website: [here](https://www.ccwdata.org/web/guest/condition-categories)
 
 
 | Code   | Code Value                      |
@@ -12187,9 +12187,9 @@ Contained in
 
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
-This variable is the sum of coinsurance and deductible payments for imaging services (IMG) for a given year.  The total beneficiary payments are calculated as the sum of LINE_COINSRNC_AMT + LINE_BENE_PTB_DDCTBL_AMT for the relevant lines.  
+This variable is the sum of coinsurance and deductible payments for imaging services (IMG) for a given year.  The total beneficiary payments are calculated as the sum of `LINE_COINSRNC_AMT` + `LINE_BENE_PTB_DDCTBL_AMT` for the relevant lines.  
 
-Claims for imaging procedures are a subset of the claims, and a subset of procedures in the Part B Carrier and DME data files. These imaging claims are defined as those with a line BETOS code (BETOS_CD) where the first digit =I (except for `I1E`, or `I1F` – which are considered Part B drugs).
+Claims for imaging procedures are a subset of the claims, and a subset of procedures in the Part B Carrier and DME data files. These imaging claims are defined as those with a line `BETOS` code (`BETOS`_CD) where the first digit =I (except for `I1E`, or `I1F` – which are considered Part B drugs).
 
 
 
@@ -12211,7 +12211,7 @@ Contained in
 
 This variable is the count of events for imaging services (IMG) for a given year.  An event is defined as each line item that contains the relevant service. Claims for imaging procedures are a subset of the claims, and a subset of procedures in the Part B Carrier and DME data files. 
 
-These imaging claims are defined as those with a line BETOS code (BETOS_CD) where the first digit =I (except for `I1E`, or `I1F` – which are considered Part B drugs).
+These imaging claims are defined as those with a line `BETOS` code (`BETOS`_CD) where the first digit =I (except for `I1E`, or `I1F` – which are considered Part B drugs).
 
 
 
@@ -12231,9 +12231,9 @@ Contained in
 
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
-"This variable is the total Medicare payments for imaging services (IMG) for a given year.  Claims for imaging procedures are a subset of the claims, and a subset of procedures in the Part B Carrier and DME data files. These imaging claims are defined as those with a line BETOS code (BETOS_CD) where the first digit =I (except for `I1E`, or `I1F` – which are considered Part B drugs).
+"This variable is the total Medicare payments for imaging services (IMG) for a given year.  Claims for imaging procedures are a subset of the claims, and a subset of procedures in the Part B Carrier and DME data files. These imaging claims are defined as those with a line `BETOS` code (`BETOS`_CD) where the first digit =I (except for `I1E`, or `I1F` – which are considered Part B drugs).
 
-The total Medicare payments are calculated as the sum of LINE_NCH_PMT_AMT where the LINE_PRCSG_IND_CD was ('A','R', or 'S') - for all relevant lines."
+The total Medicare payments are calculated as the sum of `LINE_NCH_PMT_AMT` where the `LINE_PRCSG_IND_CD` was ('A','R', or 'S') - for all relevant lines."
 
 
 
@@ -12262,9 +12262,9 @@ This variable is the count of emergency department claims in the inpatient setti
 
 
 
-Note that additional ED  revenue centers are found in the HOP data files – if the ED visit did not result in an IP admission at the same facility.  See the variable HOP_ER_VISITS  within this data file).
+Note that additional ED  revenue centers are found in the HOP data files – if the ED visit did not result in an IP admission at the same facility.  See the variable `HOP_ER_VISITS`  within this data file).
 
-There are 2 variables that contain counts of  ER visits in different settings: this variable and the Hospital Outpatient ER (HOP_ER_VISITS) 
+There are 2 variables that contain counts of  ER visits in different settings: this variable and the Hospital Outpatient ER (`HOP_ER_VISITS`) 
 
 
 
@@ -12280,7 +12280,7 @@ This variable indicates whether a beneficiary met the condition criteria for int
 
 NOTE: The condition variable requires beneficiaries to satisfy both claims criteria (a minimum number/type of Medicare claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (Medicare FFS Part A and Part B coverage during the entire specified time period).
 
-NOTE1: For intellectual disabilities and related conditions, beneficiaries must have at least one Medicare inpatient claim or two other non-drug claims of any service type with a related code in any position during the 2-year reference period. You can find more detailed information on the criteria on the CCW website: https://www.ccwdata.org/web/guest/condition-categories
+NOTE1: For intellectual disabilities and related conditions, beneficiaries must have at least one Medicare inpatient claim or two other non-drug claims of any service type with a related code in any position during the 2-year reference period. You can find more detailed information on the criteria on the CCW website: [here](https://www.ccwdata.org/web/guest/condition-categories)
 
 
 
@@ -12303,7 +12303,7 @@ Contained in
 
 This variable shows the date when the beneficiary first met the criteria for the intellectual disabilities and related conditions indicator. The variable will be blank for beneficiaries that have never had the condition.
 
-NOTE: The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the COVSTART variable in the Beneficiary File).
+NOTE: The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the `COVSTART` variable in the Beneficiary File).
 
 
 
@@ -12361,7 +12361,7 @@ This variable indicates whether a beneficiary met the condition criteria for lea
 
 NOTE: The condition variable requires beneficiaries to satisfy both claims criteria (a minimum number/type of Medicare claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (Medicare FFS Part A and Part B coverage during the entire specified time period).
 
-NOTE1: For learning disabilities, beneficiaries must have at least one Medicare inpatient claim or two other non-drug claims of any service type with a related code in any position during the 2-year reference period. You can find more detailed information on the criteria on the CCW website: https://www.ccwdata.org/web/guest/condition-categories
+NOTE1: For learning disabilities, beneficiaries must have at least one Medicare inpatient claim or two other non-drug claims of any service type with a related code in any position during the 2-year reference period. You can find more detailed information on the criteria on the CCW website: [here](https://www.ccwdata.org/web/guest/condition-categories)
 
 
 
@@ -12384,7 +12384,7 @@ Contained in
 
 This variable shows the date when the beneficiary first met the criteria for the learning disabilities indicator. The variable will be blank for beneficiaries that have never had the condition.
 
-NOTE: The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the COVSTART variable in the Beneficiary File).
+NOTE: The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the `COVSTART` variable in the Beneficiary File).
 
 
 
@@ -12400,7 +12400,7 @@ This variable indicates whether a beneficiary met the condition criteria for leu
 
 NOTE: The condition variable requires beneficiaries to satisfy both claims criteria (a minimum number/type of Medicare claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (Medicare FFS Part A and Part B coverage during the entire specified time period).
 
-NOTE1: For leukemias and lymphomas, beneficiaries must have at least one Medicare inpatient claim or two other non-drug claims of any service type with a related code in any position during the 2-year reference period. You can find more detailed information on the criteria on the CCW website: https://www.ccwdata.org/web/guest/condition-categories
+NOTE1: For leukemias and lymphomas, beneficiaries must have at least one Medicare inpatient claim or two other non-drug claims of any service type with a related code in any position during the 2-year reference period. You can find more detailed information on the criteria on the CCW website: [here](https://www.ccwdata.org/web/guest/condition-categories)
 
 
 
@@ -12423,7 +12423,7 @@ Contained in
 
 This variable shows the date when the beneficiary first met the criteria for the leukemias and lymphomas indicator. The variable will be blank for beneficiaries that have never had the condition.
 
-NOTE: The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the COVSTART variable in the Beneficiary File).
+NOTE: The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the `COVSTART` variable in the Beneficiary File).
 
 
 
@@ -12887,7 +12887,7 @@ Contained in
 - [Durable Medical Equipment RIF](../dme-rif.md#data-documentation)
 - [Carrier RIF](../carrier-rif.md#data-documentation)
 
-Effective with Version H, the Berenson-Eggers type of service (BETOS) for the procedure code based on generally agreed upon clinically meaningful groupings of procedures and services. This field is included as a line item on the noninstitutional claim.
+Effective with Version H, the Berenson-Eggers type of service (`BETOS`) for the procedure code based on generally agreed upon clinically meaningful groupings of procedures and services. This field is included as a line item on the noninstitutional claim.
 
 NOTE: During the Version H conversion this field was populated with data throughout history (back to service year 1991).
 
@@ -12899,7 +12899,7 @@ NOTE: During the Version H conversion this field was populated with data through
 
 
 
- BETOS Table.txt 
+ `BETOS` Table.txt 
 
 
 
@@ -12998,7 +12998,7 @@ Contained in
 The field used to identify amounts that were used to adjust the amount payable when processing the line item.
 
 See the associated line other applied indicator code in the LINE_OTHR_APLD_IND_CD{#} field.
-There are up to 7 of these line applied amount fields (LINE_OTHR_APLD_AMT1 - LINE_OTHR_APLD_AMT7).
+There are up to 7 of these line applied amount fields (`LINE_OTHR_APLD_AMT1` - `LINE_OTHR_APLD_AMT7`).
 
 
 
@@ -13021,7 +13021,7 @@ Contained in
 The field used to identify amounts that were used to adjust the amount payable when processing the line item.
 
 See the associated line other applied indicator code in the LINE_OTHR_APLD_IND_CD{#} field.
-There are up to 7 of these line applied amount fields (LINE_OTHR_APLD_AMT1 - LINE_OTHR_APLD_AMT7).
+There are up to 7 of these line applied amount fields (`LINE_OTHR_APLD_AMT1` - `LINE_OTHR_APLD_AMT7`).
 
 
 
@@ -13044,7 +13044,7 @@ Contained in
 The field used to identify amounts that were used to adjust the amount payable when processing the line item.
 
 See the associated line other applied indicator code in the LINE_OTHR_APLD_IND_CD{#} field.
-There are up to 7 of these line applied amount fields (LINE_OTHR_APLD_AMT1 - LINE_OTHR_APLD_AMT7).
+There are up to 7 of these line applied amount fields (`LINE_OTHR_APLD_AMT1` - `LINE_OTHR_APLD_AMT7`).
 
 
 
@@ -13067,7 +13067,7 @@ Contained in
 The field used to identify amounts that were used to adjust the amount payable when processing the line item.
 
 See the associated line other applied indicator code in the LINE_OTHR_APLD_IND_CD{#} field.
-There are up to 7 of these line applied amount fields (LINE_OTHR_APLD_AMT1 - LINE_OTHR_APLD_AMT7).
+There are up to 7 of these line applied amount fields (`LINE_OTHR_APLD_AMT1` - `LINE_OTHR_APLD_AMT7`).
 
 
 
@@ -13090,7 +13090,7 @@ Contained in
 The field used to identify amounts that were used to adjust the amount payable when processing the line item.
 
 See the associated line other applied indicator code in the LINE_OTHR_APLD_IND_CD{#} field.
-There are up to 7 of these line applied amount fields (LINE_OTHR_APLD_AMT1 - LINE_OTHR_APLD_AMT7).
+There are up to 7 of these line applied amount fields (`LINE_OTHR_APLD_AMT1` - `LINE_OTHR_APLD_AMT7`).
 
 
 
@@ -13113,7 +13113,7 @@ Contained in
 The field used to identify amounts that were used to adjust the amount payable when processing the line item.
 
 See the associated line other applied indicator code in the LINE_OTHR_APLD_IND_CD{#} field.
-There are up to 7 of these line applied amount fields (LINE_OTHR_APLD_AMT1 - LINE_OTHR_APLD_AMT7).
+There are up to 7 of these line applied amount fields (`LINE_OTHR_APLD_AMT1` - `LINE_OTHR_APLD_AMT7`).
 
 
 
@@ -13136,7 +13136,7 @@ Contained in
 The field used to identify amounts that were used to adjust the amount payable when processing the line item.
 
 See the associated line other applied indicator code in the LINE_OTHR_APLD_IND_CD{#} field.
-There are up to 7 of these line applied amount fields (LINE_OTHR_APLD_AMT1 - LINE_OTHR_APLD_AMT7).
+There are up to 7 of these line applied amount fields (`LINE_OTHR_APLD_AMT1` - `LINE_OTHR_APLD_AMT7`).
 
 
 
@@ -13159,7 +13159,7 @@ Contained in
 The code used to identify the reason the claim payment amount was adjusted during claims processing.
 
 See the associated amounts in the LINE_OTHR_APLD_AMT{#} field.
-There are up to 7 of these line applied indicator fields (LINE_OTHR_APLD_IND_CD1 - LINE_OTHR_APLD_IND_CD7).
+There are up to 7 of these line applied indicator fields (`LINE_OTHR_APLD_IND_CD1` - `LINE_OTHR_APLD_IND_CD7`).
 
 
 
@@ -13184,7 +13184,7 @@ Contained in
 The code used to identify the reason the claim payment amount was adjusted during claims processing.
 
 See the associated amounts in the LINE_OTHR_APLD_AMT{#} field.
-There are up to 7 of these line applied indicator fields (LINE_OTHR_APLD_IND_CD1 - LINE_OTHR_APLD_IND_CD7).
+There are up to 7 of these line applied indicator fields (`LINE_OTHR_APLD_IND_CD1` - `LINE_OTHR_APLD_IND_CD7`).
 
 
 
@@ -13209,7 +13209,7 @@ Contained in
 The code used to identify the reason the claim payment amount was adjusted during claims processing.
 
 See the associated amounts in the LINE_OTHR_APLD_AMT{#} field.
-There are up to 7 of these line applied indicator fields (LINE_OTHR_APLD_IND_CD1 - LINE_OTHR_APLD_IND_CD7).
+There are up to 7 of these line applied indicator fields (`LINE_OTHR_APLD_IND_CD1` - `LINE_OTHR_APLD_IND_CD7`).
 
 
 
@@ -13234,7 +13234,7 @@ Contained in
 The code used to identify the reason the claim payment amount was adjusted during claims processing.
 
 See the associated amounts in the LINE_OTHR_APLD_AMT{#} field.
-There are up to 7 of these line applied indicator fields (LINE_OTHR_APLD_IND_CD1 - LINE_OTHR_APLD_IND_CD7).
+There are up to 7 of these line applied indicator fields (`LINE_OTHR_APLD_IND_CD1` - `LINE_OTHR_APLD_IND_CD7`).
 
 
 
@@ -13259,7 +13259,7 @@ Contained in
 The code used to identify the reason the claim payment amount was adjusted during claims processing.
 
 See the associated amounts in the LINE_OTHR_APLD_AMT{#} field.
-There are up to 7 of these line applied indicator fields (LINE_OTHR_APLD_IND_CD1 - LINE_OTHR_APLD_IND_CD7).
+There are up to 7 of these line applied indicator fields (`LINE_OTHR_APLD_IND_CD1` - `LINE_OTHR_APLD_IND_CD7`).
 
 
 
@@ -13284,7 +13284,7 @@ Contained in
 The code used to identify the reason the claim payment amount was adjusted during claims processing.
 
 See the associated amounts in the LINE_OTHR_APLD_AMT{#} field.
-There are up to 7 of these line applied indicator fields (LINE_OTHR_APLD_IND_CD1 - LINE_OTHR_APLD_IND_CD7).
+There are up to 7 of these line applied indicator fields (`LINE_OTHR_APLD_IND_CD1` - `LINE_OTHR_APLD_IND_CD7`).
 
 
 
@@ -13309,7 +13309,7 @@ Contained in
 The code used to identify the reason the claim payment amount was adjusted during claims processing.
 
 See the associated amounts in the LINE_OTHR_APLD_AMT{#} field.
-There are up to 7 of these line applied indicator fields (LINE_OTHR_APLD_IND_CD1 - LINE_OTHR_APLD_IND_CD7).
+There are up to 7 of these line applied indicator fields (`LINE_OTHR_APLD_IND_CD1` - `LINE_OTHR_APLD_IND_CD7`).
 
 
 
@@ -13367,7 +13367,7 @@ The code indicating the place of service, as defined in the Medicare Carrier Man
 
 
 
-List obtained from https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set.html Place of Service Table.txt 
+List obtained from [here](https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set.html) Place of Service Table.txt 
 
 
 
@@ -13583,7 +13583,7 @@ Contained in
 
 The field used to identify whether the claim line is subject to a therapy cap.
 
-Details regarding the therapy cap can be found on the CMS website, under the Medicare therapy services web page (see, for example: https://www.cms.gov/Medicare/Billing/TherapyServices/index.html).
+Details regarding the therapy cap can be found on the CMS website, under the Medicare therapy services web page (see, for example: [here](https://www.cms.gov/Medicare/Billing/TherapyServices/index.html).)
 
 
 
@@ -13607,7 +13607,7 @@ Contained in
 
 The field used to identify whether the claim line is subject to a therapy cap.
 
-Details regarding the therapy cap can be found on the CMS website, under the Medicare therapy services web page (see, for example: https://www.cms.gov/Medicare/Billing/TherapyServices/index.html).
+Details regarding the therapy cap can be found on the CMS website, under the Medicare therapy services web page (see, for example: [here](https://www.cms.gov/Medicare/Billing/TherapyServices/index.html).)
 
 
 
@@ -13631,7 +13631,7 @@ Contained in
 
 The field used to identify whether the claim line is subject to a therapy cap.
 
-Details regarding the therapy cap can be found on the CMS website, under the Medicare therapy services web page (see, for example: https://www.cms.gov/Medicare/Billing/TherapyServices/index.html).
+Details regarding the therapy cap can be found on the CMS website, under the Medicare therapy services web page (see, for example: [here](https://www.cms.gov/Medicare/Billing/TherapyServices/index.html).)
 
 
 
@@ -13655,7 +13655,7 @@ Contained in
 
 The field used to identify whether the claim line is subject to a therapy cap.
 
-Details regarding the therapy cap can be found on the CMS website, under the Medicare therapy services web page (see, for example: https://www.cms.gov/Medicare/Billing/TherapyServices/index.html).
+Details regarding the therapy cap can be found on the CMS website, under the Medicare therapy services web page (see, for example: [here](https://www.cms.gov/Medicare/Billing/TherapyServices/index.html).)
 
 
 
@@ -13679,7 +13679,7 @@ Contained in
 
 The field used to identify whether the claim line is subject to a therapy cap.
 
-Details regarding the therapy cap can be found on the CMS website, under the Medicare therapy services web page (see, for example: https://www.cms.gov/Medicare/Billing/TherapyServices/index.html).
+Details regarding the therapy cap can be found on the CMS website, under the Medicare therapy services web page (see, for example: [here](https://www.cms.gov/Medicare/Billing/TherapyServices/index.html).)
 
 
 
@@ -13723,7 +13723,7 @@ Contained in
 
 This variable shows the date when the beneficiary first met the criteria for the liver disease, cirrhosis and other liver conditions (excluding hepatitis) indicator.The variable will be blank for beneficiaries that have never had the condition.
 
-NOTE: The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the COVSTART variable in the Beneficiary File).
+NOTE: The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the `COVSTART` variable in the Beneficiary File).
 
 
 
@@ -13741,7 +13741,7 @@ This variable indicates whether a beneficiary met the chronic condition data war
 
 <h3>Values</h3>
 
-The CCW’s chronic condition flags require beneficiaries to satisfy both claims criteria (a minimum number/type of claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (FFS Part A and Part B coverage during the entire specified time period). For lung cancer, beneficiaries must have at least one inpatient or SNF claim, or two Part B (institutional or non-institutional) claims that are at least one day apart, with a lung cancer code in any position during the 1-year reference period. The CCW’s criteria were developed after reviewing validated algorithms from the research literature and criteria used by other federal data sources.  You can find more detailed information on the criteria on the CCW website: https://www.ccwdata.org/web/guest/condition-categories
+The CCW’s chronic condition flags require beneficiaries to satisfy both claims criteria (a minimum number/type of claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (FFS Part A and Part B coverage during the entire specified time period). For lung cancer, beneficiaries must have at least one inpatient or SNF claim, or two Part B (institutional or non-institutional) claims that are at least one day apart, with a lung cancer code in any position during the 1-year reference period. The CCW’s criteria were developed after reviewing validated algorithms from the research literature and criteria used by other federal data sources.  You can find more detailed information on the criteria on the CCW website: [here](https://www.ccwdata.org/web/guest/condition-categories)
 
 
 | Code   | Code Value                      |
@@ -13765,7 +13765,7 @@ This variable indicates whether a beneficiary met the chronic condition data war
 
 <h3>Values</h3>
 
-The CCW’s chronic condition flags require beneficiaries to satisfy both claims criteria (a minimum number/type of claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (FFS Part A and Part B coverage during the entire specified time period). For lung cancer, beneficiaries must have at least one inpatient or SNF claim, or two Part B (institutional or non-institutional) claims that are at least one day apart, with a lung cancer code in any position during the 1-year reference period. The CCW’s criteria were developed after reviewing validated algorithms from the research literature and criteria used by other federal data sources.  You can find more detailed information on the criteria on the CCW website: https://www.ccwdata.org/web/guest/condition-categories
+The CCW’s chronic condition flags require beneficiaries to satisfy both claims criteria (a minimum number/type of claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (FFS Part A and Part B coverage during the entire specified time period). For lung cancer, beneficiaries must have at least one inpatient or SNF claim, or two Part B (institutional or non-institutional) claims that are at least one day apart, with a lung cancer code in any position during the 1-year reference period. The CCW’s criteria were developed after reviewing validated algorithms from the research literature and criteria used by other federal data sources.  You can find more detailed information on the criteria on the CCW website: [here](https://www.ccwdata.org/web/guest/condition-categories)
 
 
 | Code   | Code Value                      |
@@ -14084,7 +14084,7 @@ Contained in
 
 - [MedPAR RIF](../medpar-rif.md#data-documentation)
 
-The code used to identify the status of the patient as of the CLM_THRU_DT.
+The code used to identify the status of the patient as of the `CLM_THRU_DT`.
 
 ??? derivation
 	This field is derived from the claim status code that is present on the last claim record included in the stay.
@@ -14105,7 +14105,7 @@ Contained in
 
 - [MedPAR RIF](../medpar-rif.md#data-documentation)
 
-The BIC reported on the first claim record included in the stay, representing the values existing on the CWF beneficiary master record on the date the CWF host site processed the claim.
+The `BIC` reported on the first claim record included in the stay, representing the values existing on the CWF beneficiary master record on the date the CWF host site processed the claim.
 
 
 
@@ -15926,7 +15926,7 @@ NOTE3: Effective with Version 'J', 3 new code values have been added to include 
 
 <h3>Values</h3>
 
-In the data element NCH_CLM_TYPE_CD (derivation rules) the numbers for these claim types need to be changed - dictionary reflects 61 for all three.
+In the data element `NCH_CLM_TYPE_CD` (derivation rules) the numbers for these claim types need to be changed - dictionary reflects 61 for all three.
 
 | Code   | Code Value                             |
 |:-------|:---------------------------------------|
@@ -17207,7 +17207,7 @@ This variable indicates whether a beneficiary met the condition criteria for maj
 
 NOTE: The condition variable requires beneficiaries to satisfy both claims criteria (a minimum number/type of Medicare claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (Medicare FFS Part A and Part B coverage during the entire specified time period).
 
-NOTE1: For major depressive affective disorder, beneficiaries must have at least one Medicare inpatient claim or two other non-drug claims of any service type with a related code in any position during the 2-year reference period. You can find more detailed information on the criteria on the CCW website: https://www.ccwdata.org/web/guest/condition-categories
+NOTE1: For major depressive affective disorder, beneficiaries must have at least one Medicare inpatient claim or two other non-drug claims of any service type with a related code in any position during the 2-year reference period. You can find more detailed information on the criteria on the CCW website: [here](https://www.ccwdata.org/web/guest/condition-categories)
 
 
 
@@ -17230,7 +17230,7 @@ Contained in
 
 This variable shows the date when the beneficiary first met the criteria for the major depressive affective disorder indicator. The variable will be blank for beneficiaries that have never had the condition.
 
-NOTE: The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the COVSTART variable in the Beneficiary File).
+NOTE: The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the `COVSTART` variable in the Beneficiary File).
 
 
 
@@ -18363,7 +18363,7 @@ This variable indicates whether a beneficiary met the condition criteria for mig
 
 NOTE: The condition variable requires beneficiaries to satisfy both claims criteria (a minimum number/type of Medicare claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (Medicare FFS Part A and Part B coverage during the entire specified time period).
 
-NOTE1: For migraine and other chronic headache, beneficiaries must have at least one Medicare inpatient claim or two other non-drug claims of any service type with a related code in any position during the 2-year reference period. You can find more detailed information on the criteria on the CCW website: https://www.ccwdata.org/web/guest/condition-categories
+NOTE1: For migraine and other chronic headache, beneficiaries must have at least one Medicare inpatient claim or two other non-drug claims of any service type with a related code in any position during the 2-year reference period. You can find more detailed information on the criteria on the CCW website: [here](https://www.ccwdata.org/web/guest/condition-categories)
 
 
 
@@ -18386,7 +18386,7 @@ Contained in
 
 This variable shows the date when the beneficiary first met the criteria for the migraine and other chronic headache indicator. The variable will be blank for beneficiaries that have never had the condition.
 
-NOTE: The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the COVSTART variable in the Beneficiary File).
+NOTE: The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the `COVSTART` variable in the Beneficiary File).
 
 
 
@@ -18402,7 +18402,7 @@ This variable indicates whether a beneficiary met the condition criteria for mob
 
 NOTE: The condition variable requires beneficiaries to satisfy both claims criteria (a minimum number/type of Medicare claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (Medicare FFS Part A and Part B coverage during the entire specified time period).
 
-NOTE1: For mobility impairments, beneficiaries must have at least one Medicare inpatient claim or two other non-drug claims of any service type with a related code in any position during the 2-year reference period. You can find more detailed information on the criteria on the CCW website: https://www.ccwdata.org/web/guest/condition-categories
+NOTE1: For mobility impairments, beneficiaries must have at least one Medicare inpatient claim or two other non-drug claims of any service type with a related code in any position during the 2-year reference period. You can find more detailed information on the criteria on the CCW website: [here](https://www.ccwdata.org/web/guest/condition-categories)
 
 
 
@@ -18425,7 +18425,7 @@ Contained in
 
 This variable shows the date when the beneficiary first met the criteria for the mobility impairments indicator. The variable will be blank for beneficiaries that have never had the condition.
 
-NOTE: The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the COVSTART variable in the Beneficiary File).
+NOTE: The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the `COVSTART` variable in the Beneficiary File).
 
 
 
@@ -18510,7 +18510,7 @@ This variable indicates whether a beneficiary met the condition criteria for mul
 
 NOTE: The condition variable requires beneficiaries to satisfy both claims criteria (a minimum number/type of Medicare claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (Medicare FFS Part A and Part B coverage during the entire specified time period).
 
-NOTE1: For multiple sclerosis and transverse myelitis, beneficiaries must have at least one Medicare inpatient claim or two other non-drug claims of any service type with a related code in any position during the 2-year reference period. You can find more detailed information on the criteria on the CCW website: https://www.ccwdata.org/web/guest/condition-categories
+NOTE1: For multiple sclerosis and transverse myelitis, beneficiaries must have at least one Medicare inpatient claim or two other non-drug claims of any service type with a related code in any position during the 2-year reference period. You can find more detailed information on the criteria on the CCW website: [here](https://www.ccwdata.org/web/guest/condition-categories)
 
 
 
@@ -18533,7 +18533,7 @@ Contained in
 
 This variable shows the date when the beneficiary first met the criteria for the multiple sclerosis and transverse myelitis indicator. The variable will be blank for beneficiaries that have never had the condition.
 
-NOTE: The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the COVSTART variable in the Beneficiary File).
+NOTE: The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the `COVSTART` variable in the Beneficiary File).
 
 
 
@@ -18549,7 +18549,7 @@ This variable indicates whether a beneficiary met the condition criteria for mus
 
 NOTE: The condition variable requires beneficiaries to satisfy both claims criteria (a minimum number/type of Medicare claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (Medicare FFS Part A and Part B coverage during the entire specified time period).
 
-NOTE1: For muscular dystrophy, beneficiaries must have at least one Medicare inpatient claim or two other non-drug claims of any service type with a related code in any position during the 2-year reference period. You can find more detailed information on the criteria on the CCW website: https://www.ccwdata.org/web/guest/condition-categories
+NOTE1: For muscular dystrophy, beneficiaries must have at least one Medicare inpatient claim or two other non-drug claims of any service type with a related code in any position during the 2-year reference period. You can find more detailed information on the criteria on the CCW website: [here](https://www.ccwdata.org/web/guest/condition-categories)
 
 
 
@@ -18572,7 +18572,7 @@ Contained in
 
 This variable shows the date when the beneficiary first met the criteria for the muscular dystrophy indicator. The variable will be blank for beneficiaries that have never had the condition.
 
-NOTE: The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the COVSTART variable in the Beneficiary File).
+NOTE: The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the `COVSTART` variable in the Beneficiary File).
 
 
 
@@ -18668,7 +18668,7 @@ Contained in
 
 On an inpatient or Home Health claim, the date the beneficiary was discharged from the facility, or died.
 
-Date matches the "thru" date on the claim (CLM_THRU_DT). When there is a discharge date, the discharge status code (PTNT_DSCHRG_STUS_CD) indicates the final disposition of the patient after discharge.
+Date matches the "thru" date on the claim (`CLM_THRU_DT`). When there is a discharge date, the discharge status code (`PTNT_DSCHRG_STUS_CD`) indicates the final disposition of the patient after discharge.
 
 ??? derivation
 	DERIVED FROM:
@@ -19392,7 +19392,7 @@ Contained in
 
 This field is the amount of physician and other professional charges covered under Medicare Part B.
 
-This variable is not populated for Home Health or Hospice claims. This field is used for CMS editing purposes and other internal processes (e.g. if computing interim payments, then these charges are deducted). The source of information for this field for institutional claims is the CLM_VAL_AMT (when the code = 04 or 05, it indicates a professional component charge amount). For Outpatient claims, this information is from the revenue center codes (when the code=096*, 097* or 098*, then the REV_CNTR_TOT_CHRG_AMT indicates a professional component charge amount).
+This variable is not populated for Home Health or Hospice claims. This field is used for CMS editing purposes and other internal processes (e.g. if computing interim payments, then these charges are deducted). The source of information for this field for institutional claims is the `CLM_VAL_AMT` (when the code = 04 or 05, it indicates a professional component charge amount). For Outpatient claims, this information is from the revenue center codes (when the code=096*, 097* or 098*, then the `REV_CNTR_TOT_CHRG_AMT` indicates a professional component charge amount).
 
 
 
@@ -19845,7 +19845,7 @@ This variable indicates whether a beneficiary met the condition criteria for obe
 
 NOTE: The condition variable requires beneficiaries to satisfy both claims criteria (a minimum number/type of Medicare claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (Medicare FFS Part A and Part B coverage during the entire specified time period).
 
-NOTE1: For obesity, beneficiaries must have at least one Medicare inpatient claim or two other non-drug claims of any service type with a related code in any position during the 2-year reference period. You can find more detailed information on the criteria on the CCW website: https://www.ccwdata.org/web/guest/condition-categories
+NOTE1: For obesity, beneficiaries must have at least one Medicare inpatient claim or two other non-drug claims of any service type with a related code in any position during the 2-year reference period. You can find more detailed information on the criteria on the CCW website: [here](https://www.ccwdata.org/web/guest/condition-categories)
 
 
 
@@ -19868,7 +19868,7 @@ Contained in
 
 This variable shows the date when the beneficiary first met the criteria for the obesity indicator. The variable will be blank for beneficiaries that have never had the condition.
 
-NOTE: The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the COVSTART variable in the Beneficiary File).
+NOTE: The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the `COVSTART` variable in the Beneficiary File).
 
 
 
@@ -19962,7 +19962,7 @@ CMS obtains this information from the Social Security Administration (SSA) and R
 
 | Code   | Code Value                             |
 |:-------|:---------------------------------------|
-| 0      | OLD AGE AND SURVIVORS INSURANCE (OASI) |
+| 0      | OLD `AGE` AND SURVIVORS INSURANCE (OASI) |
 | 1      | DISABILITY INSURANCE BENEFITS (DIB)    |
 | 2      | ESRD                                   |
 | 3      | BOTH DIB AND ESRD                      |
@@ -20021,7 +20021,7 @@ This variable indicates whether a beneficiary met the condition criteria for oth
 
 NOTE: The condition variable requires beneficiaries to satisfy both claims criteria (a minimum number/type of Medicare claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (Medicare FFS Part A and Part B coverage during the entire specified time period).
 
-NOTE1: For other developmental delays, beneficiaries must have at least one Medicare inpatient claim or two other non-drug claims of any service type with a related code in any position during the 2-year reference period. You can find more detailed information on the criteria on the CCW website: https://www.ccwdata.org/web/guest/condition-categories
+NOTE1: For other developmental delays, beneficiaries must have at least one Medicare inpatient claim or two other non-drug claims of any service type with a related code in any position during the 2-year reference period. You can find more detailed information on the criteria on the CCW website: [here](https://www.ccwdata.org/web/guest/condition-categories)
 
 
 
@@ -20044,7 +20044,7 @@ Contained in
 
 This variable shows the date when the beneficiary first met the criteria for the other developmental delays indicator. The variable will be blank for beneficiaries that have never had the condition.
 
-NOTE: The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the COVSTART variable in the Beneficiary File).
+NOTE: The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the `COVSTART` variable in the Beneficiary File).
 
 
 
@@ -20056,7 +20056,7 @@ Contained in
 
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
-This variable is the sum of Medicare coinsurance and deductible payments in the non-acute inpatient hospital setting for the year.  The total “other” inpatient (OIP) beneficiary payments are calculated as the sum of NCH_BENE_IP_DDCTBL_AMT and NCH_BENE_PTA_COINSRNC_LBLTY_AM for all relevant claims where the CLM_PMT_AMT >= 0.  
+This variable is the sum of Medicare coinsurance and deductible payments in the non-acute inpatient hospital setting for the year.  The total “other” inpatient (OIP) beneficiary payments are calculated as the sum of `NCH_BENE_IP_DDCTBL_AMT` and `NCH_BENE_PTA_COINSRNC_LBLTY_AM` for all relevant claims where the `CLM_PMT_AMT` >= 0.  
 
 These OIP claims are a subset of the claims in the IP data file consisting of data from IP settings such as long-term care hospitals, inpatient psychiatric facilities, inpatient rehabilitation facilities, and other types of IP facilities such as children’s hospitals or cancer centers.
 
@@ -20070,9 +20070,9 @@ There are 2 cost/use categories from the IP data files: Acute and the OIP.
 
 Costs to that beneficiaries are liable for are described in detail on the Medicare.gov website. There is a CMS publication called "Your Medicare Benefits", which explains the deductibles and coinsurance amounts.
 
-Medicare payments are described in detail in a series of Medicare Payment Advisory Commission (MedPAC) documents called “Payment Basics” (see: http://www.medpac.gov/-documents-/payment-basics).
+Medicare payments are described in detail in a series of Medicare Payment Advisory Commission (MedPAC) documents called “Payment Basics” (see: [here](http://www.medpac.gov/-documents-/payment-basics).)
 
-Also in the Medicare Learning Network (MLN) “Payment System Fact Sheet Series” (see the list of MLN publications at: http://www.cms.gov/Outreach-and-Education/Medicare-Learning-Network-MLN/MLNProducts/MLN-Publications.html)
+Also in the Medicare Learning Network (MLN) “Payment System Fact Sheet Series” (see the list of MLN publications at: [here](http://www.cms.gov/Outreach-and-Education/Medicare-Learning-Network-MLN/MLNProducts/MLN-Publications.html))
  
 
 
@@ -20085,7 +20085,7 @@ Contained in
 
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
-This variable is the count of covered days in the non-acute inpatient setting for a given year.  The CCW variable CLM_UTLZTN_DAY_CNT is used to obtain this variable.   These “other” inpatient (OIP) claims are a subset of the claims in the IP data file consisting of data from IP settings such as long-term care hospitals, inpatient psychiatric facilities, inpatient rehabilitation facilities, and other types of IP facilities such as children’s hospitals or cancer centers.
+This variable is the count of covered days in the non-acute inpatient setting for a given year.  The CCW variable `CLM_UTLZTN_DAY_CNT` is used to obtain this variable.   These “other” inpatient (OIP) claims are a subset of the claims in the IP data file consisting of data from IP settings such as long-term care hospitals, inpatient psychiatric facilities, inpatient rehabilitation facilities, and other types of IP facilities such as children’s hospitals or cancer centers.
 
 
 
@@ -20097,9 +20097,9 @@ We consider fully-covered days, days where the beneficiary was liable for coinsu
 
 There are 2 cost/use categories from the IP data files: Acute and the OIP.
 
-Medicare payments are described in detail in a series of Medicare Payment Advisory Commission (MedPAC) documents called “Payment Basics” (see: http://www.medpac.gov/-documents-/payment-basics).
+Medicare payments are described in detail in a series of Medicare Payment Advisory Commission (MedPAC) documents called “Payment Basics” (see: [here](http://www.medpac.gov/-documents-/payment-basics).)
 
-Also in the Medicare Learning Network (MLN) “Payment System Fact Sheet Series” (see the list of MLN publications at: http://www.cms.gov/Outreach-and-Education/Medicare-Learning-Network-MLN/MLNProducts/MLN-Publications.html) 
+Also in the Medicare Learning Network (MLN) “Payment System Fact Sheet Series” (see the list of MLN publications at: [here](http://www.cms.gov/Outreach-and-Education/Medicare-Learning-Network-MLN/MLNProducts/MLN-Publications.html)) 
 
 
 
@@ -20111,7 +20111,7 @@ Contained in
 
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
-This variable is the sum of the Medicare claim payment amounts (CLM_PMT_AMT from each claim) in the other inpatient (OIP) settings for a given year.  To obtain the total OIP Medicare payments, take this variable and add in the annual per diem payment amount (OIP_MDCR_PMT +  OIP_PERDIEM_AMT).
+This variable is the sum of the Medicare claim payment amounts (`CLM_PMT_AMT` from each claim) in the other inpatient (OIP) settings for a given year.  To obtain the total OIP Medicare payments, take this variable and add in the annual per diem payment amount (`OIP_MDCR_PMT` +  OIP_PERDIEM_AMT).
 .
 
 These OIP claims are a subset of the claims in the IP data file consisting of data from IP settings such as long-term care hospitals, inpatient psychiatric facilities, inpatient rehabilitation facilities, and other types of IP facilities such as children’s hospitals or cancer centers.
@@ -20128,9 +20128,9 @@ OIP_PERDIEM_PMT must be added to this field to obtain the total Medicare payment
 
 Costs to that beneficiaries are liable for are described in detail on the Medicare.gov website. There is a CMS publication called "Your Medicare Benefits", which explains the deductibles and coinsurance amounts.
 
-Medicare payments are described in detail in a series of Medicare Payment Advisory Commission (MedPAC) documents called “Payment Basics” (see: http://www.medpac.gov/-documents-/payment-basics).
+Medicare payments are described in detail in a series of Medicare Payment Advisory Commission (MedPAC) documents called “Payment Basics” (see: [here](http://www.medpac.gov/-documents-/payment-basics).)
 
-Also in the Medicare Learning Network (MLN) “Payment System Fact Sheet Series” (see the list of MLN publications at: http://www.cms.gov/Outreach-and-Education/Medicare-Learning-Network-MLN/MLNProducts/MLN-Publications.html)
+Also in the Medicare Learning Network (MLN) “Payment System Fact Sheet Series” (see the list of MLN publications at: [here](http://www.cms.gov/Outreach-and-Education/Medicare-Learning-Network-MLN/MLNProducts/MLN-Publications.html))
  
 
 
@@ -20143,7 +20143,7 @@ Contained in
 
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
-This variable is the count of hospital stays (unique admissions, which may span more than one facility) in the non-acute inpatient setting for a given year.  A non-acute inpatient stay is defined as a set of one or more consecutive non-acute inpatient claims where the beneficiary is only discharged on the most recent claim in the set.  The CLM_FROM_DT for the first claim associated with the stay must have been in the year of the data file, however it was permissible for the CLM_THRU_DT to have occurred in January of the following year. These “other” inpatient (OIP) claims are a subset of the claims in the IP data file consisting of data from IP settings such as long-term care hospitals, inpatient psychiatric facilities, inpatient rehabilitation facilities, and other types of IP facilities such as children’s hospitals or cancer centers.
+This variable is the count of hospital stays (unique admissions, which may span more than one facility) in the non-acute inpatient setting for a given year.  A non-acute inpatient stay is defined as a set of one or more consecutive non-acute inpatient claims where the beneficiary is only discharged on the most recent claim in the set.  The `CLM_FROM_DT` for the first claim associated with the stay must have been in the year of the data file, however it was permissible for the `CLM_THRU_DT` to have occurred in January of the following year. These “other” inpatient (OIP) claims are a subset of the claims in the IP data file consisting of data from IP settings such as long-term care hospitals, inpatient psychiatric facilities, inpatient rehabilitation facilities, and other types of IP facilities such as children’s hospitals or cancer centers.
 
 
 
@@ -20164,7 +20164,7 @@ Contained in
 
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
-This variable is the sum of coinsurance and deductible payments from Part B Carrier and DME claims which appear in settings other than the 10 specific categories which are part of this file for a given year. The total Beneficiary payments are calculated as the sum of LINE_COINSRNC_AMT + LINE_BENE_PTB_DDCTBL_AMT for the relevant lines.  
+This variable is the sum of coinsurance and deductible payments from Part B Carrier and DME claims which appear in settings other than the 10 specific categories which are part of this file for a given year. The total Beneficiary payments are calculated as the sum of `LINE_COINSRNC_AMT` + `LINE_BENE_PTB_DDCTBL_AMT` for the relevant lines.  
 
 Claims for other carrier/DME claims are a subset of the claims in the Part B Carrier and DME data files.  Types of services which may have been summarized in this other carrier category (OTHC) include ambulance, chiropractor, chemotherapy, vision, hearing and speech services, etc.
 
@@ -20211,7 +20211,7 @@ Contained in
 
 "This variable is the total Medicare payments from Part B Carrier and DME claims which appear in settings other than the 10 specific categories which are part of this file for a given year.  Claims for other carrier/DME claims are a subset of the claims in the Part B Carrier and DME data files.  Types of services which may have been summarized in this other carrier category (OTHC) include ambulance, chiropractor, chemotherapy, vision, hearing and speech services, etc.
 
-The total Medicare payments are calculated as the sum of LINE_NCH_PMT_AMT where the LINE_PRCSG_IND_CD was ('A','R', or 'S') - for all relevant lines."
+The total Medicare payments are calculated as the sum of `LINE_NCH_PMT_AMT` where the `LINE_PRCSG_IND_CD` was ('A','R', or 'S') - for all relevant lines."
 
 
 
@@ -20232,9 +20232,9 @@ Contained in
 
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
-This variable is the sum of coinsurance and deductible payments for services considered part B other procedures (i.e., not anesthesia or dialysis) for a given year. The total Beneficiary payments are calculated as the sum of LINE_COINSRNC_AMT + LINE_BENE_PTB_DDCTBL_AMT for the relevant lines.  
+This variable is the sum of coinsurance and deductible payments for services considered part B other procedures (i.e., not anesthesia or dialysis) for a given year. The total Beneficiary payments are calculated as the sum of `LINE_COINSRNC_AMT` + `LINE_BENE_PTB_DDCTBL_AMT` for the relevant lines.  
 
-Claims for other procedures are a subset of the claims in the Part B Carrier data file. These other procedure claims are defined as those with a line BETOS code (BETOS_CD) where the first 2 digits are (`P1`,`P2`,`P3`,`P4`,`P5`,`P6`,`P7`, or `P8`).
+Claims for other procedures are a subset of the claims in the Part B Carrier data file. These other procedure claims are defined as those with a line `BETOS` code (`BETOS`_CD) where the first 2 digits are (`P1`,`P2`,`P3`,`P4`,`P5`,`P6`,`P7`, or `P8`).
 
 
 
@@ -20255,7 +20255,7 @@ Contained in
 
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
-"This variable is the count of events for part B other procedures for a given year. Claims for other procedures are a subset of the claims in the Part B Carrier data file. These other procedure claims are defined as those with a line BETOS code (BETOS_CD) where the first 2 digits are (`P1`,`P2`,`P3`,`P4`,`P5`,`P6`,`P7`, or `P8`). 
+"This variable is the count of events for part B other procedures for a given year. Claims for other procedures are a subset of the claims in the Part B Carrier data file. These other procedure claims are defined as those with a line `BETOS` code (`BETOS`_CD) where the first 2 digits are (`P1`,`P2`,`P3`,`P4`,`P5`,`P6`,`P7`, or `P8`). 
 
 An event is defined as each line item that contains the relevant service."
 
@@ -20278,7 +20278,7 @@ Contained in
 
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
-This variable is the total Medicare payments for services considered part B other procedures (i.e., not anesthesia or dialysis) for a given year.  Claims for other procedures are a subset of the claims, and a subset of procedures in the Part B Carrier data file. These other procedure claims are defined as those with a line BETOS code (BETOS_CD) where the first 2 digits are (`P1`,`P2`,`P3`,`P4`,`P5`,`P6`,`P7`, or `P8`). The total Medicare payments are calculated as the sum of LINE_NCH_PMT_AMT where the LINE_PRCSG_IND_CD was ('A','R', or 'S') - for all relevant lines.
+This variable is the total Medicare payments for services considered part B other procedures (i.e., not anesthesia or dialysis) for a given year.  Claims for other procedures are a subset of the claims, and a subset of procedures in the Part B Carrier data file. These other procedure claims are defined as those with a line `BETOS` code (`BETOS`_CD) where the first 2 digits are (`P1`,`P2`,`P3`,`P4`,`P5`,`P6`,`P7`, or `P8`). The total Medicare payments are calculated as the sum of `LINE_NCH_PMT_AMT` where the `LINE_PRCSG_IND_CD` was ('A','R', or 'S') - for all relevant lines.
 
 
 
@@ -20344,9 +20344,9 @@ Contained in
 
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
-"This variable is the sum of coinsurance and deductible payments for part B drugs for a given year. Part B drug claims are a subset of the claims in the Part B Carrier and DME data files. The Part B drug claims are identified by BETOS codes (CCW variable BETOS_CD with values of `D1G`,`O1D`,`O1E`,`O1G`,`I1E`, or `I1F`). 
+"This variable is the sum of coinsurance and deductible payments for part B drugs for a given year. Part B drug claims are a subset of the claims in the Part B Carrier and DME data files. The Part B drug claims are identified by `BETOS` codes (CCW variable `BETOS`_CD with values of `D1G`,`O1D`,`O1E`,`O1G`,`I1E`, or `I1F`). 
 
-The total Beneficiary payments are calculated as the sum of LINE_COINSRNC_AMT + LINE_BENE_PTB_DDCTBL_AMT for the relevant lines.  "
+The total Beneficiary payments are calculated as the sum of `LINE_COINSRNC_AMT` + `LINE_BENE_PTB_DDCTBL_AMT` for the relevant lines.  "
 
 
 
@@ -20367,7 +20367,7 @@ Contained in
 
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
-This variable is the count of events in the part B drug setting for a given year.  Part B drug claims are a subset of the claims in the Part B Carrier and DME data files. The Part B drug claims are identified by BETOS codes (CCW variable BETOS_CD with values of `D1G`,`O1D`,`O1E`,`O1G`,`I1E`, or `I1F`).  An event is defined as each line item that contains the relevant service.
+This variable is the count of events in the part B drug setting for a given year.  Part B drug claims are a subset of the claims in the Part B Carrier and DME data files. The Part B drug claims are identified by `BETOS` codes (CCW variable `BETOS`_CD with values of `D1G`,`O1D`,`O1E`,`O1G`,`I1E`, or `I1F`).  An event is defined as each line item that contains the relevant service.
 
 
 
@@ -20388,9 +20388,9 @@ Contained in
 
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
-"This variable is the total Medicare payments for Part B drugs for a given year. Part B drug claims are a subset of the claims in the Part B Carrier and DME data files.  The Part B drug claims are identified by BETOS codes (CCW variable BETOS_CD with values of `D1G`,`O1D`,`O1E`,`O1G`,`I1E`, or `I1F`).  
+"This variable is the total Medicare payments for Part B drugs for a given year. Part B drug claims are a subset of the claims in the Part B Carrier and DME data files.  The Part B drug claims are identified by `BETOS` codes (CCW variable `BETOS`_CD with values of `D1G`,`O1D`,`O1E`,`O1G`,`I1E`, or `I1F`).  
 
-Total Part B drug payments are calculated as sum of LINE_NCH_PMT_AMT where the LINE_PRCSG_IND_CD was ('A','R', or 'S')."
+Total Part B drug payments are calculated as sum of `LINE_NCH_PMT_AMT` where the `LINE_PRCSG_IND_CD` was ('A','R', or 'S')."
 
 
 
@@ -20432,9 +20432,9 @@ Contained in
 
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
-This variable is the sum of coinsurance and deductible payments for the part B physician office services (PHYS) for a given year. The total Beneficiary payments are calculated as the sum of LINE_COINSRNC_AMT + LINE_BENE_PTB_DDCTBL_AMT for the relevant lines. 
+This variable is the sum of coinsurance and deductible payments for the part B physician office services (PHYS) for a given year. The total Beneficiary payments are calculated as the sum of `LINE_COINSRNC_AMT` + `LINE_BENE_PTB_DDCTBL_AMT` for the relevant lines. 
 
-Physician office claims are a subset of the claims in the Part B Carrier and DME data files, and a subset of physician evaluation and management claims (note that E&M are tabulated separately in this data file).  The PHYS claims are defined as those with a line BETOS code (BETOS_CD) where the first three digits =M1A or M1B (the remainder of physician services which occur in different settings appear in  EM_MDCR_PMT).
+Physician office claims are a subset of the claims in the Part B Carrier and DME data files, and a subset of physician evaluation and management claims (note that E&M are tabulated separately in this data file).  The PHYS claims are defined as those with a line `BETOS` code (`BETOS`_CD) where the first three digits =M1A or M1B (the remainder of physician services which occur in different settings appear in  `EM_MDCR_PMT`).
 
 
 
@@ -20455,7 +20455,7 @@ Contained in
 
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
-"This variable is the count of events in the part B physician office services (PHYS) for a given year. Physician office claims are a subset of the claims in the Part B Carrier and DME data files, and a subset of physician evaluation and management claims (note that E&M are tabulated separately in this data file).   The PHYS claims are defined as those with a line BETOS code (BETOS_CD) where the first three digits =M1A or M1B (the remainder of physician services which occur in different settings appear in  EM_MDCR_PMT).
+"This variable is the count of events in the part B physician office services (PHYS) for a given year. Physician office claims are a subset of the claims in the Part B Carrier and DME data files, and a subset of physician evaluation and management claims (note that E&M are tabulated separately in this data file).   The PHYS claims are defined as those with a line `BETOS` code (`BETOS`_CD) where the first three digits =M1A or M1B (the remainder of physician services which occur in different settings appear in  `EM_MDCR_PMT`).
 
 An event is defined as each line item that contains the relevant service."
 
@@ -20480,7 +20480,7 @@ Contained in
 
 This variable is the total Medicare payments for the part B physician office services (PHYS) for a given year. Physician office claims are a subset of the claims in the Part B Carrier and DME data files, and a subset of physician evaluation and management claims (note that E&M are tabulated separately in this data file).
 
-The physician claims are defined as those with a line BETOS code (BETOS_CD) where the first 3 digits = M1A or M1B (note that all other BETOS_CD that begin with "M" are categorized as other evluation & managment services in this file – see EM_MDCR_PMT). The total Medicare payments are calculated as the sum of LINE_NCH_PMT_AMT where the LINE_PRCSG_IND_CD was ('A','R', or 'S') - for all relevant lines.
+The physician claims are defined as those with a line `BETOS` code (`BETOS`_CD) where the first 3 digits = M1A or M1B (note that all other `BETOS`_CD that begin with "M" are categorized as other evluation & managment services in this file – see `EM_MDCR_PMT`). The total Medicare payments are calculated as the sum of `LINE_NCH_PMT_AMT` where the `LINE_PRCSG_IND_CD` was ('A','R', or 'S') - for all relevant lines.
 
 
 
@@ -21293,7 +21293,7 @@ The total beneficiary payments are calculated as the sum of three CCW variables:
 
 This amount contributes to a beneficiary's true out-of-pocket (TrOOP) costs, but only if it is for a Part D-covered drug (i.e., spending on non-covered drugs does not count toward the TrOOP amount).
 
-Note that another PDE variable called the low-income cost sharing (LIS) amount (variable name LICS_AMT), indicates the amount paid by Part D low-income subsidy for the PDE. Although this is sometimes considered a beneficiary payment (since it is made on behalf of a beneficiary), we have included the LIS payments in the Part D Medicare Payment amount (see variable called PTD_MDCR_PMT).
+Note that another PDE variable called the low-income cost sharing (LIS) amount (variable name LICS_AMT), indicates the amount paid by Part D low-income subsidy for the PDE. Although this is sometimes considered a beneficiary payment (since it is made on behalf of a beneficiary), we have included the LIS payments in the Part D Medicare Payment amount (see variable called `PTD_MDCR_PMT`).
 
 The value will be null if the beneficiary was not enrolled in Part D or did not use any Part D drugs during the year.
  
@@ -21769,7 +21769,7 @@ This variable is the count of events for Part D drugs for a given year (i.e., a 
 
 The value will be null if the beneficiary was not enrolled in Part D or did not use any Part D drugs during the year.
 
-PDEs consist of highly variable days supply of the medication.  We also create a derived variable that counts a standard 30 day supply of a filled Part D prescription (see PTD_FILL_CNT). 
+PDEs consist of highly variable days supply of the medication.  We also create a derived variable that counts a standard 30 day supply of a filled Part D prescription (see `PTD_FILL_CNT`). 
 
 
 
@@ -21791,7 +21791,7 @@ Part D prescribing events consist of highly variable days supply of the medicati
 
 The value will be null if the beneficiary was not enrolled in Part D or did not use any Part D drugs during the year.
 
-We also calaculate the acutal number of prescription drug fill events for Part D drugs for a given year (i.e., a unique count of the PDE_IDs); see variable PTD_EVENTS.
+We also calaculate the acutal number of prescription drug fill events for Part D drugs for a given year (i.e., a unique count of the PDE_IDs); see variable `PTD_EVENTS`.
  
 
 
@@ -22995,7 +22995,7 @@ Contained in
 - [Hospice RIF](../hospice-rif.md#data-documentation)
 - [Home Health Agency RIF](../hha-rif.md#data-documentation)
 
-The code used to identify the status of the patient as of the CLM_THRU_DT.
+The code used to identify the status of the patient as of the `CLM_THRU_DT`.
 
 
 
@@ -23249,7 +23249,7 @@ This variable indicates whether a beneficiary met the condition criteria for per
 
 NOTE: The condition variable requires beneficiaries to satisfy both claims criteria (a minimum number/type of Medicare claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (Medicare FFS Part A and Part B coverage during the entire specified time period).
 
-NOTE: For peripheral vascular disease, beneficiaries must have at least one Medicare inpatient claim or two other non-drug claims of any service type with a related code in any position during the 2-year reference period. You can find more detailed information on the criteria on the CCW website: https://www.ccwdata.org/web/guest/condition-categories
+NOTE: For peripheral vascular disease, beneficiaries must have at least one Medicare inpatient claim or two other non-drug claims of any service type with a related code in any position during the 2-year reference period. You can find more detailed information on the criteria on the CCW website: [here](https://www.ccwdata.org/web/guest/condition-categories)
 
 
 
@@ -23272,7 +23272,7 @@ Contained in
 
 This variable shows the date when the beneficiary first met the criteria for the peripheral vascular disease indicator. The variable will be blank for beneficiaries that have never had the condition.
 
-NOTE: The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the COVSTART variable in the Beneficiary File).
+NOTE: The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the `COVSTART` variable in the Beneficiary File).
 
 
 
@@ -23288,7 +23288,7 @@ This variable indicates whether a beneficiary met the condition criteria for per
 
 NOTE: The condition variable requires beneficiaries to satisfy both claims criteria (a minimum number/type of Medicare claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (Medicare FFS Part A and Part B coverage during the entire specified time period).
 
-NOTE: For personality disorders, beneficiaries must have at least one Medicare inpatient claim or two other non-drug claims of any service type with a related code in any position during the 2-year reference period. You can find more detailed information on the criteria on the CCW website: https://www.ccwdata.org/web/guest/condition-categories
+NOTE: For personality disorders, beneficiaries must have at least one Medicare inpatient claim or two other non-drug claims of any service type with a related code in any position during the 2-year reference period. You can find more detailed information on the criteria on the CCW website: [here](https://www.ccwdata.org/web/guest/condition-categories)
 
 
 
@@ -23311,7 +23311,7 @@ Contained in
 
 This variable shows the date when the beneficiary first met the criteria for the personality disorders indicator. The variable will be blank for beneficiaries that have never had the condition.
 
-NOTE: The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the COVSTART variable in the Beneficiary File).
+NOTE: The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the `COVSTART` variable in the Beneficiary File).
 
 
 
@@ -23327,7 +23327,7 @@ This variable indicates whether a beneficiary met the condition criteria for pos
 
 NOTE: The condition variable requires beneficiaries to satisfy both claims criteria (a minimum number/type of Medicare claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (Medicare FFS Part A and Part B coverage during the entire specified time period).
 
-NOTE: For post-traumatic stress disorder, beneficiaries must have at least one Medicare inpatient claim or two other non-drug claims of any service type with a related code in any position during the 2-year reference period. You can find more detailed information on the criteria on the CCW website: https://www.ccwdata.org/web/guest/condition-categories
+NOTE: For post-traumatic stress disorder, beneficiaries must have at least one Medicare inpatient claim or two other non-drug claims of any service type with a related code in any position during the 2-year reference period. You can find more detailed information on the criteria on the CCW website: [here](https://www.ccwdata.org/web/guest/condition-categories)
 
 
 
@@ -23350,7 +23350,7 @@ Contained in
 
 This variable shows the date when the beneficiary first met the criteria for the post-traumatic stress disorder indicator. The variable will be blank for beneficiaries that have never had the condition.
 
-NOTE: The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the COVSTART variable in the Beneficiary File).
+NOTE: The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the `COVSTART` variable in the Beneficiary File).
 
 
 
@@ -23366,7 +23366,7 @@ This variable indicates whether a beneficiary met the condition criteria for pre
 
 NOTE: The condition variable requires beneficiaries to satisfy both claims criteria (a minimum number/type of Medicare claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (Medicare FFS Part A and Part B coverage during the entire specified time period).
 
-NOTE: For pressure ulcers and chronic ulcers, beneficiaries must have at least one Medicare inpatient claim or two other non-drug claims of any service type with a related code in any position during the 2-year reference period. You can find more detailed information on the criteria on the CCW website: https://www.ccwdata.org/web/guest/condition-categories
+NOTE: For pressure ulcers and chronic ulcers, beneficiaries must have at least one Medicare inpatient claim or two other non-drug claims of any service type with a related code in any position during the 2-year reference period. You can find more detailed information on the criteria on the CCW website: [here](https://www.ccwdata.org/web/guest/condition-categories)
 
 
 
@@ -23389,7 +23389,7 @@ Contained in
 
 This variable shows the date when the beneficiary first met the criteria for the pressure ulcers and chronic ulcers indicator. The variable will be blank for beneficiaries that have never had the condition.
 
-NOTE: The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the COVSTART variable in the Beneficiary File).
+NOTE: The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the `COVSTART` variable in the Beneficiary File).
 
 
 
@@ -23430,7 +23430,7 @@ This variable indicates whether a beneficiary met the chronic condition data war
 
 <h3>Values</h3>
 
-The CCW’s chronic condition flags require beneficiaries to satisfy both claims criteria (a minimum number/type of claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (FFS Part A and Part B coverage during the entire specified time period). For prostate cancer, beneficiaries must have at least one inpatient or SNF claim, or two Part B (institutional or non-institutional) claims that are at least one day apart, with a prostate cancer code, on any diagnosis, within the last year. The CCW’s criteria were developed after reviewing validated algorithms from the research literature and criteria used by other federal data sources.  You can find more detailed information on the criteria on the CCW website: https://www.ccwdata.org/web/guest/condition-categories
+The CCW’s chronic condition flags require beneficiaries to satisfy both claims criteria (a minimum number/type of claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (FFS Part A and Part B coverage during the entire specified time period). For prostate cancer, beneficiaries must have at least one inpatient or SNF claim, or two Part B (institutional or non-institutional) claims that are at least one day apart, with a prostate cancer code, on any diagnosis, within the last year. The CCW’s criteria were developed after reviewing validated algorithms from the research literature and criteria used by other federal data sources.  You can find more detailed information on the criteria on the CCW website: [here](https://www.ccwdata.org/web/guest/condition-categories)
 
 
 | Code   | Code Value                      |
@@ -23454,7 +23454,7 @@ This variable indicates whether a beneficiary met the chronic condition data war
 
 <h3>Values</h3>
 
-The CCW’s chronic condition flags require beneficiaries to satisfy both claims criteria (a minimum number/type of claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (FFS Part A and Part B coverage during the entire specified time period). For prostate cancer, beneficiaries must have at least one inpatient or SNF claim, or two Part B (institutional or non-institutional) claims that are at least one day apart, with a prostate cancer code, on any diagnosis, within the last year. The CCW’s criteria were developed after reviewing validated algorithms from the research literature and criteria used by other federal data sources.  You can find more detailed information on the criteria on the CCW website: https://www.ccwdata.org/web/guest/condition-categories
+The CCW’s chronic condition flags require beneficiaries to satisfy both claims criteria (a minimum number/type of claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (FFS Part A and Part B coverage during the entire specified time period). For prostate cancer, beneficiaries must have at least one inpatient or SNF claim, or two Part B (institutional or non-institutional) claims that are at least one day apart, with a prostate cancer code, on any diagnosis, within the last year. The CCW’s criteria were developed after reviewing validated algorithms from the research literature and criteria used by other federal data sources.  You can find more detailed information on the criteria on the CCW website: [here](https://www.ccwdata.org/web/guest/condition-categories)
 
 
 | Code   | Code Value                      |
@@ -23771,7 +23771,7 @@ Contained in
 
 - [Home Health Agency RIF](../hha-rif.md#data-documentation)
 
-The amount Medicare paid for the services reported on the revenue center record.This field is rarely populated for Part A claims due to per-diem or DRG payments; the claim payment amounts should be used instead.For Hospital Outpatient services (also called Institutional Outpatient claims, which consist of claim type [variable called NCH_CLM_TYPE_CD]= 40), this variable can be summed across all revenue center lines for the claim to obtain the total Medicare claim payment amount.
+The amount Medicare paid for the services reported on the revenue center record.This field is rarely populated for Part A claims due to per-diem or DRG payments; the claim payment amounts should be used instead.For Hospital Outpatient services (also called Institutional Outpatient claims, which consist of claim type [variable called `NCH_CLM_TYPE_CD`]= 40), this variable can be summed across all revenue center lines for the claim to obtain the total Medicare claim payment amount.
 
 This field is populated for those claims that are required to process through Outpatient PPS PRICER software. The type of bills (TOB) required to process through are: 12X, 13X, 14X (except Maryland providers, Indian Health Providers, hospitals located in American Samoa, Guam and Saipan and Critical Access Hospitals [CAH]); 76X; 75X and 34X if certain HCPCS are on the bill; and any outpatient type of bill with a condition code `07` and certain HCPCS. These claim types could have lines that are not required to price under OPPS rules so those lines would not have data in this field.
 Additional exception: Virgin Island hospitals and hospitals that furnish only inpatient Part B services with dates of service 1/1/02 and forward.
@@ -24378,7 +24378,7 @@ Contained in
 - [Outpatient RIF](../op-rif.md#data-documentation)
 - [Home Health Agency RIF](../hha-rif.md#data-documentation)
 
-Effective with Version 'I', this code represents a factor that specifies the amount of any APC discount. The discounting factor is applied to a line item with a service indicator (part of the REV_CNTR_PMT_MTHD_IND_CD) of 'T'. The flag is applicable when more than one significant procedure is performed. **If there is no dis- counting the factor will be 1.0.**
+Effective with Version 'I', this code represents a factor that specifies the amount of any APC discount. The discounting factor is applied to a line item with a service indicator (part of the `REV_CNTR_PMT_MTHD_IND_CD`) of 'T'. The flag is applicable when more than one significant procedure is performed. **If there is no dis- counting the factor will be 1.0.**
 
 NOTE1: This field is populated for those claims that are required to process through Outpatient PPS Pricer. The type of bills (TOB) required to process through are: 12X, 13X, 14X (except Maryland providers, Indian Health Providers, hospitals located in American Samoa, Guam and Saipan and Critical Access Hospitals (CAH)); 76X; 75X and 34X if certain HCPCS are on the bill; and any outpatient type of bill with a condition code `07` and certain HCPCS. These claim types could have lines that are not required to price under OPPS rules so those lines would not have data in this field.
 
@@ -24716,7 +24716,7 @@ FISS: populating correctly (sum of coinsurance and deductible)
 
 APASS: not populating this field
 
-Currently, the following FI numbers are under the APASS system and all other FI numbers are under FISS. See FI_NUM table of codes for all FI numbers.
+Currently, the following FI numbers are under the APASS system and all other FI numbers are under FISS. See `FI_NUM` table of codes for all FI numbers.
 
 52280 -- Mutual of Omaha (until 6/1/2003) 00430 -- Washington/Alaska (until 11/1/2003) 00310 -- North Carolina BC (until 12/1/2003) 00370 -- Rhode Island (until 2/1/2004) 00270 -- New Hampshire/Vermont (until 3/1/2004) 00181 -- Maine/Massachusetts (until 5/1/2004)
 
@@ -24808,7 +24808,7 @@ FISS: this field contains provider reimbursement.
 
 APASS: provider payment amount plus coinsurance and deductible (should not include coinsurance and deductible). Users should rely on provider payment amount field for the trust fund payment.
 
-Currently, the following FI numbers are under the APASS system and all other FI numbers are under FISS. See FI_NUM table of codes for all FI numbers.
+Currently, the following FI numbers are under the APASS system and all other FI numbers are under FISS. See `FI_NUM` table of codes for all FI numbers.
 
 52280 -- Mutual of Omaha (until 6/1/2003) 00430 -- Washington/Alaska (until 11/1/2003) 00310 -- North Carolina BC (until 12/1/2003) 00370 -- Rhode Island (until 2/1/2004) 00270 -- New Hampshire/Vermont (until 3/1/2004) 00181 -- Maine/Massachusetts (until 5/1/2004)
 
@@ -24975,7 +24975,7 @@ FISS: populated correctly with provider payment amount
 
 APASS: provider payment amount plus interest on 1st revenue center line (CMM will instruct APASS not to include interest)
 
-Currently, the following FI numbers are under the APASS system and all other FI numbers are under FISS. See FI_NUM table of codes for all FI numbers. 52280 -- Mutual of Omaha (until 6/1/2003) 00430 -- Washington/Alaska (until 11/1/2003) 00310 -- North Carolina BC (until 12/1/2003) 00370 -- Rhode Island (until 2/1/2004) 00270 -- New Hampshire/Vermont (until 3/1/2004) 00181 -- Maine/Massachusetts (until 5/1/2004)
+Currently, the following FI numbers are under the APASS system and all other FI numbers are under FISS. See `FI_NUM` table of codes for all FI numbers. 52280 -- Mutual of Omaha (until 6/1/2003) 00430 -- Washington/Alaska (until 11/1/2003) 00310 -- North Carolina BC (until 12/1/2003) 00370 -- Rhode Island (until 2/1/2004) 00270 -- New Hampshire/Vermont (until 3/1/2004) 00181 -- Maine/Massachusetts (until 5/1/2004)
 
 NOTE2: It has been discovered that this field may be populated with data on claims with dates of service prior to 7/00 (implementation of Claim Line Expansion OPPS/HHPPS). The original understanding of the new revenue center fields was that data would be populated on claims with dates of service 7/00 and forward. Data has been found in claims with dates of service prior to 7/00 because the Standard Systems have processed any claim coming in 7/00 and after, meeting the above criteria, through the Outpatient Code Editor (OCE) regardless of the dates of service.
 
@@ -25175,7 +25175,7 @@ Contained in
 
 The field used to identify whether the claim line is subject to a therapy cap.
 
-Details regarding the therapy cap can be found on the CMS website, under the Medicare therapy services web page (see, for example: https://www.cms.gov/Medicare/Billing/TherapyServices/index.html).
+Details regarding the therapy cap can be found on the CMS website, under the Medicare therapy services web page (see, for example: [here](https://www.cms.gov/Medicare/Billing/TherapyServices/index.html).)
 
 
 
@@ -25203,7 +25203,7 @@ Contained in
 
 The field used to identify whether the claim line is subject to a therapy cap.
 
-Details regarding the therapy cap can be found on the CMS website, under the Medicare therapy services web page (see, for example: https://www.cms.gov/Medicare/Billing/TherapyServices/index.html).
+Details regarding the therapy cap can be found on the CMS website, under the Medicare therapy services web page (see, for example: [here](https://www.cms.gov/Medicare/Billing/TherapyServices/index.html).)
 
 
 
@@ -25326,7 +25326,7 @@ Depending on type of service, units are measured by number of covered days in a 
 
 NOTE1: When revenue center code = `0022` (SNF PPS) the unit count will reflect the number of covered days for each HIPPS code and, if applicable, the number of visits for each rehab therapy code.
 
-Description of the different unit of service measures by revenue center code beginning on page 18: http://cms.gov/Regulations-and-Guidance/Guidance/Manuals/Downloads/clm104c25.pdf
+Description of the different unit of service measures by revenue center code beginning on page 18: [here](http://cms.gov/Regulations-and-Guidance/Guidance/Manuals/Downloads/clm104c25.pdf)
 
 
 
@@ -25345,7 +25345,7 @@ This variable indicates whether a beneficiary met the chronic condition data war
 <h3>Values</h3>
 
 The CCW’s chronic condition flags require beneficiaries to satisfy both claims criteria (a minimum number/type of claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (FFS Part A and Part B coverage during the entire specified time period). For rheumatoid arthritis/osteoarthritis, beneficiaries must have at least two inpatient, SNF, home health, or Part B (institutional or non-institutional) claims that are at least one day apart with a rheumatoid arthritis/osteoarthritis code in any position during the 2-year reference period. The CCW’s criteria were developed after reviewing validated algorithms from the research literature and criteria used by other federal data sources.  You can find more detailed information on the criteria on the CCW website:
-https://www.ccwdata.org/web/guest/condition-categories
+[here](https://www.ccwdata.org/web/guest/condition-categories)
 
 
 | Code   | Code Value                                                                                 |
@@ -25369,7 +25369,7 @@ This code specifies whether the beneficiary met the chronic condition algorithm 
 
 <h3>Values</h3>
 
-The CCW’s chronic condition flags require beneficiaries to satisfy both claims criteria (a minimum number/type of claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (FFS Part A and Part B coverage during the entire specified time period). For rheumatoid arthritis/osteoarthritis, beneficiaries must have at least two inpatient, SNF, home health, or Part B (institutional or non-institutional) claims that are at least one day apart with a rheumatoid arthritis/osteoarthritis code in any position during the 2-year reference period. The CCW’s criteria were developed after reviewing validated algorithms from the research literature and criteria used by other federal data sources.  You can find more detailed information on the criteria on the CCW website: https://www.ccwdata.org/web/guest/condition-categories
+The CCW’s chronic condition flags require beneficiaries to satisfy both claims criteria (a minimum number/type of claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (FFS Part A and Part B coverage during the entire specified time period). For rheumatoid arthritis/osteoarthritis, beneficiaries must have at least two inpatient, SNF, home health, or Part B (institutional or non-institutional) claims that are at least one day apart with a rheumatoid arthritis/osteoarthritis code in any position during the 2-year reference period. The CCW’s criteria were developed after reviewing validated algorithms from the research literature and criteria used by other federal data sources.  You can find more detailed information on the criteria on the CCW website: [here](https://www.ccwdata.org/web/guest/condition-categories)
 
 
 | Code   | Code Value                      |
@@ -25391,7 +25391,7 @@ This variable indicates whether a beneficiary met the condition criteria for sch
 
 NOTE: The condition variable requires beneficiaries to satisfy both claims criteria (a minimum number/type of Medicare claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (Medicare FFS Part A and Part B coverage during the entire specified time period).
 
-NOTE: For schizophrenia, beneficiaries must have at least one Medicare inpatient claim or two other non-drug claims of any service type with a related code in any position during the 2-year reference period. You can find more detailed information on the criteria on the CCW website: https://www.ccwdata.org/web/guest/condition-categories
+NOTE: For schizophrenia, beneficiaries must have at least one Medicare inpatient claim or two other non-drug claims of any service type with a related code in any position during the 2-year reference period. You can find more detailed information on the criteria on the CCW website: [here](https://www.ccwdata.org/web/guest/condition-categories)
 
 
 
@@ -25414,7 +25414,7 @@ Contained in
 
 This variable shows the date when the beneficiary first met the criteria for the schizophrenia indicator. The variable will be blank for beneficiaries that have never had the condition.
 
-NOTE: The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the COVSTART variable in the Beneficiary File).
+NOTE: The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the `COVSTART` variable in the Beneficiary File).
 
 
 
@@ -25430,7 +25430,7 @@ This variable indicates whether a beneficiary met the condition criteria for sch
 
 NOTE: The condition variable requires beneficiaries to satisfy both claims criteria (a minimum number/type of Medicare claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (Medicare FFS Part A and Part B coverage during the entire specified time period).
 
-NOTE: For schizophrenia and other psychotic disorders, beneficiaries must have at least one Medicare inpatient claim or two other non-drug claims of any service type with a related code in any position during the 2-year reference period. You can find more detailed information on the criteria on the CCW website: https://www.ccwdata.org/web/guest/condition-categories
+NOTE: For schizophrenia and other psychotic disorders, beneficiaries must have at least one Medicare inpatient claim or two other non-drug claims of any service type with a related code in any position during the 2-year reference period. You can find more detailed information on the criteria on the CCW website: [here](https://www.ccwdata.org/web/guest/condition-categories)
 
 
 
@@ -25453,7 +25453,7 @@ Contained in
 
 This variable shows the date when the beneficiary first met the criteria for the schizophrenia and other psychotic disorders indicator. The variable will be blank for beneficiaries that have never had the condition.
 
-NOTE: The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the COVSTART variable in the Beneficiary File).
+NOTE: The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the `COVSTART` variable in the Beneficiary File).
 
 
 
@@ -25469,7 +25469,7 @@ This variable indicates whether a beneficiary met the condition criteria for sen
 
 NOTE: The condition variable requires beneficiaries to satisfy both claims criteria (a minimum number/type of Medicare claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (Medicare FFS Part A and Part B coverage during the entire specified time period).
 
-NOTE: For sensory (blindness and visual) impairment, beneficiaries must have at least one Medicare inpatient claim or two other non-drug claims of any service type with a related code in any position during the 2-year reference period. You can find more detailed information on the criteria on the CCW website: https://www.ccwdata.org/web/guest/condition-categories
+NOTE: For sensory (blindness and visual) impairment, beneficiaries must have at least one Medicare inpatient claim or two other non-drug claims of any service type with a related code in any position during the 2-year reference period. You can find more detailed information on the criteria on the CCW website: [here](https://www.ccwdata.org/web/guest/condition-categories)
 
 
 
@@ -25492,7 +25492,7 @@ Contained in
 
 This variable shows the date when the beneficiary first met the criteria for the sensory (blindness and visual) impairment indicator. The variable will be blank for beneficiaries that have never had the condition.
 
-NOTE: The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the COVSTART variable in the Beneficiary File).
+NOTE: The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the `COVSTART` variable in the Beneficiary File).
 
 
 
@@ -25508,7 +25508,7 @@ This variable indicates whether a beneficiary met the condition criteria for a s
 
 NOTE: The condition variable requires beneficiaries to satisfy both claims criteria (a minimum number/type of Medicare claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (Medicare FFS Part A and Part B coverage during the entire specified time period).
 
-NOTE1: For sensory (deafness and hearing) impairment, beneficiaries must have at least one Medicare inpatient claim or two other non-drug claims of any service type with a related code in any position during the 2-year reference period. You can find more detailed information on the criteria on the CCW website: https://www.ccwdata.org/web/guest/condition-categories
+NOTE1: For sensory (deafness and hearing) impairment, beneficiaries must have at least one Medicare inpatient claim or two other non-drug claims of any service type with a related code in any position during the 2-year reference period. You can find more detailed information on the criteria on the CCW website: [here](https://www.ccwdata.org/web/guest/condition-categories)
 
 
 
@@ -25531,7 +25531,7 @@ Contained in
 
 This variable shows the date when the beneficiary first met the criteria for a sensory (deafness and hearing) impairment. The variable will be blank for beneficiaries that have never had the condition.
 
-NOTE: The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the COVSTART variable in the Beneficiary File).
+NOTE: The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the `COVSTART` variable in the Beneficiary File).
 
 
 
@@ -25564,7 +25564,7 @@ Contained in
 
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
-This variable is the sum of Medicare coinsurance and deductible payments in the skilled nursing facility (SNF) setting for a given year.  The total beneficiary payment is calculated as the sum of DED_AMT and COIN_AMT for all SNF claims where the CLM_PMT_AMT >= 0.
+This variable is the sum of Medicare coinsurance and deductible payments in the skilled nursing facility (SNF) setting for a given year.  The total beneficiary payment is calculated as the sum of `DED_AMT` and `COIN_AMT` for all SNF claims where the `CLM_PMT_AMT` >= 0.
 
 
 
@@ -25574,9 +25574,9 @@ This variable is the sum of Medicare coinsurance and deductible payments in the 
 
 Costs to that beneficiaries are liable for are described in detail on the Medicare.gov website. There is a CMS publication called "Your Medicare Benefits", which explains the deductibles and coinsurance amounts.
 
-Medicare payments are described in detail in a series of Medicare Payment Advisory Commission (MedPAC) documents called “Payment Basics” (see: http://www.medpac.gov/-documents-/payment-basics).
+Medicare payments are described in detail in a series of Medicare Payment Advisory Commission (MedPAC) documents called “Payment Basics” (see: [here](http://www.medpac.gov/-documents-/payment-basics).)
 
-Also in the Medicare Learning Network (MLN) “Payment System Fact Sheet Series” (see the list of MLN publications at: http://www.cms.gov/Outreach-and-Education/Medicare-Learning-Network-MLN/MLNProducts/MLN-Publications.html)
+Also in the Medicare Learning Network (MLN) “Payment System Fact Sheet Series” (see the list of MLN publications at: [here](http://www.cms.gov/Outreach-and-Education/Medicare-Learning-Network-MLN/MLNProducts/MLN-Publications.html))
  
 
 
@@ -25589,7 +25589,7 @@ Contained in
 
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
-This variable is the count of Medicare covered days in the skilled nursing facility (SNF) setting for the year.  This variable equals the sum of the CLM_UTLZTN_DAY_CNT variables on the source claims.
+This variable is the count of Medicare covered days in the skilled nursing facility (SNF) setting for the year.  This variable equals the sum of the `CLM_UTLZTN_DAY_CNT` variables on the source claims.
 
 
 
@@ -25599,9 +25599,9 @@ This variable is the count of Medicare covered days in the skilled nursing facil
 
 We consider fully-covered days, days where the beneficiary was liable for coinsurance, and lifetime reserve days to all be Medicare-covered days.  Non-covered days, leave of absence days, and the day of discharge or death are not included.
 
-Medicare payments are described in detail in a series of Medicare Payment Advisory Commission (MedPAC) documents called “Payment Basics” (see: http://www.medpac.gov/-documents-/payment-basics).
+Medicare payments are described in detail in a series of Medicare Payment Advisory Commission (MedPAC) documents called “Payment Basics” (see: [here](http://www.medpac.gov/-documents-/payment-basics).)
 
-Also in the Medicare Learning Network (MLN) “Payment System Fact Sheet Series” (see the list of MLN publications at: http://www.cms.gov/Outreach-and-Education/Medicare-Learning-Network-MLN/MLNProducts/MLN-Publications.html) 
+Also in the Medicare Learning Network (MLN) “Payment System Fact Sheet Series” (see the list of MLN publications at: [here](http://www.cms.gov/Outreach-and-Education/Medicare-Learning-Network-MLN/MLNProducts/MLN-Publications.html)) 
 
 
 
@@ -25613,7 +25613,7 @@ Contained in
 
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
-This variable is the total Medicare payments in the skilled nursing facility (SNF) setting for a given year.  The total Medicare payments for SNF are calculated as the sum of CLM_PMT_AMT for all SNF claims where the CLM_PMT_AMT >= 0.
+This variable is the total Medicare payments in the skilled nursing facility (SNF) setting for a given year.  The total Medicare payments for SNF are calculated as the sum of `CLM_PMT_AMT` for all SNF claims where the `CLM_PMT_AMT` >= 0.
 
 
 
@@ -25621,9 +25621,9 @@ This variable is the total Medicare payments in the skilled nursing facility (SN
 
 
 
-Medicare payments are described in detail in a series of Medicare Payment Advisory Commission (MedPAC) documents called “Payment Basics” (see: http://www.medpac.gov/-documents-/payment-basics).
+Medicare payments are described in detail in a series of Medicare Payment Advisory Commission (MedPAC) documents called “Payment Basics” (see: [here](http://www.medpac.gov/-documents-/payment-basics).)
 
-Also in the Medicare Learning Network (MLN) “Payment System Fact Sheet Series” (see the list of MLN publications at: http://www.cms.gov/Outreach-and-Education/Medicare-Learning-Network-MLN/MLNProducts/MLN-Publications.html)
+Also in the Medicare Learning Network (MLN) “Payment System Fact Sheet Series” (see the list of MLN publications at: [here](http://www.cms.gov/Outreach-and-Education/Medicare-Learning-Network-MLN/MLNProducts/MLN-Publications.html))
  
 
 
@@ -25644,7 +25644,7 @@ This variable is the count of skilled nursing facility setting (SNF) stays (uniq
 
 
 
-The CLM_FROM_DT for the first claim associated with the stay must have been in the year of the data file, however it was permissible for the CLM_THRU_DT to have occurred in January of the following year. 
+The `CLM_FROM_DT` for the first claim associated with the stay must have been in the year of the data file, however it was permissible for the `CLM_THRU_DT` to have occurred in January of the following year. 
 
 
 
@@ -25682,7 +25682,7 @@ This variable indicates whether a beneficiary met the condition criteria for spi
 
 NOTE: The condition variable requires beneficiaries to satisfy both claims criteria (a minimum number/type of Medicare claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (Medicare FFS Part A and Part B coverage during the entire specified time period).
 
-NOTE: For spina bifida and other congenital anomalies of the nervous system, beneficiaries must have at least one Medicare inpatient claim or two other non-drug claims of any service type with a related code in any position during the 2-year reference period. You can find more detailed information on the criteria on the CCW website: https://www.ccwdata.org/web/guest/condition-categories
+NOTE: For spina bifida and other congenital anomalies of the nervous system, beneficiaries must have at least one Medicare inpatient claim or two other non-drug claims of any service type with a related code in any position during the 2-year reference period. You can find more detailed information on the criteria on the CCW website: [here](https://www.ccwdata.org/web/guest/condition-categories)
 
 
 
@@ -25705,7 +25705,7 @@ Contained in
 
 This variable shows the date when the beneficiary first met the criteria for the spina bifida and other congenital anomalies of the nervous system indicator. The variable will be blank for beneficiaries that have never had the condition.
 
-NOTE: The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the COVSTART variable in the Beneficiary File).
+NOTE: The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the `COVSTART` variable in the Beneficiary File).
 
 
 
@@ -25721,7 +25721,7 @@ This variable indicates whether a beneficiary met the condition criteria for spi
 
 NOTE: The condition variable requires beneficiaries to satisfy both claims criteria (a minimum number/type of Medicare claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (Medicare FFS Part A and Part B coverage during the entire specified time period).
 
-NOTE: For spinal cord injury, beneficiaries must have at least one Medicare inpatient claim or two other non-drug claims of any service type with a related code in any position during the 2-year reference period. You can find more detailed information on the criteria on the CCW website: https://www.ccwdata.org/web/guest/condition-categories
+NOTE: For spinal cord injury, beneficiaries must have at least one Medicare inpatient claim or two other non-drug claims of any service type with a related code in any position during the 2-year reference period. You can find more detailed information on the criteria on the CCW website: [here](https://www.ccwdata.org/web/guest/condition-categories)
 
 
 
@@ -25744,7 +25744,7 @@ Contained in
 
 This variable shows the date when the beneficiary first met the criteria for the spinal cord injury indicator. The variable will be blank for beneficiaries that have never had the condition.
 
-NOTE: The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the COVSTART variable in the Beneficiary File).
+NOTE: The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the `COVSTART` variable in the Beneficiary File).
 
 
 
@@ -25763,7 +25763,7 @@ This is the standardized amount as determined by PRICER software output.  This a
 
 This field is new in October 2014. This field only applies to Inpatient claims. Note that an additional field is available that further adjusts the standard Medicare Payment amount by applying additional standardization requirements (e.g. sequestration).   
 
-Refer to variable called the final standardized amount (FINL_STD_AMT).
+Refer to variable called the final standardized amount (`FINL_STD_AMT`).
 
 
 
@@ -26244,7 +26244,7 @@ This code specifies whether the beneficiary met the chronic condition algorithm 
 
 <h3>Values</h3>
 
-The CCW’s chronic condition flags require beneficiaries to satisfy both claims criteria (a minimum number/type of claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (FFS Part A and Part B coverage during the entire specified time period). For stroke/TIA, beneficiaries must have at least one inpatient claim or two Part B (institutional or non-institutional) claims with a stroke/TIA code in any position during the 1-year reference period. The CCW’s criteria were developed after reviewing validated algorithms from the research literature and criteria used by other federal data sources.  You can find more detailed information on the criteria on the CCW website: https://www.ccwdata.org/web/guest/condition-categories
+The CCW’s chronic condition flags require beneficiaries to satisfy both claims criteria (a minimum number/type of claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (FFS Part A and Part B coverage during the entire specified time period). For stroke/TIA, beneficiaries must have at least one inpatient claim or two Part B (institutional or non-institutional) claims with a stroke/TIA code in any position during the 1-year reference period. The CCW’s criteria were developed after reviewing validated algorithms from the research literature and criteria used by other federal data sources.  You can find more detailed information on the criteria on the CCW website: [here](https://www.ccwdata.org/web/guest/condition-categories)
 
 
 | Code   | Code Value                      |
@@ -26268,7 +26268,7 @@ This code specifies whether the beneficiary met the chronic condition algorithm 
 
 <h3>Values</h3>
 
-The CCW’s chronic condition flags require beneficiaries to satisfy both claims criteria (a minimum number/type of claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (FFS Part A and Part B coverage during the entire specified time period). For stroke/TIA, beneficiaries must have at least one inpatient claim or two Part B (institutional or non-institutional) claims with a stroke/TIA code in any position during the 1-year reference period. The CCW’s criteria were developed after reviewing validated algorithms from the research literature and criteria used by other federal data sources.  You can find more detailed information on the criteria on the CCW website: https://www.ccwdata.org/web/guest/condition-categories
+The CCW’s chronic condition flags require beneficiaries to satisfy both claims criteria (a minimum number/type of claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (FFS Part A and Part B coverage during the entire specified time period). For stroke/TIA, beneficiaries must have at least one inpatient claim or two Part B (institutional or non-institutional) claims with a stroke/TIA code in any position during the 1-year reference period. The CCW’s criteria were developed after reviewing validated algorithms from the research literature and criteria used by other federal data sources.  You can find more detailed information on the criteria on the CCW website: [here](https://www.ccwdata.org/web/guest/condition-categories)
 
 | Code   | Code Value                      |
 |:-------|:--------------------------------|
@@ -26285,9 +26285,9 @@ Contained in
 
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
-This variable is the sum of coinsurance and deductible payments for part B tests for a given year. The total Beneficiary payments are calculated as the sum of LINE_COINSRNC_AMT + LINE_BENE_PTB_DDCTBL_AMT for the relevant lines.   
+This variable is the sum of coinsurance and deductible payments for part B tests for a given year. The total Beneficiary payments are calculated as the sum of `LINE_COINSRNC_AMT` + `LINE_BENE_PTB_DDCTBL_AMT` for the relevant lines.   
 
-Claims for tests are a subset of the claims in the Part B Carrier data file. These claims are defined as those with a line BETOS code (BETOS_CD) where the first digit =T.
+Claims for tests are a subset of the claims in the Part B Carrier data file. These claims are defined as those with a line `BETOS` code (`BETOS`_CD) where the first digit =T.
 
 
 
@@ -26308,7 +26308,7 @@ Contained in
 
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
-"This variable is the count of events in for part B tests for a given year.  Claims for tests are a subset of the claims in the Part B Carrier data file. These claims are defined as those with a line BETOS code (BETOS_CD) where the first digit =T.
+"This variable is the count of events in for part B tests for a given year.  Claims for tests are a subset of the claims in the Part B Carrier data file. These claims are defined as those with a line `BETOS` code (`BETOS`_CD) where the first digit =T.
 
 An event is defined as each line item that contains the relevant service."
 
@@ -26331,9 +26331,9 @@ Contained in
 
 - [Master Beneficiary Summary File](../mbsf.md#data-documentation)
 
-"This variable is the total Medicare payments for part B tests for a given year.  Claims for tests are a subset of the claims in the Part B Carrier data file. These claims are defined as those with a line BETOS code (BETOS_CD) where the first digit =T.
+"This variable is the total Medicare payments for part B tests for a given year.  Claims for tests are a subset of the claims in the Part B Carrier data file. These claims are defined as those with a line `BETOS` code (`BETOS`_CD) where the first digit =T.
 
-The total Medicare payments are calculated as the sum of LINE_NCH_PMT_AMT where the LINE_PRCSG_IND_CD was ('A','R', or 'S') - for all relevant lines."
+The total Medicare payments are calculated as the sum of `LINE_NCH_PMT_AMT` where the `LINE_PRCSG_IND_CD` was ('A','R', or 'S') - for all relevant lines."
 
 
 
@@ -26358,7 +26358,7 @@ This variable indicates whether a beneficiary met the condition criteria for tob
 
 NOTE: The condition variable requires beneficiaries to satisfy both claims criteria (a minimum number/type of Medicare claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (Medicare FFS Part A and Part B coverage during the entire specified time period).
 
-NOTE: For tobacco use disorders, beneficiaries must have at least one Medicare inpatient claim or two other non-drug claims of any service type with a related code in any position during the 2-year reference period. You can find more detailed information on the criteria on the CCW website: https://www.ccwdata.org/web/guest/condition-categories
+NOTE: For tobacco use disorders, beneficiaries must have at least one Medicare inpatient claim or two other non-drug claims of any service type with a related code in any position during the 2-year reference period. You can find more detailed information on the criteria on the CCW website: [here](https://www.ccwdata.org/web/guest/condition-categories)
 
 
 
@@ -26381,7 +26381,7 @@ Contained in
 
 This variable shows the date when the beneficiary first met the criteria for the tobacco use disorders indicator. The variable will be blank for beneficiaries that have never had the condition.
 
-NOTE: The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the COVSTART variable in the Beneficiary File).
+NOTE: The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the `COVSTART` variable in the Beneficiary File).
 
 
 
@@ -26401,7 +26401,7 @@ This variable indicates whether a beneficiary met the condition criteria for tra
 
 The condition variable requires beneficiaries to satisfy both claims criteria (a minimum number/type of Medicare claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (Medicare FFS Part A and Part B coverage during the entire specified time period). 
 		
-For traumatic brain injury and nonpsychotic mental disorders, beneficiaries must have at least one Medicare inpatient claim or two other non-drug claims of any service type with a related code in any position during the 2-year reference period. You can find more detailed information on the criteria on the CCW website: https://www.ccwdata.org/web/guest/condition-categories
+For traumatic brain injury and nonpsychotic mental disorders, beneficiaries must have at least one Medicare inpatient claim or two other non-drug claims of any service type with a related code in any position during the 2-year reference period. You can find more detailed information on the criteria on the CCW website: [here](https://www.ccwdata.org/web/guest/condition-categories)
 
 | Code   | Code Value                                                               |
 |:-------|:-------------------------------------------------------------------------|
@@ -26426,7 +26426,7 @@ This variable shows the date when the beneficiary first met the criteria for the
 
 
 
-The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the COVSTART variable in the Beneficiary File). 
+The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the `COVSTART` variable in the Beneficiary File). 
 
 
 
@@ -26463,7 +26463,7 @@ This variable indicates whether a beneficiary met the condition criteria for vir
 
 NOTE: The condition variable requires beneficiaries to satisfy both claims criteria (a minimum number/type of Medicare claims that have the proper diagnosis codes and occurred within a specified time period) and coverage criteria (Medicare FFS Part A and Part B coverage during the entire specified time period).
 
-NOTE1: For viral hepatitis (general), beneficiaries must have at least one Medicare inpatient claim or two other non-drug claims of any service type with a related code in any position during the 2-year reference period. You can find more detailed information on the criteria on the CCW website: https://www.ccwdata.org/web/guest/condition-categories
+NOTE1: For viral hepatitis (general), beneficiaries must have at least one Medicare inpatient claim or two other non-drug claims of any service type with a related code in any position during the 2-year reference period. You can find more detailed information on the criteria on the CCW website: [here](https://www.ccwdata.org/web/guest/condition-categories)
 
 
 
@@ -26486,7 +26486,7 @@ Contained in
 
 This variable shows the date when the beneficiary first met the criteria for the viral hepatitis (general) indicator. The variable will be blank for beneficiaries that have never had the condition.
 
-NOTE: The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the COVSTART variable in the Beneficiary File).
+NOTE: The earliest possible date for anyone in the CCW is January 1, 1999. If the beneficiary became eligible for Medicare after that, the earliest possible date will be some time after his/her coverage start date (i.e., the `COVSTART` variable in the Beneficiary File).
 
 
 

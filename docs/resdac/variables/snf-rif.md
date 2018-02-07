@@ -4636,7 +4636,7 @@ Contained in
 - [Hospice RIF](../hospice-rif.md#data-documentation)
 - [Home Health Agency RIF](../hha-rif.md#data-documentation)
 
-The amount related to the condition identified in the CLM_VAL_CD which was used by the intermediary to process the institutional claim.
+The amount related to the condition identified in the `CLM_VAL_CD` which was used by the intermediary to process the institutional claim.
 
 
 
@@ -4870,7 +4870,7 @@ Contained in
 - [Durable Medical Equipment RIF](../dme-rif.md#data-documentation)
 - [Carrier RIF](../carrier-rif.md#data-documentation)
 
-The unique CCW indentifier for a beneficiary. The CCW assigns a unique beneficiary identification number to each individual who receives Medicare and/or Medicaid, and uses that number to identify an individual’s records in all CCW data files (e.g., Medicare claims, MAX claims, MDS assessment data). This number does not change during a beneficiary’s lifetime and each number is used only once. The BENE_ID is specific to the CCW and is not applicable to any other identification system or data source.
+The unique CCW indentifier for a beneficiary. The CCW assigns a unique beneficiary identification number to each individual who receives Medicare and/or Medicaid, and uses that number to identify an individual’s records in all CCW data files (e.g., Medicare claims, MAX claims, MDS assessment data). This number does not change during a beneficiary’s lifetime and each number is used only once. The `BENE_ID` is specific to the CCW and is not applicable to any other identification system or data source.
 
 
 
@@ -4904,7 +4904,7 @@ Contained in
 - [Hospice RIF](../hospice-rif.md#data-documentation)
 - [Home Health Agency RIF](../hha-rif.md#data-documentation)
 
-The identification number assigned by CMS to a fiscal intermediary authorized to process institutional claim records. Effective October 2006, the Medicare Administrative Contractors (MACs) began replacing the existing fiscal intermediaries and started processing institu- tional claim records for states assigned to its jurisdiction. NOTE: The 5-position MAC number will be housed in the existing FI_NUM field. During the transition from an FI to a MAC the FI_NUM field could contain either a FI number or a MAC number. See the FI_NUM table of codes to identify the new MAC numbers and their effective dates.
+The identification number assigned by CMS to a fiscal intermediary authorized to process institutional claim records. Effective October 2006, the Medicare Administrative Contractors (MACs) began replacing the existing fiscal intermediaries and started processing institu- tional claim records for states assigned to its jurisdiction. NOTE: The 5-position MAC number will be housed in the existing `FI_NUM` field. During the transition from an FI to a MAC the `FI_NUM` field could contain either a FI number or a MAC number. See the `FI_NUM` table of codes to identify the new MAC numbers and their effective dates.
 
 
 
@@ -5249,7 +5249,7 @@ Contained in
 
 On an inpatient or Home Health claim, the date the beneficiary was discharged from the facility, or died.
 
-Date matches the "thru" date on the claim (CLM_THRU_DT). When there is a discharge date, the discharge status code (PTNT_DSCHRG_STUS_CD) indicates the final disposition of the patient after discharge.
+Date matches the "thru" date on the claim (`CLM_THRU_DT`). When there is a discharge date, the discharge status code (`PTNT_DSCHRG_STUS_CD`) indicates the final disposition of the patient after discharge.
 
 ??? derivation
 	DERIVED FROM:
@@ -6095,7 +6095,7 @@ Contained in
 - [Hospice RIF](../hospice-rif.md#data-documentation)
 - [Home Health Agency RIF](../hha-rif.md#data-documentation)
 
-The code used to identify the status of the patient as of the CLM_THRU_DT.
+The code used to identify the status of the patient as of the `CLM_THRU_DT`.
 
 
 
@@ -6926,7 +6926,7 @@ Contained in
 
 The field used to identify whether the claim line is subject to a therapy cap.
 
-Details regarding the therapy cap can be found on the CMS website, under the Medicare therapy services web page (see, for example: https://www.cms.gov/Medicare/Billing/TherapyServices/index.html).
+Details regarding the therapy cap can be found on the CMS website, under the Medicare therapy services web page (see, for example: [here](https://www.cms.gov/Medicare/Billing/TherapyServices/index.html).)
 
 
 
@@ -6954,7 +6954,7 @@ Contained in
 
 The field used to identify whether the claim line is subject to a therapy cap.
 
-Details regarding the therapy cap can be found on the CMS website, under the Medicare therapy services web page (see, for example: https://www.cms.gov/Medicare/Billing/TherapyServices/index.html).
+Details regarding the therapy cap can be found on the CMS website, under the Medicare therapy services web page (see, for example: [here](https://www.cms.gov/Medicare/Billing/TherapyServices/index.html).)
 
 
 
@@ -7077,7 +7077,7 @@ Depending on type of service, units are measured by number of covered days in a 
 
 NOTE1: When revenue center code = `0022` (SNF PPS) the unit count will reflect the number of covered days for each HIPPS code and, if applicable, the number of visits for each rehab therapy code.
 
-Description of the different unit of service measures by revenue center code beginning on page 18: http://cms.gov/Regulations-and-Guidance/Guidance/Manuals/Downloads/clm104c25.pdf
+Description of the different unit of service measures by revenue center code beginning on page 18: [here](http://cms.gov/Regulations-and-Guidance/Guidance/Manuals/Downloads/clm104c25.pdf)
 
 
 

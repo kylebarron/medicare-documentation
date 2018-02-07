@@ -333,6 +333,23 @@ for i in range(len(df)):
     values_text = re.sub(regex, r'[here](\1)', values_text)
     text = re.sub(regex, r'[here](\1)', text)
 
+    # Replace short sas names in Main text and Values text with `name`
+    # Get intersection of words in `short_sas_name`s and text
+    all_vars = set(df['short_sas_name'].values)
+    all_vars.update(df.loc[df['long_sas_name'] != '', 'long_sas_name'].values)
+
+    inter = set(re.findall(r"[\w']+|[.,!?;]", values_text)) & all_vars
+    if inter is not set():
+        for word in inter:
+            regex = rf'({word})'
+            values_text = re.sub(regex, r'`\1`', values_text)
+
+    inter = set(re.findall(r"[\w']+|[.,!?;]", text)) & all_vars
+    if inter is not set():
+        for word in inter:
+            regex = rf'({word})'
+            text = re.sub(regex, r'`\1`', text)
+
     for title in row['in_files']:
         all_text_dict[title].append(var_title)
         all_text_dict[title].append(varnames)

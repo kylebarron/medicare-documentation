@@ -194,7 +194,7 @@ Contained in
 
 The identification number assigned by CMS to a carrier authorized to process claims from a physician or supplier. Effective July 2006, the Medicare Administrative Contractors (MACs) began replacing the existing carriers and started processing physician or supplier claim records for states assigned to its jurisdiction.
 
-NOTE: The 5-position MAC number will be housed in the existing CARR_NUM field. During the transi- tion from a carrier to a MAC the CARR_NUM field could contain either a Carrier number or a MAC number. See the CARR_NUM table of codes to identify the new MAC numbers and their effective dates.
+NOTE: The 5-position MAC number will be housed in the existing `CARR_NUM` field. During the transi- tion from a carrier to a MAC the `CARR_NUM` field could contain either a Carrier number or a MAC number. See the `CARR_NUM` table of codes to identify the new MAC numbers and their effective dates.
 
 
 
@@ -1401,7 +1401,7 @@ Contained in
 
 - [Durable Medical Equipment RIF](../dme-rif.md#data-documentation)
 
-Prior to Version H this field was named: HCPCS_4TH_MDFR_CD.
+Prior to Version H this field was named: `HCPCS_4TH_MDFR_CD`.
 
 
 
@@ -1414,7 +1414,7 @@ Contained in
 
 - [Durable Medical Equipment RIF](../dme-rif.md#data-documentation)
 
-Prior to Version H this field was named: HCPCS_3RD_MDFR_CD.
+Prior to Version H this field was named: `HCPCS_3RD_MDFR_CD`.
 
 
 
@@ -1523,7 +1523,7 @@ Contained in
 
 Effective with Version 'G', billing number assigned to the supplier of the Part B service/DMEPOS by the National Supplier Clearinghouse, as reported on the line item for the DMERC claim.
 
-Different types of identifiers may be used.Refer to the variable called DMERC_LINE_SUPPLR_TYPE_CD to determine the type used for each line.
+Different types of identifiers may be used.Refer to the variable called `DMERC_LINE_SUPPLR_TYPE_CD` to determine the type used for each line.
 
 
 
@@ -1711,7 +1711,7 @@ Contained in
 - [Durable Medical Equipment RIF](../dme-rif.md#data-documentation)
 - [Carrier RIF](../carrier-rif.md#data-documentation)
 
-The unique CCW indentifier for a beneficiary. The CCW assigns a unique beneficiary identification number to each individual who receives Medicare and/or Medicaid, and uses that number to identify an individual’s records in all CCW data files (e.g., Medicare claims, MAX claims, MDS assessment data). This number does not change during a beneficiary’s lifetime and each number is used only once. The BENE_ID is specific to the CCW and is not applicable to any other identification system or data source.
+The unique CCW indentifier for a beneficiary. The CCW assigns a unique beneficiary identification number to each individual who receives Medicare and/or Medicaid, and uses that number to identify an individual’s records in all CCW data files (e.g., Medicare claims, MAX claims, MDS assessment data). This number does not change during a beneficiary’s lifetime and each number is used only once. The `BENE_ID` is specific to the CCW and is not applicable to any other identification system or data source.
 
 
 
@@ -1792,7 +1792,7 @@ Codes and descriptors developed by Medicare carriers (currently known as Medicar
 
 **** Note 2: ****
 
-This field may contain information regarding case-mix grouping that Medicare used to pay for SNF, home health, or IRF services. These groupings are sometimes known as Health Insurance Prospective Payment System (HIPPS) codes. This field will contain a HIPPS code if the revenue center code (REV_CNTR) equals 0022 for SNF care, 0023 for home health, or 0024 for IRF care. For home health claims, please also see the revenue center APC/HIPPS code variable (REV_CNTR_APC_HIPPS_CD).
+This field may contain information regarding case-mix grouping that Medicare used to pay for SNF, home health, or IRF services. These groupings are sometimes known as Health Insurance Prospective Payment System (HIPPS) codes. This field will contain a HIPPS code if the revenue center code (`REV_CNTR`) equals 0022 for SNF care, 0023 for home health, or 0024 for IRF care. For home health claims, please also see the revenue center APC/HIPPS code variable (`REV_CNTR`_APC_HIPPS_CD).
 
 
 
@@ -2293,7 +2293,7 @@ Contained in
 - [Durable Medical Equipment RIF](../dme-rif.md#data-documentation)
 - [Carrier RIF](../carrier-rif.md#data-documentation)
 
-Effective with Version H, the Berenson-Eggers type of service (BETOS) for the procedure code based on generally agreed upon clinically meaningful groupings of procedures and services. This field is included as a line item on the noninstitutional claim.
+Effective with Version H, the Berenson-Eggers type of service (`BETOS`) for the procedure code based on generally agreed upon clinically meaningful groupings of procedures and services. This field is included as a line item on the noninstitutional claim.
 
 NOTE: During the Version H conversion this field was populated with data throughout history (back to service year 1991).
 
@@ -2305,7 +2305,7 @@ NOTE: During the Version H conversion this field was populated with data through
 
 
 
- BETOS Table.txt 
+ `BETOS` Table.txt 
 
 
 
@@ -2336,7 +2336,7 @@ Contained in
 The field used to identify amounts that were used to adjust the amount payable when processing the line item.
 
 See the associated line other applied indicator code in the LINE_OTHR_APLD_IND_CD{#} field.
-There are up to 7 of these line applied amount fields (LINE_OTHR_APLD_AMT1 - LINE_OTHR_APLD_AMT7).
+There are up to 7 of these line applied amount fields (`LINE_OTHR_APLD_AMT1` - `LINE_OTHR_APLD_AMT7`).
 
 
 
@@ -2359,7 +2359,7 @@ Contained in
 The field used to identify amounts that were used to adjust the amount payable when processing the line item.
 
 See the associated line other applied indicator code in the LINE_OTHR_APLD_IND_CD{#} field.
-There are up to 7 of these line applied amount fields (LINE_OTHR_APLD_AMT1 - LINE_OTHR_APLD_AMT7).
+There are up to 7 of these line applied amount fields (`LINE_OTHR_APLD_AMT1` - `LINE_OTHR_APLD_AMT7`).
 
 
 
@@ -2382,7 +2382,7 @@ Contained in
 The field used to identify amounts that were used to adjust the amount payable when processing the line item.
 
 See the associated line other applied indicator code in the LINE_OTHR_APLD_IND_CD{#} field.
-There are up to 7 of these line applied amount fields (LINE_OTHR_APLD_AMT1 - LINE_OTHR_APLD_AMT7).
+There are up to 7 of these line applied amount fields (`LINE_OTHR_APLD_AMT1` - `LINE_OTHR_APLD_AMT7`).
 
 
 
@@ -2405,7 +2405,7 @@ Contained in
 The field used to identify amounts that were used to adjust the amount payable when processing the line item.
 
 See the associated line other applied indicator code in the LINE_OTHR_APLD_IND_CD{#} field.
-There are up to 7 of these line applied amount fields (LINE_OTHR_APLD_AMT1 - LINE_OTHR_APLD_AMT7).
+There are up to 7 of these line applied amount fields (`LINE_OTHR_APLD_AMT1` - `LINE_OTHR_APLD_AMT7`).
 
 
 
@@ -2428,7 +2428,7 @@ Contained in
 The field used to identify amounts that were used to adjust the amount payable when processing the line item.
 
 See the associated line other applied indicator code in the LINE_OTHR_APLD_IND_CD{#} field.
-There are up to 7 of these line applied amount fields (LINE_OTHR_APLD_AMT1 - LINE_OTHR_APLD_AMT7).
+There are up to 7 of these line applied amount fields (`LINE_OTHR_APLD_AMT1` - `LINE_OTHR_APLD_AMT7`).
 
 
 
@@ -2451,7 +2451,7 @@ Contained in
 The field used to identify amounts that were used to adjust the amount payable when processing the line item.
 
 See the associated line other applied indicator code in the LINE_OTHR_APLD_IND_CD{#} field.
-There are up to 7 of these line applied amount fields (LINE_OTHR_APLD_AMT1 - LINE_OTHR_APLD_AMT7).
+There are up to 7 of these line applied amount fields (`LINE_OTHR_APLD_AMT1` - `LINE_OTHR_APLD_AMT7`).
 
 
 
@@ -2474,7 +2474,7 @@ Contained in
 The field used to identify amounts that were used to adjust the amount payable when processing the line item.
 
 See the associated line other applied indicator code in the LINE_OTHR_APLD_IND_CD{#} field.
-There are up to 7 of these line applied amount fields (LINE_OTHR_APLD_AMT1 - LINE_OTHR_APLD_AMT7).
+There are up to 7 of these line applied amount fields (`LINE_OTHR_APLD_AMT1` - `LINE_OTHR_APLD_AMT7`).
 
 
 
@@ -2497,7 +2497,7 @@ Contained in
 The code used to identify the reason the claim payment amount was adjusted during claims processing.
 
 See the associated amounts in the LINE_OTHR_APLD_AMT{#} field.
-There are up to 7 of these line applied indicator fields (LINE_OTHR_APLD_IND_CD1 - LINE_OTHR_APLD_IND_CD7).
+There are up to 7 of these line applied indicator fields (`LINE_OTHR_APLD_IND_CD1` - `LINE_OTHR_APLD_IND_CD7`).
 
 
 
@@ -2522,7 +2522,7 @@ Contained in
 The code used to identify the reason the claim payment amount was adjusted during claims processing.
 
 See the associated amounts in the LINE_OTHR_APLD_AMT{#} field.
-There are up to 7 of these line applied indicator fields (LINE_OTHR_APLD_IND_CD1 - LINE_OTHR_APLD_IND_CD7).
+There are up to 7 of these line applied indicator fields (`LINE_OTHR_APLD_IND_CD1` - `LINE_OTHR_APLD_IND_CD7`).
 
 
 
@@ -2547,7 +2547,7 @@ Contained in
 The code used to identify the reason the claim payment amount was adjusted during claims processing.
 
 See the associated amounts in the LINE_OTHR_APLD_AMT{#} field.
-There are up to 7 of these line applied indicator fields (LINE_OTHR_APLD_IND_CD1 - LINE_OTHR_APLD_IND_CD7).
+There are up to 7 of these line applied indicator fields (`LINE_OTHR_APLD_IND_CD1` - `LINE_OTHR_APLD_IND_CD7`).
 
 
 
@@ -2572,7 +2572,7 @@ Contained in
 The code used to identify the reason the claim payment amount was adjusted during claims processing.
 
 See the associated amounts in the LINE_OTHR_APLD_AMT{#} field.
-There are up to 7 of these line applied indicator fields (LINE_OTHR_APLD_IND_CD1 - LINE_OTHR_APLD_IND_CD7).
+There are up to 7 of these line applied indicator fields (`LINE_OTHR_APLD_IND_CD1` - `LINE_OTHR_APLD_IND_CD7`).
 
 
 
@@ -2597,7 +2597,7 @@ Contained in
 The code used to identify the reason the claim payment amount was adjusted during claims processing.
 
 See the associated amounts in the LINE_OTHR_APLD_AMT{#} field.
-There are up to 7 of these line applied indicator fields (LINE_OTHR_APLD_IND_CD1 - LINE_OTHR_APLD_IND_CD7).
+There are up to 7 of these line applied indicator fields (`LINE_OTHR_APLD_IND_CD1` - `LINE_OTHR_APLD_IND_CD7`).
 
 
 
@@ -2622,7 +2622,7 @@ Contained in
 The code used to identify the reason the claim payment amount was adjusted during claims processing.
 
 See the associated amounts in the LINE_OTHR_APLD_AMT{#} field.
-There are up to 7 of these line applied indicator fields (LINE_OTHR_APLD_IND_CD1 - LINE_OTHR_APLD_IND_CD7).
+There are up to 7 of these line applied indicator fields (`LINE_OTHR_APLD_IND_CD1` - `LINE_OTHR_APLD_IND_CD7`).
 
 
 
@@ -2647,7 +2647,7 @@ Contained in
 The code used to identify the reason the claim payment amount was adjusted during claims processing.
 
 See the associated amounts in the LINE_OTHR_APLD_AMT{#} field.
-There are up to 7 of these line applied indicator fields (LINE_OTHR_APLD_IND_CD1 - LINE_OTHR_APLD_IND_CD7).
+There are up to 7 of these line applied indicator fields (`LINE_OTHR_APLD_IND_CD1` - `LINE_OTHR_APLD_IND_CD7`).
 
 
 
@@ -2705,7 +2705,7 @@ The code indicating the place of service, as defined in the Medicare Carrier Man
 
 
 
-List obtained from https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set.html Place of Service Table.txt 
+List obtained from [here](https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set.html) Place of Service Table.txt 
 
 
 

@@ -1708,7 +1708,7 @@ Contained in
 
 The field identifies the claims that qualify for specific claims processing edits related to benefit enhancement through the Next Generation (NG) Accountable Care Organization (ACO).
 
-There are 5 of these ACO fields (CLM_NEXT_GNRTN_ACO_IND_CD1 -CLM_NEXT_GNRTN_ACO_IND_CD5).
+There are 5 of these ACO fields (`CLM_NEXT_GNRTN_ACO_IND_CD1` -`CLM_NEXT_GNRTN_ACO_IND_CD5`).
 
 
 
@@ -1737,7 +1737,7 @@ Contained in
 
 The field identifies the claims that qualify for specific claims processing edits related to benefit enhancement through the Next Generation (NG) Accountable Care Organization (ACO).
 
-There are 5 of these ACO fields (CLM_NEXT_GNRTN_ACO_IND_CD1 -CLM_NEXT_GNRTN_ACO_IND_CD5).
+There are 5 of these ACO fields (`CLM_NEXT_GNRTN_ACO_IND_CD1` -`CLM_NEXT_GNRTN_ACO_IND_CD5`).
 
 
 
@@ -1766,7 +1766,7 @@ Contained in
 
 The field identifies the claims that qualify for specific claims processing edits related to benefit enhancement through the Next Generation (NG) Accountable Care Organization (ACO).
 
-There are 5 of these ACO fields (CLM_NEXT_GNRTN_ACO_IND_CD1 -CLM_NEXT_GNRTN_ACO_IND_CD5).
+There are 5 of these ACO fields (`CLM_NEXT_GNRTN_ACO_IND_CD1` -`CLM_NEXT_GNRTN_ACO_IND_CD5`).
 
 
 
@@ -1795,7 +1795,7 @@ Contained in
 
 The field identifies the claims that qualify for specific claims processing edits related to benefit enhancement through the Next Generation (NG) Accountable Care Organization (ACO).
 
-There are 5 of these ACO fields (CLM_NEXT_GNRTN_ACO_IND_CD1 -CLM_NEXT_GNRTN_ACO_IND_CD5).
+There are 5 of these ACO fields (`CLM_NEXT_GNRTN_ACO_IND_CD1` -`CLM_NEXT_GNRTN_ACO_IND_CD5`).
 
 
 
@@ -1824,7 +1824,7 @@ Contained in
 
 The field identifies the claims that qualify for specific claims processing edits related to benefit enhancement through the Next Generation (NG) Accountable Care Organization (ACO).
 
-There are 5 of these ACO fields (CLM_NEXT_GNRTN_ACO_IND_CD1 -CLM_NEXT_GNRTN_ACO_IND_CD5).
+There are 5 of these ACO fields (`CLM_NEXT_GNRTN_ACO_IND_CD1` -`CLM_NEXT_GNRTN_ACO_IND_CD5`).
 
 
 
@@ -3345,7 +3345,7 @@ Contained in
 - [Hospice RIF](../hospice-rif.md#data-documentation)
 - [Home Health Agency RIF](../hha-rif.md#data-documentation)
 
-The amount related to the condition identified in the CLM_VAL_CD which was used by the intermediary to process the institutional claim.
+The amount related to the condition identified in the `CLM_VAL_CD` which was used by the intermediary to process the institutional claim.
 
 
 
@@ -3600,7 +3600,7 @@ Contained in
 - [Durable Medical Equipment RIF](../dme-rif.md#data-documentation)
 - [Carrier RIF](../carrier-rif.md#data-documentation)
 
-The unique CCW indentifier for a beneficiary. The CCW assigns a unique beneficiary identification number to each individual who receives Medicare and/or Medicaid, and uses that number to identify an individual’s records in all CCW data files (e.g., Medicare claims, MAX claims, MDS assessment data). This number does not change during a beneficiary’s lifetime and each number is used only once. The BENE_ID is specific to the CCW and is not applicable to any other identification system or data source.
+The unique CCW indentifier for a beneficiary. The CCW assigns a unique beneficiary identification number to each individual who receives Medicare and/or Medicaid, and uses that number to identify an individual’s records in all CCW data files (e.g., Medicare claims, MAX claims, MDS assessment data). This number does not change during a beneficiary’s lifetime and each number is used only once. The `BENE_ID` is specific to the CCW and is not applicable to any other identification system or data source.
 
 
 
@@ -3634,7 +3634,7 @@ Contained in
 - [Hospice RIF](../hospice-rif.md#data-documentation)
 - [Home Health Agency RIF](../hha-rif.md#data-documentation)
 
-The identification number assigned by CMS to a fiscal intermediary authorized to process institutional claim records. Effective October 2006, the Medicare Administrative Contractors (MACs) began replacing the existing fiscal intermediaries and started processing institu- tional claim records for states assigned to its jurisdiction. NOTE: The 5-position MAC number will be housed in the existing FI_NUM field. During the transition from an FI to a MAC the FI_NUM field could contain either a FI number or a MAC number. See the FI_NUM table of codes to identify the new MAC numbers and their effective dates.
+The identification number assigned by CMS to a fiscal intermediary authorized to process institutional claim records. Effective October 2006, the Medicare Administrative Contractors (MACs) began replacing the existing fiscal intermediaries and started processing institu- tional claim records for states assigned to its jurisdiction. NOTE: The 5-position MAC number will be housed in the existing `FI_NUM` field. During the transition from an FI to a MAC the `FI_NUM` field could contain either a FI number or a MAC number. See the `FI_NUM` table of codes to identify the new MAC numbers and their effective dates.
 
 
 
@@ -3855,7 +3855,7 @@ Contained in
 
 On an inpatient or Home Health claim, the date the beneficiary was discharged from the facility, or died.
 
-Date matches the "thru" date on the claim (CLM_THRU_DT). When there is a discharge date, the discharge status code (PTNT_DSCHRG_STUS_CD) indicates the final disposition of the patient after discharge.
+Date matches the "thru" date on the claim (`CLM_THRU_DT`). When there is a discharge date, the discharge status code (`PTNT_DSCHRG_STUS_CD`) indicates the final disposition of the patient after discharge.
 
 ??? derivation
 	DERIVED FROM:
@@ -4433,7 +4433,7 @@ Contained in
 - [Hospice RIF](../hospice-rif.md#data-documentation)
 - [Home Health Agency RIF](../hha-rif.md#data-documentation)
 
-The code used to identify the status of the patient as of the CLM_THRU_DT.
+The code used to identify the status of the patient as of the `CLM_THRU_DT`.
 
 
 
@@ -5299,7 +5299,7 @@ FISS: populated correctly with provider payment amount
 
 APASS: provider payment amount plus interest on 1st revenue center line (CMM will instruct APASS not to include interest)
 
-Currently, the following FI numbers are under the APASS system and all other FI numbers are under FISS. See FI_NUM table of codes for all FI numbers. 52280 -- Mutual of Omaha (until 6/1/2003) 00430 -- Washington/Alaska (until 11/1/2003) 00310 -- North Carolina BC (until 12/1/2003) 00370 -- Rhode Island (until 2/1/2004) 00270 -- New Hampshire/Vermont (until 3/1/2004) 00181 -- Maine/Massachusetts (until 5/1/2004)
+Currently, the following FI numbers are under the APASS system and all other FI numbers are under FISS. See `FI_NUM` table of codes for all FI numbers. 52280 -- Mutual of Omaha (until 6/1/2003) 00430 -- Washington/Alaska (until 11/1/2003) 00310 -- North Carolina BC (until 12/1/2003) 00370 -- Rhode Island (until 2/1/2004) 00270 -- New Hampshire/Vermont (until 3/1/2004) 00181 -- Maine/Massachusetts (until 5/1/2004)
 
 NOTE2: It has been discovered that this field may be populated with data on claims with dates of service prior to 7/00 (implementation of Claim Line Expansion OPPS/HHPPS). The original understanding of the new revenue center fields was that data would be populated on claims with dates of service 7/00 and forward. Data has been found in claims with dates of service prior to 7/00 because the Standard Systems have processed any claim coming in 7/00 and after, meeting the above criteria, through the Outpatient Code Editor (OCE) regardless of the dates of service.
 
@@ -5458,7 +5458,7 @@ Contained in
 
 The field used to identify whether the claim line is subject to a therapy cap.
 
-Details regarding the therapy cap can be found on the CMS website, under the Medicare therapy services web page (see, for example: https://www.cms.gov/Medicare/Billing/TherapyServices/index.html).
+Details regarding the therapy cap can be found on the CMS website, under the Medicare therapy services web page (see, for example: [here](https://www.cms.gov/Medicare/Billing/TherapyServices/index.html).)
 
 
 
@@ -5486,7 +5486,7 @@ Contained in
 
 The field used to identify whether the claim line is subject to a therapy cap.
 
-Details regarding the therapy cap can be found on the CMS website, under the Medicare therapy services web page (see, for example: https://www.cms.gov/Medicare/Billing/TherapyServices/index.html).
+Details regarding the therapy cap can be found on the CMS website, under the Medicare therapy services web page (see, for example: [here](https://www.cms.gov/Medicare/Billing/TherapyServices/index.html).)
 
 
 
@@ -5609,7 +5609,7 @@ Depending on type of service, units are measured by number of covered days in a 
 
 NOTE1: When revenue center code = `0022` (SNF PPS) the unit count will reflect the number of covered days for each HIPPS code and, if applicable, the number of visits for each rehab therapy code.
 
-Description of the different unit of service measures by revenue center code beginning on page 18: http://cms.gov/Regulations-and-Guidance/Guidance/Manuals/Downloads/clm104c25.pdf
+Description of the different unit of service measures by revenue center code beginning on page 18: [here](http://cms.gov/Regulations-and-Guidance/Guidance/Manuals/Downloads/clm104c25.pdf)
 
 
 

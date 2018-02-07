@@ -41,9 +41,9 @@ Contained in
 
 - [MedPAR RIF](../medpar-rif.md#data-documentation)
 
-The code categorizing groups of BICs representing similar relationships between the beneficiary and primary wage earner.
+The code categorizing groups of `BIC`s representing similar relationships between the beneficiary and primary wage earner.
 
-NOTE: The equatable BIC module electronically matches two records that contain different BICs where it is apparent both are records for the same beneficiary. It validates the BIC and returns a base BIC under which to house the record in the National Claims History (NCH) databases. (All records for a beneficiary are stored under a single BIC).
+NOTE: The equatable `BIC` module electronically matches two records that contain different `BIC`s where it is apparent both are records for the same beneficiary. It validates the `BIC` and returns a base `BIC` under which to house the record in the National Claims History (NCH) databases. (All records for a beneficiary are stored under a single `BIC`).
 
 
 
@@ -399,7 +399,7 @@ Contained in
 
 - [MedPAR RIF](../medpar-rif.md#data-documentation)
 
-The code used to identify the status of the patient as of the CLM_THRU_DT.
+The code used to identify the status of the patient as of the `CLM_THRU_DT`.
 
 ??? derivation
 	This field is derived from the claim status code that is present on the last claim record included in the stay.
@@ -420,7 +420,7 @@ Contained in
 
 - [MedPAR RIF](../medpar-rif.md#data-documentation)
 
-The BIC reported on the first claim record included in the stay, representing the values existing on the CWF beneficiary master record on the date the CWF host site processed the claim.
+The `BIC` reported on the first claim record included in the stay, representing the values existing on the CWF beneficiary master record on the date the CWF host site processed the claim.
 
 
 
@@ -2241,7 +2241,7 @@ NOTE3: Effective with Version 'J', 3 new code values have been added to include 
 
 <h3>Values</h3>
 
-In the data element NCH_CLM_TYPE_CD (derivation rules) the numbers for these claim types need to be changed - dictionary reflects 61 for all three.
+In the data element `NCH_CLM_TYPE_CD` (derivation rules) the numbers for these claim types need to be changed - dictionary reflects 61 for all three.
 
 | Code   | Code Value                             |
 |:-------|:---------------------------------------|
