@@ -349,4 +349,4 @@ for title, path in local_paths_dict.items():
         f.writelines(all_text_dict[title])
 
 with open(join('..', 'docs', 'resdac', 'variables', 'variables.md'), 'w') as f:
-    f.writelines(all_text)
+    f.writelines(all_text_dict['All Variables'])
