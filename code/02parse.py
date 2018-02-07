@@ -326,6 +326,13 @@ for i in range(len(df)):
     else:
         print_tables = ''
 
+    # Replace link text in Main text and Values text with a hyperlink
+    # https://stackoverflow.com/questions/161738/what-is-the-best-regular-expression-to-check-if-a-string-is-a-valid-url
+    values_text = row['values_text']
+    regex = r'(http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+)'
+    values_text = re.sub(regex, r'[here](\1)', values_text)
+    text = re.sub(regex, r'[here](\1)', text)
+
     for title in row['in_files']:
         all_text_dict[title].append(var_title)
         all_text_dict[title].append(varnames)
@@ -333,7 +340,7 @@ for i in range(len(df)):
         all_text_dict[title].append(contained_in)
         all_text_dict[title].append(text)
         all_text_dict[title].append(hidden_text)
-        all_text_dict[title].append(row['values_text'])
+        all_text_dict[title].append(values_text)
         local_paths_dict[title]
 
     all_text_dict['All Variables'].append(var_title)
@@ -342,7 +349,7 @@ for i in range(len(df)):
     all_text_dict['All Variables'].append(contained_in)
     all_text_dict['All Variables'].append(text)
     all_text_dict['All Variables'].append(hidden_text)
-    all_text_dict['All Variables'].append(row['values_text'])
+    all_text_dict['All Variables'].append(values_text)
 
 for title, path in local_paths_dict.items():
     with open(join('..', 'docs', 'resdac', 'variables', path), 'w') as f:
