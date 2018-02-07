@@ -60,9 +60,9 @@ for page_title, url in urls_dict.items():
         path = os.path.join('..', 'data', 'resdac', 'html', 'variables', link[1:] + '.html')
         
         with open(path, 'r') as text_file:
-            var_page = text_file.read()
-        var_soup = BeautifulSoup(var_page, 'html.parser')
-        
+            var_html = text_file.read()
+        var_soup = BeautifulSoup(var_html, 'html.parser')
+
         md_anchor = var_soup.find(id='page-title').get_text()
         md_anchor = re.sub(r'[.,/#!$%\^&\*;:{}=_`~()]', '', md_anchor)
         md_anchor = md_anchor.strip()
