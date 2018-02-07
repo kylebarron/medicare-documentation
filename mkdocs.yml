@@ -43,7 +43,6 @@ pages:
         - Standard Readme: 'kyle/01medicare_readme.md'
         - Data Extraction Overview: 'kyle/extract_data.md'
         - Data Locations: 'kyle/data_locations.md'
-        - Python Extraction: 'kyle/python_extract.md'
         - Using tmux for long-running jobs: 'kyle/using-tmux-aging-servers.md'
     - Important Details:
         - Enrollment Restrictions: 'mauricio/enrollment-restrictions.md'
