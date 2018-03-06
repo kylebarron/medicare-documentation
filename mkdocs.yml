@@ -81,7 +81,8 @@ extra_javascript:
 
 markdown_extensions:
     - admonition
-    - codehilite
+    - codehilite:
+        linenums: true
     - footnotes
     - meta
     - pymdownx.arithmatex
