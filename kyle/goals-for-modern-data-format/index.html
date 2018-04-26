@@ -1182,60 +1182,87 @@
 <h3 id="stata-dta">Stata (<code>.dta</code>)<a class="headerlink" href="#stata-dta" title="Permanent link">&para;</a></h3>
 <p>Decently fast for Stata to read by column but very slow to read by row for big files, since the Stata reader must scan the entire file before importing the first row.</p>
 <p>Python can also read Stata files, but it's not the fastest file format to read. The following python code reads the first 10% of the rows of the 2011 1% outpatient claims dataset. This is the data sample that the rest of the benchmarks use.</p>
-<div class="codehilite"><pre><span></span><span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;/disk/aging/medicare/data/01pct/op/2011/opc2011.dta&#39;</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;/disk/aging/medicare/data/01pct/op/2011/opc2011.dta&#39;</span>
 <span class="n">itr</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_stata</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">iterator</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
 <span class="o">%</span><span class="k">time</span> df = itr.get_chunk(int(itr.nobs / 10))
 <span class="c1"># CPU times: user 17 s, sys: 7.5 s, total: 24.5 s</span>
 <span class="c1"># Wall time: 27 s</span>
 </pre></div>
-
+</td></tr></table>
 
 <h3 id="csv-csv">CSV (<code>.csv</code>)<a class="headerlink" href="#csv-csv" title="Permanent link">&para;</a></h3>
 <p>Stored as text; Doesn't hold metadata about columns, therefore rather costly CPU-wise to import the data (though still better than reading <code>.dta</code> files). Python can read in a subset of the columns of a <code>.csv</code> and can loop over rows without reading in all rows at a time.</p>
-<div class="codehilite"><pre><span></span><span class="o">%</span><span class="k">timeit</span> test_csv_read()
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">%</span><span class="k">timeit</span> test_csv_read()
 <span class="c1"># 2.54 s ± 50.6 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</span>
 </pre></div>
-
+</td></tr></table>
 
 <h3 id="json-json">JSON (<code>.json</code>)<a class="headerlink" href="#json-json" title="Permanent link">&para;</a></h3>
 <p>Also stored as text; meant for hierarchical data. Overkill for a rectangular data frame.</p>
 <h3 id="feather-format-feather">Feather format (<code>.feather</code>)<a class="headerlink" href="#feather-format-feather" title="Permanent link">&para;</a></h3>
 <p>Very fast file format to read and write. It's possible to import a subset of columns, but <strong>not</strong> a subset of rows. You must read in all rows of a column at once. It's possible to read <code>.feather</code> files from R, Python, and Julia.</p>
-<div class="codehilite"><pre><span></span><span class="o">%</span><span class="k">timeit</span> test_feather_read()
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">%</span><span class="k">timeit</span> test_feather_read()
 <span class="c1"># 583 ms ± 10.1 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</span>
 </pre></div>
-
+</td></tr></table>
 
 <h3 id="parquet-format-parquet">Parquet format (<code>.parquet</code>)<a class="headerlink" href="#parquet-format-parquet" title="Permanent link">&para;</a></h3>
 <p>Parquet is similar to the feather format with a few differences. It's a columnar format, like Feather, which means that the data in a matrix/DataFrame is stored in each column, not in each row. That means that a column's data must be kept together. Importantly, however, Parquet files can be split into <em>row groups</em>. That means that you can write a certain number of rows in each column at a time. Say the size of your row group is 1,000,000 rows. Then you write the first 1,000,000 rows of all columns, then the next 1,000,000, and so on. This makes it fast to read 1,000,000 at a time of whatever subset (or all) of the columns you want. But you can't read the first 10 rows or the first 100; it must be the size of the row group.</p>
-<div class="codehilite"><pre><span></span><span class="o">%</span><span class="k">timeit</span> test_parquet_read_compress()
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">%</span><span class="k">timeit</span> test_parquet_read_compress()
 <span class="c1"># 1.48 s ± 20.2 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</span>
 
 <span class="o">%</span><span class="k">timeit</span> test_parquet_read()
 <span class="c1"># 1.47 s ± 22.2 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</span>
 </pre></div>
+</td></tr></table>
 
-
-<div class="codehilite"><pre><span></span>ls -lh
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ls -lh
 -rw-r--r-- <span class="m">1</span> barronk dua18266  12M Jan  <span class="m">9</span> <span class="m">16</span>:31 test_compress.parquet
 -rw-r--r-- <span class="m">1</span> barronk dua18266  17M Jan  <span class="m">9</span> <span class="m">16</span>:32 test.parquet
 -rw-rw-r-- <span class="m">1</span> barronk dua18266  63M Jan  <span class="m">9</span> <span class="m">16</span>:27 test.csv
 </pre></div>
-
+</td></tr></table>
 
 <h3 id="pickle-pkl">Pickle (<code>.pkl</code>)<a class="headerlink" href="#pickle-pkl" title="Permanent link">&para;</a></h3>
 <p>Pickle is a Python specific format. To my knowledge, it saves objects in disk the same way they're stored in memory by Python. This makes it very fast. However you must read in the entire object; it's impossible to choose a subset of rows or columns.</p>
-<div class="codehilite"><pre><span></span><span class="o">%</span><span class="k">timeit</span> test_pickle_read()
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">%</span><span class="k">timeit</span> test_pickle_read()
 <span class="c1"># 1.25 s ± 47.2 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</span>
 
 <span class="o">%</span><span class="k">timeit</span> test_pickle_read_compress()
 <span class="c1"># 2.58 s ± 669 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</span>
 </pre></div>
-
+</td></tr></table>
 
 <h3 id="hdf5-hdf">HDF5 (<code>.hdf</code>)<a class="headerlink" href="#hdf5-hdf" title="Permanent link">&para;</a></h3>
 <p>HDF5 is a high performance format that could work for this use case, but I don't really understand it well. From the Pandas API documentation, it's possible to read in HDF5 files by columns as well as by rows.</p>
-<div class="codehilite"><pre><span></span><span class="o">%</span><span class="k">timeit</span> test_hdf_fixed_read()
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">%</span><span class="k">timeit</span> test_hdf_fixed_read()
 <span class="c1"># 11.2 s ± 1.51 s per loop (mean ± std. dev. of 7 runs, 1 loop each)</span>
 
 <span class="o">%</span><span class="k">timeit</span> test_hdf_fixed_read_compress()
@@ -1247,14 +1274,15 @@
 <span class="o">%</span><span class="k">timeit</span> test_hdf_table_read_compress()
 <span class="c1"># 25.1 s ± 7.81 s per loop (mean ± std. dev. of 7 runs, 1 loop each)</span>
 </pre></div>
-
+</td></tr></table>
 
 <h3 id="sql">SQL<a class="headerlink" href="#sql" title="Permanent link">&para;</a></h3>
 <p>I've talked to Mohan and Dan and they've said that SQL isn't optimal for this kind of data processing, since we're often extracting most values of a column, rather than finding one specific row, which is helped by the index.</p>
-<div class="codehilite"><pre><span></span><span class="o">%</span><span class="k">timeit</span> test_sql_read()
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">%</span><span class="k">timeit</span> test_sql_read()
 <span class="c1"># 12.8 s ± 1.86 s per loop (mean ± std. dev. of 7 runs, 1 loop each)</span>
 </pre></div>
-
+</td></tr></table>
 
 <h2 id="data-decisions">Data Decisions<a class="headerlink" href="#data-decisions" title="Permanent link">&para;</a></h2>
 <h3 id="categorical-variables">Categorical Variables<a class="headerlink" href="#categorical-variables" title="Permanent link">&para;</a></h3>
@@ -1276,7 +1304,287 @@ would probably get annoying.</p>
 <h2 id="full-python-io-benchmark">Full Python I/O Benchmark<a class="headerlink" href="#full-python-io-benchmark" title="Permanent link">&para;</a></h2>
 <p>First using generated data, then using real Medicare data. All computations are taking place on the Aging servers.</p>
 <p>(Done in the ipython kernel.)</p>
-<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>  1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+ 10
+ 11
+ 12
+ 13
+ 14
+ 15
+ 16
+ 17
+ 18
+ 19
+ 20
+ 21
+ 22
+ 23
+ 24
+ 25
+ 26
+ 27
+ 28
+ 29
+ 30
+ 31
+ 32
+ 33
+ 34
+ 35
+ 36
+ 37
+ 38
+ 39
+ 40
+ 41
+ 42
+ 43
+ 44
+ 45
+ 46
+ 47
+ 48
+ 49
+ 50
+ 51
+ 52
+ 53
+ 54
+ 55
+ 56
+ 57
+ 58
+ 59
+ 60
+ 61
+ 62
+ 63
+ 64
+ 65
+ 66
+ 67
+ 68
+ 69
+ 70
+ 71
+ 72
+ 73
+ 74
+ 75
+ 76
+ 77
+ 78
+ 79
+ 80
+ 81
+ 82
+ 83
+ 84
+ 85
+ 86
+ 87
+ 88
+ 89
+ 90
+ 91
+ 92
+ 93
+ 94
+ 95
+ 96
+ 97
+ 98
+ 99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">sqlite3</span>
 <span class="kn">from</span> <span class="nn">numpy.random</span> <span class="kn">import</span> <span class="n">randn</span>
@@ -1558,6 +1866,7 @@ would probably get annoying.</p>
 <span class="c1"># -rw-rw-r-- 1 barronk dua18266 452M Jan  9 16:24 test_table.hdf</span>
 <span class="c1"># -rw-rw-r-- 1 barronk dua18266 452M Jan  9 16:26 test_table_compress.hdf</span>
 </pre></div>
+</td></tr></table>
                 
                   
                 

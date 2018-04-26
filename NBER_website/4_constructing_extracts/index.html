@@ -1110,7 +1110,23 @@
 <li><strong>The admission occurred at a hospital, not a skilled nursing facility.</strong> This restriction is imposed because it is unlikely that an AMI would result in an initial admission to a skilled nursing facility, rather than an acute care hospital. These AMIs are flagged and dropped.</li>
 </ol>
 <p>Note that the following figure describes the role of the <code>dgnPos</code> and <code>prcPos</code> parameters in the wrapper programs. Note that carrier candidate file only allows users to define <code>drgPos</code> because the HCPCS codes happen at the line items level and there is no meaningful ranking to procedures performed on the same day.</p>
-<div class="codehilite"><pre><span></span><span class="cm">/* dgnPos=1 — informs the programs to only flag diagnostic</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cm">/* dgnPos=1 — informs the programs to only flag diagnostic</span>
 <span class="cm">             codes in the first diagnostic position</span>
 <span class="cm">             (most important). A 2 would have the program look</span>
 <span class="cm">             into the first 2 procedure diagnostic codes */</span>
@@ -1128,7 +1144,7 @@
     dflag  =<span class="m">1</span>,
     clmDTA =<span class="m">0</span>);
 </pre></div>
-
+</td></tr></table>
 
 <p>Figure 4.1 <code>medpar_candidates.sas</code> wrapper to only flag the principal diagnosis</p>
 <p>Each candidate program generates a data set at the stay, claim or line item depending on which files you are working with.</p>
@@ -1147,7 +1163,21 @@
 <li>Candidate index event file: This file is generated from the previous step. This step merges the data together and enforces a priority ranking so that index events happening on the same day are assigned to the claims file of interest.</li>
 </ol>
 <p>Before any restrictions are place on the data, the program first merges all of the candidate index events, since it is now possible to use several files. The wrapper program for defining this has many parameters. The AMA example is given in the following figure. Note that first off since only the MedPAR file is used the the med= parameter is set to <code>1</code> with the rest set to <code>0</code>. Also the <code>med_dgnPos=</code> and <code>med_prcPos=</code> parameters need to match that found in the <code>medpar_candidates.sas</code> program.</p>
-<div class="codehilite"><pre><span></span><span class="nf">%CombinecandidateIndxEvents</span>(
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nf">%CombinecandidateIndxEvents</span>(
     cohrt      = ami,
     pct        = <span class="m">05</span>,
     <span class="k">end</span>        = <span class="m">2009</span>,
@@ -1163,7 +1193,7 @@
     op_dgnPos  = <span class="m">0</span>,
     op_prcPos  = <span class="m">0</span>);
 </pre></div>
-
+</td></tr></table>
 
 <p>Figure 4.2 <code>medpar_candidates.sas</code> wrapper to only flag the principal diagnosis</p>
 <p>The approach used to defining the sample roughly follows Udvarhelyi et al. (1992), McClellan (1993), McClellan et al. (1994), and McClellan and Newhouse (1997)<sup id="fnref:24"><a class="footnote-ref" href="#fn:24" rel="footnote">1</a></sup>. A major restriction is based on enforcing continuous non-HMO enrollment which accounts for a large percent of candidate index events dropping form the sample. The second most important restriction involves allowing the same individual to have more then one index event in the final index set, as long as the candidate events happened at least one year apart. Correspondingly, the procedure includes an AMI in the final sample if the following criteria are met <sup id="fnref:25"><a class="footnote-ref" href="#fn:25" rel="footnote">2</a></sup>:</p>
@@ -1173,17 +1203,36 @@
 <li>The individual is at least 66 years of age at the time of the AMI. This restriction excludes individuals who are either: 1) currently eligible for Medicare on the basis of disability; or 2) meet the continuous Medicare enrollment requirement only because they were eligible for Medicare on the basis of disability before turning 65. This ensures that the resulting sample is basically representative of the old-age Medicare population (except for 65 year olds). <strong>Hard coded.</strong></li>
 </ol>
 <p>The following code shows that in addition to defining the cohort with some combination of procedure or diagnostic codes, years of interest and percent of sample, the code also allows for users to tweak the first continuous enrollment restrictions and the days which need to pass before index events before a new index event for a patient can be defined.</p>
-<div class="codehilite"><pre><span></span><span class="nf">%ImposeSampleRest</span>(cohrt=ami,pct=<span class="m">05</span>,start=<span class="m">1999</span>,<span class="k">end</span>=<span class="m">2009</span>,
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nf">%ImposeSampleRest</span>(cohrt=ami,pct=<span class="m">05</span>,start=<span class="m">1999</span>,<span class="k">end</span>=<span class="m">2009</span>,
 <span class="m">2</span>                  subsquentDgnDayRest=<span class="m">365</span>,
 <span class="m">3</span>                  contHMOmonthpre=<span class="m">12</span>,contHMOmonthpost=<span class="m">12</span>,
 <span class="m">4</span>                  contFFSmonthpre=<span class="m">12</span>,contFFSmonthpost=<span class="m">12</span>);
 </pre></div>
-
+</td></tr></table>
 
 <p>Figure 4.3 <code>medpar_candidates.sas</code> wrapper to only flag the principal diagnosis</p>
 <p>The only complication in obtaining this demographic and enrollment data is that the names and formats of variables in the denominator file change somewhat over time and differ from those in the enrollment file. The file <a href="https://www.nber.org/medicare/public/unzipped/SASmacros/ConformDenom.sas"><code>ConformDenom.sas</code></a> contains the macro used to convert the denominator files into a common format. The differences between the format of the denominator files are handled directly in <a href="https://www.nber.org/medicare/public/unzipped/0pre_process/enroll_denomFiles/CreatePopDenominatorFile.sas"><code>CreatePopDenominatorFile.sas</code></a>. Running this program once for the entire population is recommended for users constructing a Medicare repository.</p>
 <p>The exact portion of the code which enforces these restrictions in the code can be found in the following figure. Note that the data set with these flags created but without dropping any variables is available in the data set created by the <code>1B_ImposeDenominatorRestrictions.sas</code> program. The data set is stored in the index extract folder and is labeled <code>&amp;cohrt.&amp;pct._candidateflag</code> (i.e. <code>ami05_candidateflag</code>).</p>
-<div class="codehilite"><pre><span></span><span class="cm">* Implement criteria for including diags like those in</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cm">* Implement criteria for including diags like those in</span>
 <span class="cm">* McClellan and Newhouse and Udvarhelyi, et al.;</span>
 <span class="cm">    * 1) Must be no other diag admission in the last year</span>
 <span class="cm">    * 2) Must have traditional Medicare enrollment for a</span>
@@ -1201,7 +1250,7 @@
             <span class="k">output</span> <span class="k">out</span>.<span class="nv">&amp;diag.&amp;pct.</span>_indx;
         <span class="k">end</span>;
 </pre></div>
-
+</td></tr></table>
 
 <p>Figure 4.4 Sample <code>LongitudinalExtract</code> code: Defining the AMI cohort</p>
 <p>The <a href="https://www.nber.org/medicare/public/unzipped/1cohort_extraction/1B_impose_restrictions.sas"><code>1B_impose_restrictions.sas</code></a> program creates the following files, assuming a 5 percent AMI was run using <code>bene_id</code>s and the principal diagnosis only:</p>

@@ -959,7 +959,17 @@
 <p>Make sure you go to <code>/disk/aging/medicare/data</code> and not <code>/disk/agedisk1/medicare/</code>. The former location contains links that take you to all the folders you could want. However, the second location has no links that take you to the harmonized data, so if you only go to <code>/disk/agedisk1/medicare</code>, you might not discover that the harmonized data exist.</p>
 </div>
 <p>At this folder, you'll see folder choices like</p>
-<div class="codehilite"><pre><span></span>barronk at age1 in /disk/aging/medicare/data
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>barronk at age1 in /disk/aging/medicare/data
 &gt; tree -C -l -L 1
 .
 ├── 0001pct
@@ -971,10 +981,28 @@
 ├── README
 └── sas
 </pre></div>
-
+</td></tr></table>
 
 <p>The folders <code>{0001,01,05,20,100}pct</code> contain all the medicare data in Stata and SAS format. For example, within the <code>01pct</code> folder, we see</p>
-<div class="codehilite"><pre><span></span>barronk at age1 in /disk/aging/medicare/data/01pct
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>barronk at age1 in /disk/aging/medicare/data/01pct
 &gt; tree -C -l -L 1
 .
 ├── bsf
@@ -994,7 +1022,7 @@
 ├── snf
 └── xw
 </pre></div>
-
+</td></tr></table>
 
 <h1 id="tree-structure">Tree structure<a class="headerlink" href="#tree-structure" title="Permanent link">&para;</a></h1>
                 

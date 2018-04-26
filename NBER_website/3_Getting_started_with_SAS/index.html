@@ -1324,17 +1324,68 @@
 <p>Once the programs have been downloaded, the directory structure the programs use needs to be configured. All directories which the programs use can be found in the following two files <a href="https://www.nber.org/medicare/public/unzipped/set_up_directory.sas"><code>set_up_directory.sas</code></a> and <a href="https://www.nber.org/medicare/public/unzipped/set_up_directory.do"><code>set_up_directory.do</code></a>, which define the same locations for the SAS and Stata files. The two files need to be populated with the correct directories prior to running the program - many of the directories should be the same.</p>
 <p>There are generally two types of directories found in these files. Input directories, which correspond to places where the programs will read data in from. In these cases, the location of these raw files simply needs to be defined. The other case, are output directories which the programs will write to. The <code>set_up_directory.sas</code> file will generate the directories for you as long as you define a base directory correctly.</p>
 <p>Once the <a href="https://www.nber.org/medicare/public/unzipped/set_up_directory.sas"><code>set_up_directory.sas</code></a> and <a href="https://www.nber.org/medicare/public/unzipped/set_up_directory.do"><code>set_up_directory.do</code></a> files are populated, run the SAS and/or Stata programs on the 0001% extracts just to make sure that SAS/Stata has correctly read the directories which you have defined. At the very beginning of the log file, SAS will check to make sure that the directories defined exist. Check these notes which SAS outputs to make sure that you directories are properly defined. The following code snippet provides an example of the SAS WARNING LOG that occurs with incorrectly defined directories.</p>
-<div class="codehilite"><pre><span></span>libname tempDir &quot;&amp;medtmp.&quot;;
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>libname tempDir &quot;&amp;medtmp.&quot;;
 WARNING: Apparent symbolic reference MEDTMP not resolved.
 NOTE: Library TEMPDIR does not exist.
 </pre></div>
-
+</td></tr></table>
 
 <h3 id="define-icd-9-cmhcpcs-cohort-of-interest">Define ICD-9-CM/HCPCS cohort of interest<a class="headerlink" href="#define-icd-9-cmhcpcs-cohort-of-interest" title="Permanent link">&para;</a></h3>
 <p>After defining the directory structure, the next order of business involves correctly specifying your cohort. Studies using administrative claims use ICD-9-CM or HCPCS codes to define a group of individuals with a similar disease. ICD-9-CM codes come in both diagnostic and procedure types, whereas the HCPCS codes are used to define a specific procedure. The code currently has several examples embedded directly into the code. Note that folder <a href="https://www.nber.org/medicare/public/unzipped/1cohort_extraction/1A_flag_candidate_evnt"><code>1AFlagcandidateEvents</code></a> holds a series of different programs corresponding to each claim file of interest. Each program calls in <a href="https://www.nber.org/medicare/public/unzipped/1cohort_extraction/1A_flag_candidate_evnt/icd9_chrt_definition.sas"><code>icd9_chrt_definition.sas</code></a> and/or <a href="https://www.nber.org/medicare/public/unzipped/1cohort_extraction/1A_flag_candidate_evnt/hcpcs_chrt_defintion.sas"><code>hcpcs_chrt_defintion.sas</code></a> depending on what is reported in the claim. The programs use these two files to look for a cohort definition.</p>
 <p>Once a series of ICD-9-CM/HCPCS codes of interest have been selected, a short bit of code needs to be placed in the relevant file. Note that in addition to choosing the ICD-9-CM code, a name stub (<code>ami</code> in the example below) also needs to be referenced which all of the following programs will use reference the cohort. For example, the heart attack example uses <code>ami</code>. All programs will use this stub as a parameter in the macro to correctly identify the index of interest. Future programs (e.g. <code>carrier_clm_window.sas</code>) will also need to use the same exact stub name to load in the correct data sets.</p>
 <p>As the following code snippet demonstrates, the new <a href="https://www.nber.org/medicare/public/unzipped/1cohort_extraction/1A_flag_candidate_evnt/icd9_chrt_definition.sas"><code>icd9_chrt_definition.sas</code></a> SAS code now allows for users to define an index event through the use of a procedure code. Users for the most part should only need to change the if condition with the diagnostic code and the <code>is_snf</code> condition when changing to another cohort of interest.</p>
-<div class="codehilite"><pre><span></span><span class="c">************************************************************;</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c">************************************************************;</span>
 <span class="c">***  DEFINES AMI ICD9-CM CODE SEQUENCE;</span>
 <span class="c">************************************************************;</span>
 <span class="nb">%if</span> <span class="nv">&amp;cohrt.</span> = ami  <span class="nb">%then</span> <span class="nb">%do</span>;
@@ -1385,7 +1436,7 @@ NOTE: Library TEMPDIR does not exist.
             <span class="nb">%end</span>;
         <span class="nb">%end</span>;
 </pre></div>
-
+</td></tr></table>
 
 <h3 id="define-sas-parameters-in-the-runallprgmssh-file">Define SAS parameters in the <code>runAllprgms.sh</code> file<a class="headerlink" href="#define-sas-parameters-in-the-runallprgmssh-file" title="Permanent link">&para;</a></h3>
 <p>The next step is to go through and define all of the parameters which are passed onto SAS programs found in the <code>runAllprgms.sh</code> file. In doing so it is important to understand the different restrictions used in building the cohort. Note that an index event is defined as the first episode care for a cohort, it denotes the beginning of an episode of care. The following list provides and overview of the steps in building the cohorts and the relevant restrictions.</p>
@@ -1491,7 +1542,13 @@ NOTE: Library TEMPDIR does not exist.
 </tbody>
 </table>
 <p>In the case that either the carrier or outpatient extraction programs are run and they crash, it is easy to restart the programs from the most recent year which they were running. Refer to the <code>crashStart</code> parameters. For example if you are running a carrier extract between 2000 and 2008 and the program crashes on 2002. First you would create a copy of your log file and save it some where else. Next simply run the following wrapper call from within the Carrier extraction program found at the end of the program.</p>
-<div class="codehilite"><pre><span></span><span class="nf">%RunCarExtraction</span>(pct=<span class="m">05</span>,
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nf">%RunCarExtraction</span>(pct=<span class="m">05</span>,
                   cohrt1=ami,
                   cohrtN=<span class="m">1</span>,
                   yearin=<span class="m">2000</span>,yearout=<span class="m">2008</span>,crashStart=<span class="m">2002</span>,
@@ -1499,7 +1556,7 @@ NOTE: Library TEMPDIR does not exist.
                   clmDTA=<span class="m">1</span>
                   );
 </pre></div>
-
+</td></tr></table>
 
 <h3 id="program-sequencing">Program sequencing<a class="headerlink" href="#program-sequencing" title="Permanent link">&para;</a></h3>
 <p>As noted above, some programs are dependent on the data created by other programs. In particular, the files in the <a href="https://www.nber.org/medicare/public/unzipped/1cohort_extraction"><code>1cohort_extraction</code></a> folder should be run first. The exact sequencing is given in the following outline. Any of the programs found in the folder <code>1A_flag_candidate_evnt</code> (bullet point 2a below) should be run before the programs found in <code>1C_pull_claims</code> (bullet point 2b below). <code>1B_impose_restrictions.sas</code> should be run before 2b <code>op_clm_window.sas</code> and any of the programs in <code>2create_index_level_measures</code> should be run before any of the programs found in <code>3merge_cohort_level_data</code>.</p>
@@ -1521,26 +1578,27 @@ NOTE: Library TEMPDIR does not exist.
 <h3 id="running-the-sas-program-on-the-linux-servers">Running the SAS program on the Linux servers<a class="headerlink" href="#running-the-sas-program-on-the-linux-servers" title="Permanent link">&para;</a></h3>
 <p>Running the SAS extraction programs on the Linux servers are fairly straightforward, however there are some additional options which should be used due to the length of time it take to run the programs.</p>
 <p>Many of the extraction programs can run for several days due to the size of the extracts. Using the <code>nohup</code> command on the UNIX servers is important when running these programs because it will continue running the program even if you log off or are disconnected from the server. For example, running the following from the terminal</p>
-<div class="codehilite"><pre><span></span>nohup sas carrier_clm_window.sas &amp;
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>nohup sas carrier_clm_window.sas &amp;
 </pre></div>
-
+</td></tr></table>
 
 <p>would run the <code>carrier_clm_window.sas</code> program in the background until it crashes or finishes running, even if you log off the servers. The ampersand informs the servers to run the program in the background. The program will only stop if it finishes or reaches an error which forces it to crash.</p>
 <p>In order to avoid running out of space in the work directory, SAS allows you to set the work directory. Generally the SAS work directory is used when any data set in the code is referred to without a directory or explicitly with the directory work.data set. The work directory is written by default to the <code>/tmp</code> directory of the current server. However users can easily overrun the <code>/tmp</code> directory and cause all programs using the <code>/tmp</code> to crash on the current server (not just their program).</p>
 <p>This problem is easily avoided by by invoking SAS with the additional options from the terminal as follows. As a rule of thumb, you only need to worry about setting the work directory if you are encountering problems with space in the <code>/tmp</code> drives. Note that most users need not do this unless their programs are crashing due to <code>/tmp</code> space.</p>
 <p>Note that all the programs have been sequenced for you already and you could just run the <code>runAllprgms.sh</code> script after setting up by typing <code>bash runAllprgms.sh</code> from the terminal.</p>
 <p>Invoke SAS from terminal with separate user defined work directory - <strong>Not Suggested</strong>:</p>
-<div class="codehilite"><pre><span></span>nohup sas -work INSERT/DIRECTORY/HERE carrier_clm_window.sas &amp;
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>nohup sas -work INSERT/DIRECTORY/HERE carrier_clm_window.sas &amp;
 </pre></div>
-
+</td></tr></table>
 
 <h3 id="factors-impacting-run-times">Factors impacting run times<a class="headerlink" href="#factors-impacting-run-times" title="Permanent link">&para;</a></h3>
 <p>There are two main factors a user has control over that directly impact the run times. A user can determine which server to run their program on; making sure a server is not overloaded will increase the speed of your (and everyone else's!) programs. Being aware of which disks you are writing to can have drastic improvements to speed. The programs optimize this for NBER users.</p>
 <p>It is important to check the system load before starting a SAS program, as overloading a machine will slow the processing of all the jobs to a crawl. Therefore it is best to check back later and submit the jobs once the server load is reduced. Checking the server load can be done from the terminal by using the <code>uptime</code> command, which prints out several pieces of information. The last three numbers give system load average for the last minute, 5 minutes and 15 minutes. A number over 3 represents a machine that is loaded. For example:</p>
-<div class="codehilite"><pre><span></span>&gt; uptime
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>&gt; uptime
  16:28:45 up 75 days,  1:51,  2 users,  load average: 0.15, 0.05, 0.14
 </pre></div>
-
+</td></tr></table>
 
 <p>Server load is something which most users will not directly have control over as it depends what other people are running. By contrast, deciding which disks to write to is something which a new user will have direct control over and which also will greatly impact the speed of the program. For example, when decompressing files it is best to write the decompressed file to a local directory (i.e. space drive). Note that writing to a local directory can cut processing times in half.</p>
 <h2 id="minor-data-extraction-inconsistencies">Minor data extraction inconsistencies<a class="headerlink" href="#minor-data-extraction-inconsistencies" title="Permanent link">&para;</a></h2>

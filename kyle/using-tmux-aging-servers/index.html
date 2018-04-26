@@ -1026,29 +1026,49 @@
 <p>This is really annoying, but there are ways to prevent losing your work and to facilitate running long jobs.</p>
 <h2 id="set-up">Set up<a class="headerlink" href="#set-up" title="Permanent link">&para;</a></h2>
 <p>Make sure tmux is installed. You can do this from the command line with</p>
-<div class="codehilite"><pre><span></span>tmux -V
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>tmux -V
 </pre></div>
-
+</td></tr></table>
 
 <p>As of January 2018, the version of tmux installed by default is 1.6. That version was released 6 years ago, in January 2012. The current version is 2.6. Follow <a href="#upgrading-tmux">this code</a> if you wish to install the newest version in your local account on the servers.</p>
 <p>You might want to copy my tmux configuration file as well, which makes it easier to start using tmux.</p>
 <h2 id="signing-back-into-a-previous-session">Signing back into a previous session<a class="headerlink" href="#signing-back-into-a-previous-session" title="Permanent link">&para;</a></h2>
 <p>Use <code>tmux ls</code> to see your currently running sessions of tmux.</p>
-<div class="codehilite"><pre><span></span>&gt; tmux ls
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>&gt; tmux ls
 0: 1 windows (created Mon Jan  8 11:01:46 2018) [224x61]
 </pre></div>
-
+</td></tr></table>
 
 <p>This tells me that the session with name <code>0</code> was created on January 8 and is still running.</p>
 <p>To reopen that session, I can do:</p>
-<div class="codehilite"><pre><span></span>&gt; tmux attach -t 0
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>&gt; tmux attach -t 0
 </pre></div>
-
+</td></tr></table>
 
 <p>and it will reopen all the windows I last had open.</p>
 <h2 id="upgrading-tmux">Upgrading tmux<a class="headerlink" href="#upgrading-tmux" title="Permanent link">&para;</a></h2>
 <p>The following code will install the <a href="https://github.com/tmux/tmux/releases/latest">latest version</a> of tmux onto your user account.</p>
-<div class="codehilite"><pre><span></span>mkdir -p ~/local/share
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>mkdir -p ~/local/share
 <span class="nb">echo</span> <span class="s1">&#39;CPPFLAGS=-I$HOME/local/include&#39;</span> &gt; ~/local/share/config.site
 <span class="nb">echo</span> <span class="s1">&#39;LDFLAGS=-L$HOME/local/lib&#39;</span> &gt;&gt; ~/local/share/config.site
 wget <span class="sb">`</span>curl -s https://api.github.com/repos/libevent/libevent/releases/latest <span class="p">|</span> grep <span class="s1">&#39;browser_download_url&#39;</span> <span class="p">|</span> grep -P <span class="s1">&#39;.tar.gz(?!\.asc)&#39;</span> <span class="p">|</span> cut -d <span class="s1">&#39;&quot;&#39;</span> -f <span class="m">4</span><span class="sb">`</span> -O libevent.tar.gz
@@ -1069,6 +1089,7 @@ make <span class="o">&amp;&amp;</span> make install
 <span class="nb">cd</span> <span class="nv">$HOME</span>
 rm -rf tmux/ tmux.tar.gz
 </pre></div>
+</td></tr></table>
                 
                   
                 

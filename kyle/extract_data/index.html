@@ -1145,7 +1145,13 @@
 <p><strong>What's the best, fastest way to import data?</strong></p>
 <h2 id="stata">Stata<a class="headerlink" href="#stata" title="Permanent link">&para;</a></h2>
 <p>Stata is what I use most, and I'm really comfortable with it, but its big limitation is that it needs everything to be in memory. Therefore, it's logical to want to try to break up analyzing a big dataset into smaller pieces. If a dataset is 50 GB in size, I wanted to be able to read in the dataset 5GB at a time. However, apparently Stata is really slow at importing data from a <code>.dta</code> file by row. Just importing the first row from an 82 GB file took <strong>18 minutes</strong>.</p>
-<div class="codehilite"><pre><span></span>.<span class="k"> local</span> filename <span class="s">&quot;/disk/aging/medicare/data/limited_variables/raw_harmonized/100pct/op/op100_clms_raw_2010.dta&quot;</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>.<span class="k"> local</span> filename <span class="s">&quot;/disk/aging/medicare/data/limited_variables/raw_harmonized/100pct/op/op100_clms_raw_2010.dta&quot;</span>
 .<span class="k"> set</span> rmsg<span class="k"> on</span>
 r; t=<span class="m">0.00</span> <span class="m">16</span>:<span class="m">38</span>:<span class="m">28</span>
 .<span class="k"> use</span> <span class="s">&quot;</span><span class="nv">`filename&#39;</span><span class="s">&quot;</span><span class="k"> in</span> <span class="m">1</span>,<span class="k"> clear</span>
@@ -1153,7 +1159,7 @@ r; t=<span class="m">1106.30</span> <span class="m">16</span>:<span class="m">57
 .<span class="k"> di</span> <span class="m">1100</span>/<span class="m">60</span>
 <span class="m">18.333333</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>This means that:</p>
 <ul>
@@ -1164,33 +1170,42 @@ r; t=<span class="m">1106.30</span> <span class="m">16</span>:<span class="m">57
 <h2 id="python">Python<a class="headerlink" href="#python" title="Permanent link">&para;</a></h2>
 <p>My current (December 2017) solution is to use Python. Python is able to read Stata files (i.e. <code>.dta</code> format). Helpfully, Python is also able to read only a given subset of columns, and it's able to iterate over the entire dataset, reading only chunks of data in at a time.</p>
 <p>You can read in an entire Stata file with</p>
-<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_stata</span><span class="p">(</span><span class="s1">&#39;filename.dta&#39;</span><span class="p">)</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>You can read in a selection of variables from a Stata dataset with</p>
-<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_stata</span><span class="p">(</span><span class="s1">&#39;filename.dta&#39;</span><span class="p">,</span> <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;var1&#39;</span><span class="p">,</span> <span class="s1">&#39;var2&#39;</span><span class="p">,</span> <span class="s1">&#39;var3&#39;</span><span class="p">])</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>To read in a number of rows at a time, you create an <em>iterator</em>, and then make a for loop with commands to do to each chunk of a given number of rows. For example, the following imports 10,000 rows at a time, and will do all the commands in <code>do_something(chunk)</code></p>
-<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
 <span class="n">itr</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">read_stata</span><span class="p">(</span><span class="s1">&#39;filename.dta&#39;</span><span class="p">,</span> <span class="n">chunksize</span> <span class="o">=</span> <span class="mi">10000</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">chunk</span> <span class="ow">in</span> <span class="n">itr</span><span class="p">:</span>
     <span class="n">do_something</span><span class="p">(</span><span class="n">chunk</span><span class="p">)</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>When prototyping, it helps to code interactively, so you can run</p>
-<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
 <span class="n">itr</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_stata</span><span class="p">(</span><span class="nb">file</span><span class="p">,</span> <span class="n">chunksize</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">chunk</span> <span class="ow">in</span> <span class="n">itr</span><span class="p">:</span>
     <span class="n">df</span> <span class="o">=</span> <span class="n">chunk</span>
     <span class="k">break</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>This puts the first 1,000 rows in <code>df</code>. <strong>Don't forget <code>break</code>!</strong> If you forget <code>break</code>, Python will import your whole dataset, and not return control to you until it's completely finished. You don't want to remove <code>break</code> until you want to run your code on the full dataset. Then you can work interactively with <code>df</code>, and just move the code inside the loop once you're ready to run it on the entire dataset iteratively.</p>
 <h3 id="official-documentation">Official Documentation<a class="headerlink" href="#official-documentation" title="Permanent link">&para;</a></h3>
@@ -1203,15 +1218,17 @@ r; t=<span class="m">1106.30</span> <span class="m">16</span>:<span class="m">57
 <h2 id="other-file-formats">Other file formats<a class="headerlink" href="#other-file-formats" title="Permanent link">&para;</a></h2>
 <h2 id="benchmarking">Benchmarking<a class="headerlink" href="#benchmarking" title="Permanent link">&para;</a></h2>
 <h3 id="stata_1">Stata<a class="headerlink" href="#stata_1" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="k">use</span> bene_id clm_id icd_dgns_cd* using <span class="s">&quot;/disk/aging/medicare/data/limited_variables/raw_harmonized/100pct/op/op100_clms_raw_2012.dta&quot;</span>,<span class="k"> clear</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">use</span> bene_id clm_id icd_dgns_cd* using <span class="s">&quot;/disk/aging/medicare/data/limited_variables/raw_harmonized/100pct/op/op100_clms_raw_2012.dta&quot;</span>,<span class="k"> clear</span>
 r; t=<span class="m">6942.52</span> <span class="m">3</span>:<span class="m">19</span>:<span class="m">32</span>
 </pre></div>
+</td></tr></table>
 
-
-<div class="codehilite"><pre><span></span>&gt; ls -lh op100_clms_raw_2012.dta
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>&gt; ls -lh op100_clms_raw_2012.dta
 -rw-rw---- 1 daltonm dua16702 88G Jan 13  2016 op100_clms_raw_2012.dta
 </pre></div>
-
+</td></tr></table>
 
 <p>Therefore Stata imported the data at around 12.8 MB/s (88GB * 1024 MB/GB / 6942s).</p>
                 
