@@ -53,7 +53,7 @@ This is available for all Medicare beneficiaries from 1999-2008 and for Medicaid
 
 ## Data Documentation
 
-### Beneficiary Summary File
+### Base (A/B/C/D) segment
 
 |   Index | SAS Name                | Variable Name                                                                                                         | Limitation   | Code Table   |
 |--------:|:------------------------|:----------------------------------------------------------------------------------------------------------------------|:-------------|:-------------|
@@ -135,7 +135,7 @@ This is available for all Medicare beneficiaries from 1999-2008 and for Medicaid
 |      76 | `HMOIND11`              | [HMO Indicator - November](variables/mbsf.md#hmo-indicator-november)                                                  |              | *            |
 |      77 | `HMOIND12`              | [HMO Indicator - December](variables/mbsf.md#hmo-indicator-december)                                                  |              | *            |
 
-### Base (A/B/C/D) segment
+### Part C
 
 |   Index | SAS Name              | Variable Name                                                                            | Limitation   | Code Table   |
 |--------:|:----------------------|:-----------------------------------------------------------------------------------------|:-------------|:-------------|
@@ -176,7 +176,7 @@ This is available for all Medicare beneficiaries from 1999-2008 and for Medicaid
 |      35 | `PTC_PLAN_TYPE_CD_11` | [Part C Plan Type Code - November](variables/mbsf.md#part-c-plan-type-code-november)     |              | *            |
 |      36 | `PTC_PLAN_TYPE_CD_12` | [Part C Plan Type Code - December](variables/mbsf.md#part-c-plan-type-code-december)     |              | *            |
 
-### Part C
+### Part D
 
 |   Index | SAS Name      | Variable Name                                                                                                              | Limitation   | Code Table   |
 |--------:|:--------------|:---------------------------------------------------------------------------------------------------------------------------|:-------------|:-------------|
@@ -252,7 +252,7 @@ This is available for all Medicare beneficiaries from 1999-2008 and for Medicaid
 |      71 | `CSTSHR11`    | [Part D low-income cost share group code - November](variables/mbsf.md#part-d-low-income-cost-share-group-code-november)   |              | *            |
 |      72 | `CSTSHR12`    | [Part D low-income cost share group code - December](variables/mbsf.md#part-d-low-income-cost-share-group-code-december)   |              | *            |
 
-### Part D
+### National Death Index segment
 
 |   Index | SAS Name                                | Variable Name                                                                                            | Limitation   | Code Table   |
 |--------:|:----------------------------------------|:---------------------------------------------------------------------------------------------------------|:-------------|:-------------|
@@ -268,7 +268,7 @@ This is available for all Medicare beneficiaries from 1999-2008 and for Medicaid
 |      10 | `ENTITY_COND_1 (through ENTITY_COND_8)` | [NDI Entity Axis Cause of Death - Condition](variables/mbsf.md#ndi-entity-axis-cause-of-death-condition) |              | *            |
 |      11 | `RECORD_COND_1 (through RECORD_COND_8)` | [NDI Record Axis Cause of Death - Condition](variables/mbsf.md#ndi-record-axis-cause-of-death-condition) |              | *            |
 
-### National Death Index segment
+### Chronic Conditions segment
 
 |   Index | SAS Name      | Variable Name                                                                                                                                                          | Limitation   | Code Table   |
 |--------:|:--------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------|:-------------|
@@ -356,7 +356,7 @@ This is available for all Medicare beneficiaries from 1999-2008 and for Medicaid
 |      82 | `HYPOTH_MID`  | [Acquired Hypothyroidism Mid Year Flag](variables/mbsf.md#acquired-hypothyroidism-mid-year-flag)                                                                       |              | *            |
 |      83 | `HYPOTH_EVER` | [Acquired Hypothyroidism First Ever Occurrence Date](variables/mbsf.md#acquired-hypothyroidism-first-ever-occurrence-date)                                             |              | *            |
 
-### Chronic Conditions segment
+### Other Chronic or Potentially Disabling Conditions
 
 |   Index | SAS Name                  | Variable Name                                                                                                                                                                                                                                                                          | Limitation   | Code Table   |
 |--------:|:--------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------|:-------------|
@@ -429,7 +429,7 @@ This is available for all Medicare beneficiaries from 1999-2008 and for Medicaid
 |      67 | `VISUAL_MEDICARE`         | [Sensory - Blindness and Visual Impairment End-of-Year Indicator - Medicare Only Claims](variables/mbsf.md#sensory-blindness-and-visual-impairment-end-of-year-indicator-medicare-only-claims)                                                                                         |              | *            |
 |      68 | `VISUAL_MEDICARE_EVER`    | [Sensory - Blindness and Visual Impairment First Ever Occurrence Date - Medicare Only Claims](variables/mbsf.md#sensory-blindness-and-visual-impairment-first-ever-occurrence-date-medicare-only-claims)                                                                               |              |              |
 
-### Other Chronic or Potentially Disabling Conditions
+### Cost and Use segment
 
 |   Index | SAS Name            | Variable Name                                                                                                      | Limitation   | Code Table   |
 |--------:|:--------------------|:-------------------------------------------------------------------------------------------------------------------|:-------------|:-------------|
