@@ -24,8 +24,6 @@ pages:
         - Generating Costs Measures: 'NBER_website/6_costs.md'
         - References: 'NBER_website/7_references.md'
         - Appendix: 'NBER_website/8_appendix.md'
-        - Variable Names Crosswalk:
-            - Outpatient: 'NBER_website/opxw.md'
     - ResDAC Documentation:
         - Beneficiary Summary File: 'resdac/mbsf.md'
         - Carrier RIF: 'resdac/carrier-rif.md'
