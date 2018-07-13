@@ -1376,8 +1376,8 @@ NOTE: Library TEMPDIR does not exist.
        <span class="nb">%if</span> <span class="nv">&amp;numProcCodes.</span>&gt;<span class="m">0</span> <span class="nb">%then</span> <span class="nb">%do</span>;
 <span class="c">            **LOOP THROUGH PROCEDURE CODES;</span>
             <span class="k">do</span> i=<span class="m">1</span> to <span class="nv">&amp;numProcCodes.</span>;
-<span class="cm">            ** LOOP THROUGH PROCEDURE CODE</span>
-<span class="cm">            /* EXAMPLE PROCEDURE CODE ONLY</span>
+<span class="c">            ** LOOP THROUGH PROCEDURE CODE;</span>
+            <span class="cm">/* EXAMPLE PROCEDURE CODE ONLY</span>
 <span class="cm">             if (length(prcdr_cd_arr(i)) =4 ) and</span>
 <span class="cm">                (</span>
 <span class="cm">                 substr(prcdr_cd_arr(i),1,4) = &quot;3606&quot; or</span>
@@ -1391,12 +1391,12 @@ NOTE: Library TEMPDIR does not exist.
 <span class="cm">                 substr(prcdr_cd_arr(i),1,4) = &quot;8857&quot;</span>
 <span class="cm">                )</span>
 <span class="cm">                then do;</span>
-                    prcdr_cnt_arr(i)=<span class="m">1</span>;
-                    pICD9_indx=prcdr_cd_arr(i);
-                    prcIndxNum=i;
-                <span class="k">end</span>;
+<span class="cm">                    prcdr_cnt_arr(i)=1;</span>
+<span class="cm">                    pICD9_indx=prcdr_cd_arr(i);</span>
+<span class="cm">                    prcIndxNum=i;</span>
+<span class="cm">                end;</span>
 <span class="cm">            */</span>
-<span class="cm">            end;</span>
+            <span class="k">end</span>;
             <span class="nb">%end</span>;
 <span class="c">        **Other options specific to claims file here;</span>
         <span class="nb">%if</span> <span class="nv">&amp;file.</span> = medpar <span class="nb">%then</span> <span class="nb">%do</span>;
