@@ -100,7 +100,7 @@ As the following code snippet demonstrates, the new [`icd9_chrt_definition.sas`]
        %if &numProcCodes.>0 %then %do;
             **LOOP THROUGH PROCEDURE CODES;
             do i=1 to &numProcCodes.;
-            ** LOOP THROUGH PROCEDURE CODE
+            ** LOOP THROUGH PROCEDURE CODE;
             /* EXAMPLE PROCEDURE CODE ONLY
              if (length(prcdr_cd_arr(i)) =4 ) and
                 (
