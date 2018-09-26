@@ -1,7 +1,7 @@
 # Carrier RIF
 
 ??? note "Source"
-    [https://www.resdac.org/cms-data/files/carrier-rif](https://www.resdac.org/cms-data/files/carrier-rif)
+    [https://www.resdac.org/cms-data/files/carrier-encounter](https://www.resdac.org/cms-data/files/carrier-encounter)
 
 ## Overview
 

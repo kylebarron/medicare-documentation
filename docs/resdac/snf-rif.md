@@ -1,7 +1,7 @@
 # Skilled Nursing Facility RIF
 
 ??? note "Source"
-    [https://www.resdac.org/cms-data/files/snf-rif](https://www.resdac.org/cms-data/files/snf-rif)
+    [https://www.resdac.org/cms-data/files/snf-encounter](https://www.resdac.org/cms-data/files/snf-encounter)
 
 ## Overview
 

@@ -126,4 +126,4 @@ has a crosswalk between `BENE_ID` and `EHIC` .
 has annual files of `EHIC` and `BENE_ID` where beneficiaries have unique IDs
 in both the `EHIC` and `BENE_ID`.
 
-[jroth@nber.org](jroth@nber.org)  Last updated 2016-06-24
+[jroth@nber.org](mailto:jroth@nber.org)  Last updated 2016-06-24

@@ -1,7 +1,7 @@
 # Inpatient RIF
 
 ??? note "Source"
-    [https://www.resdac.org/cms-data/files/ip-rif](https://www.resdac.org/cms-data/files/ip-rif)
+    [https://www.resdac.org/cms-data/files/ip-encounter](https://www.resdac.org/cms-data/files/ip-encounter)
 
 ## Overview
 

@@ -1,7 +1,7 @@
 # Home Health Agency RIF
 
 ??? note "Source"
-    [https://www.resdac.org/cms-data/files/hha-rif](https://www.resdac.org/cms-data/files/hha-rif)
+    [https://www.resdac.org/cms-data/files/hha-encounter](https://www.resdac.org/cms-data/files/hha-encounter)
 
 ## Overview
 

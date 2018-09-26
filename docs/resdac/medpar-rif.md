@@ -1,7 +1,7 @@
 # MedPAR RIF
 
 ??? note "Source"
-    [https://www.resdac.org/cms-data/files/medpar-rif](https://www.resdac.org/cms-data/files/medpar-rif)
+    [https://www.resdac.org/cms-data/files/medpar](https://www.resdac.org/cms-data/files/medpar)
 
 ## Overview
 

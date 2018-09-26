@@ -1,7 +1,7 @@
 # Beneficiary Summary File
 
 ??? note "Source"
-    [https://www.resdac.org/cms-data/files/mbsf](https://www.resdac.org/cms-data/files/mbsf)
+    [https://www.resdac.org/cms-data/files/mbsf-base](https://www.resdac.org/cms-data/files/mbsf-base)
 
 ## Overview
 

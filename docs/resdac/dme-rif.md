@@ -1,7 +1,7 @@
 # Durable Medical Equipment RIF
 
 ??? note "Source"
-    [https://www.resdac.org/cms-data/files/dme-rif](https://www.resdac.org/cms-data/files/dme-rif)
+    [https://www.resdac.org/cms-data/files/dme-encounter](https://www.resdac.org/cms-data/files/dme-encounter)
 
 ## Overview
 

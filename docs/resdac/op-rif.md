@@ -1,7 +1,7 @@
 # Outpatient RIF
 
 ??? note "Source"
-    [https://www.resdac.org/cms-data/files/op-rif](https://www.resdac.org/cms-data/files/op-rif)
+    [https://www.resdac.org/cms-data/files/op-encounter](https://www.resdac.org/cms-data/files/op-encounter)
 
 ## Overview
 
