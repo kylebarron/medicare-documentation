@@ -2,3 +2,5 @@
 site
 data/resdac/html
 .ropeproject
+private/
+public/
