@@ -53,7 +53,7 @@ The goal of the [`CumulativeCostsPerIndx.sas`](https://www.nber.org/medicare/pub
 
 The code assumed that costs in claims are linear over time in the case where a length of stay is longer then the `X` days cost metric being constructed. For example if a claim started on the 26th day after the index event and lasted through the 35th day after the index event, 30 days costs would include 50% $((30-26+1)/(35-26+1))$ of the associated costs for that claim.
 
-In addition to information on the actual amount a provider is payed, the bill or charge amount a provider sends to Medicare is also available in the claims files. For the most part we extract information regarding expenditures in the code, however it is just as easy to move forward and extract charge information if one was so inclined by adding the variables of interest to the extraction programs.
+In addition to information on the actual amount a provider is paid, the bill or charge amount a provider sends to Medicare is also available in the claims files. For the most part we extract information regarding expenditures in the code, however it is just as easy to move forward and extract charge information if one was so inclined by adding the variables of interest to the extraction programs.
 
 Lastly, the code goes ahead and splits costs in the MedPAR file by provider type using the provider numbers. The different grouping in part reflect the different type of PPS systems found in the MedPAR file.
 
