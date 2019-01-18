@@ -1,9 +1,5 @@
 # References
 
-!!! note
-    This documentation is ported from NBER documentation [here](https://www.nber.org/medicare/public/Public-7.html), written by Maurice Dalton.
-
-
 Arday SL, Arday DR, Monroe S, Zhang J. HCFA’s racial and ethnic data: current accuracy and recent improvements. Health Care Finance Rev
 
 Charlson ME, Pompei P, Ales KL, MacKenzie CR. A new method of classifying prognostic comorbidity in longitudinal studies: development and validation. J Chronic Dis 1987;40(5):373-83.
@@ -40,4 +36,6 @@ Romano PS, Roos LL, Jollis JG. Adapting a clinical comorbidity index for use wit
 
 Udvarhelyi, I. Stephen, Constantine Gatsonis, Arnold M. Epstein, Chris L. Pashos, Joseph P. Newhouse, and Barbara J. McNeil. 1992. “Acute Myocardial Infarction in the Medicare Population.” Journal of the American Medical Association, 268(18).
 
-Wynn, Barbara. 2005.
+[Wynn, Barbara. 2005. "Medicare Payment for Hospital Outpatient Services: A
+Historical Review of Policy Options." RAND
+Health.](https://www.nber.org/medicare/public/unzipped/Auxiliary/Wynn-HistoryOutpatientPayment.pdf)

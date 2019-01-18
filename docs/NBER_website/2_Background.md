@@ -1,11 +1,11 @@
 # Description of the Claims Files
 
-!!! note
-    This documentation is ported from NBER documentation [here](https://www.nber.org/medicare/public/Public-2.html), written by Maurice Dalton.
-
 ## Overview
 
-Medicare is a program in the United States that provides health insurance to individuals with disabilities, end-stage renal disease and for the majority of individuals aged 65 and over. The services which Medicare purchases are covered by three basic parts:
+Medicare is a program in the United States that provides health insurance to
+individuals with disabilities, end-stage renal disease and for the majority of
+individuals aged 65 and over. The services which Medicare purchases are covered
+by three basic parts:
 
 - Part A, which primarily covers inpatient services;
 - Part B, which primarily covers physician and outpatient services;
@@ -13,16 +13,42 @@ Medicare is a program in the United States that provides health insurance to ind
 
 The Centers for Medicare and Medicaid Services, typically known as CMS, administers the Medicare program.
 
-For most Medicare enrollees, claims under Part A and Part B are paid directly by Medicare, often termed traditional fee-for-service (FFS). Some Medicare enrollees, however, receive Part A and Part B coverage through private insurance companies.[^1] These claims are often generically termed HMO claims but more correctly are part of the Medicare Advantage (MA) plans. Full claims data are not available for these enrollees which can lead to incomplete costs statistics if beneficiary enrollment is not accounted for. For the years covered by NBER's data collection enrollment in MA plans has been between 5 and 25 percent.[^2] Since selection into private plans is generally thought to be non-random, this should be kept in mind when working with the data.
+For most Medicare enrollees, claims under Part A and Part B are paid directly by
+Medicare, often termed traditional fee-for-service (FFS). Some Medicare
+enrollees, however, receive Part A and Part B coverage through private insurance
+companies.[^1] These claims are often generically termed HMO claims but more
+correctly are part of the Medicare Advantage (MA) plans. Full claims data are
+not available for these enrollees which can lead to incomplete costs statistics
+if beneficiary enrollment is not accounted for. For the years covered by NBER's
+data collection enrollment in MA plans has been between 5 and 25 percent.[^2]
+Since selection into private plans is generally thought to be non-random, this
+should be kept in mind when working with the data.
 
 [^1]: The program through which Medicare enrollees obtain private insurance coverage is currently called Medicare Advantage, but has gone by several different names during the period covered by NBER's collection. See [here](http://www.medicare.gov/Publications/Pubs/pdf/10050.pdf) (BROKEN LINK) for the most recent treatment of Medicare Advantage (MA) plans.
 [^2]: See the [ResDAC publication](http://www.resdac.umn.edu/Tools/TBs/TN-009_MedicareManagedCareEnrolleesandUtilFiles_508.pdf) (BROKEN LINK).
 
-When working with the claims, users are reminded that the claims' primary purpose is as a billing system which has been made available to the research community. As such, having an understanding of Medicare's structure and payment systems is important to fully understand the data. For example, it is often useful to think about the incentives in place for providers to report data. If some claims information is not tied to reimbursement it is difficult to be certain how accurately and consistently the information was reported.
+When working with the claims, users are reminded that the claims' primary
+purpose is as a billing system which has been made available to the research
+community. As such, having an understanding of Medicare's structure and payment
+systems is important to fully understand the data. For example, it is often
+useful to think about the incentives in place for providers to report data. If
+some claims information is not tied to reimbursement it is difficult to be
+certain how accurately and consistently the information was reported.
 
-One useful reference for understanding payment systems and Medicare generally is a set of issue briefs produced by the Medicare Payment Advisory Commission (MedPAC), which advises the US Congress on provider payment issues. The issue briefs are available on MedPAC's [website](http://www.medpac.gov) under the heading "Medicare Background." Also for a more in depth overview of the historical aspects of Medicare, including a brief overview of legislation, see [DeLew(2000)](7_references.md). In addition a brief overview of Medicare payment systems is given in a [later section](6_costs.md#cost-measure-cost-of-health-care-utilization-medicare-payment-system-overview).
+One useful reference for understanding payment systems and Medicare generally is
+a set of issue briefs produced by the Medicare Payment Advisory Commission
+(MedPAC), which advises the US Congress on provider payment issues. The issue
+briefs are available on MedPAC's [website](http://www.medpac.gov) under the
+heading "Medicare Background." Also for a more in depth overview of the
+historical aspects of Medicare, including a brief overview of legislation, see
+[DeLew(2000)](7_references.md). In addition a brief overview of Medicare payment
+systems is given in a [later
+section](6_costs.md#cost-measure-cost-of-health-care-utilization-medicare-payment-system-overview).
 
-The following subsections are meant to provide some background to the Medicare claims files, while also explaining some of the idiosyncratic features of the data. As questions arise from using the data, the following subsections should prove to be a useful reference.
+The following subsections are meant to provide some background to the Medicare
+claims files, while also explaining some of the idiosyncratic features of the
+data. As questions arise from using the data, the following subsections should
+prove to be a useful reference.
 
 ## Medicare claims organizing structure
 
@@ -49,6 +75,8 @@ Another unique file offered by CMS is the **denominator** file, which switched o
 | Hospice     | Hospice claims                                                                     |
 | DME         | Durable medical equipment claims (excepting the small number that appear in the Carrier file) |
 
+Table: Overview of claims files
+
 ### Determining enrollment of the target population
 
 Not all patients found in the raw claims files have complete billing information because care is paid for by Medicare in two different ways:
@@ -56,45 +84,136 @@ Not all patients found in the raw claims files have complete billing information
 1. through traditional fee-for-service (FFS) or
 2. through a managed care component sometimes generally referred to as an HMO or Medicare Advantage (MA).
 
-Since the Medicare claims database is an administrative data set whose function is to track billing to traditional FFS, HMOs are not required to submit their bills to CMS. Understanding this distinction is very important to defining your samples correctly.
+Since the Medicare claims database is an administrative data set whose function
+is to track billing to traditional FFS, HMOs are not required to submit their
+bills to CMS. Understanding this distinction is very important to defining your
+samples correctly.
 
-The type of coverage a beneficiary is enrolled in will determine whether a provider bills through FFS or whether the bill is processed by a managed care organization. Making sure the correct **enrollment restrictions** are used ensures estimated statistics use a complete set of claims. The enrollment restrictions are needed because HMOs are not required to bill through their claims and therefore are not necessarily complete, if they are even billed through at all. The uncertainty surrounding what an HMO chose to report makes it very important to make sure we subset beneficiaries to those enrolled in traditional FFS and not HMO during the time period of interest. For example, if you are looking at 30-day costs after an AMI, you should at the very least make sure that your beneficiaries are enrolled in FFS in the month of the index event and 1-month after the index event date.
+The type of coverage a beneficiary is enrolled in will determine whether a
+provider bills through FFS or whether the bill is processed by a managed care
+organization. Making sure the correct **enrollment restrictions** are used
+ensures estimated statistics use a complete set of claims. The enrollment
+restrictions are needed because HMOs are not required to bill through their
+claims and therefore are not necessarily complete, if they are even billed
+through at all. The uncertainty surrounding what an HMO chose to report makes it
+very important to make sure we subset beneficiaries to those enrolled in
+traditional FFS and not HMO during the time period of interest. For example, if
+you are looking at 30-day costs after an AMI, you should at the very least make
+sure that your beneficiaries are enrolled in FFS in the month of the index event
+and 1-month after the index event date.
 
-Enrollment information is found in the Denominator files and is reported at a monthly level. Two separate variables are used to determine whether an individual is in traditional FFS or whether a beneficiary is serviced by a managed care organization. The FFS variables (`BUYIN01`-`BUYIN12`) report whether the individual has Part A, Part B or both Part A and B. There are some responses denoting whether they fall under Medicaid (state-buyins). When we talk about traditional FFS we mean having both Part A and B coverage, regardless of whether is a state buy-in or not. The number associated with the buy-in variable denotes the month.
+Enrollment information is found in the Denominator files and is reported at a
+monthly level. Two separate variables are used to determine whether an
+individual is in traditional FFS or whether a beneficiary is serviced by a
+managed care organization. The FFS variables (`BUYIN01`-`BUYIN12`) report
+whether the individual has Part A, Part B or both Part A and B. There are some
+responses denoting whether they fall under Medicaid (state-buyins). When we talk
+about traditional FFS we mean having both Part A and B coverage, regardless of
+whether is a state buy-in or not. The number associated with the buy-in variable
+denotes the month.
 
-The second variable reports whether an individual is enrolled in an HMO, these variables are labeled `HMOIND01`-`HMOIND12` where the number references the month of enrollment information (`01` = January). Combining individuals who are in Part A and Part B and not serviced by an HMO is what is routinely referred to as traditional FFS.
+The second variable reports whether an individual is enrolled in an HMO, these
+variables are labeled `HMOIND01`-`HMOIND12` where the number references the
+month of enrollment information (`01` = January). Combining individuals who are
+in Part A and Part B and not serviced by an HMO is what is routinely referred to
+as traditional FFS.
 
-In addition to the raw files a processed file has been created to aid researchers looking to enforce enrollment restrictions. The code which generates this can be found in the following directory `0PrePRocessPrgm/enroll_denomFiles`.
+In addition to the raw files a processed file has been created to aid
+researchers looking to enforce enrollment restrictions. The code which generates
+this can be found in the following directory
+`0PrePRocessPrgm/enroll_denomFiles`.
 
 ### Mortality data in the claims data
 
-The following borrows heavily from the ResDAC website and the transcripts from their trainings.
+The following borrows heavily from the ResDAC website and the transcripts from
+their trainings.
 
-Mortality data in the claims data is found in the denominator file, which is reported annually at the patient level. The denominator files contain general person level information like gender, date of birth, enrollment, patient zip code from SSA database and date of death if they had passed.
+Mortality data in the claims data is found in the denominator file, which is
+reported annually at the patient level. The denominator files contain general
+person level information like gender, date of birth, enrollment, patient zip
+code from SSA database and date of death if they had passed.
 
-For a very small amount of cases in the denominator file an individual is reported dead in one year but is no longer reported dead in the following year. These individuals are assumed to not have died.
+For a very small amount of cases in the denominator file an individual is
+reported dead in one year but is no longer reported dead in the following year.
+These individuals are assumed to not have died.
 
-There are two date of death variables found in the denominator file, one which has been validated and one which has not. It turns out the date of death variable is not always exact in part because of the way it is processed. The date of death information comes from the Social Security Administration. However, every night CMS checks its claims for people discharged as dead and it flags these people. CMS in turn sends these individuals a letter basically saying "We think you may have died. Did you?”. They do this because the date of death is used as the last date Medicare needs to provide services and they do not want to cut off services too early. As a result, in some cases where they do not have proper documentation they move the date of death to the end of the month to make sure they are not cutting of services too early.
+There are two date of death variables found in the denominator file, one which
+has been validated and one which has not. It turns out the date of death
+variable is not always exact in part because of the way it is processed. The
+date of death information comes from the Social Security Administration.
+However, every night CMS checks its claims for people discharged as dead and it
+flags these people. CMS in turn sends these individuals a letter basically
+saying "We think you may have died. Did you?”. They do this because the date of
+death is used as the last date Medicare needs to provide services and they do
+not want to cut off services too early. As a result, in some cases where they do
+not have proper documentation they move the date of death to the end of the
+month to make sure they are not cutting of services too early.
 
 [Transcripts of ResDac training](https://www.resdac.org/videos/sources-and-use-medicare-enrollment-information)
 
 ### Understanding how the files fit together
 
-Each claims file (e.g. Carrier file) reports Medicare reimbursement and utilization by the type of provider being paid (i.e. Carrier file does include reimbursements made to hospitals, mostly physicians). Note that each sample (e.g. 5% ) will track the same individuals across all of the files, that is, the sampling is not done at the claim level, but rather the beneficiary level. Specifically, the 5 percent extracts contain records for all enrollees whose social security numbers have eight and ninth digits of `05`, `20`, `45`, `70`, or `95`. Similarly, the 20 percent extracts contain all enrollees whose encrypted HICs have a ninth digit of `0` or `5`. Because these digits are essentially random, the resulting extracts constitute a representative sample of the Medicare population. [^3] What this means is that in order to describe the complete reimbursement, for say Part B spending, users would need to combine reimbursements found in the Carrier and Outpatient file of the same sample.
+Each claims file (e.g. Carrier file) reports Medicare reimbursement and
+utilization by the type of provider being paid (i.e. Carrier file does include
+reimbursements made to hospitals, mostly physicians). Note that each sample
+(e.g. 5% ) will track the same individuals across all of the files, that is, the
+sampling is not done at the claim level, but rather the beneficiary level.
+Specifically, the 5 percent extracts contain records for all enrollees whose
+social security numbers have eight and ninth digits of `05`, `20`, `45`, `70`,
+or `95`. Similarly, the 20 percent extracts contain all enrollees whose
+encrypted HICs have a ninth digit of `0` or `5`. Because these digits are
+essentially random, the resulting extracts constitute a representative sample of
+the Medicare population. [^3] What this means is that in order to describe the
+complete reimbursement, for say Part B spending, users would need to combine
+reimbursements found in the Carrier and Outpatient file of the same sample.
 
 [^3]: [Link](http://www.resdac.org/Tools/TBs/TN-011_How5percentMedicarefilescreated_508.pdf)
 
-A pair of examples will best help illustrate which costs the claims files cover for a sample index event. Suppose an individual is admitted into a hospital where a physician performs a coronary artery bypass graft (CABG) in the inpatient setting. The physician portion of costs for this initial episode of care would be found in the Carrier file and the reimbursement going to the hospital for the general care provided and use of the structure would be found in the Inpatient and MedPAR file, although using both the Inpatient and MedPAR file would be redundant.
+A pair of examples will best help illustrate which costs the claims files cover
+for a sample index event. Suppose an individual is admitted into a hospital
+where a physician performs a coronary artery bypass graft (CABG) in the
+inpatient setting. The physician portion of costs for this initial episode of
+care would be found in the Carrier file and the reimbursement going to the
+hospital for the general care provided and use of the structure would be found
+in the Inpatient and MedPAR file, although using both the Inpatient and MedPAR
+file would be redundant.
 
-Next assume that the patient is released to an outpatient setting where he is monitored via an EKG continuously. The Carrier file would still be billed for the physician's role in interpreting the EKG whereas the Outpatient file would contain the reimbursement for the machine and the administered EKG (assuming the physician did not do it). Note that while some procedures occur in the outpatient setting, they may be billed to the inpatient PPS, despite showing up in the outpatient claims. In these cases the reimbursement will only appear in the inpatient claims, whereas the outpatient claim will have zero reimbursement associated.
+Next assume that the patient is released to an outpatient setting where he is
+monitored via an EKG continuously. The Carrier file would still be billed for
+the physician's role in interpreting the EKG whereas the Outpatient file would
+contain the reimbursement for the machine and the administered EKG (assuming the
+physician did not do it). Note that while some procedures occur in the
+outpatient setting, they may be billed to the inpatient PPS, despite showing up
+in the outpatient claims. In these cases the reimbursement will only appear in
+the inpatient claims, whereas the outpatient claim will have zero reimbursement
+associated.
 
-The second example consists of a patient getting a mammogram in the outpatient facility. The administration of the mammogram and the use of the machinery would be billed to the outpatient setting, whereas the interpretation of the results by the physician would be billed to the carrier file. Screening mammograms are not paid through the Outpatient Prospective Payment System (OPPS) but are still found in the outpatient files. They are reimbursed based on a fee schedule. In addition, providers may qualify for other add-on payments if, for example, the provider uses computer aided detection. Next, doctor related costs, like interpreting the mammogram would be found in the Carrier files.
+The second example consists of a patient getting a mammogram in the outpatient
+facility. The administration of the mammogram and the use of the machinery would
+be billed to the outpatient setting, whereas the interpretation of the results
+by the physician would be billed to the carrier file. Screening mammograms are
+not paid through the Outpatient Prospective Payment System (OPPS) but are still
+found in the outpatient files. They are reimbursed based on a fee schedule. In
+addition, providers may qualify for other add-on payments if, for example, the
+provider uses computer aided detection. Next, doctor related costs, like
+interpreting the mammogram would be found in the Carrier files.
 
-While these two examples attempt to clear up how to extract costs, it is important to keep in mind that these are simplified examples and that the claims may have instances where this logic is not followed, especially as one wades into the older data. The outpatient files are especially difficult to work with because they combine several different types of providers, which fall under an "outpatient setting" description but who are reimbursed through different systems. In addition, the outpatient providers may be forced to bundle certain payments which complicates things further. Refer to [section 6.2](6_costs.md#cost-measure-cost-of-health-care-utilization-medicare-payment-system-overview).
+While these two examples attempt to clear up how to extract costs, it is
+important to keep in mind that these are simplified examples and that the claims
+may have instances where this logic is not followed, especially as one wades
+into the older data. The outpatient files are especially difficult to work with
+because they combine several different types of providers, which fall under an
+"outpatient setting" description but who are reimbursed through different
+systems. In addition, the outpatient providers may be forced to bundle certain
+payments which complicates things further. Refer to [Generating Costs
+Measures](6_costs.md#cost-measure-cost-of-health-care-utilization-medicare-payment-system-overview).
 
 ### Claims data references
 
-A wide variety of useful information on the claims files is available from ResDAC, an organization at the University of Minnesota that is under CMS contract to provide support to users of the claims data. The ResDAC website contains a wealth of information on the claims data. Highlights include:
+A wide variety of useful information on the claims files is available from
+ResDAC, an organization at the University of Minnesota that is under CMS
+contract to provide support to users of the claims data. The ResDAC website
+contains a wealth of information on the claims data. Highlights include:
 
 - [Descriptions of which claims files contain information on which types of providers](http://www.resdac.umn.edu/Medicare/data_file_descriptions.asp#rif)
 - [Data dictionaries for recent versions of the claims files](http://www.resdac.umn.edu/ddvh/index.asp#RIF)
@@ -102,15 +221,32 @@ A wide variety of useful information on the claims files is available from ResDA
 - The [Chronic Conditions Warehouse (CCW)](http://ccwdata.org/) provides technical documentation and some useful summary statistics for the extracts they create (although they are not directly comparable with the extract the NBER extraction programs produce)
 - [This file](http://www.cdc.gov/nchs/data/datalinkage/cms_medicare_analytic_issues_final.pdf) has some useful information about the claims, although the document is specific to linking the claims files to the NCHS Survey which is not covered by the programs developed here at the NBER
 
-It is worth noting that there are considerable differences between the summary statistics the CCW publishes on their website and those associated with the extracts created by these programs. For example, the CCW extracts use inpatient claims files, not the MedPAR file. In addition the CCW does not place any restrictions on the data which they summarize, as the extracts associated with this documentation do. Lastly, even if you compare the raw MedPAR file count to those in the CCW, the 2008 MedPAR file includes all no-pay MA individuals and the counts will not be comparable without some further manipulation. While ResDAC does not create the CCW files they do in fact answer any questions users have about the data.
+It is worth noting that there are considerable differences between the summary
+statistics the CCW publishes on their website and those associated with the
+extracts created by these programs. For example, the CCW extracts use inpatient
+claims files, not the MedPAR file. In addition the CCW does not place any
+restrictions on the data which they summarize, as the extracts associated with
+this documentation do. Lastly, even if you compare the raw MedPAR file count to
+those in the CCW, the 2008 MedPAR file includes all no-pay MA individuals and
+the counts will not be comparable without some further manipulation. While
+ResDAC does not create the CCW files they do in fact answer any questions users
+have about the data.
 
-In ResDAC's parlance, NBER holds "Research Identifiable Files," that is, files that contain detailed personal information on Medicare enrollees. In addition to the resources available on the ResDAC website, ResDAC also answers questions through email or phone conversation. Other useful resources besides ResDAC include the following:
+In ResDAC's parlance, NBER holds "Research Identifiable Files," that is, files
+that contain detailed personal information on Medicare enrollees. In addition to
+the resources available on the ResDAC website, ResDAC also answers questions
+through email or phone conversation. Other useful resources besides ResDAC
+include the following:
 
 - A good overview of the Medicare data and specific issues regarding coding and such can be found in Chapter 5 of Risk Adjustment for Measuring Health Care Outcomes by Lisa I. Iezzoni.
-- Old data dictionaries and documentation have been scanned and placed on the servers. These are the code books which are available from the NBER Medicare documentation home
-- The Internet-Only Manuals (IOM) are a place of last resort. They provide the official CMS regulations for processing the claims files. As one might suspect they are a bit dense, but often provide comprehensive explanation of how the claims are currently processed. In some instances they also provide a historical overview of how the claims were processed.
+- Old data dictionaries and documentation have been scanned and placed on the servers. These codebooks are [available here](https://www.nber.org/medicare/codebooks/).
+- The [Internet-Only Manuals (IOM)](http://www.cms.gov/Manuals/IOM/list.asp) are a place of last resort. They provide the official CMS regulations for processing the claims files. As one might suspect they are a bit dense, but often provide comprehensive explanation of how the claims are currently processed. In some instances they also provide a historical overview of how the claims were processed.
 
 #### ResDAC data dictionaries
+
+There are pages on this website with reformatted data dictionaries scraped from
+the ResDAC website. These might make it easier to find the information you're
+looking for.
 
 - [Inpatient](../resdac/ip-rif.md)
 - [Outpatient](../resdac/op-rif.md)
@@ -131,15 +267,39 @@ Effective with the 9/96 update the 1995 MedPAR was created as follows:
 
 ## Changing identifiers in the raw data (HIC switchers)
 
-In general there are two related instances where an individual's identifier may change and cause the individual to exit the sample. A beneficiary's identifier can change if the social security number (SSN) granting entitlement changes (see below for discussion), causing the individual to appear in the claims as two separate patients. As a result of a change in an SSN, the individual may disappear from the 5 or 20% samples due to sample method reliance on SSNs.
+In general there are two related instances where an individual's identifier may
+change and cause the individual to exit the sample. A beneficiary's identifier
+can change if the social security number (SSN) granting entitlement changes (see
+below for discussion), causing the individual to appear in the claims as two
+separate patients. As a result of a change in an SSN, the individual may
+disappear from the 5 or 20% samples due to sample method reliance on SSNs.
 
-It's important to understand the beneficiary identifiers found in the data before discussing the special case of HIC switchers. A beneficiary's unique identifier, known as the enrollee's Health Insurance Claim (HIC) number, is constructed using the enrollee's SSN and a suffix indicating the enrollee's reason for Medicare eligibility. Some individuals' eligibility may change over time, resulting in a change in their HIC; or in some other instances an individual's SSN will change resulting in a change in their identifier [^4].
+It's important to understand the beneficiary identifiers found in the data
+before discussing the special case of HIC switchers. A beneficiary's unique
+identifier, known as the enrollee's Health Insurance Claim (HIC) number, is
+constructed using the enrollee's SSN and a suffix indicating the enrollee's
+reason for Medicare eligibility. Some individuals' eligibility may change over
+time, resulting in a change in their HIC; or in some other instances an
+individual's SSN will change resulting in a change in their identifier [^4].
 
 [^4]: EHICs do occasionally change. The ResDAC FAQ (see below) describes a number of circumstances that can lead to a change in EHIC, notably a change in SSN occurring because an individual can claim Social Security benefits based upon their own earnings or their spouse's and beneficiaries can marry multiple times which can lead to different SSN. In addition, a very small number of Medicare enrollees have EHICs based on Railroad Retirement Board identification numbers, rather than SSNs. For reasons that are unclear, it appears that many of these individuals had their EHICs change during the early 1990s.
 
-While individuals whose HIC has changed presents the possibility of interpreting the HICs in the claims as two separate individuals, this would only occur if the new HIC is still in the sample of interest. Although `bene_id`s are able to track HIC switchers over time, the `bene_id` does not solve the issue resulting from an individual experiencing a HIC change which causes them to drop out of the sample for example. To account for this, beginning in 2006, CMS began producing an enhanced five percent sample, which keeps individuals in the sample once they have been selected from the 5% sample and a strict 5% sample which matches the sample found in the earlier years. This is useful for tracking individuals over time. A strict 5% sample can be obtained by keeping records where the `FIVEPCT` variable is `Y` from the denominator files. The extract we create uses a strict 5% sample.
+While individuals whose HIC has changed presents the possibility of interpreting
+the HICs in the claims as two separate individuals, this would only occur if the
+new HIC is still in the sample of interest. Although `bene_id`s are able to
+track HIC switchers over time, the `bene_id` does not solve the issue resulting
+from an individual experiencing a HIC change which causes them to drop out of
+the sample for example. To account for this, beginning in 2006, CMS began
+producing an enhanced five percent sample, which keeps individuals in the sample
+once they have been selected from the 5% sample and a strict 5% sample which
+matches the sample found in the earlier years. This is useful for tracking
+individuals over time. A strict 5% sample can be obtained by keeping records
+where the `FIVEPCT` variable is `Y` from the denominator files. The extract we
+create uses a strict 5% sample.
 
-Note that HICs are falling out of the sample at a rate of about 2 percent a year. This could be problematic if you decide to follow individuals over long period of time (as we do).
+Note that HICs are falling out of the sample at a rate of about 2 percent a
+year. This could be problematic if you decide to follow individuals over long
+period of time (as we do).
 
 To reiterate the point an identifier in the claims data can change in two related ways:
 
@@ -148,19 +308,54 @@ To reiterate the point an identifier in the claims data can change in two relate
 
 ### The transition from EHICs to `bene_id`s (Post 2006 data)
 
-As noted in the previous section, CMS transitioned from using HICs to `bene_id`s starting in 2006. In a very small percent of cases, individual HICs have changed over time. The new `bene_id`s look to fix this issue by creating a truly unique ID for each beneficiary, for which CMS has provided a HIC to `bene_id` crosswalk. This means that when merging old EHICs to the crosswalk, in a very small amount of cases, several EHICs can be mapped to a single `bene_id`. When dealing with the 5% and 20% extracts, not all EHICs associated with a single `bene_id` will necessarily be in these random samples.
+As noted in the previous section, CMS transitioned from using HICs to `bene_id`s
+starting in 2006. In a very small percent of cases, individual HICs have changed
+over time. The new `bene_id`s look to fix this issue by creating a truly unique
+ID for each beneficiary, for which CMS has provided a HIC to `bene_id`
+crosswalk. This means that when merging old EHICs to the crosswalk, in a very
+small amount of cases, several EHICs can be mapped to a single `bene_id`. When
+dealing with the 5% and 20% extracts, not all EHICs associated with a single
+`bene_id` will necessarily be in these random samples.
 
-CMS has made available a crosswalk which maps EHICs to `bene_id`s over time. The current program first creates a 5, 20, or 100% sample of the crosswalk. Sub-setting the crosswalk file saves space and also avoids merging in individuals whose EHIC changed and as a result is no longer in the strict 5% sample. Next the crosswalk is applied annually to the EHICs for data before 2006. The crosswalk is incomplete in the sense that about 10% of all EHICs do not have a corresponding `bene_id`, in these cases the EHIC is used in place of the missing `bene_id`.
+CMS has made available a crosswalk which maps EHICs to `bene_id`s over time. The
+current program first creates a 5, 20, or 100% sample of the crosswalk.
+Sub-setting the crosswalk file saves space and also avoids merging in
+individuals whose EHIC changed and as a result is no longer in the strict 5%
+sample. Next the crosswalk is applied annually to the EHICs for data before
+2006. The crosswalk is incomplete in the sense that about 10% of all EHICs do
+not have a corresponding `bene_id`, in these cases the EHIC is used in place of
+the missing `bene_id`.
 
 ## Diagnosis and procedure codes
 
-The SAS extraction code builds cohorts by identifying the index event, the claim which represents the start of an episode of care, by using diagnostic or procedure codes. The codes will both limit and define the type of cohort that can be built from the Medicare data and as such warrants further discussion about the different coding systems found in the claims.
+The SAS extraction code builds cohorts by identifying the index event, the claim
+which represents the start of an episode of care, by using diagnostic or
+procedure codes. The codes will both limit and define the type of cohort that
+can be built from the Medicare data and as such warrants further discussion
+about the different coding systems found in the claims.
 
-The two major coding systems found in the Medicare claims files are the HCPCS and ICD-9-CM codes. The HCPCS codes cover procedures only, where as the ICD-9-CM codes have diagnostic and procedure codes available. All claims files use the International Classification of Diseases, Version 9, Clinical Modification (ICD-9-CM) diagnostic codes; the MedPAR file also uses the ICD-9-CM procedure codes. The HCPCS codes provide a more detailed framework for documenting specific aspects of the claims and are based on CPT and CMS derived codes. The greater specificity of the codes is a major reason they are used to describe procedures in the carrier line item and outpatient revenue center level files.
+The two major coding systems found in the Medicare claims files are the HCPCS
+and ICD-9-CM codes. The HCPCS codes cover procedures only, where as the ICD-9-CM
+codes have diagnostic and procedure codes available. All claims files use the
+International Classification of Diseases, Version 9, Clinical Modification
+(ICD-9-CM) diagnostic codes; the MedPAR file also uses the ICD-9-CM procedure
+codes. The HCPCS codes provide a more detailed framework for documenting
+specific aspects of the claims and are based on CPT and CMS derived codes. The
+greater specificity of the codes is a major reason they are used to describe
+procedures in the carrier line item and outpatient revenue center level files.
 
 ### ICD-9-CM diagnostic and procedure codes
 
-ICD-9-CM codes and coding behavior are constantly evolving to keep track with advances in medicine. Changes in coding behavior create potential issues with constructing a longitudinal cohort. Caution should be taken to ensure that all the codes of interest are used to create cohorts and any changes in coding behavior understood. The official coding guidelines are determined by the Central Office on ICD-9-CM after being approved by the ICD-9-CM Coordination-Maintenance Committee at NCHS, CMS, American Health Information Management Association and American Hospital Association. The official coding guidelines are published in the AHA Coding Clinic for ICD-9-CM, a quarterly publication ([Iezzoni, 2003,pg 96](7_references.md)).
+ICD-9-CM codes and coding behavior are constantly evolving to keep track with
+advances in medicine. Changes in coding behavior create potential issues with
+constructing a longitudinal cohort. Caution should be taken to ensure that all
+the codes of interest are used to create cohorts and any changes in coding
+behavior understood. The official coding guidelines are determined by the
+Central Office on ICD-9-CM after being approved by the ICD-9-CM
+Coordination-Maintenance Committee at NCHS, CMS, American Health Information
+Management Association and American Hospital Association. The official coding
+guidelines are published in the AHA Coding Clinic for ICD-9-CM, a quarterly
+publication ([Iezzoni, 2003,pg 96](7_references.md)).
 
 Datasets with ICD-9-CM diagnosis and procedure codes can be downloaded from CMS at the links in the following table:
 
@@ -173,21 +368,50 @@ Datasets with ICD-9-CM diagnosis and procedure codes can be downloaded from CMS 
 | ICD-10-CM   | 2017      | [link](https://www.cms.gov/Medicare/Coding/ICD10/2017-ICD-10-CM-and-GEMs.html) |
 | ICD-10-CM   | 2018      | [link](https://www.cms.gov/Medicare/Coding/ICD10/2018-ICD-10-CM-and-GEMs.html) |
 
-From the late 1990s through the present, ICD-9-CM code books are available from the National Center for Health Statistics (NCHS) [here](http://www.cdc.gov/nchs/icd9.htm).
+Table: ICD-9-CM and ICD-10-CM diagnosis and procedure codes
 
-When written formally, ICD-9-CM diagnosis codes have the format `XXX.XX` and ICD-9-CM procedure codes have the format `XX.XX`, where the `X`s represent digits 0-9. The codes are often referred to in the literature by listing all codes explicitly or by referring to an entire hierarchy by allowing an `X` to signify any digit. For example, `410.X1` refers to `410.71` but not `410.72`.
+From the late 1990s through the present, ICD-9-CM code books are available from
+the [National Center for Health Statistics
+(NCHS)](http://www.cdc.gov/nchs/icd9.htm).
 
-The claims files store these codes as strings, including any leading zeros and, almost always, excluding the decimal point [^6]. Correspondingly, even though some codes may not have a full five digits (either because one of the trailing digits is not necessary or has been omitted), it is generally not difficult to determine which of a code's digits correspond to digits before the decimal.
+When written formally, ICD-9-CM diagnosis codes have the format `XXX.XX` and
+ICD-9-CM procedure codes have the format `XX.XX`, where the `X`s represent
+digits 0-9. The codes are often referred to in the literature by listing all
+codes explicitly or by referring to an entire hierarchy by allowing an `X` to
+signify any digit. For example, `410.X1` refers to `410.71` but not `410.72`.
+
+The claims files store these codes as strings, including any leading zeros and,
+almost always, excluding the decimal point [^6]. Correspondingly, even though
+some codes may not have a full five digits (either because one of the trailing
+digits is not necessary or has been omitted), it is generally not difficult to
+determine which of a code's digits correspond to digits before the decimal.
 
 [^6]: In the MedPAR files, fewer than 1 in 100,000 records include a diagnosis code with a decimal point or that appears to be missing a leading zero. The codes in the outpatient and Carrier files appear to be of similar quality.
 
-[This document](https://www.cms.gov/manuals/downloads/clm104c23.pdf) is the CMS IOM pdf which provides an overview of the HCPCS (pronounced "hic picks") codes used in the processing of the claims. The PDF in general provides a complete overview of how the HCPCS and ICD9-CM codes are used.
+[This document](https://www.cms.gov/manuals/downloads/clm104c23.pdf) is the CMS
+IOM pdf which provides an overview of the HCPCS (pronounced "hic picks") codes
+used in the processing of the claims. The PDF in general provides a complete
+overview of how the HCPCS and ICD9-CM codes are used.
 
 #### ICD-9-CM in the claims files
 
-Diagnosis codes are sequenced in the MedPAR data, with the first diagnosis code classified as the principal diagnosis and the remaining diagnoses referred to as a secondary diagnoses or comorbidities. In addition, the admitting diagnosis is also coded, although it is less commonly used in research. CMS states that the principal diagnosis is "the condition established after study to be chiefly responsible for the admission." In other words, the principal diagnosis is based on admitting information in addition to the findings during the hospital stay. Beginning in 2008, the MedPAR file includes a variable (`POA_IND`) which flags whether a condition was present at admission.
+Diagnosis codes are sequenced in the MedPAR data, with the first diagnosis code
+classified as the principal diagnosis and the remaining diagnoses referred to as
+a secondary diagnoses or comorbidities. In addition, the admitting diagnosis is
+also coded, although it is less commonly used in research. CMS states that the
+principal diagnosis is "the condition established after study to be chiefly
+responsible for the admission." In other words, the principal diagnosis is based
+on admitting information in addition to the findings during the hospital stay.
+Beginning in 2008, the MedPAR file includes a variable (`POA_IND`) which flags
+whether a condition was present at admission.
 
-Outpatient claims do not have a principal diagnosis; instead they report first listed diagnosis. That is, instead of a diagnosis, outpatient claims list the diagnosis codes in the order of most to least certain. This is complicated because some insurance companies require clinicians to follow a principal-type diagnosis reporting in order to ensure that filed claims match the diagnosis. The resulting reported diagnosis are inconsistent and we cannot be certain about which coding paradigm was followed ([Iezzoni, 2003, pg 105](7_references.md)).
+Outpatient claims do not have a principal diagnosis; instead they report first
+listed diagnosis. That is, instead of a diagnosis, outpatient claims list the
+diagnosis codes in the order of most to least certain. This is complicated
+because some insurance companies require clinicians to follow a principal-type
+diagnosis reporting in order to ensure that filed claims match the diagnosis.
+The resulting reported diagnosis are inconsistent and we cannot be certain about
+which coding paradigm was followed ([Iezzoni, 2003, pg 105](7_references.md)).
 
 ### Health care Common Procedure Coding System (HCPCS)
 
@@ -205,66 +429,180 @@ CMS' Health care Common Procedure Coding System (HCPCS) combines two sets of cod
 
 Most procedures of interest are covered by core CPT codes, rather than the "Level II" codes. Note that a researcher looking to study a procedure using a set of CPT, CPT-II or HCPCS codes can find the codes in the data under the HCPCS variable since HCPCS codes include the CPT, CPT-II and additional CMS codes.
 
-Unfortunately, because the American Medical Association (AMA) retains copyright over the CPT portion of the HCPCS, there are essentially no comprehensive electronic HCPCS references. [^11] However CMS freely distributes CPT short descriptions along with their [Relative Value Files](https://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/PhysicianFeeSched/PFS-Relative-Value-Files.html), with an [End User Point and Click Agreement](https://www.cms.gov/apps/aha/license.asp?file=/Medicare/Medicare-) stating that the documents are for organizations' internal use and not for commercial use. Similar manuals also exist for the Level II HCPCS codes, although NBER currently has no plans to acquire them. In recent years, detailed descriptions of the Level II codes are available for download from CMS [here](http://www.cms.hhs.gov/HCPCSReleaseCodeSets/ANHCPCS/list.asp).
+Unfortunately, because the American Medical Association (AMA) retains copyright
+over the CPT portion of the HCPCS, there are essentially no comprehensive
+electronic HCPCS references. [^11] However CMS freely distributes CPT short
+descriptions along with their [Relative Value
+Files](https://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/PhysicianFeeSched/PFS-Relative-Value-Files.html),
+with an [End User Point and Click
+Agreement](https://www.cms.gov/apps/aha/license.asp?file=/Medicare/Medicare-)
+stating that the documents are for organizations' internal use and not for
+commercial use. Similar manuals also exist for the Level II HCPCS codes,
+although NBER currently has no plans to acquire them. In recent years, detailed
+descriptions of the Level II codes are available for download from CMS
+[here](http://www.cms.hhs.gov/HCPCSReleaseCodeSets/ANHCPCS/list.asp).
 
 [^11]: These manuals are also available in "snippet view" on Google Books.
 
-Another potential source of information on HCPCS codes is the Medicare physician fee schedule, which provides short descriptions of each code. From its inception through the present, the fee schedule is available from the [Federal Register](http://www.gpoaccess.gov/fr/advanced.html), although finding precisely where it appears and extracting the information is difficult. From 2003 through the present, the fee schedule can be downloaded in spreadsheet form from the CMS website [here](http://www.cms.hhs.gov/PhysicianFeeSched/PFSRVF/list.asp).
+Another potential source of information on HCPCS codes is the Medicare physician
+fee schedule, which provides short descriptions of each code. From its inception
+through the present, the fee schedule is available from the [Federal
+Register](http://www.gpoaccess.gov/fr/advanced.html), although finding precisely
+where it appears and extracting the information is difficult. From 2003 through
+the present, the fee schedule can be downloaded in spreadsheet form from the CMS
+website [here](http://www.cms.hhs.gov/PhysicianFeeSched/PFSRVF/list.asp).
 
-Beginning in 2005[^12] HCPCS codes are reported. According to a MedPAC report, outpatient facilities began using HCPCS codes in place of ICD-9-CM codes on July 1, 1987 [^13]. Examining the claims files, however, suggests that the transition from ICD-9-CM to HCPCS procedure codes was not as clean as this would suggest. Consequently, in many cases, it may be advisable to identify procedures using both sets of codes into the 1990s.
+Beginning in 2005[^12] HCPCS codes are reported. According to a MedPAC report,
+outpatient facilities began using HCPCS codes in place of ICD-9-CM codes on July
+1, 1987 [^13]. Examining the claims files, however, suggests that the transition
+from ICD-9-CM to HCPCS procedure codes was not as clean as this would suggest.
+Consequently, in many cases, it may be advisable to identify procedures using
+both sets of codes into the 1990s.
 
 [^12]: Effective July 2004, ICD-9-CM procedure codes are no longer being accepted on Outpatient claims. The ICD-9-CM code were named as the HIPAA standard code set for inpatient hospital procedures. HCPCS/CPT codes were named as the standard code set for physician services and other health care services.
 
 [^13]: See [here](http://www.medpac.gov/publications/contractor_reports/June05_History_Outpatient.pdf).
 
-The HCPCS codes have a technical and professional component associated with each code. The professional component refers to the services provided by a physician like interpreting an x-ray or the results of a tests. Where as the technical component refers to the act of giving the test. Some HCPCS codes, like `93005`, giving an EKG, are 100% technical by the very nature of the code. Other HCPCS codes need to be paired with the HCPCS modifier codes. HCPCS codes that are tagged with modifier of `26` denotes the professional component only where as a `TC` denotes the technical component.
+The HCPCS codes have a technical and professional component associated with each
+code. The professional component refers to the services provided by a physician
+like interpreting an x-ray or the results of a tests. Where as the technical
+component refers to the act of giving the test. Some HCPCS codes, like `93005`,
+giving an EKG, are 100% technical by the very nature of the code. Other HCPCS
+codes need to be paired with the HCPCS modifier codes. HCPCS codes that are
+tagged with modifier of `26` denotes the professional component only where as a
+`TC` denotes the technical component.
 
-The importance of understanding whether an HCPCS code is a technical or professional component arises because it determines how the procedure is reimbursed. For example if you look at the AMI cohort you find that there are many instances of `71010`, a chest x-ray. According to reimbursement rule, x-rays done at a hospital have the technical component billed through the institution and the professional component billed through the carrier file (with modifier `26`). However in cases where a x-ray was done at a physicians office, then the physician bills for both the technical and professional component of the x-ray.
+The importance of understanding whether an HCPCS code is a technical or
+professional component arises because it determines how the procedure is
+reimbursed. For example if you look at the AMI cohort you find that there are
+many instances of `71010`, a chest x-ray. According to reimbursement rule,
+x-rays done at a hospital have the technical component billed through the
+institution and the professional component billed through the carrier file (with
+modifier `26`). However in cases where a x-ray was done at a physicians office,
+then the physician bills for both the technical and professional component of
+the x-ray.
 
 #### HCPCS procedure codes in the claims
 
-In some sense, it is useful to think of HCPCS codes as a more detailed accounting than the ICD-9-CM procedure codes. Since they are able to provide a finer level of detail, it follows that the HCPCS codes can better describe the procedures used at the line item or revenue center level of the claims files. HCPCS codes are found in the line or revenue center portion of the claims files.
+In some sense, it is useful to think of HCPCS codes as a more detailed
+accounting than the ICD-9-CM procedure codes. Since they are able to provide a
+finer level of detail, it follows that the HCPCS codes can better describe the
+procedures used at the line item or revenue center level of the claims files.
+HCPCS codes are found in the line or revenue center portion of the claims files.
 
 ## Patient residence information
 
-For many types of analysis, it is useful to have information on where patients live. Each claims record contains fields for the patient's zip code, county, and state of residence. Virtually all claims generated by institutions (i.e. inpatient, SNF, and outpatient claims) contain data in these fields. However, these fields are blank on a few percent of non-institutional claims (notably, physician claims).
+For many types of analysis, it is useful to have information on where patients
+live. Each claims record contains fields for the patient's zip code, county, and
+state of residence. Virtually all claims generated by institutions (i.e.
+inpatient, SNF, and outpatient claims) contain data in these fields. However,
+these fields are blank on a few percent of non-institutional claims (notably,
+physician claims).
 
-In principle, information on patients' locations of residence is also available from the annual beneficiary level denominator files. The information in these files, however, corresponds to the beneficiary's residence when the file was finalized March 31st of the following year. As a result, the residence information in this file will not, in general, correspond to residence at the time of treatment. [^14]
+In principle, information on patients' locations of residence is also available
+from the annual beneficiary level denominator files. The information in these
+files, however, corresponds to the beneficiary's residence when the file was
+finalized March 31st of the following year. As a result, the residence
+information in this file will not, in general, correspond to residence at the
+time of treatment. [^14]
 
 [^14]: See the question "Why isn't the residence information (e.g. county code) found in the Denominator file and claims files completely in agreement when I link them?" in the [ResDAC FAQ](http://www.resdac.umn.edu/Medicare/medicareFAQ.asp).
 
-Adding denominator based zip codes from the extracts would not be difficult. It is important to realize what is included are the zip codes from the associated claims/MedPAR files. Refer to [ResDAC FAQ](http://www.resdac.umn.edu/Medicare/medicareFAQ.asp) for more information on why the residence information may differ.
+Adding denominator based zip codes from the extracts would not be difficult. It
+is important to realize what is included are the zip codes from the associated
+claims/MedPAR files. Refer to [ResDAC
+FAQ](http://www.resdac.umn.edu/Medicare/medicareFAQ.asp) for more information on
+why the residence information may differ.
 
 ## Provider and physician identifiers
 
-Provider and physician identifiers are included in the claims files. In the case of physicians these identifiers have changed from UPINs to NPI over time. While the method for generating provider numbers has not changed it is important to note that it is possible for these provider numbers to change in some cases.
+Provider and physician identifiers are included in the claims files. In the case
+of physicians these identifiers have changed from UPINs to NPI over time. While
+the method for generating provider numbers has not changed it is important to
+note that it is possible for these provider numbers to change in some cases.
 
 ### Provider identifiers
 
-Provider numbers are a rich source of information for researchers. The number itself provides information on the state a provider is registered under in the first 2 digits while the last 4 digits fall into number range CMS uses to classify provider types (e.g. short-term inpatient versus SNF provider) [^15].
+Provider numbers are a rich source of information for researchers. The number
+itself provides information on the state a provider is registered under in the
+first 2 digits while the last 4 digits fall into number range CMS uses to
+classify provider types (e.g. short-term inpatient versus SNF provider) [^15].
 
 [^15]: See [here](http://www.resdac.umn.edu/ddvh/NewFilesCodeRefLimiations/PRVDR_NUM_TB.htm) for basic information on the form of Medicare provider identifiers.
 
-The last four digits generally describe the type of provider, although in a small amount of cases they have been found to be misleading. While comparing the long-term care and inpatient facilities there were some facilities which appeared to have been inpatient facilities but who were billing as a long-term care facility. Closer inspection suggested that ownership had changed and the facility had switched over to the long-term care payment system while leaving its provider number intact. Again in most of the cases the provider numbers will be correct, but there are exceptions to this rule. Researchers concerned with this can use the impact file for the different payment systems to match provider numbers to the payment system. In above example, the anomaly was discovered by comparing the impact files.
+The last four digits generally describe the type of provider, although in a
+small amount of cases they have been found to be misleading. While comparing the
+long-term care and inpatient facilities there were some facilities which
+appeared to have been inpatient facilities but who were billing as a long-term
+care facility. Closer inspection suggested that ownership had changed and the
+facility had switched over to the long-term care payment system while leaving
+its provider number intact. Again in most of the cases the provider numbers will
+be correct, but there are exceptions to this rule. Researchers concerned with
+this can use the impact file for the different payment systems to match provider
+numbers to the payment system. In above example, the anomaly was discovered by
+comparing the impact files.
 
-It is important to realize that institutional provider numbers can change over time with a change in ownership or if CMS decides on it. Individuals concerned about changing provider IDs can look to the provider of service (POS) file. The file contains provider centric data, including provider address and a cross reference of new and old provider IDs, although the crosswalk has not been verified. Although both the address and the crosswalk may provide some information, generally the POS file needs to be processed further because of inconsistency in the data over the years. The NBER currently holds the POS data set. For more information about the POS files check [here](http://www.cms.gov/NonIdentifiableDataFiles/04_ProviderofServicesFile.asp) or [here](http://www.resdac.org/Tools/TBs/TN-014_HowtoOpenandReadtheProviderofServiceFiles.pdf).
+It is important to realize that institutional provider numbers can change over
+time with a change in ownership or if CMS decides on it. Individuals concerned
+about changing provider IDs can look to the provider of service (POS) file. The
+file contains provider centric data, including provider address and a cross
+reference of new and old provider IDs, although the crosswalk has not been
+verified. Although both the address and the crosswalk may provide some
+information, generally the POS file needs to be processed further because of
+inconsistency in the data over the years. The NBER currently holds the POS data
+set. For more information about the POS files check
+[here](http://www.cms.gov/NonIdentifiableDataFiles/04_ProviderofServicesFile.asp)
+or
+[here](http://www.resdac.org/Tools/TBs/TN-014_HowtoOpenandReadtheProviderofServiceFiles.pdf).
 
-Some inpatient facilities in rural settings with less then 100 beds can apply to have special swing bed designation. The designation allows some beds in an inpatient setting to provide long-term care without establishing a separate unit which is eligible for reimbursement based on a reasonable cost bases. However, providers who bill using the swing bed designation will have a different provider number then when they bill for their regular inpatient services. Swing bed inpatient facilities are designated by provider numbers with a `U` in the 5th position of the 6 digit provider number or by the `spclunit` variable populated with a `U`,`W`,`Y`, or `Z`.
+Some inpatient facilities in rural settings with less then 100 beds can apply to
+have special swing bed designation. The designation allows some beds in an
+inpatient setting to provide long-term care without establishing a separate unit
+which is eligible for reimbursement based on a reasonable cost bases. However,
+providers who bill using the swing bed designation will have a different
+provider number then when they bill for their regular inpatient services. Swing
+bed inpatient facilities are designated by provider numbers with a `U` in the
+5th position of the 6 digit provider number or by the `spclunit` variable
+populated with a `U`,`W`,`Y`, or `Z`.
 
 ### Physician identifiers
 
-The types of physician identifiers available vary by year. Across all years, the vast majority of physician claims provide tax identification numbers (either SSNs or EINs). The vast majority of physician records also provide CMS-issued PIN and UPIN identifiers [^17].
+The types of physician identifiers available vary by year. Across all years, the
+vast majority of physician claims provide tax identification numbers (either
+SSNs or EINs). The vast majority of physician records also provide CMS-issued
+PIN and UPIN identifiers [^17].
 
 [^17]: See [here](http://www.resdac.umn.edu/Tools/TBs/TB-002_Medicare%20Physician%20Identifiers_508.pdf) for a description of physician PIN and UPIN identifiers.
 
-Historically CMS has made a complete listing of physician identifier available. The UPIN directory was last updated Q2, 2007 available [here](http://www.cms.gov/NonIdentifiableDataFiles/08_UniquePhysicianIdentificationDirectory.asp#) and was replaced with the National Plan and Provider Enumeration System's NPI [registry](http://www.cms.gov/NationalProvIdentStand/06a_DataDissemination.asp). The NPI is currently available to the public and does include legacy IDs, which may include the UPIN. The NBER has generated a UPIN to NPI crosswalk from the registry available [here](http://admin.nber.org/data/npi-upin-crosswalk.html).
+Historically CMS has made a complete listing of physician identifier available.
+The UPIN directory was last updated Q2, 2007 available
+[here](http://www.cms.gov/NonIdentifiableDataFiles/08_UniquePhysicianIdentificationDirectory.asp#)
+and was replaced with the National Plan and Provider Enumeration System's NPI
+[registry](http://www.cms.gov/NationalProvIdentStand/06a_DataDissemination.asp).
+The NPI is currently available to the public and does include legacy IDs, which
+may include the UPIN. The NBER has generated a UPIN to NPI crosswalk from the
+registry available [here](http://admin.nber.org/data/npi-upin-crosswalk.html).
 
 
-A brief overview of UPINs is described in the rest of the section. NPI are not discussed in more detail because they are new and contain no information within them. Over time there has been many inconsistencies in how UPINs were defined. [^18] To better understand the source of such inconsistencies it is useful to understand how physicians and institutions bill for services. When a physician bills for a service, they enter in their PINs, which the carrier runs through a crosswalk to assign the given PIN a UPIN. The problem is the quality of the crosswalk has varied by carrier over time generating a major source of inconsistencies.
+A brief overview of UPINs is described in the rest of the section. NPI are not
+discussed in more detail because they are new and contain no information within
+them. Over time there has been many inconsistencies in how UPINs were defined.
+[^18] To better understand the source of such inconsistencies it is useful to
+understand how physicians and institutions bill for services. When a physician
+bills for a service, they enter in their PINs, which the carrier runs through a
+crosswalk to assign the given PIN a UPIN. The problem is the quality of the
+crosswalk has varied by carrier over time generating a major source of
+inconsistencies.
 
-On the other hand when a provider submits a bill headed for the institutional claims files they provide the UPIN directly. This means that the institutional files do not have the same crosswalk issue as the institutional files. For a full explanation of the process refer to the ResDAC technical document [Medicare Physician Identifiers UPINs, PINs and NPI Numbers](http://www.resdac.org/Tools/TBs/TB-002_Medicare%20Physician%20Identifiers_508.pdf).
+On the other hand when a provider submits a bill headed for the institutional
+claims files they provide the UPIN directly. This means that the institutional
+files do not have the same crosswalk issue as the institutional files. For a
+full explanation of the process refer to the ResDAC technical document [Medicare
+Physician Identifiers UPINs, PINs and NPI
+Numbers](http://www.resdac.org/Tools/TBs/TB-002_Medicare%20Physician%20Identifiers_508.pdf).
 
-Lastly it is useful to note that the first letter in the UPIN designated the doctor type:
+Lastly it is useful to note that the first letter in the UPIN designated the
+doctor type:
 
 | Initial Letter | Type of Practitioner                                                          |
 |:---------------|:------------------------------------------------------------------------------|
@@ -273,11 +611,32 @@ Lastly it is useful to note that the first letter in the UPIN designated the doc
 | R-S            | Non-physician practitioners                                                   |
 | W-Z            | Group UPINs                                                                   |
 
+Table: UPIN initial letter designation. Source: [Medicare Physician Identifiers UPINs, PINs and NPI Numbers](http://www.resdac.org/Tools/TBs/TB-002_Medicare%20Physician%20Identifiers_508.pdf)
+
 ## Hospital transfers
 
-Data patterns which resemble potential hospital transfers in the MedPAR records are presented in this section under three different scenarios. The importance of these different transfer scenarios will ultimately rest on the specific question at hand. As a result these different scenarios are simply flagged in the data and left to the user to decide on how to treat them. For the four cohorts extracted (AMIs, CHF, ACS, and hip fractures) the second scenario encompasses the majority of index events flagged as potential transfers. Although this transfer scenario is the largest for AMIs and has steadily increased over time. By the end of the time series, more than 5% of the annual AMI index events are transfer cases as defined in this section. The remainder of the section defines transfers and discusses under what circumstances these cases may or may not be important.
+Data patterns which resemble potential hospital transfers in the MedPAR records
+are presented in this section under three different scenarios. The importance of
+these different transfer scenarios will ultimately rest on the specific question
+at hand. As a result these different scenarios are simply flagged in the data
+and left to the user to decide on how to treat them. For the four cohorts
+extracted (AMIs, CHF, ACS, and hip fractures) the second scenario encompasses
+the majority of index events flagged as potential transfers. Although this
+transfer scenario is the largest for AMIs and has steadily increased over time.
+By the end of the time series, more than 5% of the annual AMI index events are
+transfer cases as defined in this section. The remainder of the section defines
+transfers and discusses under what circumstances these cases may or may not be
+important.
 
-For the purposes of these cohorts, transfers are defined by identifying two consecutive (sorted by `bene_id` and index diagnosis date) MedPAR records which have an end and start date that is 1 day apart or less. There is no attempt to separate the cases where an individual is transferred within a hospital as opposed to a new hospital, although it is possible to do this using the provider number. Furthermore, we do not attempt to track the source of the hospital admission (e.g. did the patient come from another hospital versus an emergency room). It is possible to extend our loose definition of a transfer to include some of these other factors, but we chose not to [^19].
+For the purposes of these cohorts, transfers are defined by identifying two
+consecutive (sorted by `bene_id` and index diagnosis date) MedPAR records which
+have an end and start date that is 1 day apart or less. There is no attempt to
+separate the cases where an individual is transferred within a hospital as
+opposed to a new hospital, although it is possible to do this using the provider
+number. Furthermore, we do not attempt to track the source of the hospital
+admission (e.g. did the patient come from another hospital versus an emergency
+room). It is possible to extend our loose definition of a transfer to include
+some of these other factors, but we chose not to [^19].
 
 [^19]: The claims data have two different variables which track the source of a hospital admission (`src_adms`) and also the discharge destination (`dstntncd`). In the sense, we can track “in-transfers” and “out-transfers”. While the claims do identify these transfers we have not validated the accuracy of these variables, particularly for some of the older claims files. They should be used with caution. Another option is to use the provider serial number to categorize where each individual comes from.
 
@@ -287,46 +646,155 @@ Upon closer inspection of the patterns three potential transfer scenarios emerge
 2. Patient has an _initial hospital stay with a non-AMI condition_. The patient is transferred and is coded with a principal diagnosis of an AMI.
 3. Patient has an _initial hospital stay with an AMI and is discharged within one day_. The patient is transferred, either within the hospital or to a different hospital and is coded with a non-AMI principal diagnosis.
 
-The following program [`FlagTransfers.sas`](https://www.nber.org/medicare/public/unzipped/2create_index_level_measures/transfers/FlagTransfers.sas) found under the `2create_index_level_measures` folder adds the transfer scenario flags for the MedPAR claims files. Run the program after extracting the MedPAR claim (running all of the programs in 1 folder set. To run the program, assign the code parameter to the first 3 digits of your diagnostic codes used to define the index event. For more thorough examples, the ACS example has been hard coded into the data.
+The following program
+[`FlagTransfers.sas`](https://www.nber.org/medicare/public/unzipped/2create_index_level_measures/transfers/FlagTransfers.sas)
+found under the `2create_index_level_measures` folder adds the transfer scenario
+flags for the MedPAR claims files. Run the program after extracting the MedPAR
+claim (running all of the programs in 1 folder set. To run the program, assign
+the code parameter to the first 3 digits of your diagnostic codes used to define
+the index event. For more thorough examples, the ACS example has been hard coded
+into the data.
 
-The program goes through and flags the data rather than imposing any assumptions on the data about what is generating the pattern of stays. The corresponding flags in the data are `flagScen1`, `flagScen2` and `flagScen3`. Each scenario is further discussed below.
+The program goes through and flags the data rather than imposing any assumptions
+on the data about what is generating the pattern of stays. The corresponding
+flags in the data are `flagScen1`, `flagScen2` and `flagScen3`. Each scenario is
+further discussed below.
 
-Although the code controls for the first scenario, it is worth discussing because it highlights how specific assumptions imposed at the beginning of the code can interact with different exclusion criteria. The current algorithm controls for this scenario when the restrictions are imposed on the candidate index events by the program [`1B_impose_restrictions.sas`](https://www.nber.org/medicare/public/unzipped/1cohort_extraction/1B_impose_restrictions.sas). The program sorts the index events so that the procedure chooses the first index event and drops all other index events that occur within a year, in addition to some other exclusion restrictions. However, the case for an AMI is slightly different because index events which occur at SNFs in data step 2 are excluded from being a candidate index event. As a result in a very small amount of cases, the procedure fails to choose the first index event due to the exclusion of SNF encounters as potential AMI index events. To reiterate, scenario 1 should not cause any problems in most cases, although one should take care to test how additional restrictions impact the algorithm, especially if those restrictions are imposed in the beginning of the [`1B_impose_restrictions.sas`](https://www.nber.org/medicare/public/unzipped/1cohort_extraction/1B_impose_restrictions.sas) script.
+Although the code controls for the first scenario, it is worth discussing
+because it highlights how specific assumptions imposed at the beginning of the
+code can interact with different exclusion criteria. The current algorithm
+controls for this scenario when the restrictions are imposed on the candidate
+index events by the program
+[`1B_impose_restrictions.sas`](https://www.nber.org/medicare/public/unzipped/1cohort_extraction/1B_impose_restrictions.sas).
+The program sorts the index events so that the procedure chooses the first index
+event and drops all other index events that occur within a year, in addition to
+some other exclusion restrictions. However, the case for an AMI is slightly
+different because index events which occur at SNFs in data step 2 are excluded
+from being a candidate index event. As a result in a very small amount of cases,
+the procedure fails to choose the first index event due to the exclusion of SNF
+encounters as potential AMI index events. To reiterate, scenario 1 should not
+cause any problems in most cases, although one should take care to test how
+additional restrictions impact the algorithm, especially if those restrictions
+are imposed in the beginning of the
+[`1B_impose_restrictions.sas`](https://www.nber.org/medicare/public/unzipped/1cohort_extraction/1B_impose_restrictions.sas)
+script.
 
-Scenario 2 is potentially more problematic for several reasons. Conceptually, we are trying to construct a cohort of individuals who experience an AMI as a discrete medical event since results derived from such a cohort apply reasonably directly to an important set of real-world populations and situations. For this reason, we have not previously sought to include AMIs that occur as complications during non-AMI hospitalizations[^20]. There is also a practical difficulty. If we are not comfortable assuming that the transfer to the second stay happens immediately upon the onset of the AMI, then dating the beginning of the AMI episode and tallying the costs associated with treating the episode becomes difficult. Specifically, some indeterminate portion of the initial hospital stay should be considered “part of the episode,” but the data provide no way of making that split.
+Scenario 2 is potentially more problematic for several reasons. Conceptually, we
+are trying to construct a cohort of individuals who experience an AMI as a
+discrete medical event since results derived from such a cohort apply reasonably
+directly to an important set of real-world populations and situations. For this
+reason, we have not previously sought to include AMIs that occur as
+complications during non-AMI hospitalizations[^20]. There is also a practical
+difficulty. If we are not comfortable assuming that the transfer to the second
+stay happens immediately upon the onset of the AMI, then dating the beginning of
+the AMI episode and tallying the costs associated with treating the episode
+becomes difficult. Specifically, some indeterminate portion of the initial
+hospital stay should be considered "part of the episode," but the data provide
+no way of making that split.
 
 [^20]: It's worth noting that it is also likely to be an oddly-selected subset since the probability of transfer, conditional on an AMI, undoubtedly depends on the characteristics of hospitals A and B, as well as on the patient's characteristics.
 
-While it is plausible to view scenario 2 as describing an AMI occurring as part of a complication from some other long hospital stay, scenario 2 could just as easily be describing an instance where an individual first goes to a hospital for chest pains, then is transferred because of an AMI. In these instances, it is difficult to argue against including these index events. The code keeps both stays described in scenario 2. The stay which references an AMI is defined as an index event and both stays can be found on the claims file outputted from the MedPAR files.
+While it is plausible to view scenario 2 as describing an AMI occurring as part
+of a complication from some other long hospital stay, scenario 2 could just as
+easily be describing an instance where an individual first goes to a hospital
+for chest pains, then is transferred because of an AMI. In these instances, it
+is difficult to argue against including these index events. The code keeps both
+stays described in scenario 2. The stay which references an AMI is defined as an
+index event and both stays can be found on the claims file outputted from the
+MedPAR files.
 
-Scenario 3, is also potentially problematic because it could describe a type of a rule out scenario which the NCHS coding guidelines describe as follows:
-> If the diagnosis documented at the time of discharge is qualified as ‘probable', ‘suspected', ‘likely', ‘questionable', ‘possible', or ‘still to be ruled out', code the condition as if it existed. The basis for this guideline is that diagnostic workup, arrangements for further workup or observation, and initial therapeutic approach correspond most closely with an established diagnosis.
+Scenario 3, is also potentially problematic because it could describe a type of
+a rule out scenario which the NCHS coding guidelines describe as follows:
 
-The rule out type explanation for scenario 3 is characterized by a short hospital stay, with admission and discharge dates within a day of each other. In addition, after the individual is transferred they are coded with a different principal diagnosis, suggesting a possible rule out type scenario. While it is possible to describe a rule out type scenario, it is also just as possible that these transfers may indicate an individual who was treated for an AMI and then transferred (possibly within the hospital) for post-treatment therapy. Therefore we simply flag these cases and note their existence to the reader as both explanations seem equally plausible. The code keeps both stays described in scenario 3. The stay which references an AMI is defined as an index event and both stays can be found on the claims file created from the MedPAR files.
+> If the diagnosis documented at the time of discharge is qualified as
+> ‘probable', ‘suspected', ‘likely', ‘questionable', ‘possible', or ‘still to be
+> ruled out', code the condition as if it existed. The basis for this guideline
+> is that diagnostic workup, arrangements for further workup or observation, and
+> initial therapeutic approach correspond most closely with an established
+> diagnosis.
 
-Other strategies exist for dealing with transfers. For example [Krumholtz et al. (2007)](7_references.md) designed a risk adjustment strategy for CMS in response for legislation which called for more publicly available hospital quality measures. The results of which are reported at the government run [QualityNet.org](http://www.qualitynet.org/). The documentation is provided on the website, the SAS code which runs these risk adjustments can be requested by emailing [`mortalitymeasures@mathematica-mpr.com`](mailto:mortalitymeasures@mathematica-mpr.com). Also see the following paper for the role of transfers in the case of AMIs:
+The rule out type explanation for scenario 3 is characterized by a short
+hospital stay, with admission and discharge dates within a day of each other. In
+addition, after the individual is transferred they are coded with a different
+principal diagnosis, suggesting a possible rule out type scenario. While it is
+possible to describe a rule out type scenario, it is also just as possible that
+these transfers may indicate an individual who was treated for an AMI and then
+transferred (possibly within the hospital) for post-treatment therapy. Therefore
+we simply flag these cases and note their existence to the reader as both
+explanations seem equally plausible. The code keeps both stays described in
+scenario 3. The stay which references an AMI is defined as an index event and
+both stays can be found on the claims file created from the MedPAR files.
+
+Other strategies exist for dealing with transfers. For example [Krumholtz et al.
+(2007)](7_references.md) designed a risk adjustment strategy for CMS in response
+for legislation which called for more publicly available hospital quality
+measures. The results of which are reported at the government run
+[QualityNet.org](http://www.qualitynet.org/). The documentation is provided on
+the website, the SAS code which runs these risk adjustments can be requested by
+emailing
+[`mortalitymeasures@mathematica-mpr.com`](mailto:mortalitymeasures@mathematica-mpr.com).
+Also see the following paper for the role of transfers in the case of AMIs:
 
 - Iwashyna TJ, Kahn JM, Hayward R a, Nallamothu BK. Interhospital transfers among Medicare beneficiaries admitted for acute myocardial infarction at nonrevascularization hospitals. Circ Cardiovasc Qual Outcomes. 2010;3(5):468–75. doi:10.1161/CIRCOUTCOMES.110.957993.recent
 
 ## Charges versus payments
 
-In general, the claims files contain two types of information on treatment costs:
+In general, the claims files contain two types of information on treatment
+costs:
 
 1. The provider's stated charges for the services provided; and
 2. the amount Medicare is actually willing to pay for the services (including any beneficiary cost-sharing or third-party payments).
 
-Providing a detailed evaluation of the uses of these two measures of treatment costs is beyond the scope of this documentation. Be aware, however, that the code described herein extracts payment variables, but, with a few exceptions, does not extract charge variables. Nonetheless, modifying the code to also extract charge fields would be straightforward.
+Providing a detailed evaluation of the uses of these two measures of treatment
+costs is beyond the scope of this documentation. Be aware, however, that the
+code described herein extracts payment variables, but, with a few exceptions,
+does not extract charge variables. Nonetheless, modifying the code to also
+extract charge fields would be straightforward.
 
 ## Technical notes
 
-Most work with the raw claims files is best conducted using SAS. First, because Stata must hold the entire data set in memory, processing the files in Stata requires impractically large amounts of memory, leaving SAS as the only feasible option[^21]. Moreover, NBER's collection of claims files start in SAS format, so working with them in some other format would require a time-consuming conversion. While most work generating extracts is best done in SAS, it is sometimes feasible to work with the final extracts in Stata, at least when the underlying claims files are 5 percent samples. The recommended strategy involves carrying out all data manipulations in SAS, aggregating the data into variable of interest and then running the analysis of the data in Stata.
+Most work with the raw claims files is best conducted using SAS. First, because
+Stata must hold the entire data set in memory, processing the files in Stata
+requires impractically large amounts of memory, leaving SAS as the only feasible
+option[^21]. Moreover, NBER's collection of claims files start in SAS format, so
+working with them in some other format would require a time-consuming
+conversion. While most work generating extracts is best done in SAS, it is
+sometimes feasible to work with the final extracts in Stata, at least when the
+underlying claims files are 5 percent samples. The recommended strategy involves
+carrying out all data manipulations in SAS, aggregating the data into variable
+of interest and then running the analysis of the data in Stata.
 
 [^21]: It might be possible to conduct a project using only 5 percent sample files entirely in Stata. But this approach would make it impossible to ever scale up to 20 percent or 100 percent samples if that ultimately became desirable.
 
-Based on my experience, using SAS with the x-server GUI system is both difficult to use and slow. The program I recommend using is [Emacs with emacs-speaks-statistics (ESS)](http://ess.r-project.org/ess.pdf) module. The program allows the user to set up keys which easily send SAS code to SAS in either batch or interactive mode. In addition there are several other useful aspects of ESS, like easily switching between `log`, `lst`, and SAS files. Be aware that even the 5 percent extracts of the claims files (particularly the outpatient and physician claims files) are extremely large when decompressed. For this reason, it is often necessary to decompress one year sub file, process it, and delete it before going on to the next, rather than decompressing all years and then processing them. Having all of the files decompressed at once, even within a single year simply consumes too much disk space once extracts larger than 5 percent are used. In any case, when planning for disk space constraints, keep in mind that the decompressed files are typically 10-20 times the size of the compressed files and sometimes larger. Because of the size of these files, it is advisable to debug your code using smaller extracts (01 percent or 0001 percent).
+Based on my experience, using SAS with the x-server GUI system is both difficult
+to use and slow. The program I recommend using is [Emacs with
+emacs-speaks-statistics (ESS)](http://ess.r-project.org/ess.pdf) module. The
+program allows the user to set up keys which easily send SAS code to SAS in
+either batch or interactive mode. In addition there are several other useful
+aspects of ESS, like easily switching between `log`, `lst`, and SAS files. Be
+aware that even the 5 percent extracts of the claims files (particularly the
+outpatient and physician claims files) are extremely large when decompressed.
+For this reason, it is often necessary to decompress one year sub file, process
+it, and delete it before going on to the next, rather than decompressing all
+years and then processing them. Having all of the files decompressed at once,
+even within a single year simply consumes too much disk space once extracts
+larger than 5 percent are used. In any case, when planning for disk space
+constraints, keep in mind that the decompressed files are typically 10-20 times
+the size of the compressed files and sometimes larger. Because of the size of
+these files, it is advisable to debug your code using smaller extracts (01
+percent or 0001 percent).
 
-Finally, some care should be taken when dealing with variables defining ethnicity. [Arday (2000)](7_references.md) provides a good review about how the ethnicity variables in the Medicare claims are constructed.
+Finally, some care should be taken when dealing with variables defining
+ethnicity. [Arday (2000)](7_references.md) provides a good review about how the
+ethnicity variables in the Medicare claims are constructed.
 
-If you are a SAS novice, or even if you are experienced and debugging a program SAS may crash several times. It is important to realize that if you are writing large data sets to the SAS work library, either explicitly or implicitly, then whenever a program crashes the files get left in the /tmp directory. Since the Medicare claims files are large, it is important to clean up this directory whenever you remember and are not using SAS (otherwise it might erase files which your program is using and cause the program to crash). To delete your files simply type in `rm –r /tmp/* -f` into the UNIX command prompt. New users to the Unix system are advised to read the [NBER notes for users running large jobs](http://www.nber.org/help/localhelp/biguser.html).
-
-
+If you are a SAS novice, or even if you are experienced and debugging a program
+SAS may crash several times. It is important to realize that if you are writing
+large data sets to the SAS work library, either explicitly or implicitly, then
+whenever a program crashes the files get left in the /tmp directory. Since the
+Medicare claims files are large, it is important to clean up this directory
+whenever you remember and are not using SAS (otherwise it might erase files
+which your program is using and cause the program to crash). To delete your
+files simply type in `rm –r /tmp/* -f` into the UNIX command prompt. New users
+to the Unix system are advised to read the [NBER notes for users running large
+jobs](http://www.nber.org/help/localhelp/biguser.html).

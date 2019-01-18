@@ -26,7 +26,8 @@ nav:
         - Manipulating Extracts with SAS: 'NBER_website/5_manipulating_medicare_extracts.md'
         - Generating Costs Measures: 'NBER_website/6_costs.md'
         - References: 'NBER_website/7_references.md'
-        - Appendix: 'NBER_website/8_appendix.md'
+        - Appendix: 'NBER_website/8_appendix_a.md'
+        - Version Updates: 'NBER_website/9_version_updates.md'
     - ResDAC Documentation:
         - Beneficiary Summary File: 'resdac/mbsf.md'
         - Carrier RIF: 'resdac/carrier-rif.md'
