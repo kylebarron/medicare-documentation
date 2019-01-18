@@ -1,0 +1,4357 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Aggregated Medicare documentation in a single place">
+      
+      
+        <link rel="canonical" href="https://kylebarron.github.io/medicare-documentation/resdac/mbsf.html">
+      
+      
+        <meta name="author" content="Kyle Barron">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.4">
+    
+    
+      
+        <title>Beneficiary Summary File - Medicare Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.451f80e5.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#fb8c00">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,400i,700|Fira+Code">
+        <style>body,input{font-family:"Nunito Sans","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Fira Code","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="orange" data-md-color-accent="light-blue">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="../#beneficiary-summary-file" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://kylebarron.github.io/medicare-documentation/" title="Medicare Documentation" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">local_library</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Medicare Documentation
+              </span>
+              <span class="md-header-nav__topic">
+                Beneficiary Summary File
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/kylebarron/medicare-documentation/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      medicare-documentation
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../index.html" title="Home" class="md-tabs__link">
+        Home
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../NBER_website/1_Overview.html" title="NBER Documentation" class="md-tabs__link">
+          NBER Documentation
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="mbsf.html" title="ResDAC Documentation" class="md-tabs__link md-tabs__link--active">
+          ResDAC Documentation
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../kyle/goals-for-modern-data-format.html" title="Working with the Data" class="md-tabs__link">
+          Working with the Data
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../mauricio/enrollment-restrictions.html" title="Important Details" class="md-tabs__link">
+          Important Details
+        </a>
+      
+    </li>
+  
+
+      
+        
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://kylebarron.github.io/medicare-documentation/" title="Medicare Documentation" class="md-nav__button md-logo">
+      
+        <i class="md-icon">local_library</i>
+      
+    </a>
+    Medicare Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/kylebarron/medicare-documentation/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      medicare-documentation
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../index.html" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      NBER Documentation
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        NBER Documentation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../NBER_website/1_Overview.html" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../NBER_website/2_Background.html" title="Description of Claims Files" class="md-nav__link">
+      Description of Claims Files
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../NBER_website/3_Getting_started_with_SAS.html" title="Getting Started with SAS" class="md-nav__link">
+      Getting Started with SAS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../NBER_website/4_constructing_extracts.html" title="Constructing Extracts with SAS" class="md-nav__link">
+      Constructing Extracts with SAS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../NBER_website/5_manipulating_medicare_extracts.html" title="Manipulating Extracts with SAS" class="md-nav__link">
+      Manipulating Extracts with SAS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../NBER_website/6_costs.html" title="Generating Costs Measures" class="md-nav__link">
+      Generating Costs Measures
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../NBER_website/7_references.html" title="References" class="md-nav__link">
+      References
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../NBER_website/8_appendix_a.html" title="Appendix" class="md-nav__link">
+      Appendix
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../NBER_website/9_version_updates.html" title="Version Updates" class="md-nav__link">
+      Version Updates
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      ResDAC Documentation
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        ResDAC Documentation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Beneficiary Summary File
+      </label>
+    
+    <a href="mbsf.html" title="Beneficiary Summary File" class="md-nav__link md-nav__link--active">
+      Beneficiary Summary File
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" title="Overview" class="md-nav__link">
+    Overview
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#base-abcd-segment" title="Base (A/B/C/D) segment" class="md-nav__link">
+    Base (A/B/C/D) segment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chronic-conditions-segment" title="Chronic Conditions segment" class="md-nav__link">
+    Chronic Conditions segment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-chronic-or-potentially-disabling-conditions-segment" title="Other Chronic or Potentially Disabling Conditions segment" class="md-nav__link">
+    Other Chronic or Potentially Disabling Conditions segment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cost-use-segment" title="Cost &amp; Use segment" class="md-nav__link">
+    Cost &amp; Use segment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#national-death-index-ndi-segment" title="National Death Index (NDI) segment" class="md-nav__link">
+    National Death Index (NDI) segment
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#availability" title="Availability" class="md-nav__link">
+    Availability
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#base-abcd-segment_1" title="Base (A/B/C/D) Segment" class="md-nav__link">
+    Base (A/B/C/D) Segment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chronic-conditions-segment_1" title="Chronic Conditions Segment" class="md-nav__link">
+    Chronic Conditions Segment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-chronic-or-potentially-disabling-conditions-segment_1" title="Other Chronic or Potentially Disabling Conditions Segment" class="md-nav__link">
+    Other Chronic or Potentially Disabling Conditions Segment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cost-and-use-segment" title="Cost and Use Segment" class="md-nav__link">
+    Cost and Use Segment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#national-death-index-segment" title="National Death Index Segment" class="md-nav__link">
+    National Death Index Segment
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-documentation" title="Data Documentation" class="md-nav__link">
+    Data Documentation
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#base-abcd-segment_2" title="Base (A/B/C/D) segment" class="md-nav__link">
+    Base (A/B/C/D) segment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-c" title="Part C" class="md-nav__link">
+    Part C
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-d" title="Part D" class="md-nav__link">
+    Part D
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#national-death-index-segment_1" title="National Death Index segment" class="md-nav__link">
+    National Death Index segment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chronic-conditions-segment_2" title="Chronic Conditions segment" class="md-nav__link">
+    Chronic Conditions segment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-chronic-or-potentially-disabling-conditions" title="Other Chronic or Potentially Disabling Conditions" class="md-nav__link">
+    Other Chronic or Potentially Disabling Conditions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cost-and-use-segment_1" title="Cost and Use segment" class="md-nav__link">
+    Cost and Use segment
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="carrier-rif.html" title="Carrier RIF" class="md-nav__link">
+      Carrier RIF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="denominator-rif.html" title="Denominator RIF" class="md-nav__link">
+      Denominator RIF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="dme-rif.html" title="Durable Medical Equipment RIF" class="md-nav__link">
+      Durable Medical Equipment RIF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="hha-rif.html" title="Home Health Agency RIF" class="md-nav__link">
+      Home Health Agency RIF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="hospice-rif.html" title="Hospice RIF" class="md-nav__link">
+      Hospice RIF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ip-rif.html" title="Inpatient RIF" class="md-nav__link">
+      Inpatient RIF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="medpar-rif.html" title="MedPAR RIF" class="md-nav__link">
+      MedPAR RIF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="op-rif.html" title="Outpatient RIF" class="md-nav__link">
+      Outpatient RIF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="snf-rif.html" title="Skilled Nursing Facility RIF" class="md-nav__link">
+      Skilled Nursing Facility RIF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-11" type="checkbox" id="nav-3-11">
+    
+    <label class="md-nav__link" for="nav-3-11">
+      Variable Definitions
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-11">
+        Variable Definitions
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="variables/variables.html" title="All Files" class="md-nav__link">
+      All Files
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="variables/mbsf.html" title="Beneficiary Summary File" class="md-nav__link">
+      Beneficiary Summary File
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="variables/carrier-rif.html" title="Carrier RIF" class="md-nav__link">
+      Carrier RIF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="variables/dme-rif.html" title="Durable Medical Equipment RIF" class="md-nav__link">
+      Durable Medical Equipment RIF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="variables/hha-rif.html" title="Home Health Agency RIF" class="md-nav__link">
+      Home Health Agency RIF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="variables/hospice-rif.html" title="Hospice RIF" class="md-nav__link">
+      Hospice RIF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="variables/ip-rif.html" title="Inpatient RIF" class="md-nav__link">
+      Inpatient RIF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="variables/medpar-rif.html" title="MedPAR RIF" class="md-nav__link">
+      MedPAR RIF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="variables/op-rif.html" title="Outpatient RIF" class="md-nav__link">
+      Outpatient RIF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="variables/snf-rif.html" title="Skilled Nursing Facility RIF" class="md-nav__link">
+      Skilled Nursing Facility RIF
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Working with the Data
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Working with the Data
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../kyle/goals-for-modern-data-format.html" title="Goals for New Data Format" class="md-nav__link">
+      Goals for New Data Format
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../kyle/01medicare_readme.html" title="Standard Readme" class="md-nav__link">
+      Standard Readme
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../kyle/extract_data.html" title="Data Extraction Overview" class="md-nav__link">
+      Data Extraction Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../kyle/data_locations.html" title="Data Locations" class="md-nav__link">
+      Data Locations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../kyle/using-tmux-aging-servers.html" title="Using tmux for long-running jobs" class="md-nav__link">
+      Using tmux for long-running jobs
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Important Details
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Important Details
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mauricio/enrollment-restrictions.html" title="Enrollment Restrictions" class="md-nav__link">
+      Enrollment Restrictions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mauricio/lag-post-event-spending.html" title="Calculating Costs for Inpatient Visits" class="md-nav__link">
+      Calculating Costs for Inpatient Visits
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../glossary.html" title="Glossary" class="md-nav__link">
+      Glossary
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" title="Overview" class="md-nav__link">
+    Overview
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#base-abcd-segment" title="Base (A/B/C/D) segment" class="md-nav__link">
+    Base (A/B/C/D) segment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chronic-conditions-segment" title="Chronic Conditions segment" class="md-nav__link">
+    Chronic Conditions segment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-chronic-or-potentially-disabling-conditions-segment" title="Other Chronic or Potentially Disabling Conditions segment" class="md-nav__link">
+    Other Chronic or Potentially Disabling Conditions segment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cost-use-segment" title="Cost &amp; Use segment" class="md-nav__link">
+    Cost &amp; Use segment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#national-death-index-ndi-segment" title="National Death Index (NDI) segment" class="md-nav__link">
+    National Death Index (NDI) segment
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#availability" title="Availability" class="md-nav__link">
+    Availability
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#base-abcd-segment_1" title="Base (A/B/C/D) Segment" class="md-nav__link">
+    Base (A/B/C/D) Segment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chronic-conditions-segment_1" title="Chronic Conditions Segment" class="md-nav__link">
+    Chronic Conditions Segment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-chronic-or-potentially-disabling-conditions-segment_1" title="Other Chronic or Potentially Disabling Conditions Segment" class="md-nav__link">
+    Other Chronic or Potentially Disabling Conditions Segment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cost-and-use-segment" title="Cost and Use Segment" class="md-nav__link">
+    Cost and Use Segment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#national-death-index-segment" title="National Death Index Segment" class="md-nav__link">
+    National Death Index Segment
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-documentation" title="Data Documentation" class="md-nav__link">
+    Data Documentation
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#base-abcd-segment_2" title="Base (A/B/C/D) segment" class="md-nav__link">
+    Base (A/B/C/D) segment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-c" title="Part C" class="md-nav__link">
+    Part C
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-d" title="Part D" class="md-nav__link">
+    Part D
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#national-death-index-segment_1" title="National Death Index segment" class="md-nav__link">
+    National Death Index segment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chronic-conditions-segment_2" title="Chronic Conditions segment" class="md-nav__link">
+    Chronic Conditions segment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-chronic-or-potentially-disabling-conditions" title="Other Chronic or Potentially Disabling Conditions" class="md-nav__link">
+    Other Chronic or Potentially Disabling Conditions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cost-and-use-segment_1" title="Cost and Use segment" class="md-nav__link">
+    Cost and Use segment
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/kylebarron/medicare-documentation/blob/master/docs/resdac/mbsf.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="beneficiary-summary-file">Beneficiary Summary File<a class="headerlink" href="#beneficiary-summary-file" title="Permanent link">&para;</a></h1>
+<details class="note"><summary>Source</summary><p><a href="https://www.resdac.org/cms-data/files/mbsf-base">https://www.resdac.org/cms-data/files/mbsf-base</a></p></details><h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>The Master Beneficiary Summary File includes several segments.</p>
+<h3 id="base-abcd-segment">Base (A/B/C/D) segment<a class="headerlink" href="#base-abcd-segment" title="Permanent link">&para;</a></h3>
+<p>This segment includes beneficiary enrollment information, such as the beneficiary unique identifier, state and county codes, zip code, date of birth, date of death, sex, race, age, monthly entitlement and enrollment information (A/B/C/D) and plan information for Medicare Advantage (Part C) and the Prescription Drug Program (Part D). Part C and Part D enrollment information is available beginning with the 2006 file year.</p>
+<h3 id="chronic-conditions-segment">Chronic Conditions segment<a class="headerlink" href="#chronic-conditions-segment" title="Permanent link">&para;</a></h3>
+<p>This segment includes 27 chronic condition data warehouse flags called CCW Flags. This includes 6 new chronic conditions in addition to the 21 chronic conditions previously defined. For more information about the CCW Flags, please see the <a href="https://www.ccwdata.org/web/guest/user-documentation">CCW User Guide</a>.</p>
+<h3 id="other-chronic-or-potentially-disabling-conditions-segment">Other Chronic or Potentially Disabling Conditions segment<a class="headerlink" href="#other-chronic-or-potentially-disabling-conditions-segment" title="Permanent link">&para;</a></h3>
+<p>The Other Chronic or Potentially Disabling Conditions segment of the MBSF contains 9 mental health and tobacco use conditions, 15 developmental disorder and disability-related conditions, and 9 other chronic physical and behavioral health conditions which were developed by CMS specifically to enhance research of the Medicare-Medicaid dually enrolled population.</p>
+<h3 id="cost-use-segment">Cost &amp; Use segment<a class="headerlink" href="#cost-use-segment" title="Permanent link">&para;</a></h3>
+<p>This segment includes summarized information about the service utilization and Medicare payment amounts by file type.</p>
+<h3 id="national-death-index-ndi-segment">National Death Index (NDI) segment<a class="headerlink" href="#national-death-index-ndi-segment" title="Permanent link">&para;</a></h3>
+<p>This segment includes the National Death Index cause of death information. This is available for all Medicare beneficiaries from 1999-2008 and for Medicaid recipients from 1999-2007.  There are no plans to update the NDI segment.</p>
+<h2 id="availability">Availability<a class="headerlink" href="#availability" title="Permanent link">&para;</a></h2>
+<h3 id="base-abcd-segment_1">Base (A/B/C/D) Segment<a class="headerlink" href="#base-abcd-segment_1" title="Permanent link">&para;</a></h3>
+<p>Availability:  CY 1999 - 2016</p>
+<p>The Part D variables in the Base segment are available for years 2006 and forward only.</p>
+<h3 id="chronic-conditions-segment_1">Chronic Conditions Segment<a class="headerlink" href="#chronic-conditions-segment_1" title="Permanent link">&para;</a></h3>
+<p>Availability:  CY 1999 - 2016</p>
+<h3 id="other-chronic-or-potentially-disabling-conditions-segment_1">Other Chronic or Potentially Disabling Conditions Segment<a class="headerlink" href="#other-chronic-or-potentially-disabling-conditions-segment_1" title="Permanent link">&para;</a></h3>
+<p>Availability:  CY 1999 - 2016</p>
+<h3 id="cost-and-use-segment">Cost and Use Segment<a class="headerlink" href="#cost-and-use-segment" title="Permanent link">&para;</a></h3>
+<p>Availability:  CY 1999 - 2016</p>
+<p>The mid-year Cost and Use segment, which is available in the Fall, will not include Part D claims information.</p>
+<h3 id="national-death-index-segment">National Death Index Segment<a class="headerlink" href="#national-death-index-segment" title="Permanent link">&para;</a></h3>
+<p>Availability:  CY 1999 - 2008</p>
+<p>This is available for all Medicare beneficiaries from 1999-2008 and for Medicaid recipients from 1999-2007.</p>
+<h2 id="data-documentation">Data Documentation<a class="headerlink" href="#data-documentation" title="Permanent link">&para;</a></h2>
+<h3 id="base-abcd-segment_2">Base (A/B/C/D) segment<a class="headerlink" href="#base-abcd-segment_2" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th align="right">Index</th>
+<th align="left">SAS Name</th>
+<th align="left">Variable Name</th>
+<th align="left">Limitation</th>
+<th align="left">Code Table</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">1</td>
+<td align="left"><code>BENE_ID</code></td>
+<td align="left"><a href="variables/mbsf.html#encrypted-ccw-beneficiary-id">Encrypted CCW Beneficiary ID</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right">2</td>
+<td align="left"><code>RFRNC_YR</code></td>
+<td align="left"><a href="variables/mbsf.html#reference-year">Reference Year</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right">3</td>
+<td align="left"><code>ENRL_SRC</code></td>
+<td align="left"><a href="variables/mbsf.html#source-of-enrollment-data">Source of enrollment data</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">4</td>
+<td align="left"><code>SAMPLE_GROUP</code></td>
+<td align="left"><a href="variables/mbsf.html#medicare-sample-group-indicator">Medicare Sample Group Indicator</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">5</td>
+<td align="left"><code>EFIVEPCT</code></td>
+<td align="left"><a href="variables/mbsf.html#enhanced-medicare-5-sample-indicator">Enhanced Medicare 5% Sample Indicator</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">6</td>
+<td align="left"><code>CRNT_BIC</code></td>
+<td align="left"><a href="variables/mbsf.html#current-beneficiary-identification-code">Current Beneficiary Identification Code</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">7</td>
+<td align="left"><code>STATE_CD</code></td>
+<td align="left"><a href="variables/mbsf.html#state-code-for-beneficiary-ssa-code">State code for beneficiary (SSA code)</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">8</td>
+<td align="left"><code>CNTY_CD</code></td>
+<td align="left"><a href="variables/mbsf.html#county-code-for-beneficiary-ssa-code">County Code for Beneficiary (SSA code)</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">9</td>
+<td align="left"><code>ZIP_CD</code></td>
+<td align="left"><a href="variables/mbsf.html#5-digit-zip-code-for-beneficiary">5-digit ZIP code for beneficiary</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">10</td>
+<td align="left"><code>STATE_CNTY_FIPS_CD_01</code></td>
+<td align="left"><a href="variables/mbsf.html#state-and-county-fips-code-january">State and county FIPS code - January</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">11</td>
+<td align="left"><code>STATE_CNTY_FIPS_CD_02</code></td>
+<td align="left"><a href="variables/mbsf.html#state-and-county-fips-code-february">State and county FIPS code - February</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">12</td>
+<td align="left"><code>STATE_CNTY_FIPS_CD_03</code></td>
+<td align="left"><a href="variables/mbsf.html#state-and-county-fips-code-march">State and county FIPS code - March</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">13</td>
+<td align="left"><code>STATE_CNTY_FIPS_CD_04</code></td>
+<td align="left"><a href="variables/mbsf.html#state-and-county-fips-code-april">State and county FIPS code - April</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">14</td>
+<td align="left"><code>STATE_CNTY_FIPS_CD_05</code></td>
+<td align="left"><a href="variables/mbsf.html#state-and-county-fips-code-may">State and county FIPS code - May</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">15</td>
+<td align="left"><code>STATE_CNTY_FIPS_CD_06</code></td>
+<td align="left"><a href="variables/mbsf.html#state-and-county-fips-code-june">State and county FIPS code - June</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">16</td>
+<td align="left"><code>STATE_CNTY_FIPS_CD_07</code></td>
+<td align="left"><a href="variables/mbsf.html#state-and-county-fips-code-july">State and county FIPS code - July</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">17</td>
+<td align="left"><code>STATE_CNTY_FIPS_CD_08</code></td>
+<td align="left"><a href="variables/mbsf.html#state-and-county-fips-code-august">State and county FIPS code - August</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">18</td>
+<td align="left"><code>STATE_CNTY_FIPS_CD_09</code></td>
+<td align="left"><a href="variables/mbsf.html#state-and-county-fips-code-september">State and county FIPS code - September</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">19</td>
+<td align="left"><code>STATE_CNTY_FIPS_CD_10</code></td>
+<td align="left"><a href="variables/mbsf.html#state-and-county-fips-code-october">State and county FIPS code - October</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">20</td>
+<td align="left"><code>STATE_CNTY_FIPS_CD_11</code></td>
+<td align="left"><a href="variables/mbsf.html#state-and-county-fips-code-november">State and county FIPS code - November</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">21</td>
+<td align="left"><code>STATE_CNTY_FIPS_CD_12</code></td>
+<td align="left"><a href="variables/mbsf.html#state-and-county-fips-code-december">State and county FIPS code - December</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">22</td>
+<td align="left"><code>AGE</code></td>
+<td align="left"><a href="variables/mbsf.html#age-of-beneficiary-at-end-of-year">Age of beneficiary at end of year</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">23</td>
+<td align="left"><code>BENE_DOB</code></td>
+<td align="left"><a href="variables/mbsf.html#beneficiary-date-of-birth">Beneficiary date of birth</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">24</td>
+<td align="left"><code>V_DOD_SW</code></td>
+<td align="left"><a href="variables/mbsf.html#valid-date-of-death-switch">Valid Date of Death Switch</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">25</td>
+<td align="left"><code>DEATH_DT</code></td>
+<td align="left"><a href="variables/mbsf.html#date-of-death">Date of Death</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">26</td>
+<td align="left"><code>SEX</code></td>
+<td align="left"><a href="variables/mbsf.html#sex">Sex</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">27</td>
+<td align="left"><code>RACE</code></td>
+<td align="left"><a href="variables/mbsf.html#beneficiary-race-code">Beneficiary Race Code</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">28</td>
+<td align="left"><code>RTI_RACE_CD</code></td>
+<td align="left"><a href="variables/mbsf.html#research-triangle-institute-rti-race-code">Research Triangle Institute (RTI) Race Code</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">29</td>
+<td align="left"><code>COVSTART</code></td>
+<td align="left"><a href="variables/mbsf.html#medicare-coverage-start-date">Medicare Coverage Start Date</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">30</td>
+<td align="left"><code>OREC</code></td>
+<td align="left"><a href="variables/mbsf.html#original-reason-for-entitlement-code">Original Reason for Entitlement Code</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">31</td>
+<td align="left"><code>CREC</code></td>
+<td align="left"><a href="variables/mbsf.html#current-reason-for-entitlement-code">Current Reason for Entitlement Code</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">32</td>
+<td align="left"><code>ESRD_IND</code></td>
+<td align="left"><a href="variables/mbsf.html#end-stage-renal-disease-esrd-indicator">End-stage Renal Disease (ESRD) Indicator</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">33</td>
+<td align="left"><code>MDCR_STUS_CD_01</code></td>
+<td align="left"><a href="variables/mbsf.html#medicare-status-code-january">Medicare Status Code - January</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">34</td>
+<td align="left"><code>MDCR_STUS_CD_02</code></td>
+<td align="left"><a href="variables/mbsf.html#medicare-status-code-february">Medicare Status Code - February</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">35</td>
+<td align="left"><code>MDCR_STUS_CD_03</code></td>
+<td align="left"><a href="variables/mbsf.html#medicare-status-code-march">Medicare Status Code - March</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">36</td>
+<td align="left"><code>MDCR_STUS_CD_04</code></td>
+<td align="left"><a href="variables/mbsf.html#medicare-status-code-april">Medicare Status Code - April</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">37</td>
+<td align="left"><code>MDCR_STUS_CD_05</code></td>
+<td align="left"><a href="variables/mbsf.html#medicare-status-code-may">Medicare Status Code - May</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">38</td>
+<td align="left"><code>MDCR_STUS_CD_06</code></td>
+<td align="left"><a href="variables/mbsf.html#medicare-status-code-june">Medicare Status Code - June</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">39</td>
+<td align="left"><code>MDCR_STUS_CD_07</code></td>
+<td align="left"><a href="variables/mbsf.html#medicare-status-code-july">Medicare Status Code - July</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">40</td>
+<td align="left"><code>MDCR_STUS_CD_08</code></td>
+<td align="left"><a href="variables/mbsf.html#medicare-status-code-august">Medicare Status Code - August</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">41</td>
+<td align="left"><code>MDCR_STUS_CD_09</code></td>
+<td align="left"><a href="variables/mbsf.html#medicare-status-code-september">Medicare Status Code - September</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">42</td>
+<td align="left"><code>MDCR_STUS_CD_10</code></td>
+<td align="left"><a href="variables/mbsf.html#medicare-status-code-october">Medicare Status Code - October</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">43</td>
+<td align="left"><code>MDCR_STUS_CD_11</code></td>
+<td align="left"><a href="variables/mbsf.html#medicare-status-code-november">Medicare Status Code - November</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">44</td>
+<td align="left"><code>MDCR_STUS_CD_12</code></td>
+<td align="left"><a href="variables/mbsf.html#medicare-status-code-december">Medicare Status Code - December</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">45</td>
+<td align="left"><code>A_TRM_CD</code></td>
+<td align="left"><a href="variables/mbsf.html#part-a-termination-code">Part A Termination Code</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">46</td>
+<td align="left"><code>B_TRM_CD</code></td>
+<td align="left"><a href="variables/mbsf.html#part-b-termination-code">Part B Termination Code</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">47</td>
+<td align="left"><code>A_MO_CNT</code></td>
+<td align="left"><a href="variables/mbsf.html#part-a-months-count">Part A Months Count</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">48</td>
+<td align="left"><code>B_MO_CNT</code></td>
+<td align="left"><a href="variables/mbsf.html#part-b-months-count">Part B Months Count</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">49</td>
+<td align="left"><code>BUYIN_MO</code></td>
+<td align="left"><a href="variables/mbsf.html#state-buy-in-coverage-count">State Buy-In Coverage Count</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">50</td>
+<td align="left"><code>HMO_MO</code></td>
+<td align="left"><a href="variables/mbsf.html#hmo-coverage-count">HMO Coverage Count</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">51</td>
+<td align="left"><code>PTD_MO</code></td>
+<td align="left"><a href="variables/mbsf.html#months-of-part-d-coverage">Months of Part D Coverage</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">52</td>
+<td align="left"><code>RDS_MO</code></td>
+<td align="left"><a href="variables/mbsf.html#months-of-retiree-drug-subsidy-coverage">Months of Retiree Drug Subsidy Coverage</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">53</td>
+<td align="left"><code>DUAL_MO</code></td>
+<td align="left"><a href="variables/mbsf.html#months-of-dual-eligibility">Months of Dual Eligibility</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">54</td>
+<td align="left"><code>BUYIN01</code></td>
+<td align="left"><a href="variables/mbsf.html#medicare-entitlementbuy-in-indicator-january">Medicare Entitlement/Buy-In Indicator - January</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">55</td>
+<td align="left"><code>BUYIN02</code></td>
+<td align="left"><a href="variables/mbsf.html#medicare-entitlementbuy-in-indicator-february">Medicare Entitlement/Buy-In Indicator - February</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">56</td>
+<td align="left"><code>BUYIN03</code></td>
+<td align="left"><a href="variables/mbsf.html#medicare-entitlementbuy-in-indicator-march">Medicare Entitlement/Buy-In Indicator - March</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">57</td>
+<td align="left"><code>BUYIN04</code></td>
+<td align="left"><a href="variables/mbsf.html#medicare-entitlementbuy-in-indicator-april">Medicare Entitlement/Buy-In Indicator - April</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">58</td>
+<td align="left"><code>BUYIN05</code></td>
+<td align="left"><a href="variables/mbsf.html#medicare-entitlementbuy-in-indicator-may">Medicare Entitlement/Buy-In Indicator - May</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">59</td>
+<td align="left"><code>BUYIN06</code></td>
+<td align="left"><a href="variables/mbsf.html#medicare-entitlementbuy-in-indicator-june">Medicare Entitlement/Buy-In Indicator - June</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">60</td>
+<td align="left"><code>BUYIN07</code></td>
+<td align="left"><a href="variables/mbsf.html#medicare-entitlementbuy-in-indicator-july">Medicare Entitlement/Buy-In Indicator - July</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">61</td>
+<td align="left"><code>BUYIN08</code></td>
+<td align="left"><a href="variables/mbsf.html#medicare-entitlementbuy-in-indicator-august">Medicare Entitlement/Buy-In Indicator - August</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">62</td>
+<td align="left"><code>BUYIN09</code></td>
+<td align="left"><a href="variables/mbsf.html#medicare-entitlementbuy-in-indicator-september">Medicare Entitlement/Buy-In Indicator - September</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">63</td>
+<td align="left"><code>BUYIN10</code></td>
+<td align="left"><a href="variables/mbsf.html#medicare-entitlementbuy-in-indicator-october">Medicare Entitlement/Buy-In Indicator - October</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">64</td>
+<td align="left"><code>BUYIN11</code></td>
+<td align="left"><a href="variables/mbsf.html#medicare-entitlementbuy-in-indicator-november">Medicare Entitlement/Buy-In Indicator - November</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">65</td>
+<td align="left"><code>BUYIN12</code></td>
+<td align="left"><a href="variables/mbsf.html#medicare-entitlementbuy-in-indicator-december">Medicare Entitlement/Buy-In Indicator - December</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">66</td>
+<td align="left"><code>HMOIND01</code></td>
+<td align="left"><a href="variables/mbsf.html#hmo-indicator-january">HMO Indicator - January</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">67</td>
+<td align="left"><code>HMOIND02</code></td>
+<td align="left"><a href="variables/mbsf.html#hmo-indicator-february">HMO Indicator - February</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">68</td>
+<td align="left"><code>HMOIND03</code></td>
+<td align="left"><a href="variables/mbsf.html#hmo-indicator-march">HMO Indicator - March</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">69</td>
+<td align="left"><code>HMOIND04</code></td>
+<td align="left"><a href="variables/mbsf.html#hmo-indicator-april">HMO Indicator - April</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">70</td>
+<td align="left"><code>HMOIND05</code></td>
+<td align="left"><a href="variables/mbsf.html#hmo-indicator-may">HMO Indicator - May</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">71</td>
+<td align="left"><code>HMOIND06</code></td>
+<td align="left"><a href="variables/mbsf.html#hmo-indicator-june">HMO Indicator - June</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">72</td>
+<td align="left"><code>HMOIND07</code></td>
+<td align="left"><a href="variables/mbsf.html#hmo-indicator-july">HMO Indicator - July</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">73</td>
+<td align="left"><code>HMOIND08</code></td>
+<td align="left"><a href="variables/mbsf.html#hmo-indicator-august">HMO Indicator - August</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">74</td>
+<td align="left"><code>HMOIND09</code></td>
+<td align="left"><a href="variables/mbsf.html#hmo-indicator-september">HMO Indicator - September</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">75</td>
+<td align="left"><code>HMOIND10</code></td>
+<td align="left"><a href="variables/mbsf.html#hmo-indicator-october">HMO Indicator - October</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">76</td>
+<td align="left"><code>HMOIND11</code></td>
+<td align="left"><a href="variables/mbsf.html#hmo-indicator-november">HMO Indicator - November</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">77</td>
+<td align="left"><code>HMOIND12</code></td>
+<td align="left"><a href="variables/mbsf.html#hmo-indicator-december">HMO Indicator - December</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+</tbody>
+</table>
+<h3 id="part-c">Part C<a class="headerlink" href="#part-c" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th align="right">Index</th>
+<th align="left">SAS Name</th>
+<th align="left">Variable Name</th>
+<th align="left">Limitation</th>
+<th align="left">Code Table</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">1</td>
+<td align="left"><code>PTC_CNTRCT_ID_01</code></td>
+<td align="left"><a href="variables/mbsf.html#part-c-contract-number-january">Part C Contract Number - January</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right">2</td>
+<td align="left"><code>PTC_CNTRCT_ID_02</code></td>
+<td align="left"><a href="variables/mbsf.html#part-c-contract-number-february">Part C Contract Number - February</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right">3</td>
+<td align="left"><code>PTC_CNTRCT_ID_03</code></td>
+<td align="left"><a href="variables/mbsf.html#part-c-contract-number-march">Part C Contract Number - March</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right">4</td>
+<td align="left"><code>PTC_CNTRCT_ID_04</code></td>
+<td align="left"><a href="variables/mbsf.html#part-c-contract-number-april">Part C Contract Number - April</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right">5</td>
+<td align="left"><code>PTC_CNTRCT_ID_05</code></td>
+<td align="left"><a href="variables/mbsf.html#part-c-contract-number-may">Part C Contract Number - May</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right">6</td>
+<td align="left"><code>PTC_CNTRCT_ID_06</code></td>
+<td align="left"><a href="variables/mbsf.html#part-c-contract-number-june">Part C Contract Number - June</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right">7</td>
+<td align="left"><code>PTC_CNTRCT_ID_07</code></td>
+<td align="left"><a href="variables/mbsf.html#part-c-contract-number-july">Part C Contract Number - July</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right">8</td>
+<td align="left"><code>PTC_CNTRCT_ID_08</code></td>
+<td align="left"><a href="variables/mbsf.html#part-c-contract-number-august">Part C Contract Number - August</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right">9</td>
+<td align="left"><code>PTC_CNTRCT_ID_09</code></td>
+<td align="left"><a href="variables/mbsf.html#part-c-contract-number-september">Part C Contract Number - September</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right">10</td>
+<td align="left"><code>PTC_CNTRCT_ID_10</code></td>
+<td align="left"><a href="variables/mbsf.html#part-c-contract-number-october">Part C Contract Number - October</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right">11</td>
+<td align="left"><code>PTC_CNTRCT_ID_11</code></td>
+<td align="left"><a href="variables/mbsf.html#part-c-contract-number-november">Part C Contract Number - November</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right">12</td>
+<td align="left"><code>PTC_CNTRCT_ID_12</code></td>
+<td align="left"><a href="variables/mbsf.html#part-c-contract-number-december">Part C Contract Number - December</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right">13</td>
+<td align="left"><code>PTC_PBP_ID_01</code></td>
+<td align="left"><a href="variables/mbsf.html#part-c-pbp-number-january">Part C PBP Number - January</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">14</td>
+<td align="left"><code>PTC_PBP_ID_02</code></td>
+<td align="left"><a href="variables/mbsf.html#part-c-pbp-number-february">Part C PBP Number - February</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">15</td>
+<td align="left"><code>PTC_PBP_ID_03</code></td>
+<td align="left"><a href="variables/mbsf.html#part-c-pbp-number-march">Part C PBP Number - March</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">16</td>
+<td align="left"><code>PTC_PBP_ID_04</code></td>
+<td align="left"><a href="variables/mbsf.html#part-c-pbp-number-april">Part C PBP Number - April</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">17</td>
+<td align="left"><code>PTC_PBP_ID_05</code></td>
+<td align="left"><a href="variables/mbsf.html#part-c-pbp-number-may">Part C PBP Number - May</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">18</td>
+<td align="left"><code>PTC_PBP_ID_06</code></td>
+<td align="left"><a href="variables/mbsf.html#part-c-pbp-number-june">Part C PBP Number - June</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">19</td>
+<td align="left"><code>PTC_PBP_ID_07</code></td>
+<td align="left"><a href="variables/mbsf.html#part-c-pbp-number-july">Part C PBP Number - July</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">20</td>
+<td align="left"><code>PTC_PBP_ID_08</code></td>
+<td align="left"><a href="variables/mbsf.html#part-c-pbp-number-august">Part C PBP Number - August</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">21</td>
+<td align="left"><code>PTC_PBP_ID_09</code></td>
+<td align="left"><a href="variables/mbsf.html#part-c-pbp-number-september">Part C PBP Number - September</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">22</td>
+<td align="left"><code>PTC_PBP_ID_10</code></td>
+<td align="left"><a href="variables/mbsf.html#part-c-pbp-number-october">Part C PBP Number - October</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">23</td>
+<td align="left"><code>PTC_PBP_ID_11</code></td>
+<td align="left"><a href="variables/mbsf.html#part-c-pbp-number-november">Part C PBP Number - November</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">24</td>
+<td align="left"><code>PTC_PBP_ID_12</code></td>
+<td align="left"><a href="variables/mbsf.html#part-c-pbp-number-december">Part C PBP Number - December</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">25</td>
+<td align="left"><code>PTC_PLAN_TYPE_CD_01</code></td>
+<td align="left"><a href="variables/mbsf.html#part-c-plan-type-code-january">Part C Plan Type Code - January</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">26</td>
+<td align="left"><code>PTC_PLAN_TYPE_CD_02</code></td>
+<td align="left"><a href="variables/mbsf.html#part-c-plan-type-code-february">Part C Plan Type Code - February</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">27</td>
+<td align="left"><code>PTC_PLAN_TYPE_CD_03</code></td>
+<td align="left"><a href="variables/mbsf.html#part-c-plan-type-code-march">Part C Plan Type Code - March</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">28</td>
+<td align="left"><code>PTC_PLAN_TYPE_CD_04</code></td>
+<td align="left"><a href="variables/mbsf.html#part-c-plan-type-code-april">Part C Plan Type Code - April</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">29</td>
+<td align="left"><code>PTC_PLAN_TYPE_CD_05</code></td>
+<td align="left"><a href="variables/mbsf.html#part-c-plan-type-code-may">Part C Plan Type Code - May</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">30</td>
+<td align="left"><code>PTC_PLAN_TYPE_CD_06</code></td>
+<td align="left"><a href="variables/mbsf.html#part-c-plan-type-code-june">Part C Plan Type Code - June</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">31</td>
+<td align="left"><code>PTC_PLAN_TYPE_CD_07</code></td>
+<td align="left"><a href="variables/mbsf.html#part-c-plan-type-code-july">Part C Plan Type Code - July</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">32</td>
+<td align="left"><code>PTC_PLAN_TYPE_CD_08</code></td>
+<td align="left"><a href="variables/mbsf.html#part-c-plan-type-code-august">Part C Plan Type Code - August</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">33</td>
+<td align="left"><code>PTC_PLAN_TYPE_CD_09</code></td>
+<td align="left"><a href="variables/mbsf.html#part-c-plan-type-code-september">Part C Plan Type Code - September</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">34</td>
+<td align="left"><code>PTC_PLAN_TYPE_CD_10</code></td>
+<td align="left"><a href="variables/mbsf.html#part-c-plan-type-code-october">Part C Plan Type Code - October</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">35</td>
+<td align="left"><code>PTC_PLAN_TYPE_CD_11</code></td>
+<td align="left"><a href="variables/mbsf.html#part-c-plan-type-code-november">Part C Plan Type Code - November</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">36</td>
+<td align="left"><code>PTC_PLAN_TYPE_CD_12</code></td>
+<td align="left"><a href="variables/mbsf.html#part-c-plan-type-code-december">Part C Plan Type Code - December</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+</tbody>
+</table>
+<h3 id="part-d">Part D<a class="headerlink" href="#part-d" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th align="right">Index</th>
+<th align="left">SAS Name</th>
+<th align="left">Variable Name</th>
+<th align="left">Limitation</th>
+<th align="left">Code Table</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">1</td>
+<td align="left"><code>PTDCNTRCT01</code></td>
+<td align="left"><a href="variables/mbsf.html#part-d-contract-number-january">Part D Contract Number - January</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">2</td>
+<td align="left"><code>PTDCNTRCT02</code></td>
+<td align="left"><a href="variables/mbsf.html#part-d-contract-number-february">Part D Contract Number - February</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">4</td>
+<td align="left"><code>PTDCNTRCT04</code></td>
+<td align="left"><a href="variables/mbsf.html#part-d-contract-number-april">Part D Contract Number - April</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">5</td>
+<td align="left"><code>PTDCNTRCT05</code></td>
+<td align="left"><a href="variables/mbsf.html#part-d-contract-number-may">Part D Contract Number - May</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">6</td>
+<td align="left"><code>PTDCNTRCT06</code></td>
+<td align="left"><a href="variables/mbsf.html#part-d-contract-number-june">Part D Contract Number - June</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">7</td>
+<td align="left"><code>PTDCNTRCT07</code></td>
+<td align="left"><a href="variables/mbsf.html#part-d-contract-number-july">Part D Contract Number - July</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">8</td>
+<td align="left"><code>PTDCNTRCT08</code></td>
+<td align="left"><a href="variables/mbsf.html#part-d-contract-number-august">Part D Contract Number - August</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">9</td>
+<td align="left"><code>PTDCNTRCT09</code></td>
+<td align="left"><a href="variables/mbsf.html#part-d-contract-number-september">Part D Contract Number - September</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">10</td>
+<td align="left"><code>PTDCNTRCT10</code></td>
+<td align="left"><a href="variables/mbsf.html#part-d-contract-number-october">Part D Contract Number - October</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">11</td>
+<td align="left"><code>PTDCNTRCT11</code></td>
+<td align="left"><a href="variables/mbsf.html#part-d-contract-number-november">Part D Contract Number - November</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">12</td>
+<td align="left"><code>PTDCNTRCT12</code></td>
+<td align="left"><a href="variables/mbsf.html#part-d-contract-number-december">Part D Contract Number - December</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">13</td>
+<td align="left"><code>PTDPBPID01</code></td>
+<td align="left"><a href="variables/mbsf.html#part-d-pbp-number-january">Part D PBP Number - January</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">14</td>
+<td align="left"><code>PTDPBPID02</code></td>
+<td align="left"><a href="variables/mbsf.html#part-d-pbp-number-february">Part D PBP Number - February</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">15</td>
+<td align="left"><code>PTDPBPID03</code></td>
+<td align="left"><a href="variables/mbsf.html#part-d-pbp-number-march">Part D PBP Number - March</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">16</td>
+<td align="left"><code>PTDPBPID04</code></td>
+<td align="left"><a href="variables/mbsf.html#part-d-pbp-number-april">Part D PBP Number - April</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">17</td>
+<td align="left"><code>PTDPBPID05</code></td>
+<td align="left"><a href="variables/mbsf.html#part-d-pbp-number-may">Part D PBP Number - May</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">18</td>
+<td align="left"><code>PTDPBPID06</code></td>
+<td align="left"><a href="variables/mbsf.html#part-d-pbp-number-june">Part D PBP Number - June</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">19</td>
+<td align="left"><code>PTDPBPID07</code></td>
+<td align="left"><a href="variables/mbsf.html#part-d-pbp-number-july">Part D PBP Number - July</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">20</td>
+<td align="left"><code>PTDPBPID08</code></td>
+<td align="left"><a href="variables/mbsf.html#part-d-pbp-number-august">Part D PBP Number - August</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">21</td>
+<td align="left"><code>PTDPBPID09</code></td>
+<td align="left"><a href="variables/mbsf.html#part-d-pbp-number-september">Part D PBP Number - September</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">22</td>
+<td align="left"><code>PTDPBPID10</code></td>
+<td align="left"><a href="variables/mbsf.html#part-d-pbp-number-october">Part D PBP Number - October</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">23</td>
+<td align="left"><code>PTDPBPID11</code></td>
+<td align="left"><a href="variables/mbsf.html#part-d-pbp-number-november">Part D PBP Number - November</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">24</td>
+<td align="left"><code>PTDPBPID12</code></td>
+<td align="left"><a href="variables/mbsf.html#part-d-pbp-number-december">Part D PBP Number - December</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">25</td>
+<td align="left"><code>SGMTID01</code></td>
+<td align="left"><a href="variables/mbsf.html#part-d-segment-number-january">Part D Segment Number - January</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">26</td>
+<td align="left"><code>SGMTID02</code></td>
+<td align="left"><a href="variables/mbsf.html#part-d-segment-number-february">Part D Segment Number - February</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">27</td>
+<td align="left"><code>SGMTID03</code></td>
+<td align="left"><a href="variables/mbsf.html#part-d-segment-number-march">Part D Segment Number - March</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">28</td>
+<td align="left"><code>SGMTID04</code></td>
+<td align="left"><a href="variables/mbsf.html#part-d-segment-number-april">Part D Segment Number - April</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">29</td>
+<td align="left"><code>SGMTID05</code></td>
+<td align="left"><a href="variables/mbsf.html#part-d-segment-number-may">Part D Segment Number - May</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">30</td>
+<td align="left"><code>SGMTID06</code></td>
+<td align="left"><a href="variables/mbsf.html#part-d-segment-number-june">Part D Segment Number - June</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">31</td>
+<td align="left"><code>SGMTID07</code></td>
+<td align="left"><a href="variables/mbsf.html#part-d-segment-number-july">Part D Segment Number - July</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">32</td>
+<td align="left"><code>SGMTID08</code></td>
+<td align="left"><a href="variables/mbsf.html#part-d-segment-number-august">Part D Segment Number - August</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">33</td>
+<td align="left"><code>SGMTID09</code></td>
+<td align="left"><a href="variables/mbsf.html#part-d-segment-number-september">Part D Segment Number - September</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">34</td>
+<td align="left"><code>SGMTID10</code></td>
+<td align="left"><a href="variables/mbsf.html#part-d-segment-number-october">Part D Segment Number - October</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">35</td>
+<td align="left"><code>SGMTID11</code></td>
+<td align="left"><a href="variables/mbsf.html#part-d-segment-number-november">Part D Segment Number - November</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">36</td>
+<td align="left"><code>SGMTID12</code></td>
+<td align="left"><a href="variables/mbsf.html#part-d-segment-number-december">Part D Segment Number - December</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">37</td>
+<td align="left"><code>RDSIND01</code></td>
+<td align="left"><a href="variables/mbsf.html#part-d-retiree-drug-subsidy-indicator-january">Part D Retiree Drug Subsidy Indicator - January</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">38</td>
+<td align="left"><code>RDSIND02</code></td>
+<td align="left"><a href="variables/mbsf.html#part-d-retiree-drug-subsidy-indicator-february">Part D Retiree Drug Subsidy Indicator - February</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">39</td>
+<td align="left"><code>RDSIND03</code></td>
+<td align="left"><a href="variables/mbsf.html#part-d-retiree-drug-subsidy-indicator-march">Part D Retiree Drug Subsidy Indicator - March</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">40</td>
+<td align="left"><code>RDSIND04</code></td>
+<td align="left"><a href="variables/mbsf.html#part-d-retiree-drug-subsidy-indicator-april">Part D Retiree Drug Subsidy Indicator - April</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">41</td>
+<td align="left"><code>RDSIND05</code></td>
+<td align="left"><a href="variables/mbsf.html#part-d-retiree-drug-subsidy-indicator-may">Part D Retiree Drug Subsidy Indicator - May</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">42</td>
+<td align="left"><code>RDSIND06</code></td>
+<td align="left"><a href="variables/mbsf.html#part-d-retiree-drug-subsidy-indicator-june">Part D Retiree Drug Subsidy Indicator - June</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">43</td>
+<td align="left"><code>RDSIND07</code></td>
+<td align="left"><a href="variables/mbsf.html#part-d-retiree-drug-subsidy-indicator-july">Part D Retiree Drug Subsidy Indicator - July</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">44</td>
+<td align="left"><code>RDSIND08</code></td>
+<td align="left"><a href="variables/mbsf.html#part-d-retiree-drug-subsidy-indicator-august">Part D Retiree Drug Subsidy Indicator - August</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">45</td>
+<td align="left"><code>RDSIND09</code></td>
+<td align="left"><a href="variables/mbsf.html#part-d-retiree-drug-subsidy-indicator-september">Part D Retiree Drug Subsidy Indicator - September</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">46</td>
+<td align="left"><code>RDSIND10</code></td>
+<td align="left"><a href="variables/mbsf.html#part-d-retiree-drug-subsidy-indicator-october">Part D Retiree Drug Subsidy Indicator - October</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">47</td>
+<td align="left"><code>RDSIND11</code></td>
+<td align="left"><a href="variables/mbsf.html#part-d-retiree-drug-subsidy-indicator-november">Part D Retiree Drug Subsidy Indicator - November</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">48</td>
+<td align="left"><code>RDSIND12</code></td>
+<td align="left"><a href="variables/mbsf.html#part-d-retiree-drug-subsidy-indicator-december">Part D Retiree Drug Subsidy Indicator - December</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">49</td>
+<td align="left"><code>DUAL_01</code></td>
+<td align="left"><a href="variables/mbsf.html#medicare-medicaid-dual-eligibility-code-january">Medicare-Medicaid dual eligibility code - January</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">50</td>
+<td align="left"><code>DUAL_02</code></td>
+<td align="left"><a href="variables/mbsf.html#medicare-medicaid-dual-eligibility-code-february">Medicare-Medicaid dual eligibility code - February</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">51</td>
+<td align="left"><code>DUAL_03</code></td>
+<td align="left"><a href="variables/mbsf.html#medicare-medicaid-dual-eligibility-code-march">Medicare-Medicaid dual eligibility code - March</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">52</td>
+<td align="left"><code>DUAL_04</code></td>
+<td align="left"><a href="variables/mbsf.html#medicare-medicaid-dual-eligibility-code-april">Medicare-Medicaid dual eligibility code - April</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">53</td>
+<td align="left"><code>DUAL_05</code></td>
+<td align="left"><a href="variables/mbsf.html#medicare-medicaid-dual-eligibility-code-may">Medicare-Medicaid dual eligibility code - May</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">54</td>
+<td align="left"><code>DUAL_06</code></td>
+<td align="left"><a href="variables/mbsf.html#medicare-medicaid-dual-eligibility-code-june">Medicare-Medicaid dual eligibility code - June</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">55</td>
+<td align="left"><code>DUAL_07</code></td>
+<td align="left"><a href="variables/mbsf.html#medicare-medicaid-dual-eligibility-code-july">Medicare-Medicaid dual eligibility code - July</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">56</td>
+<td align="left"><code>DUAL_08</code></td>
+<td align="left"><a href="variables/mbsf.html#medicare-medicaid-dual-eligibility-code-august">Medicare-Medicaid dual eligibility code - August</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">57</td>
+<td align="left"><code>DUAL_09</code></td>
+<td align="left"><a href="variables/mbsf.html#medicare-medicaid-dual-eligibility-code-september">Medicare-Medicaid dual eligibility code - September</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">58</td>
+<td align="left"><code>DUAL_10</code></td>
+<td align="left"><a href="variables/mbsf.html#medicare-medicaid-dual-eligibility-code-october">Medicare-Medicaid dual eligibility code - October</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">59</td>
+<td align="left"><code>DUAL_11</code></td>
+<td align="left"><a href="variables/mbsf.html#medicare-medicaid-dual-eligibility-code-november">Medicare-Medicaid dual eligibility code - November</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">60</td>
+<td align="left"><code>DUAL_12</code></td>
+<td align="left"><a href="variables/mbsf.html#medicare-medicaid-dual-eligibility-code-december">Medicare-Medicaid dual eligibility code - December</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">61</td>
+<td align="left"><code>CSTSHR01</code></td>
+<td align="left"><a href="variables/mbsf.html#part-d-low-income-cost-share-group-code-january">Part D low-income cost share group code - January</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">62</td>
+<td align="left"><code>CSTSHR02</code></td>
+<td align="left"><a href="variables/mbsf.html#part-d-low-income-cost-share-group-code-february">Part D low-income cost share group code - February</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">63</td>
+<td align="left"><code>CSTSHR03</code></td>
+<td align="left"><a href="variables/mbsf.html#part-d-low-income-cost-share-group-code-march">Part D low-income cost share group code - March</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">64</td>
+<td align="left"><code>CSTSHR04</code></td>
+<td align="left"><a href="variables/mbsf.html#part-d-low-income-cost-share-group-code-april">Part D low-income cost share group code - April</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">65</td>
+<td align="left"><code>CSTSHR05</code></td>
+<td align="left"><a href="variables/mbsf.html#part-d-low-income-cost-share-group-code-may">Part D low-income cost share group code - May</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">66</td>
+<td align="left"><code>CSTSHR06</code></td>
+<td align="left"><a href="variables/mbsf.html#part-d-low-income-cost-share-group-code-june">Part D low-income cost share group code - June</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">67</td>
+<td align="left"><code>CSTSHR07</code></td>
+<td align="left"><a href="variables/mbsf.html#part-d-low-income-cost-share-group-code-july">Part D low-income cost share group code - July</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">68</td>
+<td align="left"><code>CSTSHR08</code></td>
+<td align="left"><a href="variables/mbsf.html#part-d-low-income-cost-share-group-code-august">Part D low-income cost share group code - August</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">69</td>
+<td align="left"><code>CSTSHR09</code></td>
+<td align="left"><a href="variables/mbsf.html#part-d-low-income-cost-share-group-code-september">Part D low-income cost share group code - September</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">70</td>
+<td align="left"><code>CSTSHR10</code></td>
+<td align="left"><a href="variables/mbsf.html#part-d-low-income-cost-share-group-code-october">Part D low-income cost share group code - October</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">71</td>
+<td align="left"><code>CSTSHR11</code></td>
+<td align="left"><a href="variables/mbsf.html#part-d-low-income-cost-share-group-code-november">Part D low-income cost share group code - November</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">72</td>
+<td align="left"><code>CSTSHR12</code></td>
+<td align="left"><a href="variables/mbsf.html#part-d-low-income-cost-share-group-code-december">Part D low-income cost share group code - December</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+</tbody>
+</table>
+<h3 id="national-death-index-segment_1">National Death Index segment<a class="headerlink" href="#national-death-index-segment_1" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th align="right">Index</th>
+<th align="left">SAS Name</th>
+<th align="left">Variable Name</th>
+<th align="left">Limitation</th>
+<th align="left">Code Table</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">1</td>
+<td align="left"><code>BENE_ID</code></td>
+<td align="left"><a href="variables/mbsf.html#encrypted-ccw-beneficiary-id">Encrypted CCW Beneficiary ID</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right">2</td>
+<td align="left"><code>RFRNC_YR</code></td>
+<td align="left"><a href="variables/mbsf.html#reference-year">Reference Year</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right">3</td>
+<td align="left"><code>DEATH_CERT_NUM</code></td>
+<td align="left"><a href="variables/mbsf.html#ndi-death-certificate-number">NDI Death Certificate Number</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">4</td>
+<td align="left"><code>NDI_DOD</code></td>
+<td align="left"><a href="variables/mbsf.html#ndi-date-of-death">NDI Date of Death</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">5</td>
+<td align="left"><code>NDI_STATE_DEATH_CD</code></td>
+<td align="left"><a href="variables/mbsf.html#ndi-state-of-death">NDI State of Death</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">6</td>
+<td align="left"><code>ICD_CODE</code></td>
+<td align="left"><a href="variables/mbsf.html#icd-10-code">ICD-10 Code</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">7</td>
+<td align="left"><code>ICD_TITLE</code></td>
+<td align="left"><a href="variables/mbsf.html#icd-10-title">ICD-10 Title</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">8</td>
+<td align="left"><code>ICD_CODE_358</code></td>
+<td align="left"><a href="variables/mbsf.html#358-icd-10-recodes">358 ICD-10 Recodes</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">9</td>
+<td align="left"><code>ICD_CODE_113</code></td>
+<td align="left"><a href="variables/mbsf.html#113-icd-10-recodes">113 ICD-10 Recodes</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">10</td>
+<td align="left"><code>ENTITY_COND_1 (through ENTITY_COND_8)</code></td>
+<td align="left"><a href="variables/mbsf.html#ndi-entity-axis-cause-of-death-condition">NDI Entity Axis Cause of Death - Condition</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">11</td>
+<td align="left"><code>RECORD_COND_1 (through RECORD_COND_8)</code></td>
+<td align="left"><a href="variables/mbsf.html#ndi-record-axis-cause-of-death-condition">NDI Record Axis Cause of Death - Condition</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+</tbody>
+</table>
+<h3 id="chronic-conditions-segment_2">Chronic Conditions segment<a class="headerlink" href="#chronic-conditions-segment_2" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th align="right">Index</th>
+<th align="left">SAS Name</th>
+<th align="left">Variable Name</th>
+<th align="left">Limitation</th>
+<th align="left">Code Table</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">1</td>
+<td align="left"><code>BENE_ID</code></td>
+<td align="left"><a href="variables/mbsf.html#encrypted-ccw-beneficiary-id">Encrypted CCW Beneficiary ID</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right">2</td>
+<td align="left"><code>RFRNC_YR</code></td>
+<td align="left"><a href="variables/mbsf.html#reference-year">Reference Year</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right">3</td>
+<td align="left"><code>AMI</code></td>
+<td align="left"><a href="variables/mbsf.html#acute-myocardial-infarction-end-of-year-flag">Acute Myocardial Infarction End-of-Year Flag</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">4</td>
+<td align="left"><code>AMIM</code></td>
+<td align="left"><a href="variables/mbsf.html#acute-myocardial-infarction-mid-year-flag">Acute Myocardial Infarction Mid-Year Flag</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">5</td>
+<td align="left"><code>AMIE</code></td>
+<td align="left"><a href="variables/mbsf.html#first-occurrence-of-acute-myocardial-infarction">First Occurrence of Acute Myocardial Infarction</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right">6</td>
+<td align="left"><code>ALZH</code></td>
+<td align="left"><a href="variables/mbsf.html#alzheimer's-disease-end-of-year-flag">Alzheimer's Disease End-of-Year Flag</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">7</td>
+<td align="left"><code>ALZHM</code></td>
+<td align="left"><a href="variables/mbsf.html#alzheimer's-disease-mid-year-flag">Alzheimer's Disease Mid-Year Flag</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">8</td>
+<td align="left"><code>ALZHE</code></td>
+<td align="left"><a href="variables/mbsf.html#first-occurrence-of-alzheimer's-disease">First Occurrence of Alzheimer's Disease</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right">9</td>
+<td align="left"><code>ALZHDMTA</code></td>
+<td align="left"><a href="variables/mbsf.html#alzheimer's-disease-and-rltd-disorders-or-senile-dementia-eoy-flag">Alzheimer's Disease and Rltd Disorders or Senile Dementia EOY Flag</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">10</td>
+<td align="left"><code>ALZHDMTM</code></td>
+<td align="left"><a href="variables/mbsf.html#alzheimer's-disease-and-rltd-disorders-or-senile-dementia-mid-year-flag">Alzheimer's Disease and Rltd Disorders or Senile Dementia Mid-Year Flag</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">11</td>
+<td align="left"><code>ALZHDMTE</code></td>
+<td align="left"><a href="variables/mbsf.html#1st-occrrnce-of-alzheimer's-dsease-and-rltd-disorders-or-senile-dementia">1<sup>st</sup> Occrrnce of Alzheimer's Dsease and Rltd Disorders or Senile Dementia</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right">12</td>
+<td align="left"><code>ATRIALFB</code></td>
+<td align="left"><a href="variables/mbsf.html#atrial-fibrillation-end-of-year-flag">Atrial Fibrillation End-of-Year Flag</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">13</td>
+<td align="left"><code>ATRIALFM</code></td>
+<td align="left"><a href="variables/mbsf.html#atrial-fibrillation-mid-year-flag">Atrial Fibrillation Mid-Year Flag</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">14</td>
+<td align="left"><code>ATRIALFE</code></td>
+<td align="left"><a href="variables/mbsf.html#first-occurrence-of-atrial-fibrillation">First Occurrence of Atrial Fibrillation</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right">15</td>
+<td align="left"><code>CATARACT</code></td>
+<td align="left"><a href="variables/mbsf.html#cataract-end-of-year-flag">Cataract End-of-Year Flag</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">16</td>
+<td align="left"><code>CATARCTM</code></td>
+<td align="left"><a href="variables/mbsf.html#cataract-mid-year-flag">Cataract Mid-Year Flag</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">17</td>
+<td align="left"><code>CATARCTE</code></td>
+<td align="left"><a href="variables/mbsf.html#first-occurrence-of-cataract">First Occurrence of Cataract</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right">18</td>
+<td align="left"><code>CHRNKIDN</code></td>
+<td align="left"><a href="variables/mbsf.html#chronic-kidney-disease-end-of-year-flag">Chronic Kidney Disease End-of-Year Flag</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">19</td>
+<td align="left"><code>CHRNKDNM</code></td>
+<td align="left"><a href="variables/mbsf.html#chronic-kidney-disease-mid-year-flag">Chronic Kidney Disease Mid-Year Flag</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">20</td>
+<td align="left"><code>CHRNKDNE</code></td>
+<td align="left"><a href="variables/mbsf.html#first-occurrence-of-chronic-kidney-disease">First Occurrence of Chronic Kidney Disease</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right">21</td>
+<td align="left"><code>COPD</code></td>
+<td align="left"><a href="variables/mbsf.html#chronic-obstructive-pulmonary-disease-end-of-year-flag">Chronic Obstructive Pulmonary Disease End-of-Year Flag</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">22</td>
+<td align="left"><code>COPDM</code></td>
+<td align="left"><a href="variables/mbsf.html#chronic-obstructive-pulmonary-disease-mid-year-flag">Chronic Obstructive Pulmonary Disease Mid-Year Flag</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">23</td>
+<td align="left"><code>COPDE</code></td>
+<td align="left"><a href="variables/mbsf.html#first-occurrence-of-chronic-obstructive-pulmonary-disease">First Occurrence of Chronic Obstructive Pulmonary Disease</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right">24</td>
+<td align="left"><code>CHF</code></td>
+<td align="left"><a href="variables/mbsf.html#heart-failure-end-of-year-flag">Heart Failure End-of-Year Flag</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">25</td>
+<td align="left"><code>CHFM</code></td>
+<td align="left"><a href="variables/mbsf.html#heart-failure-mid-year-flag">Heart Failure Mid-Year Flag</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">26</td>
+<td align="left"><code>CHFE</code></td>
+<td align="left"><a href="variables/mbsf.html#first-occurrence-of-heart-failure">First Occurrence of Heart Failure</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right">27</td>
+<td align="left"><code>DIABETES</code></td>
+<td align="left"><a href="variables/mbsf.html#diabetes-end-of-year-flag">Diabetes End-of-Year Flag</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">28</td>
+<td align="left"><code>DIABTESM</code></td>
+<td align="left"><a href="variables/mbsf.html#diabetes-mid-year-flag">Diabetes Mid-Year Flag</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">29</td>
+<td align="left"><code>DIABTESE</code></td>
+<td align="left"><a href="variables/mbsf.html#first-occurrence-of-diabetes">First Occurrence of Diabetes</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right">30</td>
+<td align="left"><code>GLAUCOMA</code></td>
+<td align="left"><a href="variables/mbsf.html#glaucoma-end-of-year-flag">Glaucoma End-of-Year Flag</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">31</td>
+<td align="left"><code>GLAUCMAM</code></td>
+<td align="left"><a href="variables/mbsf.html#glaucoma-mid-year-flag">Glaucoma Mid-Year Flag</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">32</td>
+<td align="left"><code>GLAUCMAE</code></td>
+<td align="left"><a href="variables/mbsf.html#first-occurrence-of-glaucoma">First Occurrence of Glaucoma</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right">33</td>
+<td align="left"><code>HIPFRAC</code></td>
+<td align="left"><a href="variables/mbsf.html#hippelvic-fracture-end-of-year-flag">Hip/Pelvic Fracture End-of-Year Flag</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">34</td>
+<td align="left"><code>HIPFRACM</code></td>
+<td align="left"><a href="variables/mbsf.html#hippelvic-fracture-mid-year-flag">Hip/Pelvic Fracture Mid-Year Flag</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">35</td>
+<td align="left"><code>HIPFRACE</code></td>
+<td align="left"><a href="variables/mbsf.html#first-occurrence-of-hippelvic-fracture">First Occurrence of Hip/Pelvic Fracture</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right">36</td>
+<td align="left"><code>ISCHMCHT</code></td>
+<td align="left"><a href="variables/mbsf.html#ischemic-heart-disease-end-of-year-flag">Ischemic Heart Disease End-of-Year Flag</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">37</td>
+<td align="left"><code>ISCHMCHM</code></td>
+<td align="left"><a href="variables/mbsf.html#ischemic-heart-disease-mid-year-flag">Ischemic Heart Disease Mid-Year Flag</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">38</td>
+<td align="left"><code>ISCHMCHE</code></td>
+<td align="left"><a href="variables/mbsf.html#first-occurrence-of-ischemic-heart-disease">First Occurrence of Ischemic Heart Disease</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right">39</td>
+<td align="left"><code>DEPRESSN</code></td>
+<td align="left"><a href="variables/mbsf.html#depression-end-of-year-flag">Depression End-of-Year Flag</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">40</td>
+<td align="left"><code>DEPRSSNM</code></td>
+<td align="left"><a href="variables/mbsf.html#depression-mid-year-flag">Depression Mid-Year Flag</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">41</td>
+<td align="left"><code>DEPRSSNE</code></td>
+<td align="left"><a href="variables/mbsf.html#first-occurrence-of-depression">First Occurrence of Depression</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right">42</td>
+<td align="left"><code>OSTEOPRS</code></td>
+<td align="left"><a href="variables/mbsf.html#osteoporosis-end-of-year-flag">Osteoporosis End-of-Year Flag</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">43</td>
+<td align="left"><code>OSTEOPRM</code></td>
+<td align="left"><a href="variables/mbsf.html#osteoporosis-mid-year-flag">Osteoporosis Mid-Year Flag</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">44</td>
+<td align="left"><code>OSTEOPRE</code></td>
+<td align="left"><a href="variables/mbsf.html#first-occurrence-of-osteoporosis">First Occurrence of Osteoporosis</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right">45</td>
+<td align="left"><code>RA_OA</code></td>
+<td align="left"><a href="variables/mbsf.html#rheumatoid-arthritis-osteoarthritis-end-of-year-flag">Rheumatoid Arthritis / Osteoarthritis End-of-Year Flag</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">46</td>
+<td align="left"><code>RA_OA_M</code></td>
+<td align="left"><a href="variables/mbsf.html#rheumatoid-arthritis-osteoarthritis-mid-year-flag">Rheumatoid Arthritis / Osteoarthritis Mid-Year Flag</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">47</td>
+<td align="left"><code>RA_OA_E</code></td>
+<td align="left"><a href="variables/mbsf.html#first-occurrence-of-rheumatoid-arthritis-osteoarthritis">First Occurrence of Rheumatoid Arthritis / Osteoarthritis</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">48</td>
+<td align="left"><code>STRKETIA</code></td>
+<td align="left"><a href="variables/mbsf.html#stroke-transient-ischemic-attack-end-of-year-flag">Stroke / Transient Ischemic Attack End-of-Year Flag</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">49</td>
+<td align="left"><code>STRKTIAM</code></td>
+<td align="left"><a href="variables/mbsf.html#stroke-transient-ischemic-attack-mid-year-flag">Stroke / Transient Ischemic Attack Mid-Year Flag</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">50</td>
+<td align="left"><code>STRKTIAE</code></td>
+<td align="left"><a href="variables/mbsf.html#first-occurrence-of-stroke-transient-ischemic-attack">First Occurrence of Stroke / Transient Ischemic Attack</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">51</td>
+<td align="left"><code>CNCRBRST</code></td>
+<td align="left"><a href="variables/mbsf.html#breast-cancer-end-of-year-flag">Breast Cancer End-of-Year Flag</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">52</td>
+<td align="left"><code>CNCRBRSM</code></td>
+<td align="left"><a href="variables/mbsf.html#breast-cancer-mid-year-flag">Breast Cancer Mid-Year Flag</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">53</td>
+<td align="left"><code>CNCRBRSE</code></td>
+<td align="left"><a href="variables/mbsf.html#first-occurrence-of-breast-cancer">First Occurrence of Breast Cancer</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">54</td>
+<td align="left"><code>CNCRCLRC</code></td>
+<td align="left"><a href="variables/mbsf.html#colorectal-cancer-end-of-year-flag">Colorectal Cancer End-of-Year Flag</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">55</td>
+<td align="left"><code>CNCRCLRM</code></td>
+<td align="left"><a href="variables/mbsf.html#colorectal-cancer-mid-year-flag">Colorectal Cancer Mid-Year Flag</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">56</td>
+<td align="left"><code>CNCRCLRE</code></td>
+<td align="left"><a href="variables/mbsf.html#first-occurrence-of-colorectal-cancer">First Occurrence of Colorectal Cancer</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">57</td>
+<td align="left"><code>CNCRPRST</code></td>
+<td align="left"><a href="variables/mbsf.html#prostate-cancer-end-of-year-flag">Prostate Cancer End-of-Year Flag</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">58</td>
+<td align="left"><code>CNCRPRSM</code></td>
+<td align="left"><a href="variables/mbsf.html#prostate-cancer-mid-year-flag">Prostate Cancer Mid-Year Flag</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">59</td>
+<td align="left"><code>CNCRPRSE</code></td>
+<td align="left"><a href="variables/mbsf.html#first-occurrence-of-prostate-cancer">First Occurrence of Prostate Cancer</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right">60</td>
+<td align="left"><code>CNCRLUNG</code></td>
+<td align="left"><a href="variables/mbsf.html#lung-cancer-end-of-year-flag">Lung Cancer End-of-Year Flag</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">61</td>
+<td align="left"><code>CNCRLNGM</code></td>
+<td align="left"><a href="variables/mbsf.html#lung-cancer-mid-year-flag">Lung Cancer Mid-Year Flag</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">62</td>
+<td align="left"><code>CNCRLNGE</code></td>
+<td align="left"><a href="variables/mbsf.html#first-occurrence-of-lung-cancer">First Occurrence of Lung Cancer</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">63</td>
+<td align="left"><code>CNCRENDM</code></td>
+<td align="left"><a href="variables/mbsf.html#endometrial-cancer-end-of-year-flag">Endometrial Cancer End-of-Year Flag</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">64</td>
+<td align="left"><code>CNCENDMM</code></td>
+<td align="left"><a href="variables/mbsf.html#endometrial-cancer-mid-year-flag">Endometrial Cancer Mid-Year Flag</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">65</td>
+<td align="left"><code>CNCENDME</code></td>
+<td align="left"><a href="variables/mbsf.html#first-occurrence-of-endometrial-cancer">First Occurrence of Endometrial Cancer</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">66</td>
+<td align="left"><code>ANEMIA</code></td>
+<td align="left"><a href="variables/mbsf.html#anemia-end-year-flag">Anemia End Year Flag</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">67</td>
+<td align="left"><code>ANEMIA_MID</code></td>
+<td align="left"><a href="variables/mbsf.html#anemia-mid-year-flag">Anemia Mid Year Flag</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">68</td>
+<td align="left"><code>ANEMIA_EVER</code></td>
+<td align="left"><a href="variables/mbsf.html#anemia-first-ever-occurrence-date">Anemia First Ever Occurrence Date</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">69</td>
+<td align="left"><code>ASTHMA</code></td>
+<td align="left"><a href="variables/mbsf.html#asthma-end-year-flag">Asthma End Year Flag</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">70</td>
+<td align="left"><code>ASTHMA_MID</code></td>
+<td align="left"><a href="variables/mbsf.html#asthma-mid-year-flag">Asthma Mid Year Flag</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">71</td>
+<td align="left"><code>ASTHMA_EVER</code></td>
+<td align="left"><a href="variables/mbsf.html#asthma-first-ever-occurrence-date">Asthma First Ever Occurrence Date</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">72</td>
+<td align="left"><code>HYPERL</code></td>
+<td align="left"><a href="variables/mbsf.html#hyperlipidemia-end-year-flag">Hyperlipidemia End Year Flag</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">73</td>
+<td align="left"><code>HYPERL_MID</code></td>
+<td align="left"><a href="variables/mbsf.html#hyperlipidemia-mid-year-flag">Hyperlipidemia Mid Year Flag</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">74</td>
+<td align="left"><code>HYPERL_EVER</code></td>
+<td align="left"><a href="variables/mbsf.html#hyperlipidemia-first-ever-occurrence-date">Hyperlipidemia First Ever Occurrence Date</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right">75</td>
+<td align="left"><code>HYPERP</code></td>
+<td align="left"><a href="variables/mbsf.html#benign-prostatic-hyperplasia-end-year-flag">Benign Prostatic Hyperplasia End Year Flag</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">76</td>
+<td align="left"><code>HYPERP_MID</code></td>
+<td align="left"><a href="variables/mbsf.html#benign-prostatic-hyperplasia-mid-year-flag">Benign Prostatic Hyperplasia Mid Year Flag</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">77</td>
+<td align="left"><code>HYPERP_EVER</code></td>
+<td align="left"><a href="variables/mbsf.html#benign-prostatic-hyperplasia-first-ever-occurrence-date">Benign Prostatic Hyperplasia First Ever Occurrence Date</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">78</td>
+<td align="left"><code>HYPERT</code></td>
+<td align="left"><a href="variables/mbsf.html#hypertension-end-year-flag">Hypertension End Year Flag</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">79</td>
+<td align="left"><code>HYPERT_MID</code></td>
+<td align="left"><a href="variables/mbsf.html#hypertension-mid-year-flag">Hypertension Mid Year Flag</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">80</td>
+<td align="left"><code>HYPERT_EVER</code></td>
+<td align="left"><a href="variables/mbsf.html#hypertension-first-ever-occurrence-date">Hypertension First Ever Occurrence Date</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">81</td>
+<td align="left"><code>HYPOTH</code></td>
+<td align="left"><a href="variables/mbsf.html#acquired-hypothyroidism-end-year-flag">Acquired Hypothyroidism End Year Flag</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">82</td>
+<td align="left"><code>HYPOTH_MID</code></td>
+<td align="left"><a href="variables/mbsf.html#acquired-hypothyroidism-mid-year-flag">Acquired Hypothyroidism Mid Year Flag</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">83</td>
+<td align="left"><code>HYPOTH_EVER</code></td>
+<td align="left"><a href="variables/mbsf.html#acquired-hypothyroidism-first-ever-occurrence-date">Acquired Hypothyroidism First Ever Occurrence Date</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+</tbody>
+</table>
+<h3 id="other-chronic-or-potentially-disabling-conditions">Other Chronic or Potentially Disabling Conditions<a class="headerlink" href="#other-chronic-or-potentially-disabling-conditions" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th align="right">Index</th>
+<th align="left">SAS Name</th>
+<th align="left">Variable Name</th>
+<th align="left">Limitation</th>
+<th align="left">Code Table</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">1</td>
+<td align="left"><code>BENE_ID</code></td>
+<td align="left"><a href="variables/mbsf.html#encrypted-ccw-beneficiary-id">Encrypted CCW Beneficiary ID</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right">2</td>
+<td align="left"><code>RFRNC_YR</code></td>
+<td align="left"><a href="variables/mbsf.html#reference-year">Reference Year</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right">3</td>
+<td align="left"><code>ACP_MEDICARE</code></td>
+<td align="left"><a href="variables/mbsf.html#adhd-and-other-conduct-disorders-medicare-only-claims">ADHD and Other Conduct Disorders - Medicare Only Claims</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">4</td>
+<td align="left"><code>ACP_MEDICARE_EVER</code></td>
+<td align="left"><a href="variables/mbsf.html#adhd-and-other-conduct-disorders-first-ever-occurrence-date-medicare-only-claims">ADHD and Other Conduct Disorders First Ever Occurrence Date - Medicare Only Claims</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">5</td>
+<td align="left"><code>ANXI_MEDICARE</code></td>
+<td align="left"><a href="variables/mbsf.html#anxiety-disorders-medicare-only-claims">Anxiety Disorders - Medicare Only Claims</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">6</td>
+<td align="left"><code>ANXI_MEDICARE_EVER</code></td>
+<td align="left"><a href="variables/mbsf.html#anxiety-disorders-first-ever-occurrence-date-medicare-only-claims">Anxiety Disorders First Ever Occurrence Date - Medicare Only Claims</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">7</td>
+<td align="left"><code>AUTISM_MEDICARE</code></td>
+<td align="left"><a href="variables/mbsf.html#autism-spectrum-disorders-medicare-only-claims">Autism Spectrum Disorders - Medicare Only Claims</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">8</td>
+<td align="left"><code>AUTISM_MEDICARE_EVER</code></td>
+<td align="left"><a href="variables/mbsf.html#autism-spectrum-disorders-first-ever-occurrence-date-medicare-only-claims">Autism Spectrum Disorders First Ever Occurrence Date - Medicare Only Claims</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">9</td>
+<td align="left"><code>BIPL_MEDICARE</code></td>
+<td align="left"><a href="variables/mbsf.html#bipolar-disorder-medicare-only-claims">Bipolar Disorder - Medicare Only Claims</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">10</td>
+<td align="left"><code>BIPL_MEDICARE_EVER</code></td>
+<td align="left"><a href="variables/mbsf.html#bipolar-disorder-first-ever-occurrence-date-medicare-only-claims">Bipolar Disorder First Ever Occurrence Date - Medicare Only Claims</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">11</td>
+<td align="left"><code>BRAINJ_MEDICARE</code></td>
+<td align="left"><a href="variables/mbsf.html#traumatic-brain-injury-and-nonpsychotic-mental-disorders-due-to-brain-damage-end-of-year-indicator-medicare-only-claims">Traumatic Brain Injury and Nonpsychotic Mental Disorders due to Brain Damage End-of-Year Indicator - Medicare Only Claims</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">12</td>
+<td align="left"><code>BRAINJ_MEDICARE_EVER</code></td>
+<td align="left"><a href="variables/mbsf.html#traumatic-brain-injury-and-nonpsychotic-mental-disorders-due-to-brain-damage-first-ever-occurrence-date-medicare-only-claims">Traumatic Brain Injury and Nonpsychotic Mental Disorders due to Brain Damage First Ever Occurrence Date - Medicare Only Claims</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">13</td>
+<td align="left"><code>CERPAL_MEDICARE</code></td>
+<td align="left"><a href="variables/mbsf.html#cerebral-palsy-end-of-year-indicator-medicare-only-claims">Cerebral Palsy End-of-Year Indicator - Medicare Only Claims</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">14</td>
+<td align="left"><code>CERPAL_MEDICARE_EVER</code></td>
+<td align="left"><a href="variables/mbsf.html#cerebral-palsy-first-ever-occurrence-date-medicare-only-claims">Cerebral Palsy First Ever Occurrence Date - Medicare Only Claims</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right">15</td>
+<td align="left"><code>CYSFIB_MEDICARE</code></td>
+<td align="left"><a href="variables/mbsf.html#cystic-fibrosis-and-other-metabolic-developmental-disorders-end-of-year-indicator-medicare-only-claims">Cystic Fibrosis and Other Metabolic Developmental Disorders End-of-Year Indicator - Medicare Only Claims</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">16</td>
+<td align="left"><code>CYSFIB_MEDICARE_EVER</code></td>
+<td align="left"><a href="variables/mbsf.html#cystic-fibrosis-and-other-metabolic-developmental-disorders-first-ever-occurrence-date-medicare-only-claims">Cystic Fibrosis and Other Metabolic Developmental Disorders First Ever Occurrence Date - Medicare Only Claims</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right">17</td>
+<td align="left"><code>DEPSN_MEDICARE</code></td>
+<td align="left"><a href="variables/mbsf.html#major-depressive-affective-disorder-end-of-year-indicator-medicare-only-claims">Major Depressive Affective Disorder End-of-Year Indicator - Medicare Only Claims</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">18</td>
+<td align="left"><code>DEPSN_MEDICARE_EVER</code></td>
+<td align="left"><a href="variables/mbsf.html#major-depressive-affective-disorder-first-ever-occurrence-date-medicare-only-claims">Major Depressive Affective Disorder First Ever Occurrence Date - Medicare Only Claims</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right">19</td>
+<td align="left"><code>EPILEP_MEDICARE</code></td>
+<td align="left"><a href="variables/mbsf.html#epilepsy-end-of-year-indicator-medicare-only-claims">Epilepsy End-of-Year Indicator - Medicare Only Claims</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">20</td>
+<td align="left"><code>EPILEP_MEDICARE_EVER</code></td>
+<td align="left"><a href="variables/mbsf.html#epilepsy-first-ever-occurrence-date-medicare-only-claims">Epilepsy First Ever Occurrence Date - Medicare Only Claims</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right">21</td>
+<td align="left"><code>FIBRO_MEDICARE</code></td>
+<td align="left"><a href="variables/mbsf.html#fibromyalgia-chronic-pain-and-fatigue-end-of-year-indicator-medicare-only-claims">Fibromyalgia, Chronic Pain and Fatigue End-of-Year Indicator - Medicare Only Claims</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">22</td>
+<td align="left"><code>FIBRO_MEDICARE_EVER</code></td>
+<td align="left"><a href="variables/mbsf.html#fibromyalgia-chronic-pain-and-fatigue-first-ever-occurrence-date-medicare-only-claims">Fibromyalgia, Chronic Pain and Fatigue First Ever Occurrence Date - Medicare Only Claims</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right">23</td>
+<td align="left"><code>HEARIM_MEDICARE</code></td>
+<td align="left"><a href="variables/mbsf.html#sensory-deafness-and-hearing-impairment-end-of-year-indicator-medicare-only-claims">Sensory - Deafness and Hearing Impairment End-of-Year Indicator - Medicare Only Claims</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">24</td>
+<td align="left"><code>HEARIM_MEDICARE_EVER</code></td>
+<td align="left"><a href="variables/mbsf.html#sensory-deafness-and-hearing-impairment-first-ever-occurrence-date-medicare-only-claims">Sensory - Deafness and Hearing Impairment First Ever Occurrence Date - Medicare Only Claims</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right">25</td>
+<td align="left"><code>HEPVIRAL_MEDICARE</code></td>
+<td align="left"><a href="variables/mbsf.html#viral-hepatitis-general-end-of-year-indicator-medicare-only-claims">Viral Hepatitis (General) End-of-Year Indicator - Medicare Only Claims</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">26</td>
+<td align="left"><code>HEPVIRAL_MEDICARE_EVER</code></td>
+<td align="left"><a href="variables/mbsf.html#viral-hepatitis-general-first-ever-occurrence-date-medicare-only-claims">Viral Hepatitis (General) First Ever Occurrence Date - Medicare Only Claims</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right">27</td>
+<td align="left"><code>HIVAIDS_MEDICARE</code></td>
+<td align="left"><a href="variables/mbsf.html#human-immunodeficiency-virus-andor-acquired-immunodeficiency-syndrome-hivaids-end-of-year-indicator-medicare-only-claims">Human Immunodeficiency Virus and/or Acquired Immunodeficiency Syndrome (HIV/AIDS) End-of-Year Indicator - Medicare Only Claims</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">28</td>
+<td align="left"><code>HIVAIDS_MEDICARE_EVER</code></td>
+<td align="left"><a href="variables/mbsf.html#human-immunodeficiency-virus-andor-acquired-immunodeficiency-syndrome-hivaids-first-ever-occurrence-date-medicare-only-claims">Human Immunodeficiency Virus and/or Acquired Immunodeficiency Syndrome (HIV/AIDS) First Ever Occurrence Date - Medicare Only Claims</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right">29</td>
+<td align="left"><code>INTDIS_MEDICARE</code></td>
+<td align="left"><a href="variables/mbsf.html#intellectual-disabilities-and-related-conditions-end-of-year-indicator-medicare-only-claims">Intellectual Disabilities and Related Conditions End-of-Year Indicator - Medicare Only Claims</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">30</td>
+<td align="left"><code>INTDIS_MEDICARE_EVER</code></td>
+<td align="left"><a href="variables/mbsf.html#intellectual-disabilities-and-related-conditions-first-ever-occurrence-date-medicare-only-claims">Intellectual Disabilities and Related Conditions First Ever Occurrence Date - Medicare Only Claims</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right">31</td>
+<td align="left"><code>LEADIS_MEDICARE</code></td>
+<td align="left"><a href="variables/mbsf.html#learning-disabilities-end-of-year-indicator-medicare-only-claims">Learning Disabilities End-of-Year Indicator - Medicare Only Claims</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">32</td>
+<td align="left"><code>LEADIS_MEDICARE_EVER</code></td>
+<td align="left"><a href="variables/mbsf.html#learning-disabilities-first-ever-occurrence-date-medicare-only-claims">Learning Disabilities First Ever Occurrence Date - Medicare Only Claims</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right">33</td>
+<td align="left"><code>LEUKLYMPH_MEDICARE</code></td>
+<td align="left"><a href="variables/mbsf.html#leukemias-and-lymphomas-end-of-year-indicator-medicare-only-claims">Leukemias and Lymphomas End-of-Year Indicator - Medicare Only Claims</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">34</td>
+<td align="left"><code>LEUKLYMPH_MEDICARE_EVER</code></td>
+<td align="left"><a href="variables/mbsf.html#leukemias-and-lymphomas-first-ever-occurrence-date-medicare-only-claims">Leukemias and Lymphomas First Ever Occurrence Date - Medicare Only Claims</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right">35</td>
+<td align="left"><code>LIVER_MEDICARE</code></td>
+<td align="left"><a href="variables/mbsf.html#liver-disease-cirrhosis-and-other-liver-conditions-excluding-hepatitis-end-of-year-indicator-medicare-only-claims">Liver Disease Cirrhosis and Other Liver Conditions (excluding Hepatitis) End-of-Year Indicator - Medicare Only Claims</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">36</td>
+<td align="left"><code>LIVER_MEDICARE_EVER</code></td>
+<td align="left"><a href="variables/mbsf.html#liver-disease-cirrhosis-and-other-liver-conditions-excluding-hepatitis-first-ever-occurrence-date-medicare-only-claims">Liver Disease, Cirrhosis and Other Liver Conditions (excluding Hepatitis) First Ever Occurrence Date - Medicare Only Claims</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right">37</td>
+<td align="left"><code>MIGRAINE_MEDICARE</code></td>
+<td align="left"><a href="variables/mbsf.html#migraine-and-other-chronic-headache-end-of-year-indicator-medicare-only-claims">Migraine and other Chronic Headache End-of-Year Indicator - Medicare Only Claims</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">38</td>
+<td align="left"><code>MIGRAINE_MEDICARE_EVER</code></td>
+<td align="left"><a href="variables/mbsf.html#migraine-and-other-chronic-headache-first-ever-occurrence-date-medicare-only-claims">Migraine and other Chronic Headache First Ever Occurrence Date - Medicare Only Claims</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right">39</td>
+<td align="left"><code>MOBIMP_MEDICARE</code></td>
+<td align="left"><a href="variables/mbsf.html#mobility-impairments-end-of-year-indicator-medicare-only-claims">Mobility Impairments End-of-Year Indicator - Medicare Only Claims</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">40</td>
+<td align="left"><code>MOBIMP_MEDICARE_EVER</code></td>
+<td align="left"><a href="variables/mbsf.html#mobility-impairments-first-ever-occurrence-date-medicare-only-claims">Mobility Impairments First Ever Occurrence Date - Medicare Only Claims</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right">41</td>
+<td align="left"><code>MULSCL_MEDICARE</code></td>
+<td align="left"><a href="variables/mbsf.html#multiple-sclerosis-and-transverse-myelitis-end-of-year-indicator-medicare-only-claims">Multiple Sclerosis and Transverse Myelitis End-of-Year Indicator - Medicare Only Claims</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">42</td>
+<td align="left"><code>MULSCL_MEDICARE_EVER</code></td>
+<td align="left"><a href="variables/mbsf.html#multiple-sclerosis-and-transverse-myelitis-first-ever-occurrence-date-medicare-only-claims">Multiple Sclerosis and Transverse Myelitis First Ever Occurrence Date - Medicare Only Claims</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right">43</td>
+<td align="left"><code>MUSDYS_MEDICARE</code></td>
+<td align="left"><a href="variables/mbsf.html#muscular-dystrophy-end-of-year-indicator-medicare-only-claims">Muscular Dystrophy End-of-Year Indicator - Medicare Only Claims</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">44</td>
+<td align="left"><code>MUSDYS_MEDICARE_EVER</code></td>
+<td align="left"><a href="variables/mbsf.html#muscular-dystrophy-first-ever-occurrence-date-medicare-only-claims">Muscular Dystrophy First Ever Occurrence Date - Medicare Only Claims</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right">45</td>
+<td align="left"><code>OBESITY_MEDICARE</code></td>
+<td align="left"><a href="variables/mbsf.html#obesity-end-of-year-indicator-medicare-only-claims">Obesity End-of-Year Indicator - Medicare Only Claims</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">46</td>
+<td align="left"><code>OBESITY_MEDICARE_EVER</code></td>
+<td align="left"><a href="variables/mbsf.html#obesity-first-ever-occurrence-date-medicare-only-claims">Obesity First Ever Occurrence Date - Medicare Only Claims</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right">47</td>
+<td align="left"><code>OTHDEL_MEDICARE</code></td>
+<td align="left"><a href="variables/mbsf.html#other-developmental-delays-end-of-year-indicator-medicare-only-claims">Other Developmental Delays End-of-Year Indicator - Medicare Only Claims</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">48</td>
+<td align="left"><code>OTHDEL_MEDICARE_EVER</code></td>
+<td align="left"><a href="variables/mbsf.html#other-developmental-delays-first-ever-occurrence-date-medicare-only-claims">Other Developmental Delays First Ever Occurrence Date - Medicare Only Claims</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right">49</td>
+<td align="left"><code>PSDS_MEDICARE</code></td>
+<td align="left"><a href="variables/mbsf.html#personality-disorders-end-of-year-indicator-medicare-only-claims">Personality Disorders End-of-Year Indicator - Medicare Only Claims</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">50</td>
+<td align="left"><code>PSDS_MEDICARE_EVER</code></td>
+<td align="left"><a href="variables/mbsf.html#personality-disorders-first-ever-occurrence-date-medicare-only-claims">Personality Disorders First Ever Occurrence Date - Medicare Only Claims</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right">51</td>
+<td align="left"><code>PTRA_MEDICARE</code></td>
+<td align="left"><a href="variables/mbsf.html#post-traumatic-stress-disorder-end-of-year-indicator-medicare-only-claims">Post-Traumatic Stress Disorder End-of-Year Indicator - Medicare Only Claims</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">52</td>
+<td align="left"><code>PTRA_MEDICARE_EVER</code></td>
+<td align="left"><a href="variables/mbsf.html#post-traumatic-stress-disorder-first-ever-occurrence-date-medicare-only-claims">Post-Traumatic Stress Disorder First Ever Occurrence Date - Medicare Only Claims</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right">53</td>
+<td align="left"><code>PVD_MEDICARE</code></td>
+<td align="left"><a href="variables/mbsf.html#peripheral-vascular-disease-end-of-year-indicator-medicare-only-claims">Peripheral Vascular Disease End-of-Year Indicator - Medicare Only Claims</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">54</td>
+<td align="left"><code>PVD_MEDICARE_EVER</code></td>
+<td align="left"><a href="variables/mbsf.html#peripheral-vascular-disease-first-ever-occurrence-date-medicare-only-claims">Peripheral Vascular Disease First Ever Occurrence Date - Medicare Only Claims</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right">55</td>
+<td align="left"><code>SCHI_MEDICARE</code></td>
+<td align="left"><a href="variables/mbsf.html#schizophrenia-end-of-year-indicator-medicare-only-claims">Schizophrenia End-of-Year Indicator - Medicare Only Claims</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">56</td>
+<td align="left"><code>SCHI_MEDICARE_EVER</code></td>
+<td align="left"><a href="variables/mbsf.html#schizophrenia-first-ever-occurrence-date-medicare-only-claims">Schizophrenia First Ever Occurrence Date - Medicare Only Claims</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right">57</td>
+<td align="left"><code>SCHIOT_MEDICARE</code></td>
+<td align="left"><a href="variables/mbsf.html#schizophrenia-and-other-psychotic-disorders-end-of-year-indicator-medicare-only-claims">Schizophrenia and Other Psychotic Disorders End-of-Year Indicator - Medicare Only Claims</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">58</td>
+<td align="left"><code>SCHIOT_MEDICARE_EVER</code></td>
+<td align="left"><a href="variables/mbsf.html#schizophrenia-and-other-psychotic-disorders-first-ever-occurrence-date-medicare-only-claims">Schizophrenia and Other Psychotic Disorders First Ever Occurrence Date - Medicare Only Claims</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right">59</td>
+<td align="left"><code>SPIBIF_MEDICARE</code></td>
+<td align="left"><a href="variables/mbsf.html#spina-bifida-and-other-congenital-anomalies-of-the-nervous-system-end-of-year-indicator-medicare-only-claims">Spina Bifida and Other Congenital Anomalies of the Nervous System End-of-Year Indicator - Medicare Only Claims</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">60</td>
+<td align="left"><code>SPIBIF_MEDICARE_EVER</code></td>
+<td align="left"><a href="variables/mbsf.html#spina-bifida-and-other-congenital-anomalies-of-the-nervous-system-first-ever-occurrence-date-medicare-only-claims">Spina Bifida and Other Congenital Anomalies of the Nervous System First Ever Occurrence Date - Medicare Only Claims</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right">61</td>
+<td align="left"><code>SPIINJ_MEDICARE</code></td>
+<td align="left"><a href="variables/mbsf.html#spinal-cord-injury-end-of-year-indicator-medicare-only-claims">Spinal Cord Injury End-of-Year Indicator - Medicare Only Claims</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">62</td>
+<td align="left"><code>SPIINJ_MEDICARE_EVER</code></td>
+<td align="left"><a href="variables/mbsf.html#spinal-cord-injury-first-ever-occurrence-date-medicare-only-claims">Spinal Cord Injury First Ever Occurrence Date - Medicare Only Claims</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right">63</td>
+<td align="left"><code>TOBA_MEDICARE</code></td>
+<td align="left"><a href="variables/mbsf.html#tobacco-use-disorders-end-of-year-indicator-medicare-only-claims">Tobacco Use Disorders End-of-Year Indicator - Medicare Only Claims</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">64</td>
+<td align="left"><code>TOBA_MEDICARE_EVER</code></td>
+<td align="left"><a href="variables/mbsf.html#tobacco-use-disorders-first-ever-occurrence-date-medicare-only-claims">Tobacco Use Disorders First Ever Occurrence Date - Medicare Only Claims</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right">65</td>
+<td align="left"><code>ULCERS_MEDICARE</code></td>
+<td align="left"><a href="variables/mbsf.html#pressure-ulcers-and-chronic-ulcers-end-of-year-indicator-medicare-only-claims">Pressure Ulcers and Chronic Ulcers End-of-Year Indicator - Medicare Only Claims</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">66</td>
+<td align="left"><code>ULCERS_MEDICARE_EVER</code></td>
+<td align="left"><a href="variables/mbsf.html#pressure-ulcers-and-chronic-ulcers-first-ever-occurrence-date-medicare-only-claims">Pressure Ulcers and Chronic Ulcers First Ever Occurrence Date - Medicare Only Claims</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right">67</td>
+<td align="left"><code>VISUAL_MEDICARE</code></td>
+<td align="left"><a href="variables/mbsf.html#sensory-blindness-and-visual-impairment-end-of-year-indicator-medicare-only-claims">Sensory - Blindness and Visual Impairment End-of-Year Indicator - Medicare Only Claims</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">68</td>
+<td align="left"><code>VISUAL_MEDICARE_EVER</code></td>
+<td align="left"><a href="variables/mbsf.html#sensory-blindness-and-visual-impairment-first-ever-occurrence-date-medicare-only-claims">Sensory - Blindness and Visual Impairment First Ever Occurrence Date - Medicare Only Claims</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="cost-and-use-segment_1">Cost and Use segment<a class="headerlink" href="#cost-and-use-segment_1" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th align="right">Index</th>
+<th align="left">SAS Name</th>
+<th align="left">Variable Name</th>
+<th align="left">Limitation</th>
+<th align="left">Code Table</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">1</td>
+<td align="left"><code>BENE_ID</code></td>
+<td align="left"><a href="variables/mbsf.html#encrypted-ccw-beneficiary-id">Encrypted CCW Beneficiary ID</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right">2</td>
+<td align="left"><code>RFRNC_YR</code></td>
+<td align="left"><a href="variables/mbsf.html#reference-year">Reference Year</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right">3</td>
+<td align="left"><code>HOP_MDCR_PMT</code></td>
+<td align="left"><a href="variables/mbsf.html#hospital-outpatient-medicare-payments">Hospital Outpatient Medicare Payments</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">4</td>
+<td align="left"><code>HOP_BENE_PMT</code></td>
+<td align="left"><a href="variables/mbsf.html#hospital-outpatient-beneficiary-payments">Hospital Outpatient Beneficiary Payments</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">5</td>
+<td align="left"><code>HOP_VISITS</code></td>
+<td align="left"><a href="variables/mbsf.html#hospital-outpatient-visits">Hospital Outpatient Visits</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">6</td>
+<td align="left"><code>HOP_ER_VISITS</code></td>
+<td align="left"><a href="variables/mbsf.html#hospital-outpatient-emergency-room-visits">Hospital Outpatient Emergency Room Visits</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">7</td>
+<td align="left"><code>ACUTE_MDCR_PMT</code></td>
+<td align="left"><a href="variables/mbsf.html#acute-inpatient-medicare-payments">Acute Inpatient Medicare Payments</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">8</td>
+<td align="left"><code>ACUTE_BENE_PMT</code></td>
+<td align="left"><a href="variables/mbsf.html#acute-inpatient-beneficiary-payments">Acute Inpatient Beneficiary Payments</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">9</td>
+<td align="left"><code>ACUTE_COV_DAYS</code></td>
+<td align="left"><a href="variables/mbsf.html#acute-inpatient-covered-days">Acute Inpatient Covered Days</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">10</td>
+<td align="left"><code>ACUTE_STAYS</code></td>
+<td align="left"><a href="variables/mbsf.html#acute-inpatient-stays">Acute Inpatient Stays</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">11</td>
+<td align="left"><code>IP_ER_VISITS</code></td>
+<td align="left"><a href="variables/mbsf.html#inpatient-emergency-room-visits">Inpatient Emergency Room Visits</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">12</td>
+<td align="left"><code>READMISSIONS</code></td>
+<td align="left"><a href="variables/mbsf.html#hospital-readmissions">Hospital Readmissions</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">13</td>
+<td align="left"><code>OIP_MDCR_PMT</code></td>
+<td align="left"><a href="variables/mbsf.html#other-inpatient-medicare-payments">Other Inpatient Medicare Payments</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">14</td>
+<td align="left"><code>OIP_BENE_PMT</code></td>
+<td align="left"><a href="variables/mbsf.html#other-inpatient-beneficiary-payments">Other Inpatient Beneficiary Payments</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">15</td>
+<td align="left"><code>OIP_COV_DAYS</code></td>
+<td align="left"><a href="variables/mbsf.html#other-inpatient-covered-days">Other Inpatient Covered Days</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">16</td>
+<td align="left"><code>OIP_STAYS</code></td>
+<td align="left"><a href="variables/mbsf.html#other-inpatient-stays">Other Inpatient Stays</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">17</td>
+<td align="left"><code>SNF_MDCR_PMT</code></td>
+<td align="left"><a href="variables/mbsf.html#skilled-nursing-facility-medicare-payments">Skilled Nursing Facility Medicare Payments</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">18</td>
+<td align="left"><code>SNF_BENE_PMT</code></td>
+<td align="left"><a href="variables/mbsf.html#skilled-nursing-facility-beneficiary-payments">Skilled Nursing Facility Beneficiary Payments</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">19</td>
+<td align="left"><code>SNF_COV_DAYS</code></td>
+<td align="left"><a href="variables/mbsf.html#skilled-nursing-facility-covered-days">Skilled Nursing Facility Covered Days</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">20</td>
+<td align="left"><code>SNF_STAYS</code></td>
+<td align="left"><a href="variables/mbsf.html#skilled-nursing-facility-stays">Skilled Nursing Facility Stays</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">21</td>
+<td align="left"><code>HOS_MDCR_PMT</code></td>
+<td align="left"><a href="variables/mbsf.html#hospice-medicare-payments">Hospice Medicare Payments</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">22</td>
+<td align="left"><code>HOS_COV_DAYS</code></td>
+<td align="left"><a href="variables/mbsf.html#hospice-covered-days">Hospice Covered Days</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">23</td>
+<td align="left"><code>HOS_STAYS</code></td>
+<td align="left"><a href="variables/mbsf.html#hospice-stays">Hospice Stays</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">24</td>
+<td align="left"><code>HH_MDCR_PMT</code></td>
+<td align="left"><a href="variables/mbsf.html#home-health-medicare-payments">Home Health Medicare Payments</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">25</td>
+<td align="left"><code>HH_VISITS</code></td>
+<td align="left"><a href="variables/mbsf.html#home-health-visits">Home Health Visits</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">26</td>
+<td align="left"><code>ASC_MDCR_PMT</code></td>
+<td align="left"><a href="variables/mbsf.html#ambulatory-surgery-center-medicare-payments">Ambulatory Surgery Center Medicare Payments</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">27</td>
+<td align="left"><code>ASC_BENE_PMT</code></td>
+<td align="left"><a href="variables/mbsf.html#ambulatory-surgery-center-beneficiary-payments">Ambulatory Surgery Center Beneficiary Payments</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">28</td>
+<td align="left"><code>ASC_EVENTS</code></td>
+<td align="left"><a href="variables/mbsf.html#ambulatory-surgery-center-events">Ambulatory Surgery Center Events</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">29</td>
+<td align="left"><code>PTB_DRUG_MDCR_PMT</code></td>
+<td align="left"><a href="variables/mbsf.html#part-b-drug-medicare-payments">Part B Drug Medicare Payments</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">30</td>
+<td align="left"><code>PTB_DRUG_BENE_PMT</code></td>
+<td align="left"><a href="variables/mbsf.html#part-b-drug-beneficiary-payments">Part B Drug Beneficiary Payments</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">31</td>
+<td align="left"><code>PTB_DRUG_EVENTS</code></td>
+<td align="left"><a href="variables/mbsf.html#part-b-drug-events">Part B Drug Events</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">32</td>
+<td align="left"><code>EM_MDCR_PMT</code></td>
+<td align="left"><a href="variables/mbsf.html#evaluation-and-management-medicare-payments">Evaluation and Management Medicare Payments</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">33</td>
+<td align="left"><code>EM_BENE_PMT</code></td>
+<td align="left"><a href="variables/mbsf.html#evaluation-and-management-beneficiary-payments">Evaluation and Management Beneficiary Payments</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">34</td>
+<td align="left"><code>EM_EVENTS</code></td>
+<td align="left"><a href="variables/mbsf.html#evaluation-and-management-events">Evaluation and Management Events</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">35</td>
+<td align="left"><code>ANES_MDCR_PMT</code></td>
+<td align="left"><a href="variables/mbsf.html#anesthesia-medicare-payments">Anesthesia Medicare Payments</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">36</td>
+<td align="left"><code>ANES_BENE_PMT</code></td>
+<td align="left"><a href="variables/mbsf.html#anesthesia-beneficiary-payments">Anesthesia Beneficiary Payments</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">37</td>
+<td align="left"><code>ANES_EVENTS</code></td>
+<td align="left"><a href="variables/mbsf.html#anesthesia-events">Anesthesia Events</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">38</td>
+<td align="left"><code>DIALYS_MDCR_PMT</code></td>
+<td align="left"><a href="variables/mbsf.html#dialysis-medicare-payments">Dialysis Medicare Payments</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">39</td>
+<td align="left"><code>DIALYS_BENE_PMT</code></td>
+<td align="left"><a href="variables/mbsf.html#dialysis-beneficiary-payments">Dialysis Beneficiary Payments</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">40</td>
+<td align="left"><code>DIALYS_EVENTS</code></td>
+<td align="left"><a href="variables/mbsf.html#dialysis-events">Dialysis Events</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">41</td>
+<td align="left"><code>OPROC_MDCR_PMT</code></td>
+<td align="left"><a href="variables/mbsf.html#other-procedures-medicare-payments">Other Procedures Medicare Payments</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">42</td>
+<td align="left"><code>OPROC_BENE_PMT</code></td>
+<td align="left"><a href="variables/mbsf.html#other-procedures-beneficiary-payments">Other Procedures Beneficiary Payments</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">43</td>
+<td align="left"><code>OPROC_EVENTS</code></td>
+<td align="left"><a href="variables/mbsf.html#other-procedures-events">Other Procedures Events</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">44</td>
+<td align="left"><code>IMG_MDCR_PMT</code></td>
+<td align="left"><a href="variables/mbsf.html#imaging-medicare-payments">Imaging Medicare Payments</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">45</td>
+<td align="left"><code>IMG_BENE_PMT</code></td>
+<td align="left"><a href="variables/mbsf.html#imaging-beneficiary-payments">Imaging Beneficiary Payments</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">46</td>
+<td align="left"><code>IMG_EVENTS</code></td>
+<td align="left"><a href="variables/mbsf.html#imaging-events">Imaging Events</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">47</td>
+<td align="left"><code>TEST_MDCR_PMT</code></td>
+<td align="left"><a href="variables/mbsf.html#tests-medicare-payments">Tests Medicare Payments</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">48</td>
+<td align="left"><code>TEST_BENE_PMT</code></td>
+<td align="left"><a href="variables/mbsf.html#tests-beneficiary-payments">Tests Beneficiary Payments</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">49</td>
+<td align="left"><code>TEST_EVENTS</code></td>
+<td align="left"><a href="variables/mbsf.html#tests-events">Tests Events</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">50</td>
+<td align="left"><code>DME_MDCR_PMT</code></td>
+<td align="left"><a href="variables/mbsf.html#durable-medical-equipment-medicare-payments">Durable Medical Equipment Medicare Payments</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">51</td>
+<td align="left"><code>DME_BENE_PMT</code></td>
+<td align="left"><a href="variables/mbsf.html#durable-medical-equipment-beneficiary-payments">Durable Medical Equipment Beneficiary Payments</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">52</td>
+<td align="left"><code>DME_EVENTS</code></td>
+<td align="left"><a href="variables/mbsf.html#durable-medical-equipment-events">Durable Medical Equipment Events</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">53</td>
+<td align="left"><code>OTHC_MDCR_PMT</code></td>
+<td align="left"><a href="variables/mbsf.html#other-part-b-carrier-medicare-payments">Other Part B Carrier Medicare Payments</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">54</td>
+<td align="left"><code>OTHC_BENE_PMT</code></td>
+<td align="left"><a href="variables/mbsf.html#other-part-b-carrier-beneficiary-payments">Other Part B Carrier Beneficiary Payments</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">55</td>
+<td align="left"><code>OTHC_EVENTS</code></td>
+<td align="left"><a href="variables/mbsf.html#other-part-b-carrier-events">Other Part B Carrier Events</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">56</td>
+<td align="left"><code>PHYS_MDCR_PMT</code></td>
+<td align="left"><a href="variables/mbsf.html#part-b-physician-medicare-payments">Part B Physician Medicare Payments</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">57</td>
+<td align="left"><code>PHYS_BENE_PMT</code></td>
+<td align="left"><a href="variables/mbsf.html#part-b-physician-beneficiary-payments">Part B Physician Beneficiary Payments</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">58</td>
+<td align="left"><code>PHYS_EVENTS</code></td>
+<td align="left"><a href="variables/mbsf.html#part-b-physician-events">Part B Physician Events</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">59</td>
+<td align="left"><code>PTD_MDCR_PMT</code></td>
+<td align="left"><a href="variables/mbsf.html#part-d-medicare-payments">Part D Medicare Payments</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">60</td>
+<td align="left"><code>PTD_BENE_PMT</code></td>
+<td align="left"><a href="variables/mbsf.html#part-d-beneficiary-payments">Part D Beneficiary Payments</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">61</td>
+<td align="left"><code>PTD_EVENTS</code></td>
+<td align="left"><a href="variables/mbsf.html#part-d-events">Part D Events</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">62</td>
+<td align="left"><code>PTD_FILL_CNT</code></td>
+<td align="left"><a href="variables/mbsf.html#part-d-fill-count">Part D Fill Count</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+<tr>
+<td align="right">63</td>
+<td align="left"><code>PTD_TOTAL_RX_CST</code></td>
+<td align="left"><a href="variables/mbsf.html#part-d-total-prescription-costs">Part D Total Prescription Costs</a></td>
+<td align="left"></td>
+<td align="left">*</td>
+</tr>
+</tbody>
+</table>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../NBER_website/9_version_updates.html" title="Version Updates" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Version Updates
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="carrier-rif.html" title="Carrier RIF" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Carrier RIF
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.583bbe55.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+        <script src="../js/helpers.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      
+    
+    
+      
+    
+  </body>
+</html>
