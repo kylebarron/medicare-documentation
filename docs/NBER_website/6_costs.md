@@ -720,7 +720,7 @@ $$
 
 CMS assumes that 60% of the OPPS conversion factor, COPPS is associated with the
 labor portion of expenses. They apply a wage index associated with where the
-hospital is located,W Lh , to the labor portion of the conversion factor which
+hospital is located, $W^L_h$, to the labor portion of the conversion factor which
 depends on the specific hospital's geography. Next the adjusted conversion
 factor is multiplied by the APC weight. The conversion factor transforms the APC
 weight into a dollar amount. The last step is to add in any additional policy
@@ -848,16 +848,18 @@ In addition to importing Addendum B into a SAS file, the program also goes
 through and groups the HCPCS codes using the associated status indicator
 variables found in Addendum B into four categories indicated by the
 `costutiltype` variable. The following section describes how the
-cost-utilization measure is constructed for each group. "Other payment system"
-HCPCS codes (`costutiltype = 0`)
+cost-utilization measure is constructed for each group.
+
+##### "Other payment system" HCPCS codes (`costutiltype = 0`)
 
 As already discussed, the outpatient files have several different payment
 systems which reimburse revenue center claims. While the OPPS is the largest
 reimbursement system, this category deals with the costs which are not covered
 by the OPPS. It is defined as HCPCS code with an associated status indicator
 (variable name `si`) not in (`G`, `H`, `K`,`S`,`P`,`Q`,`T`,`V`,`X`,`N`). No cost
-adjustment is made of these type of claims and costs are used as is. "Standard
-weight" HCPCS codes (`costutiltype = 1`)
+adjustment is made of these type of claims and costs are used as is.
+
+##### "Standard weight" HCPCS codes (`costutiltype = 1`)
 
 HCPCS codes with a "standard weight" describe HCPCS codes for which a relative
 APC weight exists. Calculating cost-utilization measure for these claims is
@@ -887,7 +889,7 @@ reimbursed at 50% of the APC weight. The adjusted weight is stored in the
 variable. These are coded into the program as `outpatient_QTcode` to allow user
 to compare the cost-utilization measures.
 
-"Standard pay amount" HCPCS codes (`costutiltype = 2`)
+##### "Standard pay amount" HCPCS codes (`costutiltype = 2`)
 
 "Standard pay amount" HCPCS codes have no relative weight, but do have a dollar
 amount associated with them which are still adjusted for geography. New
@@ -908,7 +910,7 @@ $$
 cost_{util} = payamount^{OPPS}_{hpcr}
 $$
 
-"unadjusted payment" HCPCS codes (`costutiltype = 3`)
+##### "Unadjusted payment" HCPCS codes (`costutiltype = 3`)
 
 Some HCPCS codes are "unadjusted" and cover prescription drugs and some
 pass-through payments. Prescription drugs are based on wholesale index and not
@@ -935,7 +937,7 @@ $$
 cost_{util} = fullreimb_{reported}^{OPPS}
 $$
 
-"Packaged Incidental service" (`costutiltype = 4`)
+##### "Packaged Incidental service" (`costutiltype = 4`)
 
 These are revenue centers with a status indicator of `N` which means that their
 costs have been packaged into other revenue centers observations. Addendum B
@@ -953,7 +955,7 @@ $$
 cost_{util} = fullreimb_{reported}^{OPPS}
 $$
 
-"Inconsistent HCPCS codes" (`costutiltype = 5`)
+##### "Inconsistent HCPCS codes" (`costutiltype = 5`)
 
 These codes are inconsistent in the sense that the revenue center claims files
 `pmtmthd` indicator variables denotes these claims as being covered by OPPS
@@ -967,7 +969,7 @@ $$
 cost_{util} = fullreimb_{reported}
 $$
 
-"No map from HCPCS codes to status indicator" (`costutiltype = 6`)
+##### "No map from HCPCS codes to status indicator" (`costutiltype = 6`)
 
 These HCPCS codes have no status indicator in the claims files and also do not
 match to Addendum B and are therefore unsure how to deal with these claims. This

@@ -190,9 +190,9 @@ index event for a patient can be defined.
 
 ```sas
 %ImposeSampleRest(cohrt=ami,pct=05,start=1999,end=2009,
-2                  subsquentDgnDayRest=365,
-3                  contHMOmonthpre=12,contHMOmonthpost=12,
-4                  contFFSmonthpre=12,contFFSmonthpost=12);
+                  subsquentDgnDayRest=365,
+                  contHMOmonthpre=12,contHMOmonthpost=12,
+                  contFFSmonthpre=12,contFFSmonthpost=12);
 ```
 
 Code: `medpar_candidates.sas` wrapper to only flag the principal diagnosis
