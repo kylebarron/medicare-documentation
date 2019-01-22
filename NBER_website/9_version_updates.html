@@ -1128,14 +1128,13 @@
                   <h1>Version Updates</h1>
                 
                 <h2 id="version-updates">Version Updates<a class="headerlink" href="#version-updates" title="Permanent link">&para;</a></h2>
-<p>See <a href="https://www.nber.org/medicare/public/Public-1.html#toc-Section-1.2">https://www.nber.org/medicare/public/Public-1.html#toc-Section-1.2</a></p>
 <h4 id="40">4.0<a class="headerlink" href="#40" title="Permanent link">&para;</a></h4>
 <p>The major changes made to the code occur in step1, the extraction of the
 harmonized data set from the raw data.</p>
 <ol>
 <li>
 <p>The naming convention of the raw data sets has been simplified
-    dropping the dgnPos, id=bene_id and mn stubs. These were not adding
+    dropping the <code>dgnPos</code>, <code>id=bene_id</code> and <code>mn</code> stubs. These were not adding
     much to the understanding of the data set names. The options still
     exist in the 1A and 1B steps but the final data set names no longer
     use these tags.</p>
@@ -1147,16 +1146,16 @@ harmonized data set from the raw data.</p>
 <p>The code is now more flexible allowing individuals to define index
     events from the inpatient, MedPAR, outpatient or carrier claims.
     This meant splitting what used to be a single program
-    1LongitudinalExtract into 3 different steps.</p>
+    <code>1LongitudinalExtract</code> into 3 different steps.</p>
 <ol>
 <li>
 <p>The first step (1A) goes through the raw data and flags
     candidate index events in each of the raw files of interest.
     There is a separate program for each claim file of interest.
     Researchers can define the index event however they would like
-    by making changes to the ICD9-CM and HCPCS SAS code found in the
+    by making changes to the ICD-9-CM and HCPCS SAS code found in the
     same folder. These if-then conditions effectively flag candidate
-    index event .</p>
+    index event.</p>
 </li>
 <li>
 <p>The second step (1B) imposes the enrollment restriction using
@@ -1177,22 +1176,14 @@ harmonized data set from the raw data.</p>
     and claims files in order to more easily match up the index file to
     claims, or match the extract back to the raw claims files.</p>
 <ol>
-<li>
-<p>inpatient :iprawindx - unique with part, fileyear</p>
-</li>
-<li>
-<p>MedPAR : medrawindx - unique with fileyear</p>
-</li>
-<li>
-<p>carrier : carrawindx - unique with part, fileyear</p>
-</li>
-<li>
-<p>outpatient : oprawindx - unique with part, fileyear</p>
-</li>
+<li>Inpatient: <code>iprawindx</code> - unique with part, fileyear</li>
+<li>MedPAR: <code>medrawindx</code> - unique with fileyear</li>
+<li>carrier: <code>carrawindx</code> - unique with part, fileyear</li>
+<li>outpatient: <code>oprawindx</code> - unique with part, fileyear</li>
 </ol>
 </li>
 <li>
-<p>Transfer flag code was moved to the 2create_index_level_measures
+<p>Transfer flag code was moved to the <code>2create_index_level_measures</code>
     folder, under the transfer sub-folder. The code takes the MedPAR
     claims extracted and goes through and flags the transfer scenarios
     and saves over the original dataset.</p>
@@ -1200,12 +1191,12 @@ harmonized data set from the raw data.</p>
 <li>
 <p>Cost utilization measures have been streamlined and simplified.
     Users will need to download the files themselves from the CMS/
-    Federal Register websites. Also added a X day cost construction of
+    Federal Register websites. Also added a <code>X</code> day cost construction of
     the cost utilization measures for each individual.</p>
 </li>
 <li>
-<p>Updated the definition of the XX variable costs in
-    <a href="http://unzipped/2create_index_level_measures/xday_costs_raw/CumulativeCostsPerIndx.sas">CumulativeCostsPerIndx.sas</a>.
+<p>Updated the definition of the <code>XX</code> variable costs in
+    <a href="https://www.nber.org/medicare/public/unzipped/2create_index_level_measures/xday_costs_raw/CumulativeCostsPerIndx.sas"><code>CumulativeCostsPerIndx.sas</code></a>.
     For example, suppose 30-day costs is the statistic of interest. It
     is possible to have a MedPAR claim with a length of stay of 45 days.
     Assuming the stay occurs at the start of the episode, not all costs
@@ -1223,7 +1214,7 @@ harmonized data set from the raw data.</p>
     included.</p>
 </li>
 <li>
-<p>Added .emacs file with lisp files so users can easily start using
+<p>Added <code>.emacs</code> file with lisp files so users can easily start using
     emacs on the servers with my specification.</p>
 </li>
 </ol>
@@ -1233,17 +1224,17 @@ harmonized data set from the raw data.</p>
 <p>Several bug fixes</p>
 </li>
 <li>
-<p>op_candidates.sas is now created at the claim level and allows for
+<p><code>op_candidates.sas</code> is now created at the claim level and allows for
     index events to be generated based on information in the revenue
     centers (HCPCS procedure codes or revenue center codes) and claims
-    (ICD9-CM diagnostic or procedure codes)</p>
+    (ICD-9-CM diagnostic or procedure codes)</p>
 </li>
 <li>
 <p>Updated cost utilization programs.</p>
 </li>
 <li>
-<p>updated the bash script ,runAllprgms.sh , which sequences all of the
-    programs correctly. If the sas programs crash, the script now makes
+<p>updated the bash script <code>runAllprgms.sh</code>, which sequences all of the
+    programs correctly. If the SAS programs crash, the script now makes
     the program exit and allows for the program to email the user.</p>
 </li>
 </ol>
@@ -1253,12 +1244,12 @@ harmonized data set from the raw data.</p>
 <p>2010 Medicare data</p>
 </li>
 <li>
-<p>Updated runAllprgms.sh bash script to run both Stata and SAS scripts
+<p>Updated <code>runAllprgms.sh</code> bash script to run both Stata and SAS scripts
     in addition to simplifying the program.</p>
 </li>
 <li>
 <p>Changed the enrollment restrictions found in
-    1B_impose_restrictions.sas from a symmetric X month restriction to
+    <code>1B_impose_restrictions.sas</code> from a symmetric X month restriction to
     X month restriction before the index event date and Y months after
     the index event date. Not a big change, just adds more flexibility
     the program instead of forcing users to use symmetric restrictions.</p>
@@ -1280,20 +1271,20 @@ harmonized data set from the raw data.</p>
     change.</p>
 </li>
 <li>
-<p>Updated the comorbidity profile software. The CCS to ICD9-CM
-    crosswalk was not entirely complete in the case of ICD9-CM code with
+<p>Updated the comorbidity profile software. The CCS to ICD-9-CM
+    crosswalk was not entirely complete in the case of ICD-9-CM code with
     trailing zeros. Since some claims report them an other do not, the
-    crosswalk was expanded to cover these special cases for all ICD9-CM
+    crosswalk was expanded to cover these special cases for all ICD-9-CM
     codes found in the files.</p>
 </li>
 <li>
 <p>Fixed 1B program. Program crashed if you ran code starting on or
-    after 2006 - because it was trying to apply the ehic to bene_id
+    after 2006 - because it was trying to apply the <code>ehic</code> to <code>bene_id</code>
     crosswalk when it did not need to.</p>
 </li>
 <li>
 <p>Changes to the raw MedPAR files were incorporated into the
-    decompressMedPAR.sas script.</p>
+    <code>decompressMedPAR.sas</code> script.</p>
 </li>
 </ol>
 <h4 id="450">4.50<a class="headerlink" href="#450" title="Permanent link">&para;</a></h4>
@@ -1321,24 +1312,23 @@ harmonized data set from the raw data.</p>
     benchmark results.</p>
 </li>
 <li>
-<p>A small bug was found in the medpar_candidates.sas file which does
+<p>A small bug was found in the <code>medpar_candidates.sas</code> file which does
     not impact all of the cohorts. For example it does not impact the 5%
     sample of the AMI, Hip or CHF cohorts generated by this code. It has
     been found to impact other cohorts however.</p>
 </li>
 </ol>
-<p>5.</p>
 <h4 id="465">4.65<a class="headerlink" href="#465" title="Permanent link">&para;</a></h4>
 <ol>
 <li>
-<p>Variable names have been <a href="http://unzipped/v465_varname_changes.txt">changed to match 2011
+<p>Variable names have been <a href="https://www.nber.org/medicare/public/unzipped/v465_varname_changes.txt">changed to match 2011
     </a>variables to prepare for
     harmonized update to be done to the raw data.</p>
 </li>
 <li>
 <p>Some lengths were updated to reflect changed in 2011 and 2010 data.
     Some lengths were not changed because they did not make any sense
-    for the variable (upin and npi)</p>
+    for the variable (UPIN and NPI)</p>
 </li>
 <li>
 <p>Created new sas views for 1C programs to speed extraction times by
@@ -1366,36 +1356,36 @@ harmonized data set from the raw data.</p>
     files, rather then merge in from denominator file.</p>
 </li>
 <li>
-<p>Added a <a href="http://quickstart.pdf">unzipped/quickstart.pdf</a> doc to aid
+<p>Added a <a href="https://www.nber.org/medicare/public/unzipped/quickstart.pdf">quickstart</a> document to aid
     users in updating programs</p>
 </li>
 <li>
-<p>FEB28-2014:: added write up to the documenttion about enrollment
+<p>FEB28-2014: added write up to the documentation about enrollment
     (See section 2.1.1)</p>
 </li>
 <li>
-<p>MAR11-2014:: added elixhauser to ICD9 diagnostic crosswalk see under
-    0PreProcess for code.</p>
+<p>MAR11-2014: added <code>elixhauser</code> to ICD9 diagnostic crosswalk see under
+    <code>0PreProcess</code> for code.</p>
 </li>
 <li>
-<p>APR09-2014::</p>
+<p>APR09-2014:</p>
 <ol>
 <li>
 <p>Fixed several improper references to the raw views in the
-    libnames.</p>
+    <code>libnames</code>.</p>
 </li>
 <li>
-<p>Created a new runAllprgm.sh bash file which allows users to
+<p>Created a new <code>runAllprgm.sh</code> bash file which allows users to
     change macro parameters directly from the bash script rather
     then having to open each and every SAS program.</p>
 </li>
 <li>
 <p>Moved the runcode bash function to a seperate file in the SAS
-    macro file - the runAllprgm.sh file uses it to run the programs</p>
+    macro file - the <code>runAllprgm.sh</code> file uses it to run the programs</p>
 </li>
 <li>
 <p>To accomidate passing parameters from the bash file to the sas
-    programs, each sas program has macro reference to the variable
+    programs, each SAS program has macro reference to the variable
     passed to them in the bash file. Note that users can still
     choose to run a single SAS file by filling in the proper macro
     parameters.</p>
@@ -1410,21 +1400,21 @@ harmonized data set from the raw data.</p>
 </li>
 <li>
 <p>Created and saved harmonized Medicare files for a subset of
-    variables on the servers > major speed increase</p>
+    variables on the servers &gt; major speed increase</p>
 </li>
 <li>
 <p>Harmonized files names and variables match the structure and name of
     the 2012 data</p>
 </li>
 <li>
-<p>Harmonized files have all the bene_ids cross-walked on the raw data</p>
+<p>Harmonized files have all the <code>bene_id</code>s cross-walked on the raw data</p>
 </li>
 <li>
 <p>several other smaller bug fixes</p>
 </li>
 <li>
 <p>Harmonized files directory can be found in the
-    set_up_directory.sas file > look at the 'harmroot' global macro</p>
+    <code>set_up_directory.sas</code> file &gt; look at the <code>harmroot</code> global macro</p>
 </li>
 <li>
 <p>MARCH 20, 2015: 20% carrier files 1998 and 1999 files were too
@@ -1442,7 +1432,7 @@ harmonized data set from the raw data.</p>
     older file</p>
 </li>
 <li>
-<p>changed the dirInit.sas/.do files to set_up_directory.sas/do
+<p>changed the <code>dirInit.sas/.do</code> files to <code>set_up_directory.sas/do</code>
     files.</p>
 </li>
 <li>
