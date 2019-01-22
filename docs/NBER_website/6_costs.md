@@ -182,7 +182,7 @@ Maryland. [^48] The programs presented in this section do not attempt to account
 for Maryland specific reimbursement rules or exclude claims occurring in
 Maryland. Researchers should be aware of this issue.
 
-[^48]: [ http://www.commonwealthfund.org/Innovations/State-Profiles/2010/Jan/Maryland-All-Payer.aspx]( http://www.commonwealthfund.org/Innovations/State-Profiles/2010/Jan/Maryland-All-Payer.aspx)
+[^48]: [ http://www.commonwealthfund.org/Innovations/State-Profiles/2010/Jan/Maryland-All-Payer.aspx](https://web.archive.org/web/20130407173810/http://www.commonwealthfund.org/Innovations/State-Profiles/2010/Jan/Maryland-All-Payer.aspx)
 
 As a general rule of thumb, users looking for more in-depth descriptions of
 payment systems should first check the MedPAC site for information regarding
@@ -287,7 +287,7 @@ amounts. Several adjustments are applied to the base amounts which account for
 wage differentials, urban/rural settings, teaching hospitals, disproportionate
 share and several other policy type adjustments. For a useful graphic of the
 costs refer to [MedPAC's hospital payment basics
-overview](http://www.medpac.gov/documents/MedPAC_Payment_Basics_10_hospital.pdf).
+overview](https://web.archive.org/web/20120917005124/http://www.medpac.gov/documents/medpac_payment_basics_10_hospital.pdf).
 
 $$
 TotalReimbursement = Operating + Capital
@@ -337,7 +337,7 @@ not limited to the following:
 
 More information can be found at MedPAC's payment overview, ResDAC's [DRG
 payment
-document](http://www.resdac.org/Tools/TBs/TN-004_CalculatingHospitalDRG_508.pdf),
+document](https://web.archive.org/web/20120227170250/http://www.resdac.org:80/tools/TBs/TN-004_CalculatingHospitalDRG_508.pdf),
 CMS's Internet Only Manuals, Chapter 3 and also American Health Information
 Management Association's (AHIMA) Coding and Reimbursement for Hospital Inpatient
 Services, see
@@ -432,7 +432,7 @@ beginning in 1999 the transition from a charge based to a resource based RVU
 methodology was fully implemented in 2002. The following provides a brief
 overview of the general formula CMS uses to calculate reimbursements. For
 further information refer to the IOM, CMS published final rules or [this MedPAC
-document](http://www.medpac.gov/documents/MedPAC_Payment_Basics_10_Physician.pdf).
+document](https://web.archive.org/web/20140501204649/http://www.medpac.gov:80/documents/MedPAC_Payment_Basics_10_Physician.pdf).
 
 The physician fee schedule maps HCPCS codes to relative value unit ($RVU$)
 weights associated with three different costs associated with physician
@@ -529,10 +529,10 @@ percent update to the 2010 Medicare Physician Fee Schedule (MPFS), effective for
 dates of service June 1, 2010, through November 30, 2010. Revised payment files
 were posted by CMS on July 1, 2010 [^51].
 
-[^51]: This paragraph was taken from the following [website](http://www.ahcancal.org/facility_operations/medicare/Pages/2010MedicarePartBFeeSchedule.aspx). The statements were verified. [This document](http://www.gpo.gov/fdsys/pkg/PLAW-111publ192/pdf/PLAW-111publ192.pdf) also explains the 2.2% uprate.
+[^51]: This paragraph was taken from the following [website](https://web.archive.org/web/20170507151715/https://www.ahcancal.org/facility_operations/medicare/Pages/2010MedicarePartBFeeSchedule.aspx). The statements were verified. [This document](http://www.gpo.gov/fdsys/pkg/PLAW-111publ192/pdf/PLAW-111publ192.pdf) also explains the 2.2% uprate.
 
 Note that the conversion factors are available from the AMA
-[here](http://www.ama-assn.org/resources/doc/rbrvs/cf-history.pdf). Chapter 12
+[here](https://web.archive.org/web/20130904024323/http://www.ama-assn.org/resources/doc/rbrvs/cf-history.pdf). Chapter 12
 of the internet only manuals (IOM) published by CMS also have historical
 conversion factors.
 
@@ -665,7 +665,7 @@ calculate OPPS reimbursements are reviewed.
 
 RESOURCES ON OPPS:
 
-- http://www.irp.com/apc/training/oppchap5.html#_Toc487605397
+- https://web.archive.org/web/20120113103800/http://www.irp.com:80/apc/training/oppchap5.html
 - Wynn (2005)
 - AHIMA's Coding and Reimbursement for Hospital Outpatient Services
 - MedPAC's OPPS payment basics documentation.

@@ -24,8 +24,8 @@ data collection enrollment in MA plans has been between 5 and 25 percent.[^2]
 Since selection into private plans is generally thought to be non-random, this
 should be kept in mind when working with the data.
 
-[^1]: The program through which Medicare enrollees obtain private insurance coverage is currently called Medicare Advantage, but has gone by several different names during the period covered by NBER's collection. See [here](http://www.medicare.gov/Publications/Pubs/pdf/10050.pdf) (BROKEN LINK) for the most recent treatment of Medicare Advantage (MA) plans.
-[^2]: See the [ResDAC publication](http://www.resdac.umn.edu/Tools/TBs/TN-009_MedicareManagedCareEnrolleesandUtilFiles_508.pdf) (BROKEN LINK).
+[^1]: The program through which Medicare enrollees obtain private insurance coverage is currently called Medicare Advantage, but has gone by several different names during the period covered by NBER's collection. See [here](https://web.archive.org/web/20140602125909/http://www.medicare.gov/Publications/Pubs/pdf/10050.pdf) for the most recent treatment of Medicare Advantage (MA) plans.
+[^2]: See the [ResDAC publication](https://web.archive.org/web/20100621051308/http://www.resdac.umn.edu/Tools/TBs/TN-009_MedicareManagedCareEnrolleesandUtilFiles_508.pdf)
 
 When working with the claims, users are reminded that the claims' primary
 purpose is as a billing system which has been made available to the research
@@ -461,7 +461,7 @@ both sets of codes into the 1990s.
 
 [^12]: Effective July 2004, ICD-9-CM procedure codes are no longer being accepted on Outpatient claims. The ICD-9-CM code were named as the HIPAA standard code set for inpatient hospital procedures. HCPCS/CPT codes were named as the standard code set for physician services and other health care services.
 
-[^13]: See [here](http://www.medpac.gov/publications/contractor_reports/June05_History_Outpatient.pdf).
+[^13]: See [here](https://web.archive.org/web/20090625234600/http://www.medpac.gov/publications/contractor_reports/June05_History_Outpatient.pdf).
 
 The HCPCS codes have a technical and professional component associated with each
 code. The professional component refers to the services provided by a physician
@@ -528,7 +528,7 @@ itself provides information on the state a provider is registered under in the
 first 2 digits while the last 4 digits fall into number range CMS uses to
 classify provider types (e.g. short-term inpatient versus SNF provider) [^15].
 
-[^15]: See [here](http://www.resdac.umn.edu/ddvh/NewFilesCodeRefLimiations/PRVDR_NUM_TB.htm) for basic information on the form of Medicare provider identifiers.
+[^15]: See [here](https://web.archive.org/web/20110624013604/http://www.resdac.org:80/ddvh/NewFilesCodeRefLimiations/PRVDR_NUM_TB.htm) for basic information on the form of Medicare provider identifiers.
 
 The last four digits generally describe the type of provider, although in a
 small amount of cases they have been found to be misleading. While comparing the
@@ -572,7 +572,7 @@ vast majority of physician claims provide tax identification numbers (either
 SSNs or EINs). The vast majority of physician records also provide CMS-issued
 PIN and UPIN identifiers [^17].
 
-[^17]: See [here](http://www.resdac.umn.edu/Tools/TBs/TB-002_Medicare%20Physician%20Identifiers_508.pdf) for a description of physician PIN and UPIN identifiers.
+[^17]: See [here](https://web.archive.org/web/20110409174606/https://www.resdac.org/Tools/TBs/TB-002_Medicare%20Physician%20Identifiers_508.pdf) for a description of physician PIN and UPIN identifiers.
 
 Historically CMS has made a complete listing of physician identifier available.
 The UPIN directory was last updated Q2, 2007 available

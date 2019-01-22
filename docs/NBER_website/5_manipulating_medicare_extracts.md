@@ -241,7 +241,7 @@ HCCs. CMS currently uses a subset of the HCCs to risk adjust Medicare payments
 quality measures at [QualityNet.org](http://www.qualitynet.org) [^44].
 
 [^43]: [Link]( https://www.cms.gov/MedicareAdvtgSpecRateStats/06_Risk_adjustment.asp)
-[^44]: The code can be found on the CMS Risk Adjustment website [here](https://www.cms.gov/MedicareAdvtgSpecRateStats/06_Risk_adjustment.asp). The macro with the code of interest is called `V12H70H` under the 20XX RxHCC model sotfware.
+[^44]: The code can be found on the CMS Risk Adjustment website [here](https://www.cms.gov/MedicareAdvtgSpecRateStats/06_Risk_adjustment.asp). The macro with the code of interest is called `V12H70H` under the 20XX RxHCC model software.
 
 More recently the Krumholz group has updated the methodology used to risk adjust
 the mortality measures, choosing to use the Condition Categories (CC) without
@@ -343,7 +343,7 @@ Different number ranges are assigned to different provider types, which means
 that institutions that change provider type correspondingly receive a new
 provider number. The new and old provider identifiers are cross referenced in
 the [Provider of Services
-files](http://www.cms.gov/NonIdentifiableDataFiles/04_ProviderofServicesFile.asp),
+files](https://web.archive.org/web/20120404211841/https://www.cms.gov/NonIdentifiableDataFiles/04_ProviderofServicesFile.asp),
 but the quality of such cross-references has not been verified. Lastly, the
 physical location associated with provider numbers are not found in the
 institutional files, but the addresses are found in the provider of service
@@ -368,7 +368,7 @@ code to HRR crosswalk available from the Dartmouth Atlas website. The process is
 complicated by the fact that provider zip codes are not available from the
 MedPAR files and needs to be merged in from the POS file. Information about the
 POS is available
-[here](https://www.cms.gov/NonIdentifiableDataFiles/04_ProviderofServicesFile.asp).
+[here](https://web.archive.org/web/20120404211841/https://www.cms.gov/NonIdentifiableDataFiles/04_ProviderofServicesFile.asp).
 
 Several programs have been developed to aid in mapping Provider ID to HRRs. The
 NBER currently holds POS files in a un-harmonized text format which need to be
