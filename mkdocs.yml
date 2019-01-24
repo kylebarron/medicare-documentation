@@ -10,7 +10,7 @@ site_dir: 'site'
 # Repository
 repo_name: 'medicare-documentation'
 repo_url: 'https://github.com/kylebarron/medicare-documentation'
-edit_uri: 'blob/master/docs/'
+#edit_uri: 'blob/master/docs/'
 
 # Important for correct viewing offline
 use_directory_urls: false
